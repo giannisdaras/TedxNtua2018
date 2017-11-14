@@ -51,11 +51,28 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        'auth' => \Illuminate\Auth\Middleware\Authenticate::class,
-        'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
-        'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
-        'can' => \Illuminate\Auth\Middleware\Authorize::class,
-        'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
-        'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'auth'                  => \Illuminate\Auth\Middleware\Authenticate::class,
+        'auth.basic'            => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
+        'bindings'              => \Illuminate\Routing\Middleware\SubstituteBindings::class,
+        'can'                   => \Illuminate\Auth\Middleware\Authorize::class,
+        'guest'                 => \App\Http\Middleware\RedirectIfAuthenticated::class,
+        'throttle'              => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'localize'              => \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRoutes::class,
+        'localizationRedirect'  => \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter::class,
+        'localeSessionRedirect' => \Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect::class,
     ];
+
+    // public function handle($request)
+    // {
+    //     /**
+    //      * Change the 'el' locale to 'gr' so that it can
+    //      * be detected by the LanguageNegotiator.
+    //      */
+    //     if ($request->hasHeader('accept-language')) {
+    //         $temp = $request->header('accept-language');
+    //         $temp = str_replace('el', 'gr', $temp);
+    //         $request->headers->set('accept-language', $temp);
+    //     }
+    //     return parent::handle($request);
+    // }
 }

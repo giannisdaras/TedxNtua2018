@@ -31,5 +31,11 @@ chmod -R 777 storage
 ```
 Enjoy: http://tedxntua
 
+## Creating Views ##
+In the resources/views file we can create files like foo.twig
+More about twig can be found here: https://github.com/rcrowe/TwigBridge
+
+## Locales ##
+check also file kernel.php
 
 

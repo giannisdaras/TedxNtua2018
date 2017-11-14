@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+        {% block head %}
+            <title>{% block title %}{% endblock %}</title>
+        {% endblock %}
+        {% block scripts %}
+        {% endblock %}
+    </head>
+    <body>
+        {% block content %}{% endblock %}
+    </body>
+</html>
