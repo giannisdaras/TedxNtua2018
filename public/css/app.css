@@ -12772,3 +12772,33 @@ a.text-dark:hover {
   visibility: hidden !important;
 }
 
+header {
+  background-color: #222222;
+}
+
+nav {
+  color: white;
+  height: 100%;
+  max-width: 1200px;
+}
+
+.navbar-brand {
+  height: 5rem;
+}
+
+.navbar-brand img {
+  height: 100%;
+  width: auto;
+}
+
+.nav-link {
+  color: white;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+

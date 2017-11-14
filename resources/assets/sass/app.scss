@@ -10,3 +10,32 @@
 
 // Bootstrap
 @import "~bootstrap/scss/bootstrap";
+
+header {
+	background-color: $brand-secondary;
+}
+
+nav {
+	color: white;
+	height: 100%;
+	max-width: 1200px;
+}
+
+.navbar-brand {
+	height: 5rem;
+	img {
+		height: 100%;
+		width: auto;
+	}
+}
+
+.nav-link {
+	color: white;
+}
+
+@media (min-width: 992px) {
+	.navbar-expand-lg .navbar-nav .nav-link {
+		padding-right: $navlink-padding;
+		padding-left: $navlink-padding;
+	}
+}

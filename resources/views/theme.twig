@@ -9,6 +9,12 @@
         {% endblock %}
     </head>
     <body>
-        {% block content %}{% endblock %}
+        <header>
+            {{ include('layouts.partials.nav') }}
+        </header>
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+        <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>
