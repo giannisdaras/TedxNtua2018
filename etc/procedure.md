@@ -32,10 +32,17 @@ chmod -R 777 storage
 Enjoy: http://tedxntua
 
 ## Creating Views ##
-In the resources/views file we can create files like foo.twig
+
+Create route in web.php
+Create view in resources/views (file: foo.twig)
+Create controller in app/http/controllers based on HomeController
+
 More about twig can be found here: https://github.com/rcrowe/TwigBridge
 
 ## Locales ##
+
 check also file kernel.php
+publish 
+then change laravellocalization.php
 
 
