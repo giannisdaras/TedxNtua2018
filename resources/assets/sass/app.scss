@@ -51,4 +51,61 @@ a {
 
 .title {
 	padding-top: 5%;
+
+
+header.dark {
+	background-color: $brand-secondary;
+}
+
+nav {
+	height: 100%;
+	max-width: 1366px;
+}
+
+.navbar-brand {
+	height: 6rem;
+	transition: transform .2s ease;
+	img {
+		height: 100%;
+		width: auto;
+	}
+	&:hover {
+		transform: scale(1.02, 1.02);
+	}
+}
+	
+.navbar-expand-lg .navbar-nav .nav-link {
+	font-size: 1.25rem;
+	white-space: nowrap;
+	padding-right: $navlink-padding;
+	padding-left: $navlink-padding;
+}
+
+.navbar-dark .navbar-nav .get-tickets {
+	background-color: $brand-primary;
+	a.nav-link {
+		color: white;
+	}
+	&:hover {
+		background-color: saturate($brand-primary, 10%);
+	}
+}
+@media (min-width: 992px) {
+	.navbar-expand-lg .navbar-nav .nav-link {
+		font-size: 1rem;
+		padding-right: 0.5 * $navlink-padding;
+		padding-left: 0.5 * $navlink-padding;
+	}
+	header.dark {
+		box-shadow: inset 0 -40px 60px -40px black;
+	}
+}
+
+@media (min-width: 1366px) {
+	.navbar-expand-lg .navbar-nav .nav-link {
+		font-size: 1.25rem;
+		padding-right: $navlink-padding;
+		padding-left: $navlink-padding;
+	}
+>>>>>>> dev
 }
