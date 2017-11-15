@@ -12772,6 +12772,16 @@ a.text-dark:hover {
   visibility: hidden !important;
 }
 
+/* GLOBALS */
+
+a {
+  color: #E62B1E;
+}
+
+a:hover {
+  color: #8e1810;
+}
+
 /* NAVIGATION MENU */
 
 header.dark {
@@ -12828,6 +12838,36 @@ nav.navbar {
 
 /* END NAVIGATION MENU */
 
+/* PAGE HEADING */
+
+section.heading {
+  width: 100%;
+  border-bottom: 2px solid #444;
+  /* test */
+  background-color: #e62b1e;
+  background-image: url("https://www.transparenttextures.com/patterns/black-paper.png");
+  /* - */
+}
+
+section.heading h1 {
+  font-weight: bold;
+  font-size: 3rem;
+  padding: 1rem 2rem;
+  text-align: center;
+  margin: 0 auto;
+  color: #111;
+}
+
+/* END PAGE HEADING */
+
+/* PAGE CONTENT */
+
+section.content {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
 /* HOME PAGE */
 
 article.home section {
@@ -12843,6 +12883,7 @@ article.home section:last-child {
 article.home section h2 {
   font-weight: bold;
   font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 article.home .section-content {
@@ -12854,9 +12895,35 @@ article.home .section-content {
 
 /* END HOME PAGE */
 
+/* ABOUT PAGE */
+
+article.about section.content h2 {
+  color: #E62B1E;
+  font-weight: bold;
+  text-align: center;
+}
+
+article.about section.content .col {
+  margin-bottom: 1rem;
+}
+
 /* SPONSORS PAGE */
 
-.sponsor_img {
+article.partners h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+article.partners .container {
+  margin-bottom: 2rem;
+}
+
+article.partners .container:last-child {
+  margin-bottom: 0;
+}
+
+article.partners .sponsor_img {
   display: inline-block;
   border: 0;
   position: relative;
@@ -12871,7 +12938,7 @@ article.home .section-content {
   padding: 2%;
 }
 
-.sponsor_img:hover {
+article.partners .sponsor_img:hover {
   -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 255, 0);
           box-shadow: 0px 0px 0px rgba(0, 0, 255, 0);
   z-index: 2;
@@ -12884,18 +12951,6 @@ article.home .section-content {
   transition: all 200ms ease-in;
   transform: scale(1.1);
   padding: auto;
-}
-
-a {
-  color: #DA291C;
-}
-
-.h2 {
-  color: #DA291C;
-}
-
-.title {
-  padding-top: 5%;
 }
 
 /* END SPONSORS PAGE */
@@ -12913,6 +12968,14 @@ a {
     -webkit-box-shadow: inset 0 -40px 60px -40px black;
             box-shadow: inset 0 -40px 60px -40px black;
   }
+
+  article.about section.content .col {
+    margin-bottom: 0;
+  }
+
+  article.about section.content .row {
+    margin-bottom: 1rem;
+  }
 }
 
 @media (min-width: 1366px) {
@@ -12924,6 +12987,10 @@ a {
 
   article.home .section-content {
     padding: 3rem 2rem;
+  }
+
+  section.heading h1 {
+    padding: 2rem 2rem;
   }
 }
 

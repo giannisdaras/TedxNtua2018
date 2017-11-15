@@ -11,6 +11,15 @@
 // Bootstrap
 @import "~bootstrap/scss/bootstrap";
 
+/* GLOBALS */
+
+a {
+	color: $brand-primary;
+	&:hover {
+		color: darken($brand-primary, 20%);
+	}
+}
+
 /* NAVIGATION MENU */
 
 header.dark {
@@ -59,6 +68,33 @@ nav.navbar {
 
 /* END NAVIGATION MENU */
 
+/* PAGE HEADING */
+section.heading {
+	width: 100%;
+	border-bottom: 2px solid #444;
+	h1 {
+		font-weight: bold;
+		font-size: 3rem;
+		padding: 1rem 2rem;
+		text-align: center;
+		margin: 0 auto;
+		color: #111;
+	}
+	/* test */
+	background-color: lighten($brand-primary, 0);
+	background-image: url("https://www.transparenttextures.com/patterns/black-paper.png");
+	/* - */
+}
+
+/* END PAGE HEADING */
+
+/* PAGE CONTENT */
+section.content {
+	max-width: 1366px;
+	margin: 0 auto;
+	padding: 2rem;
+}
+
 /* HOME PAGE */
 
 article.home {
@@ -72,6 +108,7 @@ article.home {
 		h2 {
 			font-weight: bold;
 			font-size: 3rem;
+			margin-bottom: 1rem;
 		}
 	}
 	.section-content {
@@ -84,49 +121,62 @@ article.home {
 
 /* END HOME PAGE */
 
+/* ABOUT PAGE */
+article.about {
+	section.content h2 {
+		color: $brand-primary;
+		font-weight: bold;
+		text-align: center;
+	}
+	section.content .col {
+		margin-bottom: 1rem;
+	}
+}
+
 /* SPONSORS PAGE */
 
-.sponsor_img {
-    display:inline-block;
-    border:0;
-    position: relative;
-    -webkit-transition: all 200ms ease-in;
-    -webkit-transform: scale(1); 
-    -ms-transition: all 200ms ease-in;
-    -ms-transform: scale(1); 
-    -moz-transition: all 200ms ease-in;
-    -moz-transform: scale(1);
-    transition: all 200ms ease-in;
-    transform: scale(1);
-    padding: 2%;   
+article.partners {
+	h2 {
+		font-size: 2.5rem;
+		font-weight: bold;
+		text-align: center;
+	}
+	.container {
+		margin-bottom: 2rem;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.sponsor_img {
+	    display:inline-block;
+	    border:0;
+	    position: relative;
+	    -webkit-transition: all 200ms ease-in;
+	    -webkit-transform: scale(1); 
+	    -ms-transition: all 200ms ease-in;
+	    -ms-transform: scale(1); 
+	    -moz-transition: all 200ms ease-in;
+	    -moz-transform: scale(1);
+	    transition: all 200ms ease-in;
+	    transform: scale(1);
+	    padding: 2%;   
+	}
+
+	.sponsor_img:hover {
+	    box-shadow: 0px 0px 0px rgba(0%, 0%, 100%, 0.0);
+	    z-index: 2;
+	    -webkit-transition: all 200ms ease-in;
+	    -webkit-transform: scale(1.1);
+	    -ms-transition: all 200ms ease-in;
+	    -ms-transform: scale(1.1);   
+	    -moz-transition: all 200ms ease-in;
+	    -moz-transform: scale(1.1);
+	    transition: all 200ms ease-in;
+	    transform: scale(1.1);
+	    padding: auto;
+	}
 }
 
-.sponsor_img:hover {
-    box-shadow: 0px 0px 0px rgba(0%, 0%, 100%, 0.0);
-    z-index: 2;
-    -webkit-transition: all 200ms ease-in;
-    -webkit-transform: scale(1.1);
-    -ms-transition: all 200ms ease-in;
-    -ms-transform: scale(1.1);   
-    -moz-transition: all 200ms ease-in;
-    -moz-transform: scale(1.1);
-    transition: all 200ms ease-in;
-    transform: scale(1.1);
-    padding: auto;
-}
-
-a {
-	color: #DA291C;
-}
-
-
-.h2 {
-	color: #DA291C;
-}
-
-.title {
-	padding-top: 5%;
-}
 
 .messagetext {
 	height:300px;
@@ -143,7 +193,7 @@ hr {
 
 /* 	MEDIA QUERIES */
 
-@media (min-width: 992px) {
+@include media-breakpoint-up(lg) {
 	.navbar-expand-lg .navbar-nav .nav-link {
 		font-size: 1rem;
 		padding-right: 0.5 * $navlink-padding;
@@ -151,6 +201,14 @@ hr {
 	}
 	header.dark {
 		box-shadow: inset 0 -40px 60px -40px black;
+	}
+	article.about {
+		section.content .col {
+			margin-bottom: 0;
+		}
+		section.content .row {
+			margin-bottom: 1rem;
+		}
 	}
 }
 
@@ -164,4 +222,7 @@ hr {
 		padding: 3rem 2rem;
 	}
 }
->>>>>>> cbba2250dbcc2dd6c4d657015e86d6cb4a37277e
+	section.heading h1 {
+		padding: 2rem 2rem;
+	}
+}
