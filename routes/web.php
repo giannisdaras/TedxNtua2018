@@ -22,5 +22,6 @@ Route::group([
 	Route::get('/about', ['as' => 'about', 'uses' => 'AboutController@index']);
 	Route::get('/contact', ['as' => 'contact', 'uses' => 'ContactController@index']);
 	Route::get('/partners', ['as' => 'partners', 'uses' => 'PartnersController@index']);
+	Route::get('/contact/submit', 'ContactController@submit');
 
 });
