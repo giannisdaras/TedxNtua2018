@@ -6,6 +6,12 @@
  */
 
 require('./bootstrap');
+
+const WOW = require('wowjs');
+window.WOW = new WOW.WOW({ live: false });
+
+window.WOW.init();
+
 /* DISABLE Vue.js until it is needed
 
 window.Vue = require('vue');
