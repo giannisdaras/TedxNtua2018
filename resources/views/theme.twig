@@ -2,10 +2,15 @@
 <html>
     <head>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
         {% block head %}
             <title>{% block title %}{% endblock %}</title>
         {% endblock %}
         {% block scripts %}
+        <script src="js/wow.min.js"></script>
+              <script>
+              new WOW().init();
+              </script>
         {% endblock %}
     </head>
     <body>

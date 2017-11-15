@@ -788,7 +788,6 @@ module.exports = __webpack_require__(36);
  */
 
 __webpack_require__(10);
-
 /* DISABLE Vue.js until it is needed
 
 window.Vue = require('vue');

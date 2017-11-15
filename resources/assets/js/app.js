@@ -6,7 +6,6 @@
  */
 
 require('./bootstrap');
-
 /* DISABLE Vue.js until it is needed
 
 window.Vue = require('vue');
