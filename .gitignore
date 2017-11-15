@@ -23,3 +23,6 @@ Homestead.json
 .rocketeer/
 
 # End of https://www.gitignore.io/api/laravel
+
+# FUSE Hidden files
+.fuse_hidden*

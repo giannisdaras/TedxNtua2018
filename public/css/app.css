@@ -12772,18 +12772,21 @@ a.text-dark:hover {
   visibility: hidden !important;
 }
 
-header {
+header.dark {
   background-color: #222222;
 }
 
 nav {
-  color: white;
   height: 100%;
-  max-width: 1200px;
+  max-width: 1366px;
 }
 
 .navbar-brand {
-  height: 5rem;
+  height: 6rem;
+  -webkit-transition: -webkit-transform .2s ease;
+  transition: -webkit-transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease, -webkit-transform .2s ease;
 }
 
 .navbar-brand img {
@@ -12791,14 +12794,48 @@ nav {
   width: auto;
 }
 
-.nav-link {
+.navbar-brand:hover {
+  -webkit-transform: scale(1.02, 1.02);
+          transform: scale(1.02, 1.02);
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  font-size: 1.25rem;
+  white-space: nowrap;
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
+}
+
+.navbar-dark .navbar-nav .get-tickets {
+  background-color: #E62B1E;
+}
+
+.navbar-dark .navbar-nav .get-tickets a.nav-link {
   color: white;
+}
+
+.navbar-dark .navbar-nav .get-tickets:hover {
+  background-color: #f32012;
 }
 
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav .nav-link {
-    padding-right: 0.75rem;
-    padding-left: 0.75rem;
+    font-size: 1rem;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+  }
+
+  header.dark {
+    -webkit-box-shadow: inset 0 -40px 60px -40px black;
+            box-shadow: inset 0 -40px 60px -40px black;
+  }
+}
+
+@media (min-width: 1366px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    font-size: 1.25rem;
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
   }
 }
 
