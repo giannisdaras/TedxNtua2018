@@ -12918,7 +12918,7 @@ section.heading h1 {
 section.content {
   max-width: 1366px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 4rem 2rem;
 }
 
 /* HOME PAGE */
@@ -12971,6 +12971,10 @@ article.partners h2 {
 
 article.partners .container {
   margin-bottom: 3rem;
+}
+
+article.partners .container:last-child {
+  margin-bottom: 0;
 }
 
 article.partners .col {
