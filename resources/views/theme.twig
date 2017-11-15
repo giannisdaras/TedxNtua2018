@@ -2,8 +2,6 @@
 <html>
     <head>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
         {% block head %}
             <title>{% block title %}{% endblock %}</title>
         {% endblock %}
@@ -11,6 +9,26 @@
         {% endblock %}
     </head>
     <body>
-        {% block content %}{% endblock %}
+        <header class="dark">
+            {{ include('layouts.partials.nav') }}
+        </header>
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+        <script src="{{ asset('js/app.js') }}"></script>
+
+        <script>
+            /*
+                TEMPORARY
+                Testing the .active modifier on links
+            */
+            $().ready(function(){
+                $(".nav-link").on("click", function(e){
+                    e.preventDefault();
+                    $(".active").removeClass("active");
+                    $(this).parent().addClass("active");
+                })
+            })
+        </script>
     </body>
 </html>

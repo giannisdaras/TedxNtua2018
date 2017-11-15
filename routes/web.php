@@ -10,13 +10,17 @@
 |
  */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/welcome', function () {
+	return view('welcome');
+});
 
 Route::group([
-    'prefix'     => LaravelLocalization::setLocale(),
-    'middleware' => ['web', 'localeSessionRedirect', 'localizationRedirect'],
+	'prefix' => LaravelLocalization::setLocale(),
+	'middleware' => ['web', 'localeSessionRedirect', 'localizationRedirect'],
 ], function () {
-    Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
+	Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
+	Route::get('/about', ['as' => 'about', 'uses' => 'AboutController@index']);
+	Route::get('/contact', ['as' => 'contact', 'uses' => 'ContactController@index']);
+	Route::get('/partners', ['as' => 'partners', 'uses' => 'PartnersController@index']);
+
 });
