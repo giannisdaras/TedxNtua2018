@@ -12960,20 +12960,21 @@ article.about section.content .col {
   margin-bottom: 1rem;
 }
 
-/* SPONSORS PAGE */
+/* PARTNERS PAGE */
 
 article.partners h2 {
   font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
+  border-bottom: 1px solid #333;
 }
 
 article.partners .container {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
-article.partners .container:last-child {
-  margin-bottom: 0;
+article.partners .col {
+  text-align: center;
 }
 
 article.partners .sponsor_img {
@@ -12989,6 +12990,7 @@ article.partners .sponsor_img {
   transition: all 200ms ease-in;
   transform: scale(1);
   padding: 2%;
+  max-width: 100%;
 }
 
 article.partners .sponsor_img:hover {
@@ -13006,19 +13008,12 @@ article.partners .sponsor_img:hover {
   padding: auto;
 }
 
-.messagetext {
+article.partners .messagetext {
   height: 300px;
   width: 100%;
 }
 
-hr {
-  border: none;
-  height: 1px;
-  color: #333;
-  background-color: #333;
-}
-
-/* END SPONSORS PAGE */
+/* END PARTNERS PAGE */
 
 /* 	MEDIA QUERIES */
 
