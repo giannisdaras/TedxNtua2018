@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        {% block head %}
-            <title>{% block title %}{% endblock %}</title>
-        {% endblock %}
-        {% block scripts %}
-        {% endblock %}
-    </head>
-    <body>
-        <header class="dark">
-            {{ include('layouts.partials.nav') }}
-        </header>
-        <main>
-            {% block content %}{% endblock %}
-        </main>
-        <script src="{{ asset('js/app.js') }}"></script>
 
-        <script>
-            /*
-                TEMPORARY
-                Testing the .active modifier on links
-            */
-            $().ready(function(){
-                $(".nav-link").on("click", function(e){
-                    e.preventDefault();
-                    $(".active").removeClass("active");
-                    $(this).parent().addClass("active");
-                })
-            })
-        </script>
-    </body>
+<head>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
+{% block head %}
+    <title>{% block title %}{% endblock %}</title>
+{% endblock -%}
+{%- block scripts -%}
+{%- endblock %}
+</head>
+
+<body>
+
+    <header class="dark">
+
+{{ include('layouts.partials.nav') }}
+
+    </header>
+
+    <main>
+
+{% block content %}{% endblock %}
+
+    </main>
+
+    <footer>
+{#{ include('layouts.partials.footer') }#}
+    </footer>
+
+    <script src="{{ asset('js/app.js') }}"></script>
+
+</body>
+
 </html>

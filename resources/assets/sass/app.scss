@@ -11,18 +11,21 @@
 // Bootstrap
 @import "~bootstrap/scss/bootstrap";
 
+/* NAVIGATION MENU */
 
 header.dark {
 	background-color: $brand-secondary;
 }
 
-nav {
+nav.navbar {
 	height: 100%;
 	max-width: 1366px;
+	padding: .5rem 2rem;
 }
 
 .navbar-brand {
-	height: 6rem;
+	height: 4.8rem;
+	padding: .6rem 0;
 	transition: transform .2s ease;
 	img {
 		height: 100%;
@@ -31,6 +34,10 @@ nav {
 	&:hover {
 		transform: scale(1.02, 1.02);
 	}
+}
+
+.navbar-toggler {
+	cursor: pointer;
 }
 	
 .navbar-expand-lg .navbar-nav .nav-link {
@@ -49,25 +56,35 @@ nav {
 		background-color: saturate($brand-primary, 10%);
 	}
 }
-@media (min-width: 992px) {
-	.navbar-expand-lg .navbar-nav .nav-link {
-		font-size: 1rem;
-		padding-right: 0.5 * $navlink-padding;
-		padding-left: 0.5 * $navlink-padding;
+
+/* END NAVIGATION MENU */
+
+/* HOME PAGE */
+
+article.home {
+	section {
+		width: 100%;
+		min-height: 400px;
+		border-bottom: 2px solid #444;
+		&:last-child {
+			border-bottom: 0;
+		}
+		h2 {
+			font-weight: bold;
+			font-size: 3rem;
+		}
 	}
-	header.dark {
-		box-shadow: inset 0 -40px 60px -40px black;
+	.section-content {
+		max-width: 1366px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 2rem 2rem;
 	}
 }
 
-@media (min-width: 1366px) {
-	.navbar-expand-lg .navbar-nav .nav-link {
-		font-size: 1.25rem;
-		padding-right: $navlink-padding;
-		padding-left: $navlink-padding;
-	}
+/* END HOME PAGE */
 
-}
+/* SPONSORS PAGE */
 
 .sponsor_img {
     display:inline-block;
@@ -122,3 +139,29 @@ hr {
 	color: #333; 
 	background-color: #333;
 }
+/* END SPONSORS PAGE */
+
+/* 	MEDIA QUERIES */
+
+@media (min-width: 992px) {
+	.navbar-expand-lg .navbar-nav .nav-link {
+		font-size: 1rem;
+		padding-right: 0.5 * $navlink-padding;
+		padding-left: 0.5 * $navlink-padding;
+	}
+	header.dark {
+		box-shadow: inset 0 -40px 60px -40px black;
+	}
+}
+
+@media (min-width: 1366px) {
+	.navbar-expand-lg .navbar-nav .nav-link {
+		font-size: 1.25rem;
+		padding-right: $navlink-padding;
+		padding-left: $navlink-padding;
+	}
+	article.home .section-content {
+		padding: 3rem 2rem;
+	}
+}
+>>>>>>> cbba2250dbcc2dd6c4d657015e86d6cb4a37277e
