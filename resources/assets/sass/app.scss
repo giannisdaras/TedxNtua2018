@@ -24,6 +24,7 @@ a {
 
 header.dark {
 	background-color: $brand-secondary;
+	box-shadow: inset 0 -40px 60px -40px black;
 }
 
 nav.navbar {
@@ -68,22 +69,63 @@ nav.navbar {
 
 /* END NAVIGATION MENU */
 
+/* FOOTER */
+footer {
+	background-color: #111;
+	background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+	box-shadow: inset 0 40px 60px -40px black;
+	color: white;
+	padding: 2rem 0;
+	.container {
+		max-width: 1366px;
+		margin: 0 auto;
+		padding: 0 2rem;
+	}
+	.social-links {
+		list-style: none;
+		margin-bottom: 0;
+		li {
+			display: inline-block;
+		}
+		a {
+			i {
+				color: rgba(255, 255, 255, .96);
+				transition: color .2s;
+			}
+			&:hover i.fa-facebook-square {
+				color: #3b5998;
+			}
+			&:hover i.fa-instagram {
+				color: #c13584;
+			}
+			&:hover i.fa-linkedin-square {
+				color: #0077b5;
+			}
+			&:hover i.fa-envelope-square {
+				color: #fbb034;
+			}
+		}
+	}
+}
+
+/* END FOOTER */
+
 /* PAGE HEADING */
 section.heading {
 	width: 100%;
-	border-bottom: 2px solid #444;
+	border-bottom: 1px solid #444;
+	box-shadow: inset 0 -40px 60px -40px rgba(0, 0, 0, .5);
 	h1 {
 		font-weight: bold;
 		font-size: 3rem;
 		padding: 1rem 2rem;
 		text-align: center;
 		margin: 0 auto;
-		color: #111;
+		color: #222;
+  		text-shadow: 0 1px 0 rgba(12,3,3,1) , 0 2px 0 rgba(28,13,13,1);
 	}
-	/* test */
-	background-color: lighten($brand-primary, 0);
-	background-image: url("https://www.transparenttextures.com/patterns/black-paper.png");
-	/* - */
+	background-color: darken($brand-primary, 10%);
+	background-image: url("https://www.transparenttextures.com/patterns/exclusive-paper.png")
 }
 
 /* END PAGE HEADING */
@@ -193,14 +235,25 @@ hr {
 
 /* 	MEDIA QUERIES */
 
+@include media-breakpoint-up(md) {
+	footer {
+		padding: 3rem 0;
+		.col-md-4 {
+			padding-top: 1rem;
+			padding-bottom: 1rem;
+			border-right: 1px solid rgba(255, 255, 255, .2);
+			&:last-child {
+				border-right: 0;
+			}
+		}
+	}
+}
+
 @include media-breakpoint-up(lg) {
 	.navbar-expand-lg .navbar-nav .nav-link {
 		font-size: 1rem;
 		padding-right: 0.5 * $navlink-padding;
 		padding-left: 0.5 * $navlink-padding;
-	}
-	header.dark {
-		box-shadow: inset 0 -40px 60px -40px black;
 	}
 	article.about {
 		section.content .col {
@@ -221,7 +274,6 @@ hr {
 	article.home .section-content {
 		padding: 3rem 2rem;
 	}
-}
 	section.heading h1 {
 		padding: 2rem 2rem;
 	}
