@@ -13028,6 +13028,56 @@ article.partners .messagetext {
 
 /* END PARTNERS PAGE */
 
+/* SCHEDULE PAGE */
+
+article.schedule tbody tr:not(.collapse-row) {
+  cursor: pointer;
+}
+
+article.schedule thead {
+  background-color: #222222;
+  color: white;
+  font-size: 1.25rem;
+}
+
+article.schedule thead th {
+  width: 30%;
+}
+
+article.schedule thead th:first-child {
+  width: 10%;
+}
+
+article.schedule td {
+  height: 0;
+}
+
+article.schedule td .cell-content:not(.collapsing) {
+  height: 100%;
+}
+
+article.schedule tr.collapse-row {
+  background-color: transparent;
+}
+
+article.schedule tr.collapse-row td {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+article.schedule td .more {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+article.schedule td .more p:last-child {
+  margin-bottom: 0;
+}
+
+article.schedule h6 {
+  font-weight: bold;
+}
+
 /* CONTACT PAGE */
 
 article.contact form {

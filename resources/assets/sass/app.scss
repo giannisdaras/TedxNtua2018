@@ -239,6 +239,48 @@ article.partners {
 
 /* END PARTNERS PAGE */
 
+/* SCHEDULE PAGE */
+
+article.schedule {
+	tbody tr:not(.collapse-row) {
+		cursor: pointer;
+	}
+	thead {
+		background-color: $brand-secondary;
+		color: white;
+		font-size: 1.25rem;
+	}
+	thead th {
+		width: 30%;
+	}
+	thead th:first-child {
+		width: 10%;
+	}
+	td {
+		height: 0;
+	}
+	td .cell-content:not(.collapsing) {
+		height: 100%;
+	}
+	tr.collapse-row {
+		background-color: transparent;
+	}
+	tr.collapse-row td {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	td .more {
+		padding-top: 0.75rem;
+		padding-bottom: 0.75rem;
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
+	h6 {
+		font-weight: bold;
+	}
+}
+
 /* CONTACT PAGE */
 article.contact {
 	form {
