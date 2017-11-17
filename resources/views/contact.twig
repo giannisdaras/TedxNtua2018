@@ -1,34 +1,53 @@
 {% extends "theme.twig" %}
 {% block title %} Contact {% endblock %}
 {% block content %}
-		<article class="contact">
-			<section class="heading">
-				<h1>Contact</h1>
+<article class="contact">
+	<section class="heading">
+		<h1>Contact</h1>
+	</section>
+
+
+	<section class="content">
+		<div class="container">
+			<div class="row">
+				<div class="col col-12 col-lg-3">	
+					<h2 class="text-center font-weight-bold">Contact Us</h2>	
+					<p class="text-justify"> Please find below our contact info or just fill in the form and we’ll get back to you as soon as possible!<p>
+
+						<a href="mailto:info@tedxntua.com"><i class="fa fa-envelope fa-1x" aria-hidden="true"></i> info@tedxntua.com</a> 		
+
+					</div>	
+
+					<div class="col col-12 col-lg-9">	
+						<form>
+							<div class="form-group">
+								<label for="name">Name</label>
+								<input type="text" class="form-control" id="name" aria-describedby="NameHelp" placeholder="Enter your Name" required>
+								<small id="NameHelp" class="form-text text-muted">Your name is required</small>
+							</div>
+
+							<div class="form-group">
+								<label for="email">E-mail address</label>
+								<input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+								<small id="emailHelp" class="form-text text-muted">Your email is required</small>
+							</div>
+
+							<div class="form-group">
+								<label for="subject">Subject</label>
+								<input type="text" class="form-control" id="subject" aria-describedby="SubjectHelp" placeholder="Enter message subject">
+								<small id="SubjectHelp" class="form-text text-muted">Please enter an appropriate subject</small>
+							</div>
+
+							<div class="form-group">
+								<label for="comment">Message</label>
+								<textarea class="form-control" rows="5" id="comment" required></textarea>
+							</div>
+
+							<button href="contact/submit" type="submit" class="btn btn-primary">Submit</button>
+						</form>
+					</div>
+				</div>	
 			</section>
 
 
-			<section class="content">
-				<form>
-					<div class="form-group">
-						<label for="name">Name</label>
-						<input type="text" class="form-control" id="name" aria-describedby="NameHelp" placeholder="Enter your Name" required>
-						<small id="NameHelp" class="form-text text-muted">Your name is required</small>
-					</div>
-
-					<div class="form-group">
-						<label for="email">E-mail address</label>
-						<input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
-						<small id="emailHelp" class="form-text text-muted">Your email is required</small>
-					</div>
-					
-					<div class="form-group">
-						<label for="comment">Message</label>
-						<textarea class="form-control" rows="5" id="comment" required></textarea>
-					</div>
-
-					<button href="contact/submit" type="submit" class="btn btn-primary">Submit</button>
-				</form>
-			</section>
-			
-
-{% endblock %}
+			{% endblock %}

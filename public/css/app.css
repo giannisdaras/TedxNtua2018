@@ -12780,6 +12780,7 @@ a {
 
 a:hover {
   color: #8e1810;
+  text-decoration: none;
 }
 
 /* NAVIGATION MENU */
@@ -13080,9 +13081,30 @@ article.schedule h6 {
 
 /* CONTACT PAGE */
 
+article.contact p {
+  font-size: 13px;
+}
+
 article.contact form {
   max-width: 768px;
   margin: 0 auto;
+}
+
+article.contact .form-control:focus {
+  border-color: #E62B1E;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+article.contact .btn-primary,
+article.contact .btn-primary:hover,
+article.contact .btn-primary:active,
+article.contact .btn-primary:visited {
+  background-color: #222222 !important;
+  border-color: #222222 !important;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 /* END CONTACT PAGE */
