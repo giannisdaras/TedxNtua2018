@@ -13022,11 +13022,6 @@ article.partners .sponsor_img:hover {
   padding: auto;
 }
 
-article.partners .messagetext {
-  height: 300px;
-  width: 100%;
-}
-
 /* END PARTNERS PAGE */
 
 /* SCHEDULE PAGE */
@@ -13092,19 +13087,29 @@ article.contact form {
 
 article.contact .form-control:focus {
   border-color: #E62B1E;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
-          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px #E62B1E;
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px #E62B1E;
 }
 
 article.contact .btn-primary,
-article.contact .btn-primary:hover,
 article.contact .btn-primary:active,
-article.contact .btn-primary:visited {
+article.contact .btn-primary:visited,
+article.contact .btn-primary:focus {
   background-color: #222222 !important;
   border-color: #222222 !important;
-  outline: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  outline: #222222 !important;
+}
+
+article.contact .btn-primary:hover {
+  background-color: #555555 !important;
+  border-color: #555555 !important;
+}
+
+article.contact .btn-primary:active,
+article.contact .btn-primary:visited,
+article.contact .btn-primary:focus {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px transparent !important;
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px transparent !important;
 }
 
 /* END CONTACT PAGE */

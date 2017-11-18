@@ -233,10 +233,6 @@ article.partners {
 	    padding: auto;
 	}
 
-	.messagetext {
-		height:300px;
-		width:100%;
-	}
 }
 
 /* END PARTNERS PAGE */
@@ -298,15 +294,24 @@ article.contact {
 
 	.form-control:focus {
   		border-color: $brand-primary;
-  		box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+  		box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px $brand-primary;
 	}
 
 
-	.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+	.btn-primary, .btn-primary:active, .btn-primary:visited, .btn-primary:focus {
     	background-color: $brand-secondary !important;
     	border-color: $brand-secondary !important;
-		outline: none;
-	    box-shadow:none;
+    	outline: $brand-secondary !important;
+	}
+
+
+	.btn-primary:hover {
+		background-color: lighten($brand-secondary, 20%) !important;
+    	border-color: lighten($brand-secondary, 20%) !important;
+	}
+
+	.btn-primary:active, .btn-primary:visited, .btn-primary:focus { 
+		box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px rgba(0,0,0,0) !important;		
 	}
 
 }
