@@ -789,10 +789,13 @@ module.exports = __webpack_require__(37);
 
 __webpack_require__(10);
 
-var WOW = __webpack_require__(36);
-window.WOW = new WOW.WOW({ live: false });
+if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
 
-window.WOW.init();
+  var WOW = __webpack_require__(36);
+  window.WOW = new WOW.WOW({ live: false });
+  window.WOW.init();
+
+}
 
 /* DISABLE Vue.js until it is needed
 
