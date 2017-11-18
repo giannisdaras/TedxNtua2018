@@ -21,276 +21,55 @@
 					</thead>
 
 					<tbody>
+					{%- for row in rows %}
 
-						<tr data-toggle="collapse" data-target=".row-01">
+						<tr data-toggle="collapse" data-target=".row-{{ "%02d" | format(loop.index) }}">
 							<td class="time">
 								<div class="cell-content">
-									<time>11:00</time>
+									<time>{{ row.time }}</time>
 								</div>
 							</td>
+						{%- for event in row.events %}
 							<td class="event">
+								{%- if not event.empty %}
 								<div class="cell-content media">
-									<img class="align-self-center mr-3" src="http://via.placeholder.com/80x80" alt="Placeholder image" />
+									{%- if event.image %}
+									<img class="align-self-center mr-3" src="{{ event.image }}" alt="{{ event.title }}" />
+									{%- endif %}
 									<div class="media-body">
 										<h5>
-											Reception and registration
+											{{ event.title|raw }}
 										</h5>
-									</div>
-								</div>
-							</td>
-							<td>
-								<div class="cell-content"></div>
-							</td>
-							<td class="event">
-								<div class="cell-content media">
-									<img class="align-self-center mr-3" src="http://via.placeholder.com/80x80" alt="Placeholder image" />
-									<div class="media-body">
-										<h5>
-											Collaborative Design Workshop
-										</h5>
-									</div>
-								</div>
-							</td>
-						</tr>
-
-						<tr class="collapse-row hidden">
-							<td>
-								<div class="cell-content collapse row-01">
-									<div class="more"></div>
-								</div>
-							</td>
-							<td>
-								<div class="cell-content collapse row-01">
-									<div class="more">
-										<p>
-											Breakfast will be served and all workshops will be available.
-										</p>
-									</div>
-								</div>
-							</td>
-							<td>
-								<div class="cell-content collapse row-01">
-									<div class="more"></div>
-								</div>
-							</td>
-							<td>
-								<div class="cell-content collapse row-01">
-									<div class="more">
-										<p>
-											I have no idea what this is about.
-										</p>
-									</div>
-								</div>
-							</td>
-						</tr>
-
-						<tr data-toggle="collapse" data-target=".row-02">
-							<td class="time">
-								<div class="cell-content">
-									<time>13:30</time>
-								</div>
-							</td>
-							<td class="event">
-								<div class="cell-content media">
-									<img class="align-self-center mr-3" src="http://via.placeholder.com/80x80" alt="Placeholder image" />
-									<div class="media-body">
-										<h5>
-											<a href="/speakers/nastazia-spyropoulou">
-												Nastazia Spyropoulou
-											</a><br>
-											<a href="/speakers/edward-perrello">
-												Edward Perello
-											</a><br>
-											<a href="/speakers/christos-raftogiannis">
-												Christos Raftogiannis
-											</a><br>
-										</h5>
+										{%- if event.subtitle %}
 										<h6>
-											Reapproaching The Established
+											{{ event.subtitle }}
 										</h6>
+										{%- endif %}
 									</div>
 								</div>
-							</td>
-							<td>
+								{%- else %}
 								<div class="cell-content"></div>
+								{%- endif %}
 							</td>
-							<td class="event">
-								<div class="cell-content media">
-									<img class="align-self-center mr-3" src="http://via.placeholder.com/80x80" alt="Placeholder image" />
-									<div class="media-body">
-										<h5>
-											Global Prep Workshop
-										</h5>
-									</div>
-								</div>
-							</td>
+						{%- endfor %}
 						</tr>
 
 						<tr class="collapse-row hidden">
 							<td>
-								<div class="cell-content collapse row-02">
+								<div class="cell-content collapse row-{{ "%02d" | format(loop.index) }}">
 									<div class="more"></div>
 								</div>
 							</td>
+						{%- for event in row.events %}
 							<td>
-								<div class="cell-content collapse row-02">
-									<div class="more">
-										<p>	
-											These guys are the best, you should definitely be there.
-										</p>
-									</div>
+								<div class="cell-content collapse row-{{ "%02d" | format(loop.parent.loop.index) }}">
+									<div class="more">{{ event.more|raw }}</div>
 								</div>
 							</td>
-							<td>
-								<div class="cell-content collapse row-02">
-									<div class="more"></div>
-								</div>
-							</td>
-							<td>
-								<div class="cell-content collapse row-02">
-									<div class="more">
-										<p>
-											Who is responsible for these workshops? WTH man!
-										</p>
-									</div>
-								</div>
-							</td>
+						{%- endfor %}
 						</tr>
 
-						<tr data-toggle="collapse" data-target=".row-03">
-							<td class="time">
-								<div class="cell-content">
-									<time>15:00</time>
-								</div>
-							</td>
-							<td class="event">
-								<div class="cell-content media">
-									<img class="align-self-center mr-3" src="http://via.placeholder.com/80x80" alt="Placeholder image" />
-									<div class="media-body">
-										<h5>
-											Break
-										</h5>
-									</div>
-								</div>
-							</td>
-							<td>
-								<div class="cell-content"></div>
-							</td>
-							<td class="event">
-								<div class="cell-content media">
-									<img class="align-self-center mr-3" src="http://via.placeholder.com/80x80" alt="Placeholder image" />
-									<div class="media-body">
-										<h5>
-											All Workshops
-										</h5>
-									</div>
-								</div>
-							</td>
-						</tr>
-
-						<tr class="collapse-row hidden">
-							<td>
-								<div class="cell-content collapse row-03">
-									<div class="more"></div>
-								</div>
-							</td>
-							<td>
-								<div class="cell-content collapse row-03">
-									<div class="more">
-										<p>	
-											Just chill bro, don't ask much.
-										</p>
-									</div>
-								</div>
-							</td>
-							<td>
-								<div class="cell-content collapse row-03">
-									<div class="more"></div>
-								</div>
-							</td>
-							<td>
-								<div class="cell-content collapse row-03">
-									<div class="more">
-										<p>
-											You get to choose where you go. Too difficult, huh?
-										</p>
-									</div>
-								</div>
-							</td>
-						</tr>
-
-						<tr data-toggle="collapse" data-target=".row-04">
-							<td class="time">
-								<div class="cell-content">
-									<time>16:30</time>
-								</div>
-							</td>
-							<td class="event">
-								<div class="cell-content media">
-									<img class="align-self-center mr-3" src="http://via.placeholder.com/80x80" alt="Placeholder image" />
-									<div class="media-body">
-										<h5>
-											<a href="/speakers/john-kalogerakis">
-												John Kalogerakis
-											</a><br>
-											<a href="/speakers/sissy-nikolaou">
-												Sissy Nikolaou
-											</a><br>
-											<a href="/speakers/tilemachos-andrianopoulos">
-												Tilemachos Andrianopoulos
-											</a>
-										</h5>
-										<h6>
-											Engineering What Matters
-										</h6>
-									</div>
-								</div>
-							</td>
-							<td>
-								<div class="cell-content"></div>
-							</td>
-							<td class="event">
-								<div class="cell-content media">
-									<img class="align-self-center mr-3" src="http://via.placeholder.com/80x80" alt="Placeholder image" />
-									<div class="media-body">
-										<h5>
-											TransLab Workshop
-										</h5>
-									</div>
-								</div>
-							</td>
-						</tr>
-
-						<tr class="collapse-row hidden">
-							<td>
-								<div class="cell-content collapse row-04">
-									<div class="more"></div>
-								</div>
-							</td>
-							<td>
-								<div class="cell-content collapse row-04">
-									<div class="more">
-										<p>	
-											No offense, but who knows these guys?
-										</p>
-									</div>
-								</div>
-							</td>
-							<td>
-								<div class="cell-content collapse row-04">
-									<div class="more"></div>
-								</div>
-							</td>
-							<td>
-								<div class="cell-content collapse row-04">
-									<div class="more">
-										<p>
-											TransLab? What were you thinking?
-										</p>
-									</div>
-								</div>
-							</td>
-						</tr>
+					{%- endfor %}
 
 					</tbody>
 
