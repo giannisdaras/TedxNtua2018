@@ -4,14 +4,14 @@ namespace App\Http\Controllers;
 
 class ScheduleController extends Controller {
 
-	private function processSchedule($s) {
+	private function convertToTable($s) {
 
 		/* 
 
 			Converts the schedule to a table form, where events of different categories are grouped by event time
 			$s is an associative array with three categories: talks, performances and workshops
 			Each category is associated to an array of events of that category, sorted by time
-			The function processSchedule keeps three indices corresponding to each category and iterates through $s, each time adding to an array the event (of any category) with the smallest event time and any other events that happen at the same time, thus grouping them together.
+			The function convertToTable keeps three indices corresponding to each category and iterates through $s, each time adding to an array the event (of any category) with the smallest event time and any other events that happen at the same time, thus grouping them together.
 
 		*/
 
@@ -119,8 +119,9 @@ class ScheduleController extends Controller {
 			)
 		);
 
-		$rows = $this->processSchedule($schedule);
-		
-		return view('schedule')->with('rows', $rows);
+		$rows = $this->convertToTable($schedule);
+		$day = "2018-03-31";
+
+		return view('schedule', compact('rows', 'day'));
 	}
 }

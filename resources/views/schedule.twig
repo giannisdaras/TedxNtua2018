@@ -8,8 +8,230 @@
 			</section>
 	
 			<section class="content">
+
+				<div class="tabbed-schedule d-block d-lg-none">
+
+					<ul class="nav nav-pills nav-justified mb-5 d-block d-sm-flex" id="pills-tab" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" id="pills-talks-tab" data-toggle="pill" href="#pills-talks" role="tab" aria-controls="pills-talks" aria-selected="true">Talks</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="pills-performances-tab" data-toggle="pill" href="#pills-performances" role="tab" aria-controls="pills-performances" aria-selected="false">Performances</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="pills-workshops-tab" data-toggle="pill" href="#pills-workshops" role="tab" aria-controls="pills-workshops" aria-selected="false">Workshops</a>
+						</li>
+					</ul>
+
+					<div class="tab-content" id="pills-tabContent">
+
+						<div class="tab-pane fade show active" id="pills-talks" role="tabpanel" aria-labelledby="pills-talks-tab">
+
+							<table class="table table-hover">
+
+								<thead>
+									<tr>
+										<th scope="col">Time</th>
+										<th scope="col">Talks</th>
+									</tr>
+								</thead>
+
+								<tbody>
+								{%- for row in rows %}
+								{%- if not row.events[0].empty %}
+
+									<tr data-toggle="collapse" data-target=".talks-row-{{ "%02d" | format(loop.index) }}">
+										<td class="time">
+											<div class="cell-content">
+												<time datetime="{{ day }} {{ row.time }}">{{ row.time }}</time>
+											</div>
+										</td>
+									{%- set event = row.events[0] %}
+
+										<td class="event">
+											<div class="cell-content media">
+												{%- if event.image %}
+
+												<img class="align-self-center mr-3" src="{{ event.image }}" alt="" />
+												{%- endif %}
+
+												<div class="media-body">
+													<h5>
+														{{ event.title|raw }}
+													</h5>
+													{%- if event.subtitle %}
+
+													<h6>
+														{{ event.subtitle }}
+													</h6>
+													{%- endif %}
+
+												</div>
+											</div>
+										</td>
+									</tr>
+
+									<tr class="collapse-row hidden">
+										<td>
+											<div class="cell-content collapse talks-row-{{ "%02d" | format(loop.index) }}">
+												<div class="more"></div>
+											</div>
+										</td>
+										<td>
+											<div class="cell-content collapse talks-row-{{ "%02d" | format(loop.index) }}">
+												<div class="more">{{ event.more|raw }}</div>
+											</div>
+										</td>
+									</tr>
+								{%- endif %}
+								{%- endfor %}
+
+								</tbody>
+
+							</table>
+
+						</div>
+
+						<div class="tab-pane fade" id="pills-performances" role="tabpanel" aria-labelledby="pills-performances-tab">
+
+							<table class="table table-hover">
+
+								<thead>
+									<tr>
+										<th scope="col">Time</th>
+										<th scope="col">Performances</th>
+									</tr>
+								</thead>
+
+								<tbody>
+								{%- for row in rows %}
+								{%- if not row.events[1].empty %}
+
+									<tr data-toggle="collapse" data-target=".performances-row-{{ "%02d" | format(loop.index) }}">
+										<td class="time">
+											<div class="cell-content">
+												<time datetime="{{ day }} {{ row.time }}">{{ row.time }}</time>
+											</div>
+										</td>
+									{%- set event = row.events[1] %}
+
+										<td class="event">
+											<div class="cell-content media">
+												{%- if event.image %}
+
+												<img class="align-self-center mr-3" src="{{ event.image }}" alt="" />
+												{%- endif %}
+
+												<div class="media-body">
+													<h5>
+														{{ event.title|raw }}
+													</h5>
+													{%- if event.subtitle %}
+
+													<h6>
+														{{ event.subtitle }}
+													</h6>
+													{%- endif %}
+
+												</div>
+											</div>
+										</td>
+									</tr>
+
+									<tr class="collapse-row hidden">
+										<td>
+											<div class="cell-content collapse performances-row-{{ "%02d" | format(loop.index) }}">
+												<div class="more"></div>
+											</div>
+										</td>
+										<td>
+											<div class="cell-content collapse performances-row-{{ "%02d" | format(loop.index) }}">
+												<div class="more">{{ event.more|raw }}</div>
+											</div>
+										</td>
+									</tr>
+								{%- endif %}
+								{%- endfor %}
+
+								</tbody>
+
+							</table>
+
+						</div>
+
+						<div class="tab-pane fade" id="pills-workshops" role="tabpanel" aria-labelledby="pills-workshops-tab">
+
+							<table class="table table-hover">
+
+								<thead>
+									<tr>
+										<th scope="col">Time</th>
+										<th scope="col">Workshops</th>
+									</tr>
+								</thead>
+
+								<tbody>
+								{%- for row in rows %}
+								{%- if not row.events[2].empty %}
+
+									<tr data-toggle="collapse" data-target=".workshops-row-{{ "%02d" | format(loop.index) }}">
+										<td class="time">
+											<div class="cell-content">
+												<time datetime="{{ day }} {{ row.time }}">{{ row.time }}</time>
+											</div>
+										</td>
+									{%- set event = row.events[2] %}
+
+										<td class="event">
+											<div class="cell-content media">
+												{%- if event.image %}
+
+												<img class="align-self-center mr-3" src="{{ event.image }}" alt="" />
+												{%- endif %}
+
+												<div class="media-body">
+													<h5>
+														{{ event.title|raw }}
+													</h5>
+													{%- if event.subtitle %}
+
+													<h6>
+														{{ event.subtitle }}
+													</h6>
+													{%- endif %}
+
+												</div>
+											</div>
+										</td>
+									</tr>
+
+									<tr class="collapse-row hidden">
+										<td>
+											<div class="cell-content collapse workshops-row-{{ "%02d" | format(loop.index) }}">
+												<div class="more"></div>
+											</div>
+										</td>
+										<td>
+											<div class="cell-content collapse workshops-row-{{ "%02d" | format(loop.index) }}">
+												<div class="more">{{ event.more|raw }}</div>
+											</div>
+										</td>
+									</tr>
+
+								{%- endif %}
+								{%- endfor %}
+
+								</tbody>
+
+							</table>
+
+						</div>
+
+					</div>
+
+				</div>
 				
-				<table class="table table-hover">
+				<table class="table table-hover d-none d-lg-table">
 
 					<thead>
 						<tr>
@@ -23,35 +245,45 @@
 					<tbody>
 					{%- for row in rows %}
 
+
 						<tr data-toggle="collapse" data-target=".row-{{ "%02d" | format(loop.index) }}">
 							<td class="time">
 								<div class="cell-content">
-									<time>{{ row.time }}</time>
+									<time datetime="{{ day }} {{ row.time }}">{{ row.time }}</time>
 								</div>
 							</td>
 						{%- for event in row.events %}
+
 							<td class="event">
 								{%- if not event.empty %}
+
 								<div class="cell-content media">
 									{%- if event.image %}
-									<img class="align-self-center mr-3" src="{{ event.image }}" alt="{{ event.title }}" />
+
+									<img class="align-self-center mr-3" src="{{ event.image }}" alt="" />
 									{%- endif %}
+
 									<div class="media-body">
 										<h5>
 											{{ event.title|raw }}
 										</h5>
 										{%- if event.subtitle %}
+
 										<h6>
 											{{ event.subtitle }}
 										</h6>
 										{%- endif %}
+
 									</div>
 								</div>
 								{%- else %}
+
 								<div class="cell-content"></div>
 								{%- endif %}
+
 							</td>
 						{%- endfor %}
+
 						</tr>
 
 						<tr class="collapse-row hidden">
@@ -61,12 +293,14 @@
 								</div>
 							</td>
 						{%- for event in row.events %}
+
 							<td>
 								<div class="cell-content collapse row-{{ "%02d" | format(loop.parent.loop.index) }}">
 									<div class="more">{{ event.more|raw }}</div>
 								</div>
 							</td>
 						{%- endfor %}
+
 						</tr>
 
 					{%- endfor %}

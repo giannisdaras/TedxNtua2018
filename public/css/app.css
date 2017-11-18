@@ -12795,7 +12795,7 @@ header.dark {
 nav.navbar {
   height: 100%;
   max-width: 1366px;
-  padding: .5rem 2rem;
+  padding: .5rem 1rem;
 }
 
 .navbar-brand {
@@ -12846,6 +12846,41 @@ nav.navbar {
 
 /* END NAVIGATION MENU */
 
+/* PAGE HEADING */
+
+section.heading {
+  width: 100%;
+  border-bottom: 1px solid #444;
+  /* bottom inner shadow */
+  -webkit-box-shadow: inset 0 -40px 60px -40px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0 -40px 60px -40px rgba(0, 0, 0, 0.5);
+  background-color: #bc2015;
+  background-image: url("https://www.transparenttextures.com/patterns/exclusive-paper.png");
+}
+
+section.heading h1 {
+  font-weight: bold;
+  font-size: 3rem;
+  padding: 1rem 2rem;
+  text-align: center;
+  margin: 0 auto;
+  color: #222;
+  /* 3d effect */
+  text-shadow: 0 1px 0 #0C0303, 0 2px 0 #1C0D0D;
+}
+
+/* END PAGE HEADING */
+
+/* PAGE CONTENT */
+
+section.content {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+/* END PAGE CONTENT */
+
 /* FOOTER */
 
 footer {
@@ -12861,7 +12896,7 @@ footer {
 footer .container {
   max-width: 1366px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 footer .social-links {
@@ -12896,39 +12931,6 @@ footer .social-links a:hover i.fa-envelope-square {
 }
 
 /* END FOOTER */
-
-/* PAGE HEADING */
-
-section.heading {
-  width: 100%;
-  border-bottom: 1px solid #444;
-  /* bottom inner shadow */
-  -webkit-box-shadow: inset 0 -40px 60px -40px rgba(0, 0, 0, 0.5);
-          box-shadow: inset 0 -40px 60px -40px rgba(0, 0, 0, 0.5);
-  background-color: #bc2015;
-  background-image: url("https://www.transparenttextures.com/patterns/exclusive-paper.png");
-}
-
-section.heading h1 {
-  font-weight: bold;
-  font-size: 3rem;
-  padding: 1rem 2rem;
-  text-align: center;
-  margin: 0 auto;
-  color: #222;
-  /* 3d effect */
-  text-shadow: 0 1px 0 #0C0303, 0 2px 0 #1C0D0D;
-}
-
-/* END PAGE HEADING */
-
-/* PAGE CONTENT */
-
-section.content {
-  max-width: 1366px;
-  margin: 0 auto;
-  padding: 4rem 2rem;
-}
 
 /* HOME PAGE */
 
@@ -13026,6 +13028,19 @@ article.partners .sponsor_img:hover {
 
 /* SCHEDULE PAGE */
 
+article.schedule table {
+  font-size: .85rem;
+}
+
+article.schedule h5 {
+  font-size: 1.25em;
+}
+
+article.schedule h6 {
+  font-size: 1em;
+  font-weight: bold;
+}
+
 article.schedule tbody tr:not(.collapse-row) {
   cursor: pointer;
 }
@@ -13033,15 +13048,27 @@ article.schedule tbody tr:not(.collapse-row) {
 article.schedule thead {
   background-color: #222222;
   color: white;
-  font-size: 1.25rem;
+  font-size: 1.25em;
 }
 
 article.schedule thead th {
-  width: 30%;
+  width: 90%;
 }
 
 article.schedule thead th:first-child {
   width: 10%;
+}
+
+article.schedule .nav-pills {
+  -webkit-box-shadow: inset 0 0 1rem -5px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0 0 1rem -5px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.075);
+  border-radius: .25rem;
+}
+
+article.schedule .nav-pills .nav-link.active,
+article.schedule .show > .nav-pills .nav-link {
+  background-color: #a51c12;
 }
 
 article.schedule td {
@@ -13070,10 +13097,6 @@ article.schedule td .more p:last-child {
   margin-bottom: 0;
 }
 
-article.schedule h6 {
-  font-weight: bold;
-}
-
 /* CONTACT PAGE */
 
 article.contact p {
@@ -13091,25 +13114,26 @@ article.contact .form-control:focus {
           box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px #E62B1E;
 }
 
-article.contact .btn-primary,
-article.contact .btn-primary:active,
-article.contact .btn-primary:visited,
-article.contact .btn-primary:focus {
-  background-color: #222222 !important;
-  border-color: #222222 !important;
-  outline: #222222 !important;
+article.contact .btn-primary:not([disabled]):not(.disabled) {
+  background-color: #222222;
+  border-color: #222222;
+  cursor: pointer;
+  outline: #222222;
 }
 
-article.contact .btn-primary:hover {
-  background-color: #3c3b3b !important;
-  border-color: #3c3b3b !important;
+article.contact .btn-primary:not([disabled]):not(.disabled):active,
+article.contact .btn-primary:not([disabled]):not(.disabled):visited,
+article.contact .btn-primary:not([disabled]):not(.disabled):focus {
+  background-color: #222222;
+  border-color: #222222;
+  outline: #222222;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px transparent;
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px transparent;
 }
 
-article.contact .btn-primary:active,
-article.contact .btn-primary:visited,
-article.contact .btn-primary:focus {
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px transparent !important;
-          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px transparent !important;
+article.contact .btn-primary:not([disabled]):not(.disabled):hover {
+  background-color: #3c3b3b;
+  border-color: #3c3b3b;
 }
 
 /* END CONTACT PAGE */
@@ -13117,12 +13141,32 @@ article.contact .btn-primary:focus {
 /* 	MEDIA QUERIES */
 
 @media (min-width: 576px) {
+  nav.navbar {
+    padding: .5rem 2rem;
+  }
+
   .navbar-brand {
     height: 4.8rem;
+  }
+
+  section.content {
+    padding: 3rem 2rem;
+  }
+
+  article.schedule table {
+    font-size: .9rem;
+  }
+
+  footer .container {
+    padding: 0 2rem;
   }
 }
 
 @media (min-width: 768px) {
+  article.schedule table {
+    font-size: 1rem;
+  }
+
   footer {
     padding: 3rem 0;
   }
@@ -13151,6 +13195,10 @@ article.contact .btn-primary:focus {
 
   article.about section.content .row {
     margin-bottom: 1rem;
+  }
+
+  article.schedule thead th {
+    width: 30%;
   }
 }
 

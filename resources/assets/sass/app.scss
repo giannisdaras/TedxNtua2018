@@ -33,7 +33,7 @@ header.dark {
 nav.navbar {
 	height: 100%;
 	max-width: 1366px;
-	padding: .5rem 2rem;
+	padding: .5rem 1rem;
 }
 
 .navbar-brand {
@@ -75,6 +75,36 @@ nav.navbar {
 
 /* END NAVIGATION MENU */
 
+/* PAGE HEADING */
+section.heading {
+	width: 100%;
+	border-bottom: 1px solid #444;
+	/* bottom inner shadow */
+	box-shadow: inset 0 -40px 60px -40px rgba(0, 0, 0, .5);
+	h1 {
+		font-weight: bold;
+		font-size: 3rem;
+		padding: 1rem 2rem;
+		text-align: center;
+		margin: 0 auto;
+		color: #222;
+		/* 3d effect */
+  		text-shadow: 0 1px 0 #0C0303, 0 2px 0 #1C0D0D;
+	}
+	background-color: darken($brand-primary, 10%);
+	background-image: url("https://www.transparenttextures.com/patterns/exclusive-paper.png")
+}
+
+/* END PAGE HEADING */
+
+/* PAGE CONTENT */
+section.content {
+	max-width: 1366px;
+	margin: 0 auto;
+	padding: 3rem 1rem;
+}
+/* END PAGE CONTENT */
+
 /* FOOTER */
 footer {
 	background-color: #111;
@@ -86,7 +116,7 @@ footer {
 	.container {
 		max-width: 1366px;
 		margin: 0 auto;
-		padding: 0 2rem;
+		padding: 0 1rem;
 	}
 	.social-links { 
 		margin-bottom: 0;
@@ -116,35 +146,6 @@ footer {
 }
 
 /* END FOOTER */
-
-/* PAGE HEADING */
-section.heading {
-	width: 100%;
-	border-bottom: 1px solid #444;
-	/* bottom inner shadow */
-	box-shadow: inset 0 -40px 60px -40px rgba(0, 0, 0, .5);
-	h1 {
-		font-weight: bold;
-		font-size: 3rem;
-		padding: 1rem 2rem;
-		text-align: center;
-		margin: 0 auto;
-		color: #222;
-		/* 3d effect */
-  		text-shadow: 0 1px 0 #0C0303, 0 2px 0 #1C0D0D;
-	}
-	background-color: darken($brand-primary, 10%);
-	background-image: url("https://www.transparenttextures.com/patterns/exclusive-paper.png")
-}
-
-/* END PAGE HEADING */
-
-/* PAGE CONTENT */
-section.content {
-	max-width: 1366px;
-	margin: 0 auto;
-	padding: 4rem 2rem;
-}
 
 /* HOME PAGE */
 
@@ -240,19 +241,38 @@ article.partners {
 /* SCHEDULE PAGE */
 
 article.schedule {
+	table {
+		font-size: .85rem;
+	}
+	h5 {
+		font-size: 1.25em;
+	}
+	h6 {
+		font-size: 1em;
+		font-weight: bold;
+	}
 	tbody tr:not(.collapse-row) {
 		cursor: pointer;
 	}
 	thead {
 		background-color: $brand-secondary;
 		color: white;
-		font-size: 1.25rem;
+		font-size: 1.25em;
 	}
 	thead th {
-		width: 30%;
+		width: 90%;
 	}
 	thead th:first-child {
 		width: 10%;
+	}
+	.nav-pills {
+		box-shadow: inset 0 0 1rem -5px rgba(0, 0, 0, .5);
+		background-color: rgba(0, 0, 0, 0.075);
+		border-radius: .25rem;
+	}
+	.nav-pills .nav-link.active,
+	.show > .nav-pills .nav-link {
+		background-color: darken($brand-primary, 15%);
 	}
 	td {
 		height: 0;
@@ -274,9 +294,6 @@ article.schedule {
 			margin-bottom: 0;
 		}
 	}
-	h6 {
-		font-weight: bold;
-	}
 }
 
 /* CONTACT PAGE */
@@ -296,21 +313,22 @@ article.contact {
   		box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px $brand-primary;
 	}
 
-
-	.btn-primary, .btn-primary:active, .btn-primary:visited, .btn-primary:focus {
-    	background-color: $brand-secondary !important;
-    	border-color: $brand-secondary !important;
-    	outline: $brand-secondary !important;
+	.btn-primary:not([disabled]):not(.disabled) {
+    	background-color: $brand-secondary;
+    	border-color: $brand-secondary;
+    	cursor: pointer;
+    	outline: $brand-secondary;
+    	&:active, &:visited, &:focus {
+	    	background-color: $brand-secondary;
+	    	border-color: $brand-secondary;
+	    	outline: $brand-secondary;
+			box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px rgba(0,0,0,0);
+    	}
 	}
 
-
-	.btn-primary:hover {
-		background-color: lighten($brand-secondary, 10%) !important;
-    	border-color: lighten($brand-secondary, 10%) !important;
-	}
-
-	.btn-primary:active, .btn-primary:visited, .btn-primary:focus { 
-		box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px rgba(0,0,0,0) !important;		
+	.btn-primary:not([disabled]):not(.disabled):hover {
+		background-color: lighten($brand-secondary, 10%);
+    	border-color: lighten($brand-secondary, 10%);
 	}
 
 }
@@ -321,12 +339,33 @@ article.contact {
 /* 	MEDIA QUERIES */
 
 @media (min-width: 576px) {
+	nav.navbar {
+		padding: .5rem 2rem;
+	}
 	.navbar-brand {
 		height: 4.8rem;
+	}
+	section.content {
+		padding: 3rem 2rem;
+	}
+	article.schedule {
+		table {
+			font-size: .9rem;
+		}
+	}
+	footer {
+		.container {
+			padding: 0 2rem;
+		}
 	}
 }
 
 @include media-breakpoint-up(md) {
+	article.schedule {
+		table {
+			font-size: 1rem;
+		}
+	}
 	footer {
 		padding: 3rem 0;
 		.col-md-4 {
@@ -352,6 +391,11 @@ article.contact {
 		}
 		section.content .row {
 			margin-bottom: 1rem;
+		}
+	}
+	article.schedule {
+		thead th {
+			width: 30%;
 		}
 	}
 }
