@@ -38,7 +38,7 @@ nav.navbar {
 
 .navbar-brand {
 	/* navbar takes the height of the brand logo */
-	height: 4.8rem;
+	height: 4rem;
 	padding: .6rem 0;
 	/* zoom effect on hover */
 	transition: transform .2s ease;
@@ -131,7 +131,7 @@ section.heading {
 		margin: 0 auto;
 		color: #222;
 		/* 3d effect */
-  		text-shadow: 0 1px 0 rgba(12,3,3,1) , 0 2px 0 rgba(28,13,13,1);
+  		text-shadow: 0 1px 0 #0C0303, 0 2px 0 #1C0D0D;
 	}
 	background-color: darken($brand-primary, 10%);
 	background-image: url("https://www.transparenttextures.com/patterns/exclusive-paper.png")
@@ -204,8 +204,8 @@ article.partners {
 		text-align: center;
 	}
 	.sponsor_img {
-	    display:inline-block;
-	    border:0;
+	    display: inline-block;
+	    border: 0;
 	    position: relative;
 	    -webkit-transition: all 200ms ease-in;
 	    -webkit-transform: scale(1); 
@@ -283,8 +283,7 @@ article.schedule {
 article.contact {
 
 	p {
-		font-size: 13px;
-
+		font-size: 0.8rem;
 	}
 
 	form {
@@ -320,6 +319,12 @@ article.contact {
 /* END CONTACT PAGE */
 
 /* 	MEDIA QUERIES */
+
+@media (min-width: 576px) {
+	.navbar-brand {
+		height: 4.8rem;
+	}
+}
 
 @include media-breakpoint-up(md) {
 	footer {

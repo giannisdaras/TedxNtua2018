@@ -12800,7 +12800,7 @@ nav.navbar {
 
 .navbar-brand {
   /* navbar takes the height of the brand logo */
-  height: 4.8rem;
+  height: 4rem;
   padding: .6rem 0;
   /* zoom effect on hover */
   -webkit-transition: -webkit-transform .2s ease;
@@ -12917,7 +12917,7 @@ section.heading h1 {
   margin: 0 auto;
   color: #222;
   /* 3d effect */
-  text-shadow: 0 1px 0 #0c0303, 0 2px 0 #1c0d0d;
+  text-shadow: 0 1px 0 #0C0303, 0 2px 0 #1C0D0D;
 }
 
 /* END PAGE HEADING */
@@ -13077,7 +13077,7 @@ article.schedule h6 {
 /* CONTACT PAGE */
 
 article.contact p {
-  font-size: 13px;
+  font-size: 0.8rem;
 }
 
 article.contact form {
@@ -13115,6 +13115,12 @@ article.contact .btn-primary:focus {
 /* END CONTACT PAGE */
 
 /* 	MEDIA QUERIES */
+
+@media (min-width: 576px) {
+  .navbar-brand {
+    height: 4.8rem;
+  }
+}
 
 @media (min-width: 768px) {
   footer {
