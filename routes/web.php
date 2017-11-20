@@ -12,12 +12,12 @@
 
 Route::group([
 	'prefix' => LaravelLocalization::setLocale(),
-	'middleware' => ['web', 'localeSessionRedirect', 'localizationRedirect']
+	'middleware' => ['web', 'localeSessionRedirect', 'localizationRedirect'],
 ], function () {
 	Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
 	Route::get('/about', ['as' => 'about', 'uses' => 'AboutController@index']);
 	Route::get('/contact', ['as' => 'contact', 'uses' => 'ContactController@index']);
 	Route::get('/partners', ['as' => 'partners', 'uses' => 'PartnersController@index']);
 	Route::get('/schedule', ['as' => 'schedule', 'uses' => 'ScheduleController@index']);
-	Route::get('/contact/submit', 'ContactController@submit');
+	Route::get('/team', ['as' => 'team', 'uses' => 'TeamController@index']);
 });

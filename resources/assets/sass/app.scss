@@ -331,6 +331,13 @@ article.contact {
     	border-color: lighten($brand-secondary, 10%);
 	}
 
+	@media (max-width: 1366px) {
+    	.button-holder {
+      		margin: auto;
+      		text-align: center;
+    }
+  }
+
 }
 
 
@@ -412,4 +419,22 @@ article.contact {
 	section.heading h1 {
 		padding: 2rem 2rem;
 	}
+}
+
+/* TEAM PAGE */
+
+article.team {
+	.img {
+ 	   margin-right: -15px; // Remove right gap
+    	margin-left: -15px;  // Remove left gap
+    	padding-bottom: 62.5%; // ratio is 16:10
+    	background-position: 50% 50%;
+    	background-repeat: no-repeat;
+    	background-size: cover;
+		background-image : url("https://pi.tedcdn.com/r/pe.tedcdn.com/images/ted/0ef62e4df27b4ba7294de889fdbc33e476a08ec9_254x191.jpg?");
+
+	}	
+
+
+
 }
