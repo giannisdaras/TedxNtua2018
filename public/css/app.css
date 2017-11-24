@@ -12972,6 +12972,31 @@ article.about section.content .col {
   margin-bottom: 1rem;
 }
 
+/* SPEAKER PAGE */
+
+article.speaker section.content a {
+  color: #222222;
+}
+
+article.speaker section.content h1 {
+  color: #222222;
+  font-weight: bold;
+}
+
+article.speaker section.content h2 {
+  color: #E62B1E;
+  font-weight: bold;
+  text-align: center;
+}
+
+article.speaker section.content .row {
+  margin-bottom: 10rem;
+}
+
+article.speaker section.content .col {
+  margin-bottom: 1rem;
+}
+
 /* PARTNERS PAGE */
 
 article.partners h2 {
@@ -13235,11 +13260,13 @@ article.contact .btn-primary:not([disabled]):not(.disabled):hover {
     padding-left: 0.625rem;
   }
 
-  article.about section.content .col {
+  article.about section.content .col,
+  article.speaker section.content .col {
     margin-bottom: 0;
   }
 
-  article.about section.content .row {
+  article.about section.content .row,
+  article.speaker section.content .row {
     margin-bottom: 1rem;
   }
 

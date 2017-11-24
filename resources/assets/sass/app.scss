@@ -188,6 +188,34 @@ article.about {
 	}
 }
 
+/* SPEAKER PAGE */
+
+article.speaker {
+
+	section.content a {
+		color: $brand-secondary;
+	}
+	
+	section.content h1 {
+		color: $brand-secondary;
+		font-weight: bold;
+	}
+
+	section.content h2 {
+		color: $brand-primary;
+		font-weight: bold;
+		text-align: center;
+	}
+	
+	section.content .row {
+		margin-bottom: 10rem;
+	}
+
+	section.content .col {
+		margin-bottom: 1rem;
+	}
+}
+
 /* PARTNERS PAGE */
 
 article.partners {
@@ -355,6 +383,9 @@ article.contact {
 }
 
 
+
+
+
 /* END CONTACT PAGE */
 
 /*	MEDIA QUERIES
@@ -430,7 +461,10 @@ article.contact {
 		padding-right: 0.5 * $navlink-padding;
 		padding-left: 0.5 * $navlink-padding;
 	}
-	article.about {
+
+
+
+	article.about, article.speaker {
 		section.content .col {
 			margin-bottom: 0;
 		}
