@@ -65,6 +65,9 @@ nav.navbar {
 	font-size: 1.25rem;
 	padding-right: $navlink-padding;
 	padding-left: $navlink-padding;
+	&:hover {
+		color: $brand-primary;
+	}
 }
 
 /* highlighted item */
@@ -117,7 +120,7 @@ footer {
 	/* top inner shadow */
 	box-shadow: inset 0 40px 60px -40px black;
 	color: white;
-	padding: 2rem 0;
+	padding-top: 2rem;
 	.container {
 		max-width: 1366px;
 		margin: 0 auto;
@@ -149,6 +152,17 @@ footer {
 		}
 	}
 	.credits {
+		padding: 1rem 0;
+		p {
+			line-height: 2;
+			margin-bottom: 0;
+		}
+		a {
+			padding: 0 .5rem;
+			&:hover {
+				color: white;
+			}
+		}
 	}
 }
 
@@ -382,10 +396,6 @@ article.contact {
 
 }
 
-
-
-
-
 /* END CONTACT PAGE */
 
 /*	MEDIA QUERIES
@@ -443,7 +453,7 @@ article.contact {
 		}
 	}
 	footer {
-		padding: 3rem 0;
+		padding-top: 3rem;
 		.col-md-4 {
 			padding-top: 1rem;
 			padding-bottom: 1rem;
@@ -461,8 +471,6 @@ article.contact {
 		padding-right: 0.5 * $navlink-padding;
 		padding-left: 0.5 * $navlink-padding;
 	}
-
-
 
 	article.about, article.speaker {
 		section.content .col {
