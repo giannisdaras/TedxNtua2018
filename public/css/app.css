@@ -12788,6 +12788,14 @@ a:hover {
   text-decoration: none;
 }
 
+::-moz-selection {
+  background: #E62B1E;
+}
+
+::selection {
+  background: #E62B1E;
+}
+
 /* NAVIGATION MENU */
 
 header.dark {
@@ -13060,10 +13068,12 @@ footer .credits a:hover {
 /* HOME PAGE */
 
 article.home section {
+  /* top and bottom inset box shadow */
+  -webkit-box-shadow: inset 0 -80px 80px -80px rgba(0, 0, 0, 0.4), inset 0 80px 80px -80px rgba(0, 0, 0, 0.4);
+          box-shadow: inset 0 -80px 80px -80px rgba(0, 0, 0, 0.4), inset 0 80px 80px -80px rgba(0, 0, 0, 0.4);
   width: 100%;
   /* temporary, just to test the home layout */
   min-height: 400px;
-  border-bottom: 2px solid #444;
   font-size: .9em;
 }
 
@@ -13078,7 +13088,138 @@ article.home section h2 {
 }
 
 article.home #hero {
+  /* remove top inset shadow from #hero, keep only bottom */
+  -webkit-box-shadow: inset 0 -80px 80px -80px rgba(0, 0, 0, 0.4);
+          box-shadow: inset 0 -80px 80px -80px rgba(0, 0, 0, 0.4);
+  color: white;
+  border-bottom: 0;
+  background: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png"), -webkit-gradient(linear, left top, left bottom, from(#202020), to(#2F2F2F));
+  background: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png"), linear-gradient(#202020, #2F2F2F);
+  -webkit-animation: gradientFlow 60s linear infinite;
+          animation: gradientFlow 60s linear infinite;
   min-height: 720px;
+}
+
+article.home #hero h1 {
+  margin-top: 20rem;
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+article.home #hero .info a {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: white;
+  padding: .5rem 2rem;
+}
+
+article.home #hero .info a:not(:last-child) {
+  border-right: 2px solid white;
+}
+
+article.home #hero .info a span {
+  display: block;
+}
+
+article.home #hero .info a.blink span {
+  -webkit-animation: blink 1s;
+          animation: blink 1s;
+}
+
+article.home #hero .tickets {
+  margin-top: 2.5rem;
+}
+
+article.home #hero .tickets a {
+  background-color: #E62B1E;
+  color: white;
+  font-size: 1.5rem;
+  padding: 1rem 2.5rem;
+}
+
+article.home #hero .tickets a:hover {
+  background-color: #f32012;
+}
+
+article.home #hero .tickets a:active {
+  font-size: 1.45rem;
+}
+
+article.home #schedule,
+article.home #partners,
+article.home #about,
+article.home #speakers {
+  border-bottom: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#cddccd), to(#f7f7f7));
+  background: linear-gradient(to right, #cddccd, #f7f7f7);
+}
+
+/* home animations sub-section */
+
+@-webkit-keyframes gradientFlow {
+  0%, 100% {
+    background-position: 50% 0%;
+  }
+
+  50% {
+    background-position: 50% 100%;
+  }
+}
+
+@keyframes gradientFlow {
+  0%, 100% {
+    background-position: 50% 0%;
+  }
+
+  50% {
+    background-position: 50% 100%;
+  }
+}
+
+@-webkit-keyframes blink {
+  0%, 100% {
+    color: white;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+
+  20% {
+    color: white;
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+  }
+
+  10%, 40% {
+    color: #E62B1E;
+  }
+
+  75% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    color: white;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+
+  20% {
+    color: white;
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+  }
+
+  10%, 40% {
+    color: #E62B1E;
+  }
+
+  75% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 /* END HOME PAGE */
@@ -13311,7 +13452,7 @@ article.contact .btn-primary:not([disabled]):not(.disabled):hover {
  *	Legend:
  *		- sm: >= 576px
  *		- md: >= 768px
- *		- lg: >= 1024px
+ *		- lg: >= 992px
  *		- xl: >= 1200px (not used, use 1366px instead)
  *		- custom 1366px
  */
@@ -13377,18 +13518,16 @@ article.contact .btn-primary:not([disabled]):not(.disabled):hover {
 }
 
 @media (min-width: 992px) {
-  .navbar-toggler {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-@media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav .nav-link {
     font-size: 1rem;
     padding-right: 0.625rem;
     padding-left: 0.625rem;
+  }
+
+  .navbar-toggler {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   article.about section.content .col,

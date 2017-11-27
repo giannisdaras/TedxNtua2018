@@ -773,7 +773,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(9);
-module.exports = __webpack_require__(37);
+module.exports = __webpack_require__(38);
 
 
 /***/ }),
@@ -811,6 +811,7 @@ const app = new Vue({
 });
 
 */
+__webpack_require__(37);
 
 /***/ }),
 /* 10 */
@@ -36138,6 +36139,18 @@ module.exports = function spread(callback) {
 
 /***/ }),
 /* 37 */
+/***/ (function(module, exports) {
+
+$(document).ready(function () {
+    $("#hero .info a").on("mouseover", function (e) {
+        $(this).addClass("blink");
+    }).on("mouseout", function (e) {
+        $(this).removeClass("blink");
+    });
+});
+
+/***/ }),
+/* 38 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
