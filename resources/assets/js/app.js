@@ -29,3 +29,4 @@ const app = new Vue({
 });
 
 */
+require('./home');
