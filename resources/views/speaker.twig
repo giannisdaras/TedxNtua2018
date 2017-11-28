@@ -3,46 +3,43 @@
 {{ name }}
 {%- endblock %}
 {% block content %}
-<article class="speaker">
-	<section class="heading">
-		<h1>{{ name }}</h1>
-	</section>
+		<article class="speaker">
+			<section class="heading">
+				<h1>{{ name }}</h1>
+			</section>
 
-	<section class="content">
+			<section class="content">
+				<div class="container-fluid">
 
-		<div class="row mt-5 mt-lg-0 text-center text-lg-left">
-			<div class="col col-12 col-lg-3 wow bounceInLeft">
-				 <img src="{{ img_src }}" width="200rem" height="200rem" class="rounded-circle wow bounceInLeft">
-			</div>
+					<div class="row mt-5 mt-lg-0 text-center text-lg-left">
+						<div class="col col-12 col-lg-3 wow bounceInLeft">
+							 <img src="{{ img_src }}" width="200rem" height="200rem" class="rounded-circle wow bounceInLeft">
+						</div>
 
-			<div class="col col-12 col-lg-9  wow bounceInRight">
-				<h1 class="">{{ name }}</h1>
-				
-				<a href="https://skype.com"><i class="fa fa-skype fa-2x" aria-hidden="true"></i></a>
-				<a href="https://twitter.com"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>				 
-			</div>
+						<div class="col col-12 col-lg-9  wow bounceInRight">
+							<h1 class="">{{ name }}</h1>
+							
+							<a href="https://skype.com"><i class="fa fa-skype fa-2x" aria-hidden="true"></i></a>
+							<a href="https://twitter.com"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>				 
+						</div>
+					</div>
 
+					<div class="row mt-5 mt-lg-0 wow bounceInUp">
+						<div class="col col-12 col-lg-6">
+							<h2 class="text-center">Short Bio</h2>
+							<p class="text-justify">
+								{{ cv }}	
+							</p>
+						</div>
+						<div class="col col-12 col-lg-6">
+							<h2 class="text-center">Talk: {{ talk }}</h2>
+							<p class="text-justify">
+								{{ cv }}	
+							</p>
+						</div>
+					</div>
 
-			<div class="row mt-5 mt-lg-0 wow bounceInUp">
-			
-			<div class="col col-12 col-lg-6">
-				<h2 class="text-center">Short Bio</h2>
-				<p class="text-justify">
-					{{ cv }}	
-				</p>
-			</div>
-			<div class="col col-12 col-lg-6">
-				<h2 class="text-center">Talk: {{ talk }}</h2>
-				<p class="text-justify">
-					{{ cv }}	
-				</p>
-			</div></div></div></section>
-		</div>
-		</div>
-
-
-
-
-		<section>
+				</div>
+			</section>
 		</article>
 {% endblock %}

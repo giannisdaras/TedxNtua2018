@@ -12995,6 +12995,12 @@ section.content {
   min-height: 540px;
 }
 
+section.content > .container-fluid {
+  /* remove bootstrap's default paddings */
+  padding-left: 0;
+  padding-right: 0;
+}
+
 /* END PAGE CONTENT */
 
 /* FOOTER */
@@ -13046,20 +13052,21 @@ footer .social-links a:hover i.fa-envelope-square {
   color: #fbb034;
 }
 
-footer .credits {
-  padding: 1rem 0;
+footer .container.credits {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
-footer .credits p {
+footer .container.credits p {
   line-height: 2;
   margin-bottom: 0;
 }
 
-footer .credits a {
+footer .container.credits a {
   padding: 0 .5rem;
 }
 
-footer .credits a:hover {
+footer .container.credits a:hover {
   color: white;
 }
 
