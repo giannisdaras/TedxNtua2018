@@ -387,6 +387,26 @@ article.speaker {
 	section.content .col {
 		margin-bottom: 1rem;
 	}
+
+	
+	section.content .back {
+			margin-bottom: 1.5rem;
+	}
+
+	section.content .back a {
+			border-radius: 1rem;
+			background-color: $brand-primary;
+			color: white;
+			font-size: 1.3rem;
+			padding: 1rem 2.5rem;
+			&:hover {
+				background-color: saturate($brand-primary, 10%);
+			}
+			&:active {
+				font-size: 1.45rem;
+			}
+		}
+
 }
 
 /* PARTNERS PAGE */

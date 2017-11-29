@@ -10,9 +10,18 @@
 
 	<section class="content">
 
+		<div class="row mt-5 mt-lg-0 text-left text-lg-left">
+			<div class="col col-12 col-lg-12  wow bounceInRight">
+				<p class="tickets text-left back">
+					<a href="/#speakers"><i class="fa fa-chevron-circle-left fa-1x" aria-hidden="true"></i> More Speakers</a>
+				</p>
+				
+			</div>
+		</div>
+
 		<div class="row mt-5 mt-lg-0 text-center text-lg-left">
 			<div class="col col-12 col-lg-3 wow bounceInLeft">
-				 <img src="{{ img_src }}" width="200rem" height="200rem" class="rounded-circle wow bounceInLeft">
+				<img src="{{ img_src }}" width="200rem" height="200rem" class="rounded-circle wow bounceInLeft">
 			</div>
 
 			<div class="col col-12 col-lg-9  wow bounceInRight">
@@ -24,20 +33,20 @@
 
 
 			<div class="row mt-5 mt-lg-0 wow bounceInUp">
-			
-			<div class="col col-12 col-lg-6">
-				<h2 class="text-center">Short Bio</h2>
-				<p class="text-justify">
-					{{ cv }}	
-				</p>
+
+				<div class="col col-12 col-lg-6">
+					<h2 class="text-center">Short Bio</h2>
+					<p class="text-justify">
+						{{ cv }}	
+					</p>
+				</div>
+				<div class="col col-12 col-lg-6">
+					<h2 class="text-center">Talk: {{ talk }}</h2>
+					<p class="text-justify">
+						{{ cv }}	
+					</p>
+				</div></div></div></section>
 			</div>
-			<div class="col col-12 col-lg-6">
-				<h2 class="text-center">Talk: {{ talk }}</h2>
-				<p class="text-justify">
-					{{ cv }}	
-				</p>
-			</div></div></div></section>
-		</div>
 		</div>
 
 
@@ -45,4 +54,4 @@
 
 		<section>
 		</article>
-{% endblock %}
+		{% endblock %}
