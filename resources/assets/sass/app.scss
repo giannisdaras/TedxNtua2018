@@ -363,9 +363,16 @@ article.about {
 		color: $brand-primary;
 		font-weight: bold;
 		text-align: center;
+
 	}
 	section.content .col {
 		margin-bottom: 1rem;
+	}
+
+	section.content {
+		padding-left: 15rem;
+		padding-right: 15rem;
+
 	}
 }
 
@@ -607,7 +614,14 @@ article.contact {
 			font-size: 1em;
 		}
 	}
-	section.content, article.home .section-content {
+
+	article.about {
+		section {
+			padding: 2rem;
+		}
+	}
+
+	section.content, article.home {
 		padding: 3rem 2rem;
 	}
 	article.schedule {
@@ -663,7 +677,7 @@ article.contact {
 		display: flex;
 	}
 
-	article.about, article.speaker {
+	article.about, article.speaker, {
 		section.content .col {
 			margin-bottom: 0;
 		}
@@ -671,6 +685,7 @@ article.contact {
 			margin-bottom: 1rem;
 		}
 	}
+
 	article.schedule {
 		thead th {
 			width: 30%;
