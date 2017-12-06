@@ -357,132 +357,125 @@ article.home {
 
 /* END HOME PAGE */
 
-/* ABOUT PAGE */
-article.about {
-	section.content h2 {
-		color: $brand-primary;
-		font-weight: bold;
-		text-align: center;
-
-	}
-	section.content .col {
-		margin-bottom: 1rem;
-	}
-
+/* GENERIC LAYOUT FOR PAGES OTHER THAN HOME */
+article:not(.home) {
 	section.content {
-		padding-left: 15rem;
-		padding-right: 15rem;
-
-	}
-}
-
-/* SPEAKER PAGE */
-
-article.speaker {
-
-	section.content a {
-		color: $brand-secondary;
-	}
-	
-	section.content h1 {
-		color: $brand-secondary;
-		font-weight: bold;
-	}
-
-	section.content h2 {
-		color: $brand-primary;
-		font-weight: bold;
-		text-align: center;
-	}
-	
-	section.content .row {
-		margin-bottom: 10rem;
-	}
-
-	section.content .col {
-		margin-bottom: 1rem;
-	}
-
-	
-	section.content .back {
-			margin-bottom: 1.5rem;
-	}
-
-	section.content .back a {
-			border-radius: 1rem;
-			background-color: $brand-primary;
-			color: white;
-			font-size: 1.3rem;
-			padding: 1rem 2.5rem;
-			&:hover {
-				background-color: saturate($brand-primary, 10%);
-			}
-			&:active {
-				font-size: 1.45rem;
+		h2 {
+			font-weight: bold;
+			font-size: 2.5rem;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			&.primary {
+				color: $brand-primary;
 			}
 		}
-
-}
-
-/* PARTNERS PAGE */
-
-article.partners, article.team {
-	h2 {
-		font-size: 2.5rem;
-		font-weight: bold;
-		text-align: center;
-		border-bottom: 1px solid #333;
-	}
-	.container, .container-fluid {
-		margin-bottom: 3rem;
-		&:last-child {
-			margin-bottom: 0;
+		.container, .container-fluid {
+			margin-bottom: 3rem;
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 	}
-	.col {
-		text-align: center;
-	}
 
-
-
-	.sponsor_img, .member_img {
+	/* generic grid-image style to be used in speakers, partner and team components */
+	.grid-image {
 	    display: inline-block;
 	    border: 0;
 	    position: relative;
-	    -webkit-transition: all 200ms ease-in;
-	    -webkit-transform: scale(1); 
-	    -ms-transition: all 200ms ease-in;
-	    -ms-transform: scale(1); 
-	    -moz-transition: all 200ms ease-in;
-	    -moz-transform: scale(1);
 	    transition: all 200ms ease-in;
 	    transform: scale(1);
 	    padding: 2%;
 	    max-width: 100%;
 	}
 
-	section.content .member_img {
-		position: relative;
-		width: 80%;
-	}
-
-	.sponsor_img:hover {
+	.grid-image:hover {
 	    box-shadow: 0px 0px 0px rgba(0%, 0%, 100%, 0.0);
 	    z-index: 2;
-	    -webkit-transition: all 200ms ease-in;
-	    -webkit-transform: scale(1.1);
-	    -ms-transition: all 200ms ease-in;
-	    -ms-transform: scale(1.1);   
-	    -moz-transition: all 200ms ease-in;
-	    -moz-transform: scale(1.1);
-	    transition: all 200ms ease-in;
 	    transform: scale(1.1);
 	    padding: auto;
 	}
 
 }
 
+/* ABOUT PAGE */
+article.about {
+	section.content {
+		max-width: 960px;
+	}
+	section.content h2 {
+		text-align: center;
+		font-size: 2rem;
+	}
+	.col {
+		margin-bottom: 1rem;
+	}
+}
+
+/* SPEAKER PAGE */
+
+article.speaker {
+		
+	h2 {
+		text-align: center;
+	}
+
+	.row {
+		margin-bottom: 10rem;
+	}
+
+	.col {
+		margin-bottom: 1rem;
+	}
+
+	.back {
+		margin-bottom: 1.5rem;
+	}
+
+	.back a {
+		border-radius: 1rem;
+		background-color: $brand-primary;
+		color: white;
+		font-size: 1.3rem;
+		padding: 1rem 2.5rem;
+		&:hover {
+			background-color: saturate($brand-primary, 10%);
+		}
+		&:active {
+			font-size: 1.45rem;
+		}
+	}
+
+}
+
+/* END SPEAKER PAGE */
+
+/* PARTNERS PAGE */
+
+article.partners {
+	h2 {
+		text-align: center;
+		border-bottom: 1px solid #333;
+	}
+	.col {
+		text-align: center;
+	}
+}
+
 /* END PARTNERS PAGE */
+
+/* TEAM PAGE */
+
+article.team {
+	h2 {
+		text-align: center;
+		border-bottom: 1px solid #333;
+	}
+	.col {
+		text-align: center;
+	}
+}
+
+/* END TEAM PAGE */
 
 /* SCHEDULE PAGE */
 
@@ -622,14 +615,11 @@ article.contact {
 			font-size: 1em;
 		}
 	}
-
-	article.about {
-		section {
-			padding: 2rem;
-		}
-	}
-
-	section.content, article.home {
+	/* home uses a different layout:
+	   - content is separated into sections, each one containing its own content (.section-content)
+	   - padding is added to every .section-content and not to a single section.content, like in other pages
+	 */
+	section.content, article.home .section-content {
 		padding: 3rem 2rem;
 	}
 	article.schedule {
@@ -685,7 +675,7 @@ article.contact {
 		display: flex;
 	}
 
-	article.about, article.speaker, {
+	article.about, article.speaker {
 		section.content .col {
 			margin-bottom: 0;
 		}
@@ -693,7 +683,6 @@ article.contact {
 			margin-bottom: 1rem;
 		}
 	}
-
 	article.schedule {
 		thead th {
 			width: 30%;
