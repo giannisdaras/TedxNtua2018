@@ -13265,21 +13265,22 @@ article:not(.home) .grid-image {
   display: inline-block;
   border: 0;
   position: relative;
-  -webkit-transition: all 200ms ease-in;
-  transition: all 200ms ease-in;
-  -webkit-transform: scale(1);
-          transform: scale(1);
   padding: 2%;
   max-width: 100%;
 }
 
-article:not(.home) .grid-image:hover {
-  -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 255, 0);
-          box-shadow: 0px 0px 0px rgba(0, 0, 255, 0);
-  z-index: 2;
+article:not(.home) .grid-image.hover-zoom {
+  -webkit-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+article:not(.home) .grid-image.hover-zoom:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   padding: auto;
+  z-index: 2;
 }
 
 /* ABOUT PAGE */

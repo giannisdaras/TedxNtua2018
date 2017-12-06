@@ -382,17 +382,18 @@ article:not(.home) {
 	    display: inline-block;
 	    border: 0;
 	    position: relative;
-	    transition: all 200ms ease-in;
-	    transform: scale(1);
 	    padding: 2%;
 	    max-width: 100%;
 	}
 
-	.grid-image:hover {
-	    box-shadow: 0px 0px 0px rgba(0%, 0%, 100%, 0.0);
-	    z-index: 2;
-	    transform: scale(1.1);
-	    padding: auto;
+	.grid-image.hover-zoom {
+	    transition: all 200ms ease-in;
+	    transform: scale(1);
+	    &:hover {
+	    	transform: scale(1.1);
+	    	padding: auto;
+	    	z-index: 2;
+	    }
 	}
 
 }
