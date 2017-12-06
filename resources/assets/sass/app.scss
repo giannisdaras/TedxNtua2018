@@ -426,14 +426,14 @@ article.speaker {
 
 /* PARTNERS PAGE */
 
-article.partners {
+article.partners, article.team {
 	h2 {
 		font-size: 2.5rem;
 		font-weight: bold;
 		text-align: center;
 		border-bottom: 1px solid #333;
 	}
-	.container {
+	.container, .container-fluid {
 		margin-bottom: 3rem;
 		&:last-child {
 			margin-bottom: 0;
@@ -442,7 +442,10 @@ article.partners {
 	.col {
 		text-align: center;
 	}
-	.sponsor_img {
+
+
+
+	.sponsor_img, .member_img {
 	    display: inline-block;
 	    border: 0;
 	    position: relative;
@@ -456,6 +459,11 @@ article.partners {
 	    transform: scale(1);
 	    padding: 2%;
 	    max-width: 100%;
+	}
+
+	section.content .member_img {
+		position: relative;
+		width: 80%;
 	}
 
 	.sponsor_img:hover {
