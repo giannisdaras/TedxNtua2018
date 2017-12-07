@@ -210,10 +210,63 @@ footer {
 	box-shadow: inset 0 40px 60px -40px black;
 	color: white;
 	padding-top: 2rem;
-	.container {
+	> .container {
 		max-width: 1366px;
 		margin: 0 auto;
 		padding: 0 1rem;
+	}
+	.facebook-stream .card {
+		border: 1px solid rgba(255, 255, 255, .3);
+	}
+	.col h3 a {
+		color: white;
+	}
+	.instagram-stream .d-flex img {
+		flex-basis: 31%;
+		margin-bottom: .5rem;
+	}
+	.older a.card-img-link {
+		display: block;
+		.card {
+			background-color: transparent;
+			border: 0;
+		}
+		.card-img-overlay {
+			background: rgba(0, 0, 0, .5);
+			transition: background .5s;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0;
+			color: white;
+			text-align: center;
+			text-shadow: 0 0 18px black;
+		}
+		.card-img-hover-content {
+			height: 0;
+			overflow-y: hidden;
+			opacity: 0;
+			transition: opacity .5s .2s;
+		}
+	}
+	.older a.card-img-link:hover {
+		.card-img-overlay {
+			background: rgba(0, 0, 0, .75);
+		}
+		.card-img-hover-content {
+			height: auto;
+			opacity: 1;
+			display: block;
+		}
+	}
+	.older a.youtube-link {
+		color: white;
+		&:hover {
+			text-shadow: 0 0 18px black;
+		}
+	}
+	.older .fa-youtube-play {
+		color: $brand-primary;
 	}
 	.social-links { 
 		margin-bottom: 0;
@@ -232,8 +285,8 @@ footer {
 			&:hover i.fa-instagram {
 				color: #c13584;
 			}
-			&:hover i.fa-linkedin-square {
-				color: #0077b5;
+			&:hover i.fa-youtube-square {
+				color: #ff0000;
 			}
 			&:hover i.fa-envelope-square {
 				color: #fbb034;
@@ -360,9 +413,18 @@ article.home {
 /* GENERIC LAYOUT FOR PAGES OTHER THAN HOME */
 article:not(.home) {
 	section.content {
+		/*	custom heading styles - guidelines:
+			h1 is only used for the page heading
+			h2 is used in pages completely consisted of sections (eg. partners, team)
+			h3 is used for paragraph titles or smaller headings (eg. about, contact)
+		 */
 		h2 {
 			font-weight: bold;
 			font-size: 2.5rem;
+		}
+		h3 {
+			font-weight: bold;
+			font-size: 2rem;
 		}
 		h1, h2, h3, h4, h5, h6 {
 			&.primary {
@@ -398,14 +460,18 @@ article:not(.home) {
 
 }
 
+/* 	Documentation for .row and .col elements:
+ *	.col elements should all collapse in the lg-breakpoint.
+ *	Thus, for small device sizes (< lg) where each .col is presented as a row,
+ *	margin-bottom is added to .col elements.
+ *	Likewise, for larger device sizes (> lg) where many .col elements are contained
+ *  in a .row element, margin-bottom is added to .row elements.
+ */
+
 /* ABOUT PAGE */
 article.about {
 	section.content {
 		max-width: 960px;
-	}
-	section.content h2 {
-		text-align: center;
-		font-size: 2rem;
 	}
 	.col {
 		margin-bottom: 1rem;
@@ -415,21 +481,13 @@ article.about {
 /* SPEAKER PAGE */
 
 article.speaker {
-		
-	h2 {
-		text-align: center;
-	}
-
-	.row {
-		margin-bottom: 10rem;
-	}
 
 	.col {
 		margin-bottom: 1rem;
 	}
 
-	.back {
-		margin-bottom: 1.5rem;
+	.social-links a {
+		color: $brand-secondary;
 	}
 
 	.back a {
