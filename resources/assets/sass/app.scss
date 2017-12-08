@@ -210,10 +210,63 @@ footer {
 	box-shadow: inset 0 40px 60px -40px black;
 	color: white;
 	padding-top: 2rem;
-	.container {
+	> .container {
 		max-width: 1366px;
 		margin: 0 auto;
 		padding: 0 1rem;
+	}
+	.facebook-stream .card {
+		border: 1px solid rgba(255, 255, 255, .3);
+	}
+	.col h3 a {
+		color: white;
+	}
+	.instagram-stream .d-flex img {
+		flex-basis: 31%;
+		margin-bottom: .5rem;
+	}
+	.older a.card-img-link {
+		display: block;
+		.card {
+			background-color: transparent;
+			border: 0;
+		}
+		.card-img-overlay {
+			background: rgba(0, 0, 0, .5);
+			transition: background .5s;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0;
+			color: white;
+			text-align: center;
+			text-shadow: 0 0 18px black;
+		}
+		.card-img-hover-content {
+			height: 0;
+			overflow-y: hidden;
+			opacity: 0;
+			transition: opacity .5s .2s;
+		}
+	}
+	.older a.card-img-link:hover {
+		.card-img-overlay {
+			background: rgba(0, 0, 0, .75);
+		}
+		.card-img-hover-content {
+			height: auto;
+			opacity: 1;
+			display: block;
+		}
+	}
+	.older a.youtube-link {
+		color: white;
+		&:hover {
+			text-shadow: 0 0 18px black;
+		}
+	}
+	.older .fa-youtube-play {
+		color: $brand-primary;
 	}
 	.social-links { 
 		margin-bottom: 0;
@@ -232,8 +285,8 @@ footer {
 			&:hover i.fa-instagram {
 				color: #c13584;
 			}
-			&:hover i.fa-linkedin-square {
-				color: #0077b5;
+			&:hover i.fa-youtube-square {
+				color: #ff0000;
 			}
 			&:hover i.fa-envelope-square {
 				color: #fbb034;
@@ -357,22 +410,71 @@ article.home {
 
 /* END HOME PAGE */
 
+/* GENERIC LAYOUT FOR PAGES OTHER THAN HOME */
+article:not(.home) {
+	section.content {
+		/*	custom heading styles - guidelines:
+			h1 is only used for the page heading
+			h2 is used in pages completely consisted of sections (eg. partners, team)
+			h3 is used for paragraph titles or smaller headings (eg. about, contact)
+		 */
+		h2 {
+			font-weight: bold;
+			font-size: 2.5rem;
+		}
+		h3 {
+			font-weight: bold;
+			font-size: 2rem;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			&.primary {
+				color: $brand-primary;
+			}
+		}
+		.container, .container-fluid {
+			margin-bottom: 3rem;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	/* generic grid-image style to be used in speakers, partner and team components */
+	.grid-image {
+	    display: inline-block;
+	    border: 0;
+	    position: relative;
+	    padding: 2%;
+	    max-width: 100%;
+	}
+
+	.grid-image.hover-zoom {
+	    transition: all 200ms ease-in;
+	    transform: scale(1);
+	    &:hover {
+	    	transform: scale(1.1);
+	    	padding: auto;
+	    	z-index: 2;
+	    }
+	}
+
+}
+
+/* 	Documentation for .row and .col elements:
+ *	.col elements should all collapse in the lg-breakpoint.
+ *	Thus, for small device sizes (< lg) where each .col is presented as a row,
+ *	margin-bottom is added to .col elements.
+ *	Likewise, for larger device sizes (> lg) where many .col elements are contained
+ *  in a .row element, margin-bottom is added to .row elements.
+ */
+
 /* ABOUT PAGE */
 article.about {
-	section.content h2 {
-		color: $brand-primary;
-		font-weight: bold;
-		text-align: center;
-
-	}
-	section.content .col {
-		margin-bottom: 1rem;
-	}
-
 	section.content {
-		padding-left: 15rem;
-		padding-right: 15rem;
-
+		max-width: 960px;
+	}
+	.col {
+		margin-bottom: 1rem;
 	}
 }
 
@@ -380,109 +482,59 @@ article.about {
 
 article.speaker {
 
-	section.content a {
-		color: $brand-secondary;
-	}
-	
-	section.content h1 {
-		color: $brand-secondary;
-		font-weight: bold;
-	}
-
-	section.content h2 {
-		color: $brand-primary;
-		font-weight: bold;
-		text-align: center;
-	}
-	
-	section.content .row {
-		margin-bottom: 10rem;
-	}
-
-	section.content .col {
+	.col {
 		margin-bottom: 1rem;
 	}
 
-	
-	section.content .back {
-			margin-bottom: 1.5rem;
+	.social-links a {
+		color: $brand-secondary;
 	}
 
-	section.content .back a {
-			border-radius: 1rem;
-			background-color: $brand-primary;
-			color: white;
-			font-size: 1.3rem;
-			padding: 1rem 2.5rem;
-			&:hover {
-				background-color: saturate($brand-primary, 10%);
-			}
-			&:active {
-				font-size: 1.45rem;
-			}
+	.back a {
+		border-radius: 1rem;
+		background-color: $brand-primary;
+		color: white;
+		font-size: 1.3rem;
+		padding: 1rem 2.5rem;
+		&:hover {
+			background-color: saturate($brand-primary, 10%);
 		}
+		&:active {
+			font-size: 1.45rem;
+		}
+	}
 
 }
 
+/* END SPEAKER PAGE */
+
 /* PARTNERS PAGE */
 
-article.partners, article.team {
+article.partners {
 	h2 {
-		font-size: 2.5rem;
-		font-weight: bold;
 		text-align: center;
 		border-bottom: 1px solid #333;
-	}
-	.container, .container-fluid {
-		margin-bottom: 3rem;
-		&:last-child {
-			margin-bottom: 0;
-		}
 	}
 	.col {
 		text-align: center;
 	}
-
-
-
-	.sponsor_img, .member_img {
-	    display: inline-block;
-	    border: 0;
-	    position: relative;
-	    -webkit-transition: all 200ms ease-in;
-	    -webkit-transform: scale(1); 
-	    -ms-transition: all 200ms ease-in;
-	    -ms-transform: scale(1); 
-	    -moz-transition: all 200ms ease-in;
-	    -moz-transform: scale(1);
-	    transition: all 200ms ease-in;
-	    transform: scale(1);
-	    padding: 2%;
-	    max-width: 100%;
-	}
-
-	section.content .member_img {
-		position: relative;
-		width: 80%;
-	}
-
-	.sponsor_img:hover {
-	    box-shadow: 0px 0px 0px rgba(0%, 0%, 100%, 0.0);
-	    z-index: 2;
-	    -webkit-transition: all 200ms ease-in;
-	    -webkit-transform: scale(1.1);
-	    -ms-transition: all 200ms ease-in;
-	    -ms-transform: scale(1.1);   
-	    -moz-transition: all 200ms ease-in;
-	    -moz-transform: scale(1.1);
-	    transition: all 200ms ease-in;
-	    transform: scale(1.1);
-	    padding: auto;
-	}
-
 }
 
 /* END PARTNERS PAGE */
+
+/* TEAM PAGE */
+
+article.team {
+	h2 {
+		text-align: center;
+		border-bottom: 1px solid #333;
+	}
+	.col {
+		text-align: center;
+	}
+}
+
+/* END TEAM PAGE */
 
 /* SCHEDULE PAGE */
 
@@ -622,14 +674,11 @@ article.contact {
 			font-size: 1em;
 		}
 	}
-
-	article.about {
-		section {
-			padding: 2rem;
-		}
-	}
-
-	section.content, article.home {
+	/* home uses a different layout:
+	   - content is separated into sections, each one containing its own content (.section-content)
+	   - padding is added to every .section-content and not to a single section.content, like in other pages
+	 */
+	section.content, article.home .section-content {
 		padding: 3rem 2rem;
 	}
 	article.schedule {
@@ -685,7 +734,7 @@ article.contact {
 		display: flex;
 	}
 
-	article.about, article.speaker, {
+	article.about, article.speaker {
 		section.content .col {
 			margin-bottom: 0;
 		}
@@ -693,7 +742,6 @@ article.contact {
 			margin-bottom: 1rem;
 		}
 	}
-
 	article.schedule {
 		thead th {
 			width: 30%;

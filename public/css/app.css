@@ -13015,10 +13015,82 @@ footer {
   padding-top: 2rem;
 }
 
-footer .container {
+footer > .container {
   max-width: 1366px;
   margin: 0 auto;
   padding: 0 1rem;
+}
+
+footer .facebook-stream .card {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+footer .col h3 a {
+  color: white;
+}
+
+footer .instagram-stream .d-flex img {
+  -ms-flex-preferred-size: 31%;
+      flex-basis: 31%;
+  margin-bottom: .5rem;
+}
+
+footer .older a.card-img-link {
+  display: block;
+}
+
+footer .older a.card-img-link .card {
+  background-color: transparent;
+  border: 0;
+}
+
+footer .older a.card-img-link .card-img-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-transition: background .5s;
+  transition: background .5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  color: white;
+  text-align: center;
+  text-shadow: 0 0 18px black;
+}
+
+footer .older a.card-img-link .card-img-hover-content {
+  height: 0;
+  overflow-y: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .5s .2s;
+  transition: opacity .5s .2s;
+}
+
+footer .older a.card-img-link:hover .card-img-overlay {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+footer .older a.card-img-link:hover .card-img-hover-content {
+  height: auto;
+  opacity: 1;
+  display: block;
+}
+
+footer .older a.youtube-link {
+  color: white;
+}
+
+footer .older a.youtube-link:hover {
+  text-shadow: 0 0 18px black;
+}
+
+footer .older .fa-youtube-play {
+  color: #E62B1E;
 }
 
 footer .social-links {
@@ -13231,53 +13303,100 @@ article.home #speakers {
 
 /* END HOME PAGE */
 
+/* GENERIC LAYOUT FOR PAGES OTHER THAN HOME */
+
+article:not(.home) {
+  /* generic grid-image style to be used in speakers, partner and team components */
+}
+
+article:not(.home) section.content {
+  /*	custom heading styles - guidelines:
+			h1 is only used for the page heading
+			h2 is used in pages completely consisted of sections (eg. partners, team)
+			h3 is used for paragraph titles or smaller headings (eg. about, contact)
+		 */
+}
+
+article:not(.home) section.content h2 {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+article:not(.home) section.content h3 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+article:not(.home) section.content h1.primary,
+article:not(.home) section.content h2.primary,
+article:not(.home) section.content h3.primary,
+article:not(.home) section.content h4.primary,
+article:not(.home) section.content h5.primary,
+article:not(.home) section.content h6.primary {
+  color: #E62B1E;
+}
+
+article:not(.home) section.content .container,
+article:not(.home) section.content .container-fluid {
+  margin-bottom: 3rem;
+}
+
+article:not(.home) section.content .container:last-child,
+article:not(.home) section.content .container-fluid:last-child {
+  margin-bottom: 0;
+}
+
+article:not(.home) .grid-image {
+  display: inline-block;
+  border: 0;
+  position: relative;
+  padding: 2%;
+  max-width: 100%;
+}
+
+article:not(.home) .grid-image.hover-zoom {
+  -webkit-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+article:not(.home) .grid-image.hover-zoom:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  padding: auto;
+  z-index: 2;
+}
+
+/* 	Documentation for .row and .col elements:
+ *	.col elements should all collapse in the lg-breakpoint.
+ *	Thus, for small device sizes (< lg) where each .col is presented as a row,
+ *	margin-bottom is added to .col elements.
+ *	Likewise, for larger device sizes (> lg) where many .col elements are contained
+ *  in a .row element, margin-bottom is added to .row elements.
+ */
+
 /* ABOUT PAGE */
 
-article.about section.content h2 {
-  color: #E62B1E;
-  font-weight: bold;
-  text-align: center;
-}
-
-article.about section.content .col {
-  margin-bottom: 1rem;
-}
-
 article.about section.content {
-  padding-left: 15rem;
-  padding-right: 15rem;
+  max-width: 960px;
+}
+
+article.about .col {
+  margin-bottom: 1rem;
 }
 
 /* SPEAKER PAGE */
 
-article.speaker section.content a {
-  color: #222222;
-}
-
-article.speaker section.content h1 {
-  color: #222222;
-  font-weight: bold;
-}
-
-article.speaker section.content h2 {
-  color: #E62B1E;
-  font-weight: bold;
-  text-align: center;
-}
-
-article.speaker section.content .row {
-  margin-bottom: 10rem;
-}
-
-article.speaker section.content .col {
+article.speaker .col {
   margin-bottom: 1rem;
 }
 
-article.speaker section.content .back {
-  margin-bottom: 1.5rem;
+article.speaker .social-links a {
+  color: #222222;
 }
 
-article.speaker section.content .back a {
+article.speaker .back a {
   border-radius: 1rem;
   background-color: #E62B1E;
   color: white;
@@ -13614,4 +13733,3 @@ article.contact .btn-primary:not([disabled]):not(.disabled):hover {
     padding: 2rem 2rem;
   }
 }
-
