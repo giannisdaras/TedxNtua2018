@@ -5,7 +5,7 @@ use App\Http\Controllers\View;
 
 class SpeakersController extends Controller {
 
-	public function index($speaker) {
+	public function speakerindex($speaker) {
 		// TODO fetch things from db
 		$data['speaker'] = $speaker;
 		$data['name'] = "Steve Jobs";
@@ -15,5 +15,10 @@ class SpeakersController extends Controller {
 		$data['talk'] = "How to live before you die";
 
 		return view('speaker', $data);
+	}
+
+	public function index() {
+		// TODO fetch from db
+		return view('speakers');
 	}
 }
