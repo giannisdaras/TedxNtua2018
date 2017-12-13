@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:300,300i,400,400i,500,500i,700,700i,900,900i&subset=greek);@charset "UTF-8";
 
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -3087,7 +3087,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Raleway", sans-serif;
+  --font-family-sans-serif: "Alegreya Sans", sans-serif;
   --font-family-monospace: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -3199,7 +3199,7 @@ section {
 
 body {
   margin: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: "Alegreya Sans", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.6;
@@ -8984,7 +8984,7 @@ button.close {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: "Alegreya Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -9109,7 +9109,7 @@ button.close {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Raleway", sans-serif;
+  font-family: "Alegreya Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -12779,6 +12779,10 @@ a.text-dark:hover {
 
 /* GLOBALS */
 
+html {
+  font-size: 106.25%;
+}
+
 a {
   color: #E62B1E;
 }
@@ -12932,9 +12936,9 @@ nav.navbar {
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
-  font-size: 1.25rem;
-  padding-right: 1.25rem;
-  padding-left: 1.25rem;
+  font-size: 1.1rem;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link:hover {
@@ -13116,8 +13120,8 @@ footer .social-links a:hover i.fa-instagram {
   color: #c13584;
 }
 
-footer .social-links a:hover i.fa-linkedin-square {
-  color: #0077b5;
+footer .social-links a:hover i.fa-youtube-square {
+  color: #ff0000;
 }
 
 footer .social-links a:hover i.fa-envelope-square {
@@ -13156,14 +13160,15 @@ article.home section {
   font-size: .9em;
 }
 
-article.home section:last-child {
-  border-bottom: 0;
-}
-
 article.home section h2 {
   font-weight: bold;
   font-size: 2.1em;
   margin-bottom: .5em;
+}
+
+article.home section .container-fluid {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 article.home #hero {
@@ -13234,11 +13239,66 @@ article.home #hero .tickets a:active {
   font-size: 1.1rem;
 }
 
-article.home #schedule,
-article.home #partners,
-article.home #about,
-article.home #speakers {
-  border-bottom: 0;
+article.home a.call-to-action {
+  background-color: #333333;
+  color: white;
+  display: inline-block;
+  padding: .75rem 1.5rem;
+}
+
+article.home a.call-to-action:hover {
+  background-color: #3A3A3A;
+}
+
+article.home #schedule .description {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+article.home #schedule .card-columns {
+  -webkit-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: .8rem;
+          column-gap: .8rem;
+  color: white;
+}
+
+article.home #schedule .card {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+article.home #schedule .card-header {
+  padding: .25rem 1rem 0;
+  font-size: .8rem;
+  font-weight: bold;
+}
+
+article.home #schedule .card-header.talk {
+  background-color: #533B4D;
+}
+
+article.home #schedule .card-header.performance {
+  background-color: #AD343E;
+}
+
+article.home #schedule .card-header.workshop {
+  background-color: #313E50;
+}
+
+article.home #schedule .card-body {
+  color: black;
+  border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
+  padding: 1rem;
+}
+
+article.home #schedule .card-body h4 {
+  font-size: 1.15rem;
+  margin-bottom: .25rem;
+}
+
+article.home #schedule .media-body {
+  font-size: .9rem;
 }
 
 article.home #map .map {
@@ -13418,85 +13478,41 @@ article.speaker .back a {
   padding: 1rem 2.5rem;
 }
 
-article.speaker section.content .back a:hover {
+article.speaker .back a:hover {
   background-color: #f32012;
 }
 
-article.speaker section.content .back a:active {
+article.speaker .back a:active {
   font-size: 1.45rem;
 }
 
+/* END SPEAKER PAGE */
+
 /* PARTNERS PAGE */
 
-article.partners h2,
-article.team h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
+article.partners h2 {
   text-align: center;
   border-bottom: 1px solid #333;
 }
 
-article.partners .container,
-article.partners .container-fluid,
-article.team .container,
-article.team .container-fluid {
-  margin-bottom: 3rem;
+article.partners .col {
+  text-align: center;
 }
 
-article.partners .container:last-child,
-article.partners .container-fluid:last-child,
-article.team .container:last-child,
-article.team .container-fluid:last-child {
-  margin-bottom: 0;
+/* END PARTNERS PAGE */
+
+/* TEAM PAGE */
+
+article.team h2 {
+  text-align: center;
+  border-bottom: 1px solid #333;
 }
 
-article.partners .col,
 article.team .col {
   text-align: center;
 }
 
-article.partners .sponsor_img,
-article.partners .member_img,
-article.team .sponsor_img,
-article.team .member_img {
-  display: inline-block;
-  border: 0;
-  position: relative;
-  -webkit-transition: all 200ms ease-in;
-  -webkit-transform: scale(1);
-  -ms-transition: all 200ms ease-in;
-  -ms-transform: scale(1);
-  -moz-transition: all 200ms ease-in;
-  -moz-transform: scale(1);
-  transition: all 200ms ease-in;
-  transform: scale(1);
-  padding: 2%;
-  max-width: 100%;
-}
-
-article.partners section.content .member_img,
-article.team section.content .member_img {
-  position: relative;
-  width: 80%;
-}
-
-article.partners .sponsor_img:hover,
-article.team .sponsor_img:hover {
-  -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 255, 0);
-          box-shadow: 0px 0px 0px rgba(0, 0, 255, 0);
-  z-index: 2;
-  -webkit-transition: all 200ms ease-in;
-  -webkit-transform: scale(1.1);
-  -ms-transition: all 200ms ease-in;
-  -ms-transform: scale(1.1);
-  -moz-transition: all 200ms ease-in;
-  -moz-transform: scale(1.1);
-  transition: all 200ms ease-in;
-  transform: scale(1.1);
-  padding: auto;
-}
-
-/* END PARTNERS PAGE */
+/* END TEAM PAGE */
 
 /* SCHEDULE PAGE */
 
@@ -13653,11 +13669,6 @@ article.contact .btn-primary:not([disabled]):not(.disabled):hover {
     font-size: 1em;
   }
 
-<<<<<<< HEAD
-  article.about section {
-    padding: 2rem;
-  }
-=======
   article.home #hero h1 {
     font-size: 3rem;
   }
@@ -13670,10 +13681,9 @@ article.contact .btn-primary:not([disabled]):not(.disabled):hover {
 	   - content is separated into sections, each one containing its own content (.section-content)
 	   - padding is added to every .section-content and not to a single section.content, like in other pages
 	 */
->>>>>>> bfca4ab6eab622c1d98b983a8b7a677026f25b4b
 
   section.content,
-  article.home {
+  article.home .section-content {
     padding: 3rem 2rem;
   }
 
@@ -13746,9 +13756,9 @@ article.contact .btn-primary:not([disabled]):not(.disabled):hover {
 
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav .nav-link {
-    font-size: 1rem;
-    padding-right: 0.625rem;
-    padding-left: 0.625rem;
+    font-size: .85rem;
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
   }
 
   .navbar-toggler {
@@ -13793,11 +13803,17 @@ article.contact .btn-primary:not([disabled]):not(.disabled):hover {
   }
 }
 
+@media (min-width: 1200px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    font-size: 1rem;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
 @media (min-width: 1366px) {
   .navbar-expand-lg .navbar-nav .nav-link {
-    font-size: 1.25rem;
-    padding-right: 1.25rem;
-    padding-left: 1.25rem;
+    font-size: 1.15rem;
   }
 
   section.heading h1 {
@@ -13821,3 +13837,4 @@ article.contact .btn-primary:not([disabled]):not(.disabled):hover {
     font-size: 1.45rem;
   }
 }
+

@@ -10,12 +10,12 @@
 					<div class="section-content">
 						<h1 class="text-center">TEDxNTUA Chaos</h1>
 						<p class="info text-center">
-							<a href="/schedule"><span>March 24, 2018</span></a>
-							<a href="#map"><span>Athens Conservatoire</span></a>
-							<a href="#map"><span>Rigillis &amp; Vas. Georgiou B 17-19</span></a>
+							<a href="/schedule"><span>{{ trans('general.hero.date') }}</span></a>
+							<a href="#map"><span>{{ trans('general.hero.venue') }}</span></a>
+							<a href="#map"><span>{{ trans('general.hero.address') }}</span></a>
 						</p>
 						<p class="tickets text-center">
-							<a href="https://www.eventora.com">Get your tickets now</a>
+							<a href="https://www.eventora.com">{{ trans('general.hero.tickets') }}</a>
 						</p>
 					</div>
 
@@ -24,12 +24,67 @@
 				<section id="schedule" class="wow bounceInUp">
 
 					<div class="section-content">
-						<h2>Schedule</h2>
-						<p>
-					
-
-							Advertisers and service providers use direct text marketing to send messages to mobile users about promotions, payment due dates, and other notifications instead of using postal mail, email, or voicemail.
-						</p>
+						<h2>{{ trans('general.home_sections.schedule.title') }}</h2>
+						<div class="d-flex align-items-stretch mb-2">
+							<p class="description pr-3">{{ trans('general.home_sections.schedule.desc') | raw }}</p>
+							<div class="d-flex h-100 align-items-center justify-content-end">
+								<p>
+									<a href="/schedule" class="call-to-action">
+										{{ trans('general.home_sections.schedule.calltoaction') }} &gt;
+									</a>
+								</p>
+							</div>
+						</div>
+						<div class="card-columns">
+							<div class="card">
+								<div class="card-header talk">TALK</div>
+								<div class="card-body">
+									<div class="media">
+										<img class="mr-3 align-self-center" src="http://via.placeholder.com/100x100" alt="">
+										<div class="media-body">
+											<h4>Reapproaching the Established</h4>
+											This talk will influence many people. This talk will influence many people. This talk will influence many people. This talk will influence many people.
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header performance">PERFORMANCE</div>
+								<div class="card-body">
+									<div class="media">
+										<img class="mr-3 align-self-center" src="http://via.placeholder.com/100x100" alt="">
+										<div class="media-body">
+											<h4>Reapproaching the Established</h4>
+											This performance will influence many people. This performance will influence many people. This performance will influence many people. This performance will influence many people.
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header workshop">WORKSHOP</div>
+								<div class="card-body">
+									<div class="media">
+										<img class="mr-3 align-self-center" src="http://via.placeholder.com/100x100" alt="">
+										<div class="media-body">
+											<h4>Reapproaching the Established</h4>
+											This workshop will influence many people. This workshop will influence many people. This workshop will influence many people. This workshop will influence many people.
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header talk">TALK</div>
+								<div class="card-body">
+									<div class="media">
+										<img class="mr-3 align-self-center" src="http://via.placeholder.com/100x100" alt="">
+										<div class="media-body">
+											<h4>Reapproaching the Established</h4>
+											This talk will influence many people. This talk will influence many people. This talk will influence many people. This talk will influence many people.
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 
 				</section>
@@ -71,9 +126,9 @@
 				<section id="map">
 
 					<div class="section-content">
-						<h2>Map &amp; Venue</h2>
+						<h2>{{ trans('general.home_sections.map.title') }}</h2>
 						<p>
-							TEDxNTUA 2018 will take place at the Athens Conservatoire. The Conservatoire located at Rigillis &amp; Vas. Georgiou B 17-19, just under 10 minutes on foot from <strong>Evangelismos</strong> subway station.
+							{{ trans('general.home_sections.map.desc') | raw }}
 						</p>
 						<div class="map-container">
 							<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.1659650923716!2d23.741146951388863!3d37.97325597962415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd41a90a05e7%3A0x243e905afaf27568!2zzqnOtM61zq_OvyDOkc64zrfOvc-Ozr0!5e0!3m2!1sel!2sgr!4v1512745475349" allowfullscreen></iframe>
