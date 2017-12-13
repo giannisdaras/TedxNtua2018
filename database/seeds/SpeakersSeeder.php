@@ -14,16 +14,16 @@ class SpeakersSeeder extends Seeder
         DB::table('speakers')->insert([
         	'name'=>json_encode([
         		'en'=> 'John',
-        		'gr'=> 'Γιάννης'
+        		'el'=> 'Γιάννης'
         	]),
         	'picture'=>'www.facebook.com',
         	'description'=>json_encode([
         		'en'=>'Random description',
-        		'gr'=>'Περιγραφή'
+        		'el'=>'Περιγραφή'
         	]),
         	'talk'=>json_encode([
         		'en'=>'Talk about universe',
-        		'gr'=> 'Ομιλία για το σύμπαν',
+        		'el'=> 'Ομιλία για το σύμπαν',
         	])
         ]);
     }
