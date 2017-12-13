@@ -34,7 +34,7 @@ return [
         'instagram_title' => 'Instagram stream',
         'past_events_title' => 'Past events',
         'youtube_title' => 'Videos from past events on YouTube',
-        'handcrafter' => 'Handcrafted with'
+        'handcrafted' => 'Handcrafted with'
     ),
 
 
