@@ -2,7 +2,7 @@
             <a class="navbar-brand" href="/">
                 <img src="{{ asset('images/tedx_ntua_logo.png') }}" alt="TEDx NTUA Logo" />
             </a>
-            
+
 
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarHotdog" aria-controls="navbarHotdog" aria-expanded="false" aria-label="Toggle navigation">
                 <div class="hotdog-container">
@@ -18,6 +18,10 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="/">Home</a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">{{trans('general.language')}}</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/partners">Partners</a>
