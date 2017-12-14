@@ -2,6 +2,7 @@
             <a class="navbar-brand" href="/">
                 <img src="{{ asset('images/tedx_ntua_logo.png') }}" alt="TEDx NTUA Logo" />
             </a>
+            <a><img src="blank.gif" class="flag flag-gr" alt="Greek" /></a>
 
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarHotdog" aria-controls="navbarHotdog" aria-expanded="false" aria-label="Toggle navigation">
                 <div class="hotdog-container">
@@ -16,28 +17,31 @@
             <div class="collapse navbar-collapse" id="navbarHotdog">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/">Home</a>
+                        <a class="nav-link" href="/">{{ trans('general.nav.home') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/partners">Partners</a>
+                        <a class="nav-link" href="/partners">{{ trans('general.nav.partners') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/#speakers">Speakers</a>
+                        <a class="nav-link" href="/speakers">{{ trans('general.nav.speakers') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/schedule">Schedule</a>
+                        <a class="nav-link" href="/schedule">{{ trans('general.nav.schedule') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/team">Team</a>
+                        <a class="nav-link" href="/team">{{ trans('general.nav.team') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/about">About</a>
+                        <a class="nav-link" href="/blog">{{ trans('general.nav.blog') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/contact">Contact</a>
+                        <a class="nav-link" href="/about">{{ trans('general.nav.about') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">{{ trans('general.nav.contact') }}</a>
                     </li>
                     <li class="nav-item get-tickets">
-                        <a class="nav-link" href="https://www.eventora.com">Get Tickets</a>
+                        <a class="nav-link" href="https://www.eventora.com">{{ trans('general.nav.gettickets') }}</a>
                     </li>
                 </ul>
             </div>

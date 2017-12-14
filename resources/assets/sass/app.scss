@@ -1,6 +1,6 @@
 
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:300,300i,400,400i,500,500i,700,700i,900,900i&subset=greek');
 
 // Variables
 @import "variables";
@@ -17,6 +17,10 @@
  */
 
 /* GLOBALS */
+
+html {
+	font-size: 106.25%;
+}
 
 a {
 	color: $brand-primary;
@@ -140,7 +144,7 @@ nav.navbar {
 }
 	
 .navbar-expand-lg .navbar-nav .nav-link {
-	font-size: 1.25rem;
+	font-size: 1.1rem;
 	padding-right: $navlink-padding;
 	padding-left: $navlink-padding;
 	&:hover {
@@ -210,10 +214,63 @@ footer {
 	box-shadow: inset 0 40px 60px -40px black;
 	color: white;
 	padding-top: 2rem;
-	.container {
+	> .container {
 		max-width: 1366px;
 		margin: 0 auto;
 		padding: 0 1rem;
+	}
+	.facebook-stream .card {
+		border: 1px solid rgba(255, 255, 255, .3);
+	}
+	.col h3 a {
+		color: white;
+	}
+	.instagram-stream .d-flex img {
+		flex-basis: 31%;
+		margin-bottom: .5rem;
+	}
+	.older a.card-img-link {
+		display: block;
+		.card {
+			background-color: transparent;
+			border: 0;
+		}
+		.card-img-overlay {
+			background: rgba(0, 0, 0, .5);
+			transition: background .5s;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0;
+			color: white;
+			text-align: center;
+			text-shadow: 0 0 18px black;
+		}
+		.card-img-hover-content {
+			height: 0;
+			overflow-y: hidden;
+			opacity: 0;
+			transition: opacity .5s .2s;
+		}
+	}
+	.older a.card-img-link:hover {
+		.card-img-overlay {
+			background: rgba(0, 0, 0, .75);
+		}
+		.card-img-hover-content {
+			height: auto;
+			opacity: 1;
+			display: block;
+		}
+	}
+	.older a.youtube-link {
+		color: white;
+		&:hover {
+			text-shadow: 0 0 18px black;
+		}
+	}
+	.older .fa-youtube-play {
+		color: $brand-primary;
 	}
 	.social-links { 
 		margin-bottom: 0;
@@ -232,8 +289,8 @@ footer {
 			&:hover i.fa-instagram {
 				color: #c13584;
 			}
-			&:hover i.fa-linkedin-square {
-				color: #0077b5;
+			&:hover i.fa-youtube-square {
+				color: #ff0000;
 			}
 			&:hover i.fa-envelope-square {
 				color: #fbb034;
@@ -268,13 +325,14 @@ article.home {
 		/* temporary, just to test the home layout */
 		min-height: 400px;
 		font-size: .9em;
-		&:last-child {
-			border-bottom: 0;
-		}
 		h2 {
 			font-weight: bold;
 			font-size: 2.1em;
 			margin-bottom: .5em;
+		}
+		.container-fluid {
+			padding-left: 0;
+			padding-right: 0;
 		}
 	}
 	#hero {
@@ -284,22 +342,31 @@ article.home {
 		border-bottom: 0;
 		background: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png"), linear-gradient(#202020, #2F2F2F);
 		animation: gradientFlow 60s linear infinite;
-		min-height: 720px;
+		min-height: 480px;
 		h1 {
-			margin-top: 20rem;
-			font-size: 5rem;
+			margin-top: 10rem;
+			font-size: 2.25rem;
 			font-weight: bold;
 		}
+		.info {
+			/* hide space characters between the links */
+			font-size: 0;
+		}
 		.info a {
+			/* TODO: find better solution for the borders; margins may not work */
 			display: inline-block;
-			font-size: 1.5rem;
+			font-size: 1.15rem;
+			border-style: solid;
+			border-color: white;
+			border-width: 0 0 1px 0;
+			padding: .25rem .5rem;
+			margin: 0 4rem;
 			color: white;
-			padding: .5rem 2rem;
-			&:not(:last-child) {
-				border-right: 2px solid white;
-			}
 			span {
 				display: block;
+			}
+			&:last-child {
+				border-bottom: 0;
 			}
 		}
 		.info a.blink span {
@@ -311,19 +378,70 @@ article.home {
 		.tickets a {
 			background-color: $brand-primary;
 			color: white;
-			font-size: 1.5rem;
+			font-size: 1.15rem;
 			padding: 1rem 2.5rem;
 			&:hover {
 				background-color: saturate($brand-primary, 10%);
 			}
 			&:active {
-				font-size: 1.45rem;
+				font-size: 1.1rem;
 			}
 		}
 	}
-	#schedule, #partners, #about, #speakers {
-		border-bottom: 0;
-		background: linear-gradient(to right, #cddccd, #f7f7f7);
+	a.call-to-action {
+		background-color: #333333;
+		color: white;
+		display: inline-block;
+		padding: .75rem 1.5rem;
+		&:hover {
+			background-color: #3A3A3A;
+		}
+	}
+	#schedule {
+		.description {
+			flex: 1;
+		}
+		.card-columns {
+			column-count: 2;
+			column-gap: .8rem;
+			color: white;
+		}
+		.card {
+			background-color: rgba(255, 255, 255, .5);
+		}
+		.card-header {
+			padding: .25rem 1rem 0;
+			font-size: .8rem;
+			font-weight: bold;
+		}
+		.card-header.talk {
+			background-color: #533B4D;
+		}
+		.card-header.performance {
+			background-color: #AD343E;
+		}
+		.card-header.workshop {
+			background-color: #313E50;
+		}
+		.card-body {
+			color: black;
+			border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
+			padding: 1rem;
+			h4 {
+				font-size: 1.15rem;
+				margin-bottom: .25rem;
+			}
+		}
+		.media-body {
+			font-size: .9rem;
+		}
+	}
+	#map {
+		.map {
+			width: 100%;
+			height: 400px;
+			border: 0;
+		}
 	}
 }
 
@@ -357,14 +475,70 @@ article.home {
 
 /* END HOME PAGE */
 
+/* GENERIC LAYOUT FOR PAGES OTHER THAN HOME */
+article:not(.home) {
+	section.content {
+		/*	custom heading styles - guidelines:
+			h1 is only used for the page heading
+			h2 is used in pages completely consisted of sections (eg. partners, team)
+			h3 is used for paragraph titles or smaller headings (eg. about, contact)
+		 */
+		h2 {
+			font-weight: bold;
+			font-size: 2.5rem;
+		}
+		h3 {
+			font-weight: bold;
+			font-size: 2rem;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			&.primary {
+				color: $brand-primary;
+			}
+		}
+		.container, .container-fluid {
+			margin-bottom: 3rem;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	/* generic grid-image style to be used in speakers, partner and team components */
+	.grid-image {
+	    display: inline-block;
+	    border: 0;
+	    position: relative;
+	    padding: 2%;
+	    max-width: 100%;
+	}
+
+	.grid-image.hover-zoom {
+	    transition: all 200ms ease-in;
+	    transform: scale(1);
+	    &:hover {
+	    	transform: scale(1.1);
+	    	padding: auto;
+	    	z-index: 2;
+	    }
+	}
+
+}
+
+/* 	Documentation for .row and .col elements:
+ *	.col elements should all collapse in the lg-breakpoint.
+ *	Thus, for small device sizes (< lg) where each .col is presented as a row,
+ *	margin-bottom is added to .col elements.
+ *	Likewise, for larger device sizes (> lg) where many .col elements are contained
+ *  in a .row element, margin-bottom is added to .row elements.
+ */
+
 /* ABOUT PAGE */
 article.about {
-	section.content h2 {
-		color: $brand-primary;
-		font-weight: bold;
-		text-align: center;
+	section.content {
+		max-width: 960px;
 	}
-	section.content .col {
+	.col {
 		margin-bottom: 1rem;
 	}
 }
@@ -373,101 +547,59 @@ article.about {
 
 article.speaker {
 
-	section.content a {
-		color: $brand-secondary;
-	}
-	
-	section.content h1 {
-		color: $brand-secondary;
-		font-weight: bold;
-	}
-
-	section.content h2 {
-		color: $brand-primary;
-		font-weight: bold;
-		text-align: center;
-	}
-	
-	section.content .row {
-		margin-bottom: 10rem;
-	}
-
-	section.content .col {
+	.col {
 		margin-bottom: 1rem;
 	}
 
-	
-	section.content .back {
-			margin-bottom: 1.5rem;
+	.social-links a {
+		color: $brand-secondary;
 	}
 
-	section.content .back a {
-			border-radius: 1rem;
-			background-color: $brand-primary;
-			color: white;
-			font-size: 1.3rem;
-			padding: 1rem 2.5rem;
-			&:hover {
-				background-color: saturate($brand-primary, 10%);
-			}
-			&:active {
-				font-size: 1.45rem;
-			}
+	.back a {
+		border-radius: 1rem;
+		background-color: $brand-primary;
+		color: white;
+		font-size: 1.3rem;
+		padding: 1rem 2.5rem;
+		&:hover {
+			background-color: saturate($brand-primary, 10%);
 		}
+		&:active {
+			font-size: 1.45rem;
+		}
+	}
 
 }
+
+/* END SPEAKER PAGE */
 
 /* PARTNERS PAGE */
 
 article.partners {
 	h2 {
-		font-size: 2.5rem;
-		font-weight: bold;
 		text-align: center;
 		border-bottom: 1px solid #333;
-	}
-	.container {
-		margin-bottom: 3rem;
-		&:last-child {
-			margin-bottom: 0;
-		}
 	}
 	.col {
 		text-align: center;
 	}
-	.sponsor_img {
-	    display: inline-block;
-	    border: 0;
-	    position: relative;
-	    -webkit-transition: all 200ms ease-in;
-	    -webkit-transform: scale(1); 
-	    -ms-transition: all 200ms ease-in;
-	    -ms-transform: scale(1); 
-	    -moz-transition: all 200ms ease-in;
-	    -moz-transform: scale(1);
-	    transition: all 200ms ease-in;
-	    transform: scale(1);
-	    padding: 2%;
-	    max-width: 100%;
-	}
-
-	.sponsor_img:hover {
-	    box-shadow: 0px 0px 0px rgba(0%, 0%, 100%, 0.0);
-	    z-index: 2;
-	    -webkit-transition: all 200ms ease-in;
-	    -webkit-transform: scale(1.1);
-	    -ms-transition: all 200ms ease-in;
-	    -ms-transform: scale(1.1);   
-	    -moz-transition: all 200ms ease-in;
-	    -moz-transform: scale(1.1);
-	    transition: all 200ms ease-in;
-	    transform: scale(1.1);
-	    padding: auto;
-	}
-
 }
 
 /* END PARTNERS PAGE */
+
+/* TEAM PAGE */
+
+article.team {
+	h2 {
+		text-align: center;
+		border-bottom: 1px solid #333;
+	}
+	.col {
+		text-align: center;
+	}
+}
+
+/* END TEAM PAGE */
 
 /* SCHEDULE PAGE */
 
@@ -591,7 +723,7 @@ article.contact {
  *		- sm: >= 576px
  *		- md: >= 768px
  *		- lg: >= 992px
- *		- xl: >= 1200px (not used, use 1366px instead)
+ *		- xl: >= 1200px
  *		- custom 1366px
  */
 
@@ -606,7 +738,17 @@ article.contact {
 		section {
 			font-size: 1em;
 		}
+		#hero h1 {
+			font-size: 3rem;
+		}
+		#hero .info a {
+			margin: 0 6rem;
+		}
 	}
+	/* home uses a different layout:
+	   - content is separated into sections, each one containing its own content (.section-content)
+	   - padding is added to every .section-content and not to a single section.content, like in other pages
+	 */
 	section.content, article.home .section-content {
 		padding: 3rem 2rem;
 	}
@@ -629,6 +771,26 @@ article.contact {
 	article.home {
 		section {
 			font-size: 1.25em;
+		}
+		#hero {
+			min-height: 720px;
+			h1 {
+				margin-top: 20rem;
+				font-size: 3.5rem;
+				font-weight: bold;
+			}
+		}
+		#hero .info a {
+			display: inline-block;
+			padding: .5rem 1rem;
+			margin: 0;
+			border-width: 0 1px;
+			&:first-child {
+				border-left: 0;
+			}
+			&:last-child {
+				border-right: 0;
+			}
 		}
 	}
 	article.schedule {
@@ -654,15 +816,28 @@ article.contact {
 
 @include media-breakpoint-up(lg) {
 	.navbar-expand-lg .navbar-nav .nav-link {
-		font-size: 1rem;
-		padding-right: 0.5 * $navlink-padding;
+		font-size: .85rem;
 		padding-left: 0.5 * $navlink-padding;
+		padding-right: 0.5 * $navlink-padding;
 	}
 
 	.navbar-toggler {
 		display: flex;
 	}
-
+	article.home #hero {
+		h1 {
+			font-size: 4.5rem;
+		}
+		.info a, .tickets a {
+			font-size: 1.35rem;
+		}
+		.info a {
+			padding: .5rem 1.2rem;
+		}
+		.tickets a:active {
+			font-size: 1.3rem;
+		}
+	}
 	article.about, article.speaker {
 		section.content .col {
 			margin-bottom: 0;
@@ -681,13 +856,33 @@ article.contact {
 	}
 }
 
-@media (min-width: 1366px) {
+@include media-breakpoint-up(xl) {
 	.navbar-expand-lg .navbar-nav .nav-link {
-		font-size: 1.25rem;
+		font-size: 1rem;
 		padding-right: $navlink-padding;
 		padding-left: $navlink-padding;
 	}
+}
+
+@media (min-width: 1366px) {
+	.navbar-expand-lg .navbar-nav .nav-link {
+		font-size: 1.15rem;
+	}
 	section.heading h1 {
 		padding: 2rem 2rem;
+	}
+	article.home #hero {
+		h1 {
+			font-size: 5rem;
+		}
+		.info a, .tickets a {
+			font-size: 1.5rem;
+		}
+		.info a {
+			padding: .5rem 2rem;
+		}
+		.tickets a:active {
+			font-size: 1.45rem;
+		}
 	}
 }

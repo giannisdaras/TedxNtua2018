@@ -13,7 +13,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col col-12 col-lg-3 mb-3 mb-lg-0">	
-							<h2 class="text-center font-weight-bold">Contact Us</h2>	
+							<h3 class="text-center font-weight-bold">Contact Us</h3>	
 							<p class="small text-justify"> Please find below our contact info or just fill in the form and we’ll get back to you as soon as possible!</p>
 
 							<p class="text-center text-lg-left">
@@ -23,7 +23,7 @@
 						</div>	
 
 						<div class="col col-12 col-lg-9">	
-							<form>
+							<form action = " url ('contact') " method="POST">
 								{{ csrf_field() }}
 								<div class="form-group">
 									<label for="name">Name</label>
@@ -44,8 +44,8 @@
 								</div>
 
 								<div class="form-group">
-									<label for="comment">Message</label>
-									<textarea class="form-control" rows="5" id="comment" required></textarea>
+									<label for="message">Message</label>
+									<textarea class="form-control" rows="5" id="message" required></textarea>
 								</div>
 
 								<div class="form-group mt-5 mt-lg-0 text-center text-lg-left">
