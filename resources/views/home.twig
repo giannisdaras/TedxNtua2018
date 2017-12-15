@@ -25,14 +25,12 @@
 
 					<div class="section-content">
 						<h2>{{ trans('general.home_sections.schedule.title') }}</h2>
-						<div class="d-flex align-items-stretch mb-2">
-							<p class="description pr-3">{{ trans('general.home_sections.schedule.desc') | raw }}</p>
-							<div class="d-flex h-100 align-items-center justify-content-end">
-								<p>
-									<a href="/schedule" class="call-to-action">
-										{{ trans('general.home_sections.schedule.calltoaction') }} &gt;
-									</a>
-								</p>
+						<div class="d-flex align-items-stretch mb-4">
+							<div class="description">{{ trans('general.home_sections.schedule.desc') | raw }}</div>
+							<div class="d-flex align-items-center justify-content-end">
+								<a href="/schedule" class="call-to-action">
+									{{ trans('general.home_sections.schedule.calltoaction') }} <i class="fa fa-chevron-right"></i>
+								</a>
 							</div>
 						</div>
 						<div class="card-columns">
@@ -89,13 +87,43 @@
 
 				</section>
 
-				<section id="partners" class="wow bounceInUp">
+				<section id="speakers" class="wow bounceInUp">
 
 					<div class="section-content">
-						<h2>Partners</h2>
-						<p>
-							Governmental and non-governmental organizations use text messaging for communication between colleagues. As with emailing, in the 2010s, the sending of short informal messages has become an accepted part of many cultures.[1] This makes texting a quick and easy way to communicate with friends and colleagues, including in contexts where a call would be impolite or inappropriate (e.g., calling very late at night or when one knows the other person is busy with family or work activities). Like e-mail and voice mail, and unlike calls (in which the caller hopes to speak directly with the recipient), texting does not require the caller and recipient to both be free at the same moment; this permits communication even between busy individuals. Text messages can also be used to interact with automated systems, for example, to order products or services from e-commerce websites, or to participate in online contests. Advertisers and service providers use direct text marketing to send messages to mobile users about promotions, payment due dates, and other notifications instead of using postal mail, email, or voicemail.
-						</p>
+						<h2>{{ trans('general.home_sections.speakers.title') }}</h2>
+						<div class="d-flex align-items-stretch mb-4">
+							<div class="description">{{ trans('general.home_sections.speakers.desc') | raw }}</div>
+							<div class="d-flex align-items-center justify-content-end">
+								<a href="/speakers" class="call-to-action">
+									{{ trans('general.home_sections.speakers.calltoaction') }} <i class="fa fa-chevron-right"></i>
+								</a>
+							</div>
+						</div>
+						<div class="container-fluid speaker-container">
+							<div class="row no-gutters">
+								<div class="col col-4">
+									<a href="/speakers/jobs">
+										<img src="https://i1.sndcdn.com/artworks-000241864958-t7ad44-t500x500.jpg" class="rounded-circle">
+										<h3>Big Shaq</h3>
+										<p class="m-0">Entrepreneur, computer engineer and white-hat hacker.</p>
+									</a>
+								</div>
+								<div class="col col-4">
+									<a href="/speakers/jobs">
+										<img src="https://i1.sndcdn.com/artworks-000241864958-t7ad44-t500x500.jpg" class="rounded-circle">
+										<h3>Big Shaq</h3>
+										<p class="m-0">Entrepreneur, computer engineer and white-hat hacker.</p>
+									</a>
+								</div>
+								<div class="col col-4">
+									<a href="/speakers/jobs">
+										<img src="https://i1.sndcdn.com/artworks-000241864958-t7ad44-t500x500.jpg" class="rounded-circle">
+										<h3>Big Shaq</h3>
+										<p class="m-0">Entrepreneur, computer engineer and white-hat hacker.</p>
+									</a>
+								</div>
+							</div>
+						</div>
 					</div>
 
 				</section>
@@ -103,35 +131,82 @@
 				<section id="about" class="wow bounceInUp">
 
 					<div class="section-content">
-						<h2>About</h2>
-						<p>
-							Like e-mail and voice mail, and unlike calls (in which the caller hopes to speak directly with the recipient), texting does not require the caller and recipient to both be free at the same moment; this permits communication even between busy individuals. Text messages can also be used to interact with automated systems, for example, to order products or services from e-commerce websites, or to participate in online contests. Advertisers and service providers use direct text marketing to send messages to mobile users about promotions, payment due dates, and other notifications instead of using postal mail, email, or voicemail.
-						</p>
+						<h2>{{ trans('general.home_sections.about.title') }}</h2>
+						<div class="d-flex align-items-stretch mb-4">
+							<div class="description">{{ trans('general.home_sections.about.desc') | raw }}</div>
+							<div class="d-flex align-items-center justify-content-end">
+								<a href="/about" class="call-to-action">
+									{{ trans('general.home_sections.about.calltoaction') }} <i class="fa fa-chevron-right"></i>
+								</a>
+							</div>
+						</div>
 					</div>
 
 				</section>
 
-				<section id="speakers">
+				<section id="sponsors" class="wow bounceInUp">
 
-				<!-- 	<div class="section-content text-center">
-						<h2>Speakers</h2>
-						
-						<a href="/speakers/jobs">
-							<img src="https://pi.tedcdn.com/r/pe.tedcdn.com/images/ted/0ef62e4df27b4ba7294de889fdbc33e476a08ec9_254x191.jpg?" width="200rem" height="200rem" class="rounded-circle wow bounceInRight">
-						</a>	
+					<div class="section-content">
+						<h2>{{ trans('general.home_sections.sponsors.title') }}</h2>
+						<div class="d-flex align-items-stretch mb-4">
+							<div class="description">{{ trans('general.home_sections.sponsors.desc') | raw }}</div>
+							<div class="d-flex align-items-center justify-content-end">
+								<a href="/sponsors" class="call-to-action">
+									{{ trans('general.home_sections.sponsors.calltoaction') }} <i class="fa fa-chevron-right"></i>
+								</a>
+							</div>
+						</div>
+						<div class="container-fluid sponsor-container">
+							<h3 class="text-center">Grand Sponsors</h3>
+							<div class="row no-gutters">
+								<div class="col col-4">
+									<a href="https://www.e-corp-usa.com">
+										<img class="img-fluid" src="https://pbs.twimg.com/media/DMhdOJeUIAAf2ec.jpg">
+										<span>E-Corp USA</span>
+									</a>
+								</div>
+								<div class="col col-4">
+									<a href="https://www.e-corp-usa.com">
+										<img class="img-fluid" src="https://pbs.twimg.com/media/DMhdOJeUIAAf2ec.jpg">
+										<span>E-Corp USA</span>
+									</a>
+								</div>
+								<div class="col col-4">
+									<a href="https://www.e-corp-usa.com">
+										<img class="img-fluid" src="https://pbs.twimg.com/media/DMhdOJeUIAAf2ec.jpg">
+										<span>E-Corp USA</span>
+									</a>
+								</div>
+							</div>
+						</div>
 					</div>
- -->
+
 				</section>
 
 				<section id="map">
 
 					<div class="section-content">
 						<h2>{{ trans('general.home_sections.map.title') }}</h2>
-						<p>
+						<p class="description">
 							{{ trans('general.home_sections.map.desc') | raw }}
 						</p>
 						<div class="map-container">
 							<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.1659650923716!2d23.741146951388863!3d37.97325597962415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd41a90a05e7%3A0x243e905afaf27568!2zzqnOtM61zq_OvyDOkc64zrfOvc-Ozr0!5e0!3m2!1sel!2sgr!4v1512745475349" allowfullscreen></iframe>
+						</div>
+						<div class="container-fluid venue-gallery">
+							<div class="row no-gutters">
+								<div class="col col-6">
+									<img src="http://www.athensconservatoire.gr/wp-content/uploads/2017/07/OdeionAthinon-Maketes-833x500.jpg">
+								</div>
+								<div class="col col-6">
+									<img src="http://www.alfavita.gr/sites/default/files/u47/odeio1.png">
+								</div>
+							</div>
+							<div class="row no-gutters">
+								<div class="col col-12">
+									<img src="http://www.athensconservatoire.gr/wp-content/uploads/2017/06/odeio-site-slider.jpg">
+								</div>
+							</div>
 						</div>
 					</div>
 

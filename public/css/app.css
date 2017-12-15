@@ -13009,7 +13009,7 @@ section.content > .container-fluid {
 
 /* FOOTER */
 
-footer {
+body > footer {
   background-color: #111;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
   /* top inner shadow */
@@ -13019,36 +13019,36 @@ footer {
   padding-top: 2rem;
 }
 
-footer > .container {
+body > footer > .container {
   max-width: 1366px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
-footer .facebook-stream .card {
+body > footer .facebook-stream .card {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-footer .col h3 a {
+body > footer .col h3 a {
   color: white;
 }
 
-footer .instagram-stream .d-flex img {
+body > footer .instagram-stream .d-flex img {
   -ms-flex-preferred-size: 31%;
       flex-basis: 31%;
   margin-bottom: .5rem;
 }
 
-footer .older a.card-img-link {
+body > footer .older a.card-img-link {
   display: block;
 }
 
-footer .older a.card-img-link .card {
+body > footer .older a.card-img-link .card {
   background-color: transparent;
   border: 0;
 }
 
-footer .older a.card-img-link .card-img-overlay {
+body > footer .older a.card-img-link .card-img-overlay {
   background: rgba(0, 0, 0, 0.5);
   -webkit-transition: background .5s;
   transition: background .5s;
@@ -13067,7 +13067,7 @@ footer .older a.card-img-link .card-img-overlay {
   text-shadow: 0 0 18px black;
 }
 
-footer .older a.card-img-link .card-img-hover-content {
+body > footer .older a.card-img-link .card-img-hover-content {
   height: 0;
   overflow-y: hidden;
   opacity: 0;
@@ -13075,74 +13075,73 @@ footer .older a.card-img-link .card-img-hover-content {
   transition: opacity .5s .2s;
 }
 
-footer .older a.card-img-link:hover .card-img-overlay {
+body > footer .older a.card-img-link:hover .card-img-overlay {
   background: rgba(0, 0, 0, 0.75);
 }
 
-footer .older a.card-img-link:hover .card-img-hover-content {
+body > footer .older a.card-img-link:hover .card-img-hover-content {
   height: auto;
   opacity: 1;
   display: block;
 }
 
-footer .older a.youtube-link {
+body > footer .older a.youtube-link {
   color: white;
 }
 
-footer .older a.youtube-link:hover {
+body > footer .older a.youtube-link:hover {
   text-shadow: 0 0 18px black;
 }
 
-footer .older .fa-youtube-play {
+body > footer .older .fa-youtube-play {
   color: #E62B1E;
 }
 
-footer .social-links {
+body > footer .social-links {
   margin-bottom: 0;
 }
 
-footer .social-links li.list-inline-item {
+body > footer .social-links li.list-inline-item {
   /* remove bootstrap's margin to .list-inline-item elements */
   margin-right: 0;
 }
 
-footer .social-links a i {
+body > footer .social-links a i {
   color: rgba(255, 255, 255, 0.96);
   -webkit-transition: color .2s;
   transition: color .2s;
 }
 
-footer .social-links a:hover i.fa-facebook-square {
+body > footer .social-links a:hover i.fa-facebook-square {
   color: #3b5998;
 }
 
-footer .social-links a:hover i.fa-instagram {
+body > footer .social-links a:hover i.fa-instagram {
   color: #c13584;
 }
 
-footer .social-links a:hover i.fa-youtube-square {
+body > footer .social-links a:hover i.fa-youtube-square {
   color: #ff0000;
 }
 
-footer .social-links a:hover i.fa-envelope-square {
+body > footer .social-links a:hover i.fa-envelope-square {
   color: #fbb034;
 }
 
-footer .container.credits {
+body > footer .container.credits {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
-footer .container.credits p {
+body > footer .container.credits p {
   line-height: 2;
-  margin-bottom: 0;
 }
 
-footer .container.credits a {
+body > footer .container.credits a {
   padding: 0 .5rem;
 }
 
-footer .container.credits a:hover {
+body > footer .container.credits a:hover {
   color: white;
 }
 
@@ -13169,6 +13168,22 @@ article.home section h2 {
 article.home section .container-fluid {
   padding-left: 0;
   padding-right: 0;
+}
+
+article.home section .description {
+  text-align: justify;
+}
+
+article.home section .d-flex .description {
+  padding-right: 2rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+article.home section .fa-chevron-right {
+  font-size: .85rem;
+  padding-left: .15rem;
 }
 
 article.home #hero {
@@ -13250,12 +13265,6 @@ article.home a.call-to-action:hover {
   background-color: #3A3A3A;
 }
 
-article.home #schedule .description {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
 article.home #schedule .card-columns {
   -webkit-column-count: 2;
           column-count: 2;
@@ -13301,10 +13310,107 @@ article.home #schedule .media-body {
   font-size: .9rem;
 }
 
+article.home #speakers .speaker-container img {
+  width: 60%;
+  height: auto;
+  opacity: .9;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
+article.home #speakers .speaker-container a {
+  background-color: transparent;
+  -webkit-transition: background-color .5s;
+  transition: background-color .5s;
+  text-align: center;
+  display: block;
+  color: black;
+  padding: 1rem 2rem;
+}
+
+article.home #speakers .speaker-container a:hover img {
+  opacity: 1;
+}
+
+article.home #speakers .speaker-container .col {
+  border-right: 1px solid #777;
+}
+
+article.home #speakers .speaker-container .col:last-child {
+  border-right: 1px solid transparent;
+}
+
+article.home #speakers .speaker-container h3 {
+  margin-top: 1rem;
+}
+
+article.home #speakers .speaker-container p {
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+article.home #sponsors .sponsor-container h3 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+article.home #sponsors .sponsor-container span {
+  display: block;
+  font-weight: 300;
+  margin-top: .5rem;
+}
+
+article.home #sponsors .sponsor-container a {
+  color: black;
+  display: block;
+  text-align: center;
+}
+
+article.home #sponsors .sponsor-container img {
+  width: 80%;
+  height: auto;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+article.home #sponsors .sponsor-container a:hover img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
 article.home #map .map {
   width: 100%;
   height: 400px;
   border: 0;
+}
+
+article.home #map .venue-gallery {
+  margin-top: 1rem;
+}
+
+article.home #map .venue-gallery .row {
+  height: 320px;
+}
+
+article.home #map .venue-gallery .col {
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+}
+
+article.home #map .venue-gallery img {
+  width: 100%;
+}
+
+article.home #map .venue-gallery .col-12 {
+  position: relative;
+}
+
+article.home #map .venue-gallery .col-12 img {
+  position: absolute;
+  top: -100px;
 }
 
 /* home animations sub-section */
@@ -13380,13 +13486,13 @@ article.home #map .map {
 /* GENERIC LAYOUT FOR PAGES OTHER THAN HOME */
 
 article:not(.home) {
-  /* generic grid-image style to be used in speakers, partner and team components */
+  /* generic grid-image style to be used in speakers, sponsor and team components */
 }
 
 article:not(.home) section.content {
   /*	custom heading styles - guidelines:
 			h1 is only used for the page heading
-			h2 is used in pages completely consisted of sections (eg. partners, team)
+			h2 is used in pages completely consisted of sections (eg. sponsors, team)
 			h3 is used for paragraph titles or smaller headings (eg. about, contact)
 		 */
 }
@@ -13488,18 +13594,18 @@ article.speaker .back a:active {
 
 /* END SPEAKER PAGE */
 
-/* PARTNERS PAGE */
+/* sponsorS PAGE */
 
-article.partners h2 {
+article.sponsors h2 {
   text-align: center;
   border-bottom: 1px solid #333;
 }
 
-article.partners .col {
+article.sponsors .col {
   text-align: center;
 }
 
-/* END PARTNERS PAGE */
+/* END sponsorS PAGE */
 
 /* TEAM PAGE */
 
@@ -13695,7 +13801,7 @@ article.contact .btn-primary:not([disabled]):not(.disabled):hover {
     margin-bottom: 3rem;
   }
 
-  footer .container {
+  body > footer .container {
     padding: 0 2rem;
   }
 }
@@ -13739,17 +13845,17 @@ article.contact .btn-primary:not([disabled]):not(.disabled):hover {
     padding: .75rem;
   }
 
-  footer {
+  body > footer {
     padding-top: 3rem;
   }
 
-  footer .col-md-4 {
+  body > footer .col-md-4 {
     padding-top: 1rem;
     padding-bottom: 1rem;
     border-right: 1px solid rgba(255, 255, 255, 0.2);
   }
 
-  footer .col-md-4:last-child {
+  body > footer .col-md-4:last-child {
     border-right: 0;
   }
 }

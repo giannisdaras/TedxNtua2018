@@ -18,7 +18,7 @@ Route::group([
 	Route::get('/about', ['as' => 'about', 'uses' => 'AboutController@index']);
 	Route::get('/contact', ['as' => 'contact', 'uses' => 'ContactController@index']);
 	Route::post('/contact', ['as' => 'contact', 'uses' => 'ContactController@submit']);
-	Route::get('/partners', ['as' => 'partners', 'uses' => 'PartnersController@index']);
+	Route::get('/sponsors', ['as' => 'sponsors', 'uses' => 'SponsorsController@index']);
 	Route::get('/schedule', ['as' => 'schedule', 'uses' => 'ScheduleController@index']);
 	Route::get('/team', ['as' => 'team', 'uses' => 'TeamController@index']);
 	Route::get('/speakers/{speaker}', ['as' => 'speakers', 'uses' => 'SpeakersController@speakerindex']);
