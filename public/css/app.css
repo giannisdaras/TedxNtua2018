@@ -13568,15 +13568,15 @@ article.about .col {
 
 /* SPEAKER PAGE */
 
-article.speaker .col {
+article.speakers .col {
   margin-bottom: 1rem;
 }
 
-article.speaker .social-links a {
+article.speakers .social-links a {
   color: #222222;
 }
 
-article.speaker .back a {
+article.speakers .back a {
   border-radius: 1rem;
   background-color: #E62B1E;
   color: white;
@@ -13584,11 +13584,11 @@ article.speaker .back a {
   padding: 1rem 2.5rem;
 }
 
-article.speaker .back a:hover {
+article.speakers .back a:hover {
   background-color: #f32012;
 }
 
-article.speaker .back a:active {
+article.speakers .back a:active {
   font-size: 1.45rem;
 }
 
@@ -13891,12 +13891,12 @@ article.contact .btn-primary:not([disabled]):not(.disabled):hover {
   }
 
   article.about section.content .col,
-  article.speaker section.content .col {
+  article.speakers section.content .col {
     margin-bottom: 0;
   }
 
   article.about section.content .row,
-  article.speaker section.content .row {
+  article.speakers section.content .row {
     margin-bottom: 1rem;
   }
 

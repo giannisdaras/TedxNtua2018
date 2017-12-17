@@ -1,6 +1,9 @@
 {% extends "theme.twig" %}
 {% block title -%}
-	Home
+	{{ trans('general.home.title') }}
+{%- endblock %}
+{% block description -%}
+	{{ trans('general.home.description') }}
 {%- endblock %}
 {% block content %}
 			<article class="home">
@@ -10,12 +13,12 @@
 					<div class="section-content">
 						<h1 class="text-center">TEDxNTUA Chaos</h1>
 						<p class="info text-center">
-							<a href="/schedule"><span>{{ trans('general.hero.date') }}</span></a>
-							<a href="#map"><span>{{ trans('general.hero.venue') }}</span></a>
-							<a href="#map"><span>{{ trans('general.hero.address') }}</span></a>
+							<a href="/schedule"><span>{{ trans('general.home.hero.date') }}</span></a>
+							<a href="#map"><span>{{ trans('general.home.hero.venue') }}</span></a>
+							<a href="#map"><span>{{ trans('general.home.hero.address') }}</span></a>
 						</p>
 						<p class="tickets text-center">
-							<a href="https://www.eventora.com">{{ trans('general.hero.tickets') }}</a>
+							<a href="https://www.eventora.com">{{ trans('general.home.hero.tickets') }}</a>
 						</p>
 					</div>
 
@@ -24,12 +27,12 @@
 				<section id="schedule" class="wow bounceInUp">
 
 					<div class="section-content">
-						<h2>{{ trans('general.home_sections.schedule.title') }}</h2>
+						<h2>{{ trans('general.home.sections.schedule.title') }}</h2>
 						<div class="d-flex align-items-stretch mb-4">
-							<div class="description">{{ trans('general.home_sections.schedule.desc') | raw }}</div>
+							<div class="description">{{ trans('general.home.sections.schedule.desc') | raw }}</div>
 							<div class="d-flex align-items-center justify-content-end">
 								<a href="/schedule" class="call-to-action">
-									{{ trans('general.home_sections.schedule.calltoaction') }} <i class="fa fa-chevron-right"></i>
+									{{ trans('general.home.sections.schedule.calltoaction') }} <i class="fa fa-chevron-right"></i>
 								</a>
 							</div>
 						</div>
@@ -90,12 +93,12 @@
 				<section id="speakers" class="wow bounceInUp">
 
 					<div class="section-content">
-						<h2>{{ trans('general.home_sections.speakers.title') }}</h2>
+						<h2>{{ trans('general.home.sections.speakers.title') }}</h2>
 						<div class="d-flex align-items-stretch mb-4">
-							<div class="description">{{ trans('general.home_sections.speakers.desc') | raw }}</div>
+							<div class="description">{{ trans('general.home.sections.speakers.desc') | raw }}</div>
 							<div class="d-flex align-items-center justify-content-end">
 								<a href="/speakers" class="call-to-action">
-									{{ trans('general.home_sections.speakers.calltoaction') }} <i class="fa fa-chevron-right"></i>
+									{{ trans('general.home.sections.speakers.calltoaction') }} <i class="fa fa-chevron-right"></i>
 								</a>
 							</div>
 						</div>
@@ -131,12 +134,12 @@
 				<section id="about" class="wow bounceInUp">
 
 					<div class="section-content">
-						<h2>{{ trans('general.home_sections.about.title') }}</h2>
+						<h2>{{ trans('general.home.sections.about.title') }}</h2>
 						<div class="d-flex align-items-stretch mb-4">
-							<div class="description">{{ trans('general.home_sections.about.desc') | raw }}</div>
+							<div class="description">{{ trans('general.home.sections.about.desc') | raw }}</div>
 							<div class="d-flex align-items-center justify-content-end">
 								<a href="/about" class="call-to-action">
-									{{ trans('general.home_sections.about.calltoaction') }} <i class="fa fa-chevron-right"></i>
+									{{ trans('general.home.sections.about.calltoaction') }} <i class="fa fa-chevron-right"></i>
 								</a>
 							</div>
 						</div>
@@ -147,17 +150,17 @@
 				<section id="sponsors" class="wow bounceInUp">
 
 					<div class="section-content">
-						<h2>{{ trans('general.home_sections.sponsors.title') }}</h2>
+						<h2>{{ trans('general.home.sections.sponsors.title') }}</h2>
 						<div class="d-flex align-items-stretch mb-4">
-							<div class="description">{{ trans('general.home_sections.sponsors.desc') | raw }}</div>
+							<div class="description">{{ trans('general.home.sections.sponsors.desc') | raw }}</div>
 							<div class="d-flex align-items-center justify-content-end">
 								<a href="/sponsors" class="call-to-action">
-									{{ trans('general.home_sections.sponsors.calltoaction') }} <i class="fa fa-chevron-right"></i>
+									{{ trans('general.home.sections.sponsors.calltoaction') }} <i class="fa fa-chevron-right"></i>
 								</a>
 							</div>
 						</div>
 						<div class="container-fluid sponsor-container">
-							<h3 class="text-center">Grand Sponsors</h3>
+							<h3 class="text-center">{{ trans('general.sponsors.rank.0') }}</h3>
 							<div class="row no-gutters">
 								<div class="col col-4">
 									<a href="https://www.e-corp-usa.com">
@@ -186,9 +189,9 @@
 				<section id="map">
 
 					<div class="section-content">
-						<h2>{{ trans('general.home_sections.map.title') }}</h2>
+						<h2>{{ trans('general.home.sections.map.title') }}</h2>
 						<p class="description">
-							{{ trans('general.home_sections.map.desc') | raw }}
+							{{ trans('general.home.sections.map.desc') | raw }}
 						</p>
 						<div class="map-container">
 							<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.1659650923716!2d23.741146951388863!3d37.97325597962415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd41a90a05e7%3A0x243e905afaf27568!2zzqnOtM61zq_OvyDOkc64zrfOvc-Ozr0!5e0!3m2!1sel!2sgr!4v1512745475349" allowfullscreen></iframe>

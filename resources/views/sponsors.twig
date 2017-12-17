@@ -1,17 +1,20 @@
 {% extends "theme.twig" %}
 {% block title -%}
-	Sponsors
+	{{ trans('general.sponsors.title') }}
+{%- endblock %}
+{% block description -%}
+	{{ trans('general.sponsors.description') }}
 {%- endblock %}
 {% block content %}
 		<article class="sponsors">
 			<section class="heading">
-				<h1>Sponsors</h1>
+				<h1>{{ trans('general.sponsors.title') }}</h1>
 			</section>
 			
 			<section class="content">
-				<h2>Grand Sponsors</h2>
+				<h2>{{ trans('general.sponsors.rank.0') }}</h2>
 
-				<div class="container">
+				<div class="container-fluid">
 					<div class="row"> 
 						<div class="col col-12 col-lg-6">
 							<a href="http://www.google.com" target="_blank"><img class="img-fluid grid-image hover-zoom" src="https://vignette.wikia.nocookie.net/epicrapbattlesofhistory/images/e/eb/Deal_with_it_rainbow_style_by_j_brony-d4cwgad.png" alt="Pony"></a>
@@ -24,9 +27,9 @@
 					</div>
 				</div>
 
-				<h2>Partners</h2>
+				<h2>{{ trans('general.sponsors.rank.1') }}</h2>
 
-				<div class="container">
+				<div class="container-fluid">
 					<div class="row"> 
 						<div class="col col-12 col-lg-4">
 							<a href="http://www.google.com" target="_blank"><img class="img-fluid grid-image hover-zoom" src="https://vignette.wikia.nocookie.net/epicrapbattlesofhistory/images/e/eb/Deal_with_it_rainbow_style_by_j_brony-d4cwgad.png" alt="Pony"></a>
@@ -44,9 +47,9 @@
 					</div>
 				</div>
 
-				<h2>Supporters</h2>
+				<h2>{{ trans('general.sponsors.rank.2') }}</h2>
 
-				<div class="container">
+				<div class="container-fluid">
 					<div class="row"> 
 						<div class="col col-6 col-lg-3">
 							<a href="http://www.google.com" target="_blank"><img class="img-fluid grid-image hover-zoom" src="https://vignette.wikia.nocookie.net/epicrapbattlesofhistory/images/e/eb/Deal_with_it_rainbow_style_by_j_brony-d4cwgad.png" alt="Pony"></a>
@@ -64,9 +67,9 @@
 					</div>
 				</div>
 
-				<h2>Media</h2>
+				<h2>{{ trans('general.sponsors.rank.3') }}</h2>
 
-				<div class="container">
+				<div class="container-fluid">
 					<div class="row"> 
 						<div class="col col-6 col-lg-3">
 							<a href="http://www.google.com" target="_blank"><img class="img-fluid grid-image hover-zoom" src="https://vignette.wikia.nocookie.net/epicrapbattlesofhistory/images/e/eb/Deal_with_it_rainbow_style_by_j_brony-d4cwgad.png" alt="Pony"></a>
