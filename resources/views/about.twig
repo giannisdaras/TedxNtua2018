@@ -1,50 +1,34 @@
 {% extends "theme.twig" %}
 {% block title -%}
-About
+	{{ trans('general.about.title') }}
+{%- endblock %}
+{% block description -%}
+	{{ trans('general.about.description') }}
 {%- endblock %}
 {% block content %}
 <article class="about">
 	<section class="heading">
-		<h1>About</h1>
+		<h1>{{ trans('general.about.title') }}</h1>
 	</section>
 
 	<section class="content">
 
-		<div class="container-fluid wow bounceInLeft">
+		<div class="container-fluid wow bounceInLeft text-center">
 
 			<div class="row">
 				<div class="col col-12 col-lg-12">
-					<h3 class="text-center primary">What is TEDx?</h3>
-					<p class="text-center"><strong>x = independently organized event</strong></p>
-					<p class="text-justify">
-						In the spirit of ideas worth spreading, TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TED Talks video and live speakers combine to spark deep discussion and connection. These local, self-organized events are branded TEDx, where x = independently organized TED event. The TED Conference provides general guidance for the TEDx program, but individual TEDx events are self-organized. (Subject to certain rules and regulations.)
-					</p> 
+					<h3 class="primary">{{ trans('general.about.tedx.title') }}</h3>
+					<h6 class="font-weight-bold">{{ trans('general.about.tedx.subtitle') }}</h6>
+					{{ trans('general.about.tedx.content') | raw }}
 
-					<h3 class="text-center primary">What is TED?</h3>
-
-					<p class="text-justify">
-						TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 30 years ago, TED has grown to support its mission with multiple initiatives. The two annual TED Conferences invite the world's leading thinkers and doers to speak for 18 minutes or less. Many of these talks are then made available, free, at TED.com. TED speakers have included Bill Gates, Jane Goodall, Elizabeth Gilbert, Sir Richard Branson, Nandan Nilekani, Philippe Starck, Ngozi Okonjo-Iweala, Sal Khan and Daniel Kahneman.
-					</p>	
-					<p class="text-justify">
-						The annual TED Conference takes place each spring in Vancouver, British Columbia. TED's media initiatives include TED.com, where new TED Talks are posted daily; the Open Translation Project, which provides subtitles and interactive transcripts as well as translations from volunteers worldwide; the educational initiative TED-Ed. TED has established the annual TED Prize, where exceptional individuals with a wish to change the world get help translating their wishes into action; TEDx, which supports individuals or groups in hosting local, self- organized TED-style events around the world, and the TED Fellows program, helping world-changing innovators from around the globe to amplify the impact of their remarkable projects and activities.<br>
-
-						Follow TED on Twitter at <a href="http://twitter.com/TEDTalks">http://twitter.com/TEDTalks</a>, or on Facebook at <a href="http://www.facebook.com/TED">http://www.facebook.com/TED</a>. 	
-					</p>
+					<h3 class="primary">{{ trans('general.about.ted.title') }}</h3>
+					{{ trans('general.about.ted.content') | raw }}
 				
 				</div>
 
 				<div class="col col-12 col-lg-12">
-					<h3 class="text-center primary">About Our Topic</h3>
-
-					<p class="text-justify">
-						The various activities of the students and the academic community in general in the National Technical University of Athens are proof of creativity endemic. This scientific potential is the fundamental material for the creation of progressive ideas, which are capable of following the current advancements in science and technology.
-					</p>
-					<p class="text-justify">	
-						Nonetheless, the massive immigration of young graduates towards the flourishing economies of the world, the appearance of numerous new fields, the need for highly specialized scientists and employees, the general sense of individualism and especially the pervasive economical and ethical crisis have deprived the academic community of the collaborative spirit necessary in every learning experience.
-					</p>	
-					<p class="text-justify">	
-						TEDxNTUA is an organized effort to create and sustain the necessary frame for the exchange of new ideas in the fields of technology and business administration. At the same time, NTUA’s community is becoming a living, extrovert organism focusing on the scientific and career goals of its members, while promoting the expan- sion of the network of collaboration between the NTUA, the industries and the startup community.
-					</p>
+					<h3 class="primary">{{ trans('general.about.tedxntua.title') }}</h3>
+					{{ trans('general.about.tedxntua.content') | raw }}
 
 				</div>
 			</div>

@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-class PartnersController extends Controller {
+class SponsorsController extends Controller {
 
 	public function index() {
-		return view('partners');
+		return view('sponsors');
 	}
 }

@@ -1,20 +1,22 @@
 {% extends "theme.twig" %}
 {% block title -%}
-	Contact
+	{{ trans('general.contact.title') }}
+{%- endblock %}
+{% block description -%}
+	{{ trans('general.contact.description') }}
 {%- endblock %}
 {% block content %}
 		<article class="contact">
 			<section class="heading">
-				<h1>Contact</h1>
+				<h1>{{ trans('general.contact.title') }}</h1>
 			</section>
-
 
 			<section class="content">
 				<div class="container">
 					<div class="row">
 						<div class="col col-12 col-lg-3 mb-3 mb-lg-0">	
-							<h3 class="text-center font-weight-bold">Contact Us</h3>	
-							<p class="small text-justify"> Please find below our contact info or just fill in the form and we’ll get back to you as soon as possible!</p>
+							<h3 class="text-center font-weight-bold">{{ trans('general.contact.contactus') }}</h3>	
+							<p class="small text-justify">{{ trans('general.contact.greeting') }}</p>
 
 							<p class="text-center text-lg-left">
 								<a href="mailto:info@tedxntua.com"><i class="fa fa-envelope fa-1x" aria-hidden="true"></i> info@tedxntua.com</a>
@@ -26,30 +28,30 @@
 							<form action = " url ('contact') " method="POST">
 								{{ csrf_field() }}
 								<div class="form-group">
-									<label for="name">Name</label>
-									<input type="text" class="form-control" id="name" aria-describedby="NameHelp" placeholder="Enter your Name" required>
-									<small id="NameHelp" class="form-text text-muted">Your name is required</small>
+									<label for="name">{{ trans('general.contact.form.name') }}</label>
+									<input type="text" class="form-control" id="name" aria-describedby="NameHelp" placeholder="{{ trans('general.contact.form.name_ph') }}" required>
+									<small id="NameHelp" class="form-text text-muted">{{ trans('general.contact.form.name_help') }}</small>
 								</div>
 
 								<div class="form-group">
-									<label for="email">e-mail address</label>
-									<input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
-									<small id="emailHelp" class="form-text text-muted">Your email is required</small>
+									<label for="email">{{ trans('general.contact.form.email') }}</label>
+									<input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="{{ trans('general.contact.form.email_ph') }}" required>
+									<small id="emailHelp" class="form-text text-muted">{{ trans('general.contact.form.email_help') }}</small>
 								</div>
 
 								<div class="form-group">
-									<label for="subject">Subject</label>
-									<input type="text" class="form-control" id="subject" aria-describedby="SubjectHelp" placeholder="Enter message subject">
-									<small id="SubjectHelp" class="form-text text-muted">Please enter an appropriate subject</small>
+									<label for="subject">{{ trans('general.contact.form.subject') }}</label>
+									<input type="text" class="form-control" id="subject" aria-describedby="SubjectHelp" placeholder="{{ trans('general.contact.form.subject_ph') }}">
+									<small id="SubjectHelp" class="form-text text-muted">{{ trans('general.contact.form.subject_help') }}</small>
 								</div>
 
 								<div class="form-group">
-									<label for="message">Message</label>
+									<label for="message">{{ trans('general.contact.form.message') }}</label>
 									<textarea class="form-control" rows="5" id="message" required></textarea>
 								</div>
 
 								<div class="form-group mt-5 mt-lg-0 text-center text-lg-left">
-									<button href="contact/submit" type="submit" class="btn btn-primary">Submit</button>
+									<button href="contact/submit" type="submit" class="btn btn-primary">{{ trans('general.contact.form.submit') }}</button>
 								</div>
 
 							</form>
