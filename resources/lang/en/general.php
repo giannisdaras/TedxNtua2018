@@ -15,6 +15,8 @@ return [
 
     'language' => 'English',
 
+    'loading' => 'Loading...',
+
     /* NAV */
     'nav' => array(
         'home' => 'Home',

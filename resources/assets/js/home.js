@@ -1,7 +1,7 @@
 $(document).ready(function(){
-    $("#hero .info a").on("mouseover", function(e){
+    $(document).on("mouseover", "#hero .info a", function(e){
         $(this).addClass("blink");
-    }).on("mouseout", function(e) {
+    }).on("mouseout", "#hero .info a", function(e) {
         $(this).removeClass("blink");
     });
 });

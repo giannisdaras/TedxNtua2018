@@ -4,10 +4,16 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Mail;
+use LaravelLocalization;
 
 class ContactController extends Controller {
 
-	public function index() {
+	public function index(Request $request) {
+		$isPjax = $request->header('X-PJAX');
+		if($isPjax) {
+			return response()->view('contact', compact('isPjax'), 200)
+							 ->header('X-PJAX-URL', LaravelLocalization::getLocalizedURL());
+		}
 		return view('contact');
 	}
 

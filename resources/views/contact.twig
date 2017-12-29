@@ -1,4 +1,4 @@
-{% extends "theme.twig" %}
+{% extends isPjax is defined and isPjax == true ? "pjax.twig" : "theme.twig" %}
 {% block title -%}
 	{{ trans('general.contact.title') }}
 {%- endblock %}

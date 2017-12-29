@@ -15,6 +15,8 @@ return [
 
     'language' => 'Ελληνικά',
 
+    'loading' => 'Φόρτωση...',
+
     /* NAV */
     'nav' => array(
         'home' => 'Αρχική',

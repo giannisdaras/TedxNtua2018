@@ -12995,6 +12995,7 @@ article.home .section-content {
   padding: 2rem 1rem;
 }
 
+main,
 section.content {
   min-height: 540px;
 }
@@ -13006,6 +13007,19 @@ section.content > .container-fluid {
 }
 
 /* END PAGE CONTENT */
+
+#loading {
+  display: none;
+}
+
+#loading div {
+  background-color: #DDD;
+  height: 1rem;
+}
+
+main #loading {
+  display: block;
+}
 
 /* FOOTER */
 

@@ -194,7 +194,7 @@ section.content, article.home .section-content {
 	padding: 2rem 1rem;
 }
 
-section.content {
+main, section.content {
 	min-height: 540px;
 }
 
@@ -205,6 +205,18 @@ section.content > .container-fluid {
 }
 
 /* END PAGE CONTENT */
+
+#loading {
+	display: none;
+	div {
+		background-color: #DDD;
+		height: 1rem;
+	}
+}
+
+main #loading {
+	display: block;
+}
 
 /* FOOTER */
 body > footer {
