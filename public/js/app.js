@@ -773,7 +773,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(9);
-module.exports = __webpack_require__(39);
+module.exports = __webpack_require__(40);
 
 
 /***/ }),
@@ -812,8 +812,8 @@ const app = new Vue({
 
 */
 __webpack_require__(37);
-__webpack_require__(49);
 __webpack_require__(38);
+__webpack_require__(39);
 
 /***/ }),
 /* 10 */
@@ -36155,54 +36155,6 @@ $(document).ready(function () {
 /* 38 */
 /***/ (function(module, exports) {
 
-$(document).ready(function () {
-
-	$(document).pjax("a", "main");
-
-	$(document).on("pjax:complete", function () {
-
-		/* transition between page loading */
-		$("main").fadeTo(0, 0.9, function () {
-			$(this).fadeTo(400, 1);
-		});
-
-		/* change active menu item */
-		var current = window.location.pathname;
-		current = current.replace("/en/", "/");
-		current = current.replace("/el/", "/");
-		if (current.length == 3) {
-			current = "/";
-		}
-
-		$("nav li.active").removeClass("active");
-
-		$("nav a.nav-link").each(function () {
-			if ($(this).attr("href").length <= current.length && $(this).attr("href").indexOf(current) !== -1) {
-				$(this).parent().addClass("active");
-			}
-		});
-	});
-});
-
-/***/ }),
-/* 39 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 40 */,
-/* 41 */,
-/* 42 */,
-/* 43 */,
-/* 44 */,
-/* 45 */,
-/* 46 */,
-/* 47 */,
-/* 48 */,
-/* 49 */
-/***/ (function(module, exports) {
-
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 /*!
@@ -37112,6 +37064,45 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     disable();
   }
 })(jQuery);
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports) {
+
+$(document).ready(function () {
+
+	$(document).pjax("a", "main");
+
+	$(document).on("pjax:complete", function () {
+
+		/* transition between page loading */
+		$("main").fadeTo(0, 0.9, function () {
+			$(this).fadeTo(400, 1);
+		});
+
+		/* change active menu item */
+		var current = window.location.pathname;
+		current = current.replace("/en/", "/");
+		current = current.replace("/el/", "/");
+		if (current.length == 3) {
+			current = "/";
+		}
+
+		$("nav li.active").removeClass("active");
+
+		$("nav a.nav-link").each(function () {
+			if ($(this).attr("href").length <= current.length && $(this).attr("href").indexOf(current) !== -1) {
+				$(this).parent().addClass("active");
+			}
+		});
+	});
+});
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

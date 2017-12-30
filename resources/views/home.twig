@@ -13,8 +13,8 @@
 					<div class="section-content">
 						<h1 class="text-center">TEDxNTUA Chaos</h1>
 						<p class="info text-center">
-							<a href="/schedule"><span>{{ trans('general.home.hero.date') }}</span></a>
-							<a href="#map"><span>{{ trans('general.home.hero.venue') }}</span></a>
+							<a href="/schedule"><span>{{ trans('general.home.hero.date') }}</span></a><br>
+							<a href="#map"><span>{{ trans('general.home.hero.venue') }}</span></a><br>
 							<a href="#map"><span>{{ trans('general.home.hero.address') }}</span></a>
 						</p>
 						<p class="tickets text-center">
@@ -28,9 +28,9 @@
 
 					<div class="section-content">
 						<h2>{{ trans('general.home.sections.schedule.title') }}</h2>
-						<div class="d-flex align-items-stretch mb-4">
+						<div class="section-intro">
 							<div class="description">{{ trans('general.home.sections.schedule.desc') | raw }}</div>
-							<div class="d-flex align-items-center justify-content-end">
+							<div class="call-to-action-wrapper">
 								<a href="/schedule" class="call-to-action">
 									{{ trans('general.home.sections.schedule.calltoaction') }} <i class="fa fa-chevron-right"></i>
 								</a>
@@ -94,9 +94,9 @@
 
 					<div class="section-content">
 						<h2>{{ trans('general.home.sections.speakers.title') }}</h2>
-						<div class="d-flex align-items-stretch mb-4">
+						<div class="section-intro">
 							<div class="description">{{ trans('general.home.sections.speakers.desc') | raw }}</div>
-							<div class="d-flex align-items-center justify-content-end">
+							<div class="call-to-action-wrapper">
 								<a href="/speakers" class="call-to-action">
 									{{ trans('general.home.sections.speakers.calltoaction') }} <i class="fa fa-chevron-right"></i>
 								</a>
@@ -104,21 +104,21 @@
 						</div>
 						<div class="container-fluid speaker-container">
 							<div class="row no-gutters">
-								<div class="col col-4">
+								<div class="col col-12 col-md-4">
 									<a href="/speakers/jobs">
 										<img src="https://i1.sndcdn.com/artworks-000241864958-t7ad44-t500x500.jpg" class="rounded-circle">
 										<h3>Big Shaq</h3>
 										<p class="m-0">Entrepreneur, computer engineer and white-hat hacker.</p>
 									</a>
 								</div>
-								<div class="col col-4">
+								<div class="col col-12 col-md-4">
 									<a href="/speakers/jobs">
 										<img src="https://i1.sndcdn.com/artworks-000241864958-t7ad44-t500x500.jpg" class="rounded-circle">
 										<h3>Big Shaq</h3>
 										<p class="m-0">Entrepreneur, computer engineer and white-hat hacker.</p>
 									</a>
 								</div>
-								<div class="col col-4">
+								<div class="col col-12 col-md-4">
 									<a href="/speakers/jobs">
 										<img src="https://i1.sndcdn.com/artworks-000241864958-t7ad44-t500x500.jpg" class="rounded-circle">
 										<h3>Big Shaq</h3>
@@ -135,9 +135,9 @@
 
 					<div class="section-content">
 						<h2>{{ trans('general.home.sections.about.title') }}</h2>
-						<div class="d-flex align-items-stretch mb-4">
+						<div class="section-intro">
 							<div class="description">{{ trans('general.home.sections.about.desc') | raw }}</div>
-							<div class="d-flex align-items-center justify-content-end">
+							<div class="call-to-action-wrapper">
 								<a href="/about" class="call-to-action">
 									{{ trans('general.home.sections.about.calltoaction') }} <i class="fa fa-chevron-right"></i>
 								</a>
@@ -151,9 +151,9 @@
 
 					<div class="section-content">
 						<h2>{{ trans('general.home.sections.sponsors.title') }}</h2>
-						<div class="d-flex align-items-stretch mb-4">
+						<div class="section-intro">
 							<div class="description">{{ trans('general.home.sections.sponsors.desc') | raw }}</div>
-							<div class="d-flex align-items-center justify-content-end">
+							<div class="call-to-action-wrapper">
 								<a href="/sponsors" class="call-to-action">
 									{{ trans('general.home.sections.sponsors.calltoaction') }} <i class="fa fa-chevron-right"></i>
 								</a>
@@ -162,19 +162,19 @@
 						<div class="container-fluid sponsor-container">
 							<h3 class="text-center">{{ trans('general.sponsors.rank.0') }}</h3>
 							<div class="row no-gutters">
-								<div class="col col-4">
+								<div class="col col-12 col-md-4 mb-4 mb-md-0">
 									<a href="https://www.e-corp-usa.com">
 										<img class="img-fluid" src="https://pbs.twimg.com/media/DMhdOJeUIAAf2ec.jpg">
 										<span>E-Corp USA</span>
 									</a>
 								</div>
-								<div class="col col-4">
+								<div class="col col-12 col-md-4 mb-4 mb-md-0">
 									<a href="https://www.e-corp-usa.com">
 										<img class="img-fluid" src="https://pbs.twimg.com/media/DMhdOJeUIAAf2ec.jpg">
 										<span>E-Corp USA</span>
 									</a>
 								</div>
-								<div class="col col-4">
+								<div class="col col-12 col-md-4">
 									<a href="https://www.e-corp-usa.com">
 										<img class="img-fluid" src="https://pbs.twimg.com/media/DMhdOJeUIAAf2ec.jpg">
 										<span>E-Corp USA</span>
@@ -198,15 +198,15 @@
 						</div>
 						<div class="container-fluid venue-gallery">
 							<div class="row no-gutters">
-								<div class="col col-6">
+								<div class="col col-12 col-md-6">
 									<img src="http://www.athensconservatoire.gr/wp-content/uploads/2017/07/OdeionAthinon-Maketes-833x500.jpg">
 								</div>
-								<div class="col col-6">
+								<div class="col col-12 col-md-6">
 									<img src="http://www.alfavita.gr/sites/default/files/u47/odeio1.png">
 								</div>
 							</div>
 							<div class="row no-gutters">
-								<div class="col col-12">
+								<div class="col col-12 col-md-12">
 									<img src="http://www.athensconservatoire.gr/wp-content/uploads/2017/06/odeio-site-slider.jpg">
 								</div>
 							</div>

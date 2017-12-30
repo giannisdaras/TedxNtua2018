@@ -13165,8 +13165,8 @@ body > footer .container.credits a:hover {
 
 article.home section {
   /* top and bottom inset box shadow */
-  -webkit-box-shadow: inset 0 -80px 80px -80px rgba(0, 0, 0, 0.4), inset 0 80px 80px -80px rgba(0, 0, 0, 0.4);
-          box-shadow: inset 0 -80px 80px -80px rgba(0, 0, 0, 0.4), inset 0 80px 80px -80px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: inset 0 -40px 40px -40px rgba(0, 0, 0, 0.4), inset 0 40px 40px -40px rgba(0, 0, 0, 0.4);
+          box-shadow: inset 0 -40px 40px -40px rgba(0, 0, 0, 0.4), inset 0 40px 40px -40px rgba(0, 0, 0, 0.4);
   width: 100%;
   /* temporary, just to test the home layout */
   min-height: 400px;
@@ -13177,6 +13177,7 @@ article.home section h2 {
   font-weight: bold;
   font-size: 2.1em;
   margin-bottom: .5em;
+  text-align: center;
 }
 
 article.home section .container-fluid {
@@ -13184,15 +13185,35 @@ article.home section .container-fluid {
   padding-right: 0;
 }
 
+article.home section .section-intro {
+  display: block;
+  margin-bottom: 1.5rem;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
 article.home section .description {
   text-align: justify;
 }
 
-article.home section .d-flex .description {
-  padding-right: 2rem;
+article.home section .section-intro .description {
+  margin-bottom: 1rem;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+article.home section .call-to-action-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 article.home section .fa-chevron-right {
@@ -13225,14 +13246,12 @@ article.home #hero .info {
 }
 
 article.home #hero .info a {
-  /* TODO: find better solution for the borders; margins may not work */
   display: inline-block;
   font-size: 1.15rem;
   border-style: solid;
   border-color: white;
   border-width: 0 0 1px 0;
   padding: .25rem .5rem;
-  margin: 0 4rem;
   color: white;
 }
 
@@ -13280,10 +13299,10 @@ article.home a.call-to-action:hover {
 }
 
 article.home #schedule .card-columns {
-  -webkit-column-count: 2;
-          column-count: 2;
-  -webkit-column-gap: .8rem;
-          column-gap: .8rem;
+  -webkit-column-count: 1;
+          column-count: 1;
+  -webkit-column-gap: 0;
+          column-gap: 0;
   color: white;
 }
 
@@ -13346,20 +13365,14 @@ article.home #speakers .speaker-container a:hover img {
   opacity: 1;
 }
 
-article.home #speakers .speaker-container .col {
-  border-right: 1px solid #777;
-}
-
-article.home #speakers .speaker-container .col:last-child {
-  border-right: 1px solid transparent;
-}
-
 article.home #speakers .speaker-container h3 {
   margin-top: 1rem;
+  margin-bottom: .25rem;
+  font-size: 1.5rem;
 }
 
 article.home #speakers .speaker-container p {
-  font-size: 1rem;
+  font-size: 1em;
   line-height: 1.25;
 }
 
@@ -13404,27 +13417,8 @@ article.home #map .venue-gallery {
   margin-top: 1rem;
 }
 
-article.home #map .venue-gallery .row {
-  height: 320px;
-}
-
-article.home #map .venue-gallery .col {
-  -o-object-fit: cover;
-     object-fit: cover;
-  overflow: hidden;
-}
-
 article.home #map .venue-gallery img {
   width: 100%;
-}
-
-article.home #map .venue-gallery .col-12 {
-  position: relative;
-}
-
-article.home #map .venue-gallery .col-12 img {
-  position: absolute;
-  top: -100px;
 }
 
 /* home animations sub-section */
@@ -13822,7 +13816,31 @@ article.contact .btn-primary:not([disabled]):not(.disabled):hover {
 
 @media (min-width: 768px) {
   article.home section {
+    /* top and bottom inset box shadow */
+    -webkit-box-shadow: inset 0 -80px 80px -80px rgba(0, 0, 0, 0.4), inset 0 80px 80px -80px rgba(0, 0, 0, 0.4);
+            box-shadow: inset 0 -80px 80px -80px rgba(0, 0, 0, 0.4), inset 0 80px 80px -80px rgba(0, 0, 0, 0.4);
     font-size: 1.25em;
+  }
+
+  article.home section h2 {
+    text-align: left;
+  }
+
+  article.home section .section-intro {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  article.home section .section-intro .description {
+    padding-right: 2rem;
+    margin-bottom: 0;
+  }
+
+  article.home section .call-to-action-wrapper {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 
   article.home #hero {
@@ -13833,6 +13851,10 @@ article.contact .btn-primary:not([disabled]):not(.disabled):hover {
     margin-top: 20rem;
     font-size: 3.5rem;
     font-weight: bold;
+  }
+
+  article.home #hero .info br {
+    display: none;
   }
 
   article.home #hero .info a {
@@ -13848,6 +13870,40 @@ article.contact .btn-primary:not([disabled]):not(.disabled):hover {
 
   article.home #hero .info a:last-child {
     border-right: 0;
+  }
+
+  article.home #schedule .card-columns {
+    -webkit-column-count: 2;
+            column-count: 2;
+    -webkit-column-gap: .8rem;
+            column-gap: .8rem;
+  }
+
+  article.home #speakers h3 {
+    font-size: 1.75rem;
+    margin-bottom: .5rem;
+  }
+
+  article.home #speakers .col {
+    border-right: 1px solid #777;
+  }
+
+  article.home #speakers .col:last-child {
+    border-right: 1px solid transparent;
+  }
+
+  article.home #map .row {
+    height: 320px;
+  }
+
+  article.home #map .col {
+    -o-object-fit: cover;
+       object-fit: cover;
+    overflow: hidden;
+  }
+
+  article.home #map img {
+    min-height: 320px;
   }
 
   article.schedule table {
@@ -13902,6 +13958,15 @@ article.contact .btn-primary:not([disabled]):not(.disabled):hover {
 
   article.home #hero .tickets a:active {
     font-size: 1.3rem;
+  }
+
+  article.home #map .col-md-12 {
+    position: relative;
+  }
+
+  article.home #map .col-md-12 img {
+    position: absolute;
+    top: -100px;
   }
 
   article.about section.content .col,
