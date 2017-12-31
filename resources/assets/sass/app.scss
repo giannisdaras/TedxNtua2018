@@ -496,8 +496,7 @@ article.home {
 	}
 	#blog {
 		.card-columns {
-			column-count: 3;
-			column-gap: .25em;
+			column-count: 1;
 		}
 		a.card-img-link {
 			display: block;
@@ -505,6 +504,7 @@ article.home {
 			text-shadow: 0 3px 2px rgba(0, 0, 0, 0.8), 0 5px 9px rgba(0, 0, 0, 0.2);
 			position: relative;
 			height: 240px;
+			margin-bottom: .75rem;
 		}
 		.card {
 			background: transparent;
@@ -526,11 +526,14 @@ article.home {
 			justify-content: flex-end;
 			flex-flow: column nowrap;
 		}
-		h3, h5 {
+		h3 {
+			font-size: 1.5em;
 			line-height: 1;
 		}
 		h5 {
+			font-size: 1em;
 			font-weight: normal;
+			line-height: 1;
 		}
 	}
 	#sponsors {
@@ -957,6 +960,12 @@ article.contact {
 				}
 			}
 		}
+		#blog {
+			.card-columns {
+				column-count: 2;
+				column-gap: .8rem;
+			}
+		}
 		#map {
 			.row {
 				height: 320px;
@@ -1000,26 +1009,33 @@ article.contact {
 	.navbar-toggler {
 		display: flex;
 	}
-	article.home #hero {
-		h1 {
-			font-size: 4.5rem;
+	article.home {
+		#hero {
+			h1 {
+				font-size: 4.5rem;
+			}
+			.info a, .tickets a {
+				font-size: 1.35rem;
+			}
+			.info a {
+				padding: .5rem 1.2rem;
+			}
+			.tickets a:active {
+				font-size: 1.3rem;
+			}
 		}
-		.info a, .tickets a {
-			font-size: 1.35rem;
+		#blog {
+			.card-columns {
+				column-count: 3;
+			}
 		}
-		.info a {
-			padding: .5rem 1.2rem;
-		}
-		.tickets a:active {
-			font-size: 1.3rem;
-		}
-	}
-	article.home #map {
-		.col-md-12 {
-			position: relative;
-			img {
-				position: absolute;
-				top: -100px;
+		#map {
+			.col-md-12 {
+				position: relative;
+				img {
+					position: absolute;
+					top: -100px;
+				}
 			}
 		}
 	}
