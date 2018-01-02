@@ -1,0 +1,42 @@
+{% extends isPjax is defined and isPjax == true ? "pjax.twig" : "theme.twig" %}
+{% block title -%}
+{{ trans('general.blog.title') }}
+{%- endblock %}
+{% block description -%}
+{{ trans('general.blog.description') }}
+{%- endblock %}
+{% block content %}
+
+<article class="blog_overview">
+	<section class="heading">
+		<h1>{{ trans('general.blog.title') }}</h1>
+	</section>
+
+	<section class="content">
+		<section id="blog" class="wow bounceInUp">
+			<div class="card-columns">
+							<a class="card-img-link" href="/blog/posts/1p">
+								<div class="card">
+									<div class="card-img-wrapper">
+										<img class="card-img" src="{{ asset('images/blog/photoshooting-making-of-our-promo-video.jpg') }}">
+										<div class="card-img-overlay">
+											<h5>14 DEC 17</h5>
+											<h3>Photoshooting - Making of our promo video</h3>
+										</div>
+									</div>
+									<div class="card-body">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ipsum ligula, dictum vel lacus sit amet, commodo faucibus eros.
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+
+
+
+
+				</section>
+			</article>
+
+
+			{% endblock %}
