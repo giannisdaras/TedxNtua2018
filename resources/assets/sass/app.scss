@@ -675,6 +675,19 @@ article.about {
 	}
 }
 
+
+/* BLOG PAGE */
+article.blog {
+	section.content {
+		max-width: 960px;
+	}
+	.row {
+		margin-bottom: 1rem;
+		margin-top: 1rem;
+	}
+}
+
+
 /* SPEAKER PAGE */
 
 article.speakers {

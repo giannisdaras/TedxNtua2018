@@ -1,9 +1,9 @@
 {% extends isPjax is defined and isPjax == true ? "pjax.twig" : "theme.twig" %}
 {% block title -%}
-	{{ trans('general.blog.title') }}
+{{ trans('general.blog.title') }}
 {%- endblock %}
 {% block description -%}
-	{{ trans('general.blog.description') }}
+{{ trans('general.blog.description') }}
 {%- endblock %}
 {% block content %}
 
@@ -15,52 +15,117 @@
 	<section class="content">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-9">
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-12">
-								<!-- <h2>{{ post.title }}</h2> -->
-								<h2>Title</h2>
-								<h5>Published: 25/12/2017</h5>
-
-
-								<div class="text-justify">
-									<p>Like e-mail and voice mail, and unlike calls (in which the caller hopes to speak directly with the recipient), texting does not require the caller and recipient to both be free at the same moment; this permits communication even between busy individuals. Text messages can also be used to interact with automated systems, for example, to order products or services from e-commerce websites, or to participate in online contests. Advertisers and service providers use direct text marketing to send messages to mobile users about promotions, payment due dates, and other notifications instead of using postal mail, email, or voicemail.</p>
-									<a href="/#">Read More</a>
+				<div class="col-12">
+					<div class="card mb-3   wow bounceInUp">
+						<img class="card-img-top" src="http://www.apostleschurch.org/wp-content/uploads/2014/04/ws_Outer_Space_Colors_1280x800.jpg" height="280">
+						<div class="card-block">
+							<div class="container-fluid">
+								<div class='row'>
+									<div class='col-12'>
+										<h3 class="card-title" id="title">Welcome to our blog</h3>
+									</div>
 								</div>
-								<hr>
+
+								<div class='row'>
+									<div class='col-6'>
+										<p class="card-text"><small class="text-muted">1st JANUARY, 2018</small></p>	
+									</div>
+									<div class='col-6 text-right'>
+										<p class="card-text"><small class="text-muted">#chaos, #tedxntua</small></p>
+									</div>
+								</div>
+								<div class="row text-justify"> 
+									<div class='col-12'>
+										<p class="card-text">Like e-mail and voice mail, and unlike calls (in which the caller hopes to speak directly with the recipient), texting does not require the caller and recipient to both be free at the same moment; this permits communication even between busy individuals. Text messages can also be used to interact with automated systems, for example, to order products or services from e-commerce websites, or to participate in online contests. Advertisers and service providers use direct text marketing to send messages to mobile users about promotions, payment due dates, and other notifications instead of using postal mail, email, or voicemail.</p>
+
+									</div>
+
+								</div>
+
+								<div class="row text-center"> 
+									<div class='col-12'>
+
+										<div class="details1" style="display:none">
+											<p class="card-text  text-justify">Like e-mail and voice mail, and unlike calls (in which the caller hopes to speak directly with the recipient), texting does not require the caller and recipient to both be free at the same moment; this permits communication even between busy individuals. Text messages can also be used to interact with automated systems, for example, to order products or services from e-commerce websites, or to participate in online contests. Advertisers and service providers use direct text marketing to send messages to mobile users about promotions, payment due dates, and other notifications instead of using postal mail, email, or voicemail.</p>
+
+
+
+										</div>
+										<a class="text-center" href="javascript:;" id="more1" onclick="$('.details1').slideToggle(function(){$('#more1').html($('.details1').is(':visible')?'Read Less':'Read More');});">Read More</a>
+									</div>
+								</div>
+
+
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+				<hr>
+			</div>
+
+
+		</div>
+
+		<div class="row">
+			<div class="col-12">
+				<div class="card mb-3  wow bounceInUp">
+					<img class="card-img-top" src="http://i2.cdn.turner.com/money/dam/assets/170822111231-lockheed-martin-orion-780x439.jpg" height="280">
+					<div class="card-block">
+						<div class="container-fluid">
+							<div class='row'>
+								<div class='col-12'>
+									<h3 class="card-title" id="title">Welcome to our blog</h3>
+								</div>
+							</div>
+
+							<div class='row'>
+								<div class='col-6'>
+									<p class="card-text"><small class="text-muted">1st JANUARY, 2018</small></p>	
+								</div>
+								<div class='col-6 text-right'>
+									<p class="card-text"><small class="text-muted">#chaos, #tedxntua</small></p>
+								</div>
+							</div>
+							<div class="row text-justify"> 
+								<div class='col-12'>
+									<p class="card-text">Like e-mail and voice mail, and unlike calls (in which the caller hopes to speak directly with the recipient), texting does not require the caller and recipient to both be free at the same moment; this permits communication even between busy individuals. Text messages can also be used to interact with automated systems, for example, to order products or services from e-commerce websites, or to participate in online contests. Advertisers and service providers use direct text marketing to send messages to mobile users about promotions, payment due dates, and other notifications instead of using postal mail, email, or voicemail.</p>
+
+								</div>
+
+							</div>
+
+							<div class="row text-center"> 
+								<div class='col-12'>
+
+									<div class="details" style="display:none">
+										<p class="card-text  text-justify">Like e-mail and voice mail, and unlike calls (in which the caller hopes to speak directly with the recipient), texting does not require the caller and recipient to both be free at the same moment; this permits communication even between busy individuals. Text messages can also be used to interact with automated systems, for example, to order products or services from e-commerce websites, or to participate in online contests. Advertisers and service providers use direct text marketing to send messages to mobile users about promotions, payment due dates, and other notifications instead of using postal mail, email, or voicemail.</p>
+
+
+
+									</div>
+									<a class="text-center" href="javascript:;" id="more" onclick="$('.details').slideToggle(function(){$('#more').html($('.details').is(':visible')?'Read Less':'Read More');});">Read More</a>
+								</div>
 							</div>
 
 
 						</div>
 
-						<div class="row">
-							<div class="col-12">
-								<!-- <h2>{{ post.title }}</h2>-->
-								<h2>Title</h2>
-								<h5>Published: 25/12/2017</h5>
 
-
-								<div class="text-justify">
-									<p>Like e-mail and voice mail, and unlike calls (in which the caller hopes to speak directly with the recipient), texting does not require the caller and recipient to both be free at the same moment; this permits communication even between busy individuals. Text messages can also be used to interact with automated systems, for example, to order products or services from e-commerce websites, or to participate in online contests. Advertisers and service providers use direct text marketing to send messages to mobile users about promotions, payment due dates, and other notifications instead of using postal mail, email, or voicemail.</p>
-									<a href="/#">Read More</a>
-								</div>
-								<hr>
-							</div>
-
-
-						</div>	
 					</div>
 				</div>
-
-				<div class="col-3">
-					<h3>Archive</h3>
-				</div> 
-
 			</div>
+			<hr>
 		</div>
 
-	</section>
+
+	</div>
+
+
+
+
+</section>
 </article>
 
 

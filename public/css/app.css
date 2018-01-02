@@ -13635,6 +13635,17 @@ article.about .col {
   margin-bottom: 1rem;
 }
 
+/* BLOG PAGE */
+
+article.blog section.content {
+  max-width: 960px;
+}
+
+article.blog .row {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
 /* SPEAKER PAGE */
 
 article.speakers .col {
