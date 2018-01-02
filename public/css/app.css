@@ -13563,7 +13563,7 @@ article:not(.home) section.content {
 			h1 is only used for the page heading
 			h2 is used in pages completely consisted of sections (eg. sponsors, team)
 			h3 is used for paragraph titles or smaller headings (eg. about, contact)
-		 */
+			*/
 }
 
 article:not(.home) section.content h2 {
@@ -13644,6 +13644,87 @@ article.blog section.content {
 article.blog .row {
   margin-bottom: 1rem;
   margin-top: 1rem;
+}
+
+article.blog_overview section.content .card-columns {
+  -webkit-column-count: 3;
+          column-count: 3;
+}
+
+article.blog_overview section.content a.card-img-link {
+  display: block;
+  position: relative;
+  height: 240px;
+  margin-bottom: .75rem;
+}
+
+article.blog_overview section.content h3,
+article.blog_overview section.content h5 {
+  color: white;
+}
+
+article.blog_overview section.content .card {
+  background: rgba(255, 255, 255, 0.5);
+  margin-bottom: 0;
+}
+
+article.blog_overview section.content .card-img-wrapper {
+  height: 240px;
+  overflow: hidden;
+  color: white;
+  position: relative;
+  text-shadow: 0 3px 2px rgba(0, 0, 0, 0.8), 0 5px 9px rgba(0, 0, 0, 0.2);
+  border-radius: calc(0.25rem - 1px);
+}
+
+article.blog_overview section.content a.card-img-link:hover .card-img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+article.blog_overview section.content .card-body {
+  color: #222222;
+  font-size: .85em;
+}
+
+article.blog_overview section.content .card-img-top {
+  height: 280;
+}
+
+article.blog_overview section.content .card-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 240px;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+  border-radius: calc(0.25rem - 1px);
+}
+
+article.blog_overview section.content .card-img-overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  height: 100%;
+}
+
+article.blog_overview section.content h3 {
+  font-size: 1.5em;
+  line-height: 1;
+}
+
+article.blog_overview section.content h5 {
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1;
 }
 
 /* SPEAKER PAGE */
@@ -13866,7 +13947,7 @@ article.contact .btn-primary:not([disabled]):not(.disabled):hover {
   /* home uses a different layout:
 	   - content is separated into sections, each one containing its own content (.section-content)
 	   - padding is added to every .section-content and not to a single section.content, like in other pages
-	 */
+	   */
 
   section.content,
   article.home .section-content {
