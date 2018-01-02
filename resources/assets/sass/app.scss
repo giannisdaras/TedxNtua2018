@@ -30,6 +30,14 @@
  	}
  }
 
+ h3::selection{
+ 		background: $brand-secondary;
+ }
+
+ a::selection{
+ background: $brand-secondary;
+ }
+
  ::selection {
  	background: $brand-primary;
  }

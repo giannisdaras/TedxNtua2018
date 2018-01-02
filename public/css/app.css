@@ -12792,6 +12792,22 @@ a:hover {
   text-decoration: none;
 }
 
+h3::-moz-selection {
+  background: #222222;
+}
+
+h3::selection {
+  background: #222222;
+}
+
+a::-moz-selection {
+  background: #222222;
+}
+
+a::selection {
+  background: #222222;
+}
+
 ::-moz-selection {
   background: #E62B1E;
 }
