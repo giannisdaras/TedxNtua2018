@@ -13795,6 +13795,60 @@ article.team .col {
   text-align: center;
 }
 
+article.team [data-tooltip] {
+  display: inline-block;
+  /*bug fix*/
+  position: relative;
+  text-decoration: none;
+}
+
+article.team [data-tooltip]:after {
+  content: attr(data-tooltip);
+  font-size: 1rem;
+  position: absolute;
+  bottom: 130%;
+  left: 20%;
+  background: #222222;
+  padding: 5px 15px;
+  color: white;
+  border-radius: 10px;
+  white-space: nowrap;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  white-space: pre-wrap;
+  text-align: justify;
+  width: 95vw;
+}
+
+article.team [data-tooltip]:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 20px solid #222222;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  opacity: 0;
+  left: 30%;
+  bottom: 90%;
+}
+
+article.team [data-tooltip]:hover:after {
+  bottom: 100%;
+}
+
+article.team [data-tooltip]:hover:before {
+  bottom: 70%;
+}
+
+article.team [data-tooltip]:hover:after,
+article.team [data-tooltip]:hover:before {
+  opacity: 1;
+}
+
 /* END TEAM PAGE */
 
 /* SCHEDULE PAGE */
@@ -13946,6 +14000,10 @@ article.contact .btn-primary:not([disabled]):not(.disabled):hover {
 
   .navbar-brand {
     height: 4.8rem;
+  }
+
+  article.team [data-tooltip]:after {
+    width: 33vw;
   }
 
   article.home section {

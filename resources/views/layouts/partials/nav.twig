@@ -2,12 +2,7 @@
             <a class="navbar-brand" href="/">
                 <img src="{{ asset('images/tedx_ntua_logo.png') }}" alt="TEDx NTUA Logo" />
             </a>
-           {%if getLocale()=='en' %}
-           <a class="flagLink" href='{{getLocalizedURL('el')}}'> <img src="blank.gif" class="flag flag-gr" alt="Greek" /> </a>
-           {%else%}
-           <a class="flagLink" href="{{getLocalizedURL('en')}}"> <img src="blank.gif" class="flag flag-england" alt="Uk" /> </a>
-           {%endif%}
-
+            <a><img src="blank.gif" class="flag flag-gr" alt="Greek" /></a>
 
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarHotdog" aria-controls="navbarHotdog" aria-expanded="false" aria-label="Toggle navigation">
                 <div class="hotdog-container">
