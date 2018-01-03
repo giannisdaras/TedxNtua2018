@@ -2,7 +2,7 @@
 
 ### Laravel ###
 /vendor
-!/vendor/twig/twig/lib/Twig/Extension.php
+!/vendor/twig/twig/lib/Twig/*
 node_modules/
 npm-debug.log
 
