@@ -19,6 +19,8 @@ storage/*.key
 Homestead.yaml
 Homestead.json
 
+!/vendor/twig/twig/lib/Twig/Extension.php
+
 # Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
 .rocketeer/
 
