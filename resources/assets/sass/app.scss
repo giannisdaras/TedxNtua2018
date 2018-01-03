@@ -30,6 +30,8 @@
  	}
  }
 
+
+
  h3::selection{
  		background: $brand-secondary;
  }
@@ -818,6 +820,7 @@
  	}
  }
 
+
  /* END TEAM PAGE */
 
  /* SCHEDULE PAGE */
@@ -1172,5 +1175,11 @@ article.contact {
 			.tickets a:active {
 				font-size: 1.45rem;
 			}
+		}
+	}
+
+	a{
+	   h6{
+		padding:1rem;
 		}
 	}

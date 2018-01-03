@@ -14204,3 +14204,7 @@ article.contact .btn-primary:not([disabled]):not(.disabled):hover {
   }
 }
 
+a h6 {
+  padding: 1rem;
+}
+
