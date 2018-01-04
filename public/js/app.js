@@ -37071,7 +37071,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 $(document).ready(function () {
 
-	$(document).pjax("a", "main");
+	$(document).pjax("a:not(.flagLink)", "main");
 
 	$(document).on("pjax:complete", function () {
 

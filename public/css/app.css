@@ -12792,28 +12792,70 @@ a:hover {
   text-decoration: none;
 }
 
-h3::-moz-selection {
-  background: #222222;
-}
-
-h3::selection {
-  background: #222222;
-}
-
-a::-moz-selection {
-  background: #222222;
-}
-
-a::selection {
-  background: #222222;
-}
-
 ::-moz-selection {
   background: #E62B1E;
+  color: white;
 }
 
 ::selection {
   background: #E62B1E;
+  color: white;
+}
+
+/* tooltip */
+
+[data-tooltip] {
+  display: inline-block;
+  /*bug fix*/
+  position: relative;
+  text-decoration: none;
+}
+
+[data-tooltip]:after {
+  content: attr(data-tooltip);
+  font-size: 1rem;
+  position: absolute;
+  bottom: 130%;
+  left: 20%;
+  background: #222222;
+  padding: 5px 15px;
+  color: white;
+  border-radius: 10px;
+  white-space: nowrap;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  white-space: pre-wrap;
+  text-align: justify;
+  width: 95vw;
+}
+
+[data-tooltip]:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 20px solid #222222;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  opacity: 0;
+  left: 30%;
+  bottom: 90%;
+}
+
+[data-tooltip]:hover:after {
+  bottom: 100%;
+}
+
+[data-tooltip]:hover:before {
+  bottom: 70%;
+}
+
+[data-tooltip]:hover:after,
+[data-tooltip]:hover:before {
+  opacity: 1;
 }
 
 /* NAVIGATION MENU */
@@ -13023,19 +13065,6 @@ section.content > .container-fluid {
 }
 
 /* END PAGE CONTENT */
-
-#loading {
-  display: none;
-}
-
-#loading div {
-  background-color: #DDD;
-  height: 1rem;
-}
-
-main #loading {
-  display: block;
-}
 
 /* FOOTER */
 
@@ -13392,67 +13421,6 @@ article.home #speakers .speaker-container p {
   line-height: 1.25;
 }
 
-article.home #blog .card-columns {
-  -webkit-column-count: 1;
-          column-count: 1;
-}
-
-article.home #blog a.card-img-link {
-  display: block;
-  color: white;
-  text-shadow: 0 3px 2px rgba(0, 0, 0, 0.8), 0 5px 9px rgba(0, 0, 0, 0.2);
-  position: relative;
-  height: 240px;
-  margin-bottom: .75rem;
-}
-
-article.home #blog .card {
-  background: transparent;
-  border: 0;
-  margin-bottom: 0;
-  height: 240px;
-  overflow: hidden;
-}
-
-article.home #blog a.card-img-link:hover .card-img {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-}
-
-article.home #blog .card-img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 240px;
-  -webkit-transition: -webkit-transform .5s;
-  transition: -webkit-transform .5s;
-  transition: transform .5s;
-  transition: transform .5s, -webkit-transform .5s;
-}
-
-article.home #blog .card-img-overlay {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-}
-
-article.home #blog h3 {
-  font-size: 1.5em;
-  line-height: 1;
-}
-
-article.home #blog h5 {
-  font-size: 1em;
-  font-weight: normal;
-  line-height: 1;
-}
-
 article.home #sponsors .sponsor-container h3 {
   font-weight: bold;
   margin-bottom: 1rem;
@@ -13579,7 +13547,7 @@ article:not(.home) section.content {
 			h1 is only used for the page heading
 			h2 is used in pages completely consisted of sections (eg. sponsors, team)
 			h3 is used for paragraph titles or smaller headings (eg. about, contact)
-			*/
+		 */
 }
 
 article:not(.home) section.content h2 {
@@ -13651,6 +13619,8 @@ article.about .col {
   margin-bottom: 1rem;
 }
 
+/* END ABOUT PAGE */
+
 /* BLOG PAGE */
 
 article.blog section.content {
@@ -13662,29 +13632,27 @@ article.blog .row {
   margin-top: 1rem;
 }
 
-article.blog_overview section.content .card-columns {
-  -webkit-column-count: 3;
-          column-count: 3;
+/* global blog post link styles */
+
+.blog-listing {
+  -webkit-column-count: 1;
+          column-count: 1;
 }
 
-article.blog_overview section.content a.card-img-link {
+/* add selectors to increase precedence */
+
+.blog-listing a.blog-link {
   display: block;
   position: relative;
-  height: 240px;
   margin-bottom: .75rem;
 }
 
-article.blog_overview section.content h3,
-article.blog_overview section.content h5 {
-  color: white;
-}
-
-article.blog_overview section.content .card {
+.blog-listing a.blog-link .card {
   background: rgba(255, 255, 255, 0.5);
   margin-bottom: 0;
 }
 
-article.blog_overview section.content .card-img-wrapper {
+.blog-listing a.blog-link .card-img-wrapper {
   height: 240px;
   overflow: hidden;
   color: white;
@@ -13693,21 +13661,16 @@ article.blog_overview section.content .card-img-wrapper {
   border-radius: calc(0.25rem - 1px);
 }
 
-article.blog_overview section.content a.card-img-link:hover .card-img {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-}
-
-article.blog_overview section.content .card-body {
+.blog-listing a.blog-link .card-body {
   color: #222222;
-  font-size: .85em;
+  font-size: .9em;
 }
 
-article.blog_overview section.content .card-img-top {
-  height: 280;
+.blog-listing a.blog-link .card-img-top {
+  height: 280px;
 }
 
-article.blog_overview section.content .card-img {
+.blog-listing a.blog-link .card-img {
   -o-object-fit: cover;
      object-fit: cover;
   height: 240px;
@@ -13718,7 +13681,7 @@ article.blog_overview section.content .card-img {
   border-radius: calc(0.25rem - 1px);
 }
 
-article.blog_overview section.content .card-img-overlay {
+.blog-listing a.blog-link .card-img-overlay {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13732,16 +13695,24 @@ article.blog_overview section.content .card-img-overlay {
   height: 100%;
 }
 
-article.blog_overview section.content h3 {
+.blog-listing a.blog-link .card-img-overlay h3 {
   font-size: 1.5em;
+  font-weight: 500;
   line-height: 1;
 }
 
-article.blog_overview section.content h5 {
+.blog-listing a.blog-link .card-img-overlay h5 {
   font-size: 1em;
   font-weight: normal;
   line-height: 1;
 }
+
+article .blog-listing a.blog-link:hover .card-img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+/* END BLOG PAGE */
 
 /* SPEAKER PAGE */
 
@@ -13771,7 +13742,7 @@ article.speakers .back a:active {
 
 /* END SPEAKER PAGE */
 
-/* sponsorS PAGE */
+/* SPONSORS PAGE */
 
 article.sponsors h2 {
   text-align: center;
@@ -13782,7 +13753,7 @@ article.sponsors .col {
   text-align: center;
 }
 
-/* END sponsorS PAGE */
+/* END SPONSORS PAGE */
 
 /* TEAM PAGE */
 
@@ -13793,60 +13764,6 @@ article.team h2 {
 
 article.team .col {
   text-align: center;
-}
-
-article.team [data-tooltip] {
-  display: inline-block;
-  /*bug fix*/
-  position: relative;
-  text-decoration: none;
-}
-
-article.team [data-tooltip]:after {
-  content: attr(data-tooltip);
-  font-size: 1rem;
-  position: absolute;
-  bottom: 130%;
-  left: 20%;
-  background: #222222;
-  padding: 5px 15px;
-  color: white;
-  border-radius: 10px;
-  white-space: nowrap;
-  opacity: 0;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  white-space: pre-wrap;
-  text-align: justify;
-  width: 95vw;
-}
-
-article.team [data-tooltip]:before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-top: 20px solid #222222;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  opacity: 0;
-  left: 30%;
-  bottom: 90%;
-}
-
-article.team [data-tooltip]:hover:after {
-  bottom: 100%;
-}
-
-article.team [data-tooltip]:hover:before {
-  bottom: 70%;
-}
-
-article.team [data-tooltip]:hover:after,
-article.team [data-tooltip]:hover:before {
-  opacity: 1;
 }
 
 /* END TEAM PAGE */
@@ -13936,8 +13853,11 @@ article.schedule td .more p:last-child {
 
 article.team .img {
   margin-right: -15px;
+  /* Remove right gap */
   margin-left: -15px;
+  /* Remove left gap */
   padding-bottom: 62.5%;
+  /* ratio is 16:10 */
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -13994,16 +13914,16 @@ article.contact .btn-primary:not([disabled]):not(.disabled):hover {
  */
 
 @media (min-width: 576px) {
+  [data-tooltip]:after {
+    width: 33vw;
+  }
+
   nav.navbar {
     padding: .5rem 2rem;
   }
 
   .navbar-brand {
     height: 4.8rem;
-  }
-
-  article.team [data-tooltip]:after {
-    width: 33vw;
   }
 
   article.home section {
@@ -14021,7 +13941,7 @@ article.contact .btn-primary:not([disabled]):not(.disabled):hover {
   /* home uses a different layout:
 	   - content is separated into sections, each one containing its own content (.section-content)
 	   - padding is added to every .section-content and not to a single section.content, like in other pages
-	   */
+	 */
 
   section.content,
   article.home .section-content {
@@ -14119,13 +14039,6 @@ article.contact .btn-primary:not([disabled]):not(.disabled):hover {
     border-right: 1px solid transparent;
   }
 
-  article.home #blog .card-columns {
-    -webkit-column-count: 2;
-            column-count: 2;
-    -webkit-column-gap: .8rem;
-            column-gap: .8rem;
-  }
-
   article.home #map .row {
     height: 320px;
   }
@@ -14147,6 +14060,13 @@ article.contact .btn-primary:not([disabled]):not(.disabled):hover {
   article.schedule .table th,
   article.schedule .table td {
     padding: .75rem;
+  }
+
+  .blog-listing {
+    -webkit-column-count: 2;
+            column-count: 2;
+    -webkit-column-gap: .8rem;
+            column-gap: .8rem;
   }
 
   body > footer {
@@ -14194,11 +14114,6 @@ article.contact .btn-primary:not([disabled]):not(.disabled):hover {
     font-size: 1.3rem;
   }
 
-  article.home #blog .card-columns {
-    -webkit-column-count: 3;
-            column-count: 3;
-  }
-
   article.home #map .col-md-12 {
     position: relative;
   }
@@ -14216,6 +14131,11 @@ article.contact .btn-primary:not([disabled]):not(.disabled):hover {
   article.about section.content .row,
   article.speakers section.content .row {
     margin-bottom: 1rem;
+  }
+
+  .blog-listing {
+    -webkit-column-count: 3;
+            column-count: 3;
   }
 
   article.schedule thead th {
@@ -14260,9 +14180,5 @@ article.contact .btn-primary:not([disabled]):not(.disabled):hover {
   article.home #hero .tickets a:active {
     font-size: 1.45rem;
   }
-}
-
-a h6 {
-  padding: 1rem;
 }
 
