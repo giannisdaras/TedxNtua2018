@@ -12873,6 +12873,29 @@ nav.navbar {
   padding: .5rem 1rem;
 }
 
+.navbar-brand-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+.navbar-flags {
+  padding: .6rem 0;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.navbar-flags a {
+  display: block;
+  /* ignore line height and have auto element height */
+  line-height: 0;
+  padding: .2rem 0;
+}
+
 .navbar-brand {
   /* navbar takes the height of the brand logo */
   height: 4rem;
