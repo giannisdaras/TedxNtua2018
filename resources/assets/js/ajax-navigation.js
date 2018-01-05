@@ -1,6 +1,8 @@
 $(document).ready(function(){
 
-	$(document).pjax("a", "main")
+	$(document).pjax("a:not(.flagLink)", "main", {
+		fragment: "main"
+	})
 
 	$(document).on("pjax:complete", function() {
 
@@ -9,7 +11,7 @@ $(document).ready(function(){
 			$(this).fadeTo(400, 1)
 		})
 
-		/* change active menu item */
+		/* update active menu item */
 		var current = window.location.pathname
 		current = current.replace("/en/", "/")
 		current = current.replace("/el/", "/")
@@ -24,6 +26,10 @@ $(document).ready(function(){
 	            $(this).parent().addClass("active")
 	        }
 	    })
+
+	    /* update locale changer URLs */
+	    $("a.flagLink[hreflang='en']").attr("href", $("head link[hreflang='en']").attr("href"))
+	    $("a.flagLink[hreflang='el']").attr("href", $("head link[hreflang='el']").attr("href"))
 
 	})
 

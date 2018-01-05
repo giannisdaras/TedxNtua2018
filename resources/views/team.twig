@@ -17,7 +17,7 @@
 		<div class="container-fluid">
 			<div class="row"> 
 				<div class="col col-6 col-lg-3">
-					<a href="mailto:johndoe@example.net" target="_blank"><img class="img-fluid grid-image rounded-circle" src="https://vignette.wikia.nocookie.net/epicrapbattlesofhistory/images/e/eb/Deal_with_it_rainbow_style_by_j_brony-d4cwgad.png" alt="Pony"></a>
+					<a href="mailto:johndoe@example.net" target="_blank"><img class="img-fluid grid-image rounded-circle" src="https://vignette.wikia.nocookie.net/epicrapbattlesofhistory/images/e/eb/Deal_with_it_rainbow_style_by_j_brony-d4cwgad.png"  alt="Pony" onmouseover="changePhoto(this,'http://vignette1.wikia.nocookie.net/spongebob/images/3/31/8468-spongebob-square-pants-spongebobs-face.jpg/revision/latest?cb=20121014113555')" onmouseout="changePhoto(this,'https://vignette.wikia.nocookie.net/epicrapbattlesofhistory/images/e/eb/Deal_with_it_rainbow_style_by_j_brony-d4cwgad.png')"><h6> Μπομπ Σφουγκαράκης </h6></a>
 				</div>
 
 				<div class="col col-6 col-lg-3">
@@ -179,4 +179,13 @@
 
 
 </article>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function changePhoto(element,url){
+	element.src=url;
+}
+
+</script>
 {% endblock %}

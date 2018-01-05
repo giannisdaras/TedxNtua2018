@@ -1,8 +1,7 @@
 # Created by https://www.gitignore.io/api/laravel
 
 ### Laravel ###
-/vendor/*
-!/vendor/twig/twig/lib/Twig/*
+/vendor
 node_modules/
 npm-debug.log
 
