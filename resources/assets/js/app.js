@@ -32,3 +32,4 @@ const app = new Vue({
 require('./home');
 require('./jquery.pjax');
 require('./ajax-navigation');
+require('./nav-scroll');

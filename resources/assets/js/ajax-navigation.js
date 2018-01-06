@@ -31,6 +31,17 @@ $(document).ready(function(){
 	    $("a.flagLink[hreflang='en']").attr("href", $("head link[hreflang='en']").attr("href"))
 	    $("a.flagLink[hreflang='el']").attr("href", $("head link[hreflang='el']").attr("href"))
 
+	    /* if in homepage, update nav to use home style */
+		if($("article.home").length > 0) {
+
+			$("body > header").addClass("home")
+
+		} else {
+	
+			$("header.home").removeClass("home")
+
+		}
+
 	})
 
 })

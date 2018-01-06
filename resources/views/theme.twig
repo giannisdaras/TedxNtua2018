@@ -9,10 +9,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="alternate" name="locale_url" class="pjax" hreflang="el" href="{{ getLocalizedURL('el') }}" />
     <link rel="alternate" name="locale_url" class="pjax" hreflang="en" href="{{ getLocalizedURL('en') }}" />
-{% block head %}
     <title>{% block title %}{% endblock %} | TEDxNTUA 2018</title>
     <meta name="description" class="pjax" content="{% block description %}{% endblock %}">
-{% endblock -%}
 {%- block scripts -%}
 {%- endblock %}
 </head>

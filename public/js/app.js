@@ -814,6 +814,7 @@ const app = new Vue({
 __webpack_require__(37);
 __webpack_require__(38);
 __webpack_require__(39);
+__webpack_require__(50);
 
 /***/ }),
 /* 10 */
@@ -36144,11 +36145,19 @@ module.exports = function spread(callback) {
 /***/ (function(module, exports) {
 
 $(document).ready(function () {
+
     $(document).on("mouseover", "#hero .info a", function (e) {
+
         $(this).addClass("blink");
     }).on("mouseout", "#hero .info a", function (e) {
+
         $(this).removeClass("blink");
     });
+
+    if ($("article.home").length > 0) {
+
+        $("body > header").addClass("home");
+    }
 });
 
 /***/ }),
@@ -37189,6 +37198,15 @@ $(document).ready(function () {
 		/* update locale changer URLs */
 		$("a.flagLink[hreflang='en']").attr("href", $("head link[hreflang='en']").attr("href"));
 		$("a.flagLink[hreflang='el']").attr("href", $("head link[hreflang='el']").attr("href"));
+
+		/* if in homepage, update nav to use home style */
+		if ($("article.home").length > 0) {
+
+			$("body > header").addClass("home");
+		} else {
+
+			$("header.home").removeClass("home");
+		}
 	});
 });
 
@@ -37197,6 +37215,40 @@ $(document).ready(function () {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 41 */,
+/* 42 */,
+/* 43 */,
+/* 44 */,
+/* 45 */,
+/* 46 */,
+/* 47 */,
+/* 48 */,
+/* 49 */,
+/* 50 */
+/***/ (function(module, exports) {
+
+$(document).ready(function () {
+
+	var navOffsetY = 68;
+
+	/* IMPORTANT: Use debounce with scroll events for better performance */
+
+	$(window).on("scroll", _.debounce(function () {
+
+		if ($(".navbar-toggler").hasClass("collapsed")) {
+
+			if ($(window).scrollTop() > navOffsetY) {
+
+				$("body > header, main > article").addClass("scrolled");
+			} else {
+
+				$("header.scrolled, article.scrolled").removeClass("scrolled");
+			}
+		}
+	}));
+});
 
 /***/ })
 /******/ ]);
