@@ -1,0 +1,11 @@
+<html>
+<head>
+	<title>{% block title %}{% endblock %} | TEDxNTUA 2018</title>
+	<link rel="alternate" name="locale_url" hreflang="en" class="pjax" href="{{ getLocalizedURL('en') | replace({'?_pjax=main': ''}) }}" />
+	<link rel="alternate" name="locale_url" hreflang="el" class="pjax" href="{{ getLocalizedURL('el') | replace({'?_pjax=main': ''}) }}" />
+	<meta name="description" class="pjax" content="{% block description %}{% endblock %}">
+</head>
+<body>
+	<main>{% block content %}{% endblock %}</main>
+</body>
+</html>

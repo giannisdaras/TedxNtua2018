@@ -1,7 +1,19 @@
 $(document).ready(function(){
-    $("#hero .info a").on("mouseover", function(e){
-        $(this).addClass("blink");
-    }).on("mouseout", function(e) {
-        $(this).removeClass("blink");
-    });
-});
+
+    $(document).on("mouseover", "#hero .info a", function(e){
+
+        $(this).addClass("blink")
+
+    }).on("mouseout", "#hero .info a", function(e) {
+
+        $(this).removeClass("blink")
+
+    })
+
+	if($("article.home").length > 0) {
+
+		$("body > header").addClass("home")
+
+	}
+
+})

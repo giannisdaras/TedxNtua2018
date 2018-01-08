@@ -1,8 +1,13 @@
         <nav class="navbar navbar-expand-lg navbar-dark mx-auto">
-            <a class="navbar-brand" href="/">
-                <img src="{{ asset('images/tedx_ntua_logo.png') }}" alt="TEDx NTUA Logo" />
-            </a>
-            <a><img src="blank.gif" class="flag flag-gr" alt="Greek" /></a>
+            <div class="navbar-brand-wrapper">
+                <a class="navbar-brand" href="/">
+                    <img src="{{ asset('images/tedx_ntua_logo.png') }}" alt="TEDx NTUA Logo" />
+                </a>
+                <div class="navbar-flags">
+                    <a class="flagLink el" href="{{ getLocalizedURL('el') }}" hreflang="el"></a>
+                    <a class="flagLink en" href="{{ getLocalizedURL('en') }}" hreflang="en"></a>
+                </div>
+            </div>
 
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarHotdog" aria-controls="navbarHotdog" aria-expanded="false" aria-label="Toggle navigation">
                 <div class="hotdog-container">
@@ -11,7 +16,6 @@
                     <span class="hotdog hotdog-3"></span>
                     <span class="triangle"></span>
                 </div>
-                <div class="menu-text">MENU</div>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarHotdog">

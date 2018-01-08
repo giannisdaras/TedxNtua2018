@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Http\Request;
+use LaravelLocalization;
 
 class ScheduleController extends Controller {
 
@@ -54,7 +56,7 @@ class ScheduleController extends Controller {
 
 	}
 
-	public function index() {
+	public function index(Request $request) {
 		$schedule = array(
 			"talks" => array(
 				array(
@@ -121,7 +123,11 @@ class ScheduleController extends Controller {
 
 		$rows = $this->convertToTable($schedule);
 		$day = "2018-03-31";
-
+		$isPjax = $request->header('X-PJAX');
+		if($isPjax) {
+			return response()->view('schedule', compact('rows', 'day', 'isPjax'), 200)
+							 ->header('X-PJAX-URL', LaravelLocalization::getLocalizedURL());
+		}
 		return view('schedule', compact('rows', 'day'));
 	}
 }
