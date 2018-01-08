@@ -63,28 +63,28 @@ class ScheduleController extends Controller {
 					"time" => '11:00',
 					"title" => 'Reception and registration',
 					"subtitle" => '',
-					"image" => 'http://via.placeholder.com/80x80',
+					"image" => 'https://via.placeholder.com/80x80',
 					"more" => 'Breakfast will be served and all workshops will be available.'
 				),
 				array(
 					"time" => '13:30',
 					"title" => '<a href="/speakers/nastazia-spyropoulou">Nastazia Spyropoulou</a><br><a href="/speakers/edward-perrello">Edward Perello</a><br><a href="/speakers/christos-raftogiannis">Christos Raftogiannis</a>',
 					"subtitle" => 'Reapproaching The Established',
-					"image" => 'http://via.placeholder.com/80x80',
+					"image" => 'https://via.placeholder.com/80x80',
 					"more" => 'These guys are the best, you should definitely be there.'
 				),
 				array(
 					"time" => '15:00',
 					"title" => 'Break',
 					"subtitle" => '',
-					"image" => 'http://via.placeholder.com/80x80',
+					"image" => 'https://via.placeholder.com/80x80',
 					"more" => 'Just chill bro, don\'t ask much.'
 				),
 				array(
 					"time" => '16:30',
 					"title" => '<a href="/speakers/john-kalogerakis">John Kalogerakis</a><br><a href="/speakers/sissy-nikolaou">Sissy Nikolaou</a><br><a href="/speakers/tilemachos-andrianopoulos">Tilemachos Andrianopoulos</a>',
 					"subtitle" => 'Engineering What Matters',
-					"image" => 'http://via.placeholder.com/80x80',
+					"image" => 'https://via.placeholder.com/80x80',
 					"more" => 'No offense, but who knows these guys?'
 				)
 			),
@@ -94,28 +94,28 @@ class ScheduleController extends Controller {
 					"time" => '11:00',
 					"title" => 'Collaborative Design Workshop',
 					"subtitle" => '',
-					"image" => 'http://via.placeholder.com/80x80',
+					"image" => 'https://via.placeholder.com/80x80',
 					"more" => 'I have no idea what this is about.'
 				),
 				array(
 					"time" => '14:30',
 					"title" => 'Global Prep Workshop',
 					"subtitle" => '',
-					"image" => 'http://via.placeholder.com/80x80',
+					"image" => 'https://via.placeholder.com/80x80',
 					"more" => 'Who is responsible for these workshops? WTH man!'
 				),
 				array(
 					"time" => '15:00',
 					"title" => 'All Workshops',
 					"subtitle" => '',
-					"image" => 'http://via.placeholder.com/80x80',
+					"image" => 'https://via.placeholder.com/80x80',
 					"more" => 'You get to choose where you go. Too difficult, huh?'
 				),
 				array(
 					"time" => '16:30',
 					"title" => 'TransLab Workshop',
 					"subtitle" => '',
-					"image" => 'http://via.placeholder.com/80x80',
+					"image" => 'https://via.placeholder.com/80x80',
 					"more" => 'TransLab? What were you thinking?'
 				)
 			)
