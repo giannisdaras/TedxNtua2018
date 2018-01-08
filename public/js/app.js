@@ -773,7 +773,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(9);
-module.exports = __webpack_require__(40);
+module.exports = __webpack_require__(41);
 
 
 /***/ }),
@@ -814,7 +814,7 @@ const app = new Vue({
 __webpack_require__(37);
 __webpack_require__(38);
 __webpack_require__(39);
-__webpack_require__(50);
+__webpack_require__(40);
 
 /***/ }),
 /* 10 */
@@ -37174,6 +37174,9 @@ $(document).ready(function () {
 
 	$(document).on("pjax:complete", function () {
 
+		/* hide hotdog menu */
+		$("#navbarHotdog").collapse("hide");
+
 		/* transition between page loading */
 		$("main").fadeTo(0, 0.9, function () {
 			$(this).fadeTo(400, 1);
@@ -37196,8 +37199,8 @@ $(document).ready(function () {
 		});
 
 		/* update locale changer URLs */
-		$("a.flagLink[hreflang='en']").attr("href", $("head link[hreflang='en']").attr("href"));
-		$("a.flagLink[hreflang='el']").attr("href", $("head link[hreflang='el']").attr("href"));
+		$("a.flagLink.en").attr("href", $("head link[hreflang='en']").attr("href"));
+		$("a.flagLink.el").attr("href", $("head link[hreflang='el']").attr("href"));
 
 		/* if in homepage, update nav to use home style */
 		if ($("article.home").length > 0) {
@@ -37212,21 +37215,6 @@ $(document).ready(function () {
 
 /***/ }),
 /* 40 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 41 */,
-/* 42 */,
-/* 43 */,
-/* 44 */,
-/* 45 */,
-/* 46 */,
-/* 47 */,
-/* 48 */,
-/* 49 */,
-/* 50 */
 /***/ (function(module, exports) {
 
 $(document).ready(function () {
@@ -37249,6 +37237,12 @@ $(document).ready(function () {
 		}
 	}));
 });
+
+/***/ }),
+/* 41 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

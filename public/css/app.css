@@ -12896,19 +12896,6 @@ header.scrolled nav.navbar {
           flex-flow: row nowrap;
 }
 
-.navbar-flags {
-  padding: .6rem 0;
-  -ms-flex-item-align: center;
-      align-self: center;
-}
-
-.navbar-flags a {
-  display: block;
-  /* ignore line height and have auto element height */
-  line-height: 0;
-  padding: .2rem 0;
-}
-
 .navbar-brand {
   /* navbar takes the height of the brand logo */
   height: 4rem;
@@ -12934,6 +12921,47 @@ header.scrolled nav.navbar {
 header.scrolled .navbar-brand {
   height: 3rem;
   padding: .5rem 0;
+}
+
+.navbar-flags {
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.navbar-flags a {
+  display: block;
+  /* ignore line height and have auto element height */
+  line-height: 0;
+  /* height of brand = 4rem - 2 * 0.6rem = 2.8rem
+		 * distribute 2.8rem to flags as following:
+		 * 0.96rem height for each flag -> 2 * 0.96rem = 1.92rem
+		 * remaining 2.8 - 1.92 = 0.88rem becomes margin
+		 * 0.88rem / 4 = 0.22rem margin for each flag (top and bottom)
+		 */
+  width: 1.6rem;
+  height: 0.96rem;
+  margin: 0.22rem 0;
+  background-size: 100%;
+  opacity: .9;
+}
+
+.navbar-flags a:hover {
+  opacity: 1;
+}
+
+.navbar-flags a.el {
+  background-image: url("/images/flag-el.png");
+}
+
+.navbar-flags a.en {
+  background-image: url("/images/flag-en.png");
+}
+
+header.scrolled .navbar-flags a {
+  /* height of brand = 3rem - 2 * 0.5rem = 2rem */
+  width: 1.333333rem;
+  height: 0.8rem;
+  margin: 0.1rem 0;
 }
 
 .navbar-toggler {
@@ -13980,6 +14008,20 @@ article.contact .btn-primary:not([disabled]):not(.disabled):hover {
     padding: .5rem 0;
   }
 
+  .navbar-flags a {
+    /* height of brand = 4.2rem - 2 * 0.6rem = 3rem */
+    width: 2rem;
+    height: 1.2rem;
+    margin: 0.15rem 0;
+  }
+
+  header.scrolled .navbar-flags a {
+    /* height of brand = 3.2rem - 2 * 0.5rem = 2.2rem */
+    width: 1.5rem;
+    height: 0.9rem;
+    margin: 0.1rem 0;
+  }
+
   article.home section {
     font-size: 1em;
   }
@@ -14037,6 +14079,20 @@ article.contact .btn-primary:not([disabled]):not(.disabled):hover {
   header.scrolled .navbar-brand {
     height: 4rem;
     padding: .5rem 0;
+  }
+
+  .navbar-flags a {
+    /* height of brand = 4.8rem - 2 * 0.6rem = 3.6rem */
+    width: 2.25rem;
+    height: 1.35rem;
+    margin: 0.225rem 0;
+  }
+
+  header.scrolled .navbar-flags a {
+    /* height of brand = 4rem - 2 * 0.5rem = 3rem */
+    width: 2rem;
+    height: 1.2rem;
+    margin: 0.15rem 0;
   }
 
   article:not(.home) {
