@@ -12862,15 +12862,28 @@ a:hover {
 
 header.dark {
   background-color: #222222;
-  /* bottom inner shadow */
-  -webkit-box-shadow: inset 0 -40px 60px -40px black;
-          box-shadow: inset 0 -40px 60px -40px black;
+  -webkit-box-shadow: inset 0 -20px 30px -20px black;
+          box-shadow: inset 0 -20px 30px -20px black;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  /* Since header is sticky, if it does not fit vertically
+	 * the user won't be able to see the rest of the header content.
+	 * Fix: set max-height to 100% of the viewport height and enable
+	 * scrolling for that case
+	 */
+  overflow: auto;
+  max-height: 100vh;
 }
 
 nav.navbar {
   height: 100%;
   max-width: 1366px;
   padding: .5rem 1rem;
+}
+
+header.scrolled nav.navbar {
+  padding: .25rem 1rem;
 }
 
 .navbar-brand-wrapper {
@@ -12881,19 +12894,6 @@ nav.navbar {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-}
-
-.navbar-flags {
-  padding: .6rem 0;
-  -ms-flex-item-align: center;
-      align-self: center;
-}
-
-.navbar-flags a {
-  display: block;
-  /* ignore line height and have auto element height */
-  line-height: 0;
-  padding: .2rem 0;
 }
 
 .navbar-brand {
@@ -12918,12 +12918,59 @@ nav.navbar {
           transform: scale(1.02, 1.02);
 }
 
+header.scrolled .navbar-brand {
+  height: 3rem;
+  padding: .5rem 0;
+}
+
+.navbar-flags {
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.navbar-flags a {
+  display: block;
+  /* ignore line height and have auto element height */
+  line-height: 0;
+  /* height of brand = 4rem - 2 * 0.6rem = 2.8rem
+		 * distribute 2.8rem to flags as following:
+		 * 0.96rem height for each flag -> 2 * 0.96rem = 1.92rem
+		 * remaining 2.8 - 1.92 = 0.88rem becomes margin
+		 * 0.88rem / 4 = 0.22rem margin for each flag (top and bottom)
+		 */
+  width: 1.6rem;
+  height: 0.96rem;
+  margin: 0.22rem 0;
+  background-size: 100%;
+  opacity: .9;
+}
+
+.navbar-flags a:hover {
+  opacity: 1;
+}
+
+.navbar-flags a.el {
+  background-image: url("/images/flag-el.png");
+}
+
+.navbar-flags a.en {
+  background-image: url("/images/flag-en.png");
+}
+
+header.scrolled .navbar-flags a {
+  /* height of brand = 3rem - 2 * 0.5rem = 2rem */
+  width: 1.333333rem;
+  height: 0.8rem;
+  margin: 0.1rem 0;
+}
+
 .navbar-toggler {
   cursor: pointer;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: .5rem .75rem;
+  border: none;
+  padding: 0;
 }
 
 .navbar-toggler:active,
@@ -12934,16 +12981,8 @@ nav.navbar {
 .navbar-toggler .hotdog-container {
   display: inline-block;
   position: relative;
-  width: 24px;
-  height: 12px;
-  margin-right: 4px;
-}
-
-.navbar-toggler .menu-text {
-  display: inline-block;
-  font-size: 16px;
-  line-height: 1;
-  margin-left: 4px;
+  width: 36px;
+  height: 19px;
 }
 
 .navbar-toggler .hotdog {
@@ -12951,14 +12990,14 @@ nav.navbar {
   position: absolute;
   border-radius: 4px;
   width: 100%;
-  height: 2px;
+  height: 3px;
   background: #BBB;
   left: 0;
   z-index: 5;
-  -webkit-transition: width .35s, top .35s, left .35s, -webkit-transform .35s .2s;
-  transition: width .35s, top .35s, left .35s, -webkit-transform .35s .2s;
-  transition: width .35s, top .35s, left .35s, transform .35s .2s;
-  transition: width .35s, top .35s, left .35s, transform .35s .2s, -webkit-transform .35s .2s;
+  -webkit-transition: width .35s , top .35s, left .35s, -webkit-transform .35s .2s;
+  transition: width .35s , top .35s, left .35s, -webkit-transform .35s .2s;
+  transition: width .35s , top .35s, left .35s, transform .35s .2s;
+  transition: width .35s , top .35s, left .35s, transform .35s .2s , -webkit-transform .35s .2s;
 }
 
 .navbar-toggler .hotdog-1 {
@@ -12966,11 +13005,11 @@ nav.navbar {
 }
 
 .navbar-toggler .hotdog-2 {
-  top: 5px;
+  top: 8px;
 }
 
 .navbar-toggler .hotdog-3 {
-  top: 10px;
+  top: 16px;
 }
 
 .navbar-toggler .triangle {
@@ -12982,7 +13021,7 @@ nav.navbar {
   bottom: 0;
   opacity: 0;
   border-style: solid;
-  border-width: 0 12px 12px 12px;
+  border-width: 0 19px 19px 19px;
   border-radius: 4px;
   border-color: transparent transparent #BBB transparent;
   -webkit-transition: opacity 0.35s 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -12990,23 +13029,24 @@ nav.navbar {
 }
 
 .navbar-toggler:not(.collapsed) .hotdog-1 {
-  top: 4px;
+  top: 8px;
   left: -2px;
-  width: 17px;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  width: 26px;
+  -webkit-transform: rotate(-46deg);
+          transform: rotate(-46deg);
 }
 
 .navbar-toggler:not(.collapsed) .hotdog-2 {
-  top: 4px;
-  left: 9px;
-  width: 17px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  top: 8px;
+  left: 14px;
+  width: 26px;
+  -webkit-transform: rotate(46deg);
+          transform: rotate(46deg);
 }
 
 .navbar-toggler:not(.collapsed) .hotdog-3 {
-  top: 16px;
+  top: 23px;
+  left: 1px;
   width: 100%;
   -webkit-transform: translateY(-6px);
           transform: translateY(-6px);
@@ -13562,7 +13602,17 @@ article.home #map .venue-gallery img {
 /* GENERIC LAYOUT FOR PAGES OTHER THAN HOME */
 
 article:not(.home) {
+  /* header is sticky - add top padding to articles so that content
+	 * is not hidden behind the header
+	 * this only applies for pages different than home;
+	 * in home the desired behavior is the opposite
+	 */
+  padding-top: 5rem;
   /* generic grid-image style to be used in speakers, sponsor and team components */
+}
+
+article:not(.home).scrolled {
+  padding-top: 3.5rem;
 }
 
 article:not(.home) section.content {
@@ -13945,8 +13995,31 @@ article.contact .btn-primary:not([disabled]):not(.disabled):hover {
     padding: .5rem 2rem;
   }
 
+  header.scrolled nav.navbar {
+    padding: .25rem 2rem;
+  }
+
   .navbar-brand {
-    height: 4.8rem;
+    height: 4.2rem;
+  }
+
+  header.scrolled .navbar-brand {
+    height: 3.2rem;
+    padding: .5rem 0;
+  }
+
+  .navbar-flags a {
+    /* height of brand = 4.2rem - 2 * 0.6rem = 3rem */
+    width: 2rem;
+    height: 1.2rem;
+    margin: 0.15rem 0;
+  }
+
+  header.scrolled .navbar-flags a {
+    /* height of brand = 3.2rem - 2 * 0.5rem = 2.2rem */
+    width: 1.5rem;
+    height: 0.9rem;
+    margin: 0.1rem 0;
   }
 
   article.home section {
@@ -13959,6 +14032,14 @@ article.contact .btn-primary:not([disabled]):not(.disabled):hover {
 
   article.home #hero .info a {
     margin: 0 6rem;
+  }
+
+  article:not(.home) {
+    padding-top: 4.7rem;
+  }
+
+  article:not(.home).scrolled {
+    padding-top: 3.7rem;
   }
 
   /* home uses a different layout:
@@ -13985,6 +14066,12 @@ article.contact .btn-primary:not([disabled]):not(.disabled):hover {
 }
 
 @media (min-width: 768px) {
+  header.dark {
+    /* bottom inner shadow */
+    -webkit-box-shadow: inset 0 -40px 60px -40px black;
+            box-shadow: inset 0 -40px 60px -40px black;
+  }
+
   article.home section {
     /* top and bottom inset box shadow */
     -webkit-box-shadow: inset 0 -80px 80px -80px rgba(0, 0, 0, 0.4), inset 0 80px 80px -80px rgba(0, 0, 0, 0.4);
@@ -14108,6 +14195,25 @@ article.contact .btn-primary:not([disabled]):not(.disabled):hover {
 }
 
 @media (min-width: 992px) {
+  header.home {
+    background: transparent;
+    /* top inner shadow */
+    -webkit-box-shadow: inset 0 40px 60px -40px black;
+            box-shadow: inset 0 40px 60px -40px black;
+    padding-top: 1rem;
+    -webkit-transition: padding-top .5s, background .5s, -webkit-box-shadow .5s;
+    transition: padding-top .5s, background .5s, -webkit-box-shadow .5s;
+    transition: padding-top .5s, box-shadow .5s, background .5s;
+    transition: padding-top .5s, box-shadow .5s, background .5s, -webkit-box-shadow .5s;
+  }
+
+  header.scrolled {
+    background-color: #222222;
+    -webkit-box-shadow: inset 0 -40px 60px -40px black;
+            box-shadow: inset 0 -40px 60px -40px black;
+    padding-top: 0;
+  }
+
   .navbar-expand-lg .navbar-nav .nav-link {
     font-size: .85rem;
     padding-left: 0.375rem;
@@ -14179,6 +14285,37 @@ article.contact .btn-primary:not([disabled]):not(.disabled):hover {
 }
 
 @media (min-width: 1366px) {
+  .navbar-brand {
+    height: 4.8rem;
+  }
+
+  header.scrolled .navbar-brand {
+    height: 4rem;
+    padding: .5rem 0;
+  }
+
+  .navbar-flags a {
+    /* height of brand = 4.8rem - 2 * 0.6rem = 3.6rem */
+    width: 2.25rem;
+    height: 1.35rem;
+    margin: 0.225rem 0;
+  }
+
+  header.scrolled .navbar-flags a {
+    /* height of brand = 4rem - 2 * 0.5rem = 3rem */
+    width: 2rem;
+    height: 1.2rem;
+    margin: 0.15rem 0;
+  }
+
+  article:not(.home) {
+    padding-top: 5.8rem;
+  }
+
+  article:not(.home).scrolled {
+    padding-top: 4.5rem;
+  }
+
   .navbar-expand-lg .navbar-nav .nav-link {
     font-size: 1.15rem;
   }

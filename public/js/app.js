@@ -773,7 +773,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(9);
-module.exports = __webpack_require__(40);
+module.exports = __webpack_require__(41);
 
 
 /***/ }),
@@ -814,6 +814,7 @@ const app = new Vue({
 __webpack_require__(37);
 __webpack_require__(38);
 __webpack_require__(39);
+__webpack_require__(40);
 
 /***/ }),
 /* 10 */
@@ -36144,11 +36145,19 @@ module.exports = function spread(callback) {
 /***/ (function(module, exports) {
 
 $(document).ready(function () {
+
     $(document).on("mouseover", "#hero .info a", function (e) {
+
         $(this).addClass("blink");
     }).on("mouseout", "#hero .info a", function (e) {
+
         $(this).removeClass("blink");
     });
+
+    if ($("article.home").length > 0) {
+
+        $("body > header").addClass("home");
+    }
 });
 
 /***/ }),
@@ -37165,6 +37174,9 @@ $(document).ready(function () {
 
 	$(document).on("pjax:complete", function () {
 
+		/* hide hotdog menu */
+		$("#navbarHotdog").collapse("hide");
+
 		/* transition between page loading */
 		$("main").fadeTo(0, 0.9, function () {
 			$(this).fadeTo(400, 1);
@@ -37187,13 +37199,47 @@ $(document).ready(function () {
 		});
 
 		/* update locale changer URLs */
-		$("a.flagLink[hreflang='en']").attr("href", $("head link[hreflang='en']").attr("href"));
-		$("a.flagLink[hreflang='el']").attr("href", $("head link[hreflang='el']").attr("href"));
+		$("a.flagLink.en").attr("href", $("head link[hreflang='en']").attr("href"));
+		$("a.flagLink.el").attr("href", $("head link[hreflang='el']").attr("href"));
+
+		/* if in homepage, update nav to use home style */
+		if ($("article.home").length > 0) {
+
+			$("body > header").addClass("home");
+		} else {
+
+			$("header.home").removeClass("home");
+		}
 	});
 });
 
 /***/ }),
 /* 40 */
+/***/ (function(module, exports) {
+
+$(document).ready(function () {
+
+	var navOffsetY = 68;
+
+	/* IMPORTANT: Use debounce with scroll events for better performance */
+
+	$(window).on("scroll", _.debounce(function () {
+
+		if ($(".navbar-toggler").hasClass("collapsed")) {
+
+			if ($(window).scrollTop() > navOffsetY) {
+
+				$("body > header, main > article").addClass("scrolled");
+			} else {
+
+				$("header.scrolled, article.scrolled").removeClass("scrolled");
+			}
+		}
+	}));
+});
+
+/***/ }),
+/* 41 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

@@ -87,8 +87,17 @@ a {
 
 header.dark {
 	background-color: $brand-secondary;
-	/* bottom inner shadow */
-	box-shadow: inset 0 -40px 60px -40px black;
+	box-shadow: inset 0 -20px 30px -20px black;
+	width: 100%;
+	position: fixed;
+	z-index: 1000;
+	/* Since header is sticky, if it does not fit vertically
+	 * the user won't be able to see the rest of the header content.
+	 * Fix: set max-height to 100% of the viewport height and enable
+	 * scrolling for that case
+	 */
+	overflow: auto;
+	max-height: 100vh;
 }
 
 nav.navbar {
@@ -97,20 +106,13 @@ nav.navbar {
 	padding: .5rem 1rem;
 }
 
+header.scrolled nav.navbar {
+	padding: .25rem 1rem;
+}
+
 .navbar-brand-wrapper {
 	display: flex;
 	flex-flow: row nowrap;
-}
-
-.navbar-flags {
-	padding: .6rem 0;
-	align-self: center;
-	a {
-		display: block;
-		/* ignore line height and have auto element height */
-		line-height: 0;
-		padding: .2rem 0;
-	}
 }
 
 .navbar-brand {
@@ -129,45 +131,80 @@ nav.navbar {
 	}
 }
 
+header.scrolled .navbar-brand {
+	height: 3rem;
+	padding: .5rem 0;
+}
+
+.navbar-flags {
+	align-self: center;
+	a {
+		display: block;
+		/* ignore line height and have auto element height */
+		line-height: 0;
+		/* height of brand = 4rem - 2 * 0.6rem = 2.8rem
+		 * distribute 2.8rem to flags as following:
+		 * 0.96rem height for each flag -> 2 * 0.96rem = 1.92rem
+		 * remaining 2.8 - 1.92 = 0.88rem becomes margin
+		 * 0.88rem / 4 = 0.22rem margin for each flag (top and bottom)
+		 */
+		width: 1.6rem;
+		height: 0.96rem;
+		margin: 0.22rem 0;
+		background-size: 100%;
+		opacity: .9;
+		&:hover {
+			opacity: 1;
+		}
+	}
+	a.el {
+		background-image: url("/images/flag-el.png");
+	}
+	a.en {
+		background-image: url("/images/flag-en.png");
+	}
+}
+
+header.scrolled .navbar-flags a {
+	/* height of brand = 3rem - 2 * 0.5rem = 2rem */
+	width: 1.333333rem;
+	height: 0.8rem;
+	margin: 0.1rem 0;
+}
+
 .navbar-toggler {
 	cursor: pointer;
 	align-items: center;
-	padding: .5rem .75rem;
+	border: none;
+	padding: 0;
 	&:active, &:focus {
 		outline: none;
 	}
 	.hotdog-container {
 		display: inline-block;
 		position: relative;
-		width: 24px;
-		height: 12px;
-		margin-right: 4px;
-	}
-	.menu-text {
-		display: inline-block;
-		font-size: 16px;
-		line-height: 1;
-		margin-left: 4px;
+		width: 36px;
+		height: 19px;
 	}
 	.hotdog {
 		display: block;
 		position: absolute;
 		border-radius: 4px;
 		width: 100%;
-		height: 2px;
+		height: 3px;
 		background: #BBB;
 		left: 0;
 		z-index: 5;
-		transition: width .35s, top .35s, left .35s, transform .35s .2s;
+		transition: width .35s , top .35s, left .35s, transform .35s .2s;
 	}
 	.hotdog-1 {
 		top: 0;
 	}
 	.hotdog-2 {
-		top: 5px;
+		top: 8px;
 	}
 	.hotdog-3 {
-		top: 10px;
+		top: 16px;
 	}
 	.triangle {
 		display: block;
@@ -178,7 +215,7 @@ nav.navbar {
 		bottom: 0;
 		opacity: 0;
 		border-style: solid;
-		border-width: 0 12px 12px 12px;
+		border-width: 0 19px 19px 19px;
 		border-radius: 4px;
 		border-color: transparent transparent #BBB transparent;
 		transition: opacity .35s .2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -187,19 +224,20 @@ nav.navbar {
 
 .navbar-toggler:not(.collapsed) {
 	.hotdog-1 {
-		top: 4px;
+		top: 8px;
 		left: -2px;
-		width: 17px;
-		transform: rotate(-45deg);
+		width: 26px;
+		transform: rotate(-46deg);
 	}
 	.hotdog-2 {
-		top: 4px;
-		left: 9px;
-		width: 17px;
-		transform: rotate(45deg);
+		top: 8px;
+		left: 14px;
+		width: 26px;
+		transform: rotate(46deg);
 	}
 	.hotdog-3 {
-		top: 16px;
+		top: 23px;
+		left: 1px;
 		width: 100%;
 		transform: translateY(-6px);
 	}
@@ -620,6 +658,15 @@ article.home {
 
 /* GENERIC LAYOUT FOR PAGES OTHER THAN HOME */
 article:not(.home) {
+	/* header is sticky - add top padding to articles so that content
+	 * is not hidden behind the header
+	 * this only applies for pages different than home;
+	 * in home the desired behavior is the opposite
+	 */
+	padding-top: 5rem;
+	&.scrolled {
+		padding-top: 3.5rem;
+	}
 	section.content {
 		/*	custom heading styles - guidelines:
 			h1 is only used for the page heading
@@ -950,8 +997,27 @@ article.contact {
 	nav.navbar {
 		padding: .5rem 2rem;
 	}
+	header.scrolled nav.navbar {
+		padding: .25rem 2rem;
+	}
 	.navbar-brand {
-		height: 4.8rem;
+		height: 4.2rem;
+	}
+	header.scrolled .navbar-brand {
+		height: 3.2rem;
+		padding: .5rem 0;
+	}
+	.navbar-flags a {
+		/* height of brand = 4.2rem - 2 * 0.6rem = 3rem */
+		width: 2rem;
+		height: 1.2rem;
+		margin: 0.15rem 0;
+	}
+	header.scrolled .navbar-flags a {
+		/* height of brand = 3.2rem - 2 * 0.5rem = 2.2rem */
+		width: 1.5rem;
+		height: 0.9rem;
+		margin: 0.1rem 0;
 	}
 	article.home {
 		section {
@@ -962,6 +1028,12 @@ article.contact {
 		}
 		#hero .info a {
 			margin: 0 6rem;
+		}
+	}
+	article:not(.home) {
+		padding-top: 4.7rem;
+		&.scrolled {
+			padding-top: 3.7rem;
 		}
 	}
 	/* home uses a different layout:
@@ -987,6 +1059,10 @@ article.contact {
 }
 
 @include media-breakpoint-up(md) {
+	header.dark {
+		/* bottom inner shadow */
+		box-shadow: inset 0 -40px 60px -40px black;
+	}
 	article.home {
 		section {
 			/* top and bottom inset box shadow */
@@ -1086,6 +1162,18 @@ article.contact {
 }
 
 @include media-breakpoint-up(lg) {
+	header.home {
+		background: transparent;
+		/* top inner shadow */
+		box-shadow: inset 0 40px 60px -40px black;
+		padding-top: 1rem;
+		transition: padding-top .5s, box-shadow .5s, background .5s;
+	}
+	header.scrolled {
+		background-color: $brand-secondary;
+		box-shadow: inset 0 -40px 60px -40px black;
+		padding-top: 0;
+	}
 	.navbar-expand-lg .navbar-nav .nav-link {
 		font-size: .85rem;
 		padding-left: 0.5 * $navlink-padding;
@@ -1149,6 +1237,31 @@ article.contact {
 }
 
 @media (min-width: 1366px) {
+	.navbar-brand {
+		height: 4.8rem;
+	}
+	header.scrolled .navbar-brand {
+		height: 4rem;
+		padding: .5rem 0;
+	}
+	.navbar-flags a {
+		/* height of brand = 4.8rem - 2 * 0.6rem = 3.6rem */
+		width: 2.25rem;
+		height: 1.35rem;
+		margin: 0.225rem 0;
+	}
+	header.scrolled .navbar-flags a {
+		/* height of brand = 4rem - 2 * 0.5rem = 3rem */
+		width: 2rem;
+		height: 1.2rem;
+		margin: 0.15rem 0;
+	}
+	article:not(.home) {
+		padding-top: 5.8rem;
+		&.scrolled {
+			padding-top: 4.5rem;
+		}
+	}
 	.navbar-expand-lg .navbar-nav .nav-link {
 		font-size: 1.15rem;
 	}

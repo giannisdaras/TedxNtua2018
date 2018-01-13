@@ -6,6 +6,9 @@ $(document).ready(function(){
 
 	$(document).on("pjax:complete", function() {
 
+		/* hide hotdog menu */
+		$("#navbarHotdog").collapse("hide")
+
 		/* transition between page loading */
 		$("main").fadeTo(0, 0.9, function(){
 			$(this).fadeTo(400, 1)
@@ -28,8 +31,19 @@ $(document).ready(function(){
 	    })
 
 	    /* update locale changer URLs */
-	    $("a.flagLink[hreflang='en']").attr("href", $("head link[hreflang='en']").attr("href"))
-	    $("a.flagLink[hreflang='el']").attr("href", $("head link[hreflang='el']").attr("href"))
+	    $("a.flagLink.en").attr("href", $("head link[hreflang='en']").attr("href"))
+	    $("a.flagLink.el").attr("href", $("head link[hreflang='el']").attr("href"))
+
+	    /* if in homepage, update nav to use home style */
+		if($("article.home").length > 0) {
+
+			$("body > header").addClass("home")
+
+		} else {
+	
+			$("header.home").removeClass("home")
+
+		}
 
 	})
 
