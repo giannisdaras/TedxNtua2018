@@ -1,9 +1,9 @@
 {% extends isPjax is defined and isPjax == true ? "pjax.twig" : "theme.twig" %}
 {% block title -%}
-	{{ trans('general.speakers.title') }}
+{{ trans('general.speakers.title') }}
 {%- endblock %}
 {% block description -%}
-	{{ trans('general.speakers.description') }}
+{{ trans('general.speakers.description') }}
 {%- endblock %}
 {% block content %}
 
@@ -15,9 +15,13 @@
 	<section class="content">
 
 		<div class="container-fluid text-center">
-			<a href="/speakers/jobs">
-				<img src="https://pi.tedcdn.com/r/pe.tedcdn.com/images/ted/0ef62e4df27b4ba7294de889fdbc33e476a08ec9_254x191.jpg?" width="200" height="200" class="rounded-circle wow bounceInRight">
-			</a>	
+			<div class="row">
+				<div class='col-3'>
+					<a href="/speakers/jobs">
+						<img src="https://pi.tedcdn.com/r/pe.tedcdn.com/images/ted/0ef62e4df27b4ba7294de889fdbc33e476a08ec9_254x191.jpg?" width="200" height="200" class="rounded-circle wow bounceInRight"></a>
+					</a>
+				</div>	
+			</div>
 		</div>
 
 	</section>

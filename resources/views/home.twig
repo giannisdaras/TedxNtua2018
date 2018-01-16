@@ -104,27 +104,17 @@
 						</div>
 						<div class="container-fluid speaker-container">
 							<div class="row no-gutters">
+								{% for key, speaker in speakers  %}
+
 								<div class="col col-12 col-md-4">
-									<a href="/speakers/jobs">
-										<img src="https://i1.sndcdn.com/artworks-000241864958-t7ad44-t500x500.jpg" class="rounded-circle">
-										<h3>Big Shaq</h3>
-										<p class="m-0">Entrepreneur, computer engineer and white-hat hacker.</p>
+									<a href="/speakers#{{ speaker.id }}">
+										<img src="{{ speaker.img_src}}" class="rounded-circle">
+										<h3> {{ speaker. name}} </h3>
+										<p class="m-0">{{ speaker.short_description }} </p>
 									</a>
 								</div>
-								<div class="col col-12 col-md-4">
-									<a href="/speakers/jobs">
-										<img src="https://i1.sndcdn.com/artworks-000241864958-t7ad44-t500x500.jpg" class="rounded-circle">
-										<h3>Big Shaq</h3>
-										<p class="m-0">Entrepreneur, computer engineer and white-hat hacker.</p>
-									</a>
-								</div>
-								<div class="col col-12 col-md-4">
-									<a href="/speakers/jobs">
-										<img src="https://i1.sndcdn.com/artworks-000241864958-t7ad44-t500x500.jpg" class="rounded-circle">
-										<h3>Big Shaq</h3>
-										<p class="m-0">Entrepreneur, computer engineer and white-hat hacker.</p>
-									</a>
-								</div>
+
+								{% endfor %}
 							</div>
 						</div>
 					</div>
