@@ -415,6 +415,8 @@ function pjaxReload(container, options) {
 //
 // Returns nothing.
 function locationReplace(url) {
+  console.log(url)
+  return false
   window.history.replaceState(null, "", pjax.state.url)
   window.location.replace(url)
 }

@@ -13727,7 +13727,6 @@ article.blog .row {
 
 .blog-listing a.blog-link .card-img-wrapper {
   height: 240px;
-  overflow: hidden;
   color: white;
   position: relative;
   text-shadow: 0 3px 2px rgba(0, 0, 0, 0.8), 0 5px 9px rgba(0, 0, 0, 0.2);
@@ -13781,8 +13780,11 @@ article.blog .row {
 }
 
 article .blog-listing a.blog-link:hover .card-img {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  /*
+		hover + overflow hidden
+		is buggy, needs fix
+	transform: scale(1.05);
+	*/
 }
 
 /* END BLOG PAGE */

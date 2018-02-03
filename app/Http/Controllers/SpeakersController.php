@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Http\Controllers\View;
 use Illuminate\Http\Request;
+use LaravelLocalization;
 
 class SpeakersController extends Controller {
 
@@ -21,11 +22,11 @@ class SpeakersController extends Controller {
 
 		$isPjax = $request->header('X-PJAX');
 		if ($isPjax) {
-			return response()->view('speaker', compact('isPjax'), 200)
+			return response()->view('speakers', compact('isPjax', 'speakers'), 200)
 				->header('X-PJAX-URL', LaravelLocalization::getLocalizedURL());
 		}
 
-		return view('speaker', ["speakers" => $speakers]);
+		return view('speakers', compact('speakers'));
 	}
 
 }
