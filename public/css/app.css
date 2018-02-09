@@ -13652,6 +13652,18 @@ article:not(.home) section.content .container-fluid:last-child {
   margin-bottom: 0;
 }
 
+article:not(.home) .vertical-align {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 article:not(.home) .grid-image {
   display: inline-block;
   border: 0;
@@ -13685,11 +13697,15 @@ article:not(.home) .grid-image.hover-zoom:hover {
 /* ABOUT PAGE */
 
 article.about section.content {
-  max-width: 960px;
+  max-width: 1200px;
 }
 
 article.about .col {
   margin-bottom: 1rem;
+}
+
+article.about p {
+  color: black;
 }
 
 /* END ABOUT PAGE */

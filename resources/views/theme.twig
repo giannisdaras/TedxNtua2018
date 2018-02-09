@@ -11,6 +11,11 @@
     <title>{% block title %}{% endblock %} | TEDxNTUA 2018</title>
     <meta name="description" class="pjax" content="{% block description %}{% endblock %}">
 {%- block scripts -%}
+<script>
+    function changePhoto(element,url){
+        element.src=url;
+    }
+</script>
 {%- endblock %}
 </head>
 

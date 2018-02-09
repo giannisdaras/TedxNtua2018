@@ -245,7 +245,7 @@ header.scrolled .navbar-flags a {
 		opacity: 1;
 	}
 }
-	
+
 .navbar-expand-lg .navbar-nav .nav-link {
 	font-size: 1.1rem;
 	padding-right: $navlink-padding;
@@ -375,7 +375,7 @@ body > footer {
 	.older .fa-youtube-play {
 		color: $brand-primary;
 	}
-	.social-links { 
+	.social-links {
 		margin-bottom: 0;
 		li.list-inline-item {
 			/* remove bootstrap's margin to .list-inline-item elements */
@@ -628,7 +628,7 @@ article.home {
 
 /* home animations sub-section */
 
-@keyframes gradientFlow { 
+@keyframes gradientFlow {
     0%, 100% {
     	background-position: 50% 0%;
 	}
@@ -694,6 +694,12 @@ article:not(.home) {
 		}
 	}
 
+	.vertical-align {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
 	/* generic grid-image style to be used in speakers, sponsor and team components */
 	.grid-image {
 	    display: inline-block;
@@ -726,10 +732,13 @@ article:not(.home) {
 /* ABOUT PAGE */
 article.about {
 	section.content {
-		max-width: 960px;
+		max-width: 1200px;
 	}
 	.col {
 		margin-bottom: 1rem;
+	}
+	p {
+		color: black;
 	}
 }
 
@@ -774,7 +783,7 @@ article.blog {
 		font-size: .9em;
 	}
 	.card-img-top {
-		height: 280px; 
+		height: 280px;
 	}
 	.card-img {
 		object-fit: cover;
@@ -943,7 +952,7 @@ article.team {
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-image: url("https://pi.tedcdn.com/r/pe.tedcdn.com/images/ted/0ef62e4df27b4ba7294de889fdbc33e476a08ec9_254x191.jpg?");
-	}	
+	}
 }
 
 /* END TEAM PAGE */
