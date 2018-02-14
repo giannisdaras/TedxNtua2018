@@ -11,15 +11,20 @@
     <title>{% block title %}{% endblock %} | TEDxNTUA 2018</title>
     <meta name="description" class="pjax" content="{% block description %}{% endblock %}">
 {%- block scripts -%}
-<script>
-    function changePhoto(element,url){
-        element.src=url;
-    }
-</script>
 {%- endblock %}
 </head>
 
 <body>
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0]
+            if (d.getElementById(id)) return
+            js = d.createElement(s)
+            js.id = id
+            js.src = 'https://connect.facebook.net/{{ getLocale() == "en" ? "en_US" : "el_GR" }}/sdk.js#xfbml=1&version=v2.12&appId=1758405557797854&autoLogAppEvents=1'
+            fjs.parentNode.insertBefore(js, fjs)
+        }(document, 'script', 'facebook-jssdk'))
+    </script>
 
     <header class="dark">
 
