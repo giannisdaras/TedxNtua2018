@@ -9,7 +9,7 @@ class SpeakersController extends Controller {
 
 	public function index(Request $request) {
 
-		//$speakers = DB::table('speakers')->get();
+		// $speakers = DB::table('speakers')->get();
 
 		$data['id'] = 'jobs';
 		$data['name'] = 'Steve Jobs';
