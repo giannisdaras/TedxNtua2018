@@ -37236,6 +37236,8 @@ $(document).ready(function () {
 			}
 		}
 	}));
+
+	$(window).trigger("scroll");
 });
 
 /***/ }),

@@ -14267,7 +14267,9 @@ article.contact .btn-primary:not([disabled]):not(.disabled):hover {
 
   article.home #map .col-md-12 img {
     position: absolute;
-    top: -100px;
+    top: -320px;
+    -webkit-filter: brightness(105%) contrast(110%);
+            filter: brightness(105%) contrast(110%);
   }
 
   article.about section.content .col,
