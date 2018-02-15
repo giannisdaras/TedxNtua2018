@@ -815,6 +815,7 @@ __webpack_require__(37);
 __webpack_require__(38);
 __webpack_require__(39);
 __webpack_require__(40);
+__webpack_require__(51);
 
 /***/ }),
 /* 10 */
@@ -37245,6 +37246,68 @@ $(document).ready(function () {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 42 */,
+/* 43 */,
+/* 44 */,
+/* 45 */,
+/* 46 */,
+/* 47 */,
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */
+/***/ (function(module, exports) {
+
+$(document).ready(function () {
+
+	$(document).on("submit", "#contactForm", function (e) {
+
+		e.preventDefault();
+
+		$("small.error").each(function (i, v) {
+			$(this).text($(this).attr("data-initial") || "");
+		});
+
+		$(".error").removeClass("error");
+
+		$.ajax({
+
+			type: "POST",
+			url: $("#contactForm").attr("action"),
+			data: $("#contactForm").serialize(),
+			success: function success(data) {
+				if (data.status == "success") {
+					$("#successMessage").text(data.message);
+					$(".form-container").fadeOut(400, function () {
+						$(".success-container").fadeIn();
+					});
+				}
+			},
+			error: function error(xhr, textStatus, _error) {
+				var _loop = function _loop() {
+					var msg = xhr.responseJSON.errors[err][0];
+					for (i = 1; i < xhr.responseJSON.errors[err].length; ++i) {
+						msg += " " + xhr.responseJSON.errors[err][i];
+					}
+					$("#" + err).addClass("error");
+					$("#" + err + "Help").fadeOut(400, function () {
+						$(this).addClass("error").text(msg).fadeIn();
+					});
+				};
+
+				for (var err in xhr.responseJSON.errors) {
+					var i;
+
+					_loop();
+				}
+				$(".form-control.error").first().focus();
+			}
+
+		});
+	});
+});
 
 /***/ })
 /******/ ]);

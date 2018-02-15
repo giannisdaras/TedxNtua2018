@@ -13,7 +13,19 @@
 
 			<section class="content">
 				<div class="container">
+					{% if errors.any() %}
 					<div class="row">
+						<div class="col col-12">
+							<div class="alert alert-danger">
+								<ul class="mb-0">
+							{% for error in errors.all() %}
+							    	<li>{{ error }}</li>
+							{% endfor %}</ul>
+							</div>
+						</div>
+					</div>
+					{% endif %}
+					<div class="row form-container">
 						<div class="col col-12 col-lg-3 mb-3 mb-lg-0">	
 							<h3 class="text-center font-weight-bold">{{ trans('general.contact.contactus') }}</h3>	
 							<p class="small text-justify">{{ trans('general.contact.greeting') }}</p>
@@ -25,36 +37,49 @@
 						</div>	
 
 						<div class="col col-12 col-lg-9">	
-							<form action = " url ('contact') " method="POST">
+							<form id="contactForm" action="{{ getLocalizedURL(getLocale()) }}" method="POST">
 								{{ csrf_field() }}
 								<div class="form-group">
 									<label for="name">{{ trans('general.contact.form.name') }}</label>
-									<input type="text" class="form-control" id="name" aria-describedby="NameHelp" placeholder="{{ trans('general.contact.form.name_ph') }}" required>
-									<small id="NameHelp" class="form-text text-muted">{{ trans('general.contact.form.name_help') }}</small>
+									<input type="text" name="name" class="form-control" id="name" aria-describedby="nameHelp" placeholder="{{ trans('general.contact.form.name_ph') }}" required>
+									<small id="nameHelp" class="form-text text-muted" data-initial="{{ trans('general.contact.form.name_help') }}">{{ trans('general.contact.form.name_help') }}</small>
 								</div>
 
 								<div class="form-group">
 									<label for="email">{{ trans('general.contact.form.email') }}</label>
-									<input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="{{ trans('general.contact.form.email_ph') }}" required>
-									<small id="emailHelp" class="form-text text-muted">{{ trans('general.contact.form.email_help') }}</small>
+									<input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="{{ trans('general.contact.form.email_ph') }}" required>
+									<small id="emailHelp" class="form-text text-muted" data-initial="{{ trans('general.contact.form.email_help') }}">{{ trans('general.contact.form.email_help') }}</small>
 								</div>
 
 								<div class="form-group">
 									<label for="subject">{{ trans('general.contact.form.subject') }}</label>
-									<input type="text" class="form-control" id="subject" aria-describedby="SubjectHelp" placeholder="{{ trans('general.contact.form.subject_ph') }}">
-									<small id="SubjectHelp" class="form-text text-muted">{{ trans('general.contact.form.subject_help') }}</small>
+									<input type="text" name="subject" class="form-control" id="subject" aria-describedby="subjectHelp" placeholder="{{ trans('general.contact.form.subject_ph') }}">
+									<small id="subjectHelp" class="form-text text-muted" data-initial="{{ trans('general.contact.form.subject_help') }}">{{ trans('general.contact.form.subject_help') }}</small>
 								</div>
 
 								<div class="form-group">
 									<label for="message">{{ trans('general.contact.form.message') }}</label>
-									<textarea class="form-control" rows="5" id="message" required></textarea>
+									<textarea class="form-control" name="message" rows="5" id="message" required></textarea>
+									<small id="messageHelp" class="form-text text-muted"></small>
 								</div>
 
 								<div class="form-group mt-5 mt-lg-0 text-center text-lg-left">
-									<button href="contact/submit" type="submit" class="btn btn-primary">{{ trans('general.contact.form.submit') }}</button>
+									<input type="submit" id="submit" name="submit" class="btn btn-primary" value="{{ trans('general.contact.form.submit') }}" />
+									<small id="submitHelp" class="form-text text-muted"></small>
 								</div>
 
 							</form>
+						</div>
+					</div>
+					<div class="row success-container">
+						<div class="col col-12 text-center">
+							<p class="big">
+								<i class="fa fa-check-circle align-middle text-success" aria-hidden="true"></i>
+								<span id="successMessage" class="pl-3 align-middle"></span>
+							</p>
+							<p class="mt-2 return">
+								<a href="/contact">{{ trans('general.contact.return') }}</a>
+							</p>
 						</div>
 					</div>
 				</div>

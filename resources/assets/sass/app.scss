@@ -328,6 +328,9 @@ body > footer {
 	.col h3 a {
 		color: white;
 	}
+	.instagram-stream iframe {
+		width: 100% !important;
+	}
 	.instagram-stream .d-flex img {
 		flex-basis: 31%;
 		margin-bottom: .5rem;
@@ -967,7 +970,7 @@ article.contact {
 		margin: 0 auto;
 	}
 
-	.form-control:focus {
+	.form-control:focus, .form-control.error {
   		border-color: $brand-primary;
   		box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px $brand-primary;
 	}
@@ -988,6 +991,21 @@ article.contact {
 	.btn-primary:not([disabled]):not(.disabled):hover {
 		background-color: lighten($brand-secondary, 10%);
     	border-color: lighten($brand-secondary, 10%);
+	}
+
+	.success-container {
+		display: none;
+		p.big {
+			font-size: 1.5rem;
+			line-height: 1.25;
+			i {
+				font-size: 2rem;
+			}
+		}
+	}
+
+	small.error {
+		color: $brand-primary !important;
 	}
 
 }
@@ -1239,6 +1257,19 @@ article.contact {
 		}
 		thead th:first-child {
 			width: 10%;
+		}
+	}
+	article.contact {
+		.success-container {
+			p.big {
+				font-size: 2rem;
+				i {
+					font-size: 2.5rem;
+				}
+			}
+			p.return {
+				font-size: 1.25rem;
+			}
 		}
 	}
 }

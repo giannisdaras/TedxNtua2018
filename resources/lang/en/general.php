@@ -191,6 +191,11 @@ return [
 			'message' => 'Message',
 			'submit' => 'Send',
 		],
+		'msg' => [
+			'success' => 'Your e-mail was sent successfully! We\'ll get back to you shortly.',
+			'failure' => 'Your e-mail could not be sent through the form. Please try e-mailing us on info@tedxntua.com :)',
+		],
+		'return' => 'Return to the form',
 	],
 
 ];

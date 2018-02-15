@@ -13155,6 +13155,10 @@ body > footer .col h3 a {
   color: white;
 }
 
+body > footer .instagram-stream iframe {
+  width: 100% !important;
+}
+
 body > footer .instagram-stream .d-flex img {
   -ms-flex-preferred-size: 31%;
       flex-basis: 31%;
@@ -13964,7 +13968,8 @@ article.contact form {
   margin: 0 auto;
 }
 
-article.contact .form-control:focus {
+article.contact .form-control:focus,
+article.contact .form-control.error {
   border-color: #E62B1E;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px #E62B1E;
           box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px #E62B1E;
@@ -13990,6 +13995,23 @@ article.contact .btn-primary:not([disabled]):not(.disabled):focus {
 article.contact .btn-primary:not([disabled]):not(.disabled):hover {
   background-color: #3c3b3b;
   border-color: #3c3b3b;
+}
+
+article.contact .success-container {
+  display: none;
+}
+
+article.contact .success-container p.big {
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+article.contact .success-container p.big i {
+  font-size: 2rem;
+}
+
+article.contact small.error {
+  color: #E62B1E !important;
 }
 
 /* END CONTACT PAGE */
@@ -14293,6 +14315,18 @@ article.contact .btn-primary:not([disabled]):not(.disabled):hover {
 
   article.schedule thead th:first-child {
     width: 10%;
+  }
+
+  article.contact .success-container p.big {
+    font-size: 2rem;
+  }
+
+  article.contact .success-container p.big i {
+    font-size: 2.5rem;
+  }
+
+  article.contact .success-container p.return {
+    font-size: 1.25rem;
   }
 }
 

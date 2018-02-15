@@ -33,3 +33,4 @@ require('./home');
 require('./jquery.pjax');
 require('./ajax-navigation');
 require('./nav-scroll');
+require('./contact')
