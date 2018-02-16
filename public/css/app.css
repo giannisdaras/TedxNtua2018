@@ -13700,6 +13700,12 @@ article:not(.home) .grid-image.hover-zoom:hover {
 
 /* ABOUT PAGE */
 
+article.about {
+  background-image: url("/images/backgrounds/pixels.svg");
+  background-size: contain;
+  background-repeat: repeat-y;
+}
+
 article.about section.content {
   max-width: 1200px;
 }
@@ -13962,6 +13968,12 @@ article.team .img {
 /* END TEAM PAGE */
 
 /* CONTACT PAGE */
+
+article.contact {
+  background-image: url("/images/backgrounds/pixels.svg");
+  background-size: contain;
+  background-repeat: repeat-y;
+}
 
 article.contact form {
   max-width: 768px;

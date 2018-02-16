@@ -734,7 +734,9 @@ article:not(.home) {
 
 /* ABOUT PAGE */
 article.about {
-	// background-image: url('./images/backgrounds/pixelated_red.svg');
+	background-image: url("/images/backgrounds/pixels.svg");
+	background-size: contain;
+	background-repeat: repeat-y;
 
 	section.content {
 		max-width: 1200px;
@@ -964,6 +966,9 @@ article.team {
 
 /* CONTACT PAGE */
 article.contact {
+	background-image: url("/images/backgrounds/pixels.svg");
+	background-size: contain;
+	background-repeat: repeat-y;
 
 	form {
 		max-width: 768px;
