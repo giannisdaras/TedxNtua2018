@@ -697,11 +697,6 @@ article:not(.home) {
 		}
 	}
 
-	.vertical-align {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
 
 	/* generic grid-image style to be used in speakers, sponsor and team components */
 	.grid-image {
@@ -1333,4 +1328,10 @@ article.contact {
 			font-size: 1.45rem;
 		}
 	}
+}
+
+.vertical-align {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
