@@ -145,29 +145,31 @@ return [
 		'tedx' => [
 			'title' => 'Τι είναι το TEDx;',
 			'subtitle' => 'x = ανεξάρτητα οργανωμένη εκδήλωση',
-			'content' => '<p class="text-justify">In the spirit of ideas worth spreading, TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TED Talks video and live speakers combine to spark deep discussion and connection. These local, self-organized events are branded TEDx, where x = independently organized TED event. The TED Conference provides general guidance for the TEDx program, but individual TEDx events are self-organized. (Subject to certain rules and regulations.)</p>',
+			'content' => '<p class="text-justify">Στο πνεύμα των Ιδεών που Αξίζει να Διαδοθούν, το TEDx είναι ένα πρόγραμμα τοπικών, αυτο-οργανωμένων εκδηλώσεων που φέρνουν τους ανθρώπους μαζί για να μοιραστούν μια εμπειρία TED. Σε μια εκδήλωση TEDx, τα βίντεο των ομλιλιών TED  και οι ζωντανοί ομιλητές συνδυάζονται για να προκαλέσουν βαθιά συζήτηση και σύνδεση. Αυτές οι τοπικές, αυτο-οργανωμένες εκδηλώσεις είναι επώνυμα TEDx, όπου x = ανεξάρτητα οργανωμένη εκδήλωση TED. Το συνέδριο TED παρέχει γενικές οδηγίες για το πρόγραμμα TEDx, αλλά τα μεμονωμένα γεγονότα TEDx είναι αυτο-οργανωμένα. (Σύμφωνα με ορισμένους κανόνες και κανονισμούς.)</p>',
 		],
 		'ted' => [
 			'title' => 'Τι είναι το TED;',
 			'content' => '<p class="text-justify">
-                        TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 30 years ago, TED has grown to support its mission with multiple initiatives. The two annual TED Conferences invite the world\'s leading thinkers and doers to speak for 18 minutes or less. Many of these talks are then made available, free, at TED.com. TED speakers have included Bill Gates, Jane Goodall, Elizabeth Gilbert, Sir Richard Branson, Nandan Nilekani, Philippe Starck, Ngozi Okonjo-Iweala, Sal Khan and Daniel Kahneman.
+												Το TED είναι ένας μη κερδοσκοπικός οργανισμός αφοσιωμένος σε Ιδέες που Αξίζει να Διαδοθούν. Ξεκινώντας ως τετραήμερο συνέδριο στην Καλιφόρνια 30 χρόνια πριν, το TED έχει μεγαλώσει για να υποστηρίξει την αποστολή του με πολλαπλές πρωτοβουλίες. Τα δύο ετήσια συνέδρια TED προσκαλούν τους καλύτερους στοχαστές του κόσμου για να μηλίσουν 18 ή λιγότερα λεπτά. Πολλές από αυτές τις ομιλίες προσφέρονται δωρεάν στο κοινό, στο TED.com. Οι ομιλιτές έχουν συμπεριλάβει τον Bill Getes, την Jane Goodall, την Elizabeth Gilbert, τον Sir Richard Branson, την Nandan Nilekani, τον Philippe Starck, την Ngozi Okonjo-Iweala, τον Sal Khan και τον Daniel Kahneman.
                     </p>
                     <p class="text-justify">
-                        The annual TED Conference takes place each spring in Vancouver, British Columbia. TED\'s media initiatives include TED.com, where new TED Talks are posted daily; the Open Translation Project, which provides subtitles and interactive transcripts as well as translations from volunteers worldwide; the educational initiative TED-Ed. TED has established the annual TED Prize, where exceptional individuals with a wish to change the world get help translating their wishes into action; TEDx, which supports individuals or groups in hosting local, self- organized TED-style events around the world, and the TED Fellows program, helping world-changing innovators from around the globe to amplify the impact of their remarkable projects and activities.<br>
+												Το ετήσιο συνέδριο TED που λαμβάνει κάθε άνοιξη στο Βανκούβερ, στην Βρετανική Κολομβία. Οι πρωτοβουλίες του TED σε θέματα κοινωνικής δικτύωσης, περιλαμβάνουν το TED.com, όπου οι νέες ομιλίες δημισιεύονται καθημερινά, υποτιτλίζονται και εφοδιάζονται με διαδραστικά transcripts από το Open Translation Project. Το TED έχει καθιερώσει το ετήσιο TED Prize, όπου εξέχοντες υποψήφιοι με μια ευχή να αλλάξουν τον κόσμο βοηθούν στην μετάφραση των ευχών του σε πράξεις μέσω του
+											TEDx, το οποίο υποστηρίζει πρόσωπα και ομάδες στην διοργάνωση τοπικών, αυτο-οργανομένων εκδηλώσεων στο στυλ του TED σε ολόκληρο τον κόσμο, καθώς και το TED Fellows Program, βοηθώντας πρωτοπόρους που θέλουν να αλλάξουν τον κόσμο να ενισχύσουν τον αντίκτυπο των αξιοσημείωτων έργων τους, όπως και των δραστηριοτήτων τους.<br>
 
-                        Follow TED on Twitter at <a href="http://twitter.com/TEDTalks">http://twitter.com/TEDTalks</a>, or on Facebook at <a href="http://www.facebook.com/TED">http://www.facebook.com/TED</a>.
+
+												Ακολουθήστε το TED στο Twitter <a href="http://twitter.com/TEDTalks">http://twitter.com/TEDTalks</a>, ή στο Facebook στο <a href="http://www.facebook.com/TED">http://www.facebook.com/TED</a>.
                     </p>',
 		],
 		'tedxntua' => [
 			'title' => 'Τι είναι το TEDxNTUA;',
 			'content' => '<p class="text-justify">
-                        The various activities of the students and the academic community in general in the National Technical University of Athens are proof of creativity endemic. This scientific potential is the fundamental material for the creation of progressive ideas, which are capable of following the current advancements in science and technology.
+												Η δράση των φοιτητών και της λοιπής ακαδημαϊκής κοινότητας του Πολυτεχνείου αποκαλύπτει τη διάθεση για έρευνα και δημιουργικότητα που υπάρχει στο χώρο. Πρόκειται για ένα δυναμικό σκέψης ικανό να παράγει καινοτόμες ιδέες, με άξονες την εξέλιξη και την πρωτοπορία.
                     </p>
                     <p class="text-justify">
-                        Nonetheless, the massive immigration of young graduates towards the flourishing economies of the world, the appearance of numerous new fields, the need for highly specialized scientists and employees, the general sense of individualism and especially the pervasive economical and ethical crisis have deprived the academic community of the collaborative spirit necessary in every learning experience.
+												Ωστόσο, η διασπορά των αποφοίτων σε θύλακες απασχόλησης σε όλο τον κόσμο, ο κατακερματισμός των εργασιακών αντικειμένων, η εξατομίκευση, η αναζήτηση ατομικών διεξόδων, αλλά κυρίως η γενικότερη κρίση οικονομίας και θεσμών, το τελευταίο διάστημα, έχουν αποδυναμώσει τη συλλογικότητά του.
                     </p>
                     <p class="text-justify">
-                        TEDxNTUA is an organized effort to create and sustain the necessary frame for the exchange of new ideas in the fields of technology and business administration. At the same time, NTUA’s community is becoming a living, extrovert organism focusing on the scientific and career goals of its members, while promoting the expan- sion of the network of collaboration between the NTUA, the industries and the startup community.
+												Το TEDxNTUA αποτελεί την πρώτη οργανωμένη προσπάθεια για τη δημιουργία και την εδραίωση μια δυναμικής πλατφόρμας ανταλλαγής ιδεών σε ζητήματα που αφορούν την επιχειρηματικότητα και την τεχνολογία. Ταυτόχρονα, μετατρέπει την κοινότητα του ΕΜΠ σε ένα ζωντανό, εξωστρεφή οργανισμό, θέτοντας στο κέντρο του προβληματισμού του την εργασιακή και επιστημονική ιδιότητα των μελών του, προωθώντας τη σύσταση ενός δικτύου επαφών και συνεργασίας του χώρου του ΕΜΠ με αυτών της βιομηχανίας και της νεανικής επιχειρηματικότητας.
                     </p>',
 		],
 	],
