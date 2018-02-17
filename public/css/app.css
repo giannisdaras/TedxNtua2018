@@ -13162,10 +13162,41 @@ body > footer .instagram-stream iframe {
   width: 100% !important;
 }
 
-body > footer .instagram-stream .d-flex img {
-  -ms-flex-preferred-size: 31%;
-      flex-basis: 31%;
+body > footer .instagram-stream .d-flex a {
+  -ms-flex-preferred-size: 48%;
+      flex-basis: 48%;
   margin-bottom: .5rem;
+  position: relative;
+}
+
+body > footer .instagram-stream .d-flex a.image .fa-play {
+  display: none;
+}
+
+body > footer .instagram-stream .d-flex a.video .fa-play {
+  position: absolute;
+  font-size: 2rem;
+  top: 50%;
+  left: 50%;
+  margin-left: -1rem;
+  margin-top: -1rem;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  color: white;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  text-align: right;
+}
+
+body > footer .instagram-stream img {
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  opacity: .95;
+}
+
+body > footer .instagram-stream a:hover img {
+  opacity: 1;
 }
 
 body > footer .older a.card-img-link {
@@ -14381,6 +14412,11 @@ article.contact small.error {
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-bottom: 10px solid #f5f8fa;
+  }
+
+  body > footer .instagram-stream .d-flex a {
+    -ms-flex-preferred-size: 32%;
+        flex-basis: 32%;
   }
 
   article.home #hero h1 {

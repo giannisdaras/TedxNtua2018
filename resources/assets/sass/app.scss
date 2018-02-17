@@ -336,9 +336,36 @@ body > footer {
 	.instagram-stream iframe {
 		width: 100% !important;
 	}
-	.instagram-stream .d-flex img {
-		flex-basis: 31%;
+	.instagram-stream .d-flex a {
+		flex-basis: 48%;
 		margin-bottom: .5rem;
+		position: relative;
+		&.image .fa-play {
+			display: none;
+		}
+		&.video .fa-play {
+			position: absolute;
+			font-size: 2rem;
+			top: 50%;
+			left: 50%;
+			margin-left: -1rem;
+			margin-top: -1rem;
+			text-shadow: 0 0 20px rgba(0, 0, 0, .8);
+			color: white;
+			display: block;
+			width: 2rem;
+			height: 2rem;
+			text-align: right;
+		}
+	}
+	.instagram-stream img {
+		width: 100%;
+		height: auto;
+		border-radius: 2px;
+		opacity: .95;
+	}
+	.instagram-stream a:hover img {
+		opacity: 1;
 	}
 	.older a.card-img-link {
 		display: block;
@@ -1314,6 +1341,9 @@ article.contact {
 			border-right: 10px solid transparent;
 			border-bottom: 10px solid #f5f8fa;
 		}
+	}
+	body > footer .instagram-stream .d-flex a {
+		flex-basis: 32%;
 	}
 	article.home {
 		#hero {
