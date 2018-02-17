@@ -12,6 +12,18 @@ window.WOW = new WOW.WOW({ live: false });
 
 window.WOW.init();
 
+var Instafeed = require('instafeed.js');
+
+var feed = new Instafeed({
+
+	get: 'user',
+	userId: 1544110047,
+	clientId: '64f1f1bab0b14d52af0b51e0caa5aa01'
+
+})
+
+feed.run()
+
 /* DISABLE Vue.js until it is needed
 
 window.Vue = require('vue');
