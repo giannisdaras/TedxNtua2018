@@ -138,37 +138,41 @@ header.scrolled .navbar-brand {
 
 .navbar-flags {
 	align-self: center;
-	a {
-		display: block;
-		/* ignore line height and have auto element height */
-		line-height: 0;
-		/* height of brand = 4rem - 2 * 0.6rem = 2.8rem
-		 * distribute 2.8rem to flags as following:
-		 * 0.96rem height for each flag -> 2 * 0.96rem = 1.92rem
-		 * remaining 2.8 - 1.92 = 0.88rem becomes margin
-		 * 0.88rem / 4 = 0.22rem margin for each flag (top and bottom)
-		 */
-		width: 1.6rem;
-		height: 0.96rem;
-		margin: 0.22rem 0;
-		background-size: 100%;
-		opacity: .9;
-		&:hover {
-			opacity: 1;
-		}
-	}
-	a.el {
-		background-image: url("/images/flag-el.png");
-	}
-	a.en {
-		background-image: url("/images/flag-en.png");
-	}
 }
 
-header.scrolled .navbar-flags a {
+a.flagLink {
+	display: block;
+	/* ignore line height and have auto element height */
+	line-height: 0;
+	/* height of brand = 4rem - 2 * 0.6rem = 2.8rem
+	 * distribute 2.8rem to flags as following:
+	 * 0.96rem height for each flag -> 2 * 0.96rem = 1.92rem
+	 * remaining 2.8 - 1.92 = 0.88rem becomes margin
+	 * 0.88rem / 4 = 0.22rem margin for each flag (top and bottom)
+	 */
+	padding-left: 1.6rem;
+	background-size: 1.6rem 0.96rem;
+	background-repeat: no-repeat no-repeat;
+	height: 0.96rem;
+	margin: 0.22rem 0;
+	background-size: 100%;
+	opacity: .9;
+	&:hover {
+		opacity: 1;
+	}
+}
+a.flagLink.el {
+	background-image: url("/images/flag-el.png");
+}
+a.flagLink.en {
+	background-image: url("/images/flag-en.png");
+}
+
+header.scrolled a.flagLink {
 	/* height of brand = 3rem - 2 * 0.5rem = 2rem */
-	width: 1.333333rem;
+	padding-left: 1.333333rem;
 	height: 0.8rem;
+	background-size: 1.333333rem 0.8rem;
 	margin: 0.1rem 0;
 }
 
@@ -419,6 +423,35 @@ body > footer {
 }
 
 /* END FOOTER */
+
+/* COOKIE BAR */
+
+.cookie-bar {
+	background: #111;
+	padding: .5rem 0;
+	position: fixed;
+	color: white;
+	width: 100%;
+	bottom: 0;
+	font-size: .8rem;
+	display: none;
+	.container-fluid {
+		max-width: 1366px;
+		padding: 0 1rem;
+	}
+	.accept {
+		background-color: $brand-primary;
+		color: white;
+		padding: .5rem 2.5rem;
+		margin-left: .5rem;
+		&:hover {
+			background-color: saturate($brand-primary, 10%);
+		}
+	}
+	.description a:hover {
+		color: saturate($brand-primary, 10%);
+	}
+}
 
 /* HOME PAGE */
 
@@ -1022,6 +1055,12 @@ article.contact {
  *		- custom 1366px
  */
 
+@include media-breakpoint-down(lg) {
+	.lang-dropdown {
+		display: none !important;
+	}
+}
+
 @include media-breakpoint-up(sm) {
 	[data-tooltip]:after {
 		width: 33vw;
@@ -1039,16 +1078,18 @@ article.contact {
 		height: 3.2rem;
 		padding: .5rem 0;
 	}
-	.navbar-flags a {
+	a.flagLink {
 		/* height of brand = 4.2rem - 2 * 0.6rem = 3rem */
-		width: 2rem;
+		padding-left: 2rem;
 		height: 1.2rem;
+		background-size: 2rem 1.2rem;
 		margin: 0.15rem 0;
 	}
-	header.scrolled .navbar-flags a {
+	header.scrolled a.flagLink {
 		/* height of brand = 3.2rem - 2 * 0.5rem = 2.2rem */
-		width: 1.5rem;
+		padding-left: 1.5rem;
 		height: 0.9rem;
+		background-size: 1.5rem 0.9rem;
 		margin: 0.1rem 0;
 	}
 	article.home {
@@ -1075,6 +1116,9 @@ article.contact {
 	section.content, article.home .section-content {
 		padding: 3rem 2rem;
 	}
+	.cookie-bar .container-fluid {
+		padding: 0 2rem;
+	}
 	article.schedule {
 		table {
 			font-size: .9rem;
@@ -1094,6 +1138,9 @@ article.contact {
 	header.dark {
 		/* bottom inner shadow */
 		box-shadow: inset 0 -40px 60px -40px black;
+	}
+	.cookie-bar {
+		font-size: 1rem;
 	}
 	article.home {
 		section {
@@ -1201,10 +1248,16 @@ article.contact {
 		padding-top: 1rem;
 		transition: padding-top .5s, box-shadow .5s, background .5s;
 	}
+	header.dark {
+		overflow: visible;
+	}
 	header.scrolled {
 		background-color: $brand-secondary;
 		box-shadow: inset 0 -40px 60px -40px black;
 		padding-top: 0;
+	}
+	nav.navbar {
+		position: relative;
 	}
 	.navbar-expand-lg .navbar-nav .nav-link {
 		font-size: .85rem;
@@ -1213,6 +1266,46 @@ article.contact {
 	}
 	.navbar-toggler {
 		display: flex;
+	}
+	#lang-switch, header.scrolled #lang-switch {
+		padding-left: 2rem;
+		height: 0.9rem;
+		font-size: 0.9rem;
+		background-size: 1.5rem 0.9rem;
+		margin: 0;
+		color: #DDD;
+	}
+	.lang-dropdown, header.scrolled .lang-dropdown {
+		position: absolute;
+		right: 2rem;
+		top: 100%;
+		background: #f5f8fa;
+		display: none;
+		padding: .25rem .75rem;
+		border-radius: 2px;
+		border: 1px solid #CCC;
+		a.flagLink {
+			display: block;
+			padding-left: 2.5rem;
+			height: 2rem;
+			font-size: 1.2rem;
+			background-size: 2rem 1.2rem;
+			padding-top: 1rem;
+			background-position: left center;
+			margin: 0;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 100%;
+			width: 0;
+			height: 0;
+			right: .75rem;
+			margin: 0 auto;
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+			border-bottom: 10px solid #f5f8fa;
+		}
 	}
 	article.home {
 		#hero {
@@ -1289,18 +1382,6 @@ article.contact {
 	header.scrolled .navbar-brand {
 		height: 4rem;
 		padding: .5rem 0;
-	}
-	.navbar-flags a {
-		/* height of brand = 4.8rem - 2 * 0.6rem = 3.6rem */
-		width: 2.25rem;
-		height: 1.35rem;
-		margin: 0.225rem 0;
-	}
-	header.scrolled .navbar-flags a {
-		/* height of brand = 4rem - 2 * 0.5rem = 3rem */
-		width: 2rem;
-		height: 1.2rem;
-		margin: 0.15rem 0;
 	}
 	article:not(.home) {
 		padding-top: 5.8rem;

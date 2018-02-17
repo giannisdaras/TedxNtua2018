@@ -773,7 +773,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(9);
-module.exports = __webpack_require__(42);
+module.exports = __webpack_require__(44);
 
 
 /***/ }),
@@ -816,6 +816,8 @@ __webpack_require__(38);
 __webpack_require__(39);
 __webpack_require__(40);
 __webpack_require__(41);
+__webpack_require__(42);
+__webpack_require__(43);
 
 /***/ }),
 /* 10 */
@@ -37296,6 +37298,64 @@ $(document).ready(function () {
 
 /***/ }),
 /* 42 */
+/***/ (function(module, exports) {
+
+$(document).ready(function () {
+
+	$(document).on("click", "#lang-switch", function (e) {
+
+		e.preventDefault();
+		$($(this).attr("aria-controls")).fadeToggle();
+	});
+});
+
+/***/ }),
+/* 43 */
+/***/ (function(module, exports) {
+
+function createCookie(name, value, days) {
+	var expires;
+
+	if (days) {
+		var date = new Date();
+		date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+		expires = "; expires=" + date.toGMTString();
+	} else {
+		expires = "";
+	}
+	document.cookie = encodeURIComponent(name) + "=" + encodeURIComponent(value) + expires + "; path=/";
+}
+
+function readCookie(name) {
+	var nameEQ = encodeURIComponent(name) + "=";
+	var ca = document.cookie.split(';');
+	for (var i = 0; i < ca.length; i++) {
+		var c = ca[i];
+		while (c.charAt(0) === ' ') {
+			c = c.substring(1, c.length);
+		}if (c.indexOf(nameEQ) === 0) return decodeURIComponent(c.substring(nameEQ.length, c.length));
+	}
+	return null;
+}
+
+function eraseCookie(name) {
+	createCookie(name, "", -1);
+}
+
+$(document).ready(function () {
+
+	if (readCookie("cookiePrompt") != "on") {
+		$(".cookie-bar").show();
+	}
+	$("#accept-cookies").on("click", function (e) {
+		e.preventDefault();
+		createCookie("cookiePrompt", "on", 60);
+		$(".cookie-bar").fadeOut();
+	});
+});
+
+/***/ }),
+/* 44 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

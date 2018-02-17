@@ -3,7 +3,7 @@
                 <a class="navbar-brand" href="/">
                     <img src="{{ asset('images/tedx_ntua_logo.png') }}" alt="TEDx NTUA Logo" />
                 </a>
-                <div class="navbar-flags">
+                <div class="d-block d-lg-none navbar-flags navbar-flags-left">
                     <a class="flagLink el" href="{{ getLocalizedURL('el') }}" hreflang="el"></a>
                     <a class="flagLink en" href="{{ getLocalizedURL('en') }}" hreflang="en"></a>
                 </div>
@@ -45,5 +45,12 @@
                         <a class="nav-link" href="https://www.eventora.com">{{ trans('general.nav.gettickets') }}</a>
                     </li>
                 </ul>
+                <div class="d-none d-lg-block navbar-flags navbar-flags-right ml-3">
+                    <a id="lang-switch" class="flagLink {{ getLocale() }}" href="{{ getLocalizedURL(getLocale()) }}" hreflang="{{ getLocale() }}" role="button" aria-controls="#lang"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="lang-dropdown" id="lang">
+                <a class="flagLink el" href="{{ getLocalizedURL('el') }}" hreflang="el"> Ελληνικά</a>
+                <a class="flagLink en" href="{{ getLocalizedURL('en') }}" hreflang="en"> English</a>
             </div>
         </nav>

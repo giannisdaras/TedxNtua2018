@@ -198,4 +198,15 @@ return [
 		'return' => 'Return to the form',
 	],
 
+	/* PRIVACY */
+	'privacy' => [
+		'title' => 'Privacy Policy',
+		'description' => '',
+	],
+
+	'cookies' => [
+		'description' => 'We use cookies to ensure you get the best experience. <a href="/privacy">Learn more</a>.',
+		'accept' => 'Accept',
+	],
+
 ];
