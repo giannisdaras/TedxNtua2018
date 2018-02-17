@@ -24,11 +24,11 @@ class SpeakersSeeder extends Seeder
         	]),
             'talk_prev'=>json_encode([
                 'en'=>'Chaos is extreme weather, chaos is extreme love!',
-                'gr'=>'Χάος είναι ο ακραίος καιρός του έβερεστ, χάος είναι η αγάπη'
+                'el'=>'Χάος είναι ο ακραίος καιρός του έβερεστ, χάος είναι η αγάπη'
             ]),
             'bio'=>json_encode([
                 'en'=>'dede',
-                'gr'=>'δεδεδ'
+                'el'=>'δεδεδ'
             ])
         ]);
     }

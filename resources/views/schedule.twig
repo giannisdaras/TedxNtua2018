@@ -57,7 +57,7 @@
 											<div class="cell-content media">
 												{%- if event.img_src %}
 
-												<img class="align-self-center mr-3" src="/{{ images/schedule/event.img_src }}" alt="" />
+												<img class="align-self-center mr-3" src="/images/schedule/{{event.img_src }}" alt="" />
 												{%- endif %}
 
 												<div class="media-body">
@@ -119,6 +119,7 @@
 											</div>
 										</td>
 									{%- set event = row.events[1] %}
+
 
 										<td class="event">
 											<div class="cell-content media">
@@ -187,16 +188,17 @@
 										</td>
 									{%- set event = row.events[2] %}
 
+
 										<td class="event">
 											<div class="cell-content media">
 												{%- if event.img_src %}
 
-												<img class="align-self-center mr-3" src="/{{ images/schedule/event.img_src }}" alt="" />
+												<img class="align-self-center mr-3" src="/images/schedule/{{event.img_src }}" alt="" />
 												{%- endif %}
 
 												<div class="media-body">
 													<h5>
-														{{ event.event_title[getLocale()]|raw }}
+														{ event.event_title[getLocale()]|raw }}
 													</h5>
 													{%- if event.subtitle[getLocale()] %}
 
@@ -272,10 +274,10 @@
 										<h5>
 											{{ event.event_title[getLocale()]|raw }}
 										</h5>
-										{%- if event.subtitle[getLocale()] %}
+										{%- if event.subtitle[getLocale()]|raw %}
 
 										<h6>
-											{{ event.subtitle[getLocale()] }}
+											{{ event.subtitle[getLocale()]|raw}}
 										</h6>
 										{%- endif %}
 

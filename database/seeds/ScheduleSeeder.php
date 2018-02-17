@@ -21,11 +21,11 @@ class ScheduleSeeder extends Seeder
         	]),
             'event_prev'=>json_encode([
                 'en'=>'Why god studied electrical engineering',
-                'gr'=>'Γιατί ο θεός είναι ηλεκτρολόγος'
+                'el'=>'Γιατί ο θεός είναι ηλεκτρολόγος',
             ]),
             'subtitle'=>json_encode([
                 'en'=>'Justification.',
-                'gr'=>'Ερμηνεία-Επεξήγηση.'
+                'el'=>'Ερμηνεία-Επεξήγηση.',
             ])
         ]);
 
