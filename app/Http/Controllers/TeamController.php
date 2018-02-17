@@ -9,7 +9,8 @@ class TeamController extends Controller {
 
 	public function index(Request $request) {
 
-		$it = DB::table('people')->where('team_type', 'it')->get();
+		// $it = DB::table('people')->where('team_type', 'it')->get();
+    $it = [];
 
 		$isPjax = $request->header('X-PJAX');
 		if($isPjax) {

@@ -38,6 +38,7 @@ a {
 /* tooltip */
 
 [data-tooltip] {
+
 	display: inline-block; /*bug fix*/
 	position: relative;
 	text-decoration: none;
@@ -46,8 +47,8 @@ a {
 	content: attr(data-tooltip);
 	font-size: 1rem;
 	position: absolute;
-	bottom: 130%;
-	left: 20%;
+	bottom: 0%;
+	left: 0%;
 	background: $brand-secondary;
 	padding: 5px 15px;
 	color: white;
@@ -57,7 +58,7 @@ a {
 	transition: all 0.5s ease;
 	white-space: pre-wrap;
 	text-align: justify;
-	width: 95vw;
+	width: 70vw !important;
 }
 [data-tooltip]:before {
 	content: "";
@@ -69,7 +70,7 @@ a {
 	border-right: 20px solid transparent;
 	transition: all 0.5s ease;
 	opacity: 0;
-	left: 30%;
+	left: 50%;
 	bottom: 90%;
 }
 [data-tooltip]:hover:after {
@@ -902,10 +903,27 @@ article.sponsors {
 article.team {
 	h2 {
 		text-align: center;
-		border-bottom: 1px solid #333;
+		font-weight: normal !important;
+		color: $brand-primary !important;
+		padding-bottom: 0.5rem;
+		border-bottom: 2px solid #333;
 	}
 	.col {
+		padding-top: 0.5rem;
 		text-align: center;
+	}
+	a {
+		color: lighten($brand-secondary, 10%) !important;
+	}
+	img {
+		margin-right: -15px; /* Remove right gap */
+		margin-left: -15px;  /* Remove left gap */
+		padding-bottom: 62.5%; /* ratio is 16:10 */
+		margin-bottom: 10%;
+	}
+
+	h6 {
+		font-size: 1.25rem;
 	}
 }
 
@@ -978,17 +996,6 @@ article.schedule {
 
 /* TEAM PAGE */
 
-article.team {
-	.img {
-		margin-right: -15px; /* Remove right gap */
-		margin-left: -15px;  /* Remove left gap */
-		padding-bottom: 62.5%; /* ratio is 16:10 */
-		background-position: 50% 50%;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-image: url("https://pi.tedcdn.com/r/pe.tedcdn.com/images/ted/0ef62e4df27b4ba7294de889fdbc33e476a08ec9_254x191.jpg?");
-	}
-}
 
 /* END TEAM PAGE */
 
@@ -1063,7 +1070,7 @@ article.contact {
 
 @include media-breakpoint-up(sm) {
 	[data-tooltip]:after {
-		width: 33vw;
+		width: 33vw !important;
 	}
 	nav.navbar {
 		padding: .5rem 2rem;
