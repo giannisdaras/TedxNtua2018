@@ -19,7 +19,7 @@
 
 			<div class="row text-center text-lg-left">
 				<div class="col col-12 col-lg-3 wow bounceInLeft">
-					<img src="{{ speaker.img_src }}" width="200" height="200" class="rounded-circle wow bounceInLeft">
+					<img src="/images/speakers/{{ speaker.img_src }}" width="200" height="200" class="rounded-circle wow bounceInLeft">
 				</div>
 
 				<div class="col col-12 col-lg-9 wow bounceInRight">
@@ -39,13 +39,13 @@
 				<div class="col col-12 col-lg-6">
 					<h3 class="text-center primary">{{ trans('general.speakers.short_bio') }}</h3>
 					<p class="text-justify">
-						{{ speaker.cv }}	
+						{{ speaker.bio }}	
 					</p>
 				</div>
 				<div class="col col-12 col-lg-6">
-					<h3 class="text-center primary">{{ trans('general.speakers.talk') }}: {{ speaker.talk }}</h3>
+					<h3 class="text-center primary">{{ trans('general.speakers.talk') }}: {{ speaker.talk_prev }}</h3>
 					<p class="text-justify">
-						{{ speaker.cv }}	
+						{{ speaker.talk_title }}	
 					</p>
 				</div>
 			</div>

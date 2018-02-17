@@ -13,18 +13,23 @@ class SpeakersSeeder extends Seeder
     {
         DB::table('speakers')->insert([
         	'name'=>json_encode([
-        		'en'=> 'John',
-        		'el'=> 'Γιάννης'
+        		'en'=> 'Michail Styllas',
+        		'el'=> 'Μιχάλης Στύλας'
         	]),
-        	'picture'=>'www.facebook.com',
-        	'description'=>json_encode([
-        		'en'=>'Random description',
-        		'el'=>'Περιγραφή'
+            'id'=>'styllas',
+            'img_src'=>'styllas.jpeg',
+        	'talk_title'=>json_encode([
+        		'en'=>'Everest, the end of chaos!',
+        		'el'=> 'Το τέλος του χάους στο everest!',
         	]),
-        	'talk'=>json_encode([
-        		'en'=>'Talk about universe',
-        		'el'=> 'Ομιλία για το σύμπαν',
-        	])
+            'talk_prev'=>json_encode([
+                'en'=>'Chaos is extreme weather, chaos is extreme love!',
+                'gr'=>'Χάος είναι ο ακραίος καιρός του έβερεστ, χάος είναι η αγάπη'
+            ]),
+            'bio'=>json_encode([
+                'en'=>'dede',
+                'gr'=>'δεδεδ'
+            ])
         ]);
     }
 }
