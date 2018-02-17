@@ -209,4 +209,8 @@ return [
 		'accept' => 'Accept',
 	],
 
+	'recaptcha' => [
+		'failed' => 'The reCAPTCHA check failed.'
+	],
+
 ];

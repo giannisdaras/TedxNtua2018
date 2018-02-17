@@ -211,4 +211,8 @@ return [
 		'accept' => 'Αποδοχή',
 	],
 
+	'recaptcha' => [
+		'failed' => 'Ο έλεγχος reCAPTCHA απέτυχε.',
+	],
+
 ];

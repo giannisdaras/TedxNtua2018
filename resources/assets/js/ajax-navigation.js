@@ -45,6 +45,9 @@ $(document).ready(function(){
 
 		}
 
+		grecaptcha.reset()
+		grecaptcha.render("#recaptcha", {}, true)
+
 	})
 
 })

@@ -11,10 +11,9 @@ $(document).ready(function(){
 		$(".error").removeClass("error")
 
 		if(grecaptcha.getResponse() == '') {
+			$(".g-recaptcha").addClass("error")
 			return false;
 		}
-
-		console.log($("#contactForm").serialize())
 
 		$.ajax({
 
@@ -28,6 +27,7 @@ $(document).ready(function(){
 						$(".success-container").fadeIn()
 					})
 				}
+				grecaptcha.reset()
 			},
 			error: function(xhr, textStatus, error) {
 				for (var err in xhr.responseJSON.errors) {
@@ -41,6 +41,7 @@ $(document).ready(function(){
 					})
 				}
 				$(".form-control.error").first().focus()
+				grecaptcha.reset()
 			}
 
 		})

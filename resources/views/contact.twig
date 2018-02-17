@@ -5,9 +5,6 @@
 {% block description -%}
 	{{ trans('general.contact.description') }}
 {%- endblock %}
-{% block scripts -%}
-	<script class="pjax" src="https://www.google.com/recaptcha/api.js" async defer></script>
-{%- endblock %}
 {% block content %}
 		<article class="contact">
 			<section class="heading">
@@ -42,8 +39,6 @@
 						<div class="col col-12 col-lg-9">	
 							<form id="contactForm" action="{{ getLocalizedURL(getLocale()) }}" method="POST">
 								{{ csrf_field() }}
-								<input type="hidden" class="hiddenRecaptcha required" name="hiddenRecaptcha" id="hiddenRecaptcha">
-								<div class="g-recaptcha" data-sitekey="6LcO8UYUAAAAAEuBEADUptApNMMI0q9u64CZOwqU"></div>
 								<div class="form-group">
 									<label for="name">{{ trans('general.contact.form.name') }}</label>
 									<input type="text" name="name" class="form-control" id="name" aria-describedby="nameHelp" placeholder="{{ trans('general.contact.form.name_ph') }}" required>
@@ -66,6 +61,11 @@
 									<label for="message">{{ trans('general.contact.form.message') }}</label>
 									<textarea class="form-control" name="message" rows="5" id="message" required></textarea>
 									<small id="messageHelp" class="form-text text-muted"></small>
+								</div>
+
+								<div class="form-group">
+									<div id="recaptcha" class="g-recaptcha" data-sitekey="{{ env('GOOGLE_RECAPTCHA_KEY') }}"></div>
+									<small id="g-recaptcha-responseHelp" class="form-text text-muted"></small>
 								</div>
 
 								<div class="form-group mt-5 mt-lg-0 text-center text-lg-left">

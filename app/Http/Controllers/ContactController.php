@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Rules\Recaptcha;
 use Mail;
 use LaravelLocalization;
 
@@ -19,8 +20,11 @@ class ContactController extends Controller {
 
 	// post method to submit form
 	public function submit(Request $request) {
+		https://www.google.com/recaptcha/api/siteverify
+
 		$this->validate($request, [
 			'email' => 'required|email',
+			'g-recaptcha-response' => ['required', new Recaptcha],
 			'subject' => 'min:3',
 			'message' => 'min:10',
 			'name' => 'min:3',
