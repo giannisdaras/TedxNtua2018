@@ -807,80 +807,6 @@ article.about {
 
 /* END ABOUT PAGE */
 
-/* BLOG PAGE */
-
-article.blog {
-	section.content {
-		max-width: 960px;
-	}
-	.row {
-		margin-bottom: 1rem;
-		margin-top: 1rem;
-	}
-}
-
-/* global blog post link styles */
-
-.blog-listing {
-	column-count: 1;
-}
-
-/* add selectors to increase precedence */
-.blog-listing a.blog-link {
-	display: block;
-	position: relative;
-	margin-bottom: .75rem;
-	.card {
-		background: rgba(255, 255, 255, 0.5);
-		margin-bottom: 0;
-	}
-	.card-img-wrapper {
-		height: 240px;
-		color: white;
-		position: relative;
-		text-shadow: 0 3px 2px rgba(0, 0, 0, 0.8), 0 5px 9px rgba(0, 0, 0, 0.2);
-		border-radius: calc(0.25rem - 1px);
-	}
-	.card-body {
-		color: $brand-secondary;
-		font-size: .9em;
-	}
-	.card-img-top {
-		height: 280px;
-	}
-	.card-img {
-		object-fit: cover;
-		height: 240px;
-		transition: transform .5s;
-		border-radius: calc(0.25rem - 1px);
-	}
-	.card-img-overlay {
-		display: flex;
-		justify-content: flex-end;
-		flex-flow: column nowrap;
-		height: 100%;
-	}
-	.card-img-overlay h3 {
-		font-size: 1.5em;
-		font-weight: 500;
-		line-height: 1;
-	}
-	.card-img-overlay h5 {
-		font-size: 1em;
-		font-weight: normal;
-		line-height: 1;
-	}
-}
-article .blog-listing a.blog-link:hover .card-img {
-	/*
-		hover + overflow hidden
-		is buggy, needs fix
-	transform: scale(1.05);
-	*/
-}
-
-/* END BLOG PAGE */
-
 /* SPEAKER PAGE */
 
 article.speakers {
@@ -1073,6 +999,12 @@ article.contact {
 
 	small.error {
 		color: $brand-primary !important;
+	}
+
+	.g-recaptcha.error > div {
+		box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px rgba(0,0,0,0);
+		border: 1px solid $brand-primary;
+		border-radius: 4px;
 	}
 
 }

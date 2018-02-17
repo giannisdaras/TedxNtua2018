@@ -13775,101 +13775,6 @@ article.about p {
 
 /* END ABOUT PAGE */
 
-/* BLOG PAGE */
-
-article.blog section.content {
-  max-width: 960px;
-}
-
-article.blog .row {
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-}
-
-/* global blog post link styles */
-
-.blog-listing {
-  -webkit-column-count: 1;
-          column-count: 1;
-}
-
-/* add selectors to increase precedence */
-
-.blog-listing a.blog-link {
-  display: block;
-  position: relative;
-  margin-bottom: .75rem;
-}
-
-.blog-listing a.blog-link .card {
-  background: rgba(255, 255, 255, 0.5);
-  margin-bottom: 0;
-}
-
-.blog-listing a.blog-link .card-img-wrapper {
-  height: 240px;
-  color: white;
-  position: relative;
-  text-shadow: 0 3px 2px rgba(0, 0, 0, 0.8), 0 5px 9px rgba(0, 0, 0, 0.2);
-  border-radius: calc(0.25rem - 1px);
-}
-
-.blog-listing a.blog-link .card-body {
-  color: #222222;
-  font-size: .9em;
-}
-
-.blog-listing a.blog-link .card-img-top {
-  height: 280px;
-}
-
-.blog-listing a.blog-link .card-img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 240px;
-  -webkit-transition: -webkit-transform .5s;
-  transition: -webkit-transform .5s;
-  transition: transform .5s;
-  transition: transform .5s, -webkit-transform .5s;
-  border-radius: calc(0.25rem - 1px);
-}
-
-.blog-listing a.blog-link .card-img-overlay {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  height: 100%;
-}
-
-.blog-listing a.blog-link .card-img-overlay h3 {
-  font-size: 1.5em;
-  font-weight: 500;
-  line-height: 1;
-}
-
-.blog-listing a.blog-link .card-img-overlay h5 {
-  font-size: 1em;
-  font-weight: normal;
-  line-height: 1;
-}
-
-article .blog-listing a.blog-link:hover .card-img {
-  /*
-		hover + overflow hidden
-		is buggy, needs fix
-	transform: scale(1.05);
-	*/
-}
-
-/* END BLOG PAGE */
-
 /* SPEAKER PAGE */
 
 article.speakers .col {
@@ -14088,6 +13993,13 @@ article.contact .success-container p.big i {
 
 article.contact small.error {
   color: #E62B1E !important;
+}
+
+article.contact .g-recaptcha.error > div {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px transparent;
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px transparent;
+  border: 1px solid #E62B1E;
+  border-radius: 4px;
 }
 
 /* END CONTACT PAGE */
