@@ -794,6 +794,10 @@ window.WOW = new WOW.WOW({ live: false });
 
 window.WOW.init();
 
+// Team Tooltips
+
+require('./team.js');
+
 /* DISABLE Vue.js until it is needed
 
 window.Vue = require('vue');
