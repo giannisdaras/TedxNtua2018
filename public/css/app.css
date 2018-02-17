@@ -3205,7 +3205,7 @@ body {
   line-height: 1.6;
   color: #212529;
   text-align: left;
-  background-color: white;
+  background-color: #fafafa;
 }
 
 [tabindex="-1"]:focus {
@@ -3659,7 +3659,7 @@ mark,
 
 .img-thumbnail {
   padding: 0.25rem;
-  background-color: white;
+  background-color: #fafafa;
   border: 1px solid #ddd;
   border-radius: 0.25rem;
   -webkit-transition: all 0.2s ease-in-out;
@@ -5039,7 +5039,7 @@ pre code {
 }
 
 .table .table {
-  background-color: white;
+  background-color: #fafafa;
 }
 
 .table-sm th,
@@ -5205,7 +5205,7 @@ pre code {
 }
 
 .table .thead-dark th {
-  color: white;
+  color: #fafafa;
   background-color: #212529;
   border-color: #32383e;
 }
@@ -5217,7 +5217,7 @@ pre code {
 }
 
 .table-dark {
-  color: white;
+  color: #fafafa;
   background-color: #212529;
 }
 
@@ -6971,8 +6971,8 @@ tbody.collapse.show {
 }
 
 .custom-control-input:focus ~ .custom-control-indicator {
-  -webkit-box-shadow: 0 0 0 1px white, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-          box-shadow: 0 0 0 1px white, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  -webkit-box-shadow: 0 0 0 1px #fafafa, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+          box-shadow: 0 0 0 1px #fafafa, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 .custom-control-input:active ~ .custom-control-indicator {
@@ -7211,8 +7211,8 @@ tbody.collapse.show {
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
   color: #495057;
-  background-color: white;
-  border-color: #ddd #ddd white;
+  background-color: #fafafa;
+  border-color: #ddd #ddd #fafafa;
 }
 
 .nav-tabs .dropdown-menu {
@@ -13726,7 +13726,7 @@ article:not(.home) .grid-image.hover-zoom:hover {
 
 article.about {
   background-image: url("/images/backgrounds/pixels.svg");
-  background-size: contain;
+  background-size: 100% auto;
   background-repeat: repeat-y;
 }
 

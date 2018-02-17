@@ -764,8 +764,9 @@ article:not(.home) {
 /* ABOUT PAGE */
 article.about {
 	background-image: url("/images/backgrounds/pixels.svg");
-	background-size: contain;
+	background-size: 100% auto;
 	background-repeat: repeat-y;
+	
 
 	section.content {
 		max-width: 1200px;
