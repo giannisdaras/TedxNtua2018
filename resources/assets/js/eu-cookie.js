@@ -32,11 +32,13 @@ $(document).ready(function(){
 
 	if(readCookie("cookiePrompt") != "on") {
 		$(".cookie-bar").show()
+		$("footer").css("margin-bottom", $(".cookie-bar").outerHeight() + "px")
 	}
 	$("#accept-cookies").on("click", function(e){
 		e.preventDefault()
 		createCookie("cookiePrompt", "on", 60)
 		$(".cookie-bar").fadeOut()
+		$("footer").css("margin-bottom", 0)
 	})
 
 })
