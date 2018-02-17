@@ -116,7 +116,8 @@ return [
             // 'TwigBridge\Extension\Laravel\Html',
             // 'TwigBridge\Extension\Laravel\Legacy\Facades',
 
-            'App\TwigLocaleHelper'
+            'App\TwigLocaleHelper',
+            'App\TwigEnvHelper',
         ],
 
         /*
