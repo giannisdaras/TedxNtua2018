@@ -37609,6 +37609,8 @@ $(document).ready(function () {
 
 			$("header.home").removeClass("home");
 		}
+
+		grecaptcha.reset();
 	});
 });
 
@@ -37672,6 +37674,7 @@ $(document).ready(function () {
 						$(".success-container").fadeIn();
 					});
 				}
+				grecaptcha.reset();
 			},
 			error: function error(xhr, textStatus, _error) {
 				var _loop = function _loop() {
@@ -37691,6 +37694,7 @@ $(document).ready(function () {
 					_loop();
 				}
 				$(".form-control.error").first().focus();
+				grecaptcha.reset();
 			}
 
 		});
