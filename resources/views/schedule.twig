@@ -6,9 +6,10 @@
 	{{ trans('general.schedule.description') }}
 {%- endblock %}
 {% block content %}
+
 		<article class="schedule">
 			<section class="heading">
-				<h1>{{ trans('general.schedule.title') }}</h1>
+				<h1>{{trans('general.schedule.title') }}</h1>
 			</section>
 	
 			<section class="content">
@@ -54,14 +55,14 @@
 
 										<td class="event">
 											<div class="cell-content media">
-												{%- if event.image %}
+												{%- if event.img_src %}
 
-												<img class="align-self-center mr-3" src="{{ event.image }}" alt="" />
+												<img class="align-self-center mr-3" src="/images/schedule/{{event.img_src }}" alt="" />
 												{%- endif %}
 
 												<div class="media-body">
 													<h5>
-														{{ event.title|raw }}
+														{{ event.event_title|raw }}
 													</h5>
 													{%- if event.subtitle %}
 
@@ -83,7 +84,7 @@
 										</td>
 										<td>
 											<div class="cell-content collapse talks-row-{{ "%02d" | format(loop.index) }}">
-												<div class="more">{{ event.more|raw }}</div>
+												<div class="more">{{ event.event_prev[getLocale()]|raw }}</div>
 											</div>
 										</td>
 									</tr>
@@ -119,21 +120,22 @@
 										</td>
 									{%- set event = row.events[1] %}
 
+
 										<td class="event">
 											<div class="cell-content media">
-												{%- if event.image %}
+												{%- if event.img_src %}
 
-												<img class="align-self-center mr-3" src="{{ event.image }}" alt="" />
+												<img class="align-self-center mr-3" src="/images/schedule/{{event.img_src }}" alt="" />
 												{%- endif %}
 
 												<div class="media-body">
 													<h5>
-														{{ event.title|raw }}
+														{{ event.event_title[getLocale()] |raw }}
 													</h5>
-													{%- if event.subtitle %}
+													{%- if event.subtitle[getLocale()] %}
 
 													<h6>
-														{{ event.subtitle }}
+														{{ event.subtitle[getLocale()] }}
 													</h6>
 													{%- endif %}
 
@@ -150,7 +152,7 @@
 										</td>
 										<td>
 											<div class="cell-content collapse performances-row-{{ "%02d" | format(loop.index) }}">
-												<div class="more">{{ event.more|raw }}</div>
+												<div class="more">{{ event.event_prev[getLocale()]|raw }}</div>
 											</div>
 										</td>
 									</tr>
@@ -186,21 +188,22 @@
 										</td>
 									{%- set event = row.events[2] %}
 
+
 										<td class="event">
 											<div class="cell-content media">
-												{%- if event.image %}
+												{%- if event.img_src %}
 
-												<img class="align-self-center mr-3" src="{{ event.image }}" alt="" />
+												<img class="align-self-center mr-3" src="/images/schedule/{{event.img_src }}" alt="" />
 												{%- endif %}
 
 												<div class="media-body">
 													<h5>
-														{{ event.title|raw }}
+														{ event.event_title[getLocale()]|raw }}
 													</h5>
-													{%- if event.subtitle %}
+													{%- if event.subtitle[getLocale()] %}
 
 													<h6>
-														{{ event.subtitle }}
+														{{ event.subtitle[getLocale()] }}
 													</h6>
 													{%- endif %}
 
@@ -217,7 +220,7 @@
 										</td>
 										<td>
 											<div class="cell-content collapse workshops-row-{{ "%02d" | format(loop.index) }}">
-												<div class="more">{{ event.more|raw }}</div>
+												<div class="more">{{ event.event_prev[getLocale()]|raw }}</div>
 											</div>
 										</td>
 									</tr>
@@ -262,19 +265,19 @@
 								{%- if not event.empty %}
 
 								<div class="cell-content media">
-									{%- if event.image %}
+									{%- if event.img_src %}
 
-									<img class="align-self-center mr-3" src="{{ event.image }}" alt="" />
+									<img class="align-self-center mr-3" src="/images/schedule/{{event.img_src }}" alt="" />
 									{%- endif %}
 
 									<div class="media-body">
 										<h5>
-											{{ event.title|raw }}
+											{{ event.event_title[getLocale()]|raw }}
 										</h5>
-										{%- if event.subtitle %}
+										{%- if event.subtitle[getLocale()]|raw %}
 
 										<h6>
-											{{ event.subtitle }}
+											{{ event.subtitle[getLocale()]|raw}}
 										</h6>
 										{%- endif %}
 
@@ -300,7 +303,7 @@
 
 							<td>
 								<div class="cell-content collapse row-{{ "%02d" | format(loop.parent.loop.index) }}">
-									<div class="more">{{ event.more|raw }}</div>
+									<div class="more">{{ event.event_prev[getLocale()]|raw }}</div>
 								</div>
 							</td>
 						{%- endfor %}
