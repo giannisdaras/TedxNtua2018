@@ -37655,6 +37655,12 @@ $(document).ready(function () {
 
 		$(".error").removeClass("error");
 
+		if (grecaptcha.getResponse() == '') {
+			return false;
+		}
+
+		console.log($("#contactForm").serialize());
+
 		$.ajax({
 
 			type: "POST",

@@ -5,6 +5,9 @@
 {% block description -%}
 	{{ trans('general.contact.description') }}
 {%- endblock %}
+{% block scripts -%}
+	<script class="pjax" src="https://www.google.com/recaptcha/api.js" async defer></script>
+{%- endblock %}
 {% block content %}
 		<article class="contact">
 			<section class="heading">
@@ -39,6 +42,8 @@
 						<div class="col col-12 col-lg-9">	
 							<form id="contactForm" action="{{ getLocalizedURL(getLocale()) }}" method="POST">
 								{{ csrf_field() }}
+								<input type="hidden" class="hiddenRecaptcha required" name="hiddenRecaptcha" id="hiddenRecaptcha">
+								<div class="g-recaptcha" data-sitekey="6LcO8UYUAAAAAEuBEADUptApNMMI0q9u64CZOwqU"></div>
 								<div class="form-group">
 									<label for="name">{{ trans('general.contact.form.name') }}</label>
 									<input type="text" name="name" class="form-control" id="name" aria-describedby="nameHelp" placeholder="{{ trans('general.contact.form.name_ph') }}" required>
