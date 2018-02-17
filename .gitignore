@@ -29,3 +29,4 @@ Homestead.json
 # FUSE Hidden files
 .fuse_hidden*
 
+secret.md

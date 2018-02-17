@@ -46,8 +46,8 @@ return [
 		'description' => '',
 		'hero' => [
 			'date' => 'March 24, 2018',
-			'venue' => 'Athens Conservatoire',
-			'address' => '17-19 Rigillis & Vas. Georgiou B',
+			'venue' => 'Eugenides Planetarium',
+			'address' => '387 Andrea Syggrou Av.',
 			'tickets' => 'Get your tickets now',
 		],
 		'sections' => [
@@ -78,7 +78,7 @@ return [
 			],
 			'map' => [
 				'title' => 'Map & Venue',
-				'desc' => 'TEDxNTUA 2018 will take place at the Athens Conservatoire. The Conservatoire is located at 17-19 Rigillis &amp; Vasileos Georgiou B street, just under 10 minutes on foot from <strong>Evangelismos</strong> subway station.',
+				'desc' => 'TEDxNTUA 2018 will take place at the Eugenides Planetarium. The Planetarium is located at 387 Syggrou Avenue, just under 7 minutes on foot from the nearest bus station.',
 			],
 		],
 	],
@@ -191,6 +191,22 @@ return [
 			'message' => 'Message',
 			'submit' => 'Send',
 		],
+		'msg' => [
+			'success' => 'Your e-mail was sent successfully! We\'ll get back to you shortly.',
+			'failure' => 'Your e-mail could not be sent through the form. Please try e-mailing us on info@tedxntua.com :)',
+		],
+		'return' => 'Return to the form',
+	],
+
+	/* PRIVACY */
+	'privacy' => [
+		'title' => 'Privacy Policy',
+		'description' => '',
+	],
+
+	'cookies' => [
+		'description' => 'We use cookies to ensure you get the best experience. <a href="/privacy">Learn more</a>.',
+		'accept' => 'Accept',
 	],
 
 ];

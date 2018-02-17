@@ -11,22 +11,60 @@
 	<section class="heading">
 		<h1>{{ trans('general.speakers.title') }}</h1>
 	</section>
-
 	<section class="content">
+	
+	{% for key, speaker in speakers %}
 
-		<div class="container-fluid text-center">
-			<div class="row">
-				<div class='col-3'>
-					<a href="/speakers/jobs">
-						<img src="https://pi.tedcdn.com/r/pe.tedcdn.com/images/ted/0ef62e4df27b4ba7294de889fdbc33e476a08ec9_254x191.jpg?" width="200" height="200" class="rounded-circle wow bounceInRight"></a>
-					</a>
-				</div>	
+		<div id="{{ speaker.id }}" class="container-fluid">
+
+			<div class="row text-center text-lg-left">
+				<div class="col col-12 col-lg-3 wow bounceInLeft">
+					<img src="{{ speaker.img_src }}" width="200" height="200" class="rounded-circle wow bounceInLeft">
+				</div>
+
+				<div class="col col-12 col-lg-9 wow bounceInRight">
+					<h2>{{ speaker.name }}</h2>
+					<ul class="social-links list-inline">
+						<li class="list-inline-item">
+							<a href="https://skype.com"><i class="fa fa-skype fa-2x" aria-hidden="true"></i></a>
+						</li>
+						<li class="list-inline-item">
+							<a href="https://twitter.com"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+						</li>
+					</ul>	 
+				</div>
+			</div>
+
+			<div class="row info wow bounceInUp">
+				<div class="col col-12 col-lg-6">
+					<h3 class="text-center primary">{{ trans('general.speakers.short_bio') }}</h3>
+					<p class="text-justify">
+						{{ speaker.cv }}	
+					</p>
+				</div>
+				<div class="col col-12 col-lg-6">
+					<h3 class="text-center primary">{{ trans('general.speakers.talk') }}: {{ speaker.talk }}</h3>
+					<p class="text-justify">
+						{{ speaker.cv }}	
+					</p>
+				</div>
+			</div>
+
+		</div>
+
+	{% endfor %}	
+
+		<div class="container-fluid">
+			<div class="row text-center text-lg-center">
+				<div class="col col-12 col-lg-12 wow bounceInRight">
+					<p class="back">
+						<a href="/#speakers"><i class="fa fa-chevron-circle-left fa-1x" aria-hidden="true"></i> {{ trans('general.speakers.back') }}</a>
+					</p>
+				</div>
 			</div>
 		</div>
 
 	</section>
 </article>
-
-
 
 {% endblock %}

@@ -17,10 +17,10 @@ class HomeController extends Controller {
 
 		$isPjax = $request->header('X-PJAX');
 		if ($isPjax) {
-			return response()->view('home', compact('isPjax'), 200)
+			return response()->view('home', compact('isPjax', 'speakers'), 200)
 				->header('X-PJAX-URL', LaravelLocalization::getLocalizedURL());
 		}
-		return view('home', ['speakers' => $speakers]);
+		return view('home', compact('speakers'));
 	}
 
 }

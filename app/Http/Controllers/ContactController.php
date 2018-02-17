@@ -33,14 +33,26 @@ class ContactController extends Controller {
 			'sender' => $request->name,
 		);
 
-		Mail::send('emails.contact', $data, function ($message) use ($data) {
-			$message->from($data['email']);
-			$message->sender($data['sender']);
-			$message->to('info@tedxntua.com');
-			$message->subject($data['subject']);
-		});
+		try {
+			Mail::send('emails.contact', $data, function ($message) use ($data) {
+				$message->from($data['email'], $data['sender']);
+				$message->to('info@tedxntua.com');
+				$message->subject($data['subject']);
+			});
+		} catch(\Exception $e) {
+			return response()->json([
+				'errors' => [
+					'submit' => [trans('general.contact.msg.failure')],
+				]
+			], 422);
+		}
 
-		Session::flash('success', 'Your Email was Sent!');
+		if($request->ajax()) {
+			return response()->json([
+				'status' => 'success',
+				'message' => trans('general.contact.msg.success'),
+			]);
+		}
 
 		return redirect()->url('/');
 	}
