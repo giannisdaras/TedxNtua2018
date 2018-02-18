@@ -1,3 +1,4 @@
+from multiprocessing import Pool
 import cv2
 import numpy as np
 import glob
@@ -11,7 +12,7 @@ percent = 0.5
 img_list = glob.glob('*.jpg')
 
 
-for img_file in img_list:
+def mutate(img_file):
     img = cv2.imread(img_file)
     h, w = img.shape[:2]
     cx, cy = w / 2, h / 2
@@ -19,5 +20,11 @@ for img_file in img_list:
     resized = cv2.resize(cropped, (0,0), fx = percent, fy = percent )
     try:
         res = cv2.imwrite('{}{}'.format(img_dest, img_file), resized)
+        print('Success in {}'.format(img_file))
     except:
         print('Error in {}'.format(img_file))
+
+
+
+pool = Pool(5)
+pool.map(mutate, img_list)
