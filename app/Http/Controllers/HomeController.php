@@ -3,24 +3,38 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use LaravelLocalization;
+use App\Speaker;
 
 class HomeController extends Controller {
 
 	public function index(Request $request) {
-		// $speakers = DB::table('speakers')->get();
+		$speakers = Speaker::all();
 
-		$data['name'] = 'Big Shaq';
-		$data['short_description'] = "Enterpreneur computer engineer and white hat hacker";
-		$data['id'] = 'jobs';
-		$data['img_src'] = 'https://i1.sndcdn.com/artworks-000241864958-t7ad44-t500x500.jpg';
-		$speakers = array($data, $data, $data);
+		$sessions = [
+			['from' => '10:30', 'to' => '12:30'],
+			['from' => '13:00', 'to' => '15:00'],
+			['from' => '15:30', 'to' => '17:30']
+		];
+
+		/* Contains three arrays, one for each session */
+		$speakersBySession = [[], [], []];
+
+		foreach($speakers as $speaker) {
+			$talk = $speaker->talk;
+			foreach($sessions as $i => $session) {
+				if($talk->hour >= $session['from'] && $talk->hour <= $session['to']) {
+					$speakersBySession[$i][] = $speaker;
+					break;
+				}
+			}
+		}
 
 		$isPjax = $request->header('X-PJAX');
 		if ($isPjax) {
-			return response()->view('home', compact('isPjax', 'speakers'), 200)
+			return response()->view('home', compact('isPjax', 'sessions', 'speakersBySession'), 200)
 				->header('X-PJAX-URL', LaravelLocalization::getLocalizedURL());
 		}
-		return view('home', compact('speakers'));
+		return view('home', compact('sessions', 'speakersBySession'));
 	}
 
 }

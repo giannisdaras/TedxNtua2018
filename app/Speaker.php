@@ -7,7 +7,12 @@ use Spatie\Translatable\HasTranslations;
 
 class Speaker extends Model
 {
-	// other fields: id,img_src
+	// other fields: id,img_src,schedule_id;
     use HasTranslations;
-	public $translatable = ['name','talk_title','talk_prev','bio'];
+	public $translatable = ['name','bio'];
+	public $timestamps = false;
+
+	public function talk() {
+		return $this->hasOne('App\Schedule');
+	}
 }
