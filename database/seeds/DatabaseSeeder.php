@@ -11,7 +11,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        /* Speakers are seeded through the Schedule seeder */
         $this->call(ScheduleSeeder::class);
-        $this->call(SpeakersSeeder::class);
     }
 }
