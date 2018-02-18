@@ -5,7 +5,8 @@ use Illuminate\Database\Seeder;
 class ScheduleSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * Seeder for both schedule events AND speakers
+     * since speakers need to be binded to the talks
      *
      * @return void
      */
