@@ -15,7 +15,7 @@
 	
 	{% for key, speaker in speakers %}
 
-		<div id="{{ speaker.id }}" class="container-fluid">
+		<div id="{{ speaker.sid }}" class="container-fluid">
 
 			<div class="row text-center text-lg-left">
 				<div class="col col-12 col-lg-3 wow bounceInLeft">
@@ -43,9 +43,9 @@
 					</p>
 				</div>
 				<div class="col col-12 col-lg-6">
-					<h3 class="text-center primary">{{ trans('general.speakers.talk') }}: {{ speaker.talk_prev }}</h3>
+					<h3 class="text-center primary">{{ trans('general.speakers.talk') }}: {{ speaker.talk.event_prev }}</h3>
 					<p class="text-justify">
-						{{ speaker.talk_title }}	
+						{{ speaker.talk.subtitle }}	
 					</p>
 				</div>
 			</div>

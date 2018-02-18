@@ -40,13 +40,15 @@ $(document).ready(function(){
 			$("body > header").addClass("home")
 
 		} else {
-	
+
 			$("header.home").removeClass("home")
 
 		}
 
-		grecaptcha.reset()
-		grecaptcha.render("#recaptcha", {}, true)
+		if($("article.contact").length > 0) {
+			grecaptcha.render("recaptcha", {}, true)
+			grecaptcha.reset()
+		}
 
 	})
 

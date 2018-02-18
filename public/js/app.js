@@ -37610,8 +37610,15 @@ $(document).ready(function () {
 			$("header.home").removeClass("home");
 		}
 
+<<<<<<< HEAD
 		grecaptcha.reset();
 		grecaptcha.render("#recaptcha", {}, true);
+=======
+		if ($("article.contact").length > 0) {
+			grecaptcha.render("recaptcha", {}, true);
+			grecaptcha.reset();
+		}
+>>>>>>> 88a8177db5edf72506867a352ffef0c381931a6f
 	});
 });
 
@@ -37764,7 +37771,10 @@ $(document).ready(function () {
 
 	if (readCookie("cookiePrompt") != "on") {
 		$(".cookie-bar").show();
-		$("footer").css("margin-bottom", $(".cookie-bar").outerHeight() + "px");
+		$("footer").addClass("cookieMargin").css("margin-bottom", $(".cookie-bar").outerHeight() + "px");
+		$(window).on("resize", _.debounce(function () {
+			$("footer.cookieMargin").css("margin-bottom", $(".cookie-bar").outerHeight() + "px");
+		}));
 	}
 	$("#accept-cookies").on("click", function (e) {
 		e.preventDefault();

@@ -59,9 +59,9 @@ class ScheduleController extends Controller {
 
 	public function index(Request $request) {
 		$mdl=new Schedule();
-		$talks=$mdl::where('type','=','talk')->get()->toArray();
-		$performances=$mdl::where('type','=','performance')->get()->toArray();
-		$workshops=$mdl::where('type','=','workshop')->get()->toArray();
+		$talks=$mdl::where('type','=','talk')->orderBy('hour', 'asc')->get()->toArray();
+		$performances=$mdl::where('type','=','performance')->orderBy('hour', 'asc')->get()->toArray();
+		$workshops=$mdl::where('type','=','workshop')->orderBy('hour', 'asc')->get()->toArray();
 		$schedule=compact('talks', 'performances', 'workshops');
 
 		$rows = $this->convertToTable($schedule);

@@ -62,7 +62,7 @@
 
 												<div class="media-body">
 													<h5>
-														{{ event.event_title|raw }}
+														{{ event.event_title_link | raw }}
 													</h5>
 													{%- if event.subtitle %}
 
@@ -84,7 +84,7 @@
 										</td>
 										<td>
 											<div class="cell-content collapse talks-row-{{ "%02d" | format(loop.index) }}">
-												<div class="more">{{ event.event_prev[getLocale()]|raw }}</div>
+												<div class="more">{{ event.event_prev | raw }}</div>
 											</div>
 										</td>
 									</tr>
@@ -130,12 +130,12 @@
 
 												<div class="media-body">
 													<h5>
-														{{ event.event_title[getLocale()] |raw }}
+														{{ event.event_title_link | raw }}
 													</h5>
-													{%- if event.subtitle[getLocale()] %}
+													{%- if event.subtitle %}
 
 													<h6>
-														{{ event.subtitle[getLocale()] }}
+														{{ event.subtitle }}
 													</h6>
 													{%- endif %}
 
@@ -152,7 +152,7 @@
 										</td>
 										<td>
 											<div class="cell-content collapse performances-row-{{ "%02d" | format(loop.index) }}">
-												<div class="more">{{ event.event_prev[getLocale()]|raw }}</div>
+												<div class="more">{{ event.event_prev | raw }}</div>
 											</div>
 										</td>
 									</tr>
@@ -198,12 +198,12 @@
 
 												<div class="media-body">
 													<h5>
-														{ event.event_title[getLocale()]|raw }}
+														{{ event.event_title_link_link | raw }}
 													</h5>
-													{%- if event.subtitle[getLocale()] %}
+													{%- if event.subtitle %}
 
 													<h6>
-														{{ event.subtitle[getLocale()] }}
+														{{ event.subtitle }}
 													</h6>
 													{%- endif %}
 
@@ -220,7 +220,7 @@
 										</td>
 										<td>
 											<div class="cell-content collapse workshops-row-{{ "%02d" | format(loop.index) }}">
-												<div class="more">{{ event.event_prev[getLocale()]|raw }}</div>
+												<div class="more">{{ event.event_prev | raw }}</div>
 											</div>
 										</td>
 									</tr>
@@ -272,12 +272,12 @@
 
 									<div class="media-body">
 										<h5>
-											{{ event.event_title[getLocale()]|raw }}
+											{{ event.event_title_link | raw }}
 										</h5>
-										{%- if event.subtitle[getLocale()]|raw %}
+										{%- if event.subtitle %}
 
 										<h6>
-											{{ event.subtitle[getLocale()]|raw}}
+											{{ event.subtitle | raw}}
 										</h6>
 										{%- endif %}
 
@@ -303,7 +303,7 @@
 
 							<td>
 								<div class="cell-content collapse row-{{ "%02d" | format(loop.parent.loop.index) }}">
-									<div class="more">{{ event.event_prev[getLocale()]|raw }}</div>
+									<div class="more">{{ event.event_prev | raw }}</div>
 								</div>
 							</td>
 						{%- endfor %}

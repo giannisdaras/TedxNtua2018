@@ -51,6 +51,17 @@ return [
 			'tickets' => 'Get your tickets now',
 		],
 		'sections' => [
+			'sessions' => [
+				[
+					'title' => 'Session 1: Initial Conditions',
+				],
+				[
+					'title' => 'Session 2: Observation',
+				],
+				[
+					'title' => 'Session 3: Creating Order'
+				],
+			],
 			'schedule' => [
 				'title' => 'Schedule',
 				'desc' => 'The very essence of a TEDx event is its medley of <strong>talks</strong>, <strong>performances</strong> and <strong>workshops</strong>. Discover the topics that will be explored and join us in a journey of Chaos.',
@@ -73,8 +84,9 @@ return [
 			],
 			'sponsors' => [
 				'title' => 'Sponsors',
-				'desc' => 'Our event would not have been po,ssible without the support from organizations that share our <strong>values</strong> and <strong>visions</strong>. Visit their websites and learn more about them. Our largest sponsors are listed below.',
+				'desc' => 'Our event would not have been possible without the support from organizations that share our <strong>values</strong> and <strong>visions</strong>. Visit their websites and learn more about them. Of course, the most important supporter is our <strong>university</strong> itself.',
 				'calltoaction' => 'See all our sponsors',
+				'auspices' => 'Under the auspices of NTUA',
 			],
 			'map' => [
 				'title' => 'Map & Venue',

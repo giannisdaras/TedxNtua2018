@@ -32,7 +32,10 @@ $(document).ready(function(){
 
 	if(readCookie("cookiePrompt") != "on") {
 		$(".cookie-bar").show()
-		$("footer").css("margin-bottom", $(".cookie-bar").outerHeight() + "px")
+		$("footer").addClass("cookieMargin").css("margin-bottom", $(".cookie-bar").outerHeight() + "px")
+		$(window).on("resize", _.debounce(function() {
+			$("footer.cookieMargin").css("margin-bottom", $(".cookie-bar").outerHeight() + "px")
+		}))
 	}
 	$("#accept-cookies").on("click", function(e){
 		e.preventDefault()
