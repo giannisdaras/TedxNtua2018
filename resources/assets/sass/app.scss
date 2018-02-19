@@ -42,7 +42,7 @@ a {
 	display: inline-block; /*bug fix*/
 	position: relative;
 	text-decoration: none;
-	// padding-top: 0.35rem;
+	padding-top: 0.3rem;
 }
 [data-tooltip]:after {
 	content: attr(data-tooltip);

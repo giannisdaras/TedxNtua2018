@@ -12809,6 +12809,7 @@ a:hover {
   /*bug fix*/
   position: relative;
   text-decoration: none;
+  padding-top: 0.3rem;
 }
 
 [data-tooltip]:after {
