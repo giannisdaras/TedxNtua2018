@@ -182,6 +182,10 @@ return [
             'head',
             'last',
             'mix',
+            'active'=>[
+                'is_safe'=>['true']],
+            'is_active'=>[
+                'is_safe'=>['true']]
         ],
 
         /*
