@@ -118,6 +118,8 @@ return [
 
             'App\TwigLocaleHelper',
             'App\TwigEnvHelper',
+            new Jralph\Twig\Markdown\Extension(
+            new Jralph\Twig\Markdown\Parsedown\ParsedownExtraMarkdown),
         ],
 
         /*
