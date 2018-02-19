@@ -12816,7 +12816,7 @@ a:hover {
   font-size: 1rem;
   position: absolute;
   bottom: 0%;
-  left: 0%;
+  left: 50%;
   background: #222222;
   padding: 5px 15px;
   color: white;
@@ -12828,6 +12828,7 @@ a:hover {
   white-space: pre-wrap;
   text-align: justify;
   width: 70vw !important;
+  margin-left: -35vw;
 }
 
 [data-tooltip]:before {
@@ -12843,6 +12844,7 @@ a:hover {
   opacity: 0;
   left: 50%;
   bottom: 90%;
+  margin-left: -10px;
 }
 
 [data-tooltip]:hover:after {
@@ -14058,6 +14060,7 @@ article.contact .g-recaptcha.error > div {
 @media (min-width: 576px) {
   [data-tooltip]:after {
     width: 33vw !important;
+    margin-left: -16.5vw !important;
   }
 
   nav.navbar {

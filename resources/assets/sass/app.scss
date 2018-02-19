@@ -42,13 +42,14 @@ a {
 	display: inline-block; /*bug fix*/
 	position: relative;
 	text-decoration: none;
+	// padding-top: 0.35rem;
 }
 [data-tooltip]:after {
 	content: attr(data-tooltip);
 	font-size: 1rem;
 	position: absolute;
 	bottom: 0%;
-	left: 0%;
+	left: 50%;
 	background: $brand-secondary;
 	padding: 5px 15px;
 	color: white;
@@ -59,6 +60,8 @@ a {
 	white-space: pre-wrap;
 	text-align: justify;
 	width: 70vw !important;
+	margin-left: -35vw;
+
 }
 [data-tooltip]:before {
 	content: "";
@@ -72,6 +75,7 @@ a {
 	opacity: 0;
 	left: 50%;
 	bottom: 90%;
+	margin-left: - 10px;
 }
 [data-tooltip]:hover:after {
 	bottom: 100%;
@@ -767,6 +771,7 @@ article:not(.home) {
 		h2 {
 			font-weight: bold;
 			font-size: 2.5rem;
+
 		}
 		h3 {
 			font-weight: bold;
@@ -820,7 +825,7 @@ article.about {
 	background-image: url("/images/backgrounds/pixels.svg");
 	background-size: 100% auto;
 	background-repeat: repeat-y;
-	
+
 
 	section.content {
 		max-width: 1200px;
@@ -1056,9 +1061,15 @@ article.contact {
 }
 
 @include media-breakpoint-up(sm) {
+
 	[data-tooltip]:after {
 		width: 33vw !important;
+		margin-left: -16.5vw !important;
 	}
+
+	[data-tooltip]:before {
+	}
+
 	nav.navbar {
 		padding: .5rem 2rem;
 	}

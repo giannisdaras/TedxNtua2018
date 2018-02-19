@@ -71,7 +71,7 @@
 
 
 var bind = __webpack_require__(4);
-var isBuffer = __webpack_require__(20);
+var isBuffer = __webpack_require__(19);
 
 /*global toString:true*/
 
@@ -2827,7 +2827,7 @@ Popper.Defaults = Defaults;
 /* WEBPACK VAR INJECTION */(function(process) {
 
 var utils = __webpack_require__(0);
-var normalizeHeaderName = __webpack_require__(23);
+var normalizeHeaderName = __webpack_require__(22);
 
 var DEFAULT_CONTENT_TYPE = {
   'Content-Type': 'application/x-www-form-urlencoded'
@@ -2917,7 +2917,7 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 
 module.exports = defaults;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(22)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(21)))
 
 /***/ }),
 /* 3 */
@@ -2972,12 +2972,12 @@ module.exports = function bind(fn, thisArg) {
 
 
 var utils = __webpack_require__(0);
-var settle = __webpack_require__(24);
-var buildURL = __webpack_require__(26);
-var parseHeaders = __webpack_require__(27);
-var isURLSameOrigin = __webpack_require__(28);
+var settle = __webpack_require__(23);
+var buildURL = __webpack_require__(25);
+var parseHeaders = __webpack_require__(26);
+var isURLSameOrigin = __webpack_require__(27);
 var createError = __webpack_require__(6);
-var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(29);
+var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(28);
 
 module.exports = function xhrAdapter(config) {
   return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -3074,7 +3074,7 @@ module.exports = function xhrAdapter(config) {
     // This is only done if running in a standard browser environment.
     // Specifically not if we're in a web worker, or react-native.
     if (utils.isStandardBrowserEnv()) {
-      var cookies = __webpack_require__(30);
+      var cookies = __webpack_require__(29);
 
       // Add xsrf header
       var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -3158,7 +3158,7 @@ module.exports = function xhrAdapter(config) {
 "use strict";
 
 
-var enhanceError = __webpack_require__(25);
+var enhanceError = __webpack_require__(24);
 
 /**
  * Create an Error with the specified message, config, error code, request and response.
@@ -3219,7 +3219,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(10);
-module.exports = __webpack_require__(48);
+module.exports = __webpack_require__(47);
 
 
 /***/ }),
@@ -3232,20 +3232,20 @@ module.exports = __webpack_require__(48);
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
-var tether = __webpack_require__(11);
-var popper = __webpack_require__(1);
-var tooltip = __webpack_require__(12);
+// const tether = require('tether');
+// const popper = require('popper.js');
+// const tooltip = require('tooltip.js');
 
-__webpack_require__(13);
+__webpack_require__(12);
 
-var WOW = __webpack_require__(38);
+var WOW = __webpack_require__(37);
 window.WOW = new WOW.WOW({ live: false });
 
 window.WOW.init();
 
 /* INSTAFEED */
 
-var Instafeed = __webpack_require__(39);
+var Instafeed = __webpack_require__(38);
 
 var feed = new Instafeed({
 
@@ -3276,6 +3276,7 @@ const app = new Vue({
 });
 
 */
+__webpack_require__(39);
 __webpack_require__(40);
 __webpack_require__(41);
 __webpack_require__(42);
@@ -3283,2387 +3284,14 @@ __webpack_require__(43);
 __webpack_require__(44);
 __webpack_require__(45);
 __webpack_require__(46);
-__webpack_require__(47);
 
 /***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! tether 1.4.3 */
-
-(function(root, factory) {
-  if (true) {
-    !(__WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) :
-				__WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  } else if (typeof exports === 'object') {
-    module.exports = factory(require, exports, module);
-  } else {
-    root.Tether = factory();
-  }
-}(this, function(require, exports, module) {
-
-'use strict';
-
-var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-var TetherBase = undefined;
-if (typeof TetherBase === 'undefined') {
-  TetherBase = { modules: [] };
-}
-
-var zeroElement = null;
-
-// Same as native getBoundingClientRect, except it takes into account parent <frame> offsets
-// if the element lies within a nested document (<frame> or <iframe>-like).
-function getActualBoundingClientRect(node) {
-  var boundingRect = node.getBoundingClientRect();
-
-  // The original object returned by getBoundingClientRect is immutable, so we clone it
-  // We can't use extend because the properties are not considered part of the object by hasOwnProperty in IE9
-  var rect = {};
-  for (var k in boundingRect) {
-    rect[k] = boundingRect[k];
-  }
-
-  if (node.ownerDocument !== document) {
-    var _frameElement = node.ownerDocument.defaultView.frameElement;
-    if (_frameElement) {
-      var frameRect = getActualBoundingClientRect(_frameElement);
-      rect.top += frameRect.top;
-      rect.bottom += frameRect.top;
-      rect.left += frameRect.left;
-      rect.right += frameRect.left;
-    }
-  }
-
-  return rect;
-}
-
-function getScrollParents(el) {
-  // In firefox if the el is inside an iframe with display: none; window.getComputedStyle() will return null;
-  // https://bugzilla.mozilla.org/show_bug.cgi?id=548397
-  var computedStyle = getComputedStyle(el) || {};
-  var position = computedStyle.position;
-  var parents = [];
-
-  if (position === 'fixed') {
-    return [el];
-  }
-
-  var parent = el;
-  while ((parent = parent.parentNode) && parent && parent.nodeType === 1) {
-    var style = undefined;
-    try {
-      style = getComputedStyle(parent);
-    } catch (err) {}
-
-    if (typeof style === 'undefined' || style === null) {
-      parents.push(parent);
-      return parents;
-    }
-
-    var _style = style;
-    var overflow = _style.overflow;
-    var overflowX = _style.overflowX;
-    var overflowY = _style.overflowY;
-
-    if (/(auto|scroll|overlay)/.test(overflow + overflowY + overflowX)) {
-      if (position !== 'absolute' || ['relative', 'absolute', 'fixed'].indexOf(style.position) >= 0) {
-        parents.push(parent);
-      }
-    }
-  }
-
-  parents.push(el.ownerDocument.body);
-
-  // If the node is within a frame, account for the parent window scroll
-  if (el.ownerDocument !== document) {
-    parents.push(el.ownerDocument.defaultView);
-  }
-
-  return parents;
-}
-
-var uniqueId = (function () {
-  var id = 0;
-  return function () {
-    return ++id;
-  };
-})();
-
-var zeroPosCache = {};
-var getOrigin = function getOrigin() {
-  // getBoundingClientRect is unfortunately too accurate.  It introduces a pixel or two of
-  // jitter as the user scrolls that messes with our ability to detect if two positions
-  // are equivilant or not.  We place an element at the top left of the page that will
-  // get the same jitter, so we can cancel the two out.
-  var node = zeroElement;
-  if (!node || !document.body.contains(node)) {
-    node = document.createElement('div');
-    node.setAttribute('data-tether-id', uniqueId());
-    extend(node.style, {
-      top: 0,
-      left: 0,
-      position: 'absolute'
-    });
-
-    document.body.appendChild(node);
-
-    zeroElement = node;
-  }
-
-  var id = node.getAttribute('data-tether-id');
-  if (typeof zeroPosCache[id] === 'undefined') {
-    zeroPosCache[id] = getActualBoundingClientRect(node);
-
-    // Clear the cache when this position call is done
-    defer(function () {
-      delete zeroPosCache[id];
-    });
-  }
-
-  return zeroPosCache[id];
-};
-
-function removeUtilElements() {
-  if (zeroElement) {
-    document.body.removeChild(zeroElement);
-  }
-  zeroElement = null;
-};
-
-function getBounds(el) {
-  var doc = undefined;
-  if (el === document) {
-    doc = document;
-    el = document.documentElement;
-  } else {
-    doc = el.ownerDocument;
-  }
-
-  var docEl = doc.documentElement;
-
-  var box = getActualBoundingClientRect(el);
-
-  var origin = getOrigin();
-
-  box.top -= origin.top;
-  box.left -= origin.left;
-
-  if (typeof box.width === 'undefined') {
-    box.width = document.body.scrollWidth - box.left - box.right;
-  }
-  if (typeof box.height === 'undefined') {
-    box.height = document.body.scrollHeight - box.top - box.bottom;
-  }
-
-  box.top = box.top - docEl.clientTop;
-  box.left = box.left - docEl.clientLeft;
-  box.right = doc.body.clientWidth - box.width - box.left;
-  box.bottom = doc.body.clientHeight - box.height - box.top;
-
-  return box;
-}
-
-function getOffsetParent(el) {
-  return el.offsetParent || document.documentElement;
-}
-
-var _scrollBarSize = null;
-function getScrollBarSize() {
-  if (_scrollBarSize) {
-    return _scrollBarSize;
-  }
-  var inner = document.createElement('div');
-  inner.style.width = '100%';
-  inner.style.height = '200px';
-
-  var outer = document.createElement('div');
-  extend(outer.style, {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    pointerEvents: 'none',
-    visibility: 'hidden',
-    width: '200px',
-    height: '150px',
-    overflow: 'hidden'
-  });
-
-  outer.appendChild(inner);
-
-  document.body.appendChild(outer);
-
-  var widthContained = inner.offsetWidth;
-  outer.style.overflow = 'scroll';
-  var widthScroll = inner.offsetWidth;
-
-  if (widthContained === widthScroll) {
-    widthScroll = outer.clientWidth;
-  }
-
-  document.body.removeChild(outer);
-
-  var width = widthContained - widthScroll;
-
-  _scrollBarSize = { width: width, height: width };
-  return _scrollBarSize;
-}
-
-function extend() {
-  var out = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
-
-  var args = [];
-
-  Array.prototype.push.apply(args, arguments);
-
-  args.slice(1).forEach(function (obj) {
-    if (obj) {
-      for (var key in obj) {
-        if (({}).hasOwnProperty.call(obj, key)) {
-          out[key] = obj[key];
-        }
-      }
-    }
-  });
-
-  return out;
-}
-
-function removeClass(el, name) {
-  if (typeof el.classList !== 'undefined') {
-    name.split(' ').forEach(function (cls) {
-      if (cls.trim()) {
-        el.classList.remove(cls);
-      }
-    });
-  } else {
-    var regex = new RegExp('(^| )' + name.split(' ').join('|') + '( |$)', 'gi');
-    var className = getClassName(el).replace(regex, ' ');
-    setClassName(el, className);
-  }
-}
-
-function addClass(el, name) {
-  if (typeof el.classList !== 'undefined') {
-    name.split(' ').forEach(function (cls) {
-      if (cls.trim()) {
-        el.classList.add(cls);
-      }
-    });
-  } else {
-    removeClass(el, name);
-    var cls = getClassName(el) + (' ' + name);
-    setClassName(el, cls);
-  }
-}
-
-function hasClass(el, name) {
-  if (typeof el.classList !== 'undefined') {
-    return el.classList.contains(name);
-  }
-  var className = getClassName(el);
-  return new RegExp('(^| )' + name + '( |$)', 'gi').test(className);
-}
-
-function getClassName(el) {
-  // Can't use just SVGAnimatedString here since nodes within a Frame in IE have
-  // completely separately SVGAnimatedString base classes
-  if (el.className instanceof el.ownerDocument.defaultView.SVGAnimatedString) {
-    return el.className.baseVal;
-  }
-  return el.className;
-}
-
-function setClassName(el, className) {
-  el.setAttribute('class', className);
-}
-
-function updateClasses(el, add, all) {
-  // Of the set of 'all' classes, we need the 'add' classes, and only the
-  // 'add' classes to be set.
-  all.forEach(function (cls) {
-    if (add.indexOf(cls) === -1 && hasClass(el, cls)) {
-      removeClass(el, cls);
-    }
-  });
-
-  add.forEach(function (cls) {
-    if (!hasClass(el, cls)) {
-      addClass(el, cls);
-    }
-  });
-}
-
-var deferred = [];
-
-var defer = function defer(fn) {
-  deferred.push(fn);
-};
-
-var flush = function flush() {
-  var fn = undefined;
-  while (fn = deferred.pop()) {
-    fn();
-  }
-};
-
-var Evented = (function () {
-  function Evented() {
-    _classCallCheck(this, Evented);
-  }
-
-  _createClass(Evented, [{
-    key: 'on',
-    value: function on(event, handler, ctx) {
-      var once = arguments.length <= 3 || arguments[3] === undefined ? false : arguments[3];
-
-      if (typeof this.bindings === 'undefined') {
-        this.bindings = {};
-      }
-      if (typeof this.bindings[event] === 'undefined') {
-        this.bindings[event] = [];
-      }
-      this.bindings[event].push({ handler: handler, ctx: ctx, once: once });
-    }
-  }, {
-    key: 'once',
-    value: function once(event, handler, ctx) {
-      this.on(event, handler, ctx, true);
-    }
-  }, {
-    key: 'off',
-    value: function off(event, handler) {
-      if (typeof this.bindings === 'undefined' || typeof this.bindings[event] === 'undefined') {
-        return;
-      }
-
-      if (typeof handler === 'undefined') {
-        delete this.bindings[event];
-      } else {
-        var i = 0;
-        while (i < this.bindings[event].length) {
-          if (this.bindings[event][i].handler === handler) {
-            this.bindings[event].splice(i, 1);
-          } else {
-            ++i;
-          }
-        }
-      }
-    }
-  }, {
-    key: 'trigger',
-    value: function trigger(event) {
-      if (typeof this.bindings !== 'undefined' && this.bindings[event]) {
-        var i = 0;
-
-        for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-          args[_key - 1] = arguments[_key];
-        }
-
-        while (i < this.bindings[event].length) {
-          var _bindings$event$i = this.bindings[event][i];
-          var handler = _bindings$event$i.handler;
-          var ctx = _bindings$event$i.ctx;
-          var once = _bindings$event$i.once;
-
-          var context = ctx;
-          if (typeof context === 'undefined') {
-            context = this;
-          }
-
-          handler.apply(context, args);
-
-          if (once) {
-            this.bindings[event].splice(i, 1);
-          } else {
-            ++i;
-          }
-        }
-      }
-    }
-  }]);
-
-  return Evented;
-})();
-
-TetherBase.Utils = {
-  getActualBoundingClientRect: getActualBoundingClientRect,
-  getScrollParents: getScrollParents,
-  getBounds: getBounds,
-  getOffsetParent: getOffsetParent,
-  extend: extend,
-  addClass: addClass,
-  removeClass: removeClass,
-  hasClass: hasClass,
-  updateClasses: updateClasses,
-  defer: defer,
-  flush: flush,
-  uniqueId: uniqueId,
-  Evented: Evented,
-  getScrollBarSize: getScrollBarSize,
-  removeUtilElements: removeUtilElements
-};
-/* globals TetherBase, performance */
-
-'use strict';
-
-var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i['return']) _i['return'](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError('Invalid attempt to destructure non-iterable instance'); } }; })();
-
-var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-var _get = function get(_x6, _x7, _x8) { var _again = true; _function: while (_again) { var object = _x6, property = _x7, receiver = _x8; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x6 = parent; _x7 = property; _x8 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-if (typeof TetherBase === 'undefined') {
-  throw new Error('You must include the utils.js file before tether.js');
-}
-
-var _TetherBase$Utils = TetherBase.Utils;
-var getScrollParents = _TetherBase$Utils.getScrollParents;
-var getBounds = _TetherBase$Utils.getBounds;
-var getOffsetParent = _TetherBase$Utils.getOffsetParent;
-var extend = _TetherBase$Utils.extend;
-var addClass = _TetherBase$Utils.addClass;
-var removeClass = _TetherBase$Utils.removeClass;
-var updateClasses = _TetherBase$Utils.updateClasses;
-var defer = _TetherBase$Utils.defer;
-var flush = _TetherBase$Utils.flush;
-var getScrollBarSize = _TetherBase$Utils.getScrollBarSize;
-var removeUtilElements = _TetherBase$Utils.removeUtilElements;
-
-function within(a, b) {
-  var diff = arguments.length <= 2 || arguments[2] === undefined ? 1 : arguments[2];
-
-  return a + diff >= b && b >= a - diff;
-}
-
-var transformKey = (function () {
-  if (typeof document === 'undefined') {
-    return '';
-  }
-  var el = document.createElement('div');
-
-  var transforms = ['transform', 'WebkitTransform', 'OTransform', 'MozTransform', 'msTransform'];
-  for (var i = 0; i < transforms.length; ++i) {
-    var key = transforms[i];
-    if (el.style[key] !== undefined) {
-      return key;
-    }
-  }
-})();
-
-var tethers = [];
-
-var position = function position() {
-  tethers.forEach(function (tether) {
-    tether.position(false);
-  });
-  flush();
-};
-
-function now() {
-  if (typeof performance === 'object' && typeof performance.now === 'function') {
-    return performance.now();
-  }
-  return +new Date();
-}
-
-(function () {
-  var lastCall = null;
-  var lastDuration = null;
-  var pendingTimeout = null;
-
-  var tick = function tick() {
-    if (typeof lastDuration !== 'undefined' && lastDuration > 16) {
-      // We voluntarily throttle ourselves if we can't manage 60fps
-      lastDuration = Math.min(lastDuration - 16, 250);
-
-      // Just in case this is the last event, remember to position just once more
-      pendingTimeout = setTimeout(tick, 250);
-      return;
-    }
-
-    if (typeof lastCall !== 'undefined' && now() - lastCall < 10) {
-      // Some browsers call events a little too frequently, refuse to run more than is reasonable
-      return;
-    }
-
-    if (pendingTimeout != null) {
-      clearTimeout(pendingTimeout);
-      pendingTimeout = null;
-    }
-
-    lastCall = now();
-    position();
-    lastDuration = now() - lastCall;
-  };
-
-  if (typeof window !== 'undefined' && typeof window.addEventListener !== 'undefined') {
-    ['resize', 'scroll', 'touchmove'].forEach(function (event) {
-      window.addEventListener(event, tick);
-    });
-  }
-})();
-
-var MIRROR_LR = {
-  center: 'center',
-  left: 'right',
-  right: 'left'
-};
-
-var MIRROR_TB = {
-  middle: 'middle',
-  top: 'bottom',
-  bottom: 'top'
-};
-
-var OFFSET_MAP = {
-  top: 0,
-  left: 0,
-  middle: '50%',
-  center: '50%',
-  bottom: '100%',
-  right: '100%'
-};
-
-var autoToFixedAttachment = function autoToFixedAttachment(attachment, relativeToAttachment) {
-  var left = attachment.left;
-  var top = attachment.top;
-
-  if (left === 'auto') {
-    left = MIRROR_LR[relativeToAttachment.left];
-  }
-
-  if (top === 'auto') {
-    top = MIRROR_TB[relativeToAttachment.top];
-  }
-
-  return { left: left, top: top };
-};
-
-var attachmentToOffset = function attachmentToOffset(attachment) {
-  var left = attachment.left;
-  var top = attachment.top;
-
-  if (typeof OFFSET_MAP[attachment.left] !== 'undefined') {
-    left = OFFSET_MAP[attachment.left];
-  }
-
-  if (typeof OFFSET_MAP[attachment.top] !== 'undefined') {
-    top = OFFSET_MAP[attachment.top];
-  }
-
-  return { left: left, top: top };
-};
-
-function addOffset() {
-  var out = { top: 0, left: 0 };
-
-  for (var _len = arguments.length, offsets = Array(_len), _key = 0; _key < _len; _key++) {
-    offsets[_key] = arguments[_key];
-  }
-
-  offsets.forEach(function (_ref) {
-    var top = _ref.top;
-    var left = _ref.left;
-
-    if (typeof top === 'string') {
-      top = parseFloat(top, 10);
-    }
-    if (typeof left === 'string') {
-      left = parseFloat(left, 10);
-    }
-
-    out.top += top;
-    out.left += left;
-  });
-
-  return out;
-}
-
-function offsetToPx(offset, size) {
-  if (typeof offset.left === 'string' && offset.left.indexOf('%') !== -1) {
-    offset.left = parseFloat(offset.left, 10) / 100 * size.width;
-  }
-  if (typeof offset.top === 'string' && offset.top.indexOf('%') !== -1) {
-    offset.top = parseFloat(offset.top, 10) / 100 * size.height;
-  }
-
-  return offset;
-}
-
-var parseOffset = function parseOffset(value) {
-  var _value$split = value.split(' ');
-
-  var _value$split2 = _slicedToArray(_value$split, 2);
-
-  var top = _value$split2[0];
-  var left = _value$split2[1];
-
-  return { top: top, left: left };
-};
-var parseAttachment = parseOffset;
-
-var TetherClass = (function (_Evented) {
-  _inherits(TetherClass, _Evented);
-
-  function TetherClass(options) {
-    var _this = this;
-
-    _classCallCheck(this, TetherClass);
-
-    _get(Object.getPrototypeOf(TetherClass.prototype), 'constructor', this).call(this);
-    this.position = this.position.bind(this);
-
-    tethers.push(this);
-
-    this.history = [];
-
-    this.setOptions(options, false);
-
-    TetherBase.modules.forEach(function (module) {
-      if (typeof module.initialize !== 'undefined') {
-        module.initialize.call(_this);
-      }
-    });
-
-    this.position();
-  }
-
-  _createClass(TetherClass, [{
-    key: 'getClass',
-    value: function getClass() {
-      var key = arguments.length <= 0 || arguments[0] === undefined ? '' : arguments[0];
-      var classes = this.options.classes;
-
-      if (typeof classes !== 'undefined' && classes[key]) {
-        return this.options.classes[key];
-      } else if (this.options.classPrefix) {
-        return this.options.classPrefix + '-' + key;
-      } else {
-        return key;
-      }
-    }
-  }, {
-    key: 'setOptions',
-    value: function setOptions(options) {
-      var _this2 = this;
-
-      var pos = arguments.length <= 1 || arguments[1] === undefined ? true : arguments[1];
-
-      var defaults = {
-        offset: '0 0',
-        targetOffset: '0 0',
-        targetAttachment: 'auto auto',
-        classPrefix: 'tether'
-      };
-
-      this.options = extend(defaults, options);
-
-      var _options = this.options;
-      var element = _options.element;
-      var target = _options.target;
-      var targetModifier = _options.targetModifier;
-
-      this.element = element;
-      this.target = target;
-      this.targetModifier = targetModifier;
-
-      if (this.target === 'viewport') {
-        this.target = document.body;
-        this.targetModifier = 'visible';
-      } else if (this.target === 'scroll-handle') {
-        this.target = document.body;
-        this.targetModifier = 'scroll-handle';
-      }
-
-      ['element', 'target'].forEach(function (key) {
-        if (typeof _this2[key] === 'undefined') {
-          throw new Error('Tether Error: Both element and target must be defined');
-        }
-
-        if (typeof _this2[key].jquery !== 'undefined') {
-          _this2[key] = _this2[key][0];
-        } else if (typeof _this2[key] === 'string') {
-          _this2[key] = document.querySelector(_this2[key]);
-        }
-      });
-
-      addClass(this.element, this.getClass('element'));
-      if (!(this.options.addTargetClasses === false)) {
-        addClass(this.target, this.getClass('target'));
-      }
-
-      if (!this.options.attachment) {
-        throw new Error('Tether Error: You must provide an attachment');
-      }
-
-      this.targetAttachment = parseAttachment(this.options.targetAttachment);
-      this.attachment = parseAttachment(this.options.attachment);
-      this.offset = parseOffset(this.options.offset);
-      this.targetOffset = parseOffset(this.options.targetOffset);
-
-      if (typeof this.scrollParents !== 'undefined') {
-        this.disable();
-      }
-
-      if (this.targetModifier === 'scroll-handle') {
-        this.scrollParents = [this.target];
-      } else {
-        this.scrollParents = getScrollParents(this.target);
-      }
-
-      if (!(this.options.enabled === false)) {
-        this.enable(pos);
-      }
-    }
-  }, {
-    key: 'getTargetBounds',
-    value: function getTargetBounds() {
-      if (typeof this.targetModifier !== 'undefined') {
-        if (this.targetModifier === 'visible') {
-          if (this.target === document.body) {
-            return { top: pageYOffset, left: pageXOffset, height: innerHeight, width: innerWidth };
-          } else {
-            var bounds = getBounds(this.target);
-
-            var out = {
-              height: bounds.height,
-              width: bounds.width,
-              top: bounds.top,
-              left: bounds.left
-            };
-
-            out.height = Math.min(out.height, bounds.height - (pageYOffset - bounds.top));
-            out.height = Math.min(out.height, bounds.height - (bounds.top + bounds.height - (pageYOffset + innerHeight)));
-            out.height = Math.min(innerHeight, out.height);
-            out.height -= 2;
-
-            out.width = Math.min(out.width, bounds.width - (pageXOffset - bounds.left));
-            out.width = Math.min(out.width, bounds.width - (bounds.left + bounds.width - (pageXOffset + innerWidth)));
-            out.width = Math.min(innerWidth, out.width);
-            out.width -= 2;
-
-            if (out.top < pageYOffset) {
-              out.top = pageYOffset;
-            }
-            if (out.left < pageXOffset) {
-              out.left = pageXOffset;
-            }
-
-            return out;
-          }
-        } else if (this.targetModifier === 'scroll-handle') {
-          var bounds = undefined;
-          var target = this.target;
-          if (target === document.body) {
-            target = document.documentElement;
-
-            bounds = {
-              left: pageXOffset,
-              top: pageYOffset,
-              height: innerHeight,
-              width: innerWidth
-            };
-          } else {
-            bounds = getBounds(target);
-          }
-
-          var style = getComputedStyle(target);
-
-          var hasBottomScroll = target.scrollWidth > target.clientWidth || [style.overflow, style.overflowX].indexOf('scroll') >= 0 || this.target !== document.body;
-
-          var scrollBottom = 0;
-          if (hasBottomScroll) {
-            scrollBottom = 15;
-          }
-
-          var height = bounds.height - parseFloat(style.borderTopWidth) - parseFloat(style.borderBottomWidth) - scrollBottom;
-
-          var out = {
-            width: 15,
-            height: height * 0.975 * (height / target.scrollHeight),
-            left: bounds.left + bounds.width - parseFloat(style.borderLeftWidth) - 15
-          };
-
-          var fitAdj = 0;
-          if (height < 408 && this.target === document.body) {
-            fitAdj = -0.00011 * Math.pow(height, 2) - 0.00727 * height + 22.58;
-          }
-
-          if (this.target !== document.body) {
-            out.height = Math.max(out.height, 24);
-          }
-
-          var scrollPercentage = this.target.scrollTop / (target.scrollHeight - height);
-          out.top = scrollPercentage * (height - out.height - fitAdj) + bounds.top + parseFloat(style.borderTopWidth);
-
-          if (this.target === document.body) {
-            out.height = Math.max(out.height, 24);
-          }
-
-          return out;
-        }
-      } else {
-        return getBounds(this.target);
-      }
-    }
-  }, {
-    key: 'clearCache',
-    value: function clearCache() {
-      this._cache = {};
-    }
-  }, {
-    key: 'cache',
-    value: function cache(k, getter) {
-      // More than one module will often need the same DOM info, so
-      // we keep a cache which is cleared on each position call
-      if (typeof this._cache === 'undefined') {
-        this._cache = {};
-      }
-
-      if (typeof this._cache[k] === 'undefined') {
-        this._cache[k] = getter.call(this);
-      }
-
-      return this._cache[k];
-    }
-  }, {
-    key: 'enable',
-    value: function enable() {
-      var _this3 = this;
-
-      var pos = arguments.length <= 0 || arguments[0] === undefined ? true : arguments[0];
-
-      if (!(this.options.addTargetClasses === false)) {
-        addClass(this.target, this.getClass('enabled'));
-      }
-      addClass(this.element, this.getClass('enabled'));
-      this.enabled = true;
-
-      this.scrollParents.forEach(function (parent) {
-        if (parent !== _this3.target.ownerDocument) {
-          parent.addEventListener('scroll', _this3.position);
-        }
-      });
-
-      if (pos) {
-        this.position();
-      }
-    }
-  }, {
-    key: 'disable',
-    value: function disable() {
-      var _this4 = this;
-
-      removeClass(this.target, this.getClass('enabled'));
-      removeClass(this.element, this.getClass('enabled'));
-      this.enabled = false;
-
-      if (typeof this.scrollParents !== 'undefined') {
-        this.scrollParents.forEach(function (parent) {
-          parent.removeEventListener('scroll', _this4.position);
-        });
-      }
-    }
-  }, {
-    key: 'destroy',
-    value: function destroy() {
-      var _this5 = this;
-
-      this.disable();
-
-      tethers.forEach(function (tether, i) {
-        if (tether === _this5) {
-          tethers.splice(i, 1);
-        }
-      });
-
-      // Remove any elements we were using for convenience from the DOM
-      if (tethers.length === 0) {
-        removeUtilElements();
-      }
-    }
-  }, {
-    key: 'updateAttachClasses',
-    value: function updateAttachClasses(elementAttach, targetAttach) {
-      var _this6 = this;
-
-      elementAttach = elementAttach || this.attachment;
-      targetAttach = targetAttach || this.targetAttachment;
-      var sides = ['left', 'top', 'bottom', 'right', 'middle', 'center'];
-
-      if (typeof this._addAttachClasses !== 'undefined' && this._addAttachClasses.length) {
-        // updateAttachClasses can be called more than once in a position call, so
-        // we need to clean up after ourselves such that when the last defer gets
-        // ran it doesn't add any extra classes from previous calls.
-        this._addAttachClasses.splice(0, this._addAttachClasses.length);
-      }
-
-      if (typeof this._addAttachClasses === 'undefined') {
-        this._addAttachClasses = [];
-      }
-      var add = this._addAttachClasses;
-
-      if (elementAttach.top) {
-        add.push(this.getClass('element-attached') + '-' + elementAttach.top);
-      }
-      if (elementAttach.left) {
-        add.push(this.getClass('element-attached') + '-' + elementAttach.left);
-      }
-      if (targetAttach.top) {
-        add.push(this.getClass('target-attached') + '-' + targetAttach.top);
-      }
-      if (targetAttach.left) {
-        add.push(this.getClass('target-attached') + '-' + targetAttach.left);
-      }
-
-      var all = [];
-      sides.forEach(function (side) {
-        all.push(_this6.getClass('element-attached') + '-' + side);
-        all.push(_this6.getClass('target-attached') + '-' + side);
-      });
-
-      defer(function () {
-        if (!(typeof _this6._addAttachClasses !== 'undefined')) {
-          return;
-        }
-
-        updateClasses(_this6.element, _this6._addAttachClasses, all);
-        if (!(_this6.options.addTargetClasses === false)) {
-          updateClasses(_this6.target, _this6._addAttachClasses, all);
-        }
-
-        delete _this6._addAttachClasses;
-      });
-    }
-  }, {
-    key: 'position',
-    value: function position() {
-      var _this7 = this;
-
-      var flushChanges = arguments.length <= 0 || arguments[0] === undefined ? true : arguments[0];
-
-      // flushChanges commits the changes immediately, leave true unless you are positioning multiple
-      // tethers (in which case call Tether.Utils.flush yourself when you're done)
-
-      if (!this.enabled) {
-        return;
-      }
-
-      this.clearCache();
-
-      // Turn 'auto' attachments into the appropriate corner or edge
-      var targetAttachment = autoToFixedAttachment(this.targetAttachment, this.attachment);
-
-      this.updateAttachClasses(this.attachment, targetAttachment);
-
-      var elementPos = this.cache('element-bounds', function () {
-        return getBounds(_this7.element);
-      });
-
-      var width = elementPos.width;
-      var height = elementPos.height;
-
-      if (width === 0 && height === 0 && typeof this.lastSize !== 'undefined') {
-        var _lastSize = this.lastSize;
-
-        // We cache the height and width to make it possible to position elements that are
-        // getting hidden.
-        width = _lastSize.width;
-        height = _lastSize.height;
-      } else {
-        this.lastSize = { width: width, height: height };
-      }
-
-      var targetPos = this.cache('target-bounds', function () {
-        return _this7.getTargetBounds();
-      });
-      var targetSize = targetPos;
-
-      // Get an actual px offset from the attachment
-      var offset = offsetToPx(attachmentToOffset(this.attachment), { width: width, height: height });
-      var targetOffset = offsetToPx(attachmentToOffset(targetAttachment), targetSize);
-
-      var manualOffset = offsetToPx(this.offset, { width: width, height: height });
-      var manualTargetOffset = offsetToPx(this.targetOffset, targetSize);
-
-      // Add the manually provided offset
-      offset = addOffset(offset, manualOffset);
-      targetOffset = addOffset(targetOffset, manualTargetOffset);
-
-      // It's now our goal to make (element position + offset) == (target position + target offset)
-      var left = targetPos.left + targetOffset.left - offset.left;
-      var top = targetPos.top + targetOffset.top - offset.top;
-
-      for (var i = 0; i < TetherBase.modules.length; ++i) {
-        var _module2 = TetherBase.modules[i];
-        var ret = _module2.position.call(this, {
-          left: left,
-          top: top,
-          targetAttachment: targetAttachment,
-          targetPos: targetPos,
-          elementPos: elementPos,
-          offset: offset,
-          targetOffset: targetOffset,
-          manualOffset: manualOffset,
-          manualTargetOffset: manualTargetOffset,
-          scrollbarSize: scrollbarSize,
-          attachment: this.attachment
-        });
-
-        if (ret === false) {
-          return false;
-        } else if (typeof ret === 'undefined' || typeof ret !== 'object') {
-          continue;
-        } else {
-          top = ret.top;
-          left = ret.left;
-        }
-      }
-
-      // We describe the position three different ways to give the optimizer
-      // a chance to decide the best possible way to position the element
-      // with the fewest repaints.
-      var next = {
-        // It's position relative to the page (absolute positioning when
-        // the element is a child of the body)
-        page: {
-          top: top,
-          left: left
-        },
-
-        // It's position relative to the viewport (fixed positioning)
-        viewport: {
-          top: top - pageYOffset,
-          bottom: pageYOffset - top - height + innerHeight,
-          left: left - pageXOffset,
-          right: pageXOffset - left - width + innerWidth
-        }
-      };
-
-      var doc = this.target.ownerDocument;
-      var win = doc.defaultView;
-
-      var scrollbarSize = undefined;
-      if (win.innerHeight > doc.documentElement.clientHeight) {
-        scrollbarSize = this.cache('scrollbar-size', getScrollBarSize);
-        next.viewport.bottom -= scrollbarSize.height;
-      }
-
-      if (win.innerWidth > doc.documentElement.clientWidth) {
-        scrollbarSize = this.cache('scrollbar-size', getScrollBarSize);
-        next.viewport.right -= scrollbarSize.width;
-      }
-
-      if (['', 'static'].indexOf(doc.body.style.position) === -1 || ['', 'static'].indexOf(doc.body.parentElement.style.position) === -1) {
-        // Absolute positioning in the body will be relative to the page, not the 'initial containing block'
-        next.page.bottom = doc.body.scrollHeight - top - height;
-        next.page.right = doc.body.scrollWidth - left - width;
-      }
-
-      if (typeof this.options.optimizations !== 'undefined' && this.options.optimizations.moveElement !== false && !(typeof this.targetModifier !== 'undefined')) {
-        (function () {
-          var offsetParent = _this7.cache('target-offsetparent', function () {
-            return getOffsetParent(_this7.target);
-          });
-          var offsetPosition = _this7.cache('target-offsetparent-bounds', function () {
-            return getBounds(offsetParent);
-          });
-          var offsetParentStyle = getComputedStyle(offsetParent);
-          var offsetParentSize = offsetPosition;
-
-          var offsetBorder = {};
-          ['Top', 'Left', 'Bottom', 'Right'].forEach(function (side) {
-            offsetBorder[side.toLowerCase()] = parseFloat(offsetParentStyle['border' + side + 'Width']);
-          });
-
-          offsetPosition.right = doc.body.scrollWidth - offsetPosition.left - offsetParentSize.width + offsetBorder.right;
-          offsetPosition.bottom = doc.body.scrollHeight - offsetPosition.top - offsetParentSize.height + offsetBorder.bottom;
-
-          if (next.page.top >= offsetPosition.top + offsetBorder.top && next.page.bottom >= offsetPosition.bottom) {
-            if (next.page.left >= offsetPosition.left + offsetBorder.left && next.page.right >= offsetPosition.right) {
-              // We're within the visible part of the target's scroll parent
-              var scrollTop = offsetParent.scrollTop;
-              var scrollLeft = offsetParent.scrollLeft;
-
-              // It's position relative to the target's offset parent (absolute positioning when
-              // the element is moved to be a child of the target's offset parent).
-              next.offset = {
-                top: next.page.top - offsetPosition.top + scrollTop - offsetBorder.top,
-                left: next.page.left - offsetPosition.left + scrollLeft - offsetBorder.left
-              };
-            }
-          }
-        })();
-      }
-
-      // We could also travel up the DOM and try each containing context, rather than only
-      // looking at the body, but we're gonna get diminishing returns.
-
-      this.move(next);
-
-      this.history.unshift(next);
-
-      if (this.history.length > 3) {
-        this.history.pop();
-      }
-
-      if (flushChanges) {
-        flush();
-      }
-
-      return true;
-    }
-
-    // THE ISSUE
-  }, {
-    key: 'move',
-    value: function move(pos) {
-      var _this8 = this;
-
-      if (!(typeof this.element.parentNode !== 'undefined')) {
-        return;
-      }
-
-      var same = {};
-
-      for (var type in pos) {
-        same[type] = {};
-
-        for (var key in pos[type]) {
-          var found = false;
-
-          for (var i = 0; i < this.history.length; ++i) {
-            var point = this.history[i];
-            if (typeof point[type] !== 'undefined' && !within(point[type][key], pos[type][key])) {
-              found = true;
-              break;
-            }
-          }
-
-          if (!found) {
-            same[type][key] = true;
-          }
-        }
-      }
-
-      var css = { top: '', left: '', right: '', bottom: '' };
-
-      var transcribe = function transcribe(_same, _pos) {
-        var hasOptimizations = typeof _this8.options.optimizations !== 'undefined';
-        var gpu = hasOptimizations ? _this8.options.optimizations.gpu : null;
-        if (gpu !== false) {
-          var yPos = undefined,
-              xPos = undefined;
-          if (_same.top) {
-            css.top = 0;
-            yPos = _pos.top;
-          } else {
-            css.bottom = 0;
-            yPos = -_pos.bottom;
-          }
-
-          if (_same.left) {
-            css.left = 0;
-            xPos = _pos.left;
-          } else {
-            css.right = 0;
-            xPos = -_pos.right;
-          }
-
-          if (window.matchMedia) {
-            // HubSpot/tether#207
-            var retina = window.matchMedia('only screen and (min-resolution: 1.3dppx)').matches || window.matchMedia('only screen and (-webkit-min-device-pixel-ratio: 1.3)').matches;
-            if (!retina) {
-              xPos = Math.round(xPos);
-              yPos = Math.round(yPos);
-            }
-          }
-
-          css[transformKey] = 'translateX(' + xPos + 'px) translateY(' + yPos + 'px)';
-
-          if (transformKey !== 'msTransform') {
-            // The Z transform will keep this in the GPU (faster, and prevents artifacts),
-            // but IE9 doesn't support 3d transforms and will choke.
-            css[transformKey] += " translateZ(0)";
-          }
-        } else {
-          if (_same.top) {
-            css.top = _pos.top + 'px';
-          } else {
-            css.bottom = _pos.bottom + 'px';
-          }
-
-          if (_same.left) {
-            css.left = _pos.left + 'px';
-          } else {
-            css.right = _pos.right + 'px';
-          }
-        }
-      };
-
-      var moved = false;
-      if ((same.page.top || same.page.bottom) && (same.page.left || same.page.right)) {
-        css.position = 'absolute';
-        transcribe(same.page, pos.page);
-      } else if ((same.viewport.top || same.viewport.bottom) && (same.viewport.left || same.viewport.right)) {
-        css.position = 'fixed';
-        transcribe(same.viewport, pos.viewport);
-      } else if (typeof same.offset !== 'undefined' && same.offset.top && same.offset.left) {
-        (function () {
-          css.position = 'absolute';
-          var offsetParent = _this8.cache('target-offsetparent', function () {
-            return getOffsetParent(_this8.target);
-          });
-
-          if (getOffsetParent(_this8.element) !== offsetParent) {
-            defer(function () {
-              _this8.element.parentNode.removeChild(_this8.element);
-              offsetParent.appendChild(_this8.element);
-            });
-          }
-
-          transcribe(same.offset, pos.offset);
-          moved = true;
-        })();
-      } else {
-        css.position = 'absolute';
-        transcribe({ top: true, left: true }, pos.page);
-      }
-
-      if (!moved) {
-        if (this.options.bodyElement) {
-          if (this.element.parentNode !== this.options.bodyElement) {
-            this.options.bodyElement.appendChild(this.element);
-          }
-        } else {
-          var offsetParentIsBody = true;
-          var currentNode = this.element.parentNode;
-          while (currentNode && currentNode.nodeType === 1 && currentNode.tagName !== 'BODY') {
-            if (getComputedStyle(currentNode).position !== 'static') {
-              offsetParentIsBody = false;
-              break;
-            }
-
-            currentNode = currentNode.parentNode;
-          }
-
-          if (!offsetParentIsBody) {
-            this.element.parentNode.removeChild(this.element);
-            this.element.ownerDocument.body.appendChild(this.element);
-          }
-        }
-      }
-
-      // Any css change will trigger a repaint, so let's avoid one if nothing changed
-      var writeCSS = {};
-      var write = false;
-      for (var key in css) {
-        var val = css[key];
-        var elVal = this.element.style[key];
-
-        if (elVal !== val) {
-          write = true;
-          writeCSS[key] = val;
-        }
-      }
-
-      if (write) {
-        defer(function () {
-          extend(_this8.element.style, writeCSS);
-          _this8.trigger('repositioned');
-        });
-      }
-    }
-  }]);
-
-  return TetherClass;
-})(Evented);
-
-TetherClass.modules = [];
-
-TetherBase.position = position;
-
-var Tether = extend(TetherClass, TetherBase);
-/* globals TetherBase */
-
-'use strict';
-
-var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i['return']) _i['return'](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError('Invalid attempt to destructure non-iterable instance'); } }; })();
-
-var _TetherBase$Utils = TetherBase.Utils;
-var getBounds = _TetherBase$Utils.getBounds;
-var extend = _TetherBase$Utils.extend;
-var updateClasses = _TetherBase$Utils.updateClasses;
-var defer = _TetherBase$Utils.defer;
-
-var BOUNDS_FORMAT = ['left', 'top', 'right', 'bottom'];
-
-function getBoundingRect(tether, to) {
-  if (to === 'scrollParent') {
-    to = tether.scrollParents[0];
-  } else if (to === 'window') {
-    to = [pageXOffset, pageYOffset, innerWidth + pageXOffset, innerHeight + pageYOffset];
-  }
-
-  if (to === document) {
-    to = to.documentElement;
-  }
-
-  if (typeof to.nodeType !== 'undefined') {
-    (function () {
-      var node = to;
-      var size = getBounds(to);
-      var pos = size;
-      var style = getComputedStyle(to);
-
-      to = [pos.left, pos.top, size.width + pos.left, size.height + pos.top];
-
-      // Account any parent Frames scroll offset
-      if (node.ownerDocument !== document) {
-        var win = node.ownerDocument.defaultView;
-        to[0] += win.pageXOffset;
-        to[1] += win.pageYOffset;
-        to[2] += win.pageXOffset;
-        to[3] += win.pageYOffset;
-      }
-
-      BOUNDS_FORMAT.forEach(function (side, i) {
-        side = side[0].toUpperCase() + side.substr(1);
-        if (side === 'Top' || side === 'Left') {
-          to[i] += parseFloat(style['border' + side + 'Width']);
-        } else {
-          to[i] -= parseFloat(style['border' + side + 'Width']);
-        }
-      });
-    })();
-  }
-
-  return to;
-}
-
-TetherBase.modules.push({
-  position: function position(_ref) {
-    var _this = this;
-
-    var top = _ref.top;
-    var left = _ref.left;
-    var targetAttachment = _ref.targetAttachment;
-
-    if (!this.options.constraints) {
-      return true;
-    }
-
-    var _cache = this.cache('element-bounds', function () {
-      return getBounds(_this.element);
-    });
-
-    var height = _cache.height;
-    var width = _cache.width;
-
-    if (width === 0 && height === 0 && typeof this.lastSize !== 'undefined') {
-      var _lastSize = this.lastSize;
-
-      // Handle the item getting hidden as a result of our positioning without glitching
-      // the classes in and out
-      width = _lastSize.width;
-      height = _lastSize.height;
-    }
-
-    var targetSize = this.cache('target-bounds', function () {
-      return _this.getTargetBounds();
-    });
-
-    var targetHeight = targetSize.height;
-    var targetWidth = targetSize.width;
-
-    var allClasses = [this.getClass('pinned'), this.getClass('out-of-bounds')];
-
-    this.options.constraints.forEach(function (constraint) {
-      var outOfBoundsClass = constraint.outOfBoundsClass;
-      var pinnedClass = constraint.pinnedClass;
-
-      if (outOfBoundsClass) {
-        allClasses.push(outOfBoundsClass);
-      }
-      if (pinnedClass) {
-        allClasses.push(pinnedClass);
-      }
-    });
-
-    allClasses.forEach(function (cls) {
-      ['left', 'top', 'right', 'bottom'].forEach(function (side) {
-        allClasses.push(cls + '-' + side);
-      });
-    });
-
-    var addClasses = [];
-
-    var tAttachment = extend({}, targetAttachment);
-    var eAttachment = extend({}, this.attachment);
-
-    this.options.constraints.forEach(function (constraint) {
-      var to = constraint.to;
-      var attachment = constraint.attachment;
-      var pin = constraint.pin;
-
-      if (typeof attachment === 'undefined') {
-        attachment = '';
-      }
-
-      var changeAttachX = undefined,
-          changeAttachY = undefined;
-      if (attachment.indexOf(' ') >= 0) {
-        var _attachment$split = attachment.split(' ');
-
-        var _attachment$split2 = _slicedToArray(_attachment$split, 2);
-
-        changeAttachY = _attachment$split2[0];
-        changeAttachX = _attachment$split2[1];
-      } else {
-        changeAttachX = changeAttachY = attachment;
-      }
-
-      var bounds = getBoundingRect(_this, to);
-
-      if (changeAttachY === 'target' || changeAttachY === 'both') {
-        if (top < bounds[1] && tAttachment.top === 'top') {
-          top += targetHeight;
-          tAttachment.top = 'bottom';
-        }
-
-        if (top + height > bounds[3] && tAttachment.top === 'bottom') {
-          top -= targetHeight;
-          tAttachment.top = 'top';
-        }
-      }
-
-      if (changeAttachY === 'together') {
-        if (tAttachment.top === 'top') {
-          if (eAttachment.top === 'bottom' && top < bounds[1]) {
-            top += targetHeight;
-            tAttachment.top = 'bottom';
-
-            top += height;
-            eAttachment.top = 'top';
-          } else if (eAttachment.top === 'top' && top + height > bounds[3] && top - (height - targetHeight) >= bounds[1]) {
-            top -= height - targetHeight;
-            tAttachment.top = 'bottom';
-
-            eAttachment.top = 'bottom';
-          }
-        }
-
-        if (tAttachment.top === 'bottom') {
-          if (eAttachment.top === 'top' && top + height > bounds[3]) {
-            top -= targetHeight;
-            tAttachment.top = 'top';
-
-            top -= height;
-            eAttachment.top = 'bottom';
-          } else if (eAttachment.top === 'bottom' && top < bounds[1] && top + (height * 2 - targetHeight) <= bounds[3]) {
-            top += height - targetHeight;
-            tAttachment.top = 'top';
-
-            eAttachment.top = 'top';
-          }
-        }
-
-        if (tAttachment.top === 'middle') {
-          if (top + height > bounds[3] && eAttachment.top === 'top') {
-            top -= height;
-            eAttachment.top = 'bottom';
-          } else if (top < bounds[1] && eAttachment.top === 'bottom') {
-            top += height;
-            eAttachment.top = 'top';
-          }
-        }
-      }
-
-      if (changeAttachX === 'target' || changeAttachX === 'both') {
-        if (left < bounds[0] && tAttachment.left === 'left') {
-          left += targetWidth;
-          tAttachment.left = 'right';
-        }
-
-        if (left + width > bounds[2] && tAttachment.left === 'right') {
-          left -= targetWidth;
-          tAttachment.left = 'left';
-        }
-      }
-
-      if (changeAttachX === 'together') {
-        if (left < bounds[0] && tAttachment.left === 'left') {
-          if (eAttachment.left === 'right') {
-            left += targetWidth;
-            tAttachment.left = 'right';
-
-            left += width;
-            eAttachment.left = 'left';
-          } else if (eAttachment.left === 'left') {
-            left += targetWidth;
-            tAttachment.left = 'right';
-
-            left -= width;
-            eAttachment.left = 'right';
-          }
-        } else if (left + width > bounds[2] && tAttachment.left === 'right') {
-          if (eAttachment.left === 'left') {
-            left -= targetWidth;
-            tAttachment.left = 'left';
-
-            left -= width;
-            eAttachment.left = 'right';
-          } else if (eAttachment.left === 'right') {
-            left -= targetWidth;
-            tAttachment.left = 'left';
-
-            left += width;
-            eAttachment.left = 'left';
-          }
-        } else if (tAttachment.left === 'center') {
-          if (left + width > bounds[2] && eAttachment.left === 'left') {
-            left -= width;
-            eAttachment.left = 'right';
-          } else if (left < bounds[0] && eAttachment.left === 'right') {
-            left += width;
-            eAttachment.left = 'left';
-          }
-        }
-      }
-
-      if (changeAttachY === 'element' || changeAttachY === 'both') {
-        if (top < bounds[1] && eAttachment.top === 'bottom') {
-          top += height;
-          eAttachment.top = 'top';
-        }
-
-        if (top + height > bounds[3] && eAttachment.top === 'top') {
-          top -= height;
-          eAttachment.top = 'bottom';
-        }
-      }
-
-      if (changeAttachX === 'element' || changeAttachX === 'both') {
-        if (left < bounds[0]) {
-          if (eAttachment.left === 'right') {
-            left += width;
-            eAttachment.left = 'left';
-          } else if (eAttachment.left === 'center') {
-            left += width / 2;
-            eAttachment.left = 'left';
-          }
-        }
-
-        if (left + width > bounds[2]) {
-          if (eAttachment.left === 'left') {
-            left -= width;
-            eAttachment.left = 'right';
-          } else if (eAttachment.left === 'center') {
-            left -= width / 2;
-            eAttachment.left = 'right';
-          }
-        }
-      }
-
-      if (typeof pin === 'string') {
-        pin = pin.split(',').map(function (p) {
-          return p.trim();
-        });
-      } else if (pin === true) {
-        pin = ['top', 'left', 'right', 'bottom'];
-      }
-
-      pin = pin || [];
-
-      var pinned = [];
-      var oob = [];
-
-      if (top < bounds[1]) {
-        if (pin.indexOf('top') >= 0) {
-          top = bounds[1];
-          pinned.push('top');
-        } else {
-          oob.push('top');
-        }
-      }
-
-      if (top + height > bounds[3]) {
-        if (pin.indexOf('bottom') >= 0) {
-          top = bounds[3] - height;
-          pinned.push('bottom');
-        } else {
-          oob.push('bottom');
-        }
-      }
-
-      if (left < bounds[0]) {
-        if (pin.indexOf('left') >= 0) {
-          left = bounds[0];
-          pinned.push('left');
-        } else {
-          oob.push('left');
-        }
-      }
-
-      if (left + width > bounds[2]) {
-        if (pin.indexOf('right') >= 0) {
-          left = bounds[2] - width;
-          pinned.push('right');
-        } else {
-          oob.push('right');
-        }
-      }
-
-      if (pinned.length) {
-        (function () {
-          var pinnedClass = undefined;
-          if (typeof _this.options.pinnedClass !== 'undefined') {
-            pinnedClass = _this.options.pinnedClass;
-          } else {
-            pinnedClass = _this.getClass('pinned');
-          }
-
-          addClasses.push(pinnedClass);
-          pinned.forEach(function (side) {
-            addClasses.push(pinnedClass + '-' + side);
-          });
-        })();
-      }
-
-      if (oob.length) {
-        (function () {
-          var oobClass = undefined;
-          if (typeof _this.options.outOfBoundsClass !== 'undefined') {
-            oobClass = _this.options.outOfBoundsClass;
-          } else {
-            oobClass = _this.getClass('out-of-bounds');
-          }
-
-          addClasses.push(oobClass);
-          oob.forEach(function (side) {
-            addClasses.push(oobClass + '-' + side);
-          });
-        })();
-      }
-
-      if (pinned.indexOf('left') >= 0 || pinned.indexOf('right') >= 0) {
-        eAttachment.left = tAttachment.left = false;
-      }
-      if (pinned.indexOf('top') >= 0 || pinned.indexOf('bottom') >= 0) {
-        eAttachment.top = tAttachment.top = false;
-      }
-
-      if (tAttachment.top !== targetAttachment.top || tAttachment.left !== targetAttachment.left || eAttachment.top !== _this.attachment.top || eAttachment.left !== _this.attachment.left) {
-        _this.updateAttachClasses(eAttachment, tAttachment);
-        _this.trigger('update', {
-          attachment: eAttachment,
-          targetAttachment: tAttachment
-        });
-      }
-    });
-
-    defer(function () {
-      if (!(_this.options.addTargetClasses === false)) {
-        updateClasses(_this.target, addClasses, allClasses);
-      }
-      updateClasses(_this.element, addClasses, allClasses);
-    });
-
-    return { top: top, left: left };
-  }
-});
-/* globals TetherBase */
-
-'use strict';
-
-var _TetherBase$Utils = TetherBase.Utils;
-var getBounds = _TetherBase$Utils.getBounds;
-var updateClasses = _TetherBase$Utils.updateClasses;
-var defer = _TetherBase$Utils.defer;
-
-TetherBase.modules.push({
-  position: function position(_ref) {
-    var _this = this;
-
-    var top = _ref.top;
-    var left = _ref.left;
-
-    var _cache = this.cache('element-bounds', function () {
-      return getBounds(_this.element);
-    });
-
-    var height = _cache.height;
-    var width = _cache.width;
-
-    var targetPos = this.getTargetBounds();
-
-    var bottom = top + height;
-    var right = left + width;
-
-    var abutted = [];
-    if (top <= targetPos.bottom && bottom >= targetPos.top) {
-      ['left', 'right'].forEach(function (side) {
-        var targetPosSide = targetPos[side];
-        if (targetPosSide === left || targetPosSide === right) {
-          abutted.push(side);
-        }
-      });
-    }
-
-    if (left <= targetPos.right && right >= targetPos.left) {
-      ['top', 'bottom'].forEach(function (side) {
-        var targetPosSide = targetPos[side];
-        if (targetPosSide === top || targetPosSide === bottom) {
-          abutted.push(side);
-        }
-      });
-    }
-
-    var allClasses = [];
-    var addClasses = [];
-
-    var sides = ['left', 'top', 'right', 'bottom'];
-    allClasses.push(this.getClass('abutted'));
-    sides.forEach(function (side) {
-      allClasses.push(_this.getClass('abutted') + '-' + side);
-    });
-
-    if (abutted.length) {
-      addClasses.push(this.getClass('abutted'));
-    }
-
-    abutted.forEach(function (side) {
-      addClasses.push(_this.getClass('abutted') + '-' + side);
-    });
-
-    defer(function () {
-      if (!(_this.options.addTargetClasses === false)) {
-        updateClasses(_this.target, addClasses, allClasses);
-      }
-      updateClasses(_this.element, addClasses, allClasses);
-    });
-
-    return true;
-  }
-});
-/* globals TetherBase */
-
-'use strict';
-
-var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i['return']) _i['return'](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError('Invalid attempt to destructure non-iterable instance'); } }; })();
-
-TetherBase.modules.push({
-  position: function position(_ref) {
-    var top = _ref.top;
-    var left = _ref.left;
-
-    if (!this.options.shift) {
-      return;
-    }
-
-    var shift = this.options.shift;
-    if (typeof this.options.shift === 'function') {
-      shift = this.options.shift.call(this, { top: top, left: left });
-    }
-
-    var shiftTop = undefined,
-        shiftLeft = undefined;
-    if (typeof shift === 'string') {
-      shift = shift.split(' ');
-      shift[1] = shift[1] || shift[0];
-
-      var _shift = shift;
-
-      var _shift2 = _slicedToArray(_shift, 2);
-
-      shiftTop = _shift2[0];
-      shiftLeft = _shift2[1];
-
-      shiftTop = parseFloat(shiftTop, 10);
-      shiftLeft = parseFloat(shiftLeft, 10);
-    } else {
-      shiftTop = shift.top;
-      shiftLeft = shift.left;
-    }
-
-    top += shiftTop;
-    left += shiftLeft;
-
-    return { top: top, left: left };
-  }
-});
-return Tether;
-
-}));
-
-
-/***/ }),
+/* 11 */,
 /* 12 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_popper_js__ = __webpack_require__(1);
-/**!
- * @fileOverview Kickass library to create and place poppers near their reference elements.
- * @version 1.1.7
- * @license
- * Copyright (c) 2016 Federico Zivolo and contributors
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
- */
-
-
-/**
- * Check if the given variable is a function
- * @method
- * @memberof Popper.Utils
- * @argument {Any} functionToCheck - variable to check
- * @returns {Boolean} answer to: is a function?
- */
-function isFunction(functionToCheck) {
-  var getType = {};
-  return functionToCheck && getType.toString.call(functionToCheck) === '[object Function]';
-}
-
-var classCallCheck = function (instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-};
-
-var createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];
-      descriptor.enumerable = descriptor.enumerable || false;
-      descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
-      Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }
-
-  return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) defineProperties(Constructor, staticProps);
-    return Constructor;
-  };
-}();
-
-
-
-
-
-
-
-var _extends = Object.assign || function (target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i];
-
-    for (var key in source) {
-      if (Object.prototype.hasOwnProperty.call(source, key)) {
-        target[key] = source[key];
-      }
-    }
-  }
-
-  return target;
-};
-
-var DEFAULT_OPTIONS = {
-  container: false,
-  delay: 0,
-  html: false,
-  placement: 'top',
-  title: '',
-  template: '<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>',
-  trigger: 'hover focus',
-  offset: 0
-};
-
-var Tooltip = function () {
-  /**
-   * Create a new Tooltip.js instance
-   * @class Tooltip
-   * @param {HTMLElement} reference - The DOM node used as reference of the tooltip (it can be a jQuery element).
-   * @param {Object} options
-   * @param {String} options.placement=bottom
-   *      Placement of the popper accepted values: `top(-start, -end), right(-start, -end), bottom(-start, -end),
-   *      left(-start, -end)`
-   * @param {HTMLElement|String|false} options.container=false - Append the tooltip to a specific element.
-   * @param {Number|Object} options.delay=0
-   *      Delay showing and hiding the tooltip (ms) - does not apply to manual trigger type.
-   *      If a number is supplied, delay is applied to both hide/show.
-   *      Object structure is: `{ show: 500, hide: 100 }`
-   * @param {Boolean} options.html=false - Insert HTML into the tooltip. If false, the content will inserted with `innerText`.
-   * @param {String|PlacementFunction} options.placement='top' - One of the allowed placements, or a function returning one of them.
-   * @param {String} [options.template='<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>']
-   *      Base HTML to used when creating the tooltip.
-   *      The tooltip's `title` will be injected into the `.tooltip-inner` or `.tooltip__inner`.
-   *      `.tooltip-arrow` or `.tooltip__arrow` will become the tooltip's arrow.
-   *      The outermost wrapper element should have the `.tooltip` class.
-   * @param {String|HTMLElement|TitleFunction} options.title='' - Default title value if `title` attribute isn't present.
-   * @param {String} [options.trigger='hover focus']
-   *      How tooltip is triggered - click, hover, focus, manual.
-   *      You may pass multiple triggers; separate them with a space. `manual` cannot be combined with any other trigger.
-   * @param {HTMLElement} options.boundariesElement
-   *      The element used as boundaries for the tooltip. For more information refer to Popper.js'
-   *      [boundariesElement docs](https://popper.js.org/popper-documentation.html)
-   * @param {Number|String} options.offset=0 - Offset of the tooltip relative to its reference. For more information refer to Popper.js'
-   *      [offset docs](https://popper.js.org/popper-documentation.html)
-   * @param {Object} options.popperOptions={} - Popper options, will be passed directly to popper instance. For more information refer to Popper.js'
-   *      [options docs](https://popper.js.org/popper-documentation.html)
-   * @return {Object} instance - The generated tooltip instance
-   */
-  function Tooltip(reference, options) {
-    classCallCheck(this, Tooltip);
-
-    _initialiseProps.call(this);
-
-    // apply user options over default ones
-    options = _extends({}, DEFAULT_OPTIONS, options);
-
-    reference.jquery && (reference = reference[0]);
-
-    // cache reference and options
-    this.reference = reference;
-    this.options = options;
-
-    // get events list
-    var events = typeof options.trigger === 'string' ? options.trigger.split(' ').filter(function (trigger) {
-      return ['click', 'hover', 'focus'].indexOf(trigger) !== -1;
-    }) : [];
-
-    // set initial state
-    this._isOpen = false;
-    this._popperOptions = {};
-
-    // set event listeners
-    this._setEventListeners(reference, events, options);
-  }
-
-  //
-  // Public methods
-  //
-
-  /**
-   * Reveals an element's tooltip. This is considered a "manual" triggering of the tooltip.
-   * Tooltips with zero-length titles are never displayed.
-   * @method Tooltip#show
-   * @memberof Tooltip
-   */
-
-
-  /**
-   * Hides an element’s tooltip. This is considered a “manual” triggering of the tooltip.
-   * @method Tooltip#hide
-   * @memberof Tooltip
-   */
-
-
-  /**
-   * Hides and destroys an element’s tooltip.
-   * @method Tooltip#dispose
-   * @memberof Tooltip
-   */
-
-
-  /**
-   * Toggles an element’s tooltip. This is considered a “manual” triggering of the tooltip.
-   * @method Tooltip#toggle
-   * @memberof Tooltip
-   */
-
-
-  //
-  // Defaults
-  //
-
-
-  //
-  // Private methods
-  //
-
-  createClass(Tooltip, [{
-    key: '_create',
-
-
-    /**
-     * Creates a new tooltip node
-     * @memberof Tooltip
-     * @private
-     * @param {HTMLElement} reference
-     * @param {String} template
-     * @param {String|HTMLElement|TitleFunction} title
-     * @param {Boolean} allowHtml
-     * @return {HTMLelement} tooltipNode
-     */
-    value: function _create(reference, template, title, allowHtml) {
-      // create tooltip element
-      var tooltipGenerator = window.document.createElement('div');
-      tooltipGenerator.innerHTML = template.trim();
-      var tooltipNode = tooltipGenerator.childNodes[0];
-
-      // add unique ID to our tooltip (needed for accessibility reasons)
-      tooltipNode.id = 'tooltip_' + Math.random().toString(36).substr(2, 10);
-
-      // set initial `aria-hidden` state to `false` (it's visible!)
-      tooltipNode.setAttribute('aria-hidden', 'false');
-
-      // add title to tooltip
-      var titleNode = tooltipGenerator.querySelector(this.innerSelector);
-      if (title.nodeType === 1 || title.nodeType === 11) {
-        // if title is a element node or document fragment, append it only if allowHtml is true
-        allowHtml && titleNode.appendChild(title);
-      } else if (isFunction(title)) {
-        // if title is a function, call it and set innerText or innerHtml depending by `allowHtml` value
-        var titleText = title.call(reference);
-        allowHtml ? titleNode.innerHTML = titleText : titleNode.innerText = titleText;
-      } else {
-        // if it's just a simple text, set innerText or innerHtml depending by `allowHtml` value
-        allowHtml ? titleNode.innerHTML = title : titleNode.innerText = title;
-      }
-
-      // return the generated tooltip node
-      return tooltipNode;
-    }
-  }, {
-    key: '_show',
-    value: function _show(reference, options) {
-      // don't show if it's already visible
-      // or if it's not being showed
-      if (this._isOpen && !this._isOpening) {
-        return this;
-      }
-      this._isOpen = true;
-
-      // if the tooltipNode already exists, just show it
-      if (this._tooltipNode) {
-        this._tooltipNode.style.display = '';
-        this._tooltipNode.setAttribute('aria-hidden', 'false');
-        this.popperInstance.update();
-        return this;
-      }
-
-      // get title
-      var title = reference.getAttribute('title') || options.title;
-
-      // don't show tooltip if no title is defined
-      if (!title) {
-        return this;
-      }
-
-      // create tooltip node
-      var tooltipNode = this._create(reference, options.template, title, options.html);
-
-      // Add `aria-describedby` to our reference element for accessibility reasons
-      reference.setAttribute('aria-describedby', tooltipNode.id);
-
-      // append tooltip to container
-      var container = this._findContainer(options.container, reference);
-
-      this._append(tooltipNode, container);
-
-      this._popperOptions = _extends({}, options.popperOptions, {
-        placement: options.placement
-      });
-
-      this._popperOptions.modifiers = _extends({}, this._popperOptions.modifiers, {
-        arrow: {
-          element: this.arrowSelector
-        },
-        offset: {
-          offset: options.offset
-        }
-      });
-
-      if (options.boundariesElement) {
-        this._popperOptions.modifiers.preventOverflow = {
-          boundariesElement: options.boundariesElement
-        };
-      }
-
-      this.popperInstance = new __WEBPACK_IMPORTED_MODULE_0_popper_js__["default"](reference, tooltipNode, this._popperOptions);
-
-      this._tooltipNode = tooltipNode;
-
-      return this;
-    }
-  }, {
-    key: '_hide',
-    value: function _hide() /*reference, options*/{
-      // don't hide if it's already hidden
-      if (!this._isOpen) {
-        return this;
-      }
-
-      this._isOpen = false;
-
-      // hide tooltipNode
-      this._tooltipNode.style.display = 'none';
-      this._tooltipNode.setAttribute('aria-hidden', 'true');
-
-      return this;
-    }
-  }, {
-    key: '_dispose',
-    value: function _dispose() {
-      var _this = this;
-
-      // remove event listeners first to prevent any unexpected behaviour
-      this._events.forEach(function (_ref) {
-        var func = _ref.func,
-            event = _ref.event;
-
-        _this.reference.removeEventListener(event, func);
-      });
-      this._events = [];
-
-      if (this._tooltipNode) {
-        this._hide();
-
-        // destroy instance
-        this.popperInstance.destroy();
-
-        // destroy tooltipNode if removeOnDestroy is not set, as popperInstance.destroy() already removes the element
-        if (!this.popperInstance.options.removeOnDestroy) {
-          this._tooltipNode.parentNode.removeChild(this._tooltipNode);
-          this._tooltipNode = null;
-        }
-      }
-      return this;
-    }
-  }, {
-    key: '_findContainer',
-    value: function _findContainer(container, reference) {
-      // if container is a query, get the relative element
-      if (typeof container === 'string') {
-        container = window.document.querySelector(container);
-      } else if (container === false) {
-        // if container is `false`, set it to reference parent
-        container = reference.parentNode;
-      }
-      return container;
-    }
-
-    /**
-     * Append tooltip to container
-     * @memberof Tooltip
-     * @private
-     * @param {HTMLElement} tooltip
-     * @param {HTMLElement|String|false} container
-     */
-
-  }, {
-    key: '_append',
-    value: function _append(tooltipNode, container) {
-      container.appendChild(tooltipNode);
-    }
-  }, {
-    key: '_setEventListeners',
-    value: function _setEventListeners(reference, events, options) {
-      var _this2 = this;
-
-      var directEvents = [];
-      var oppositeEvents = [];
-
-      events.forEach(function (event) {
-        switch (event) {
-          case 'hover':
-            directEvents.push('mouseenter');
-            oppositeEvents.push('mouseleave');
-            break;
-          case 'focus':
-            directEvents.push('focus');
-            oppositeEvents.push('blur');
-            break;
-          case 'click':
-            directEvents.push('click');
-            oppositeEvents.push('click');
-            break;
-        }
-      });
-
-      // schedule show tooltip
-      directEvents.forEach(function (event) {
-        var func = function func(evt) {
-          if (_this2._isOpening === true) {
-            return;
-          }
-          evt.usedByTooltip = true;
-          _this2._scheduleShow(reference, options.delay, options, evt);
-        };
-        _this2._events.push({ event: event, func: func });
-        reference.addEventListener(event, func);
-      });
-
-      // schedule hide tooltip
-      oppositeEvents.forEach(function (event) {
-        var func = function func(evt) {
-          if (evt.usedByTooltip === true) {
-            return;
-          }
-          _this2._scheduleHide(reference, options.delay, options, evt);
-        };
-        _this2._events.push({ event: event, func: func });
-        reference.addEventListener(event, func);
-      });
-    }
-  }, {
-    key: '_scheduleShow',
-    value: function _scheduleShow(reference, delay, options /*, evt */) {
-      var _this3 = this;
-
-      this._isOpening = true;
-      // defaults to 0
-      var computedDelay = delay && delay.show || delay || 0;
-      this._showTimeout = window.setTimeout(function () {
-        return _this3._show(reference, options);
-      }, computedDelay);
-    }
-  }, {
-    key: '_scheduleHide',
-    value: function _scheduleHide(reference, delay, options, evt) {
-      var _this4 = this;
-
-      this._isOpening = false;
-      // defaults to 0
-      var computedDelay = delay && delay.hide || delay || 0;
-      window.setTimeout(function () {
-        window.clearTimeout(_this4._showTimeout);
-        if (_this4._isOpen === false) {
-          return;
-        }
-        if (!document.body.contains(_this4._tooltipNode)) {
-          return;
-        }
-
-        // if we are hiding because of a mouseleave, we must check that the new
-        // reference isn't the tooltip, because in this case we don't want to hide it
-        if (evt.type === 'mouseleave') {
-          var isSet = _this4._setTooltipNodeEvent(evt, reference, delay, options);
-
-          // if we set the new event, don't hide the tooltip yet
-          // the new event will take care to hide it if necessary
-          if (isSet) {
-            return;
-          }
-        }
-
-        _this4._hide(reference, options);
-      }, computedDelay);
-    }
-  }]);
-  return Tooltip;
-}();
-
-/**
- * Placement function, its context is the Tooltip instance.
- * @memberof Tooltip
- * @callback PlacementFunction
- * @param {HTMLElement} tooltip - tooltip DOM node.
- * @param {HTMLElement} reference - reference DOM node.
- * @return {String} placement - One of the allowed placement options.
- */
-
-/**
- * Title function, its context is the Tooltip instance.
- * @memberof Tooltip
- * @callback TitleFunction
- * @return {String} placement - The desired title.
- */
-
-
-var _initialiseProps = function _initialiseProps() {
-  var _this5 = this;
-
-  this.show = function () {
-    return _this5._show(_this5.reference, _this5.options);
-  };
-
-  this.hide = function () {
-    return _this5._hide();
-  };
-
-  this.dispose = function () {
-    return _this5._dispose();
-  };
-
-  this.toggle = function () {
-    if (_this5._isOpen) {
-      return _this5.hide();
-    } else {
-      return _this5.show();
-    }
-  };
-
-  this.arrowSelector = '.tooltip-arrow, .tooltip__arrow';
-  this.innerSelector = '.tooltip-inner, .tooltip__inner';
-  this._events = [];
-
-  this._setTooltipNodeEvent = function (evt, reference, delay, options) {
-    var relatedreference = evt.relatedreference || evt.toElement || evt.relatedTarget;
-
-    var callback = function callback(evt2) {
-      var relatedreference2 = evt2.relatedreference || evt2.toElement || evt2.relatedTarget;
-
-      // Remove event listener after call
-      _this5._tooltipNode.removeEventListener(evt.type, callback);
-
-      // If the new reference is not the reference element
-      if (!reference.contains(relatedreference2)) {
-        // Schedule to hide tooltip
-        _this5._scheduleHide(reference, options.delay, options, evt2);
-      }
-    };
-
-    if (_this5._tooltipNode.contains(relatedreference)) {
-      // listen to mouseleave on the tooltip element to be able to hide the tooltip
-      _this5._tooltipNode.addEventListener(evt.type, callback);
-      return true;
-    }
-
-    return false;
-  };
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Tooltip);
-//# sourceMappingURL=tooltip.js.map
-
-
-/***/ }),
-/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-window._ = __webpack_require__(14);
+window._ = __webpack_require__(13);
 
 /**
  * We'll load jQuery, Popper.js and the Bootstrap jQuery plugin which provides support
@@ -5672,10 +3300,10 @@ window._ = __webpack_require__(14);
  */
 
 try {
-  window.$ = window.jQuery = __webpack_require__(16);
+  window.$ = window.jQuery = __webpack_require__(15);
   window.Popper = __webpack_require__(1).default;
 
-  __webpack_require__(17);
+  __webpack_require__(16);
 } catch (e) {}
 
 /**
@@ -5684,7 +3312,7 @@ try {
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-window.axios = __webpack_require__(18);
+window.axios = __webpack_require__(17);
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
@@ -5718,7 +3346,7 @@ if (token) {
 // });
 
 /***/ }),
-/* 14 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -22807,10 +20435,10 @@ if (token) {
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(15)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(14)(module)))
 
 /***/ }),
-/* 15 */
+/* 14 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -22838,7 +20466,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 16 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -33098,7 +30726,7 @@ return jQuery;
 
 
 /***/ }),
-/* 17 */
+/* 16 */
 /***/ (function(module, exports) {
 
 /*!
@@ -36954,13 +34582,13 @@ return exports;
 
 
 /***/ }),
-/* 18 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(19);
+module.exports = __webpack_require__(18);
 
 /***/ }),
-/* 19 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36968,7 +34596,7 @@ module.exports = __webpack_require__(19);
 
 var utils = __webpack_require__(0);
 var bind = __webpack_require__(4);
-var Axios = __webpack_require__(21);
+var Axios = __webpack_require__(20);
 var defaults = __webpack_require__(2);
 
 /**
@@ -37003,14 +34631,14 @@ axios.create = function create(instanceConfig) {
 
 // Expose Cancel & CancelToken
 axios.Cancel = __webpack_require__(8);
-axios.CancelToken = __webpack_require__(36);
+axios.CancelToken = __webpack_require__(35);
 axios.isCancel = __webpack_require__(7);
 
 // Expose all/spread
 axios.all = function all(promises) {
   return Promise.all(promises);
 };
-axios.spread = __webpack_require__(37);
+axios.spread = __webpack_require__(36);
 
 module.exports = axios;
 
@@ -37019,7 +34647,7 @@ module.exports.default = axios;
 
 
 /***/ }),
-/* 20 */
+/* 19 */
 /***/ (function(module, exports) {
 
 /*!
@@ -37046,7 +34674,7 @@ function isSlowBuffer (obj) {
 
 
 /***/ }),
-/* 21 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37054,10 +34682,10 @@ function isSlowBuffer (obj) {
 
 var defaults = __webpack_require__(2);
 var utils = __webpack_require__(0);
-var InterceptorManager = __webpack_require__(31);
-var dispatchRequest = __webpack_require__(32);
-var isAbsoluteURL = __webpack_require__(34);
-var combineURLs = __webpack_require__(35);
+var InterceptorManager = __webpack_require__(30);
+var dispatchRequest = __webpack_require__(31);
+var isAbsoluteURL = __webpack_require__(33);
+var combineURLs = __webpack_require__(34);
 
 /**
  * Create a new instance of Axios
@@ -37139,7 +34767,7 @@ module.exports = Axios;
 
 
 /***/ }),
-/* 22 */
+/* 21 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -37329,7 +34957,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 23 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37348,7 +34976,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 
 
 /***/ }),
-/* 24 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37381,7 +35009,7 @@ module.exports = function settle(resolve, reject, response) {
 
 
 /***/ }),
-/* 25 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37409,7 +35037,7 @@ module.exports = function enhanceError(error, config, code, request, response) {
 
 
 /***/ }),
-/* 26 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37484,7 +35112,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 
 
 /***/ }),
-/* 27 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37528,7 +35156,7 @@ module.exports = function parseHeaders(headers) {
 
 
 /***/ }),
-/* 28 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37603,7 +35231,7 @@ module.exports = (
 
 
 /***/ }),
-/* 29 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37646,7 +35274,7 @@ module.exports = btoa;
 
 
 /***/ }),
-/* 30 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37706,7 +35334,7 @@ module.exports = (
 
 
 /***/ }),
-/* 31 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37765,14 +35393,14 @@ module.exports = InterceptorManager;
 
 
 /***/ }),
-/* 32 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(0);
-var transformData = __webpack_require__(33);
+var transformData = __webpack_require__(32);
 var isCancel = __webpack_require__(7);
 var defaults = __webpack_require__(2);
 
@@ -37851,7 +35479,7 @@ module.exports = function dispatchRequest(config) {
 
 
 /***/ }),
-/* 33 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37878,7 +35506,7 @@ module.exports = function transformData(data, headers, fns) {
 
 
 /***/ }),
-/* 34 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37899,7 +35527,7 @@ module.exports = function isAbsoluteURL(url) {
 
 
 /***/ }),
-/* 35 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37920,7 +35548,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 
 
 /***/ }),
-/* 36 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37984,7 +35612,7 @@ module.exports = CancelToken;
 
 
 /***/ }),
-/* 37 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38018,7 +35646,7 @@ module.exports = function spread(callback) {
 
 
 /***/ }),
-/* 38 */
+/* 37 */
 /***/ (function(module, exports) {
 
 (function() {
@@ -38537,7 +36165,7 @@ module.exports = function spread(callback) {
 
 
 /***/ }),
-/* 39 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// Generated by CoffeeScript 1.9.3
@@ -38917,7 +36545,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 40 */
+/* 39 */
 /***/ (function(module, exports) {
 
 $(document).ready(function () {
@@ -38937,7 +36565,7 @@ $(document).ready(function () {
 });
 
 /***/ }),
-/* 41 */
+/* 40 */
 /***/ (function(module, exports) {
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -39939,7 +37567,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 })(jQuery);
 
 /***/ }),
-/* 42 */
+/* 41 */
 /***/ (function(module, exports) {
 
 $(document).ready(function () {
@@ -39995,7 +37623,7 @@ $(document).ready(function () {
 });
 
 /***/ }),
-/* 43 */
+/* 42 */
 /***/ (function(module, exports) {
 
 $(document).ready(function () {
@@ -40022,7 +37650,7 @@ $(document).ready(function () {
 });
 
 /***/ }),
-/* 44 */
+/* 43 */
 /***/ (function(module, exports) {
 
 $(document).ready(function () {
@@ -40082,7 +37710,7 @@ $(document).ready(function () {
 });
 
 /***/ }),
-/* 45 */
+/* 44 */
 /***/ (function(module, exports) {
 
 $(document).ready(function () {
@@ -40107,7 +37735,7 @@ $(document).ready(function () {
 });
 
 /***/ }),
-/* 46 */
+/* 45 */
 /***/ (function(module, exports) {
 
 function createCookie(name, value, days) {
@@ -40157,7 +37785,7 @@ $(document).ready(function () {
 });
 
 /***/ }),
-/* 47 */
+/* 46 */
 /***/ (function(module, exports) {
 
 $(document).ready(function () {
@@ -40165,7 +37793,7 @@ $(document).ready(function () {
 });
 
 /***/ }),
-/* 48 */
+/* 47 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
