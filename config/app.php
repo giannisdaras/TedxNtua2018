@@ -178,6 +178,9 @@ return [
         App\Providers\RouteServiceProvider::class,
         TwigBridge\ServiceProvider::class,
         Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
+        Watson\Active\ActiveServiceProvider::class,
+
+
 
     ],
 

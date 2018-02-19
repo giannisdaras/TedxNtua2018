@@ -13,5 +13,7 @@ class DatabaseSeeder extends Seeder
     {
         /* Speakers are seeded through the Schedule seeder */
         $this->call(ScheduleSeeder::class);
+        $this->call(PeopleTableSeeder::class);
+        $this->call(SpeakersSeeder::class);
     }
 }

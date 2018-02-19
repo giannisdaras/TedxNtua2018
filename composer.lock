@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e0432a003ff2e23e8ec4cd7d60bc6beb",
+    "content-hash": "e2165bc60792446ac1232a06233d30d2",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -261,6 +261,50 @@
                 "parser"
             ],
             "time": "2017-11-14T20:44:03+00:00"
+        },
+        {
+            "name": "erusev/parsedown-extra",
+            "version": "0.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/erusev/parsedown-extra.git",
+                "reference": "0db5cce7354e4b76f155d092ab5eb3981c21258c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/erusev/parsedown-extra/zipball/0db5cce7354e4b76f155d092ab5eb3981c21258c",
+                "reference": "0db5cce7354e4b76f155d092ab5eb3981c21258c",
+                "shasum": ""
+            },
+            "require": {
+                "erusev/parsedown": "~1.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "ParsedownExtra": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Emanuil Rusev",
+                    "email": "hello@erusev.com",
+                    "homepage": "http://erusev.com"
+                }
+            ],
+            "description": "An extension of Parsedown that adds support for Markdown Extra.",
+            "homepage": "https://github.com/erusev/parsedown-extra",
+            "keywords": [
+                "markdown",
+                "markdown extra",
+                "parsedown",
+                "parser"
+            ],
+            "time": "2015-11-01T10:19:22+00:00"
         },
         {
             "name": "fideloper/proxy",
@@ -586,6 +630,46 @@
                 }
             ],
             "time": "2015-04-20T18:58:01+00:00"
+        },
+        {
+            "name": "jralph/twig-markdown",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jralph/Twig-Markdown.git",
+                "reference": "d4460e29997be9ac41e8d44ee936f034646e1f84"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jralph/Twig-Markdown/zipball/d4460e29997be9ac41e8d44ee936f034646e1f84",
+                "reference": "d4460e29997be9ac41e8d44ee936f034646e1f84",
+                "shasum": ""
+            },
+            "require": {
+                "erusev/parsedown-extra": "0.*",
+                "twig/twig": "~1.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9",
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Jralph\\Twig\\Markdown\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A simple twig markdown extension.",
+            "keywords": [
+                "markdown",
+                "parsedown",
+                "twig"
+            ],
+            "time": "2015-09-27T11:52:17+00:00"
         },
         {
             "name": "laravel/framework",
@@ -2725,6 +2809,68 @@
                 "environment"
             ],
             "time": "2016-09-01T10:05:43+00:00"
+        },
+        {
+            "name": "watson/active",
+            "version": "2.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dwightwatson/active.git",
+                "reference": "b29ed98e831d31695279d509167d05c1f57495fe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dwightwatson/active/zipball/b29ed98e831d31695279d509167d05c1f57495fe",
+                "reference": "b29ed98e831d31695279d509167d05c1f57495fe",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/config": "~5.2",
+                "illuminate/http": "~5.2",
+                "illuminate/routing": "~5.2",
+                "illuminate/support": "~5.2",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Watson\\Active\\ActiveServiceProvider"
+                    ],
+                    "aliases": {
+                        "Active": "Watson\\Watson\\Facades\\Active"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Watson\\Active\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dwight Watson",
+                    "email": "dwight@studiousapp.com"
+                }
+            ],
+            "description": "Laravel helper for recognising the current route, controller and action",
+            "keywords": [
+                "active",
+                "laravel",
+                "routing"
+            ],
+            "time": "2017-08-26T01:42:01+00:00"
         }
     ],
     "packages-dev": [

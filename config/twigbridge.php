@@ -118,6 +118,8 @@ return [
 
             'App\TwigLocaleHelper',
             'App\TwigEnvHelper',
+            new Jralph\Twig\Markdown\Extension(
+            new Jralph\Twig\Markdown\Parsedown\ParsedownExtraMarkdown),
         ],
 
         /*
@@ -182,6 +184,10 @@ return [
             'head',
             'last',
             'mix',
+            'active'=>[
+                'is_safe'=>['true']],
+            'is_active'=>[
+                'is_safe'=>['true']]
         ],
 
         /*
