@@ -730,6 +730,8 @@ article.home {
 		}
 	}
 	#map {
+		background-image: url('/images/backgrounds/pixels_full.svg');
+		background-size: 100% auto;
 		.map {
 			width: 100%;
 			height: 400px;
