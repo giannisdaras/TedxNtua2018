@@ -834,6 +834,7 @@ __webpack_require__(41);
 __webpack_require__(42);
 __webpack_require__(43);
 __webpack_require__(44);
+__webpack_require__(55);
 
 /***/ }),
 /* 10 */
@@ -37784,6 +37785,34 @@ $(document).ready(function () {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 46 */,
+/* 47 */,
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */
+/***/ (function(module, exports) {
+
+$(document).ready(function () {
+
+	$(document).on("mouseover", "[data-tooltip]", function () {
+
+		var y = $(this)[0].getBoundingClientRect().top,
+		    wh = $(window).height(),
+		    elh = $(this).outerHeight();
+		if (y + elh / 2 < wh / 2) {
+			$(this).removeClass("tooltip-top").addClass("tooltip-bottom");
+		} else {
+			$(this).removeClass("tooltip-bottom").addClass("tooltip-top");
+		}
+	});
+});
 
 /***/ })
 /******/ ]);

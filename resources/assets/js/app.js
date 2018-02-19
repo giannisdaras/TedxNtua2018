@@ -53,3 +53,4 @@ require('./nav-scroll');
 require('./contact');
 require('./lang-switch');
 require('./eu-cookie');
+require('./tooltip');
