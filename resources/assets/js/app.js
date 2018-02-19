@@ -4,9 +4,6 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
- // const tether = require('tether');
- // const popper = require('popper.js');
- // const tooltip = require('tooltip.js');
 
 require('./bootstrap');
 
@@ -56,4 +53,3 @@ require('./nav-scroll');
 require('./contact');
 require('./lang-switch');
 require('./eu-cookie');
-require('./team');
