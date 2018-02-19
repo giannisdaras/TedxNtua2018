@@ -14083,6 +14083,24 @@ article.contact .g-recaptcha.error > div {
   .lang-dropdown {
     display: none !important;
   }
+
+  [data-tooltip].tooltip-bottom:after {
+    top: 0%;
+  }
+
+  [data-tooltip].tooltip-bottom:before {
+    top: 90%;
+    /* arrow pointing up */
+    border-bottom: 16px solid #222222;
+  }
+
+  [data-tooltip].tooltip-bottom:hover:after {
+    top: calc(100% + 8px);
+  }
+
+  [data-tooltip].tooltip-bottom:hover:before {
+    top: calc(100% - 8px);
+  }
 }
 
 @media (min-width: 576px) {

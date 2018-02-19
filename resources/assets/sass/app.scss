@@ -1081,6 +1081,24 @@ article.contact {
 	.lang-dropdown {
 		display: none !important;
 	}
+
+	[data-tooltip].tooltip-bottom {
+		&:after {
+			top: 0%;
+		}
+		&:before {
+			top: 90%;
+			/* arrow pointing up */
+			border-bottom: 16px solid $brand-secondary;
+		}
+		&:hover:after {
+			top: calc(100% + 8px);
+		}
+		&:hover:before {
+			top: calc(100% - 8px);
+		}
+	}
+
 }
 
 @include media-breakpoint-up(sm) {

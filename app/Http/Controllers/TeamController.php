@@ -18,12 +18,14 @@ class TeamController extends Controller {
 		$speakers = $person::where('team_type', 'speakers')->get();
 		$media = $person::where('team_type', 'media')->get();
 		$graphics = $person::where('team_type', 'graphics')->get();
-		
+
 		$isPjax = $request->header('X-PJAX');
 		if($isPjax) {
-			return response()->view('team', compact('isPjax', 'it'), 200)
+			return response()->view('team', compact('isPjax', 'it', 'experience',
+			 'fr', 'media', 'venue', 'speakers', 'graphics'), 200)
 							 ->header('X-PJAX-URL', LaravelLocalization::getLocalizedURL());
 		}
-		return view('team', compact('it'));
+		return view('team', compact('it', 'experience',
+		 'fr', 'media', 'venue', 'speakers', 'graphics'));
 	}
 }
