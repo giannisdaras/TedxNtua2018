@@ -57,7 +57,7 @@
 											<div class="cell-content media">
 												{%- if event.img_src %}
 
-												<img class="align-self-center mr-3" src="/images/schedule/{{event.img_src }}" alt="" />
+												<img class="align-self-center mr-3" src="/images/schedule/{{ event.img_src }}" alt="" />
 												{%- endif %}
 
 												<div class="media-body">
@@ -67,7 +67,7 @@
 													{%- if event.subtitle %}
 
 													<h6>
-														{{ event.subtitle }}
+														{{ event.subtitle | markdown }}
 													</h6>
 													{%- endif %}
 
@@ -84,7 +84,7 @@
 										</td>
 										<td>
 											<div class="cell-content collapse talks-row-{{ "%02d" | format(loop.index) }}">
-												<div class="more">{{ event.event_prev | raw }}</div>
+												<div class="more">{{ event.event_prev | markdown }}</div>
 											</div>
 										</td>
 									</tr>
@@ -125,7 +125,7 @@
 											<div class="cell-content media">
 												{%- if event.img_src %}
 
-												<img class="align-self-center mr-3" src="/images/schedule/{{event.img_src }}" alt="" />
+												<img class="align-self-center mr-3" src="/images/schedule/{{ event.img_src }}" alt="" />
 												{%- endif %}
 
 												<div class="media-body">
@@ -135,7 +135,7 @@
 													{%- if event.subtitle %}
 
 													<h6>
-														{{ event.subtitle }}
+														{{ event.subtitle | markdown }}
 													</h6>
 													{%- endif %}
 
@@ -152,7 +152,7 @@
 										</td>
 										<td>
 											<div class="cell-content collapse performances-row-{{ "%02d" | format(loop.index) }}">
-												<div class="more">{{ event.event_prev | raw }}</div>
+												<div class="more">{{ event.event_prev | markdown }}</div>
 											</div>
 										</td>
 									</tr>
@@ -193,7 +193,7 @@
 											<div class="cell-content media">
 												{%- if event.img_src %}
 
-												<img class="align-self-center mr-3" src="/images/schedule/{{event.img_src }}" alt="" />
+												<img class="align-self-center mr-3" src="/images/schedule/{{ event.img_src }}" alt="" />
 												{%- endif %}
 
 												<div class="media-body">
@@ -203,7 +203,7 @@
 													{%- if event.subtitle %}
 
 													<h6>
-														{{ event.subtitle }}
+														{{ event.subtitle | markdown }}
 													</h6>
 													{%- endif %}
 
@@ -220,7 +220,7 @@
 										</td>
 										<td>
 											<div class="cell-content collapse workshops-row-{{ "%02d" | format(loop.index) }}">
-												<div class="more">{{ event.event_prev | raw }}</div>
+												<div class="more">{{ event.event_prev | markdown }}</div>
 											</div>
 										</td>
 									</tr>
@@ -267,7 +267,7 @@
 								<div class="cell-content media">
 									{%- if event.img_src %}
 
-									<img class="align-self-center mr-3" src="/images/schedule/{{event.img_src }}" alt="" />
+									<img class="align-self-center mr-3" src="/images/schedule/{{ event.img_src }}" alt="" />
 									{%- endif %}
 
 									<div class="media-body">
@@ -277,7 +277,7 @@
 										{%- if event.subtitle %}
 
 										<h6>
-											{{ event.subtitle | raw}}
+											{{ event.subtitle | markdown }}
 										</h6>
 										{%- endif %}
 
@@ -303,7 +303,7 @@
 
 							<td>
 								<div class="cell-content collapse row-{{ "%02d" | format(loop.parent.loop.index) }}">
-									<div class="more">{{ event.event_prev | raw }}</div>
+									<div class="more">{{ event.event_prev | markdown }}</div>
 								</div>
 							</td>
 						{%- endfor %}

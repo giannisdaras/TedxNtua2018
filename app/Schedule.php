@@ -7,12 +7,13 @@ use Spatie\Translatable\HasTranslations;
 
 class Schedule extends Model
 {
-	// other fields: time,img_src,type
-	// type: workshop or talk
+	// other fields: time, img_src, type
+	// type: talk, performance or workshop
     use HasTranslations;
 	public $translatable = ['event_title','event_prev','subtitle'];
 	public $timestamps = false;
 
+    /* Define the inverse relationship to be able to get the Speaker of a talk */
 	public function speaker() {
 		return $this->belongsTo('App\Speaker')->withDefault();
 	}
@@ -30,6 +31,7 @@ class Schedule extends Model
         return $attributes;
     }
 
+    /* Talks in schedule need to have links pointing to the Speakers page */
     public function getEventTitleLinkAttribute() {
     	if($this->type == "talk") {
     		return '<a href="/speakers#' . $this->speaker->sid . '">' . $this->speaker->name . '</a>';
