@@ -13651,11 +13651,6 @@ article.home #sponsors .auspices-container a:hover img {
           transform: scale(1.05);
 }
 
-article.home #map {
-  background-image: url("/images/backgrounds/pixels_full.svg");
-  background-size: 100% auto;
-}
-
 article.home #map .map {
   width: 100%;
   height: 400px;
