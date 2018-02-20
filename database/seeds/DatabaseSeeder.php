@@ -11,9 +11,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        /* Speakers are seeded through the Schedule seeder */
+        /*  Speakers are seeded through the Schedule seeder,
+            so that the relationship Speaker->Schedule can be seeded properly
+        */
         $this->call(ScheduleSeeder::class);
         $this->call(PeopleTableSeeder::class);
-        $this->call(SpeakersSeeder::class);
     }
 }
