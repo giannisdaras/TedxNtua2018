@@ -558,6 +558,11 @@ article.home {
 		background: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png"), linear-gradient(#202020, #2F2F2F);
 		animation: gradientFlow 60s linear infinite;
 		min-height: 480px;
+		position: relative;
+		.section-content {
+			position: relative;
+			z-index: 2;
+		}
 		h1 {
 			margin-top: 10rem;
 			font-size: 2.25rem;
@@ -599,6 +604,15 @@ article.home {
 			&:active {
 				font-size: 1.1rem;
 			}
+		}
+		canvas {
+			display: none;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -200px;
+			margin-left: -400px;
+			z-index: 1;
 		}
 	}
 	a.call-to-action {
@@ -1255,6 +1269,9 @@ article.contact {
 				margin-top: 20rem;
 				font-size: 3.5rem;
 				font-weight: bold;
+			}
+			canvas {
+				display: block;
 			}
 		}
 		#hero .info br {

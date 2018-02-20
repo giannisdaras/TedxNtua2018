@@ -13441,6 +13441,12 @@ article.home #hero {
   -webkit-animation: gradientFlow 60s linear infinite;
           animation: gradientFlow 60s linear infinite;
   min-height: 480px;
+  position: relative;
+}
+
+article.home #hero .section-content {
+  position: relative;
+  z-index: 2;
 }
 
 article.home #hero h1 {
@@ -13494,6 +13500,16 @@ article.home #hero .tickets a:hover {
 
 article.home #hero .tickets a:active {
   font-size: 1.1rem;
+}
+
+article.home #hero canvas {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -400px;
+  z-index: 1;
 }
 
 article.home a.call-to-action {
@@ -14257,6 +14273,10 @@ article.contact .g-recaptcha.error > div {
     margin-top: 20rem;
     font-size: 3.5rem;
     font-weight: bold;
+  }
+
+  article.home #hero canvas {
+    display: block;
   }
 
   article.home #hero .info br {
