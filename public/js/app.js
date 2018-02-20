@@ -37590,11 +37590,11 @@ $(document).ready(function () {
 			current = "/";
 		}
 
-		$("nav li.active").removeClass("active");
+		$("nav a.active").removeClass("active");
 
 		$("nav a.nav-link").each(function () {
 			if ($(this).attr("href").length <= current.length && $(this).attr("href").indexOf(current) !== -1) {
-				$(this).parent().addClass("active");
+				$(this).addClass("active");
 			}
 		});
 
