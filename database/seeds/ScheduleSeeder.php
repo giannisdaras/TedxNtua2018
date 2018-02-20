@@ -31,6 +31,9 @@ class ScheduleSeeder extends Seeder
                     'el' => 'Ερμηνεία-Επεξήγηση'
                 ]
             ]),
+            /*  When creating a schedule with type TALK, you have to create the Speaker object along with it
+                see below for example
+            */
             App\Schedule::create([
                 'hour' => '14:00',
                 'img_src' => 'styllas.jpeg',
@@ -44,9 +47,10 @@ class ScheduleSeeder extends Seeder
                     'el' => 'Το τέλος του χάους στο everest!'
                 ],
                 'subtitle' => [
-                    'en' => 'Chaos is extreme weather, chaos is extreme love!',
-                    'el'=> 'Χάος είναι ο ακραίος καιρός του έβερεστ, χάος είναι η αγάπη'
+                    'en' => 'Chaos is **extreme weather**, chaos is extreme love!',
+                    'el'=> 'Χάος είναι ο **ακραίος καιρός** του έβερεστ, χάος είναι η αγάπη'
                 ],
+                /* This is where the Speaker object is created with its proper attributes */
                 'speaker_id' => App\Speaker::create([
                     'name' => [
                         'en' => 'Michail Styllas',
@@ -58,6 +62,7 @@ class ScheduleSeeder extends Seeder
                         'en' => 'dede',
                         'el'=> 'δεδεδ',
                     ]
+                /* Create the object and return its id */
                 ])->id
             ])
         ];
