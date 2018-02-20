@@ -11,7 +11,10 @@
 		<h1>{{ trans('general.team.title') }}</h1>
 	</section>
 
+
+
 	<section class="content text-center">
+
 		<h2 id="experience" data-tooltip="{{ trans('general.team.experience_description') }}">{{ trans('general.team.experience') }}</h2>
 
 
@@ -146,6 +149,22 @@
 				{% endfor %}
 
 			</div>
+
+			<div class="container-fluid">
+				<h3 class="quote"><sup><i class="fa fa-quote-left fa-1x" aria-hidden="true"></i></sup>
+					&nbsp;{{ trans('general.team.quote') }}
+					&nbsp;<sup><i class="fa fa-quote-right fa-1x" aria-hidden="true"></i></sup></h3>
+		</div>
+
+			<div class="container-fluid">
+				<div class="row vertical-align">
+					<div class="col col-12 col-lg-6 centered join_us">
+							<img src="{{ asset('/images/team/will_you_join_us.png')}}">
+							<p class="back text-center text-md-right text-lg-right">
+								<a target="_blank" href="http://www.google.com">{{ trans('general.team.volunteer') }} &nbsp;<i class="fa fa-chevron-circle-right fa-1x" aria-hidden="true"></i></a>
+							</p>
+					</div>
+				</div>
 
 		</div>
 

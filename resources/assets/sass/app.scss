@@ -860,6 +860,7 @@ article.about {
 	}
 	p {
 		color: black;
+		font-size: 1.25rem;
 	}
 }
 
@@ -923,15 +924,39 @@ article.team {
 		padding-top: 0.5rem;
 		text-align: center;
 	}
-	a {
-		color: lighten($brand-secondary, 10%) !important;
-	}
+
 	img {
-		margin-right: -15px; /* Remove right gap */
-		margin-left: -15px;  /* Remove left gap */
-		padding-bottom: 62.5%; /* ratio is 16:10 */
-		margin-bottom: 10%;
+		// margin-right: -15px; /* Remove right gap */
+		// margin-left: -15px;  /* Remove left gap */
+		// padding-bottom: 62.5%; /* ratio is 16:10 */
+		// margin-bottom: 10%;
+		width: 100%;
 	}
+
+	.quote {
+		color : lighten($brand-secondary, 25%);
+		font-stretch: expanded;
+	}
+
+	p {
+		color: white;
+		margin-top : 25px;
+	}
+
+	.back a {
+		border-radius: 1rem;
+		background-color: $brand-primary;
+		color: white;
+		font-size: 1.3rem;
+		padding: 1rem 2.5rem;
+		&:hover {
+			background-color: saturate($brand-primary, 10%);
+		}
+		&:active {
+			font-size: 1.45rem;
+		}
+	}
+
 
 	h6 {
 		font-size: 1.25rem;
@@ -1105,6 +1130,8 @@ article.contact {
 
 @include media-breakpoint-up(sm) {
 
+
+
 	[data-tooltip]:after {
 		width: 33vw !important;
 		margin-left: -16.5vw !important;
@@ -1183,6 +1210,18 @@ article.contact {
 }
 
 @include media-breakpoint-up(md) {
+
+	article.team {
+		section.content {
+			p {
+				position: relative;
+				margin-top: -50px;
+			}
+
+
+		}
+	}
+
 	header.dark {
 		/* bottom inner shadow */
 		box-shadow: inset 0 -40px 60px -40px black;
@@ -1190,6 +1229,7 @@ article.contact {
 	.cookie-bar {
 		font-size: 1rem;
 	}
+
 	article.home {
 		section {
 			/* top and bottom inset box shadow */

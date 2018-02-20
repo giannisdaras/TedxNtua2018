@@ -128,6 +128,8 @@ return [
 		'speakers_description' => 'Η ομάδα των Speakers είναι υπεύθυνη για να προσκαλέσει τους καλύτερους ομιλιτές!',
 		'venue_production' => 'Ομάδα Venue & Production',
 		'venue_production_description' => 'Η ομάδα Venue & Production είναι υπεύθυνη για το χώρο της εκδήλωσης στον οποίο θα πραγματοποιηθεί το event, καθώς και για θέματα παραγωγής όπως live-streaming κτλ.',
+		'quote' => 'Τίποτα δεν θα ήταν δυνατό χωρίς την φανταστική μας ομάδα',
+		'volunteer' => 'Γίνε εθελοντής',
 	],
 
 	/* BLOG */

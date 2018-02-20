@@ -139,6 +139,9 @@ return [
 		'speakers_description' => 'Speakers team is held responsible for inviting the most awesome speakers!',
 		'venue_production' => 'Venue & Production Team',
 		'venue_production_description' => 'Venue & Production Team is responsible for the venue in which the event will take place, as well as things like live-streaming, videos etc.',
+		'quote' => 'Nothing would have been possible without our awesome team',
+		'volunteer' => 'Become a volunteer'
+
 	],
 
 	/* BLOG */
