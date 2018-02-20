@@ -13120,9 +13120,6 @@ header.scrolled a.flagLink {
 section.heading {
   width: 100%;
   border-bottom: 1px solid #444;
-  /* bottom inner shadow */
-  -webkit-box-shadow: inset 0 -40px 60px -40px rgba(0, 0, 0, 0.5);
-          box-shadow: inset 0 -40px 60px -40px rgba(0, 0, 0, 0.5);
   background-color: #bc2015;
   background-image: url("https://www.transparenttextures.com/patterns/exclusive-paper.png");
 }
@@ -13372,10 +13369,20 @@ body > footer .container.credits a:hover {
 
 /* HOME PAGE */
 
+#typer {
+  color: #E62B1E;
+}
+
+article.home h1,
+article.home h2,
+article.home h3,
+article.home h4,
+article.home h5,
+article.home h6 {
+  color: white;
+}
+
 article.home section {
-  /* top and bottom inset box shadow */
-  -webkit-box-shadow: inset 0 -40px 40px -40px rgba(0, 0, 0, 0.4), inset 0 40px 40px -40px rgba(0, 0, 0, 0.4);
-          box-shadow: inset 0 -40px 40px -40px rgba(0, 0, 0, 0.4), inset 0 40px 40px -40px rgba(0, 0, 0, 0.4);
   width: 100%;
   /* temporary, just to test the home layout */
   min-height: 400px;
@@ -13404,6 +13411,7 @@ article.home section .section-intro {
 
 article.home section .description {
   text-align: justify;
+  color: white;
 }
 
 article.home section .section-intro .description {
@@ -13428,6 +13436,14 @@ article.home section .call-to-action-wrapper {
 article.home section .fa-chevron-right {
   font-size: .85rem;
   padding-left: .15rem;
+}
+
+article.home .col-lg-4,
+article.home .col-md-4,
+article.home .col-lg-8,
+article.home .col-md-8,
+article.home .col-sm-12 {
+  background-color: #202020;
 }
 
 article.home #hero {
@@ -14239,9 +14255,6 @@ article.contact .g-recaptcha.error > div {
   }
 
   article.home section {
-    /* top and bottom inset box shadow */
-    -webkit-box-shadow: inset 0 -80px 80px -80px rgba(0, 0, 0, 0.4), inset 0 80px 80px -80px rgba(0, 0, 0, 0.4);
-            box-shadow: inset 0 -80px 80px -80px rgba(0, 0, 0, 0.4), inset 0 80px 80px -80px rgba(0, 0, 0, 0.4);
     font-size: 1.25em;
     /*h2 {
 				text-align: left;
