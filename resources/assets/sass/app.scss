@@ -634,7 +634,43 @@ article.home {
 			margin: 2rem 0;
 		}
 	}
-	#sessions, #speakers {
+	#speakers {
+		a .photo1 {
+			display: block;
+		}
+		a .photo2 {
+			display: none;
+		}
+		a:hover .photo1 {
+			display: none;
+		}
+		a:hover .photo2 {
+			display: block;
+		}
+
+		img {
+			width: 99.5%;
+		}
+
+		.speaker-info {
+			text-align: center;
+		}
+
+		.speaker-info {
+			position: relative;
+			margin-top: -25%;
+
+		}
+
+		h3, p {
+			margin-bottom: -2% !important;
+			color: white;
+		}
+
+	}
+
+
+	#sessions {
 		.speaker-container {
 			img {
 				width: 100%;

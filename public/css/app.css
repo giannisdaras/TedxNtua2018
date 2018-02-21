@@ -13534,8 +13534,42 @@ article.home #sessions .speaker-container {
   margin: 2rem 0;
 }
 
-article.home #sessions .speaker-container img,
-article.home #speakers .speaker-container img {
+article.home #speakers a .photo1 {
+  display: block;
+}
+
+article.home #speakers a .photo2 {
+  display: none;
+}
+
+article.home #speakers a:hover .photo1 {
+  display: none;
+}
+
+article.home #speakers a:hover .photo2 {
+  display: block;
+}
+
+article.home #speakers img {
+  width: 99.5%;
+}
+
+article.home #speakers .speaker-info {
+  text-align: center;
+}
+
+article.home #speakers .speaker-info {
+  position: relative;
+  margin-top: -25%;
+}
+
+article.home #speakers h3,
+article.home #speakers p {
+  margin-bottom: -2% !important;
+  color: white;
+}
+
+article.home #sessions .speaker-container img {
   width: 100%;
   height: auto;
   opacity: .9;
@@ -13547,8 +13581,7 @@ article.home #speakers .speaker-container img {
   z-index: 1;
 }
 
-article.home #sessions .speaker-container a,
-article.home #speakers .speaker-container a {
+article.home #sessions .speaker-container a {
   background-color: transparent;
   -webkit-transition: background-color .5s;
   transition: background-color .5s;
@@ -13560,13 +13593,11 @@ article.home #speakers .speaker-container a {
   padding-bottom: 100%;
 }
 
-article.home #sessions .speaker-container a:hover img,
-article.home #speakers .speaker-container a:hover img {
+article.home #sessions .speaker-container a:hover img {
   opacity: 1;
 }
 
-article.home #sessions .speaker-container .speaker-info,
-article.home #speakers .speaker-container .speaker-info {
+article.home #sessions .speaker-container .speaker-info {
   position: absolute;
   bottom: 1rem;
   z-index: 2;
@@ -13577,15 +13608,13 @@ article.home #speakers .speaker-container .speaker-info {
   width: 100%;
 }
 
-article.home #sessions .speaker-container h3,
-article.home #speakers .speaker-container h3 {
+article.home #sessions .speaker-container h3 {
   margin-top: 1rem;
   margin-bottom: .25rem;
   font-size: 1.5rem;
 }
 
-article.home #sessions .speaker-container p,
-article.home #speakers .speaker-container p {
+article.home #sessions .speaker-container p {
   font-size: 1em;
   line-height: 1.25;
 }

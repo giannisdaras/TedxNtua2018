@@ -57,7 +57,8 @@ class ScheduleSeeder extends Seeder
                         'el' => 'Μιχάλης Στύλλας'
                     ],
                     'sid' => 'styllas',
-                    'img_src' => 'styllas.jpeg',
+                    'img_src' => 'styllas_alt.jpg',
+                    'img_src_alt' => 'styllas.jpg',
                     'bio' => [
                         'en' => 'dede',
                         'el'=> 'δεδεδ',
@@ -66,6 +67,6 @@ class ScheduleSeeder extends Seeder
                 ])->id
             ])
         ];
-        
+
     }
 }
