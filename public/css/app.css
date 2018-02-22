@@ -12823,14 +12823,12 @@ a:hover {
   border-radius: .5rem;
   white-space: nowrap;
   opacity: 0;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  ition: all 0.5s ease;
   white-space: pre-wrap;
   text-align: center;
   width: 70vw !important;
   margin-left: -35vw;
-  z-index: 3;
-  pointer-events: none;
+  z-index: 1000;
 }
 
 [data-tooltip]:before {
@@ -12845,8 +12843,7 @@ a:hover {
   opacity: 0;
   left: 50%;
   margin-left: -8px;
-  z-index: 3;
-  pointer-events: none;
+  z-index: 1000;
 }
 
 [data-tooltip]:hover:after,
@@ -13865,7 +13862,7 @@ article:not(.home) .grid-image.hover-zoom:hover {
 /* ABOUT PAGE */
 
 article.about {
-  background-image: url("/images/backgrounds/pixels.svg");
+  background-image: url("/images/backgrounds/mixed_pixels.svg");
   background-size: 100% auto;
   background-repeat: repeat-y;
 }
@@ -13959,7 +13956,7 @@ article.sponsors .col {
 /* TEAM PAGE */
 
 article.team {
-  background-image: url("/images/backgrounds/pixels.svg");
+  background-image: url("/images/backgrounds/pixels_full_tiled_vertical.svg");
   background-size: contain;
   background-repeat: repeat-y;
 }
@@ -14038,8 +14035,16 @@ article.team h6 {
 
 /* SCHEDULE PAGE */
 
+article.schedule {
+  background-image: url("/images/backgrounds/pixels_full_tiled_horizontal.svg");
+  background-size: auto 100%;
+  background-repeat: repeat-x;
+}
+
 article.schedule table {
   font-size: .85rem;
+  background-color: #fafafa;
+  opacity: 0.75;
 }
 
 article.schedule h5 {
@@ -14202,6 +14207,24 @@ article.contact .g-recaptcha.error > div {
 @media (max-width: 1199px) {
   .lang-dropdown {
     display: none !important;
+  }
+
+  [data-tooltip].tooltip-bottom:after {
+    top: 0%;
+  }
+
+  [data-tooltip].tooltip-bottom:before {
+    top: 90%;
+    /* arrow pointing up */
+    border-bottom: 16px solid #222222;
+  }
+
+  [data-tooltip].tooltip-bottom:hover:after {
+    top: calc(100% + 8px);
+  }
+
+  [data-tooltip].tooltip-bottom:hover:before {
+    top: calc(100% - 8px);
   }
 }
 

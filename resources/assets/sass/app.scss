@@ -54,13 +54,12 @@ a {
 	border-radius: .5rem;
 	white-space: nowrap;
 	opacity: 0;
-	transition: all 0.5s ease;
+	ition: all 0.5s ease;
 	white-space: pre-wrap;
 	text-align: center;
 	width: 70vw !important;
 	margin-left: -35vw;
-	z-index: 3;
-	pointer-events: none;
+	z-index: 1000;
 }
 [data-tooltip]:before {
 	content: "";
@@ -73,8 +72,7 @@ a {
 	opacity: 0;
 	left: 50%;
 	margin-left: -8px;
-	z-index: 3;
-	pointer-events: none;
+	z-index: 1000;
 }
 [data-tooltip]:hover:after,
 [data-tooltip]:hover:before {
@@ -900,7 +898,7 @@ article:not(.home) {
 
 /* ABOUT PAGE */
 article.about {
-	background-image: url("/images/backgrounds/pixels.svg");
+	background-image: url("/images/backgrounds/mixed_pixels.svg");
 	background-size: 100% auto;
 	background-repeat: repeat-y;
 
@@ -991,12 +989,9 @@ article.sponsors {
 /* TEAM PAGE */
 
 article.team {
-	background-image: url("/images/backgrounds/pixels.svg");
+	background-image: url("/images/backgrounds/pixels_full_tiled_vertical.svg");
 	background-size: contain;
 	background-repeat: repeat-y;
-	// random flip!
-	// -webkit-transform: scaleX(-1);
-
 
 	h2 {
 		text-align: center;
@@ -1066,8 +1061,15 @@ article.team {
 /* SCHEDULE PAGE */
 
 article.schedule {
+	background-image: url("/images/backgrounds/pixels_full_tiled_horizontal.svg");
+	background-size: auto 100%;
+	background-repeat: repeat-x;
+
+
 	table {
 		font-size: .85rem;
+		background-color: $body-bg;
+		opacity: 0.75;
 	}
 	h5 {
 		font-size: 1.25em;
@@ -1206,6 +1208,24 @@ article.contact {
 	.lang-dropdown {
 		display: none !important;
 	}
+
+	[data-tooltip].tooltip-bottom {
+		&:after {
+			top: 0%;
+		}
+		&:before {
+			top: 90%;
+			/* arrow pointing up */
+			border-bottom: 16px solid $brand-secondary;
+		}
+		&:hover:after {
+			top: calc(100% + 8px);
+		}
+		&:hover:before {
+			top: calc(100% - 8px);
+		}
+	}
+
 }
 
 @include media-breakpoint-up(sm) {
