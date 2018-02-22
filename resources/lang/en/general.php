@@ -109,6 +109,7 @@ return [
 		'back' => 'Back to Speakers',
 		'short_bio' => 'Short Bio',
 		'talk' => 'Talk',
+		'previous' => 'Previous TEDx NTUA Talks',
 	],
 
 	/* SCHEDULE */
