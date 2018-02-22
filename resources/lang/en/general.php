@@ -74,7 +74,27 @@ return [
 			],
 			'about' => [
 				'title' => 'What is Chaos?',
-				'desc' => '&ldquo;<i>Chaos is what we\'ve lost touch with. This is why it is given a bad name. It is feared by the dominant archetype of our world, which is Ego, which clenches because its existence is defined in terms of control.</i>&rdquo; ~Terence McKenna',
+				'desc' => '
+				<p class="text-justify">
+				The notion of CHAOS today is synonym to confusion and disorder. In the past though, ancient Greek Philoshophers, though highly of CHAOS and considered it fundamental to the creation of Cosmos, that is, the Universe. Chaos was the original matter that transformed the "abnormal" uniformity of nature into "normal" diversity.
+				</p>
+
+				<p class="text-justify">
+				We people witness Chaos of that original scientific idea in numerous manifestations in everyday life: smoke rising up smoothly into the air and suddenly vanishing, unexpected traffic in a Highway road, irregular leaking of a tap, inexpectable fluctuations of the Stock Market Index and many more instances explained mostly by this Theory of Chaos.
+				</p>
+
+				<p class="text-justify">
+				Chaos resides in our daily routine. No matter how hard we fight for harmony and well-being in our life, we frequently face hardships and difficulties that break the order.
+				</p>
+
+				<p class="text-justify">
+				This year&#39;s <a href="http://2018.tedxntua.com">TEDx NTUA</a> makes an attempt to apply the Theory of Chaos to our individual quest for orderly life.
+				</p>
+
+				<p class="text-right">
+				&ldquo;<i>Chaos is what we\'ve lost touch with. This is why it is given a bad name. It is feared by the dominant archetype of our world, which is Ego, which clenches because its existence is defined in terms of control.</i>&rdquo;<br> ~Terence McKenna
+				</p>
+				',
 				'calltoaction' => 'Who are we?',
 			],
 			'blog' => [
