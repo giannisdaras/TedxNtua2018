@@ -851,7 +851,7 @@ function executeScriptTags(scripts) {
     var type = $(this).attr('type')
     if (type) script.type = type
     script.src = $(this).attr('src')
-    document.head.appendChild(script)
+    document.body.appendChild(script)
   })
 }
 
