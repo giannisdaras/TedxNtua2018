@@ -11,13 +11,13 @@ class TeamController extends Controller {
 
 	public function index(Request $request) {
 		$person = new Person();
-		$it = $person::where('team_type', 'it')->get();
-		$experience = $person::where('team_type', 'experience')->get();
-		$fr = $person::where('team_type', 'fr')->get();
-		$venue = $person::where('team_type', 'venue')->get();
-		$speakers = $person::where('team_type', 'speakers')->get();
-		$media = $person::where('team_type', 'media')->get();
-		$graphics = $person::where('team_type', 'graphics')->get();
+		$it = $person::where('team_type', 'it')->orderBy('name')->get();
+		$experience = $person::where('team_type', 'experience')->orderBy('name')->get();
+		$fr = $person::where('team_type', 'fr')->orderBy('name')->get();
+		$venue = $person::where('team_type', 'venue')->orderBy('name')->get();
+		$speakers = $person::where('team_type', 'speakers')->orderBy('name')->get();
+		$media = $person::where('team_type', 'media')->orderBy('name')->get();
+		$graphics = $person::where('team_type', 'graphics')->orderBy('name')->get();
 
 		$isPjax = $request->header('X-PJAX');
 		if($isPjax) {

@@ -25,6 +25,52 @@
 
 				</section>
 
+				<section id="speakers" class="wow bounceInUp">
+
+					<div class="section-content">
+
+						<div class="container-fluid">
+							{% for key, session in sessions -%}
+							<div class="row no-gutters">
+
+								<!-- <h2>{{ trans('general.home.sections.sessions.' ~ key ~ '.title') }}</h2> -->
+								<!-- <h4>{{ session.from }}-{{ session.to }}</h4> -->
+								<div class="container-fluid speaker-container">
+									<div class="row no-gutters">
+										{% for speaker in speakersBySession[key] -%}
+										<div class="col col-6 col-md-3">
+											<a href="/speakers#{{ speaker.sid }}">
+												<img class="photo1" src="/images/speakers/{{ speaker.img_src }}" />
+												<img class="photo2" src="/images/speakers/{{ speaker.img_src_alt }}" />
+												<div class="speaker-info">
+													<h3>{{ speaker.name }} </h3>
+													<p class="m-0">{{ speaker.talk.event_prev | markdown }}</p>
+												</div>
+											</a>
+										</div>
+
+										
+										<div class="col col-6 col-md-3">
+											<a href="/speakers#{{ speaker.sid }}">
+												<img class="photo1" src="/images/speakers/{{ speaker.img_src }}" />
+												<img class="photo2" src="/images/speakers/{{ speaker.img_src_alt }}" />
+												<div class="speaker-info">
+													<h3>{{ speaker.name }} </h3>
+													<p class="m-0">{{ speaker.talk.event_prev | markdown }}</p>
+												</div>
+											</a>
+										</div>
+										{% endfor -%}
+									</div>
+								</div>
+							</div>
+							{%endfor %}
+						</div>
+					</div>
+				</section>
+
+
+
 				<!-- What is chaos? -->
 
 				<div class="container-fluid">
@@ -38,6 +84,7 @@
 								<div class="section-intro">
 									<div class="description">{{ trans('general.home.sections.about.desc') | raw }}</div>
 									
+
 								</div>
 							</div>
 							<div class="call-to-action-wrapper">

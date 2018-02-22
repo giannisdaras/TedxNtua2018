@@ -47,8 +47,8 @@ class ScheduleSeeder extends Seeder
                     'el' => 'Το τέλος του χάους στο everest!'
                 ],
                 'subtitle' => [
-                    'en' => 'Chaos is **extreme weather**, chaos is extreme love!',
-                    'el'=> 'Χάος είναι ο **ακραίος καιρός** του έβερεστ, χάος είναι η αγάπη'
+                    'en' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+                    'el'=> 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
                 ],
                 /* This is where the Speaker object is created with its proper attributes */
                 'speaker_id' => App\Speaker::create([
@@ -57,15 +57,16 @@ class ScheduleSeeder extends Seeder
                         'el' => 'Μιχάλης Στύλλας'
                     ],
                     'sid' => 'styllas',
-                    'img_src' => 'styllas.jpeg',
+                    'img_src' => 'styllas_alt.jpg',
+                    'img_src_alt' => 'styllas.jpg',
                     'bio' => [
-                        'en' => 'dede',
-                        'el'=> 'δεδεδ',
+                        'en' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+                        'el'=> 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
                     ]
                 /* Create the object and return its id */
                 ])->id
             ])
         ];
-        
+
     }
 }
