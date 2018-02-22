@@ -37393,6 +37393,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
   function executeScriptTags(scripts) {
     if (!scripts) return;
 
+    /* remove script.pjax elements */
+    $('script[src].pjax').remove();
     var existingScripts = $('script[src]');
 
     scripts.each(function () {
