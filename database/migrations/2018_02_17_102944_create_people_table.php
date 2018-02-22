@@ -16,10 +16,10 @@ class CreatePeopleTable extends Migration
         Schema::create('people', function (Blueprint $table) {
             $table->increments('id');
             $table->json('name');
-            $table->string('email');
-            $table->string('img_src');
-            $table->string('img_src_alt');
-            $table->string('team_type');
+            $table->text('email');
+            $table->text('img_src');
+            $table->text('img_src_alt');
+            $table->text('team_type');
         });
     }
 

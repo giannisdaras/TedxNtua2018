@@ -13929,6 +13929,12 @@ article.sponsors .col {
 
 /* TEAM PAGE */
 
+article.team {
+  background-image: url("/images/backgrounds/pixels.svg");
+  background-size: contain;
+  background-repeat: repeat-y;
+}
+
 article.team h2 {
   text-align: center;
   font-weight: normal !important;
@@ -13942,7 +13948,30 @@ article.team .col {
   text-align: center;
 }
 
-article.team img {
+article.team a .photo1 {
+  display: block;
+}
+
+article.team a .photo2 {
+  display: none;
+}
+
+article.team a:hover .photo1 {
+  display: none;
+}
+
+article.team a:hover .photo2 {
+  display: block;
+}
+
+article.team img .person {
+  margin-right: -15px;
+  /* Remove right gap */
+  margin-left: -15px;
+  /* Remove left gap */
+  padding-bottom: 62.5%;
+  /* ratio is 16:10 */
+  margin-bottom: 10%;
   width: 100%;
 }
 

@@ -963,6 +963,13 @@ article.sponsors {
 /* TEAM PAGE */
 
 article.team {
+	background-image: url("/images/backgrounds/pixels.svg");
+	background-size: contain;
+	background-repeat: repeat-y;
+	// random flip!
+	// -webkit-transform: scaleX(-1);
+
+
 	h2 {
 		text-align: center;
 		font-weight: normal !important;
@@ -975,11 +982,24 @@ article.team {
 		text-align: center;
 	}
 
-	img {
-		// margin-right: -15px; /* Remove right gap */
-		// margin-left: -15px;  /* Remove left gap */
-		// padding-bottom: 62.5%; /* ratio is 16:10 */
-		// margin-bottom: 10%;
+	a .photo1 {
+		display: block;
+	}
+	a .photo2 {
+		display: none;
+	}
+	a:hover .photo1 {
+		display: none;
+	}
+	a:hover .photo2 {
+		display: block;
+	}
+
+	img .person {
+		margin-right: -15px; /* Remove right gap */
+		margin-left: -15px;  /* Remove left gap */
+		padding-bottom: 62.5%; /* ratio is 16:10 */
+		margin-bottom: 10%;
 		width: 100%;
 	}
 
@@ -1262,6 +1282,7 @@ article.contact {
 @include media-breakpoint-up(md) {
 
 	article.team {
+
 		section.content {
 			p {
 				position: relative;
