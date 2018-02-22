@@ -94,7 +94,7 @@ return [
 				'calltoaction' => 'See all the speakers',
 			],
 			'auspices' => [
-				'title' => '_under the auspices of',
+				'title' => '_under the auspices of NTUA',
 				'desc' => 'Under the auspices of',
 			],
 			'blog' => [
