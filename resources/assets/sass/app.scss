@@ -134,7 +134,8 @@ nav.navbar {
 }
 
 header.scrolled {
-	border-bottom: 2px solid #181818;
+	background-color: #181818;
+	border-bottom: 2px solid #131313;
 	nav.navbar {
 		padding: .25rem 1rem;
 	}
@@ -1479,7 +1480,7 @@ article.contact {
 		padding-top: 1rem;
 		transition: padding-top .5s, background .5s;
 		&.scrolled {
-			background: #202020;
+			background-color: #1C1C1C;
 		}
 	}
 	header.dark {

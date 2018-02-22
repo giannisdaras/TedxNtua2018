@@ -15,159 +15,45 @@
 
 	<section class="content text-center">
 
-		<h2 id="experience" data-tooltip="{{ trans('general.team.experience_description') }}">{{ trans('general.team.experience') }}</h2>
-
+		{% for key, teamlist in teams %}
+		<h2 id="{{ key }}" data-tooltip="{{ trans('general.team.' ~ key ~ '_description') }}">{{ trans('general.team.' ~ key) }}</h2>
 
 		<div class="container-fluid">
 
 			<div class="row vertical-align no-gutters">
-				{% for person in experience %}
+				{% for person in teamlist %}
 				<div class="col col-6 col-lg-3 centered">
-					<a href="mailto:{{ person.email }}" target="_blank"><img class="img-fluid grid-image "
-						src="{{ person.img_src }}" alt="{{ person.name }}"\>
-						<h6>{{ trans (person.name) }}</h6></a>
-					</div>
-					{% endfor %}
-
+					<a href="mailto:{{ person.email }}" target="_blank">
+						<img class="img-fluid grid-image photo1 person" src="{{ person.img_src }}" alt="{{ person.name }}"/>
+						<img class="img-fluid grid-image photo2 person" src="{{ person.img_src_alt }}" alt="{{ person.name }}"/>
+						<h6>{{ person.name }}</h6>
+					</a>
 				</div>
+				{% endfor %}
 
 			</div>
 
+		</div>
+		{% endfor %}
 
-			<h2 id="fr" id="experience" data-tooltip="{{ trans('general.team.fr_description') }}">{{ trans('general.team.fr') }}</h2>
+		<div class="container-fluid">
+			<h3 class="quote"><sup><i class="fa fa-quote-left fa-1x" aria-hidden="true"></i></sup>
+				&nbsp;{{ trans('general.team.quote') }}
+				&nbsp;<sup><i class="fa fa-quote-right fa-1x" aria-hidden="true"></i></sup></h3>
+			</div>
 
 			<div class="container-fluid">
-
-				<div class="row vertical-align no-gutters">
-					{% for person in fr %}
-					<div class="col col-6 col-lg-3 centered">
-						<a href="mailto:{{ person.email }}" target="_blank"><img class="img-fluid grid-image "
-							src="{{ person.img_src }}" alt="{{ person.name }}"
-							onmouseover="changePhoto(this,{{ person.img_src_alt }})"
-							onmouseout="changePhoto(this,'{{ person.img_src }})">
-							<h6>{{ trans (person.name) }}</h6></a>
-						</div>
-						{% endfor %}
-
+				<div class="row vertical-align">
+					<div class="col col-12 col-lg-6 centered join_us">
+						<img style="width: 100%" src="{{ asset('/images/team/will_you_join_us.png')}}">
+						<p class="back text-center text-md-right text-lg-right">
+							<a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdKEcQe7KrEtmyrsncLZwxz6I1zmk9hBuHUUICjuyMA82wFdQ/viewform">{{ trans('general.team.volunteer') }} &nbsp;<i class="fa fa-chevron-circle-right fa-1x" aria-hidden="true"></i></a>
+						</p>
 					</div>
-
 				</div>
+			</div>
 
-				<h2 id="graphics" data-tooltip="{{ trans('general.team.graphics_description') }}">{{ trans('general.team.graphics') }}</h2>
+		</section>
 
-				<div class="container-fluid">
-
-					<div class="row vertical-align no-gutters">
-						{% for person in graphics %}
-						<div class="col col-6 col-lg-3 centered">
-							<a href="mailto:{{ person.email }}" target="_blank">
-								<img class="img-fluid grid-image photo1 person" src="{{ person.img_src }}" alt="{{ person.name }}"/>
-								<img class="img-fluid grid-image photo2 person" src="{{ person.img_src_alt }}" alt="{{ person.name }}"/>
-								<h6>{{ trans (person.name) }}</h6></a>
-							</div>
-							{% endfor %}
-
-						</div>
-
-					</div>
-
-					<h2 id="it" data-tooltip="{{ trans('general.team.it_description') }}">{{ trans('general.team.it') }}</h2>
-
-					<div class="container-fluid">
-
-						<div class="row vertical-align no-gutters">
-							{% for person in it %}
-							<div class="col col-6 col-lg-3 centered">
-								<a href="mailto:{{ person.email }}" target="_blank">
-									<img class="img-fluid grid-image photo1 person" src="{{ person.img_src }}" alt="{{ person.name }}"/>
-									<img class="img-fluid grid-image photo2 person" src="{{ person.img_src_alt }}" alt="{{ person.name }}"/>
-									<h6>{{ trans (person.name) }}</h6></a>
-								</div>
-								{% endfor %}
-
-							</div>
-
-						</div>
-
-						<h2 id="media" data-tooltip="{{ trans('general.team.media_description') }}">{{ trans('general.team.media') }}</h2>
-
-						<div class="container-fluid">
-
-							<div class="row vertical-align no-gutters">
-								{% for person in media %}
-								<div class="col col-6 col-lg-3 centered">
-									<a href="mailto:{{ person.email }}" target="_blank">
-										<img class="img-fluid grid-image photo1 person" src="{{ person.img_src }}" alt="{{ person.name }}"/>
-										<img class="img-fluid grid-image photo2 person" src="{{ person.img_src_alt }}" alt="{{ person.name }}"/>
-										<h6>{{ trans (person.name) }}</h6></a>
-									</div>
-									{% endfor %}
-
-								</div>
-
-							</div>
-
-
-							<h2 id="speakers" id="experience" data-tooltip="{{ trans('general.team.speakers_description') }}">{{ trans('general.team.speakers') }}</h2>
-
-							<div class="container-fluid">
-
-								<div class="row vertical-align no-gutters">
-									{% for person in speakers %}
-									<div class="col col-6 col-lg-3 centered">
-										<a href="mailto:{{ person.email }}" target="_blank">
-											<img class="img-fluid grid-image photo1 person" src="{{ person.img_src }}" alt="{{ person.name }}"/>
-											<img class="img-fluid grid-image photo2 person" src="{{ person.img_src_alt }}" alt="{{ person.name }}"/>
-											<h6>{{ trans (person.name) }}</h6></a>
-										</div>
-										{% endfor %}
-
-									</div>
-
-								</div>
-
-								<h2 id="venue_production" id="experience" data-tooltip="{{ trans('general.team.venue_production_description') }}">{{ trans('general.team.venue_production') }}</h2>
-
-								<div class="container-fluid">
-
-									<div class="row vertical-align no-gutters">
-										{% for person in venue %}
-										<div class="col col-6 col-lg-3 centered">
-											<a href="mailto:{{ person.email }}" target="_blank">
-												<img class="img-fluid grid-image photo1 person" src="{{ person.img_src }}" alt="{{ person.name }}"/>
-												<img class="img-fluid grid-image photo2 person" src="{{ person.img_src_alt }}" alt="{{ person.name }}"/>
-												<h6>{{ trans (person.name) }}</h6></a>
-											</div>
-											{% endfor %}
-
-										</div>
-
-									</div>
-
-									<div class="container-fluid">
-										<h3 class="quote"><sup><i class="fa fa-quote-left fa-1x" aria-hidden="true"></i></sup>
-											&nbsp;{{ trans('general.team.quote') }}
-											&nbsp;<sup><i class="fa fa-quote-right fa-1x" aria-hidden="true"></i></sup></h3>
-										</div>
-
-										<div class="container-fluid">
-											<div class="row vertical-align">
-												<div class="col col-12 col-lg-6 centered join_us">
-													<img style="width: 100%" src="{{ asset('/images/team/will_you_join_us.png')}}">
-													<p class="back text-center text-md-right text-lg-right">
-														<a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdKEcQe7KrEtmyrsncLZwxz6I1zmk9hBuHUUICjuyMA82wFdQ/viewform">{{ trans('general.team.volunteer') }} &nbsp;<i class="fa fa-chevron-circle-right fa-1x" aria-hidden="true"></i></a>
-													</p>
-												</div>
-											</div>
-
-										</div>
-
-									</section>
-
-
-								</article>
-								{% endblock %}
-
-								{% block scripts %}
-
-								{% endblock %}
+	</article>
+{% endblock %}
