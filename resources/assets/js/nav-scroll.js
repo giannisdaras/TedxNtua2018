@@ -5,7 +5,6 @@ $(document).ready(function() {
 	/* IMPORTANT: Use debounce with scroll events for better performance */
 
 	$(window).on("scroll", _.debounce(function() {
-
 		if($(".navbar-toggler").hasClass("collapsed")) {
 
 			if($(window).scrollTop() > navOffsetY) {

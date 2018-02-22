@@ -25,114 +25,50 @@
 
 				</section>
 
-				<section id="speakers" class="wow bounceInUp">
+				<!-- What is chaos? -->
 
-					<div class="section-content">
+				<div class="container-fluid">
+					<div class="row no-gutters">
+						<div class="col-md-3 col-lg-2"> </div>
+						<div class="col-md-4 col-lg-4"><h2 id="typer" class="typewriter"></h2> </div>
+						<div class="col-md-4 col-lg-4 col-sm-12">
+							<section id="about" class="wow bounceInUp">
+							<div class="section-content">
 
-						<div class="container-fluid">
-							{% for key, session in sessions -%}
-							<div class="row no-gutters">
-
-								<!-- <h2>{{ trans('general.home.sections.sessions.' ~ key ~ '.title') }}</h2> -->
-								<!-- <h4>{{ session.from }}-{{ session.to }}</h4> -->
-								<div class="container-fluid speaker-container">
-									<div class="row no-gutters">
-										{% for speaker in speakersBySession[key] -%}
-										<div class="col col-6 col-md-3">
-											<a href="/speakers#{{ speaker.sid }}">
-												<img class="photo1" src="/images/speakers/{{ speaker.img_src }}" />
-												<img class="photo2" src="/images/speakers/{{ speaker.img_src_alt }}" />
-												<div class="speaker-info">
-													<h3>{{ speaker.name }} </h3>
-													<p class="m-0">{{ speaker.talk.event_prev | markdown }}</p>
-												</div>
-											</a>
-										</div>
-
-										<div class="col col-6 col-md-3">
-											<a href="/speakers#{{ speaker.sid }}">
-												<img class="photo1" src="/images/speakers/{{ speaker.img_src }}" />
-												<img class="photo2" src="/images/speakers/{{ speaker.img_src_alt }}" />
-												<div class="speaker-info">
-													<h3>{{ speaker.name }} </h3>
-													<p class="m-0">{{ speaker.talk.event_prev | markdown }}</p>
-												</div>
-											</a>
-										</div>
-
-										<div class="col col-6 col-md-3">
-											<!-- <a href="/speakers#{{ speaker.sid }}">
-												<img class="photo1" src="/images/speakers/{{ speaker.img_src }}" />
-												<img class="photo2" src="/images/speakers/{{ speaker.img_src_alt }}" />
-												<div class="speaker-info">
-													<h3>{{ speaker.name }} </h3>
-													<p class="m-0">{{ speaker.talk.event_prev | markdown }}</p>
-												</div>
-											</a> -->
-										</div>
-
-										<div class="col col-6 col-md-3">
-											<a href="/speakers#{{ speaker.sid }}">
-												<img class="photo1" src="/images/speakers/{{ speaker.img_src }}" />
-												<img class="photo2" src="/images/speakers/{{ speaker.img_src_alt }}" />
-												<div class="speaker-info">
-													<h3>{{ speaker.name }} </h3>
-													<p class="m-0">{{ speaker.talk.event_prev | markdown }}</p>
-												</div>
-											</a>
-										</div>
-										{% endfor -%}
+								<div class="section-intro">
+									<div class="description">{{ trans('general.home.sections.about.desc') | raw }}</div>
+									
+								</div>
+							</div>
+							<div class="call-to-action-wrapper">
+										<a href="/about" class="call-to-action">
+											{{ trans('general.home.sections.about.calltoaction') }} <i class="fa fa-chevron-right"></i>
+										</a>
 									</div>
-								</div>
+						</section>
+						</div>
+						<div class="col-md-3 col-lg-2"> </div>
 
-							</div>
-							{% endfor -%}
 
 					</div>
+				</div>
 
-				</section>
 
-				<section id="about" class="wow bounceInUp">
-
-					<div class="section-content">
-						<h2>{{ trans('general.home.sections.about.title') }}</h2>
-						<div class="section-intro">
-							<div class="description">{{ trans('general.home.sections.about.desc') | raw }}</div>
-							<div class="call-to-action-wrapper">
-								<a href="/about" class="call-to-action">
-									{{ trans('general.home.sections.about.calltoaction') }} <i class="fa fa-chevron-right"></i>
-								</a>
-							</div>
+				<div class="container-fluid text-center">
+					<div class="row no-gutters">
+						<div class="col-md-2 col-lg-2"> </div>
+						<div class="col-md-8 col-lg-8 col-sm-12">
+							<section>
+									<h3 class="text-center">{{ trans('general.home.sections.sponsors.auspices') }}</h3>
+											<a href="https://www.ntua.gr" class="mx-auto">
+												<img style="width:25%; margin-top:1rem" class="img-fluid" src="https://www.ece.ntua.gr/themes/ecetheme/assets/img/pyrforos.svg" alt="NTUA">
+											</a>
+									</div>
+							</section>
 						</div>
+						<div class="col-md-2 col-lg-2"></div>
 					</div>
-
-				</section>
-
-				<section id="sponsors" class="wow bounceInUp">
-
-					<div class="section-content">
-						<h2>{{ trans('general.home.sections.sponsors.title') }}</h2>
-						<div class="section-intro">
-							<div class="description">{{ trans('general.home.sections.sponsors.desc') | raw }}</div>
-							<div class="call-to-action-wrapper">
-								<a href="/sponsors" class="call-to-action">
-									{{ trans('general.home.sections.sponsors.calltoaction') }} <i class="fa fa-chevron-right"></i>
-								</a>
-							</div>
-						</div>
-						<div class="container-fluid auspices-container">
-							<h3 class="text-center">{{ trans('general.home.sections.sponsors.auspices') }}</h3>
-							<div class="row no-gutters vertical-align">
-								<div class="col col-12">
-									<a href="https://www.ntua.gr" class="mx-auto">
-										<img class="img-fluid" src="https://www.ece.ntua.gr/themes/ecetheme/assets/img/pyrforos.svg" alt="NTUA">
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-				</section>
+				</div>
 
 				<section id="map">
 
