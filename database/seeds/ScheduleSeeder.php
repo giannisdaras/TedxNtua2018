@@ -59,13 +59,48 @@ class ScheduleSeeder extends Seeder
                     'sid' => 'styllas',
                     'img_src' => 'styllas_alt.jpg',
                     'img_src_alt' => 'styllas.jpg',
+                    'link' => 'https://www.researchgate.net/profile/Michael_Styllas',
+                    'bio' => [
+                        'en' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+                        'el' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+                    ]
+                /* Create the object and return its id */
+                ])->id
+            ]),
+
+            App\Schedule::create([
+                'hour' => '16:00',
+                'img_src' => 'romy-lorenz.jpeg',
+                'type' => 'talk',
+                'event_title' => [
+                    'en' => 'Romy Lorenz',
+                    'el' => 'Romy Lorenz'
+                ],
+                'event_prev' => [
+                    'en' => 'Unwinding the neuron paths',
+                    'el' => 'Ξετυλίγοντας τα μονοπάτια των νευρώνων'
+                ],
+                'subtitle' => [
+                    'en' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+                    'el'=> 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+                ],
+                /* This is where the Speaker object is created with its proper attributes */
+                'speaker_id' => App\Speaker::create([
+                    'name' => [
+                        'en' => 'Romy Lorenz',
+                        'el' => 'Romy Lorenz'
+                    ],
+                    'sid' => 'romy-lorenz',
+                    'img_src' => 'romy-lorenz.jpg',
+                    'img_src_alt' => 'romy-lorenz.jpg',
+                    'link' => '/#map',
                     'bio' => [
                         'en' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
                         'el'=> 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
                     ]
                 /* Create the object and return its id */
                 ])->id
-            ])
+            ]),
         ];
 
     }

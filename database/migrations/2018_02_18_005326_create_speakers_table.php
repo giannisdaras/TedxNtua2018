@@ -18,6 +18,7 @@ class CreateSpeakersTable extends Migration
             $table->string('sid')->unique();
             $table->text('img_src');
             $table->text('img_src_alt');
+            $table->string('link');
             $table->json('name');
             $table->json('bio');
         });

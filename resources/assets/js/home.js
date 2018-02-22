@@ -12,6 +12,9 @@ $(document).ready(function(){
 
 	if($("article.home").length > 0) {
 
+		/* trigger home animations */
+		homeAnimations()
+
 		$("body > header").addClass("home")
 
 	}

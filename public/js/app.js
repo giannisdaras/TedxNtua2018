@@ -36558,6 +36558,9 @@ $(document).ready(function () {
 
     if ($("article.home").length > 0) {
 
+        /* trigger home animations */
+        homeAnimations();
+
         $("body > header").addClass("home");
     }
 });
@@ -37572,6 +37575,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 $(document).ready(function () {
 
+	var navOffsetY = 68;
+
 	$(document).pjax("a:not(.flagLink)", "main", {
 		fragment: "main"
 	});
@@ -37610,6 +37615,9 @@ $(document).ready(function () {
 		if ($("article.home").length > 0) {
 
 			$("body > header").addClass("home");
+
+			/* trigger home animations */
+			homeAnimations();
 		} else {
 
 			$("header.home").removeClass("home");

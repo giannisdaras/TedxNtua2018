@@ -84,17 +84,6 @@
 									</div>
 								</a>
 							</div>
-
-							<div class="col col-6 col-md-3">
-								<a href="/speakers#{{ speaker.sid }}">
-									<img class="photo1" src="/images/speakers/{{ speaker.img_src }}" />
-									<img class="photo2" src="/images/speakers/{{ speaker.img_src_alt }}" />
-									<div class="speaker-info">
-										<h3>{{ speaker.name }}</h3>
-										<p class="m-0">{{ speaker.talk.event_prev | markdown }}</p>
-									</div>
-								</a>
-							</div>
 							{% endfor -%}
 						</div>
 					</div>

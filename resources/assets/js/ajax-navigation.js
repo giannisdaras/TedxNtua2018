@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+	var navOffsetY = 68
+
 	$(document).pjax("a:not(.flagLink)", "main", {
 		fragment: "main"
 	})
@@ -38,6 +40,9 @@ $(document).ready(function(){
 		if($("article.home").length > 0) {
 
 			$("body > header").addClass("home")
+
+			/* trigger home animations */
+			homeAnimations()
 
 		} else {
 
