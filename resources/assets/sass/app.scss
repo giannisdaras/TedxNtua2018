@@ -698,6 +698,9 @@ article.home {
 			opacity: 0;
 			transition: opacity .8s, height .8s;
 		}
+		.cursor {
+			animation: cursor 1s infinite;
+		}
 		.typed + img {
 			height: 3.5rem;
 			opacity: 1;
@@ -863,6 +866,18 @@ article.home {
 	}
 	100% {
 		transform: scale(1, 1);
+	}
+}
+
+@keyframes cursor {
+	0%, 24.999% {
+		opacity: 1;
+	}
+	25%, 74.999% {
+		opacity: 0;
+	}
+	75%, 100% {
+		opacity: 1;
 	}
 }
 

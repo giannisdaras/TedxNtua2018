@@ -13608,6 +13608,11 @@ article.home #chaos h2 img {
   transition: opacity .8s, height .8s;
 }
 
+article.home #chaos .cursor {
+  -webkit-animation: cursor 1s infinite;
+          animation: cursor 1s infinite;
+}
+
 article.home #chaos .typed + img {
   height: 3.5rem;
   opacity: 1;
@@ -13835,6 +13840,34 @@ article.home #map .venue-gallery img {
   100% {
     -webkit-transform: scale(1, 1);
             transform: scale(1, 1);
+  }
+}
+
+@-webkit-keyframes cursor {
+  0%, 24.999% {
+    opacity: 1;
+  }
+
+  25%, 74.999% {
+    opacity: 0;
+  }
+
+  75%, 100% {
+    opacity: 1;
+  }
+}
+
+@keyframes cursor {
+  0%, 24.999% {
+    opacity: 1;
+  }
+
+  25%, 74.999% {
+    opacity: 0;
+  }
+
+  75%, 100% {
+    opacity: 1;
   }
 }
 

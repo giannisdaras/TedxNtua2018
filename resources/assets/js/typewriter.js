@@ -15,12 +15,13 @@ $(document).ready(function() {
 			let scrollHeight = this.getBoundingClientRect().top
 			if(scrollHeight <= scrollPercentage * wh) {
 				/* trigger the effect */
-				$(this).addClass("typing")
+				$(this).addClass("typing").after('<span class="cursor">|</span>')
 				let i = 0, txt = $(this).attr("data-text"), el = this
 				let timer = window.setInterval(function() {
 					if(i < txt.length) {
 						el.innerHTML += txt.charAt(i++)
 					} else {
+						$(el).parent().find(".cursor").remove()
 						$(el).removeClass("typing").addClass("typed")
 						clearInterval(timer)
 					}

@@ -37839,7 +37839,7 @@ $(document).ready(function () {
 			var scrollHeight = this.getBoundingClientRect().top;
 			if (scrollHeight <= scrollPercentage * wh) {
 				/* trigger the effect */
-				$(this).addClass("typing");
+				$(this).addClass("typing").after('<span class="cursor">|</span>');
 				var i = 0,
 				    txt = $(this).attr("data-text"),
 				    el = this;
@@ -37847,6 +37847,7 @@ $(document).ready(function () {
 					if (i < txt.length) {
 						el.innerHTML += txt.charAt(i++);
 					} else {
+						$(el).parent().find(".cursor").remove();
 						$(el).removeClass("typing").addClass("typed");
 						clearInterval(timer);
 					}
