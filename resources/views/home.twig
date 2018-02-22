@@ -5,6 +5,10 @@
 {% block description -%}
 	{{ trans('general.home.description') }}
 {%- endblock %}
+{% block scripts -%}
+	<script class="pjax" src="{{ asset('js/lorenz.js') }}"></script>
+	<script class="pjax" src="{{ asset('js/home-animations.js') }}"></script>
+{%- endblock %}
 {% block content %}
 			<article class="home">
 
@@ -21,7 +25,26 @@
 							<a href="https://www.eventora.com">{{ trans('general.home.hero.tickets') }}</a>
 						</p>
 					</div>
-					<canvas id="canvas" width="800" height="400"></canvas>
+
+					<svg id="logo-animation">
+
+						<g class="container" transform="scale(1, -1) rotate(45)">
+							<g id="one" class="secondary">
+								<path d="M-225,30 L25,30 L25,280" />
+							</g>
+							<g id="two">
+								<path d="M225,-30 L-25,-30 L-25,-280" />
+							</g>
+							<g id="three">
+								<path d="M-127.5,10 L122.5,10 L122.5,260" />
+							</g>
+							<g id="four" class="secondary">
+								<path d="M127.5,-10 L-122.5,-10 L-122.5,-260" />
+							</g>
+						</g>
+
+					</svg>
+					<canvas id="lorenz" width="800" height="800"></canvas>
 
 				</section>
 

@@ -41,7 +41,7 @@ a {
 	display: inline-block; /*bug fix*/
 	position: relative;
 	text-decoration: none;
-	pointer-events: auto;
+	cursor: help;
 }
 [data-tooltip]:after {
 	content: attr(data-tooltip);
@@ -54,7 +54,7 @@ a {
 	border-radius: .5rem;
 	white-space: nowrap;
 	opacity: 0;
-	ition: all 0.5s ease;
+	transition: all 0.5s ease;
 	white-space: pre-wrap;
 	text-align: center;
 	width: 70vw !important;
@@ -512,8 +512,6 @@ body > footer {
 
 article.home {
 	section {
-		/* top and bottom inset box shadow */
-		box-shadow: inset 0 -40px 40px -40px rgba(0, 0, 0, .4), inset 0 40px 40px -40px rgba(0, 0, 0, .4);
 		width: 100%;
 		/* temporary, just to test the home layout */
 		min-height: 400px;
@@ -555,7 +553,7 @@ article.home {
 		box-shadow: inset 0 -80px 80px -80px rgba(0, 0, 0, .4);
 		color: white;
 		border-bottom: 0;
-		background: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png"), linear-gradient(#202020, #2F2F2F);
+		background: linear-gradient(#202020, #2F2F2F);
 		animation: gradientFlow 60s linear infinite;
 		min-height: 480px;
 		position: relative;
@@ -605,15 +603,52 @@ article.home {
 				font-size: 1.1rem;
 			}
 		}
-		canvas {
+		canvas#lorenz {
 			display: none;
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			margin-top: -200px;
+			margin-top: -540px;
 			margin-left: -400px;
 			z-index: 1;
 		}
+		svg#logo-animation {
+			display: none;
+			position: absolute;
+			top: 10%;
+			left: 0;
+			height: 90%;
+			width: 100%;
+			z-index: 1;
+			stroke: #E62B1E;
+			stroke-width: 10;
+			stroke-linejoin: miter;
+			fill: none;
+
+			#one, #two, #three, #four {
+				animation: zoom 1s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+				animation-play-state: paused;
+				transform: scale(0, 0);
+				animation-fill-mode: forwards;
+			}
+
+			#two {
+				animation-delay: 0.5s;
+			}
+
+			#three {
+				animation-delay: 1.0s;
+			}
+
+			#four {
+				animation-delay: 1.3s;
+			}
+
+			.secondary {
+				stroke: #E66557;
+			}
+		}
+
 	}
 	a.call-to-action {
 		background-color: #333333;
@@ -825,6 +860,15 @@ article.home {
 	}
 }
 
+@keyframes zoom {
+	0% {
+		transform: scale(15, 15);
+	}
+	100% {
+		transform: scale(1, 1);
+	}
+}
+
 /* END HOME PAGE */
 
 /* GENERIC LAYOUT FOR PAGES OTHER THAN HOME */
@@ -929,19 +973,19 @@ article.speakers {
 		display: none;
 	}
 
-.video {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
-	height: 0;
-}
-.video iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
+	.video {
+		position: relative;
+		padding-bottom: 56.25%; /* 16:9 */
+		padding-top: 25px;
+		height: 0;
+	}
+	.video iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
 	background-image: url("/images/backgrounds/pixels.svg");
 	background-size: 100% auto;
 	background-repeat: repeat-y;
@@ -1208,24 +1252,6 @@ article.contact {
 	.lang-dropdown {
 		display: none !important;
 	}
-
-	[data-tooltip].tooltip-bottom {
-		&:after {
-			top: 0%;
-		}
-		&:before {
-			top: 90%;
-			/* arrow pointing up */
-			border-bottom: 16px solid $brand-secondary;
-		}
-		&:hover:after {
-			top: calc(100% + 8px);
-		}
-		&:hover:before {
-			top: calc(100% - 8px);
-		}
-	}
-
 }
 
 @include media-breakpoint-up(sm) {
@@ -1241,13 +1267,9 @@ article.contact {
 
 	}
 
-
 	[data-tooltip]:after {
 		width: 33vw !important;
 		margin-left: -16.5vw !important;
-	}
-
-	[data-tooltip]:before {
 	}
 
 	nav.navbar {
@@ -1366,12 +1388,22 @@ article.contact {
 		}
 		#hero {
 			min-height: 720px;
+			.section-content {
+				opacity: 0;
+				bottom: -2rem;
+				transition: opacity 3s, bottom 3s;
+				transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+				&.slideIn {
+					opacity: 1;
+					bottom: 0;
+				}
+			}
 			h1 {
 				margin-top: 20rem;
 				font-size: 3.5rem;
 				font-weight: bold;
 			}
-			canvas {
+			canvas#lorenz, svg#logo-animation {
 				display: block;
 			}
 		}

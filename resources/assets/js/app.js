@@ -46,7 +46,6 @@ const app = new Vue({
 });
 
 */
-require('./lorenz');
 require('./home');
 require('./jquery.pjax');
 require('./ajax-navigation');

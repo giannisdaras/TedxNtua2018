@@ -10,44 +10,28 @@ $(document).ready(function(){
 
     })
 
-	if($("article.home").length > 0) {
+    /*	checking $("article.home").length won't work by itself, since it runs on page load
+		thus, AJAX navigation to home would not trigger the script
+	 */
+	$(window).on("scroll", _.debounce(function() {
 
-		$(window).on("scroll", _.debounce(function() {
+		if($('.typewriter').length > 0) {
 
-		var sh = $('.typewriter')[0].getBoundingClientRect().top;
-		if (sh<=0.56*$(window).height() && !($('.typewriter').hasClass('animated'))) {
-			$('.typewriter').addClass('animated');
-			typeWriter();
+			var sh = $('.typewriter')[0].getBoundingClientRect().top;
+			if (sh<=0.56*$(window).height() && !($('.typewriter').hasClass('animated'))) {
+				$('.typewriter').addClass('animated');
+				typeWriter();
+			}
+
 		}
 
+	}))
 
-		}))
+	if($("article.home").length > 0) {
 
 		$("body > header").addClass("home")
 
-		var l = Lorenz({
-			target: "canvas",
-			length: 1000,
-			color: "#E62B1E",
-			pointSize: 4,
-			initial: {
-				x: 0,
-				y: 10,
-				z: 10,
-			},
-			scale: {
-				x: 15,
-				y: 6
-			},
-			h: 0.008,
-			a: 10,
-			b: 38,
-			c: 8 / 3
-		})
-		l.run()
-
 	}
-
 
 });
 

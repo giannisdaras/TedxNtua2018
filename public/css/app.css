@@ -12809,7 +12809,7 @@ a:hover {
   /*bug fix*/
   position: relative;
   text-decoration: none;
-  pointer-events: auto;
+  cursor: help;
 }
 
 [data-tooltip]:after {
@@ -12823,7 +12823,8 @@ a:hover {
   border-radius: .5rem;
   white-space: nowrap;
   opacity: 0;
-  ition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   white-space: pre-wrap;
   text-align: center;
   width: 70vw !important;
@@ -13372,9 +13373,6 @@ body > footer .container.credits a:hover {
 /* HOME PAGE */
 
 article.home section {
-  /* top and bottom inset box shadow */
-  -webkit-box-shadow: inset 0 -40px 40px -40px rgba(0, 0, 0, 0.4), inset 0 40px 40px -40px rgba(0, 0, 0, 0.4);
-          box-shadow: inset 0 -40px 40px -40px rgba(0, 0, 0, 0.4), inset 0 40px 40px -40px rgba(0, 0, 0, 0.4);
   width: 100%;
   /* temporary, just to test the home layout */
   min-height: 400px;
@@ -13435,8 +13433,8 @@ article.home #hero {
           box-shadow: inset 0 -80px 80px -80px rgba(0, 0, 0, 0.4);
   color: white;
   border-bottom: 0;
-  background: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png"), -webkit-gradient(linear, left top, left bottom, from(#202020), to(#2F2F2F));
-  background: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png"), linear-gradient(#202020, #2F2F2F);
+  background: -webkit-gradient(linear, left top, left bottom, from(#202020), to(#2F2F2F));
+  background: linear-gradient(#202020, #2F2F2F);
   -webkit-animation: gradientFlow 60s linear infinite;
           animation: gradientFlow 60s linear infinite;
   min-height: 480px;
@@ -13501,14 +13499,61 @@ article.home #hero .tickets a:active {
   font-size: 1.1rem;
 }
 
-article.home #hero canvas {
+article.home #hero canvas#lorenz {
   display: none;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -200px;
+  margin-top: -540px;
   margin-left: -400px;
   z-index: 1;
+}
+
+article.home #hero svg#logo-animation {
+  display: none;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  height: 90%;
+  width: 100%;
+  z-index: 1;
+  stroke: #E62B1E;
+  stroke-width: 10;
+  stroke-linejoin: miter;
+  fill: none;
+}
+
+article.home #hero svg#logo-animation #one,
+article.home #hero svg#logo-animation #two,
+article.home #hero svg#logo-animation #three,
+article.home #hero svg#logo-animation #four {
+  -webkit-animation: zoom 1s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+          animation: zoom 1s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-transform: scale(0, 0);
+          transform: scale(0, 0);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+article.home #hero svg#logo-animation #two {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+article.home #hero svg#logo-animation #three {
+  -webkit-animation-delay: 1.0s;
+          animation-delay: 1.0s;
+}
+
+article.home #hero svg#logo-animation #four {
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+}
+
+article.home #hero svg#logo-animation .secondary {
+  stroke: #E66557;
 }
 
 article.home a.call-to-action {
@@ -13771,6 +13816,30 @@ article.home #map .venue-gallery img {
   75% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes zoom {
+  0% {
+    -webkit-transform: scale(15, 15);
+            transform: scale(15, 15);
+  }
+
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+
+@keyframes zoom {
+  0% {
+    -webkit-transform: scale(15, 15);
+            transform: scale(15, 15);
+  }
+
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
   }
 }
 
@@ -14208,24 +14277,6 @@ article.contact .g-recaptcha.error > div {
   .lang-dropdown {
     display: none !important;
   }
-
-  [data-tooltip].tooltip-bottom:after {
-    top: 0%;
-  }
-
-  [data-tooltip].tooltip-bottom:before {
-    top: 90%;
-    /* arrow pointing up */
-    border-bottom: 16px solid #222222;
-  }
-
-  [data-tooltip].tooltip-bottom:hover:after {
-    top: calc(100% + 8px);
-  }
-
-  [data-tooltip].tooltip-bottom:hover:before {
-    top: calc(100% - 8px);
-  }
 }
 
 @media (min-width: 576px) {
@@ -14373,13 +14424,28 @@ article.contact .g-recaptcha.error > div {
     min-height: 720px;
   }
 
+  article.home #hero .section-content {
+    opacity: 0;
+    bottom: -2rem;
+    -webkit-transition: opacity 3s, bottom 3s;
+    transition: opacity 3s, bottom 3s;
+    -webkit-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+            transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  article.home #hero .section-content.slideIn {
+    opacity: 1;
+    bottom: 0;
+  }
+
   article.home #hero h1 {
     margin-top: 20rem;
     font-size: 3.5rem;
     font-weight: bold;
   }
 
-  article.home #hero canvas {
+  article.home #hero canvas#lorenz,
+  article.home #hero svg#logo-animation {
     display: block;
   }
 
