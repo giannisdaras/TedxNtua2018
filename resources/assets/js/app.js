@@ -46,6 +46,7 @@ const app = new Vue({
 });
 
 */
+require('./typewriter')
 require('./home');
 require('./jquery.pjax');
 require('./ajax-navigation');

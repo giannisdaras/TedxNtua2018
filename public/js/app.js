@@ -773,7 +773,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(9);
-module.exports = __webpack_require__(46);
+module.exports = __webpack_require__(47);
 
 
 /***/ }),
@@ -827,7 +827,7 @@ const app = new Vue({
 });
 
 */
-__webpack_require__(38);
+__webpack_require__(57);
 __webpack_require__(39);
 __webpack_require__(40);
 __webpack_require__(41);
@@ -835,6 +835,7 @@ __webpack_require__(42);
 __webpack_require__(43);
 __webpack_require__(44);
 __webpack_require__(45);
+__webpack_require__(46);
 
 /***/ }),
 /* 10 */
@@ -36541,54 +36542,28 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 38 */
+/* 38 */,
+/* 39 */
 /***/ (function(module, exports) {
 
 $(document).ready(function () {
 
-	$(document).on("mouseover", "#hero .info a", function (e) {
+    $(document).on("mouseover", "#hero .info a", function (e) {
 
-		$(this).addClass("blink");
-	}).on("mouseout", "#hero .info a", function (e) {
+        $(this).addClass("blink");
+    }).on("mouseout", "#hero .info a", function (e) {
 
-		$(this).removeClass("blink");
-	});
+        $(this).removeClass("blink");
+    });
 
-	/*	checking $("article.home").length won't work by itself, since it runs on page load
- thus, AJAX navigation to home would not trigger the script
- */
-	$(window).on("scroll", _.debounce(function () {
+    if ($("article.home").length > 0) {
 
-		if ($('.typewriter').length > 0) {
-
-			var sh = $('.typewriter')[0].getBoundingClientRect().top;
-			if (sh <= 0.56 * $(window).height() && !$('.typewriter').hasClass('animated')) {
-				$('.typewriter').addClass('animated');
-				typeWriter();
-			}
-		}
-	}));
-
-	if ($("article.home").length > 0) {
-
-		$("body > header").addClass("home");
-	}
+        $("body > header").addClass("home");
+    }
 });
 
-var i = 0;
-var txt = '_What is '; /* The text */
-var speed = 250; /* The speed/duration of the effect in milliseconds */
-
-function typeWriter() {
-	if (i < txt.length) {
-		document.getElementById("typer").innerHTML += txt.charAt(i);
-		i++;
-		setTimeout(typeWriter, speed);
-	}
-}
-
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports) {
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -37590,7 +37565,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 })(jQuery);
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports) {
 
 $(document).ready(function () {
@@ -37646,7 +37621,7 @@ $(document).ready(function () {
 });
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports) {
 
 $(document).ready(function () {
@@ -37672,7 +37647,7 @@ $(document).ready(function () {
 });
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports) {
 
 $(document).ready(function () {
@@ -37732,7 +37707,7 @@ $(document).ready(function () {
 });
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports) {
 
 $(document).ready(function () {
@@ -37757,7 +37732,7 @@ $(document).ready(function () {
 });
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports) {
 
 function createCookie(name, value, days) {
@@ -37807,7 +37782,7 @@ $(document).ready(function () {
 });
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports) {
 
 $(document).ready(function () {
@@ -37828,10 +37803,58 @@ $(document).ready(function () {
 });
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */,
+/* 56 */,
+/* 57 */
+/***/ (function(module, exports) {
+
+$(document).ready(function () {
+
+	/*
+ 	speed: The speed/duration of the effect in milliseconds
+ 	scrollPercentage: The scroll point after which the effect begins
+ */
+	var speed = 250,
+	    scrollPercentage = 0.56;
+
+	$(window).on("scroll", _.debounce(function () {
+
+		var wh = $(window).height();
+
+		$(".typewriter:not(.typed):not(.typing)").each(function () {
+
+			var scrollHeight = this.getBoundingClientRect().top;
+			if (scrollHeight <= scrollPercentage * wh) {
+				/* trigger the effect */
+				$(this).addClass("typing");
+				var i = 0,
+				    txt = $(this).attr("data-text"),
+				    el = this;
+				var timer = window.setInterval(function () {
+					if (i < txt.length) {
+						el.innerHTML += txt.charAt(i++);
+					} else {
+						$(el).removeClass("typing").addClass("typed");
+						clearInterval(timer);
+					}
+				}, speed);
+			}
+		});
+	}));
+});
 
 /***/ })
 /******/ ]);

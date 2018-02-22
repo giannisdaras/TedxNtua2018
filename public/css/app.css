@@ -12806,7 +12806,6 @@ a:hover {
 
 [data-tooltip] {
   display: inline-block;
-  /*bug fix*/
   position: relative;
   text-decoration: none;
   cursor: help;
@@ -12891,9 +12890,7 @@ a:hover {
 /* NAVIGATION MENU */
 
 header.dark {
-  background-color: #222222;
-  -webkit-box-shadow: inset 0 -20px 30px -20px black;
-          box-shadow: inset 0 -20px 30px -20px black;
+  background-color: #202020;
   width: 100%;
   position: fixed;
   z-index: 1000;
@@ -12910,6 +12907,10 @@ nav.navbar {
   height: 100%;
   max-width: 1366px;
   padding: .5rem 1rem;
+}
+
+header.scrolled {
+  border-bottom: 2px solid #181818;
 }
 
 header.scrolled nav.navbar {
@@ -13131,7 +13132,6 @@ section.heading h1 {
   text-align: center;
   margin: 0 auto;
   color: #fafafa;
-  /* 3d effect */
 }
 
 /* END PAGE HEADING */
@@ -13161,11 +13161,8 @@ section.content > .container-fluid {
 /* FOOTER */
 
 body > footer {
-  background-color: #111;
-  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-  /* top inner shadow */
-  -webkit-box-shadow: inset 0 40px 60px -40px black;
-          box-shadow: inset 0 40px 60px -40px black;
+  background-color: #101010;
+  border-top: 3px solid #191919;
   color: white;
   padding-top: 2rem;
 }
@@ -13368,37 +13365,18 @@ body > footer .container.credits a:hover {
 
 /* HOME PAGE */
 
-article.home .col-lg-4,
-article.home .col-md-4,
-article.home .col-lg-8,
-article.home .col-md-8,
-article.home .col-sm-12 {
-  background-color: #202020;
+article.home {
+  background: #202020;
+  color: #FAFAFA;
 }
 
-article.home .col-lg-4 h1,
-article.home .col-md-4 h1,
-article.home .col-lg-8 h1,
-article.home .col-md-8 h1,
-article.home .col-sm-12 h1 {
-  color: #E62B1E !important;
-  font-size: 5rem;
-  padding-top: 1rem;
-}
-
-article.home .chaos_gif {
-  width: 100%;
-}
-
-article.home .col-md-2,
-.col-lg-2 {
-  background-size: 100% auto !important;
-  background-repeat: repeat-y !important;
-}
-
-article.home p,
-article.home h3 {
-  color: #fafafa;
+article.home h1,
+article.home h2,
+article.home h3,
+article.home h4,
+article.home h5,
+article.home h6 {
+  text-align: center;
 }
 
 article.home section {
@@ -13409,10 +13387,10 @@ article.home section {
 }
 
 article.home section h2 {
+  color: #E62B1E;
   font-weight: bold;
-  font-size: 2.1em;
+  font-size: 3.5rem;
   margin-bottom: .5em;
-  text-align: center;
 }
 
 article.home section .container-fluid {
@@ -13456,16 +13434,40 @@ article.home section .fa-chevron-right {
   padding-left: .15rem;
 }
 
+article.home section:not(#hero) {
+  /* angle brackets */
+  position: relative;
+  margin: 1rem 0;
+  padding: 2rem;
+}
+
+article.home section:not(#hero)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3rem;
+  height: 3rem;
+  border-top: 8px solid #E62B1E;
+  border-left: 8px solid #E62B1E;
+}
+
+article.home section:not(#hero)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 3rem;
+  height: 3rem;
+  border-right: 8px solid #E62B1E;
+  border-bottom: 8px solid #E62B1E;
+}
+
 article.home #hero {
   /* remove top inset shadow from #hero, keep only bottom */
-  -webkit-box-shadow: inset 0 -80px 80px -80px rgba(0, 0, 0, 0.4);
-          box-shadow: inset 0 -80px 80px -80px rgba(0, 0, 0, 0.4);
   color: white;
   border-bottom: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(#202020), to(#2F2F2F));
-  background: linear-gradient(#202020, #2F2F2F);
-  -webkit-animation: gradientFlow 60s linear infinite;
-          animation: gradientFlow 60s linear infinite;
+  background: #202020;
   min-height: 480px;
   position: relative;
 }
@@ -13533,7 +13535,7 @@ article.home #hero canvas#lorenz {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -540px;
+  margin-top: -666px;
   margin-left: -400px;
   z-index: 1;
 }
@@ -13596,27 +13598,23 @@ article.home a.call-to-action:hover {
   background-color: #3A3A3A;
 }
 
-article.home .fancy {
-  background-image: url("/images/backgrounds/fancy.svg") !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
+article.home #chaos h2 img {
+  width: auto;
+  height: 0;
+  margin-left: 0.5rem;
+  margin-top: -0.2rem;
+  opacity: 0;
+  -webkit-transition: opacity .8s, height .8s;
+  transition: opacity .8s, height .8s;
 }
 
-article.home #sessions h2,
-article.home #sessions h4 {
-  width: 100%;
-  margin-bottom: 0;
-  text-align: center;
+article.home #chaos .typed + img {
+  height: 3.5rem;
+  opacity: 1;
 }
 
-article.home #sessions .speaker-container {
-  margin: 2rem 0;
-}
-
-article.home #speakers .speaker-info {
-  text-align: center;
-  position: relative;
-  margin-top: -25%;
+article.home #speakers {
+  /* change following 10px values to your desired value of padding between the columns */
 }
 
 article.home #speakers a .photo1 {
@@ -13635,29 +13633,16 @@ article.home #speakers a:hover .photo2 {
   display: block;
 }
 
-article.home #speakers img {
-  width: 99.5%;
-}
-
-article.home #speakers h3,
-article.home #speakers p {
-  margin-bottom: -2% !important;
-  color: white;
-}
-
-article.home #sessions .speaker-container img {
+article.home #speakers .speaker-container img {
   width: 100%;
   height: auto;
-  opacity: .9;
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-transition: opacity .5s;
-  transition: opacity .5s;
   z-index: 1;
 }
 
-article.home #sessions .speaker-container a {
+article.home #speakers .speaker-container a {
   background-color: transparent;
   -webkit-transition: background-color .5s;
   transition: background-color .5s;
@@ -13669,30 +13654,35 @@ article.home #sessions .speaker-container a {
   padding-bottom: 100%;
 }
 
-article.home #sessions .speaker-container a:hover img {
-  opacity: 1;
-}
-
-article.home #sessions .speaker-container .speaker-info {
+article.home #speakers .speaker-container .speaker-info {
   position: absolute;
   bottom: 1rem;
   z-index: 2;
   color: white;
-  text-shadow: none;
-  padding: 0 1rem;
-  text-shadow: 0 0 18px black, 0 0 6px black;
+  padding: 0 10px;
   width: 100%;
+  text-shadow: -1px -1px 0 #111, 1px -1px 0 #111, -1px 1px 0 #111, 1px 1px 0 #111;
 }
 
-article.home #sessions .speaker-container h3 {
-  margin-top: 1rem;
-  margin-bottom: .25rem;
-  font-size: 1.5rem;
+article.home #speakers .speaker-container h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0;
 }
 
-article.home #sessions .speaker-container p {
-  font-size: 1em;
+article.home #speakers .speaker-container p {
+  font-size: .9em;
   line-height: 1.25;
+  margin-bottom: 0;
+}
+
+article.home #speakers .row {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+article.home #speakers .col {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 article.home #schedule .card-columns {
@@ -13740,26 +13730,16 @@ article.home #schedule .media-body {
   font-size: .9rem;
 }
 
-article.home #sponsors .auspices-container h3 {
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-article.home #sponsors .auspices-container span {
-  display: block;
-  font-weight: 300;
-  margin-top: .5rem;
-}
-
-article.home #sponsors .auspices-container a {
+article.home #auspices a {
   color: black;
   display: block;
-  max-width: 400px;
-  text-align: center;
+  max-width: 320px;
+  width: 60%;
+  margin: 0 auto;
 }
 
-article.home #sponsors .auspices-container img {
-  width: 80%;
+article.home #auspices img {
+  width: 100%;
   height: auto;
   -webkit-transition: -webkit-transform .5s;
   transition: -webkit-transform .5s;
@@ -13767,16 +13747,9 @@ article.home #sponsors .auspices-container img {
   transition: transform .5s, -webkit-transform .5s;
 }
 
-article.home #sponsors .auspices-container a:hover img {
+article.home #auspices a:hover img {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
-}
-
-article.home #map {
-  background-image: url("/images/backgrounds/mixed_pixels.svg");
-  background-size: 50% auto;
-  background-position: right;
-  background-repeat: no-repeat;
 }
 
 article.home #map .map {
@@ -13794,26 +13767,6 @@ article.home #map .venue-gallery img {
 }
 
 /* home animations sub-section */
-
-@-webkit-keyframes gradientFlow {
-  0%, 100% {
-    background-position: 50% 0%;
-  }
-
-  50% {
-    background-position: 50% 100%;
-  }
-}
-
-@keyframes gradientFlow {
-  0%, 100% {
-    background-position: 50% 0%;
-  }
-
-  50% {
-    background-position: 50% 100%;
-  }
-}
 
 @-webkit-keyframes blink {
   0%, 100% {
@@ -14186,8 +14139,6 @@ article.schedule thead th:first-child {
 }
 
 article.schedule .nav-pills {
-  -webkit-box-shadow: inset 0 0 1rem -5px rgba(0, 0, 0, 0.5);
-          box-shadow: inset 0 0 1rem -5px rgba(0, 0, 0, 0.5);
   background-color: rgba(0, 0, 0, 0.075);
   border-radius: .25rem;
   margin-bottom: 2rem;
@@ -14388,13 +14339,7 @@ article.contact .g-recaptcha.error > div {
     padding-top: 3.7rem;
   }
 
-  /* home uses a different layout:
-	   - content is separated into sections, each one containing its own content (.section-content)
-	   - padding is added to every .section-content and not to a single section.content, like in other pages
-	 */
-
-  section.content,
-  article.home .section-content {
+  section.content {
     padding: 3rem 2rem;
   }
 
@@ -14425,27 +14370,12 @@ article.contact .g-recaptcha.error > div {
     margin-top: -50px;
   }
 
-  header.dark {
-    /* bottom inner shadow */
-    -webkit-box-shadow: inset 0 -40px 60px -40px black;
-            box-shadow: inset 0 -40px 60px -40px black;
-  }
-
   .cookie-bar {
     font-size: 1rem;
   }
 
   article.home section {
-    background-color: none !important;
-    /* top and bottom inset box shadow */
     font-size: 1.25em;
-    /*h2 {
-				text-align: left;
-			}*/
-  }
-
-  article.home section .col-lg-2 {
-    background-image: url("/images/backgrounds/pixels_full_tiled_vertical.svg");
   }
 
   article.home section .section-intro {
@@ -14466,7 +14396,7 @@ article.contact .g-recaptcha.error > div {
   }
 
   article.home #hero {
-    min-height: 720px;
+    height: 720px;
   }
 
   article.home #hero .section-content {
@@ -14484,7 +14414,7 @@ article.contact .g-recaptcha.error > div {
   }
 
   article.home #hero h1 {
-    margin-top: 20rem;
+    margin-top: 25rem;
     font-size: 3.5rem;
     font-weight: bold;
   }
@@ -14520,20 +14450,8 @@ article.contact .g-recaptcha.error > div {
             column-gap: .8rem;
   }
 
-  article.home #sessions .speaker-container h3,
   article.home #speakers .speaker-container h3 {
-    font-size: 1.75rem;
-    margin-bottom: .5rem;
-  }
-
-  article.home #sessions .speaker-container .col,
-  article.home #speakers .speaker-container .col {
-    border-right: 1px solid #777;
-  }
-
-  article.home #sessions .speaker-container .col:last-child,
-  article.home #speakers .speaker-container .col:last-child {
-    border-right: 1px solid transparent;
+    font-size: 1.6rem;
   }
 
   article.home #map .row {
@@ -14584,14 +14502,13 @@ article.contact .g-recaptcha.error > div {
 @media (min-width: 992px) {
   header.home {
     background: transparent;
-    /* top inner shadow */
-    -webkit-box-shadow: inset 0 40px 60px -40px black;
-            box-shadow: inset 0 40px 60px -40px black;
     padding-top: 1rem;
-    -webkit-transition: padding-top .5s, background .5s, -webkit-box-shadow .5s;
-    transition: padding-top .5s, background .5s, -webkit-box-shadow .5s;
-    transition: padding-top .5s, box-shadow .5s, background .5s;
-    transition: padding-top .5s, box-shadow .5s, background .5s, -webkit-box-shadow .5s;
+    -webkit-transition: padding-top .5s, background .5s;
+    transition: padding-top .5s, background .5s;
+  }
+
+  header.home.scrolled {
+    background: #202020;
   }
 
   header.dark {
@@ -14599,9 +14516,6 @@ article.contact .g-recaptcha.error > div {
   }
 
   header.scrolled {
-    background-color: #222222;
-    -webkit-box-shadow: inset 0 -40px 60px -40px black;
-            box-shadow: inset 0 -40px 60px -40px black;
     padding-top: 0;
   }
 
@@ -14675,12 +14589,12 @@ article.contact .g-recaptcha.error > div {
   }
 
   article.home #hero h1 {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
 
   article.home #hero .info a,
   article.home #hero .tickets a {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
   }
 
   article.home #hero .info a {
@@ -14688,7 +14602,7 @@ article.contact .g-recaptcha.error > div {
   }
 
   article.home #hero .tickets a:active {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   article.home #map .col-md-12 {
@@ -14770,23 +14684,6 @@ article.contact .g-recaptcha.error > div {
 
   section.heading h1 {
     padding: 2rem 2rem;
-  }
-
-  article.home #hero h1 {
-    font-size: 5rem;
-  }
-
-  article.home #hero .info a,
-  article.home #hero .tickets a {
-    font-size: 1.5rem;
-  }
-
-  article.home #hero .info a {
-    padding: .5rem 2rem;
-  }
-
-  article.home #hero .tickets a:active {
-    font-size: 1.45rem;
   }
 }
 

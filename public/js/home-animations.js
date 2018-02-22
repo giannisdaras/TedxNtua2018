@@ -11,7 +11,7 @@ var l = Lorenz({
 	scale: {
 		x: 15,
 		y: 6,
-		z: -10
+		z: -8
 	},
 	project: "xz",
 	velocity: 0.008,

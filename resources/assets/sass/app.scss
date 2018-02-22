@@ -38,7 +38,7 @@ a {
 /* tooltip */
 
 [data-tooltip] {
-	display: inline-block; /*bug fix*/
+	display: inline-block;
 	position: relative;
 	text-decoration: none;
 	cursor: help;
@@ -114,8 +114,7 @@ a {
 /* NAVIGATION MENU */
 
 header.dark {
-	background-color: $brand-secondary;
-	box-shadow: inset 0 -20px 30px -20px black;
+	background-color: #202020;
 	width: 100%;
 	position: fixed;
 	z-index: 1000;
@@ -134,8 +133,11 @@ nav.navbar {
 	padding: .5rem 1rem;
 }
 
-header.scrolled nav.navbar {
-	padding: .25rem 1rem;
+header.scrolled {
+	border-bottom: 2px solid #181818;
+	nav.navbar {
+		padding: .25rem 1rem;
+	}
 }
 
 .navbar-brand-wrapper {
@@ -312,8 +314,6 @@ section.heading {
 		text-align: center;
 		margin: 0 auto;
 		color: $body-bg;
-		/* 3d effect */
-  		// text-shadow: 0 1px 0 #0C0303, 0 2px 0 #1C0D0D;
 	}
 	background-color: $brand-secondary;
 
@@ -342,10 +342,8 @@ section.content > .container-fluid {
 
 /* FOOTER */
 body > footer {
-	background-color: #111;
-	background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-	/* top inner shadow */
-	box-shadow: inset 0 40px 60px -40px black;
+	background-color: #101010;
+	border-top: 3px solid #191919;
 	color: white;
 	padding-top: 2rem;
 	> .container {
@@ -509,56 +507,24 @@ body > footer {
 
 /* HOME PAGE */
 
-article.home .col-lg-4,
-article.home .col-md-4,
-article.home .col-lg-8,
-article.home .col-md-8,
-article.home .col-sm-12 {
-  background-color: rgba(32,32,32,1.0);
-
-	h1 {
-		color: $brand-primary !important;
-		font-size: 5rem;
-		padding-top: 1rem;
-	}
-}
-
-article.home .chaos_gif {
-	width: 100%;
-}
-
-// Strips
-article.home .col-md-2, .col-lg-2 {
-	// background-image: url('/images/backgrounds/mixed_pixels.svg') !important;
-	background-size: 100% auto !important;
-	background-repeat: repeat-y !important;
-}
-
-
 article.home {
-	p, h3 {
-		color: $body-bg;
+	background: #202020;
+	color: #FAFAFA;
+
+	h1, h2, h3, h4, h5, h6 {
+		text-align: center;
 	}
 
 	section {
-
-		.left_strip {
-			// left strips
-		}
-
-		.right_strip {
-			// right strips
-		}
-
 		width: 100%;
 		/* temporary, just to test the home layout */
 		min-height: 400px;
 		font-size: .9em;
 		h2 {
+			color: $brand-primary;
 			font-weight: bold;
-			font-size: 2.1em;
+			font-size: 3.5rem;
 			margin-bottom: .5em;
-			text-align: center;
 		}
 		.container-fluid {
 			padding-left: 0;
@@ -586,14 +552,38 @@ article.home {
 			font-size: .85rem;
 			padding-left: .15rem;
 		}
+		&:not(#hero) {
+			/* angle brackets */
+			position: relative;
+			margin: 1rem 0;
+			padding: 2rem;
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 3rem;
+				height: 3rem;
+				border-top: 8px solid $brand-primary;
+				border-left: 8px solid $brand-primary;
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				width: 3rem;
+				height: 3rem;
+				border-right: 8px solid $brand-primary;
+				border-bottom: 8px solid $brand-primary;
+			}
+		}
 	}
 	#hero {
 		/* remove top inset shadow from #hero, keep only bottom */
-		box-shadow: inset 0 -80px 80px -80px rgba(0, 0, 0, .4);
 		color: white;
 		border-bottom: 0;
-		background: linear-gradient(#202020, #2F2F2F);
-		animation: gradientFlow 60s linear infinite;
+		background: #202020;
 		min-height: 480px;
 		position: relative;
 		.section-content {
@@ -647,7 +637,7 @@ article.home {
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			margin-top: -540px;
+			margin-top: -666px;
 			margin-left: -400px;
 			z-index: 1;
 		}
@@ -699,29 +689,22 @@ article.home {
 		}
 	}
 
-	.fancy {
-		background-image: url('/images/backgrounds/fancy.svg') !important;
-		background-size: contain !important;
-		background-repeat: no-repeat !important;
+	#chaos {
+		h2 img {
+			width: auto;
+			height: 0;
+			margin-left: 0.5rem;
+			margin-top: -0.2rem;
+			opacity: 0;
+			transition: opacity .8s, height .8s;
+		}
+		.typed + img {
+			height: 3.5rem;
+			opacity: 1;
+		}
 	}
 
-	#sessions {
-		h2, h4 {
-			width: 100%;
-			margin-bottom: 0;
-			text-align: center;
-		}
-		.speaker-container {
-			margin: 2rem 0;
-		}
-	}
 	#speakers {
-		.speaker-info {
-			text-align: center;
-			position: relative;
-			margin-top: -25%;
-			// display: none;
-		}
 
 		a .photo1 {
 			display: block;
@@ -739,29 +722,13 @@ article.home {
 			display: block;
 		}
 
-		img {
-			width: 99.5%;
-		}
-
-
-		h3, p {
-			margin-bottom: -2% !important;
-			color: white;
-		}
-
-	}
-
-
-	#sessions {
 		.speaker-container {
 			img {
 				width: 100%;
 				height: auto;
-				opacity: .9;
 				position: absolute;
 				top: 0;
 				left: 0;
-				transition: opacity .5s;
 				z-index: 1;
 			}
 			a {
@@ -773,29 +740,34 @@ article.home {
 				position: relative;
 				width: 100%;
 				padding-bottom: 100%;
-				&:hover img {
-					opacity: 1;
-				}
 			}
 			.speaker-info {
 				position: absolute;
 				bottom: 1rem;
 				z-index: 2;
 				color: white;
-				text-shadow: none;
-				padding: 0 1rem;
-				text-shadow: 0 0 18px black, 0 0 6px black;
+				padding: 0 10px;
 				width: 100%;
+				text-shadow: -1px -1px 0 #111, 1px -1px 0 #111, -1px 1px 0 #111, 1px 1px 0 #111;
 			}
 			h3 {
-				margin-top: 1rem;
-				margin-bottom: .25rem;
-				font-size: 1.5rem;
+				font-size: 1.35rem;
+				margin-bottom: 0;
 			}
 			p {
-				font-size: 1em;
+				font-size: .9em;
 				line-height: 1.25;
+				margin-bottom: 0;
 			}
+		}
+		/* change following 10px values to your desired value of padding between the columns */
+		.row {
+			margin-left: -10px;
+			margin-right: -10px;
+		}
+		.col {
+			padding-left: 10px;
+			padding-right: 10px;
 		}
 	}
 	#schedule {
@@ -834,38 +806,24 @@ article.home {
 			font-size: .9rem;
 		}
 	}
-	#sponsors {
-		.auspices-container {
-			h3 {
-				font-weight: bold;
-				margin-bottom: 1rem;
-			}
-			span {
-				display: block;
-				font-weight: 300;
-				margin-top: .5rem;
-			}
-			a {
-				color: black;
-				display: block;
-				max-width: 400px;
-				text-align: center;
-			}
-			img {
-				width: 80%;
-				height: auto;
-				transition: transform .5s;
-			}
-			a:hover img {
-				transform: scale(1.05);
-			}
+	#auspices {
+		a {
+			color: black;
+			display: block;
+			max-width: 320px;
+			width: 60%;
+			margin: 0 auto;
+		}
+		img {
+			width: 100%;
+			height: auto;
+			transition: transform .5s;
+		}
+		a:hover img {
+			transform: scale(1.05);
 		}
 	}
 	#map {
-		background-image: url('/images/backgrounds/mixed_pixels.svg');
-		background-size: 50% auto;
-		background-position: right;
-		background-repeat: no-repeat;
 		.map {
 			width: 100%;
 			height: 400px;
@@ -881,15 +839,6 @@ article.home {
 }
 
 /* home animations sub-section */
-
-@keyframes gradientFlow {
-    0%, 100% {
-    	background-position: 50% 0%;
-	}
-    50% {
-    	background-position: 50% 100%;
-	}
-}
 
 @keyframes blink {
 	0%, 100% {
@@ -1185,7 +1134,6 @@ article.schedule {
 		width: auto;
 	}
 	.nav-pills {
-		box-shadow: inset 0 0 1rem -5px rgba(0, 0, 0, .5);
 		background-color: rgba(0, 0, 0, 0.075);
 		border-radius: .25rem;
 		margin-bottom: 2rem;
@@ -1364,11 +1312,7 @@ article.contact {
 			padding-top: 3.7rem;
 		}
 	}
-	/* home uses a different layout:
-	   - content is separated into sections, each one containing its own content (.section-content)
-	   - padding is added to every .section-content and not to a single section.content, like in other pages
-	 */
-	section.content, article.home .section-content {
+	section.content {
 		padding: 3rem 2rem;
 	}
 	.cookie-bar .container-fluid {
@@ -1404,33 +1348,15 @@ article.contact {
 			}
 		}
 
-
 	}
 
-	header.dark {
-		/* bottom inner shadow */
-		box-shadow: inset 0 -40px 60px -40px black;
-	}
 	.cookie-bar {
 		font-size: 1rem;
 	}
 
 	article.home {
 		section {
-			background-color: none !important;
-			.col-lg-2 {
-				background-image: url('/images/backgrounds/pixels_full_tiled_vertical.svg');
-			}
-
-			/* top and bottom inset box shadow */
-			// TODO I dont know what to do with the shadow
-			// box-shadow: inset 0 -80px 80px -80px rgba(0, 0, 0, .4), inset 0 80px 80px -80px rgba(0, 0, 0, .4);
-
 			font-size: 1.25em;
-			/*h2 {
-				text-align: left;
-			}*/
-
 			.section-intro {
 				display: flex;
 			}
@@ -1443,7 +1369,7 @@ article.contact {
 			}
 		}
 		#hero {
-			min-height: 720px;
+			height: 720px;
 			.section-content {
 				opacity: 0;
 				bottom: -2rem;
@@ -1455,7 +1381,7 @@ article.contact {
 				}
 			}
 			h1 {
-				margin-top: 20rem;
+				margin-top: 25rem;
 				font-size: 3.5rem;
 				font-weight: bold;
 			}
@@ -1484,17 +1410,10 @@ article.contact {
 				column-gap: .8rem;
 			}
 		}
-		#sessions, #speakers {
+		#speakers {
 			.speaker-container {
 				h3 {
-					font-size: 1.75rem;
-					margin-bottom: .5rem;
-				}
-				.col {
-					border-right: 1px solid #777;
-					&:last-child {
-						border-right: 1px solid transparent;
-					}
+					font-size: 1.6rem;
 				}
 			}
 		}
@@ -1542,17 +1461,16 @@ article.contact {
 @include media-breakpoint-up(lg) {
 	header.home {
 		background: transparent;
-		/* top inner shadow */
-		box-shadow: inset 0 40px 60px -40px black;
 		padding-top: 1rem;
-		transition: padding-top .5s, box-shadow .5s, background .5s;
+		transition: padding-top .5s, background .5s;
+		&.scrolled {
+			background: #202020;
+		}
 	}
 	header.dark {
 		overflow: visible;
 	}
 	header.scrolled {
-		background-color: $brand-secondary;
-		box-shadow: inset 0 -40px 60px -40px black;
 		padding-top: 0;
 	}
 	nav.navbar {
@@ -1612,16 +1530,16 @@ article.contact {
 	article.home {
 		#hero {
 			h1 {
-				font-size: 4.5rem;
+				font-size: 4rem;
 			}
 			.info a, .tickets a {
-				font-size: 1.35rem;
+				font-size: 1.25rem;
 			}
 			.info a {
 				padding: .5rem 1.2rem;
 			}
 			.tickets a:active {
-				font-size: 1.3rem;
+				font-size: 1.2rem;
 			}
 		}
 		#map {
@@ -1696,20 +1614,6 @@ article.contact {
 	}
 	section.heading h1 {
 		padding: 2rem 2rem;
-	}
-	article.home #hero {
-		h1 {
-			font-size: 5rem;
-		}
-		.info a, .tickets a {
-			font-size: 1.5rem;
-		}
-		.info a {
-			padding: .5rem 2rem;
-		}
-		.tickets a:active {
-			font-size: 1.45rem;
-		}
 	}
 }
 
