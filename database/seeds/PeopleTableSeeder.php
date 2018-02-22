@@ -172,8 +172,8 @@ class PeopleTableSeeder extends Seeder
 [
 
 'name'=>json_encode([
-  'en'=> 'Tsiritsis Stratis',
-  'el'=> 'Τσιριτσής Στρατής'
+  'en'=> 'Tsirtsis Stratis',
+  'el'=> 'Τσιρτσής Στρατής'
 ]),
 'email' => 'stsirtsis@gmail.com',
 'img_src' => '/images/team/experience/stratis.jpg',
@@ -229,17 +229,7 @@ class PeopleTableSeeder extends Seeder
 'team_type' => 'experience'
 ],
 
-[
 
-'name'=>json_encode([
-  'en'=> 'Barka Nadia',
-  'el'=> 'Μπάρκα Νάντια'
-]),
-'email' => 'konstantinabaka96@gmail.com',
-'img_src' => '/images/team/experience/nadia.jpg',
-'img_src_alt' => '/images/team/experience/nadia_alt.jpg',
-'team_type' => 'experience'
-],
 
 // venue
 
@@ -256,6 +246,18 @@ class PeopleTableSeeder extends Seeder
 ],
 
 // fundraising
+
+[
+
+'name'=>json_encode([
+  'en'=> 'Barka Nadia',
+  'el'=> 'Μπάρκα Νάντια'
+]),
+'email' => 'konstantinabaka96@gmail.com',
+'img_src' => '/images/team/fr/nadia.jpg',
+'img_src_alt' => '/images/team/fr/nadia_alt.jpg',
+'team_type' => 'fr'
+],
 
 [
 

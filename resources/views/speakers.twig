@@ -12,47 +12,107 @@
 		<h1>{{ trans('general.speakers.title') }}</h1>
 	</section>
 	<section class="content">
-	
+
 	{% for key, speaker in speakers %}
 
-		<div id="{{ speaker.sid }}" class="container-fluid">
+		<div id="{{ speaker.sid }}" class="container-fluid desktop">
 
-			<div class="row text-center text-lg-left">
-				<div class="col col-12 col-lg-3 wow bounceInLeft">
-					<img src="/images/speakers/{{ speaker.img_src }}" width="200" height="200" class="rounded-circle wow bounceInLeft">
+
+				<div class="text-center bounceInRight">
+					<img src="/images/speakers/{{ speaker.img_src }}" width="340" class="rounded-circle wow bounceInLeft">
+					<h2>{{ speaker.name }}</h2>
+					<h5>
+					<ul class="list-inline">
+						<li class="list-inline-item">
+							<a href="{{ speaker.link }}" target="_blank"><i class="fa fa-link fa-2x" aria-hidden="true"></i></a>
+						</li>
+					</ul>
+				</h5>
+				<hr>
 				</div>
 
-				<div class="col col-12 col-lg-9 wow bounceInRight">
-					<h2>{{ speaker.name }}</h2>
-					<ul class="social-links list-inline">
-						<li class="list-inline-item">
-							<a href="https://skype.com"><i class="fa fa-skype fa-2x" aria-hidden="true"></i></a>
-						</li>
-						<li class="list-inline-item">
-							<a href="https://twitter.com"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
-						</li>
-					</ul>	 
+			<div class="container-fluid">
+			<div class="row info wow bounceInUp">
+				<div class="col col-6 vertical-align">
+					<h3 class="text-center primary">{{ trans('general.speakers.short_bio') }}</h3>
+				</div>
+
+				<div class="col col-6">
+					<h3 class="text-center primary">{{ trans('general.speakers.talk') }}: {{ speaker.talk.event_prev | markdown }}</h3>
 				</div>
 			</div>
+		</div>
+
+
+		<div class="container-fluid">
+			<div class="row info wow bounceInUp">
+				<div class="col col-6">
+					<p class="text-justify">
+						{{ speaker.bio }}
+					</p>
+				</div>
+
+				<div class="col col-6">
+					<p class="text-justify">
+						{{ speaker.talk.subtitle | markdown }}
+					</p>
+				</div>
+			</div>
+		</div>
+
+
+		</div>
+
+		<!-- MOBILE VIEW -->
+
+		<div id="{{ speaker.sid }}" class="container-fluid mobile">
+
+
+				<div class="text-center bounceInRight">
+					<img src="/images/speakers/{{ speaker.img_src }}" width="75%" class="rounded-circle wow bounceInLeft">
+					<h2>{{ speaker.name }}</h2>
+					<h5>
+					<ul class="list-inline">
+						<li class="list-inline-item">
+							<a href="{{ speaker.link }}" target="_blank"><i class="fa fa-link fa-2x" aria-hidden="true"></i></a>
+						</li>
+					</ul>
+				</h5>
+				<hr>
+				</div>
+
+
 
 			<div class="row info wow bounceInUp">
 				<div class="col col-12 col-lg-6">
 					<h3 class="text-center primary">{{ trans('general.speakers.short_bio') }}</h3>
 					<p class="text-justify">
-						{{ speaker.bio }}	
+						{{ speaker.bio }}
 					</p>
 				</div>
 				<div class="col col-12 col-lg-6">
 					<h3 class="text-center primary">{{ trans('general.speakers.talk') }}: {{ speaker.talk.event_prev | markdown }}</h3>
 					<p class="text-justify">
-						{{ speaker.talk.subtitle | markdown }}	
+						{{ speaker.talk.subtitle | markdown }}
 					</p>
 				</div>
 			</div>
 
 		</div>
 
-	{% endfor %}	
+	{% endfor %}
+
+	<div class="container-fluid">
+		<div class="row text-center text-lg-center">
+			<div class="col col-12 wow bounceInLeft">
+				<h1 style="padding-bottom: 2rem;"> {{ trans('general.speakers.previous') }} </h1>
+				<div class="video">
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/videoseries?list=PLd7-PjFC85gz9xYWxVVqTddWLg75c8jZU&showinfo=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+			</div>
+		</div>
+	</div>
+
 
 		<div class="container-fluid">
 			<div class="row text-center text-lg-center">

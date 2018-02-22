@@ -54,7 +54,7 @@ a {
 	border-radius: .5rem;
 	white-space: nowrap;
 	opacity: 0;
-	transition: all 0.5s ease;
+	ition: all 0.5s ease;
 	white-space: pre-wrap;
 	text-align: center;
 	width: 70vw !important;
@@ -635,15 +635,25 @@ article.home {
 		}
 	}
 	#speakers {
+		.speaker-info {
+			text-align: center;
+			position: relative;
+			margin-top: -25%;
+			// display: none;
+		}
+
 		a .photo1 {
 			display: block;
 		}
+
 		a .photo2 {
 			display: none;
 		}
+
 		a:hover .photo1 {
 			display: none;
 		}
+
 		a:hover .photo2 {
 			display: block;
 		}
@@ -652,15 +662,6 @@ article.home {
 			width: 99.5%;
 		}
 
-		.speaker-info {
-			text-align: center;
-		}
-
-		.speaker-info {
-			position: relative;
-			margin-top: -25%;
-
-		}
 
 		h3, p {
 			margin-bottom: -2% !important;
@@ -919,6 +920,31 @@ article.about {
 /* SPEAKER PAGE */
 
 article.speakers {
+
+	.mobile {
+		display: block;
+	}
+
+	.desktop {
+		display: none;
+	}
+
+.video {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.video iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+	background-image: url("/images/backgrounds/pixels.svg");
+	background-size: 100% auto;
+	background-repeat: repeat-y;
 
 	.col {
 		margin-bottom: 1rem;
@@ -1200,6 +1226,16 @@ article.contact {
 
 @include media-breakpoint-up(sm) {
 
+	article.speakers {
+		.desktop {
+			display : block;
+		}
+
+		.mobile {
+			display : none;
+		}
+
+	}
 
 
 	[data-tooltip]:after {
@@ -1281,6 +1317,10 @@ article.contact {
 
 @include media-breakpoint-up(md) {
 
+	section.heading {
+		display: none;
+	}
+
 	article.team {
 
 		section.content {
@@ -1288,9 +1328,9 @@ article.contact {
 				position: relative;
 				margin-top: -50px;
 			}
-
-
 		}
+
+
 	}
 
 	header.dark {
