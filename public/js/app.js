@@ -827,7 +827,7 @@ const app = new Vue({
 });
 
 */
-__webpack_require__(57);
+__webpack_require__(38);
 __webpack_require__(39);
 __webpack_require__(40);
 __webpack_require__(41);
@@ -36542,7 +36542,46 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 38 */,
+/* 38 */
+/***/ (function(module, exports) {
+
+$(document).ready(function () {
+
+	/*
+ 	speed: The speed/duration of the effect in milliseconds
+ 	scrollPercentage: The scroll point after which the effect begins
+ */
+	var speed = 250,
+	    scrollPercentage = 0.56;
+
+	$(window).on("scroll", _.debounce(function () {
+
+		var wh = $(window).height();
+
+		$(".typewriter:not(.typed):not(.typing)").each(function () {
+
+			var scrollHeight = this.getBoundingClientRect().top;
+			if (scrollHeight <= scrollPercentage * wh) {
+				/* trigger the effect */
+				$(this).addClass("typing").after('<span class="cursor">|</span>');
+				var i = 0,
+				    txt = $(this).attr("data-text"),
+				    el = this;
+				var timer = window.setInterval(function () {
+					if (i < txt.length) {
+						el.innerHTML += txt.charAt(i++);
+					} else {
+						$(el).parent().find(".cursor").remove();
+						$(el).removeClass("typing").addClass("typed");
+						clearInterval(timer);
+					}
+				}, speed);
+			}
+		});
+	}));
+});
+
+/***/ }),
 /* 39 */
 /***/ (function(module, exports) {
 
@@ -37807,55 +37846,6 @@ $(document).ready(function () {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 48 */,
-/* 49 */,
-/* 50 */,
-/* 51 */,
-/* 52 */,
-/* 53 */,
-/* 54 */,
-/* 55 */,
-/* 56 */,
-/* 57 */
-/***/ (function(module, exports) {
-
-$(document).ready(function () {
-
-	/*
- 	speed: The speed/duration of the effect in milliseconds
- 	scrollPercentage: The scroll point after which the effect begins
- */
-	var speed = 250,
-	    scrollPercentage = 0.56;
-
-	$(window).on("scroll", _.debounce(function () {
-
-		var wh = $(window).height();
-
-		$(".typewriter:not(.typed):not(.typing)").each(function () {
-
-			var scrollHeight = this.getBoundingClientRect().top;
-			if (scrollHeight <= scrollPercentage * wh) {
-				/* trigger the effect */
-				$(this).addClass("typing").after('<span class="cursor">|</span>');
-				var i = 0,
-				    txt = $(this).attr("data-text"),
-				    el = this;
-				var timer = window.setInterval(function () {
-					if (i < txt.length) {
-						el.innerHTML += txt.charAt(i++);
-					} else {
-						$(el).parent().find(".cursor").remove();
-						$(el).removeClass("typing").addClass("typed");
-						clearInterval(timer);
-					}
-				}, speed);
-			}
-		});
-	}));
-});
 
 /***/ })
 /******/ ]);

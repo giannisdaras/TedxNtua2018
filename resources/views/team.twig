@@ -23,8 +23,9 @@
 			<div class="row vertical-align no-gutters">
 				{% for person in experience %}
 				<div class="col col-6 col-lg-3 centered">
-					<a href="mailto:{{ person.email }}" target="_blank"><img class="img-fluid grid-image "
-						src="{{ person.img_src }}" alt="{{ person.name }}"\>
+					<a href="mailto:{{ person.email }}" target="_blank">
+						<img class="img-fluid grid-image photo1 person" src="{{ person.img_src }}" alt="{{ person.name }}"/>
+						<img class="img-fluid grid-image photo2 person" src="{{ person.img_src_alt }}" alt="{{ person.name }}"/>
 						<h6>{{ trans (person.name) }}</h6></a>
 					</div>
 					{% endfor %}
@@ -34,17 +35,16 @@
 			</div>
 
 
-			<h2 id="fr" id="experience" data-tooltip="{{ trans('general.team.fr_description') }}">{{ trans('general.team.fr') }}</h2>
+			<h2 id="fr" data-tooltip="{{ trans('general.team.fr_description') }}">{{ trans('general.team.fr') }}</h2>
 
 			<div class="container-fluid">
 
 				<div class="row vertical-align no-gutters">
 					{% for person in fr %}
 					<div class="col col-6 col-lg-3 centered">
-						<a href="mailto:{{ person.email }}" target="_blank"><img class="img-fluid grid-image "
-							src="{{ person.img_src }}" alt="{{ person.name }}"
-							onmouseover="changePhoto(this,{{ person.img_src_alt }})"
-							onmouseout="changePhoto(this,'{{ person.img_src }})">
+						<a href="mailto:{{ person.email }}" target="_blank">
+							<img class="img-fluid grid-image photo1 person" src="{{ person.img_src }}" alt="{{ person.name }}"/>
+							<img class="img-fluid grid-image photo2 person" src="{{ person.img_src_alt }}" alt="{{ person.name }}"/>
 							<h6>{{ trans (person.name) }}</h6></a>
 						</div>
 						{% endfor %}
@@ -52,6 +52,7 @@
 					</div>
 
 				</div>
+
 
 				<h2 id="graphics" data-tooltip="{{ trans('general.team.graphics_description') }}">{{ trans('general.team.graphics') }}</h2>
 
@@ -113,7 +114,7 @@
 							<div class="container-fluid">
 
 								<div class="row vertical-align no-gutters">
-									{% for person in speakers %}
+									{% for person in experience %}
 									<div class="col col-6 col-lg-3 centered">
 										<a href="mailto:{{ person.email }}" target="_blank">
 											<img class="img-fluid grid-image photo1 person" src="{{ person.img_src }}" alt="{{ person.name }}"/>
