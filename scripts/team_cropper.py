@@ -5,7 +5,7 @@ import glob
 import os
 
 img_dir = '.'
-img_dest = '../'
+img_dest = './'
 target_h = 540 # target height
 
 os.chdir(img_dir)

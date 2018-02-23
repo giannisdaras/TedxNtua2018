@@ -11,8 +11,6 @@
     <link rel="alternate" name="locale_url" class="pjax" hreflang="en" href="{{ getLocalizedURL('en') }}" />
     <title>{% block title %}{% endblock %} | TEDxNTUA 2018</title>
     <meta name="description" class="pjax" content="{% block description %}{% endblock %}">
-{%- block scripts -%}
-{%- endblock %}
 </head>
 
 <body>
@@ -63,6 +61,8 @@
 
         gtag('config', 'UA-112098642-1')
     </script>
+{%- block scripts -%}
+{%- endblock %}
 
 </body>
 

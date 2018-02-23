@@ -36545,150 +36545,41 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /* 38 */
 /***/ (function(module, exports) {
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+$(document).ready(function () {
 
-var Particle = function Particle() {
-	var valid = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
-	var x0 = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-	var y0 = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
-	var z0 = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 0;
-	var h = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 0;
-	var a = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : 0;
-	var b = arguments.length > 6 && arguments[6] !== undefined ? arguments[6] : 0;
-	var c = arguments.length > 7 && arguments[7] !== undefined ? arguments[7] : 0;
+	/*
+ 	speed: The speed/duration of the effect in milliseconds
+ 	scrollPercentage: The scroll point after which the effect begins
+ */
+	var speed = 250,
+	    scrollPercentage = 0.56;
 
-	this.valid = valid;
-	this.x = x0;
-	this.y = y0;
-	this.z = z0;
-	this.h = h;
-	this.a = a;
-	this.b = b;
-	this.c = c;
-};
+	$(window).on("scroll", _.debounce(function () {
 
-Particle.prototype.integrate = function (dt) {
-	this.x += dt * this.h * this.a * (this.y - this.x);
-	this.y += dt * this.h * (this.x * (this.b - this.z) - this.y);
-	this.z += this.h * (this.x * this.y - this.c * this.z);
-};
+		var wh = $(window).height();
 
-Particle.prototype.getCopy = function () {
-	return new Particle(this.valid, this.x, this.y, this.z, this.h, this.a, this.b, this.c);
-};
+		$(".typewriter:not(.typed):not(.typing)").each(function () {
 
-var Lorenz = function Lorenz(params) {
-
-	var option, value;
-	var options = {
-		target: "lorenz",
-		length: 1000,
-		color: "#FFFFFF",
-		pointSize: 3,
-		initial: {
-			x: 0,
-			y: 10,
-			z: 10
-		},
-		scale: {
-			x: 10,
-			y: 10
-		},
-		h: 0.008,
-		a: 10,
-		b: 38,
-		c: 8 / 3
-	};
-
-	if ((typeof params === "undefined" ? "undefined" : _typeof(params)) === 'object') {
-		for (option in params) {
-			value = params[option];
-			options[option] = value;
-		}
-	}
-
-	var canvas = document.getElementById(options.target),
-	    W = canvas.clientWidth,
-	    H = canvas.clientHeight,
-	    ctx = canvas.getContext("2d"),
-	    length = options.length,
-	    pointSize = options.pointSize,
-	    scale = options.scale,
-	    color = {
-		R: parseInt(options.color.substring(1, 3), 16),
-		G: parseInt(options.color.substring(3, 5), 16),
-		B: parseInt(options.color.substring(5, 7), 16)
-	},
-	    particle = new Particle(true, options.initial.x, options.initial.y, options.initial.z, options.h, options.a, options.b, options.c),
-	    trail = [],
-	    trailIndex = 0;
-
-	ctx.translate(W / 2, H / 2);
-	trail.push(particle);
-	for (var i = 1; i < length; ++i) {
-		trail.push(new Particle());
-	}
-
-	function getOpacity(i) {
-		return (i + 1) / length;
-	}
-
-	function addParticle(particle) {
-		++trailIndex;
-		trailIndex %= length;
-		trail[trailIndex] = particle;
-	}
-
-	function nextParticle(dt) {
-		particle.integrate(dt);
-		return particle.getCopy();
-	}
-
-	function drawParticle(p, opacity) {
-		ctx.fillStyle = "rgba(" + color.R + "," + color.G + "," + color.B + "," + opacity + ")";
-		ctx.fillRect(scale.x * p.x, scale.y * p.y, pointSize, pointSize);
-	}
-
-	function drawParticles() {
-		for (var i = 0; i < length; ++i) {
-			var k = (i + trailIndex + 1) % length;
-			if (trail[k].valid) {
-				drawParticle(trail[k], getOpacity(i));
+			var scrollHeight = this.getBoundingClientRect().top;
+			if (scrollHeight <= scrollPercentage * wh) {
+				/* trigger the effect */
+				$(this).addClass("typing").after('<span class="cursor">|</span>');
+				var i = 0,
+				    txt = $(this).attr("data-text"),
+				    el = this;
+				var timer = window.setInterval(function () {
+					if (i < txt.length) {
+						el.innerHTML += txt.charAt(i++);
+					} else {
+						$(el).parent().find(".cursor").remove();
+						$(el).removeClass("typing").addClass("typed");
+						clearInterval(timer);
+					}
+				}, speed);
 			}
-		}
-	}
-
-	function _clear() {
-		ctx.clearRect(-W / 2, -H / 2, W, H);
-	}
-
-	function render() {
-		_clear();
-		drawParticles();
-	}
-
-	function tick(timestamp) {
-		render();
-		var p = nextParticle(1); // dt = 1 for simplicity
-		addParticle(p);
-		window.requestAnimationFrame(tick);
-	}
-
-	function _run() {
-		window.requestAnimationFrame(tick);
-	}
-
-	return {
-		run: function run() {
-			_run();
-		},
-		clear: function clear() {
-			_clear();
-		}
-	};
-};
-
-window.Lorenz = Lorenz;
+		});
+	}));
+});
 
 /***/ }),
 /* 39 */
@@ -36696,61 +36587,22 @@ window.Lorenz = Lorenz;
 
 $(document).ready(function () {
 
-	$(document).on("mouseover", "#hero .info a", function (e) {
+    $(document).on("mouseover", "#hero .info a", function (e) {
 
-		$(this).addClass("blink");
-	}).on("mouseout", "#hero .info a", function (e) {
+        $(this).addClass("blink");
+    }).on("mouseout", "#hero .info a", function (e) {
 
-		$(this).removeClass("blink");
-	});
+        $(this).removeClass("blink");
+    });
 
-	if ($("article.home").length > 0) {
+    if ($("article.home").length > 0) {
 
-		$(window).on("scroll", _.debounce(function () {
+        /* trigger home animations */
+        homeAnimations();
 
-			var sh = $('.typewriter')[0].getBoundingClientRect().top;
-			if (sh <= 0.56 * $(window).height() && !$('.typewriter').hasClass('animated')) {
-				$('.typewriter').addClass('animated');
-				typeWriter();
-			}
-		}));
-
-		$("body > header").addClass("home");
-
-		var l = Lorenz({
-			target: "canvas",
-			length: 1000,
-			color: "#E62B1E",
-			pointSize: 4,
-			initial: {
-				x: 0,
-				y: 10,
-				z: 10
-			},
-			scale: {
-				x: 15,
-				y: 6
-			},
-			h: 0.008,
-			a: 10,
-			b: 38,
-			c: 8 / 3
-		});
-		l.run();
-	}
+        $("body > header").addClass("home");
+    }
 });
-
-var i = 0;
-var txt = '_What is '; /* The text */
-var speed = 250; /* The speed/duration of the effect in milliseconds */
-
-function typeWriter() {
-	if (i < txt.length) {
-		document.getElementById("typer").innerHTML += txt.charAt(i);
-		i++;
-		setTimeout(typeWriter, speed);
-	}
-}
 
 /***/ }),
 /* 40 */
@@ -37583,6 +37435,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
   function executeScriptTags(scripts) {
     if (!scripts) return;
 
+    /* remove script.pjax elements */
+    $('script[src].pjax').remove();
     var existingScripts = $('script[src]');
 
     scripts.each(function () {
@@ -37596,7 +37450,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       var type = $(this).attr('type');
       if (type) script.type = type;
       script.src = $(this).attr('src');
-      document.head.appendChild(script);
+      document.body.appendChild(script);
     });
   }
 
@@ -37760,6 +37614,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 $(document).ready(function () {
 
+	var navOffsetY = 68;
+
 	$(document).pjax("a:not(.flagLink)", "main", {
 		fragment: "main"
 	});
@@ -37798,6 +37654,9 @@ $(document).ready(function () {
 		if ($("article.home").length > 0) {
 
 			$("body > header").addClass("home");
+
+			/* trigger home animations */
+			homeAnimations();
 		} else {
 
 			$("header.home").removeClass("home");
@@ -37977,12 +37836,14 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 
-	$(document).on("mouseover", "[data-tooltip]", function () {
+	$(document).on("mouseenter", "[data-tooltip]", function () {
 
 		var y = $(this)[0].getBoundingClientRect().top,
 		    wh = $(window).height(),
+		    ww = $(window).width(),
 		    elh = $(this).outerHeight();
-		if (y + elh / 2 < wh / 2) {
+		/* enable only on < md screens */
+		if (ww < 768 && y + elh / 2 < wh / 2) {
 			$(this).removeClass("tooltip-top").addClass("tooltip-bottom");
 		} else {
 			$(this).removeClass("tooltip-bottom").addClass("tooltip-top");

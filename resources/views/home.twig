@@ -1,154 +1,135 @@
 {% extends isPjax is defined and isPjax == true ? "pjax.twig" : "theme.twig" %}
 {% block title -%}
-	{{ trans('general.home.title') }}
+{{ trans('general.home.title') }}
 {%- endblock %}
 {% block description -%}
-	{{ trans('general.home.description') }}
+{{ trans('general.home.description') }}
+{%- endblock %}
+{% block scripts -%}
+<script class="pjax" src="{{ asset('js/lorenz.js') }}"></script>
+<script class="pjax" src="{{ asset('js/home-animations.js') }}"></script>
 {%- endblock %}
 {% block content %}
-			<article class="home">
+<article class="home">
 
-				<section id="hero" class="wow slideInLeft">
+	<section id="hero">
+		<div class="section-content">
+			<h1 class="text-center">TEDxNTUA Chaos</h1>
+			<p class="info text-center">
+				<a href="/schedule"><span>{{ trans('general.home.hero.date') }}</span></a><br>
+				<a href="#map"><span>{{ trans('general.home.hero.venue') }}</span></a><br>
+				<a href="#map"><span>{{ trans('general.home.hero.address') }}</span></a>
+			</p>
+			<p class="tickets text-center">
+				<a href="https://www.eventora.com">{{ trans('general.home.hero.tickets') }}</a>
+			</p>
+		</div>
 
-					<div class="section-content">
-						<h1 class="text-center">TEDxNTUA Chaos</h1>
-						<p class="info text-center">
-							<a href="/schedule"><span>{{ trans('general.home.hero.date') }}</span></a><br>
-							<a href="#map"><span>{{ trans('general.home.hero.venue') }}</span></a><br>
-							<a href="#map"><span>{{ trans('general.home.hero.address') }}</span></a>
-						</p>
-						<p class="tickets text-center">
-							<a href="https://www.eventora.com">{{ trans('general.home.hero.tickets') }}</a>
-						</p>
-					</div>
-					<canvas id="canvas" width="800" height="400"></canvas>
+
+		<svg id="logo-animation">
+
+			<g class="container" transform="scale(1, -1) rotate(45)">
+				<g id="one" class="secondary">
+					<path d="M-225,30 L25,30 L25,280" />
+				</g>
+				<g id="two">
+					<path d="M225,-30 L-25,-30 L-25,-280" />
+				</g>
+				<g id="three">
+					<path d="M-127.5,10 L122.5,10 L122.5,260" />
+				</g>
+				<g id="four" class="secondary">
+					<path d="M127.5,-10 L-122.5,-10 L-122.5,-260" />
+				</g>
+			</g>
+
+		</svg>
+		<canvas id="lorenz" width="800" height="800"></canvas>
+
+	</section>
+
+
+	<div class="home-sections container-fluid">
+
+		<div class="row no-gutters">
+			<!-- left full-height column (hidden on < md screens) -->
+			<div class="col d-none d-md-block col-md-2">
+
+			</div>
+			<!-- main content -->
+			<div class="col col-12 col-md-8">
+
+				<section id="chaos">
+
+					<h2><span class="typewriter" data-text="{{ trans('general.home.sections.chaos.title') }}"></span><img src="{{ asset('images/chaos.gif') }}" /></h2>
+					{{ trans('general.home.sections.chaos.desc') | raw }}
 
 				</section>
 
-				<section id="speakers" class="wow bounceInUp">
+				<section id="speakers">
 
-					<div class="section-content">
+					<h2>{{ trans('general.home.sections.speakers.title') }}</h2>
 
-						<div class="container-fluid text-center">
-							{% for key, session in sessions -%}
-							<div class="row no-gutters">
-
-								<!-- <h2>{{ trans('general.home.sections.sessions.' ~ key ~ '.title') }}</h2> -->
-								<!-- <h4>{{ session.from }}-{{ session.to }}</h4> -->
-								<div class="container-fluid speaker-container">
-									<div class="row no-gutters">
-										{% for speaker in speakersBySession[key] -%}
-										<div class="col-lg-2 col-md-2"> </div>
-
-										<div class="col-sm-12 col-lg-8 col-md-8">
-											<a href="/speakers#{{ speaker.sid }}">
-												<img class="photo1" src="/images/speakers/{{ speaker.img_src }}" />
-												<img class="photo2" src="/images/speakers/{{ speaker.img_src_alt }}" />
-												<div class="speaker-info">
-													<h3>{{ speaker.name }} </h3>
-													<p class="m-0">{{ speaker.talk.event_prev | markdown }}</p>
-												</div>
-											</a>
-										</div>
-										<div class="col-lg-2 col-md-2"> </div>
-
-
-										
-										<div class="col col-6 col-md-3">
-											<a href="/speakers#{{ speaker.sid }}">
-												<img class="photo1" src="/images/speakers/{{ speaker.img_src }}" />
-												<img class="photo2" src="/images/speakers/{{ speaker.img_src_alt }}" />
-												<div class="speaker-info">
-													<h3>{{ speaker.name }} </h3>
-													<p class="m-0">{{ speaker.talk.event_prev | markdown }}</p>
-												</div>
-											</a>
-										</div>
-										{% endfor -%}
+					<div class="container-fluid speaker-container">
+						<!-- don't add no-gutters to row since the padding/margin styles are defined in the CSS -->
+						<div class="row">
+							{% for speaker in speakers -%}
+							<div class="col col-6 col-md-3">
+								<a href="/speakers#{{ speaker.sid }}">
+									<img class="photo1" src="/images/speakers/{{ speaker.img_src }}" />
+									<img class="photo2" src="/images/speakers/{{ speaker.img_src_alt }}" />
+									<div class="speaker-info">
+										<h3>{{ speaker.name }}</h3>
+										<p class="m-0">{{ speaker.talk.event_prev | markdown }}</p>
 									</div>
-								</div>
+								</a>
 							</div>
-							{%endfor %}
+							{% endfor -%}
 						</div>
 					</div>
+
 				</section>
 
-
-
-				<!-- What is chaos? -->
-
-				<div class="container-fluid">
-					<div class="row no-gutters">
-						<div class="col-md-3 col-lg-2"> </div>
-						<div class="col-md-4 col-lg-4"><h2 id="typer" class="typewriter"></h2> </div>
-						<div class="col-md-4 col-lg-4 col-sm-12">
-							<section id="about" class="wow bounceInUp">
-							<div class="section-content">
-								
-								<div class="section-intro">
-									<div class="description">{{ trans('general.home.sections.about.desc') | raw }}</div>
-									
-
-								</div>
-							</div>
-							<div class="call-to-action-wrapper">
-										<a href="/about" class="call-to-action">
-											{{ trans('general.home.sections.about.calltoaction') }} <i class="fa fa-chevron-right"></i>
-										</a>
-									</div>
-						</section>
-						</div>
-						<div class="col-md-3 col-lg-2"> </div>
-						
-						
-					</div>
-				</div>
-
-
-				<div class="container-fluid text-center">
-					<div class="row no-gutters">
-						<div class="col-md-2 col-lg-2"> </div>
-						<div class="col-md-8 col-lg-8 col-sm-12"> 
-							<section>					
-									<h3 class="text-center">{{ trans('general.home.sections.sponsors.auspices') }}</h3>
-											<a href="https://www.ntua.gr" class="mx-auto">
-												<img style="width:25%; margin-top:1rem" class="img-fluid" src="https://www.ece.ntua.gr/themes/ecetheme/assets/img/pyrforos.svg" alt="NTUA">
-											</a>
-									</div>
-							</section>
-						</div>	
-						<div class="col-md-2 col-lg-2"></div>
-					</div>
-				</div>
+				<section id="auspices">
+					<h2>{{ trans('general.home.sections.auspices.title') }}</h2>
+					<a href="https://www.ntua.gr">
+						<img class="img-fluid" src="/images/pyrforos.svg" alt="NTUA">
+					</a>
+				</section>
 
 				<section id="map">
 
-					<div class="section-content">
-						<h2>{{ trans('general.home.sections.map.title') }}</h2>
-						<p class="description">
-							{{ trans('general.home.sections.map.desc') | raw }}
-						</p>
-						<div class="map-container">
-							<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3146.597835648285!2d23.69414925138816!3d37.939824679630156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bc40a1e7f7ef%3A0x2d924baeaee6b696!2zzpXPhc6zzrXOvc6vzrTOtc65zr_OvSDOoM67zrHOvc63z4TOrM-BzrnOv869!5e0!3m2!1sel!2sgr!4v1517625169852" allowfullscreen></iframe>
-						</div>
-						<div class="container-fluid venue-gallery">
-							<div class="row no-gutters">
-								<div class="col col-12 col-md-6">
-									<img src="http://www.greece-is.com/wp-content/uploads/2017/11/Athens_planetarium.jpg">
-								</div>
-								<div class="col col-12 col-md-6">
-									<img src="http://www.bestgrecatravel.com/images/BestGrecaTravelEugenidioFundation.jpg">
-								</div>
+					<h2>{{ trans('general.home.sections.map.title') }}</h2>
+					<p class="description">
+						{{ trans('general.home.sections.map.desc') | raw }}
+					</p>
+					<div class="map-container">
+						<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3146.597835648285!2d23.69414925138816!3d37.939824679630156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bc40a1e7f7ef%3A0x2d924baeaee6b696!2zzpXPhc6zzrXOvc6vzrTOtc65zr_OvSDOoM67zrHOvc63z4TOrM-BzrnOv869!5e0!3m2!1sel!2sgr!4v1517625169852" allowfullscreen></iframe>
+					</div>
+					<div class="container-fluid venue-gallery">
+						<div class="row no-gutters">
+							<div class="col col-12 col-md-6">
+								<img src="http://www.greece-is.com/wp-content/uploads/2017/11/Athens_planetarium.jpg">
 							</div>
-							<div class="row no-gutters">
-								<div class="col col-12 col-md-12">
-									<img src="http://www.aplf-planetariums.info/images/planetariums/athenes.jpg">
-								</div>
+							<div class="col col-12 col-md-6">
+								<img src="http://www.bestgrecatravel.com/images/BestGrecaTravelEugenidioFundation.jpg">
+							</div>
+						</div>
+						<div class="row no-gutters">
+							<div class="col col-12 col-md-12">
+								<img src="http://www.aplf-planetariums.info/images/planetariums/athenes.jpg">
 							</div>
 						</div>
 					</div>
 
 				</section>
 
-		</article>
-{% endblock %}
+			</div>
+			<!-- right full-height column (hidden on < md screens) -->
+			<div class="col d-none d-md-block col-md-2">
+
+			</div>
+		</div>
+
+	</article>
+	{% endblock %}

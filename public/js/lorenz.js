@@ -1,22 +1,22 @@
-var Particle = function(valid = false, x0 = 0, y0 = 0, z0 = 0, h = 0, a = 0, b = 0, c = 0) {
+var Particle = function(valid = false, x0 = 0, y0 = 0, z0 = 0, v = 0, sigma = 0, rho = 0, beta = 0) {
 	this.valid = valid
 	this.x = x0
 	this.y = y0
 	this.z = z0
-	this.h = h
-	this.a = a
-	this.b = b
-	this.c = c
+	this.v = v
+	this.sigma = sigma
+	this.rho = rho
+	this.beta = beta
 }
 
 Particle.prototype.integrate = function(dt) {
-	this.x += dt * this.h * this.a * (this.y - this.x)
-	this.y += dt * this.h * (this.x * (this.b - this.z) - this.y)
-	this.z += this.h * (this.x * this.y - this.c * this.z)
+	this.x += dt * this.v * this.sigma * (this.y - this.x)
+	this.y += dt * this.v * (this.x * (this.rho - this.z) - this.y)
+	this.z += dt * this.v * (this.x * this.y - this.beta * this.z)
 }
 
 Particle.prototype.getCopy = function() {
-	return new Particle(this.valid, this.x, this.y, this.z, this.h, this.a, this.b, this.c)
+	return new Particle(this.valid, this.x, this.y, this.z, this.v, this.sigma, this.rho, this.beta)
 }
 
 var Lorenz = function(params) {
@@ -34,12 +34,14 @@ var Lorenz = function(params) {
 		},
 		scale: {
 			x: 10,
-			y: 10
+			y: 10,
+			z: 10
 		},
-		h: 0.008,
-		a: 10,
-		b: 38,
-		c: 8 / 3
+		project: "xz",
+		velocity: 0.008,
+		sigma: 10,
+		rho: 38,
+		beta: 8 / 3
 	}
 
 	if(typeof params === 'object') {
@@ -56,16 +58,25 @@ var Lorenz = function(params) {
 		length = options.length,
 		pointSize = options.pointSize,
 		scale = options.scale,
+		project = options.project,
 		color = {
 			R: parseInt(options.color.substring(1, 3), 16),
 			G: parseInt(options.color.substring(3, 5), 16),
 			B: parseInt(options.color.substring(5, 7), 16)
 		},
-		particle = new Particle(true, options.initial.x, options.initial.y, options.initial.z, options.h, options.a, options.b, options.c),
+		particle = new Particle(true, options.initial.x, options.initial.y, options.initial.z, options.velocity, options.sigma, options.rho, options.beta),
 		trail = [],
 		trailIndex = 0
 
-	ctx.translate(W / 2, H / 2)
+	let trX = W / 2,
+		trY = H / 2
+	if(project.charAt(0) == "z") {
+		trX = 0
+	}
+	if(project.charAt(1) == "z") {
+		trY = H
+	}
+	ctx.translate(trX, trY)
 	trail.push(particle)
 	for(var i = 1; i < length; ++i) {
 		trail.push(new Particle())
@@ -88,7 +99,9 @@ var Lorenz = function(params) {
 
 	function drawParticle(p, opacity) {
 		ctx.fillStyle = "rgba(" + color.R + "," + color.G + "," + color.B + "," + opacity + ")"
-		ctx.fillRect(scale.x * p.x,scale.y * p.y, pointSize, pointSize)
+		let a = scale[project.charAt(0)] * p[project.charAt(0)],
+			b = scale[project.charAt(1)] * p[project.charAt(1)]
+		ctx.fillRect(a, b, pointSize, pointSize)
 	}
 
 	function drawParticles() {
@@ -101,7 +114,7 @@ var Lorenz = function(params) {
 	}
 
 	function _clear() {
-		ctx.clearRect(-W / 2, -H / 2, W, H)
+		ctx.clearRect(-trX, -trY, W, H)
 	}
 
 	function render() {
@@ -111,7 +124,7 @@ var Lorenz = function(params) {
 
 	function tick(timestamp) {
 		render()
-		let p = nextParticle(1) // dt = 1 for simplicity
+		let p = nextParticle(1) // dt = 1 since we use requestAnimationFrame
 		addParticle(p)
 		window.requestAnimationFrame(tick)
 	}

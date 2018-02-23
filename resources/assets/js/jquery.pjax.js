@@ -838,6 +838,8 @@ function extractContainer(data, xhr, options) {
 function executeScriptTags(scripts) {
   if (!scripts) return
 
+  /* remove script.pjax elements */
+  $('script[src].pjax').remove()
   var existingScripts = $('script[src]')
 
   scripts.each(function() {
@@ -851,7 +853,7 @@ function executeScriptTags(scripts) {
     var type = $(this).attr('type')
     if (type) script.type = type
     script.src = $(this).attr('src')
-    document.head.appendChild(script)
+    document.body.appendChild(script)
   })
 }
 

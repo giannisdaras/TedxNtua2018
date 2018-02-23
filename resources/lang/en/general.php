@@ -51,6 +51,27 @@ return [
 			'tickets' => 'Get your tickets now',
 		],
 		'sections' => [
+			'chaos' => [
+				'title' => '_what is ',
+				'desc' => '
+				<p class="text-justify">
+				The notion of Chaos today is synonym to confusion and disorder. In the past though, ancient Greek Philoshophers, thought highly of Chaos and considered it fundamental to the creation of Cosmos, that is, the Universe. Chaos was the original matter that transformed the "abnormal" uniformity of nature into "normal" diversity.
+				</p>
+
+				<p class="text-justify">
+				We people witness Chaos of that original scientific idea in numerous manifestations in everyday life: smoke rising up smoothly into the air and suddenly vanishing, unexpected traffic in a Highway road, irregular leaking of a tap, inexpectable fluctuations of the Stock Market Index and many more instances explained mostly by this Theory of Chaos.
+				</p>
+
+				<p class="text-justify">
+				Chaos resides in our daily routine. No matter how hard we fight for harmony and well-being in our life, we frequently face hardships and difficulties that break the order.
+				</p>
+
+				<p class="text-justify">
+				This year&#39;s <a href="https://2018.tedxntua.com">TEDx NTUA</a> makes an attempt to apply the Theory of Chaos to our individual quest for orderly life.
+				</p>
+				',
+				'calltoaction' => 'Who are we?',
+			],
 			'sessions' => [
 				[
 					'title' => 'Session 1: Initial Conditions',
@@ -68,48 +89,26 @@ return [
 				'calltoaction' => 'See the full schedule',
 			],
 			'speakers' => [
-				'title' => 'Speakers',
+				'title' => '_speakers',
 				'desc' => 'People that are scientists, professionals, artists. Individuals with <strong>passion</strong> for what they do and equipped with <strong>ideas</strong> worth spreading. These are our leading figures. Get to know them before the event and discover their work thus far.',
 				'calltoaction' => 'See all the speakers',
 			],
-			'about' => [
-				'title' => 'What is Chaos?',
-				'desc' => '
-				<p class="text-justify">
-				The notion of CHAOS today is synonym to confusion and disorder. In the past though, ancient Greek Philoshophers, though highly of CHAOS and considered it fundamental to the creation of Cosmos, that is, the Universe. Chaos was the original matter that transformed the "abnormal" uniformity of nature into "normal" diversity.
-				</p>
-
-				<p class="text-justify">
-				We people witness Chaos of that original scientific idea in numerous manifestations in everyday life: smoke rising up smoothly into the air and suddenly vanishing, unexpected traffic in a Highway road, irregular leaking of a tap, inexpectable fluctuations of the Stock Market Index and many more instances explained mostly by this Theory of Chaos.
-				</p>
-
-				<p class="text-justify">
-				Chaos resides in our daily routine. No matter how hard we fight for harmony and well-being in our life, we frequently face hardships and difficulties that break the order.
-				</p>
-
-				<p class="text-justify">
-				This year&#39;s <a href="http://2018.tedxntua.com">TEDx NTUA</a> makes an attempt to apply the Theory of Chaos to our individual quest for orderly life.
-				</p>
-
-				<p class="text-right">
-				&ldquo;<i>Chaos is what we\'ve lost touch with. This is why it is given a bad name. It is feared by the dominant archetype of our world, which is Ego, which clenches because its existence is defined in terms of control.</i>&rdquo;<br> ~Terence McKenna
-				</p>
-				',
-				'calltoaction' => 'Who are we?',
+			'auspices' => [
+				'title' => '_under the auspices of NTUA',
+				'desc' => 'Under the auspices of',
 			],
 			'blog' => [
-				'title' => 'Blog',
+				'title' => '_blog',
 				'desc' => 'Organizing a TEDx event requires the coordination of many people and many teams. Here we post our progress and the best moments from our meetings.',
 				'calltoaction' => 'See all our posts',
 			],
 			'sponsors' => [
-				'title' => 'Sponsors',
+				'title' => '_sponsors',
 				'desc' => 'Our event would not have been possible without the support from organizations that share our <strong>values</strong> and <strong>visions</strong>. Visit their websites and learn more about them. Of course, the most important supporter is our <strong>university</strong> itself.',
 				'calltoaction' => 'See all our sponsors',
-				'auspices' => 'Under the auspices of NTUA',
 			],
 			'map' => [
-				'title' => 'Map & Venue',
+				'title' => '_map & venue',
 				'desc' => 'TEDxNTUA 2018 will take place at the Eugenides Planetarium. The Planetarium is located at 387 Syggrou Avenue, just under 7 minutes on foot from the nearest bus station.',
 			],
 		],
@@ -149,13 +148,13 @@ return [
 		'experience' => 'Experience Team',
 		'experience_description' => 'The Experience Team is responsible for ensuring the best experience possible to the event attendees by organizing special events, workshops and many more!',
 		'fr' => 'Fundraising Team',
-		'fr_description' => 'The Fundraising Team is responsible for finding Partners and Sponsors that fund this TEDx Event. Whithout them, there will be no TEDx NTUA!',
+		'fr_description' => 'The Fundraising Team is responsible for finding Partners and Sponsors that fund this TEDx Event. Without them, there would be no TEDx NTUA!',
 		'graphics' => 'Graphics Team',
-		'graphics_description' => 'The Graphics Team designs booklets, logos and supports other teams (like IT and Fudrasing Team) with graphical material.',
+		'graphics_description' => 'The Graphics Team designs booklets, logos and supports other teams (like IT and Fundraising Team) with graphical material.',
 		'it' => 'IT Team',
-		'it_description' => 'The IT Team is responsible for the making of this website as well as providing technical support for the event.',
+		'it_description' => 'The IT Team is responsible for the creation of this website as well as providing technical support for the event.',
 		'media' => 'Media Team',
-		'media_description' => 'The Media Team manages the social media accounts of the event like Facebook, Instagram and Twitter as well as posting to the blog.',
+		'media_description' => 'The Media Team manages the social media accounts of the event like Facebook, Instagram and Twitter.',
 		'speakers' => 'Speakers Team',
 		'speakers_description' => 'Speakers team is held responsible for inviting the most awesome speakers!',
 		'venue_production' => 'Venue & Production Team',
