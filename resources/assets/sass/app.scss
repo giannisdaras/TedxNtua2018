@@ -955,7 +955,7 @@ article:not(.home) {
 
 /* ABOUT PAGE */
 article.about {
-	background-image: url("/images/backgrounds/mixed_pixels.svg");
+	background-image: url("/images/backgrounds/pixels_right.svg");
 	background-size: 100% auto;
 	background-repeat: repeat-y;
 
@@ -1057,6 +1057,11 @@ article.team {
 		padding-bottom: 0.5rem;
 		border-bottom: 2px solid #333;
 	}
+
+	h3 {
+		font-weight: normal !important;
+	}
+
 	.col {
 		padding-top: 0.5rem;
 		text-align: center;
@@ -1118,10 +1123,10 @@ article.team {
 /* SCHEDULE PAGE */
 
 article.schedule {
-	background-image: url("/images/backgrounds/pixels_full_tiled_horizontal.svg");
-	background-size: auto 100%;
-	background-repeat: repeat-x;
-
+	background-image: url("/images/backgrounds/pixels_full_tiled_vertical.svg");
+	background-size: 50% auto;
+	background-repeat: repeat-y;
+	background-position: right;
 
 	table {
 		font-size: .85rem;
@@ -1193,10 +1198,7 @@ article.schedule {
 
 /* CONTACT PAGE */
 article.contact {
-	background-image: url("/images/backgrounds/pixels.svg");
-	background-size: contain;
-	background-repeat: repeat-y;
-
+	
 	form {
 		max-width: 768px;
 		margin: 0 auto;

@@ -15,32 +15,35 @@
 
 	<section class="content text-center">
 
-		{% for key, teamlist in teams %}
-		<h2 id="{{ key }}" data-tooltip="{{ trans('general.team.' ~ key ~ '_description') }}">{{ trans('general.team.' ~ key) }}</h2>
-
-		<div class="container-fluid">
-
-			<div class="row vertical-align no-gutters">
-				{% for person in teamlist %}
-				<div class="col col-6 col-lg-3 centered">
-					<a href="mailto:{{ person.email }}" target="_blank">
-						<img class="img-fluid grid-image photo1 person" src="{{ person.img_src }}" alt="{{ person.name }}"/>
-						<img class="img-fluid grid-image photo2 person" src="{{ person.img_src_alt }}" alt="{{ person.name }}"/>
-						<h6>{{ person.name }}</h6>
-					</a>
-				</div>
-				{% endfor %}
-
-			</div>
-
-		</div>
-		{% endfor %}
 
 		<div class="container-fluid">
 			<h3 class="quote"><sup><i class="fa fa-quote-left fa-1x" aria-hidden="true"></i></sup>
 				&nbsp;{{ trans('general.team.quote') }}
 				&nbsp;<sup><i class="fa fa-quote-right fa-1x" aria-hidden="true"></i></sup></h3>
 			</div>
+
+
+			{% for key, teamlist in teams %}
+			<h2 id="{{ key }}" data-tooltip="{{ trans('general.team.' ~ key ~ '_description') }}">{{ trans('general.team.' ~ key) }}</h2>
+
+			<div class="container-fluid">
+
+				<div class="row vertical-align no-gutters">
+					{% for person in teamlist %}
+					<div class="col col-6 col-lg-3 centered">
+						<a href="mailto:{{ person.email }}" target="_blank">
+							<img class="img-fluid grid-image photo1 person" src="{{ person.img_src }}" alt="{{ person.name }}"/>
+							<img class="img-fluid grid-image photo2 person" src="{{ person.img_src_alt }}" alt="{{ person.name }}"/>
+							<h6>{{ person.name }}</h6>
+						</a>
+					</div>
+					{% endfor %}
+
+				</div>
+
+			</div>
+			{% endfor %}
+
 
 			<div class="container-fluid">
 				<div class="row vertical-align">
@@ -56,4 +59,4 @@
 		</section>
 
 	</article>
-{% endblock %}
+	{% endblock %}
