@@ -13380,6 +13380,44 @@ article.home h6 {
   text-align: center;
 }
 
+article.home #canvas {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 800px;
+  margin-top: 8rem;
+}
+
+@media screen and (min-width: 0px) and (max-width: 761px) {
+  article.home {
+    /* hide it in small screens */
+  }
+
+  article.home #canvas {
+    display: none;
+  }
+
+  article.home #altTitle {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 762px) and (max-width: 1024px) {
+  article.home {
+    /* hide it in small screens */
+  }
+
+  article.home #canvas {
+    display: block;
+  }
+
+  article.home #altTitle {
+    display: none;
+  }
+}
+
 article.home section {
   width: 100%;
   /* temporary, just to test the home layout */

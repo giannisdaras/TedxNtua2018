@@ -36603,6 +36603,7 @@ $(document).ready(function () {
 		$("body > header").addClass("home");
 	}
 
+	// following code tells the browser that we want to perform an animation
 	window.requestAnimFrame = function () {
 		return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (callback) {
 			window.setTimeout(callback, 1000 / 60);
@@ -36614,11 +36615,14 @@ $(document).ready(function () {
 	    keyword = "TedxNTUA Chaos",
 	    imageData,
 	    density = 3,
-	    mouse = {},
+	    //density of pixels
+	mouse = {},
 	    hovered = false,
 	    colors = ["255,255,255", "255,0,0", "0,0,0"],
-	    minDist = 20,
-	    bounceFactor = 0.7;
+	    //pixel colors
+	minDist = 20,
+	    //minimum distance
+	bounceFactor = 0.7;
 
 	var W = window.innerWidth,
 	    H = window.innerHeight;
