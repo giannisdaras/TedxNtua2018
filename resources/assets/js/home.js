@@ -41,7 +41,7 @@ $(document).ready(function(){
 			mouse = {},
 			hovered = false,
 			colors = ["255,255,255", "255,0,0", "0,0,0"], //pixel colors
-			minDist = 20, //minimum distance
+			minDist = 40, //minimum distance
 			bounceFactor = 0.9; // when it increases they are getting more jump height
 
 	var W = window.innerWidth,
