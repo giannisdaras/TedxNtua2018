@@ -42,7 +42,7 @@ $(document).ready(function(){
 			hovered = false,
 			colors = ["255,255,255", "255,0,0", "0,0,0"], //pixel colors
 			minDist = 20, //minimum distance
-			bounceFactor = 0.7; 
+			bounceFactor = 0.9; // when it increases they are getting more jump height
 
 	var W = window.innerWidth,
 	H = window.innerHeight;
@@ -86,7 +86,7 @@ $(document).ready(function(){
 	function drawText() {
 		ctx.clearRect(0, 0, W, H);
 		ctx.fillStyle = "#000000";
-		ctx.font = "100px 'Arial', sans-serif";
+		ctx.font = "150px 'Arial', sans-serif";
 		ctx.textAlign = "center";
 		ctx.fillText(keyword, W/2, H/2);
 	}
