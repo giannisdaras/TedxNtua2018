@@ -8,6 +8,12 @@
 {% block scripts -%}
 <script class="pjax" src="{{ asset('js/lorenz.js') }}"></script>
 <script class="pjax" src="{{ asset('js/home-animations.js') }}"></script>
+
+<!-- MAPBOX -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+
+
 {%- endblock %}
 {% block content %}
 <article class="home">
@@ -93,7 +99,7 @@
 				<section id="auspices">
 					<h2>{{ trans('general.home.sections.auspices.title') }}</h2>
 					<a href="https://www.ntua.gr">
-						<img class="img-fluid" src="/images/pyrforos.svg" alt="NTUA">
+						<img class="img-fluid" style="width: 70%;" src="/images/pyrforos.svg" alt="NTUA">
 					</a>
 				</section>
 

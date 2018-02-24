@@ -250,8 +250,8 @@ class PeopleTableSeeder extends Seeder
 [
 
 'name'=>json_encode([
-  'en'=> 'Barka Nadia',
-  'el'=> 'Μπάρκα Νάντια'
+  'en'=> 'Baka Konstantina',
+  'el'=> 'Μπάκα Κωνσταντίνα'
 ]),
 'email' => 'konstantinabaka96@gmail.com',
 'img_src' => '/images/team/fr/nadia.jpg',
