@@ -20,7 +20,9 @@
 
 	<section id="hero">
 		<div class="section-content">
-			<h1 class="text-center">TEDxNTUA Chaos</h1>
+			<canvas id="canvas"></canvas>
+			<h1 id="altTitle" style="display:none;"> TedxNTUA Chaos </h1>
+
 			<p class="info text-center">
 				<a href="/schedule"><span>{{ trans('general.home.hero.date') }}</span></a><br>
 				<a href="#map"><span>{{ trans('general.home.hero.venue') }}</span></a><br>
@@ -138,4 +140,6 @@
 		</div>
 
 	</article>
+
+
 	{% endblock %}

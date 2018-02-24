@@ -36587,21 +36587,170 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 
-    $(document).on("mouseover", "#hero .info a", function (e) {
+	$(document).on("mouseover", "#hero .info a", function (e) {
 
-        $(this).addClass("blink");
-    }).on("mouseout", "#hero .info a", function (e) {
+		$(this).addClass("blink");
+	}).on("mouseout", "#hero .info a", function (e) {
 
-        $(this).removeClass("blink");
-    });
+		$(this).removeClass("blink");
+	});
 
-    if ($("article.home").length > 0) {
+	if ($("article.home").length > 0) {
 
-        /* trigger home animations */
-        homeAnimations();
+		/* trigger home animations */
+		homeAnimations();
 
-        $("body > header").addClass("home");
-    }
+		$("body > header").addClass("home");
+	}
+
+	// following code tells the browser that we want to perform an animation
+	window.requestAnimFrame = function () {
+		return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (callback) {
+			window.setTimeout(callback, 1000 / 60);
+		};
+	}();
+
+	var canvas = document.getElementById("canvas"),
+	    ctx = canvas.getContext("2d"),
+	    keyword = "TedxNTUA Chaos",
+	    imageData,
+	    density = 3,
+	    //density of pixels
+	mouse = {},
+	    hovered = false,
+	    colors = ["255,255,255", "255,0,0", "0,0,0"],
+	    //pixel colors
+	minDist = 40,
+	    //minimum distance
+	bounceFactor = 0.9; // when it increases they are getting more jump height
+
+	var W = window.innerWidth,
+	    H = window.innerHeight;
+
+	canvas.width = W;
+	canvas.height = H;
+
+	document.addEventListener("mousemove", function (e) {
+		mouse.x = e.pageX;
+		mouse.y = e.pageY;
+	}, false);
+
+	// Particle Object
+	var Particle = function Particle() {
+		this.size = Math.random() * 10.5;
+		this.x = -W;
+		this.y = -H;
+		this.free = false;
+
+		this.vy = -5 + parseInt(Math.random() * 10) / 2;
+		this.vx = -4 + parseInt(Math.random() * 8);
+
+		// Color
+		this.a = Math.random();
+		this.color = colors[parseInt(Math.random() * colors.length)];
+
+		this.setPosition = function (x, y) {
+			this.x = x;
+			this.y = y;
+		};
+
+		this.draw = function () {
+			ctx.fillStyle = "rgba(" + this.color + "," + this.a + ")";
+			ctx.fillRect(this.x, this.y, this.size, this.size);
+		};
+	};
+
+	var particles = [];
+
+	// Draw the text
+	function drawText() {
+		ctx.clearRect(0, 0, W, H);
+		ctx.fillStyle = "#000000";
+		ctx.font = "150px 'Arial', sans-serif";
+		ctx.textAlign = "center";
+		ctx.fillText(keyword, W / 2, H / 2);
+	}
+
+	// Clear the canvas
+	function clear() {
+		ctx.clearRect(0, 0, W, H);
+	}
+
+	// Get pixel positions
+	function positionParticles() {
+		// Get the data
+		imageData = ctx.getImageData(0, 0, W, W);
+		data = imageData.data;
+
+		// Iterate each row and column
+		for (var i = 0; i < imageData.height; i += density) {
+			for (var j = 0; j < imageData.width; j += density) {
+
+				// Get the color of the pixel
+				var color = data[j * (imageData.width * 4) + i * 4 - 1];
+
+				// If the color is black, draw pixels
+				if (color == 255) {
+					particles.push(new Particle());
+					particles[particles.length - 1].setPosition(i, j);
+				}
+			}
+		}
+	}
+
+	drawText();
+	positionParticles();
+
+	// Update
+	function update() {
+		clear();
+
+		for (i = 0; i < particles.length; i++) {
+			var p = particles[i];
+
+			if (mouse.x > p.x && mouse.x < p.x + p.size && mouse.y > p.y && mouse.y < p.y + p.size) hovered = true;
+
+			if (hovered == true) {
+
+				var dist = Math.sqrt((p.x - mouse.x) * (p.x - mouse.x) + (p.y - mouse.y) * (p.y - mouse.y));
+
+				if (dist <= minDist) p.free = true;
+
+				if (p.free == true) {
+					p.y += p.vy;
+					p.vy += 0.15;
+					p.x += p.vx;
+
+					// Collision Detection
+					if (p.y + p.size > H) {
+						p.y = H - p.size;
+						p.vy *= -bounceFactor;
+
+						// Friction applied when on the floor
+						if (p.vx > 0) p.vx -= 0.1;else p.vx += 0.1;
+					}
+
+					if (p.x + p.size > W) {
+						p.x = W - p.size;
+						p.vx *= -bounceFactor;
+					}
+
+					if (p.x < 0) {
+						p.x = 0;
+						p.vx *= -0.5;
+					}
+				}
+			}
+
+			ctx.globalCompositeOperation = "lighter";
+			p.draw();
+		}
+	}
+
+	(function animloop() {
+		requestAnimFrame(animloop);
+		update();
+	})();
 });
 
 /***/ }),
