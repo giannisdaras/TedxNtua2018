@@ -309,8 +309,8 @@ section.heading {
 	border-bottom: 1px solid #444;
 	/* bottom inner shadow */
 	h1 {
-		font-weight: bold;
-		font-size: 3rem;
+		font-weight: normal;
+		font-size: 2rem;
 		padding: 1rem 2rem;
 		text-align: center;
 		margin: 0 auto;
@@ -828,7 +828,7 @@ article.home {
 		}
 	}
 	#map {
-		
+
 		.map {
 			width: 100%;
 			height: 400px;

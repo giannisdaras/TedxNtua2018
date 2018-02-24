@@ -13127,8 +13127,8 @@ section.heading {
 }
 
 section.heading h1 {
-  font-weight: bold;
-  font-size: 3rem;
+  font-weight: normal;
+  font-size: 2rem;
   padding: 1rem 2rem;
   text-align: center;
   margin: 0 auto;
