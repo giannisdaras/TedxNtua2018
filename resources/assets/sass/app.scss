@@ -527,8 +527,8 @@ article.home {
 	}
 
 	@media screen and (min-width: 0px) and (max-width: 761px) {
-  		#canvas{ display: none }  /* hide it in small screens */
-  		#altTitle { display: block } 
+  		#canvas{ display: none; }  /* hide it in small screens */
+  		#altTitle { display: block !important; } 
 	}
 
 	@media screen and (min-width: 762px) and (max-width: 1024px) {
