@@ -36612,13 +36612,13 @@ $(document).ready(function () {
 
 	var canvas = document.getElementById("canvas"),
 	    ctx = canvas.getContext("2d"),
-	    keyword = "TedxNTUA Chaos",
+	    keyword = "TEDxNTUA Chaos",
 	    imageData,
 	    density = 3,
 	    //density of pixels
 	mouse = {},
 	    hovered = false,
-	    colors = ["255,255,255", "255,0,0", "0,0,0"],
+	    colors = ["250,250,250", "230,43,30", "34,34,34"],
 	    //pixel colors
 	minDist = 40,
 	    //minimum distance
