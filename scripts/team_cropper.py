@@ -28,5 +28,5 @@ def mutate(img_file):
 
 
 
-pool = Pool(5)
+pool = Pool(8)
 pool.map(mutate, img_list)
