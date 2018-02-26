@@ -8,14 +8,14 @@ use App\Speaker;
 class HomeController extends Controller {
 
 	public function index(Request $request) {
-		$speakers = Speaker::orderBy('name')->get();
+		$speakers = Speaker::where('visible', true)->orderBy('name')->get();
 
 		$isPjax = $request->header('X-PJAX');
 		if ($isPjax) {
-			return response()->view('home', compact('isPjax', 'sessions', 'speakers'), 200)
+			return response()->view('home', compact('isPjax', 'speakers'), 200)
 				->header('X-PJAX-URL', LaravelLocalization::getLocalizedURL());
 		}
-		return view('home', compact('sessions', 'speakers'));
+		return view('home', compact('speakers'));
 	}
 
 }

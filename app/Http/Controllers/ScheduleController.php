@@ -58,11 +58,22 @@ class ScheduleController extends Controller {
 	}
 
 	public function index(Request $request) {
-		$mdl=new Schedule();
-		$talks=$mdl::where('type','=','talk')->orderBy('hour', 'asc')->get()->toArray();
-		$performances=$mdl::where('type','=','performance')->orderBy('hour', 'asc')->get()->toArray();
-		$workshops=$mdl::where('type','=','workshop')->orderBy('hour', 'asc')->get()->toArray();
-		$schedule=compact('talks', 'performances', 'workshops');
+
+		$events = Schedule::where('visible', true);
+
+		$talks = $events -> where('type', 'talk')
+						 -> orderBy('hour', 'asc')
+						 -> get() -> toArray();
+
+		$performances = $events -> where('type', 'performance')
+								-> orderBy('hour', 'asc')
+								-> get() -> toArray();
+
+		$workshops = $events -> where('type', 'workshop')
+							 -> orderBy('hour', 'asc')
+							 -> get() -> toArray();
+
+		$schedule = compact('talks', 'performances', 'workshops');
 
 		$rows = $this->convertToTable($schedule);
 		$day = "2018-03-31";
@@ -72,5 +83,6 @@ class ScheduleController extends Controller {
 							 ->header('X-PJAX-URL', LaravelLocalization::getLocalizedURL());
 		}
 		return view('schedule', compact('rows', 'day'));
+
 	}
 }

@@ -10,6 +10,7 @@ class Person extends Model
 {
     use HasTranslations;
     public $translatable = ['name'];
+	public $timestamps = false;
     protected $table = 'people';
 
     /* Team names should have a linebreak between name and surname in mobile screens */

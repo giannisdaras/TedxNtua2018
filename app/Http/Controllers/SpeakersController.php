@@ -1,16 +1,15 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Http\Controllers\View;
-use App\Speaker;
 use Illuminate\Http\Request;
 use LaravelLocalization;
+use App\Speaker;
 
 class SpeakersController extends Controller {
 
 	public function index(Request $request) {
-		$mdl=new Speaker();
-		$speakers=$mdl::all(); 
+		$speakers = Speaker::where('visible', true)->orderBy('name')->get();
+
 		$isPjax = $request->header('X-PJAX');
 		if ($isPjax) {
 			return response()->view('speakers', compact('isPjax', 'speakers'), 200)
