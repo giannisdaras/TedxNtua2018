@@ -504,6 +504,48 @@ body > footer {
 	}
 }
 
+/* ANGLE BRACKETS STYLING FOR SECTIONS */
+section.content .angle-brackets {
+	position: relative;
+	padding: 1rem;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 2.5rem;
+		height: 2.5rem;
+		border-top: 8px solid $brand-primary;
+		border-left: 8px solid $brand-primary;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: 2.5rem;
+		height: 2.5rem;
+		border-right: 8px solid $brand-primary;
+		border-bottom: 8px solid $brand-primary;
+	}
+}
+
+/* END ANGLE BRACKETS */
+
+/* CALL TO ACTION BUTTONS */
+a.call-to-action {
+	display: inline-block;
+	border-radius: 1rem;
+	background-color: $brand-primary;
+	color: white;
+	font-size: 1rem;
+	text-align: center;
+	padding: .75rem 2rem;
+	&:hover {
+		background-color: saturate($brand-primary, 10%);
+	}
+}
+
 /* HOME PAGE */
 
 article.home {
@@ -517,6 +559,9 @@ article.home {
 	section {
 		width: 100%;
 		font-size: .9em;
+		&:not(#hero) {
+			margin: 1rem 0;
+		}
 		h2 {
 			color: $brand-primary;
 			font-weight: bold;
@@ -539,40 +584,9 @@ article.home {
 			margin-bottom: 1rem;
 			flex: 1;
 		}
-		.call-to-action-wrapper {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
 		.fa-chevron-right {
 			font-size: .85rem;
 			padding-left: .15rem;
-		}
-		&:not(#hero) {
-			/* angle brackets */
-			position: relative;
-			margin: 1rem 0;
-			padding: 1rem;
-			&::before {
-				content: "";
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 2.5rem;
-				height: 2.5rem;
-				border-top: 8px solid $brand-primary;
-				border-left: 8px solid $brand-primary;
-			}
-			&::after {
-				content: "";
-				position: absolute;
-				right: 0;
-				bottom: 0;
-				width: 2.5rem;
-				height: 2.5rem;
-				border-right: 8px solid $brand-primary;
-				border-bottom: 8px solid $brand-primary;
-			}
 		}
 	}
 	#hero {
@@ -679,15 +693,6 @@ article.home {
 			}
 		}
 
-	}
-	a.call-to-action {
-		background-color: #333333;
-		color: white;
-		display: inline-block;
-		padding: .75rem 1.5rem;
-		&:hover {
-			background-color: #3A3A3A;
-		}
 	}
 
 	#chaos {
@@ -906,14 +911,13 @@ article:not(.home) {
 			h2 is used in pages completely consisted of sections (eg. sponsors, team)
 			h3 is used for paragraph titles or smaller headings (eg. about, contact)
 		 */
-		h2 {
-			font-weight: bold;
-			font-size: 2.5rem;
-
-		}
-		h3 {
+		h2, .h2 {
 			font-weight: bold;
 			font-size: 2rem;
+		}
+		h3, .h3 {
+			font-weight: bold;
+			font-size: 1.5rem;
 		}
 		h1, h2, h3, h4, h5, h6 {
 			&.primary {
@@ -982,54 +986,48 @@ article.about {
 /* SPEAKER PAGE */
 
 article.speakers {
-
-	.mobile {
-		display: block;
-	}
-
-	.desktop {
-		display: none;
-	}
-
-	.video {
-		position: relative;
-		padding-bottom: 56.25%; /* 16:9 */
-		padding-top: 25px;
-		height: 0;
-	}
-	.video iframe {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
 	background-image: url("/images/backgrounds/pixels.svg");
 	background-size: 100% auto;
 	background-repeat: repeat-y;
-
-	.col {
-		margin-bottom: 1rem;
+	text-align: center;
+	/* remove bootstrap's container-fluid margin from this page, since we have a custom layout */
+	section.content .container-fluid {
+		margin-bottom: 0;
 	}
-
-	.social-links a {
-		color: $brand-secondary;
-	}
-
-	.back a {
-		border-radius: 1rem;
-		background-color: $brand-primary;
-		color: white;
-		font-size: 1.3rem;
-		padding: 1rem 2.5rem;
-		&:hover {
-			background-color: saturate($brand-primary, 10%);
-		}
-		&:active {
-			font-size: 1.45rem;
+	section.content .speaker-container {
+		margin-bottom: 2rem;
+		&:last {
+			margin-bottom: 0;
 		}
 	}
-
+	.speaker-header {
+		text-align: center;
+		border-bottom: 1px solid #AAA;
+		/* bottom-padding */
+		padding: 0 0 1.5rem 0;
+		/* middle spacing */
+		h2 {
+			margin: 1rem 0 0 0;
+		}
+		img {
+			width: 75%;
+			max-width: 320px;
+		}
+	}
+	.speaker-info {
+		/* top padding */
+		padding: 1.5rem 0 0 0;
+		text-align: justify;
+	}
+	.speakers-footer {
+		.row:not(:last-child) {
+			margin-bottom: 2rem;
+		}
+	}
+	.embed-responsive {
+		max-width: 640px;
+		margin: 0 auto;
+	}
 }
 
 /* END SPEAKER PAGE */
@@ -1055,16 +1053,8 @@ article.team {
 	background-size: contain;
 	background-repeat: repeat-y;
 
-	h2 {
-		text-align: center;
-		font-weight: normal !important;
-		color: $brand-primary !important;
-		padding-bottom: 0.5rem;
+	section.content h2 {
 		border-bottom: 2px solid #333;
-	}
-
-	h3 {
-		font-weight: normal !important;
 	}
 
 	.col {
@@ -1085,41 +1075,23 @@ article.team {
 		display: block;
 	}
 
-	img .person {
-		margin-right: -15px; /* Remove right gap */
-		margin-left: -15px;  /* Remove left gap */
-		padding-bottom: 62.5%; /* ratio is 16:10 */
-		margin-bottom: 10%;
-		width: 100%;
-	}
-
-	.quote {
-		color : lighten($brand-secondary, 25%);
+	blockquote {
+		color: lighten($brand-secondary, 25%);
 		font-stretch: expanded;
 	}
 
-	p {
-		color: white;
-		margin-top : 25px;
+	.join-us-wrapper {
+		padding: 0 1rem;
 	}
 
-	.back a {
-		border-radius: 1rem;
-		background-color: $brand-primary;
-		color: white;
-		font-size: 1.3rem;
-		padding: 1rem 2.5rem;
-		&:hover {
-			background-color: saturate($brand-primary, 10%);
+	.join-us {
+		width: 100%;
+		max-width: 640px;
+		margin: 0 auto;
+		position: relative;
+		a {
+			margin-top: 2rem;
 		}
-		&:active {
-			font-size: 1.45rem;
-		}
-	}
-
-
-	h6 {
-		font-size: 1.25rem;
 	}
 }
 
@@ -1274,18 +1246,6 @@ article.contact {
 }
 
 @include media-breakpoint-up(sm) {
-
-	article.speakers {
-		.desktop {
-			display : block;
-		}
-
-		.mobile {
-			display : none;
-		}
-
-	}
-
 	[data-tooltip]:after {
 		width: 33vw !important;
 		margin-left: -16.5vw !important;
@@ -1318,6 +1278,17 @@ article.contact {
 		background-size: 1.5rem 0.9rem;
 		margin: 0.1rem 0;
 	}
+	section.content {
+		padding: 3rem 2rem;
+	}
+	body > footer {
+		.container {
+			padding: 0 2rem;
+		}
+	}
+	.cookie-bar .container-fluid {
+		padding: 0 2rem;
+	}
 	article.home {
 		section {
 			font-size: 1em;
@@ -1342,11 +1313,15 @@ article.contact {
 			padding-top: 3.7rem;
 		}
 	}
-	section.content {
-		padding: 3rem 2rem;
-	}
-	.cookie-bar .container-fluid {
-		padding: 0 2rem;
+	article.team {
+		.join-us {
+			a {
+				margin-top: 0;
+				position: absolute;
+				bottom: .5rem;
+				right: 0;
+			}
+		}
 	}
 	article.schedule {
 		table {
@@ -1356,31 +1331,24 @@ article.contact {
 			margin-bottom: 3rem;
 		}
 	}
-	body > footer {
-		.container {
-			padding: 0 2rem;
-		}
-	}
 }
 
 @include media-breakpoint-up(md) {
-
 	section.heading {
 		display: none;
 	}
-
-	article.team {
-
-		section.content {
-			p {
-				position: relative;
-				margin-top: -50px;
-			}
-		}
-
-	}
 	.cookie-bar {
 		font-size: 1rem;
+	}
+	a.call-to-action {
+		font-size: 1.25rem;
+	}
+	section.content .angle-brackets {
+		padding: 2rem;
+		&::before, &::after {
+			width: 3rem;
+			height: 3rem;
+		}
 	}
 	article.home {
 		section {
@@ -1394,17 +1362,6 @@ article.contact {
 			.section-intro .description {
 				padding-right: 2rem;
 				margin-bottom: 0;
-			}
-			.call-to-action-wrapper {
-				justify-content: flex-end;
-			}
-			&:not(#hero) {
-				/* angle brackets */
-				padding: 2rem;
-				&::before, &::after {
-					width: 3rem;
-					height: 3rem;
-				}
 			}
 		}
 		#hero {
@@ -1478,12 +1435,28 @@ article.contact {
 			}
 		}
 	}
+	article:not(.home) {
+		section.content {
+			h2, .h2 {
+				font-size: 2.5rem;
+			}
+			h3, .h3 {
+				font-weight: bold;
+				font-size: 2rem;
+			}
+		}
+	}
 	article.schedule {
 		table {
 			font-size: 1rem;
 		}
 		.table th, .table td {
 			padding: .75rem;
+		}
+	}
+	article.team {
+		h5 br {
+			display: none;
 		}
 	}
 	.blog-listing {
@@ -1610,7 +1583,7 @@ article.contact {
 			}
 		}
 	}
-	article.about, article.speakers {
+	article.about {
 		section.content .col {
 			margin-bottom: 0;
 		}
@@ -1658,6 +1631,11 @@ article.contact {
 					font-size: 1rem;
 				}
 			}
+		}
+	}
+	article.team {
+		h5 {
+			font-size: 1.5rem;
 		}
 	}
 }
