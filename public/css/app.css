@@ -13433,7 +13433,7 @@ article.home #leftStripe {
   width: 80%;
   height: 100%;
   position: absolute;
-  background: transparent url("/images/stripeFull.svg") 0% 0% repeat-y scroll;
+  background: url("/images/stripeFull.svg") 0% 0% repeat-y scroll;
 }
 
 article.home #rightStripe {
@@ -13441,9 +13441,9 @@ article.home #rightStripe {
   width: 80%;
   height: 100%;
   position: absolute;
-  background: transparent url("/images/stripeFull.svg") 20% 0% repeat-y scroll;
+  background: url("/images/stripeFull.svg") 20% 0% repeat-y scroll;
   -webkit-transform: scaleY(-1);
-  transform: scaleY(-1);
+          transform: scaleY(-1);
 }
 
 article.home section {
