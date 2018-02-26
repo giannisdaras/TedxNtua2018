@@ -156,9 +156,9 @@ return [
 		'media' => 'Media Team',
 		'media_description' => 'The Media Team manages the social media accounts of the event like Facebook, Instagram and Twitter.',
 		'speakers' => 'Speakers Team',
-		'speakers_description' => 'Speakers team is held responsible for inviting the most awesome speakers!',
+		'speakers_description' => 'The Speakers Team is held responsible for inviting the most awesome speakers!',
 		'venue_production' => 'Venue & Production Team',
-		'venue_production_description' => 'Venue & Production Team is responsible for the venue in which the event will take place, as well as things like live-streaming, videos etc.',
+		'venue_production_description' => 'The Venue & Production Team is responsible for the venue in which the event will take place, as well as things like live-streaming, videos etc.',
 		'quote' => 'Nothing would have been possible without our awesome team',
 		'volunteer' => 'Become a volunteer'
 
