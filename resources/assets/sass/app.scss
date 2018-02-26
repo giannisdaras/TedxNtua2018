@@ -505,7 +505,7 @@ body > footer {
 }
 
 /* ANGLE BRACKETS STYLING FOR SECTIONS */
-section.content .angle-brackets {
+.angle-brackets, section.content .angle-brackets {
 	position: relative;
 	padding: 1rem;
 	&::before {

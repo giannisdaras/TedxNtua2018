@@ -13365,11 +13365,13 @@ body > footer .container.credits a:hover {
 
 /* ANGLE BRACKETS STYLING FOR SECTIONS */
 
+.angle-brackets,
 section.content .angle-brackets {
   position: relative;
   padding: 1rem;
 }
 
+.angle-brackets::before,
 section.content .angle-brackets::before {
   content: "";
   position: absolute;
@@ -13381,6 +13383,7 @@ section.content .angle-brackets::before {
   border-left: 8px solid #E62B1E;
 }
 
+.angle-brackets::after,
 section.content .angle-brackets::after {
   content: "";
   position: absolute;
