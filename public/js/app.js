@@ -832,6 +832,7 @@ __webpack_require__(39);
 __webpack_require__(40);
 __webpack_require__(41);
 __webpack_require__(42);
+__webpack_require__(57);
 __webpack_require__(43);
 __webpack_require__(44);
 __webpack_require__(45);
@@ -38005,6 +38006,88 @@ $(document).ready(function () {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */,
+/* 56 */,
+/* 57 */
+/***/ (function(module, exports) {
+
+$(document).ready(function () {
+
+	var scrollTimer = void 0;
+
+	var scrollHelper = function scrollHelper(container) {
+		scrollTimer = null;
+		// snap scroll
+
+		// get item closer to the center of the container view
+		var w = container.width(),
+		    minDist = w / 2,
+		    minDist_i = -1,
+		    items = container.children(),
+		    items_n = items.length;
+
+		items.each(function (i, el) {
+			var pos = $(this).position().left,
+			    itemw = $(this).width(),
+			    d = Math.abs(pos + itemw / 2 - w / 2);
+			/* special checks for first and last items */
+			if (i == 0 && pos > -itemw / 2 || i == items_n - 1 && w - pos > itemw / 2) {
+				d = 0;
+			}
+			if (d < minDist) {
+				minDist = d;
+				minDist_i = i;
+			}
+		});
+
+		var el = container.children().eq(minDist_i);
+		selectTab(container, el);
+	};
+
+	var selectTab = function selectTab(container, el) {
+		var elLink = el.find("a"),
+		    cw = container.width(),
+		    newScrollPos = container.scrollLeft() + el.position().left + el.width() / 2 - cw / 2;
+
+		var activeEl = container.find(".active");
+		if (activeEl.attr("id") != elLink.attr("id")) {
+			activeEl.removeClass("active");
+			elLink.tab("show");
+			elLink.addClass("active");
+		}
+		container.animate({
+			scrollLeft: newScrollPos
+		}, 100);
+	};
+
+	document.addEventListener("scroll", _.debounce(function (e) {
+
+		var container = $(e.target);
+		if (!container.hasClass("nav-slider")) return;
+
+		if (scrollTimer) {
+			clearTimeout(scrollTimer);
+		}
+
+		scrollTimer = setTimeout(function () {
+			scrollHelper(container);
+		}, 250);
+	}), true);
+
+	$(document).on("click", ".nav-slider .nav-item a", function (e) {
+		e.preventDefault();
+		selectTab($(this).parents(".nav-slider"), $(this).parent());
+	});
+});
 
 /***/ })
 /******/ ]);

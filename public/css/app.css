@@ -13413,6 +13413,47 @@ a.call-to-action:hover {
   background-color: #f32012;
 }
 
+/* END CALL TO ACTION BUTTONS */
+
+/* SLIDER TAB SELECTOR */
+
+.nav-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  padding-bottom: 1.5rem;
+  position: relative;
+}
+
+.nav-slider .nav-item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 60%;
+  text-align: center;
+}
+
+.nav-slider .nav-item a {
+  display: inline-block;
+  margin: 0 auto;
+  padding: .25rem 1.5rem;
+}
+
+.nav-slider .nav-item a:hover {
+  color: #E62B1E;
+}
+
+.nav-slider .nav-item a.active {
+  border-bottom: 3px solid #E62B1E;
+}
+
+/* END SLIDER TAB SELECTOR */
+
 /* HOME PAGE */
 
 article.home {
@@ -14142,8 +14183,6 @@ article.schedule {
 
 article.schedule table {
   font-size: .85rem;
-  background-color: #fafafa;
-  opacity: 0.75;
 }
 
 article.schedule h5 {
@@ -14173,21 +14212,6 @@ article.schedule thead th:first-child {
   width: auto;
 }
 
-article.schedule .nav-pills {
-  background-color: rgba(0, 0, 0, 0.075);
-  border-radius: .25rem;
-  margin-bottom: 2rem;
-}
-
-article.schedule .nav-pills .nav-link.active,
-article.schedule .show > .nav-pills .nav-link {
-  background-color: #a51c12;
-}
-
-article.schedule .nav-link {
-  padding: .75rem 1rem;
-}
-
 article.schedule .table th,
 article.schedule .table td {
   padding: .5rem;
@@ -14195,6 +14219,12 @@ article.schedule .table td {
 
 article.schedule td {
   height: 100%;
+}
+
+article.schedule td img {
+  width: 40%;
+  height: auto;
+  max-width: 160px;
 }
 
 article.schedule td .cell-content:not(.collapsing) {
