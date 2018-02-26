@@ -59,7 +59,8 @@ class ScheduleController extends Controller {
 
 	public function index(Request $request) {
 
-		$events = Schedule::where('visible', true);
+		$visible = env('SHOW_HIDDEN_ENTRIES', false) == true ? '*' : true;
+		$events = Schedule::where('visible', $visible);
 
 		$talks = $events -> where('type', 'talk')
 						 -> orderBy('hour', 'asc')

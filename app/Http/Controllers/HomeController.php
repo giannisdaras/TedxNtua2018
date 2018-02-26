@@ -8,7 +8,8 @@ use App\Speaker;
 class HomeController extends Controller {
 
 	public function index(Request $request) {
-		$speakers = Speaker::where('visible', true)->orderBy('name')->get();
+		$visible = env('SHOW_HIDDEN_ENTRIES', false) == true ? '*' : true;
+		$speakers = Speaker::where('visible', $visible)->orderBy('name')->get();
 
 		$isPjax = $request->header('X-PJAX');
 		if ($isPjax) {
