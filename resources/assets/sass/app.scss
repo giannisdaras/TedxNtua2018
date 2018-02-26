@@ -518,14 +518,15 @@ article.home {
 		width:80%;
 		height:100%;
 		position: absolute;
-		background:transparent url("/images/stripeFull.svg") 100% 100% repeat-y scroll;
+		background:transparent url("/images/stripeFull.svg") 0% 0% repeat-y scroll;
 	}
 
-	#rightStripe{   
-		width:100%;
+	#rightStripe{
+		margin-left:2rem;
+		width:80%;
 		height:100%;
 		position: absolute;
-		background:transparent url("/images/stripeFull.svg") 2rem 100% repeat-y scroll;
+		background:transparent url("/images/stripeFull.svg") 20% 0% repeat-y scroll;
 		-webkit-transform:scaleY(-1);
         -moz-transform:scaleY(-1);
         -ms-transform:scaleY(-1);
