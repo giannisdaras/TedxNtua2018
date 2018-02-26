@@ -13121,15 +13121,14 @@ header.scrolled a.flagLink {
 
 section.heading {
   width: 100%;
-  border-bottom: 1px solid #444;
   /* bottom inner shadow */
-  background-color: #222222;
+  background-color: #444444;
 }
 
 section.heading h1 {
   font-weight: normal;
   font-size: 2rem;
-  padding: 1rem 2rem;
+  padding: .75rem 2rem;
   text-align: center;
   margin: 0 auto;
   color: #fafafa;
@@ -13380,55 +13379,15 @@ article.home h6 {
   text-align: center;
 }
 
-article.home #canvas {
-  padding-left: 0;
-  padding-right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  width: 800px;
-  margin-top: 8rem;
-}
-
-@media screen and (min-width: 0px) and (max-width: 761px) {
-  article.home {
-    /* hide it in small screens */
-  }
-
-  article.home #canvas {
-    display: none;
-  }
-
-  article.home #altTitle {
-    display: block !important;
-  }
-}
-
-@media screen and (min-width: 762px) and (max-width: 1024px) {
-  article.home {
-    /* hide it in small screens */
-  }
-
-  article.home #canvas {
-    display: block;
-  }
-
-  article.home #altTitle {
-    display: none;
-  }
-}
-
 article.home section {
   width: 100%;
-  /* temporary, just to test the home layout */
-  min-height: 400px;
   font-size: .9em;
 }
 
 article.home section h2 {
   color: #E62B1E;
   font-weight: bold;
-  font-size: 3.5rem;
+  font-size: 2rem;
   margin-bottom: .5em;
 }
 
@@ -13477,7 +13436,7 @@ article.home section:not(#hero) {
   /* angle brackets */
   position: relative;
   margin: 1rem 0;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 article.home section:not(#hero)::before {
@@ -13485,8 +13444,8 @@ article.home section:not(#hero)::before {
   position: absolute;
   top: 0;
   left: 0;
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-top: 8px solid #E62B1E;
   border-left: 8px solid #E62B1E;
 }
@@ -13496,8 +13455,8 @@ article.home section:not(#hero)::after {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-right: 8px solid #E62B1E;
   border-bottom: 8px solid #E62B1E;
 }
@@ -13567,6 +13526,12 @@ article.home #hero .tickets a:hover {
 
 article.home #hero .tickets a:active {
   font-size: 1.1rem;
+}
+
+article.home #hero canvas#canvas {
+  margin: 0 auto;
+  width: 800px;
+  margin-top: 8rem;
 }
 
 article.home #hero canvas#lorenz {
@@ -13640,7 +13605,7 @@ article.home a.call-to-action:hover {
 article.home #chaos h2 img {
   width: auto;
   height: 0;
-  margin-left: 0.5rem;
+  margin-left: 0.2rem;
   margin-top: -0.2rem;
   opacity: 0;
   -webkit-transition: opacity .8s, height .8s;
@@ -13653,7 +13618,7 @@ article.home #chaos .cursor {
 }
 
 article.home #chaos .typed + img {
-  height: 3.5rem;
+  height: 2rem;
   opacity: 1;
 }
 
@@ -13696,11 +13661,12 @@ article.home #speakers .speaker-container a {
   position: relative;
   width: 100%;
   padding-bottom: 100%;
+  font-size: .9rem;
 }
 
 article.home #speakers .speaker-container .speaker-info {
   position: absolute;
-  bottom: 1rem;
+  bottom: .5em;
   z-index: 2;
   color: white;
   padding: 0 10px;
@@ -13709,12 +13675,12 @@ article.home #speakers .speaker-container .speaker-info {
 }
 
 article.home #speakers .speaker-container h3 {
-  font-size: 1.35rem;
+  font-size: 1.15em;
   margin-bottom: 0;
 }
 
 article.home #speakers .speaker-container p {
-  font-size: .9em;
+  font-size: .75em;
   line-height: 1.25;
   margin-bottom: 0;
 }
@@ -13777,7 +13743,7 @@ article.home #schedule .media-body {
 article.home #auspices a {
   color: black;
   display: block;
-  max-width: 320px;
+  max-width: 280px;
   width: 60%;
   margin: 0 auto;
 }
@@ -14404,6 +14370,10 @@ article.contact .g-recaptcha.error > div {
     margin: 0 6rem;
   }
 
+  article.home #speakers .speaker-container a {
+    font-size: 1.2rem;
+  }
+
   article:not(.home) {
     padding-top: 4.7rem;
   }
@@ -14451,6 +14421,10 @@ article.contact .g-recaptcha.error > div {
     font-size: 1.25em;
   }
 
+  article.home section h2 {
+    font-size: 2.5rem;
+  }
+
   article.home section .section-intro {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -14466,6 +14440,17 @@ article.contact .g-recaptcha.error > div {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+  }
+
+  article.home section:not(#hero) {
+    /* angle brackets */
+    padding: 2rem;
+  }
+
+  article.home section:not(#hero)::before,
+  article.home section:not(#hero)::after {
+    width: 3rem;
+    height: 3rem;
   }
 
   article.home #hero {
@@ -14516,6 +14501,15 @@ article.contact .g-recaptcha.error > div {
     border-right: 0;
   }
 
+  article.home #chaos h2 img {
+    margin-left: 0.3rem;
+  }
+
+  article.home #chaos .typed + img {
+    /* match article.home section h2 font size */
+    height: 2.5rem;
+  }
+
   article.home #schedule .card-columns {
     -webkit-column-count: 2;
             column-count: 2;
@@ -14523,8 +14517,8 @@ article.contact .g-recaptcha.error > div {
             column-gap: .8rem;
   }
 
-  article.home #speakers .speaker-container h3 {
-    font-size: 1.6rem;
+  article.home #speakers .speaker-container a {
+    font-size: 1.25rem;
   }
 
   article.home #map .row {
@@ -14661,6 +14655,10 @@ article.contact .g-recaptcha.error > div {
         flex-basis: 32%;
   }
 
+  article.home section h2 {
+    font-size: 3.5rem;
+  }
+
   article.home #hero h1 {
     font-size: 4rem;
   }
@@ -14687,6 +14685,15 @@ article.contact .g-recaptcha.error > div {
     top: -320px;
     -webkit-filter: brightness(105%) contrast(110%);
             filter: brightness(105%) contrast(110%);
+  }
+
+  article.home #chaos h2 img {
+    margin-left: 0.5rem;
+  }
+
+  article.home #chaos .typed + img {
+    /* match article.home section h2 font size */
+    height: 3.5rem;
   }
 
   article.about section.content .col,
@@ -14731,6 +14738,11 @@ article.contact .g-recaptcha.error > div {
     padding-right: 0.75rem;
     padding-left: 0.75rem;
   }
+
+  article.home #speakers .speaker-container a {
+    /* font size gets smaller from lg to xl since we move to a 4-column layout */
+    font-size: 1rem;
+  }
 }
 
 @media (min-width: 1366px) {
@@ -14743,6 +14755,10 @@ article.contact .g-recaptcha.error > div {
     padding: .5rem 0;
   }
 
+  article.home #speakers .speaker-container a {
+    font-size: 1.25rem;
+  }
+
   article:not(.home) {
     padding-top: 5.8rem;
   }
@@ -14753,10 +14769,6 @@ article.contact .g-recaptcha.error > div {
 
   .navbar-expand-lg .navbar-nav .nav-link {
     font-size: 1.15rem;
-  }
-
-  section.heading h1 {
-    padding: 2rem 2rem;
   }
 }
 

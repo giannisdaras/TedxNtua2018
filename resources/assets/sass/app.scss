@@ -306,18 +306,16 @@ header.scrolled a.flagLink {
 /* PAGE HEADING */
 section.heading {
 	width: 100%;
-	border-bottom: 1px solid #444;
 	/* bottom inner shadow */
 	h1 {
 		font-weight: normal;
 		font-size: 2rem;
-		padding: 1rem 2rem;
+		padding: .75rem 2rem;
 		text-align: center;
 		margin: 0 auto;
 		color: $body-bg;
 	}
-	background-color: $brand-secondary;
-
+	background-color: #444444;
 }
 
 /* END PAGE HEADING */
@@ -516,36 +514,13 @@ article.home {
 		text-align: center;
 	}
 
-	#canvas {
-	    padding-left: 0;
-	    padding-right: 0;
-	    margin-left: auto;
-	    margin-right: auto;
-	    display: block;
-	    width: 800px;
-	    margin-top:8rem;
-	}
-
-	@media screen and (min-width: 0px) and (max-width: 761px) {
-  		#canvas{ display: none; }  /* hide it in small screens */
-  		#altTitle { display: block !important; } 
-	}
-
-	@media screen and (min-width: 762px) and (max-width: 1024px) {
-  		#canvas{ display: block }  /* hide it in small screens */
-  		#altTitle { display: none } 
-	}
-
-
 	section {
 		width: 100%;
-		/* temporary, just to test the home layout */
-		min-height: 400px;
 		font-size: .9em;
 		h2 {
 			color: $brand-primary;
 			font-weight: bold;
-			font-size: 3.5rem;
+			font-size: 2rem;
 			margin-bottom: .5em;
 		}
 		.container-fluid {
@@ -557,7 +532,6 @@ article.home {
 			margin-bottom: 1.5rem;
 			align-items: stretch;
 		}
-
 		.description {
 			text-align: justify;
 		}
@@ -578,14 +552,14 @@ article.home {
 			/* angle brackets */
 			position: relative;
 			margin: 1rem 0;
-			padding: 2rem;
+			padding: 1rem;
 			&::before {
 				content: "";
 				position: absolute;
 				top: 0;
 				left: 0;
-				width: 3rem;
-				height: 3rem;
+				width: 2.5rem;
+				height: 2.5rem;
 				border-top: 8px solid $brand-primary;
 				border-left: 8px solid $brand-primary;
 			}
@@ -594,8 +568,8 @@ article.home {
 				position: absolute;
 				right: 0;
 				bottom: 0;
-				width: 3rem;
-				height: 3rem;
+				width: 2.5rem;
+				height: 2.5rem;
 				border-right: 8px solid $brand-primary;
 				border-bottom: 8px solid $brand-primary;
 			}
@@ -653,6 +627,11 @@ article.home {
 			&:active {
 				font-size: 1.1rem;
 			}
+		}
+		canvas#canvas {
+		    margin: 0 auto;
+		    width: 800px;
+		    margin-top: 8rem;
 		}
 		canvas#lorenz {
 			display: none;
@@ -715,7 +694,7 @@ article.home {
 		h2 img {
 			width: auto;
 			height: 0;
-			margin-left: 0.5rem;
+			margin-left: 0.2rem;
 			margin-top: -0.2rem;
 			opacity: 0;
 			transition: opacity .8s, height .8s;
@@ -724,7 +703,7 @@ article.home {
 			animation: cursor 1s infinite;
 		}
 		.typed + img {
-			height: 3.5rem;
+			height: 2rem;
 			opacity: 1;
 		}
 	}
@@ -765,10 +744,11 @@ article.home {
 				position: relative;
 				width: 100%;
 				padding-bottom: 100%;
+				font-size: .9rem;
 			}
 			.speaker-info {
 				position: absolute;
-				bottom: 1rem;
+				bottom: .5em;
 				z-index: 2;
 				color: white;
 				padding: 0 10px;
@@ -776,11 +756,11 @@ article.home {
 				text-shadow: -1px -1px 0 #111, 1px -1px 0 #111, -1px 1px 0 #111, 1px 1px 0 #111;
 			}
 			h3 {
-				font-size: 1.35rem;
+				font-size: 1.15em;
 				margin-bottom: 0;
 			}
 			p {
-				font-size: .9em;
+				font-size: .75em;
 				line-height: 1.25;
 				margin-bottom: 0;
 			}
@@ -835,7 +815,7 @@ article.home {
 		a {
 			color: black;
 			display: block;
-			max-width: 320px;
+			max-width: 280px;
 			width: 60%;
 			margin: 0 auto;
 		}
@@ -1348,6 +1328,13 @@ article.contact {
 		#hero .info a {
 			margin: 0 6rem;
 		}
+		#speakers {
+			.speaker-container {
+				a {
+					font-size: 1.2rem;
+				}
+			}
+		}
 	}
 	article:not(.home) {
 		padding-top: 4.7rem;
@@ -1392,14 +1379,15 @@ article.contact {
 		}
 
 	}
-
 	.cookie-bar {
 		font-size: 1rem;
 	}
-
 	article.home {
 		section {
 			font-size: 1.25em;
+			h2 {
+				font-size: 2.5rem;
+			}
 			.section-intro {
 				display: flex;
 			}
@@ -1409,6 +1397,14 @@ article.contact {
 			}
 			.call-to-action-wrapper {
 				justify-content: flex-end;
+			}
+			&:not(#hero) {
+				/* angle brackets */
+				padding: 2rem;
+				&::before, &::after {
+					width: 3rem;
+					height: 3rem;
+				}
 			}
 		}
 		#hero {
@@ -1447,6 +1443,15 @@ article.contact {
 				border-right: 0;
 			}
 		}
+		#chaos {	
+			h2 img {
+				margin-left: 0.3rem;
+			}
+			.typed + img {
+				/* match article.home section h2 font size */
+				height: 2.5rem;
+			}
+		}
 		#schedule {
 			.card-columns {
 				column-count: 2;
@@ -1455,8 +1460,8 @@ article.contact {
 		}
 		#speakers {
 			.speaker-container {
-				h3 {
-					font-size: 1.6rem;
+				a {
+					font-size: 1.25rem;
 				}
 			}
 		}
@@ -1473,9 +1478,6 @@ article.contact {
 			}
 		}
 	}
-
-
-
 	article.schedule {
 		table {
 			font-size: 1rem;
@@ -1571,6 +1573,9 @@ article.contact {
 		flex-basis: 32%;
 	}
 	article.home {
+		section h2 {
+			font-size: 3.5rem;
+		}
 		#hero {
 			h1 {
 				font-size: 4rem;
@@ -1593,6 +1598,15 @@ article.contact {
 					top: -320px;
 					filter: brightness(105%) contrast(110%);
 				}
+			}
+		}
+		#chaos {
+			h2 img {
+				margin-left: 0.5rem;
+			}
+			.typed + img {
+				/* match article.home section h2 font size */
+				height: 3.5rem;
 			}
 		}
 	}
@@ -1636,6 +1650,16 @@ article.contact {
 		padding-right: $navlink-padding;
 		padding-left: $navlink-padding;
 	}
+	article.home {
+		#speakers {
+			.speaker-container {
+				a {
+					/* font size gets smaller from lg to xl since we move to a 4-column layout */
+					font-size: 1rem;
+				}
+			}
+		}
+	}
 }
 
 @media (min-width: 1366px) {
@@ -1646,6 +1670,15 @@ article.contact {
 		height: 4rem;
 		padding: .5rem 0;
 	}
+	article.home {
+		#speakers {
+			.speaker-container {
+				a {
+					font-size: 1.25rem;
+				}
+			}
+		}
+	}
 	article:not(.home) {
 		padding-top: 5.8rem;
 		&.scrolled {
@@ -1654,9 +1687,6 @@ article.contact {
 	}
 	.navbar-expand-lg .navbar-nav .nav-link {
 		font-size: 1.15rem;
-	}
-	section.heading h1 {
-		padding: 2rem 2rem;
 	}
 }
 
