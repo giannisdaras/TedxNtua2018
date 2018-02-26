@@ -2,16 +2,6 @@
 <html>
 
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114743988-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-114743988-1');
-    </script>
-
     <link rel="shortcut icon" href="{{ asset('./favicon.png') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
@@ -33,7 +23,6 @@
             js.src = 'https://connect.facebook.net/{{ getLocale() == "en" ? "en_US" : "el_GR" }}/sdk.js#xfbml=1&version=v2.12&appId=1758405557797854&autoLogAppEvents=1'
             fjs.parentNode.insertBefore(js, fjs)
         }(document, 'script', 'facebook-jssdk'))
-
     </script>
 
     <header class="dark">
