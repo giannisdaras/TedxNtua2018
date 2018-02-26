@@ -15,6 +15,7 @@ class ScheduleSeeder extends Seeder
         $schedules = [
             App\Schedule::create([
                 'hour' => '13:12',
+                'visible' => false,
                 'img_src' => 'scienceReactors.jpeg',
                 'type' => 'performance',
                 /* Be careful not to use json_encode in create method, since laravel-translatable takes care of it by itself */
@@ -36,6 +37,7 @@ class ScheduleSeeder extends Seeder
             */
             App\Schedule::create([
                 'hour' => '14:00',
+                'visible' => false,
                 'img_src' => 'styllas.jpeg',
                 'type' => 'talk',
                 'event_title' => [
@@ -57,6 +59,7 @@ class ScheduleSeeder extends Seeder
                         'el' => 'Μιχάλης Στύλλας'
                     ],
                     'sid' => 'styllas',
+                    'visible' => false,
                     'img_src' => 'styllas_alt.jpg',
                     'img_src_alt' => 'styllas.jpg',
                     'link' => 'https://www.researchgate.net/profile/Michael_Styllas',
@@ -70,6 +73,7 @@ class ScheduleSeeder extends Seeder
 
             App\Schedule::create([
                 'hour' => '16:00',
+                'visible' => false,
                 'img_src' => 'romy-lorenz.jpeg',
                 'type' => 'talk',
                 'event_title' => [
@@ -91,6 +95,7 @@ class ScheduleSeeder extends Seeder
                         'el' => 'Romy Lorenz'
                     ],
                     'sid' => 'romy-lorenz',
+                    'visible' => false,
                     'img_src' => 'romy-lorenz.jpg',
                     'img_src_alt' => 'romy-lorenz.jpg',
                     'link' => '/#map',

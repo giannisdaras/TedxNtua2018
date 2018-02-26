@@ -16,6 +16,7 @@ class CreateSpeakersTable extends Migration
         Schema::create('speakers', function (Blueprint $table) {
             $table->increments('id');
             $table->string('sid')->unique();
+            $table->boolean('visible')->default(false);
             $table->text('img_src');
             $table->text('img_src_alt');
             $table->string('link');

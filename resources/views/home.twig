@@ -69,6 +69,8 @@
 
 				</section>
 
+				{% if speakers | length %}
+
 				<section id="speakers" class="angle-brackets">
 
 					<h2>{{ trans('general.home.sections.speakers.title') }}</h2>
@@ -92,6 +94,8 @@
 					</div>
 
 				</section>
+
+				{% endif %}
 
 				<section id="auspices" class="angle-brackets">
 					<h2>{{ trans('general.home.sections.auspices.title') }}</h2>
