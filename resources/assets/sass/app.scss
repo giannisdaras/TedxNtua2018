@@ -546,6 +546,36 @@ a.call-to-action {
 	}
 }
 
+/* END CALL TO ACTION BUTTONS */
+
+/* SLIDER TAB SELECTOR */
+.nav-slider {
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+	padding-bottom: 1.5rem;
+	position: relative;
+}
+.nav-slider .nav-item {
+	flex: 0 0 auto;
+	width: 60%;
+	text-align: center;
+	a {
+		display: inline-block;
+		margin: 0 auto;
+		padding: .25rem 1.5rem;
+		&:hover {
+			color: $brand-primary;
+		}
+	}
+	a.active {
+		border-bottom: 3px solid $brand-primary;
+	}
+}
+/* END SLIDER TAB SELECTOR */
+
 /* HOME PAGE */
 
 article.home {
@@ -1123,8 +1153,6 @@ article.schedule {
 
 	table {
 		font-size: .85rem;
-		background-color: $body-bg;
-		opacity: 0.75;
 	}
 	h5 {
 		font-size: 1.25em;
@@ -1147,23 +1175,16 @@ article.schedule {
 	thead th:first-child {
 		width: auto;
 	}
-	.nav-pills {
-		background-color: rgba(0, 0, 0, 0.075);
-		border-radius: .25rem;
-		margin-bottom: 2rem;
-	}
-	.nav-pills .nav-link.active,
-	.show > .nav-pills .nav-link {
-		background-color: darken($brand-primary, 15%);
-	}
-	.nav-link {
-		padding: .75rem 1rem;
-	}
 	.table th, .table td {
 		padding: .5rem;
 	}
 	td {
 		height: 100%;
+	}
+	td img {
+		width: 40%;
+		height: auto;
+		max-width: 160px;
 	}
 	td .cell-content:not(.collapsing) {
 		height: 100%;
