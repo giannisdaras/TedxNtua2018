@@ -129,6 +129,7 @@ return [
 		'short_bio' => 'Short Bio',
 		'talk' => 'Talk',
 		'previous' => 'Previous TEDx NTUA Talks',
+		'nospeakers' => 'Don\'t get lost in the Chaos. The speakers will be announced soon.<br>Check out our <strong>social media</strong> to stay tuned!',
 	],
 
 	/* SCHEDULE */
@@ -139,6 +140,10 @@ return [
 		'talks' => 'Talks',
 		'performances' => 'Performances',
 		'workshops' => 'Workshops',
+		'notalks' => 'Don\'t get lost in the Chaos. The talks will be announced soon.<br>Check out our <strong>social media</strong> to stay tuned!',
+		'noperformances' => 'Don\'t get lost in the Chaos. The performances will be announced soon.<br>Check out our <strong>social media</strong> to stay tuned!',
+		'noworkshops' => 'Don\'t get lost in the Chaos. The workshops will be announced soon.<br>Check out our <strong>social media</strong> to stay tuned!',
+		'noschedule' => 'Don\'t get lost in the Chaos. The schedule will be announced soon.<br>Check out our <strong>social media</strong> to stay tuned!',
 	],
 
 	/* TEAM */
