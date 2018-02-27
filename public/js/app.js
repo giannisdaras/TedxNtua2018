@@ -773,7 +773,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(9);
-module.exports = __webpack_require__(49);
+module.exports = __webpack_require__(48);
 
 
 /***/ }),
@@ -829,6 +829,7 @@ const app = new Vue({
 */
 __webpack_require__(38);
 __webpack_require__(39);
+__webpack_require__(59);
 __webpack_require__(40);
 __webpack_require__(41);
 __webpack_require__(42);
@@ -837,7 +838,6 @@ __webpack_require__(44);
 __webpack_require__(45);
 __webpack_require__(46);
 __webpack_require__(47);
-__webpack_require__(48);
 
 /***/ }),
 /* 10 */
@@ -36610,44 +36610,6 @@ $(function () {
 /* 40 */
 /***/ (function(module, exports) {
 
-$(function () {
-
-	var navOffsetY = 68;
-
-	var scrollToHash = function scrollToHash(hash) {
-		var target = $(hash);
-
-		if (target.length) {
-
-			var off = target.offset().top - parseInt(target.css("padding-top"));
-
-			if (off > navOffsetY) {
-				$("header").addClass("scrolled");
-			} else {
-				$("header").removeClass("scrolled");
-			}
-
-			var headerHeight = $("header").height() + 17;
-
-			$("html, body").animate({
-				scrollTop: off - headerHeight
-			}, 500);
-		}
-	};
-
-	scrollToHash(location.hash);
-
-	$(document).on("click", "a[href^='#']", function (e) {
-
-		e.preventDefault();
-		scrollToHash(this.hash);
-	});
-});
-
-/***/ }),
-/* 41 */
-/***/ (function(module, exports) {
-
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 /*!
@@ -37649,7 +37611,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 })(jQuery);
 
 /***/ }),
-/* 42 */
+/* 41 */
 /***/ (function(module, exports) {
 
 $(function () {
@@ -37736,7 +37698,7 @@ $(function () {
 });
 
 /***/ }),
-/* 43 */
+/* 42 */
 /***/ (function(module, exports) {
 
 $(function () {
@@ -37762,7 +37724,7 @@ $(function () {
 });
 
 /***/ }),
-/* 44 */
+/* 43 */
 /***/ (function(module, exports) {
 
 $(function () {
@@ -37835,7 +37797,7 @@ $(function () {
 });
 
 /***/ }),
-/* 45 */
+/* 44 */
 /***/ (function(module, exports) {
 
 $(function () {
@@ -37895,7 +37857,7 @@ $(function () {
 });
 
 /***/ }),
-/* 46 */
+/* 45 */
 /***/ (function(module, exports) {
 
 $(function () {
@@ -37920,7 +37882,7 @@ $(function () {
 });
 
 /***/ }),
-/* 47 */
+/* 46 */
 /***/ (function(module, exports) {
 
 function createCookie(name, value, days) {
@@ -37970,7 +37932,7 @@ $(function () {
 });
 
 /***/ }),
-/* 48 */
+/* 47 */
 /***/ (function(module, exports) {
 
 $(function () {
@@ -37991,10 +37953,58 @@ $(function () {
 });
 
 /***/ }),
-/* 49 */
+/* 48 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */,
+/* 56 */,
+/* 57 */,
+/* 58 */,
+/* 59 */
+/***/ (function(module, exports) {
+
+$(function () {
+
+	var navOffsetY = 68;
+
+	var scrollToHash = function scrollToHash(hash) {
+		var target = $(hash);
+
+		if (target.length) {
+
+			var off = target.offset().top - parseInt(target.css("padding-top"));
+
+			if (off > navOffsetY) {
+				$("header").addClass("scrolled");
+			} else {
+				$("header").removeClass("scrolled");
+			}
+
+			var headerHeight = $("header").height() + 17;
+
+			$("html, body").animate({
+				scrollTop: off - headerHeight
+			}, 500);
+		}
+	};
+
+	scrollToHash(location.hash);
+
+	$(document).on("click", "a[href^='#']", function (e) {
+
+		e.preventDefault();
+		scrollToHash(this.hash);
+	});
+});
 
 /***/ })
 /******/ ]);
