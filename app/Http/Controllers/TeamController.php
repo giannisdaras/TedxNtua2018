@@ -4,20 +4,28 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use LaravelLocalization;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Collection;
 use App\Http\Controllers\View;
 use App\Person;
 
 class TeamController extends Controller {
 
 	public function index(Request $request) {
-		$person = new Person();
-		$it = $person::where('team_type', 'it')->orderBy('name')->get();
-		$experience = $person::where('team_type', 'experience')->orderBy('name')->get();
-		$fr = $person::where('team_type', 'fr')->orderBy('name')->get();
-		$venue_production = $person::where('team_type', 'venue')->orderBy('name')->get();
-		$speakers = $person::where('team_type', 'speakers')->orderBy('name')->get();
-		$media = $person::where('team_type', 'media')->orderBy('name')->get();
-		$graphics = $person::where('team_type', 'graphics')->orderBy('name')->get();
+		/* Collection helper to sort *translated* names */
+		Collection::macro('sortByTeamName', function() {
+			return $this->sortBy(function($item) {
+				/* $item->name will automatically return the translation corresponding to the current locale */
+				return $item->name;
+			});
+		});
+
+		$it = Person::where('team_type', 'it')->get()->sortByTeamName();
+		$experience = Person::where('team_type', 'experience')->get()->sortByTeamName();
+		$fr = Person::where('team_type', 'fr')->get()->sortByTeamName();
+		$venue_production = Person::where('team_type', 'venue')->get()->sortByTeamName();
+		$speakers = Person::where('team_type', 'speakers')->get()->sortByTeamName();
+		$media = Person::where('team_type', 'media')->get()->sortByTeamName();
+		$graphics = Person::where('team_type', 'graphics')->get()->sortByTeamName();
 		$teams = compact('experience', 'fr', 'graphics', 'it', 'media', 'speakers', 'venue_production');
 
 		$isPjax = $request->header('X-PJAX');
