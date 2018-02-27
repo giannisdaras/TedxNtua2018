@@ -192,6 +192,11 @@ var homeAnimations = function() {
 			p.draw();
 		}
 		if (flag==true){
+			// ctx.clearRect(0, 0, W, H);
+			ctx.fillStyle = "#FAFAFA";
+			ctx.font = "100px 'Arial', sans-serif";
+			ctx.textAlign = "center";
+			ctx.fillText("TEDxNTUA Chaos", W/2, H/2);
 			// document.getElementById("canvas").style.display="none";
 			// document.getElementById("altAnim").addClass="wow bounceInLeft animated";
 			// document.getElementById("altAnim").style.display="block";
