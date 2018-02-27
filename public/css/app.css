@@ -13471,6 +13471,10 @@ article.home h6 {
   text-align: center;
 }
 
+article.home #mainContainer {
+  margin-top: 8rem;
+}
+
 article.home #leftStripe {
   width: 80%;
   height: 100%;
