@@ -13479,7 +13479,7 @@ article.home #leftStripe {
   width: 80%;
   height: 100%;
   position: absolute;
-  background-image: url("/images/stripeFull.svg");
+  background-image: url("/images/stripeFull-mini.png");
   background-size: 100% auto;
   background-repeat: repeat-y;
 }
@@ -13489,7 +13489,7 @@ article.home #rightStripe {
   width: 80%;
   height: 100%;
   position: absolute;
-  background-image: url("/images/stripeFull.svg");
+  background-image: url("/images/stripeFull-mini.png");
   background-size: 100% auto;
   background-repeat: repeat-y;
   -webkit-transform: scaleX(-1);
@@ -14848,14 +14848,6 @@ article.contact .g-recaptcha.error > div {
   header.scrolled .navbar-brand {
     height: 4rem;
     padding: .5rem 0;
-  }
-
-  article.home #hero h1 {
-    display: none;
-  }
-
-  article.home #hero canvas#canvas {
-    display: block;
   }
 
   article.home #speakers .speaker-container a {

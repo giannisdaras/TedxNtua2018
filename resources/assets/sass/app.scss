@@ -595,7 +595,7 @@ article.home {
 		width: 80%;
 		height: 100%;
 		position: absolute;
-		background-image: url("/images/stripeFull.svg");
+		background-image: url("/images/stripeFull-mini.png");
 		background-size: 100% auto;
 		background-repeat: repeat-y;
 	}
@@ -605,7 +605,7 @@ article.home {
 		width: 80%;
 		height: 100%;
 		position: absolute;
-		background-image: url("/images/stripeFull.svg");
+		background-image: url("/images/stripeFull-mini.png");
 		background-size: 100% auto;
 		background-repeat: repeat-y;
         transform: scaleX(-1);
@@ -1742,12 +1742,6 @@ article.contact {
 		padding: .5rem 0;
 	}
 	article.home {
-		#hero h1 {
-			display: none;
-		}
-		#hero canvas#canvas {
-			display: block;
-		}
 		#speakers {
 			.speaker-container {
 				a {

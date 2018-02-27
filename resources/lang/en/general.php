@@ -55,7 +55,7 @@ return [
 				'title' => '_what is ',
 				'desc' => '
 				<p class="text-justify">
-				The notion of Chaos today is synonym to confusion and disorder. In the past though, ancient Greek Philoshophers, thought highly of Chaos and considered it fundamental to the creation of Cosmos, that is, the Universe. Chaos was the original matter that transformed the "abnormal" uniformity of nature into "normal" diversity.
+				The notion of Chaos today is synonym to confusion and disorder. In the past though, ancient Greek Philosophers, thought highly of Chaos and considered it fundamental to the creation of Cosmos, that is, the Universe. Chaos was the original matter that transformed the "abnormal" uniformity of nature into "normal" diversity.
 				</p>
 
 				<p class="text-justify">
