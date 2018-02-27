@@ -14108,16 +14108,21 @@ article.speakers .embed-responsive {
 article.sponsors h2 {
   text-align: center;
   border-bottom: 1px solid #333;
+  margin-bottom: 2rem;
 }
 
 article.sponsors .col {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 article.sponsors a {
   display: inline-block;
   max-width: 420px;
+}
+
+article.sponsors img.grid-image {
+  max-width: 90%;
 }
 
 /* END SPONSORS PAGE */
@@ -14730,6 +14735,10 @@ article.contact .g-recaptcha.error > div {
   article.about section.content .row,
   article.sponsors section.content .row {
     margin-bottom: 1rem;
+  }
+
+  article.sponsors section.content .row {
+    margin-bottom: 2rem;
   }
 
   .blog-listing {
