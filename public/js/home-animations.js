@@ -197,10 +197,6 @@ var homeAnimations = function() {
 			ctx.font = "100px 'Alegreya Sans', sans-serif";
 			ctx.textAlign = "center";
 			ctx.fillText("TEDxNTUA Chaos", W/2, H/2);
-			// document.getElementById("canvas").style.display="none";
-			// document.getElementById("altAnim").addClass="wow bounceInLeft animated";
-			// document.getElementById("altAnim").style.display="block";
-			
 		}
 	}
 
