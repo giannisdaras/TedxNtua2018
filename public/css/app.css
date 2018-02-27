@@ -14735,9 +14735,7 @@ article.contact .g-recaptcha.error > div {
 
   article.home #map .col-md-12 img {
     position: absolute;
-    top: -320px;
-    -webkit-filter: brightness(105%) contrast(110%);
-            filter: brightness(105%) contrast(110%);
+    top: -75px;
   }
 
   article.home #chaos h2 img {
