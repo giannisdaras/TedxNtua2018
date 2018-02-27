@@ -43,12 +43,12 @@ return [
 	/* HOME */
 	'home' => [
 		'title' => 'Home',
-		'description' => '',
+		'description' => 'TEDxNTUA 2018 is taking place this year on Saturday, 24 March at the Athens Planetarium. The theme of the event is Chaos. Join us in this seemingly random journey, full of intriguing scientific talks, engaging performances and educative workshops.',
 		'hero' => [
 			'date' => 'March 24, 2018',
 			'venue' => 'Athens Planetarium',
 			'address' => '387 Andrea Syggrou Av.',
-			'tickets' => 'Get your tickets now',
+			'tickets' => 'Tickets coming soon!',
 		],
 		'sections' => [
 			'chaos' => [
@@ -117,14 +117,14 @@ return [
 	/* SPONSORS */
 	'sponsors' => [
 		'title' => 'Sponsors',
-		'description' => '',
+		'description' => 'Our event would not have been possible without the support from organizations that share our values and visions. Visit their websites and learn more about them.',
 		'rank' => ['Grand Sponsors', 'Partners', 'Supporters', 'Media'],
 	],
 
 	/* SPEAKERS */
 	'speakers' => [
 		'title' => 'Speakers',
-		'description' => '',
+		'description' => 'People that are scientists, professionals, artists. Individuals with passion for what they do and equipped with ideas worth spreading. These are our leading figures. Get to know them before the event and discover their work thus far.',
 		'back' => 'Back to Speakers',
 		'short_bio' => 'Short Bio',
 		'talk' => 'Talk',
@@ -135,7 +135,7 @@ return [
 	/* SCHEDULE */
 	'schedule' => [
 		'title' => 'Schedule',
-		'description' => '',
+		'description' => 'The very essence of a TEDx event is its medley of talks, performances and workshops. Discover the topics that will be explored and join us in a journey of Chaos.',
 		'time' => 'Time',
 		'talks' => 'Talks',
 		'performances' => 'Performances',
@@ -149,7 +149,7 @@ return [
 	/* TEAM */
 	'team' => [
 		'title' => 'Team',
-		'description' => '',
+		'description' => 'Meet the chaotic components of this otherwise orderly project. TEDxNTUA is an organized effort by NTUA students to create and sustain the necessary frame for the exchange of new ideas in the fields of technology and business administration.',
 		'experience' => 'Experience Team',
 		'experience_description' => 'The Experience Team is responsible for ensuring the best experience possible to the event attendees by organizing special events, workshops and many more!',
 		'fr' => 'Fundraising Team',
@@ -164,7 +164,7 @@ return [
 		'speakers_description' => 'The Speakers Team is held responsible for inviting the most awesome speakers!',
 		'venue_production' => 'Venue & Production Team',
 		'venue_production_description' => 'The Venue & Production Team is responsible for the venue in which the event will take place, as well as things like live-streaming, videos etc.',
-		'quote' => 'Nothing would have been possible without our awesome team',
+		'quote' => 'The chaotic components of this otherwise orderly project',
 		'volunteer' => 'Become a volunteer'
 
 	],
@@ -181,7 +181,7 @@ return [
 	/* ABOUT */
 	'about' => [
 		'title' => 'About',
-		'description' => '',
+		'description' => 'Who are we? What is TED? What is TEDx? Get to know the institutions involved in this effort and the history behind the team of TEDxNTUA.',
 		'tedx' => [
 			'title' => 'What is TEDx?',
 			'subtitle' => 'x = independently organized event',
@@ -215,7 +215,7 @@ return [
 	/* CONTACT */
 	'contact' => [
 		'title' => 'Contact',
-		'description' => '',
+		'description' => 'Want to reach out? Use our contact form or send us an e-mail at info@tedxntua.com! We will get back to you as soon as possible.',
 		'contactus' => 'Contact Us',
 		'greeting' => 'Please find below our contact info or just fill in the form and we’ll get back to you as soon as possible!',
 		'form' => [
@@ -241,7 +241,7 @@ return [
 	/* PRIVACY */
 	'privacy' => [
 		'title' => 'Privacy Policy',
-		'description' => '',
+		'description' => 'Learn how our website uses a few of your browsing data to improve your experience and provide you with useful functionalities.',
 	],
 
 	'cookies' => [
