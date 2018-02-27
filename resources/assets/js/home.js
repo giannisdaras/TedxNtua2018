@@ -35,14 +35,14 @@ $(document).ready(function(){
 
 	var canvas = document.getElementById("canvas"),
 			ctx = canvas.getContext("2d"),
-			keyword = "TEDxNTUA Chaos",
+			keyword = "TEDxNTUA CHAOS",
 			imageData,
-			density = 3, //density of pixels
+			density = 7, //density of pixels
 			mouse = {},
 			hovered = false,
-			colors = ["250,250,250", "230,43,30", "34,34,34"], //pixel colors
-			minDist = 40, //minimum distance
-			bounceFactor = 0.9; // when it increases they are getting more jump height
+			colors = ["255,255,255","230,43,30"], 	//pixel colors
+			minDist = 100, //minimum distance
+			bounceFactor = 0.8; // when it increases they are getting more jump height
 
 	var W = window.innerWidth,
 	H = window.innerHeight;
@@ -125,15 +125,19 @@ $(document).ready(function(){
 	// Update
 	function update() {
 		clear();
+		var flag=true;
 
 		for(i = 0; i < particles.length; i++) {
 			var p = particles[i];
+			if (p.free!=true){
+				flag=false;
+			}
 
-			if(mouse.x > p.x && mouse.x < p.x + p.size && mouse.y > p.y && mouse.y < p.y + p.size)
-				hovered = true;
+			if (Math.abs(mouse.x-p.x)<=p.size && Math.abs(mouse.y-p.y)<=p.size){
+				hovered=true;
+			}
 
 			if(hovered == true) {
-
 				var dist = Math.sqrt((p.x - mouse.x)*(p.x - mouse.x) + (p.y - mouse.y)*(p.y - mouse.y));
 
 				if(dist <= minDist)
@@ -170,6 +174,10 @@ $(document).ready(function(){
 
 			ctx.globalCompositeOperation = "lighter";
 			p.draw();
+		}
+		if (flag==true){
+			console.log('Done');
+			document.getElementById("altChaos").style.display="block";
 		}
 	}
 
