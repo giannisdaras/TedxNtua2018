@@ -57,7 +57,7 @@ var homeAnimations = function() {
 			mouse = {},
 			hovered = false,
 			colors = ["250,250,250","230,43,30"], 	//pixel colors
-			minDist = 100, //minimum distance
+			minDist = 70, //minimum distance
 			bounceFactor = 0.8; // when it increases they are getting more jump height
 
 	var W = window.innerWidth,
@@ -193,7 +193,9 @@ var homeAnimations = function() {
 		}
 		if (flag==true){
 			document.getElementById("canvas").style.display="none";
+			document.getElementById("altAnim").addClass="wow bounceInLeft animated";
 			document.getElementById("altAnim").style.display="block";
+			
 		}
 	}
 
