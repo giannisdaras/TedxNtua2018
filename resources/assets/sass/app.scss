@@ -978,13 +978,11 @@ article:not(.home) {
 		}
 	}
 
-
 	/* generic grid-image style to be used in speakers, sponsor and team components */
 	.grid-image {
 	    display: inline-block;
 	    border: 0;
 	    position: relative;
-	    padding: 2%;
 	    max-width: 100%;
 	}
 
@@ -992,7 +990,7 @@ article:not(.home) {
 	    transition: all 200ms ease-in;
 	    transform: scale(1);
 	    &:hover {
-	    	transform: scale(1.1);
+	    	transform: scale(1.05);
 	    	padding: auto;
 	    	z-index: 2;
 	    }
@@ -1087,6 +1085,11 @@ article.sponsors {
 	}
 	.col {
 		text-align: center;
+		margin-bottom: 1rem;
+	}
+	a {
+		display: inline-block;
+		max-width: 420px;
 	}
 }
 
@@ -1101,11 +1104,6 @@ article.team {
 
 	section.content h2 {
 		border-bottom: 2px solid #333;
-	}
-
-	.col {
-		padding-top: 0.5rem;
-		text-align: center;
 	}
 
 	a .photo1 {
@@ -1620,7 +1618,7 @@ article.contact {
 			}
 		}
 	}
-	article.about {
+	article.about, article.sponsors {
 		section.content .col {
 			margin-bottom: 0;
 		}

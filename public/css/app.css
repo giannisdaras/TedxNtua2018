@@ -13999,7 +13999,6 @@ article:not(.home) .grid-image {
   display: inline-block;
   border: 0;
   position: relative;
-  padding: 2%;
   max-width: 100%;
 }
 
@@ -14011,8 +14010,8 @@ article:not(.home) .grid-image.hover-zoom {
 }
 
 article:not(.home) .grid-image.hover-zoom:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
   padding: auto;
   z-index: 2;
 }
@@ -14113,6 +14112,12 @@ article.sponsors h2 {
 
 article.sponsors .col {
   text-align: center;
+  margin-bottom: 1rem;
+}
+
+article.sponsors a {
+  display: inline-block;
+  max-width: 420px;
 }
 
 /* END SPONSORS PAGE */
@@ -14127,11 +14132,6 @@ article.team {
 
 article.team section.content h2 {
   border-bottom: 2px solid #333;
-}
-
-article.team .col {
-  padding-top: 0.5rem;
-  text-align: center;
 }
 
 article.team a .photo1 {
@@ -14722,11 +14722,13 @@ article.contact .g-recaptcha.error > div {
     height: 3.5rem;
   }
 
-  article.about section.content .col {
+  article.about section.content .col,
+  article.sponsors section.content .col {
     margin-bottom: 0;
   }
 
-  article.about section.content .row {
+  article.about section.content .row,
+  article.sponsors section.content .row {
     margin-bottom: 1rem;
   }
 
