@@ -116,7 +116,8 @@ return [
 		'back' => 'Πίσω στους Ομιλητές',
 		'short_bio' => 'Σύντομο βιογραφικό',
 		'talk' => 'Ομιλία',
-		'previous' => 'Προηγούμενες Ομιλίες στο TEDx NTUA'
+		'previous' => 'Προηγούμενες Ομιλίες στο TEDx NTUA',
+		'nospeakers' => 'Μην χαώνεστε. Οι ομιλητές θα ανακοινωθούν σύντομα.<br>Ακολουθήστε μας στα <strong>social media</strong> για να ενημερώνεστε!',
 	],
 
 	/* SCHEDULE */
@@ -127,6 +128,10 @@ return [
 		'talks' => 'Ομιλίες',
 		'performances' => 'Παραστάσεις',
 		'workshops' => 'Workshops',
+		'notalks' => 'Μην χαώνεστε. Οι ομιλίες θα ανακοινωθούν σύντομα.<br>Ακολουθήστε μας στα <strong>social media</strong> για να ενημερώνεστε!',
+		'noperformances' => 'Μην χαώνεστε. Οι παραστάσεις θα ανακοινωθούν σύντομα.<br>Ακολουθήστε μας στα <strong>social media</strong> για να ενημερώνεστε!',
+		'noworkshops' => 'Μην χαώνεστε. Τα workshops θα ανακοινωθούν σύντομα.<br>Ακολουθήστε μας στα <strong>social media</strong> για να ενημερώνεστε!',
+		'noschedule' => 'Μην χαώνεστε. Το πρόγραμμα θα ανακοινωθεί σύντομα.<br>Ακολουθήστε μας στα <strong>social media</strong> για να ενημερώνεστε!',
 	],
 
 	/* TEAM */
