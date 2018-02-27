@@ -192,9 +192,9 @@ var homeAnimations = function() {
 			p.draw();
 		}
 		if (flag==true){
-			document.getElementById("canvas").style.display="none";
-			document.getElementById("altAnim").addClass="wow bounceInLeft animated";
-			document.getElementById("altAnim").style.display="block";
+			// document.getElementById("canvas").style.display="none";
+			// document.getElementById("altAnim").addClass="wow bounceInLeft animated";
+			// document.getElementById("altAnim").style.display="block";
 			
 		}
 	}
