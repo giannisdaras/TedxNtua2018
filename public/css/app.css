@@ -13336,6 +13336,7 @@ body > footer .container.credits a:hover {
   background: #111;
   padding: .5rem 0;
   position: fixed;
+  z-index: 999;
   color: white;
   width: 100%;
   bottom: 0;
@@ -13413,6 +13414,47 @@ a.call-to-action:hover {
   background-color: #f32012;
 }
 
+/* END CALL TO ACTION BUTTONS */
+
+/* SLIDER TAB SELECTOR */
+
+.nav-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  padding-bottom: 1.5rem;
+  position: relative;
+}
+
+.nav-slider .nav-item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 60%;
+  text-align: center;
+}
+
+.nav-slider .nav-item a {
+  display: inline-block;
+  margin: 0 auto;
+  padding: .25rem 1.5rem;
+}
+
+.nav-slider .nav-item a:hover {
+  color: #E62B1E;
+}
+
+.nav-slider .nav-item a.active {
+  border-bottom: 3px solid #E62B1E;
+}
+
+/* END SLIDER TAB SELECTOR */
+
 /* HOME PAGE */
 
 article.home {
@@ -13433,7 +13475,9 @@ article.home #leftStripe {
   width: 80%;
   height: 100%;
   position: absolute;
-  background: url("/images/stripeFull.svg") 0% 0% repeat-y scroll;
+  background-image: url("/images/stripeFull.svg");
+  background-size: 100% auto;
+  background-repeat: repeat-y;
 }
 
 article.home #rightStripe {
@@ -13441,9 +13485,11 @@ article.home #rightStripe {
   width: 80%;
   height: 100%;
   position: absolute;
-  background: url("/images/stripeFull.svg") 20% 0% repeat-y scroll;
-  -webkit-transform: scaleY(-1);
-          transform: scaleY(-1);
+  background-image: url("/images/stripeFull.svg");
+  background-size: 100% auto;
+  background-repeat: repeat-y;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
 }
 
 article.home section {
@@ -13784,9 +13830,7 @@ article.home #auspices a:hover img {
 article.home #map .map {
   width: 100%;
   height: 400px;
-  border-style: solid;
-  border-color: #E62B1E;
-  border-width: 4px;
+  border: 4px solid #E62B1E;
 }
 
 article.home #map .venue-gallery {
@@ -13958,7 +14002,6 @@ article:not(.home) .grid-image {
   display: inline-block;
   border: 0;
   position: relative;
-  padding: 2%;
   max-width: 100%;
 }
 
@@ -13970,8 +14013,8 @@ article:not(.home) .grid-image.hover-zoom {
 }
 
 article:not(.home) .grid-image.hover-zoom:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
   padding: auto;
   z-index: 2;
 }
@@ -13987,8 +14030,8 @@ article:not(.home) .grid-image.hover-zoom:hover {
 /* ABOUT PAGE */
 
 article.about {
-  background-image: url("/images/backgrounds/pixels_right.svg");
-  background-size: 100% auto;
+  background-image: url("/images/backgrounds/pixels.png");
+  background-size: 12.5vw auto;
   background-repeat: repeat-y;
 }
 
@@ -13997,7 +14040,7 @@ article.about section.content {
 }
 
 article.about .col {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 article.about p {
@@ -14005,13 +14048,17 @@ article.about p {
   font-size: 1.25rem;
 }
 
+article.about p:last-child {
+  margin-bottom: 0;
+}
+
 /* END ABOUT PAGE */
 
 /* SPEAKER PAGE */
 
 article.speakers {
-  background-image: url("/images/backgrounds/pixels.svg");
-  background-size: 100% auto;
+  background-image: url("/images/backgrounds/pixels.png");
+  background-size: 12.5vw auto;
   background-repeat: repeat-y;
   text-align: center;
   /* remove bootstrap's container-fluid margin from this page, since we have a custom layout */
@@ -14056,6 +14103,21 @@ article.speakers .speakers-footer .row:not(:last-child) {
   margin-bottom: 2rem;
 }
 
+article.speakers section.content .nospeakers-container {
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+article.speakers section.content .nospeakers-container .col > i.fa {
+  display: block;
+  font-size: 5rem;
+}
+
+article.speakers section.content .nospeakers-container p {
+  margin: .5rem 0;
+  font-size: 1.1rem;
+}
+
 article.speakers .embed-responsive {
   max-width: 640px;
   margin: 0 auto;
@@ -14068,10 +14130,21 @@ article.speakers .embed-responsive {
 article.sponsors h2 {
   text-align: center;
   border-bottom: 1px solid #333;
+  margin-bottom: 2rem;
 }
 
 article.sponsors .col {
   text-align: center;
+  margin-bottom: 2rem;
+}
+
+article.sponsors a {
+  display: inline-block;
+  max-width: 420px;
+}
+
+article.sponsors img.grid-image {
+  max-width: 90%;
 }
 
 /* END SPONSORS PAGE */
@@ -14079,18 +14152,31 @@ article.sponsors .col {
 /* TEAM PAGE */
 
 article.team {
-  background-image: url("/images/backgrounds/pixels_full_tiled_vertical.svg");
-  background-size: contain;
+  background-image: url("/images/backgrounds/pixels.png");
+  background-size: 12.5vw auto;
   background-repeat: repeat-y;
+  background-position: right;
+  /* replace default bootstrap margins */
 }
 
 article.team section.content h2 {
   border-bottom: 2px solid #333;
+  margin-bottom: 1.5rem;
+  /* tooltip normally inherits font weight from h2 */
+}
+
+article.team section.content h2[data-tooltip]::after {
+  font-weight: normal;
+}
+
+article.team .row {
+  margin-left: -8px;
+  margin-right: -8px;
 }
 
 article.team .col {
-  padding-top: 0.5rem;
-  text-align: center;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 article.team a .photo1 {
@@ -14134,16 +14220,14 @@ article.team .join-us a {
 /* SCHEDULE PAGE */
 
 article.schedule {
-  background-image: url("/images/backgrounds/pixels_full_tiled_vertical.svg");
-  background-size: 50% auto;
+  background-image: url("/images/backgrounds/pixels.png");
+  background-size: 12.5vw auto;
   background-repeat: repeat-y;
   background-position: right;
 }
 
 article.schedule table {
   font-size: .85rem;
-  background-color: #fafafa;
-  opacity: 0.75;
 }
 
 article.schedule h5 {
@@ -14173,21 +14257,6 @@ article.schedule thead th:first-child {
   width: auto;
 }
 
-article.schedule .nav-pills {
-  background-color: rgba(0, 0, 0, 0.075);
-  border-radius: .25rem;
-  margin-bottom: 2rem;
-}
-
-article.schedule .nav-pills .nav-link.active,
-article.schedule .show > .nav-pills .nav-link {
-  background-color: #a51c12;
-}
-
-article.schedule .nav-link {
-  padding: .75rem 1rem;
-}
-
 article.schedule .table th,
 article.schedule .table td {
   padding: .5rem;
@@ -14195,6 +14264,12 @@ article.schedule .table td {
 
 article.schedule td {
   height: 100%;
+}
+
+article.schedule td img {
+  width: 40%;
+  height: auto;
+  max-width: 160px;
 }
 
 article.schedule td .cell-content:not(.collapsing) {
@@ -14217,6 +14292,22 @@ article.schedule td .more {
 
 article.schedule td .more p:last-child {
   margin-bottom: 0;
+}
+
+article.schedule .empty-row .cell-content {
+  padding: 1rem 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+article.schedule .empty-row .cell-content > i.fa {
+  display: block;
+  font-size: 5rem;
+}
+
+article.schedule .empty-row p {
+  margin: .5rem 0;
+  font-size: 1.1rem;
 }
 
 /* TEAM PAGE */
@@ -14672,17 +14763,6 @@ article.contact .g-recaptcha.error > div {
     font-size: 1.2rem;
   }
 
-  article.home #map .col-md-12 {
-    position: relative;
-  }
-
-  article.home #map .col-md-12 img {
-    position: absolute;
-    top: -320px;
-    -webkit-filter: brightness(105%) contrast(110%);
-            filter: brightness(105%) contrast(110%);
-  }
-
   article.home #chaos h2 img {
     margin-left: 0.5rem;
   }
@@ -14692,12 +14772,14 @@ article.contact .g-recaptcha.error > div {
     height: 3.5rem;
   }
 
-  article.about section.content .col {
+  article.about section.content .col,
+  article.sponsors section.content .col {
     margin-bottom: 0;
   }
 
-  article.about section.content .row {
-    margin-bottom: 1rem;
+  article.about section.content .row,
+  article.sponsors section.content .row {
+    margin-bottom: 2rem;
   }
 
   .blog-listing {
@@ -14736,6 +14818,15 @@ article.contact .g-recaptcha.error > div {
   article.home #speakers .speaker-container a {
     /* font size gets smaller from lg to xl since we move to a 4-column layout */
     font-size: 1rem;
+  }
+
+  article.home #map .col-md-12 {
+    position: relative;
+  }
+
+  article.home #map .col-md-12 img {
+    position: absolute;
+    top: -120px;
   }
 
   article.team h5 {

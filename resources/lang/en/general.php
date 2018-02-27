@@ -46,7 +46,7 @@ return [
 		'description' => '',
 		'hero' => [
 			'date' => 'March 24, 2018',
-			'venue' => 'Eugenides Planetarium',
+			'venue' => 'Athens Planetarium',
 			'address' => '387 Andrea Syggrou Av.',
 			'tickets' => 'Get your tickets now',
 		],
@@ -109,7 +109,7 @@ return [
 			],
 			'map' => [
 				'title' => '_map & venue',
-				'desc' => 'TEDxNTUA 2018 will take place at the Eugenides Planetarium. The Planetarium is located at 387 Syggrou Avenue, just under 7 minutes on foot from the nearest bus station.',
+				'desc' => 'TEDxNTUA 2018 will take place at the Athens Planetarium. The Planetarium is located at 387 Syggrou Avenue, just under 7 minutes on foot from the nearest bus station.',
 			],
 		],
 	],
@@ -129,6 +129,7 @@ return [
 		'short_bio' => 'Short Bio',
 		'talk' => 'Talk',
 		'previous' => 'Previous TEDx NTUA Talks',
+		'nospeakers' => 'Don\'t get lost in the Chaos. The speakers will be announced soon.<br>Check out our <strong>social media</strong> to stay tuned!',
 	],
 
 	/* SCHEDULE */
@@ -139,6 +140,10 @@ return [
 		'talks' => 'Talks',
 		'performances' => 'Performances',
 		'workshops' => 'Workshops',
+		'notalks' => 'Don\'t get lost in the Chaos. The talks will be announced soon.<br>Check out our <strong>social media</strong> to stay tuned!',
+		'noperformances' => 'Don\'t get lost in the Chaos. The performances will be announced soon.<br>Check out our <strong>social media</strong> to stay tuned!',
+		'noworkshops' => 'Don\'t get lost in the Chaos. The workshops will be announced soon.<br>Check out our <strong>social media</strong> to stay tuned!',
+		'noschedule' => 'Don\'t get lost in the Chaos. The schedule will be announced soon.<br>Check out our <strong>social media</strong> to stay tuned!',
 	],
 
 	/* TEAM */
@@ -202,7 +207,7 @@ return [
                         Nonetheless, the massive immigration of young graduates towards the flourishing economies of the world, the appearance of numerous new fields, the need for highly specialized scientists and employees, the general sense of individualism and especially the pervasive economical and ethical crisis have deprived the academic community of the collaborative spirit necessary in every learning experience.
                     </p>
                     <p class="text-justify">
-                        TEDxNTUA is an organized effort to create and sustain the necessary frame for the exchange of new ideas in the fields of technology and business administration. At the same time, NTUA’s community is becoming a living, extrovert organism focusing on the scientific and career goals of its members, while promoting the expan- sion of the network of collaboration between the NTUA, the industries and the startup community.
+                        TEDxNTUA is an organized effort to create and sustain the necessary frame for the exchange of new ideas in the fields of technology and business administration. At the same time, NTUA’s community is becoming a living, extrovert organism focusing on the scientific and career goals of its members, while promoting the expansion of the network of collaboration between the NTUA, the industries and the startup community.
                     </p>',
 		],
 	],

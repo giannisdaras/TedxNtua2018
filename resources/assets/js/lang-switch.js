@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
 
 	$(document).on("click", "#lang-switch", function(e) {
 

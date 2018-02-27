@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(function(){
 
 	$(document).on("submit", "#contactForm", function(e) {
 

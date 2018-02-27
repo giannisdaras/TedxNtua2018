@@ -75,15 +75,16 @@ class ScheduleController extends Controller {
 							 -> get() -> toArray();
 
 		$schedule = compact('talks', 'performances', 'workshops');
+		$counts = [count($talks), count($performances), count($workshops)];
 
 		$rows = $this->convertToTable($schedule);
-		$day = "2018-03-31";
+		$day = "2018-03-24";
 		$isPjax = $request->header('X-PJAX');
 		if($isPjax) {
 			return response()->view('schedule', compact('rows', 'day', 'isPjax'), 200)
 							 ->header('X-PJAX-URL', LaravelLocalization::getLocalizedURL());
 		}
-		return view('schedule', compact('rows', 'day'));
+		return view('schedule', compact('rows', 'day', 'counts'));
 
 	}
 }

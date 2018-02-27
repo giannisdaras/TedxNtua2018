@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(function(){
 
     $(document).on("mouseover", "#hero .info a", function(e){
 

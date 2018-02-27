@@ -13,6 +13,7 @@
 	</section>
 	<section class="content">
 
+	{%- if speakers | length %}
 	{% for key, speaker in speakers %}
 
 		<div id="{{ speaker.sid }}" class="speaker-container container-fluid angle-brackets">
@@ -37,22 +38,37 @@
 		</div>
 
 	{% endfor %}
+	{%- else %}
 
-	<div class="container-fluid speakers-footer">
-		<div class="row">
-			<div class="col col-12 wow bounceInLeft">
-				<h3>{{ trans('general.speakers.previous') }}</h3>
-				<div class="embed-responsive embed-responsive-16by9">
-					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list=PLd7-PjFC85gz9xYWxVVqTddWLg75c8jZU&showinfo=1"></iframe>
+		<div class="container-fluid nospeakers-container">
+			<div class="row">
+				<div class="col col-12 wow bounceInRight">
+					<i class="fa fa-meh-o" aria-hidden="true"></i>
+					<p>
+						{{ trans('general.speakers.nospeakers') | raw }}
+						<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+					</p>
 				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col col-12 wow bounceInRight">
-				<a class="call-to-action" href="/#speakers"><i class="fa fa-chevron-circle-left fa-1x" aria-hidden="true"></i> {{ trans('general.speakers.back') }}</a>
+
+	{%- endif %}
+
+		<div class="container-fluid speakers-footer">
+			<div class="row">
+				<div class="col col-12 wow bounceInLeft">
+					<h3>{{ trans('general.speakers.previous') }}</h3>
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list=PLd7-PjFC85gz9xYWxVVqTddWLg75c8jZU&showinfo=1"></iframe>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-12 wow bounceInRight">
+					<a class="call-to-action" href="/#speakers"><i class="fa fa-chevron-circle-left fa-1x" aria-hidden="true"></i> {{ trans('general.speakers.back') }}</a>
+				</div>
 			</div>
 		</div>
-	</div>
 
 	</section>
 </article>

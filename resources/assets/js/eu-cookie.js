@@ -28,7 +28,7 @@ function eraseCookie(name) {
 	createCookie(name, "", -1);
 }
 
-$(document).ready(function(){
+$(function(){
 
 	if(readCookie("cookiePrompt") != "on") {
 		$(".cookie-bar").show()

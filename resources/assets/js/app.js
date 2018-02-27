@@ -48,9 +48,11 @@ const app = new Vue({
 */
 require('./typewriter')
 require('./home');
+require('./hash-scroll');
 require('./jquery.pjax');
 require('./ajax-navigation');
 require('./nav-scroll');
+require('./nav-slider');
 require('./contact');
 require('./lang-switch');
 require('./eu-cookie');
