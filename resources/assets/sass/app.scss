@@ -1108,6 +1108,22 @@ article.team {
 
 	section.content h2 {
 		border-bottom: 2px solid #333;
+		margin-bottom: 1.5rem;
+		/* tooltip normally inherits font weight from h2 */
+		&[data-tooltip]::after {
+			font-weight: normal;
+		}
+	}
+
+	/* replace default bootstrap margins */
+	.row {
+		margin-left: -8px;
+		margin-right: -8px;
+	}
+
+	.col {
+		padding-left: 8px;
+		padding-right: 8px;
 	}
 
 	a .photo1 {

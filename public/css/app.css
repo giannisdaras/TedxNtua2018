@@ -14133,10 +14133,27 @@ article.team {
   background-image: url("/images/backgrounds/pixels_full_tiled_vertical.svg");
   background-size: contain;
   background-repeat: repeat-y;
+  /* replace default bootstrap margins */
 }
 
 article.team section.content h2 {
   border-bottom: 2px solid #333;
+  margin-bottom: 1.5rem;
+  /* tooltip normally inherits font weight from h2 */
+}
+
+article.team section.content h2[data-tooltip]::after {
+  font-weight: normal;
+}
+
+article.team .row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+article.team .col {
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 article.team a .photo1 {
