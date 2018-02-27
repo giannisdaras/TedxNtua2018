@@ -590,7 +590,9 @@ article.home {
 		width: 80%;
 		height: 100%;
 		position: absolute;
-		background: url("/images/stripeFull.svg") 0% 0% repeat-y scroll;
+		background-image: url("/images/stripeFull.svg");
+		background-size: 100% auto;
+		background-repeat: repeat-y;
 	}
 
 	#rightStripe {
@@ -598,8 +600,10 @@ article.home {
 		width: 80%;
 		height: 100%;
 		position: absolute;
-		background: url("/images/stripeFull.svg") 20% 0% repeat-y scroll;
-        transform: scaleY(-1);
+		background-image: url("/images/stripeFull.svg");
+		background-size: 100% auto;
+		background-repeat: repeat-y;
+        transform: scaleX(-1);
 	}
 
 	section {
@@ -1008,10 +1012,9 @@ article:not(.home) {
 
 /* ABOUT PAGE */
 article.about {
-	background-image: url("/images/backgrounds/pixels_right.svg");
-	background-size: 100% auto;
+	background-image: url("/images/backgrounds/pixels.png");
+	background-size: 12.5vw auto;
 	background-repeat: repeat-y;
-
 
 	section.content {
 		max-width: 1200px;
@@ -1030,8 +1033,8 @@ article.about {
 /* SPEAKER PAGE */
 
 article.speakers {
-	background-image: url("/images/backgrounds/pixels.svg");
-	background-size: 100% auto;
+	background-image: url("/images/backgrounds/pixels.png");
+	background-size: 12.5vw auto;
 	background-repeat: repeat-y;
 	text-align: center;
 	/* remove bootstrap's container-fluid margin from this page, since we have a custom layout */
@@ -1102,9 +1105,10 @@ article.sponsors {
 /* TEAM PAGE */
 
 article.team {
-	background-image: url("/images/backgrounds/pixels_full_tiled_vertical.svg");
-	background-size: contain;
+	background-image: url("/images/backgrounds/pixels.png");
+	background-size: 12.5vw auto;
 	background-repeat: repeat-y;
+	background-position: right;
 
 	section.content h2 {
 		border-bottom: 2px solid #333;
@@ -1164,8 +1168,8 @@ article.team {
 /* SCHEDULE PAGE */
 
 article.schedule {
-	background-image: url("/images/backgrounds/pixels_full_tiled_vertical.svg");
-	background-size: 50% auto;
+	background-image: url("/images/backgrounds/pixels.png");
+	background-size: 12.5vw auto;
 	background-repeat: repeat-y;
 	background-position: right;
 
