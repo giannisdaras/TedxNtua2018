@@ -829,6 +829,7 @@ const app = new Vue({
 */
 __webpack_require__(38);
 __webpack_require__(39);
+__webpack_require__(58);
 __webpack_require__(40);
 __webpack_require__(41);
 __webpack_require__(42);
@@ -36546,7 +36547,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /* 38 */
 /***/ (function(module, exports) {
 
-$(document).ready(function () {
+$(function () {
 
 	/*
  	speed: The speed/duration of the effect in milliseconds
@@ -36586,7 +36587,7 @@ $(document).ready(function () {
 /* 39 */
 /***/ (function(module, exports) {
 
-$(document).ready(function () {
+$(function () {
 
 	$(document).on("mouseover", "#hero .info a", function (e) {
 
@@ -37762,7 +37763,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 /* 41 */
 /***/ (function(module, exports) {
 
-$(document).ready(function () {
+$(function () {
 
 	var navOffsetY = 68;
 
@@ -37771,6 +37772,9 @@ $(document).ready(function () {
 	});
 
 	$(document).on("pjax:complete", function () {
+
+		ga("set", "page", location.pathname);
+		ga("send", "pageview");
 
 		/* hide hotdog menu */
 		$("#navbarHotdog").collapse("hide");
@@ -37795,6 +37799,29 @@ $(document).ready(function () {
 				$(this).addClass("active");
 			}
 		});
+
+		var scrollToHash = function scrollToHash(hash) {
+			var target = $(hash);
+
+			if (target.length) {
+
+				var off = target.offset().top - parseInt(target.css("padding-top"));
+
+				if (off > navOffsetY) {
+					$("header").addClass("scrolled");
+				} else {
+					$("header").removeClass("scrolled");
+				}
+
+				var headerHeight = $("header").height() + 17;
+
+				$("html, body").animate({
+					scrollTop: off - headerHeight
+				}, 500);
+			}
+		};
+
+		scrollToHash(location.hash);
 
 		/* update locale changer URLs */
 		$("a.flagLink.en").attr("href", $("head link[hreflang='en']").attr("href"));
@@ -37823,7 +37850,7 @@ $(document).ready(function () {
 /* 42 */
 /***/ (function(module, exports) {
 
-$(document).ready(function () {
+$(function () {
 
 	var navOffsetY = 68;
 
@@ -37849,7 +37876,7 @@ $(document).ready(function () {
 /* 43 */
 /***/ (function(module, exports) {
 
-$(document).ready(function () {
+$(function () {
 
 	var scrollTimer = void 0;
 
@@ -37922,7 +37949,7 @@ $(document).ready(function () {
 /* 44 */
 /***/ (function(module, exports) {
 
-$(document).ready(function () {
+$(function () {
 
 	$(document).on("submit", "#contactForm", function (e) {
 
@@ -37982,7 +38009,7 @@ $(document).ready(function () {
 /* 45 */
 /***/ (function(module, exports) {
 
-$(document).ready(function () {
+$(function () {
 
 	$(document).on("click", "#lang-switch", function (e) {
 
@@ -38036,7 +38063,7 @@ function eraseCookie(name) {
 	createCookie(name, "", -1);
 }
 
-$(document).ready(function () {
+$(function () {
 
 	if (readCookie("cookiePrompt") != "on") {
 		$(".cookie-bar").show();
@@ -38057,7 +38084,7 @@ $(document).ready(function () {
 /* 47 */
 /***/ (function(module, exports) {
 
-$(document).ready(function () {
+$(function () {
 
 	$(document).on("mouseenter", "[data-tooltip]", function () {
 
@@ -38079,6 +38106,53 @@ $(document).ready(function () {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */,
+/* 56 */,
+/* 57 */,
+/* 58 */
+/***/ (function(module, exports) {
+
+$(function () {
+
+	var navOffsetY = 68;
+
+	var scrollToHash = function scrollToHash(hash) {
+		var target = $(hash);
+
+		if (target.length) {
+
+			var off = target.offset().top - parseInt(target.css("padding-top"));
+
+			if (off > navOffsetY) {
+				$("header").addClass("scrolled");
+			} else {
+				$("header").removeClass("scrolled");
+			}
+
+			var headerHeight = $("header").height() + 17;
+
+			$("html, body").animate({
+				scrollTop: off - headerHeight
+			}, 500);
+		}
+	};
+
+	scrollToHash(location.hash);
+
+	$(document).on("click", "a[href^='#']", function (e) {
+
+		e.preventDefault();
+		scrollToHash(this.hash);
+	});
+});
 
 /***/ })
 /******/ ]);

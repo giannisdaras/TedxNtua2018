@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
 
 	/*
 		speed: The speed/duration of the effect in milliseconds

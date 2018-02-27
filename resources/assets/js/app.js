@@ -48,6 +48,7 @@ const app = new Vue({
 */
 require('./typewriter')
 require('./home');
+require('./hash-scroll');
 require('./jquery.pjax');
 require('./ajax-navigation');
 require('./nav-scroll');

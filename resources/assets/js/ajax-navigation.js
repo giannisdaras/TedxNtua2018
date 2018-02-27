@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(function(){
 
 	var navOffsetY = 68
 
@@ -7,6 +7,9 @@ $(document).ready(function(){
 	})
 
 	$(document).on("pjax:complete", function() {
+
+		ga("set", "page", location.pathname)
+		ga("send", "pageview")
 
 		/* hide hotdog menu */
 		$("#navbarHotdog").collapse("hide")
@@ -31,6 +34,30 @@ $(document).ready(function(){
 	            $(this).addClass("active")
 	        }
 	    })
+		
+		let scrollToHash = function(hash) {
+			let target = $(hash)
+			  
+			if (target.length) {
+
+				let off = target.offset().top - parseInt(target.css("padding-top"))
+
+				if(off > navOffsetY) {
+					$("header").addClass("scrolled")
+				} else {
+					$("header").removeClass("scrolled")
+				}
+
+				let	headerHeight = $("header").height() + 17
+
+				$("html, body").animate({
+					scrollTop: off - headerHeight
+				}, 500)
+
+			}
+		}
+
+		scrollToHash(location.hash)
 
 	    /* update locale changer URLs */
 	    $("a.flagLink.en").attr("href", $("head link[hreflang='en']").attr("href"))
