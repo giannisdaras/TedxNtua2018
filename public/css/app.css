@@ -14221,8 +14221,12 @@ article.team .join-us a {
 
 /* SCHEDULE PAGE */
 
-article.schedule table {
+article.schedule {
   font-size: .85rem;
+}
+
+article.schedule .nav-slider {
+  font-size: 1.25em;
 }
 
 article.schedule h5 {
@@ -14290,7 +14294,7 @@ article.schedule td .more p:last-child {
 }
 
 article.schedule .empty-row .cell-content {
-  padding: 1rem 0;
+  padding: 1rem;
   margin: 0 auto;
   text-align: center;
 }
@@ -14302,7 +14306,7 @@ article.schedule .empty-row .cell-content > i.fa {
 
 article.schedule .empty-row p {
   margin: .5rem 0;
-  font-size: 1.1rem;
+  font-size: 1em;
 }
 
 /* TEAM PAGE */
@@ -14481,15 +14485,12 @@ article.privacy {
     right: 0;
   }
 
-  article.schedule table {
-    font-size: .9rem;
-  }
-
   article.schedule .nav-pills {
     margin-bottom: 3rem;
   }
 
   article.about,
+  article.schedule,
   article.speakers,
   article.privacy {
     font-size: .9rem;
@@ -14636,10 +14637,6 @@ article.privacy {
     font-size: 2rem;
   }
 
-  article.schedule table {
-    font-size: 1rem;
-  }
-
   article.schedule .table th,
   article.schedule .table td {
     padding: .75rem;
@@ -14650,6 +14647,7 @@ article.privacy {
   }
 
   article.about,
+  article.schedule,
   article.speakers,
   article.privacy {
     font-size: 1rem;

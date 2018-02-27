@@ -1183,10 +1183,12 @@ article.team {
 /* SCHEDULE PAGE */
 
 article.schedule {
+	font-size: .85rem;
 
-	table {
-		font-size: .85rem;
+	.nav-slider {
+		font-size: 1.25em;
 	}
+
 	h5 {
 		font-size: 1.25em;
 	}
@@ -1238,7 +1240,7 @@ article.schedule {
 	}
 	.empty-row {
 		.cell-content {
-			padding: 1rem 0;
+			padding: 1rem;
 			margin: 0 auto;
 			text-align: center;
 		}
@@ -1248,7 +1250,7 @@ article.schedule {
 		}
 		p {
 			margin: .5rem 0;
-			font-size: 1.1rem;
+			font-size: 1em;
 		}
 	}
 }
@@ -1420,14 +1422,11 @@ article.privacy {
 		}
 	}
 	article.schedule {
-		table {
-			font-size: .9rem;
-		}
 		.nav-pills {
 			margin-bottom: 3rem;
 		}
 	}
-	article.about, article.speakers, article.privacy {
+	article.about, article.schedule, article.speakers, article.privacy {
 		font-size: .9rem;
 	}
 }
@@ -1550,9 +1549,6 @@ article.privacy {
 		}
 	}
 	article.schedule {
-		table {
-			font-size: 1rem;
-		}
 		.table th, .table td {
 			padding: .75rem;
 		}
@@ -1562,7 +1558,7 @@ article.privacy {
 			display: none;
 		}
 	}
-	article.about, article.speakers, article.privacy {
+	article.about, article.schedule, article.speakers, article.privacy {
 		font-size: 1rem;
 	}
 	.blog-listing {
