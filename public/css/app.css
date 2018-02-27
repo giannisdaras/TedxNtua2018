@@ -14040,12 +14040,16 @@ article.about section.content {
 }
 
 article.about .col {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 article.about p {
   color: black;
   font-size: 1.25rem;
+}
+
+article.about p:last-child {
+  margin-bottom: 0;
 }
 
 /* END ABOUT PAGE */
@@ -14759,15 +14763,6 @@ article.contact .g-recaptcha.error > div {
     font-size: 1.2rem;
   }
 
-  article.home #map .col-md-12 {
-    position: relative;
-  }
-
-  article.home #map .col-md-12 img {
-    position: absolute;
-    top: -75px;
-  }
-
   article.home #chaos h2 img {
     margin-left: 0.5rem;
   }
@@ -14783,10 +14778,6 @@ article.contact .g-recaptcha.error > div {
   }
 
   article.about section.content .row,
-  article.sponsors section.content .row {
-    margin-bottom: 1rem;
-  }
-
   article.sponsors section.content .row {
     margin-bottom: 2rem;
   }
@@ -14827,6 +14818,15 @@ article.contact .g-recaptcha.error > div {
   article.home #speakers .speaker-container a {
     /* font size gets smaller from lg to xl since we move to a 4-column layout */
     font-size: 1rem;
+  }
+
+  article.home #map .col-md-12 {
+    position: relative;
+  }
+
+  article.home #map .col-md-12 img {
+    position: absolute;
+    top: -120px;
   }
 
   article.team h5 {

@@ -1017,11 +1017,14 @@ article.about {
 		max-width: 1200px;
 	}
 	.col {
-		margin-bottom: 1rem;
+		margin-bottom: 2rem;
 	}
 	p {
 		color: black;
 		font-size: 1.25rem;
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
 }
 
@@ -1646,15 +1649,6 @@ article.contact {
 				font-size: 1.2rem;
 			}
 		}
-		#map {
-			.col-md-12 {
-				position: relative;
-				img {
-					position: absolute;
-					top: -75px;
-					}
-			}
-		}
 		#chaos {
 			h2 img {
 				margin-left: 0.5rem;
@@ -1670,11 +1664,8 @@ article.contact {
 			margin-bottom: 0;
 		}
 		section.content .row {
-			margin-bottom: 1rem;
+			margin-bottom: 2rem;
 		}
-	}
-	article.sponsors section.content .row {
-		margin-bottom: 2rem;
 	}
 	.blog-listing {
 		column-count: 3;
@@ -1714,6 +1705,15 @@ article.contact {
 				a {
 					/* font size gets smaller from lg to xl since we move to a 4-column layout */
 					font-size: 1rem;
+				}
+			}
+		}
+		#map {
+			.col-md-12 {
+				position: relative;
+				img {
+					position: absolute;
+					top: -120px;
 				}
 			}
 		}
