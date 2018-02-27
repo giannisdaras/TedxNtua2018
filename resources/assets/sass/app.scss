@@ -686,8 +686,10 @@ article.home {
 			color: white;
 			font-size: 1.15rem;
 			padding: 1rem 2.5rem;
+			cursor: wait;
 			&:hover {
-				background-color: saturate($brand-primary, 10%);
+				background-color: #555;
+				// background-color: saturate($brand-primary, 10%);
 			}
 			&:active {
 				font-size: 1.1rem;
