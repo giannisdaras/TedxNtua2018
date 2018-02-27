@@ -192,7 +192,8 @@ var homeAnimations = function() {
 			p.draw();
 		}
 		if (flag==true){
-			document.getElementById("altChaos").style.display="block";
+			document.getElementById("canvas").style.display="none";
+			document.getElementById("altAnim").style.display="block";
 		}
 	}
 
