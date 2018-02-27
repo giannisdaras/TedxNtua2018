@@ -702,8 +702,10 @@ article.home {
 		canvas#canvas {
 		    margin: 0 auto;
 		    width: 800px;
-		    margin-top: 15rem;
+		    margin-top: 16rem;
+		    display: none;
 		}
+
 		canvas#lorenz {
 			display: none;
 			position: absolute;
@@ -1732,6 +1734,13 @@ article.contact {
 }
 
 @media (min-width: 1366px) {
+	#canvas{
+		display:block;
+
+	}
+	#altAnim{
+		display:none;
+	}
 	.navbar-brand {
 		height: 4.8rem;
 	}

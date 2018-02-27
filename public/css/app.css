@@ -13612,7 +13612,8 @@ article.home #hero .tickets a:active {
 article.home #hero canvas#canvas {
   margin: 0 auto;
   width: 800px;
-  margin-top: 15rem;
+  margin-top: 16rem;
+  display: none;
 }
 
 article.home #hero canvas#lorenz {
@@ -14840,6 +14841,14 @@ article.contact .g-recaptcha.error > div {
 }
 
 @media (min-width: 1366px) {
+  #canvas {
+    display: block;
+  }
+
+  #altAnim {
+    display: none;
+  }
+
   .navbar-brand {
     height: 4.8rem;
   }
