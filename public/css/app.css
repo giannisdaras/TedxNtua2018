@@ -14038,6 +14038,10 @@ article:not(.home) .grid-image.hover-zoom:hover {
 
 /* ABOUT PAGE */
 
+article.about {
+  font-size: .85rem;
+}
+
 article.about section.content {
   max-width: 1200px;
 }
@@ -14048,7 +14052,7 @@ article.about .col {
 
 article.about p {
   color: black;
-  font-size: 1.25rem;
+  font-size: 1em;
 }
 
 article.about p:last-child {
@@ -14061,6 +14065,7 @@ article.about p:last-child {
 
 article.speakers {
   text-align: center;
+  font-size: .85rem;
   /* remove bootstrap's container-fluid margin from this page, since we have a custom layout */
 }
 
@@ -14095,6 +14100,7 @@ article.speakers .speaker-header img {
 
 article.speakers .speaker-info {
   /* top padding */
+  font-size: 1em;
   padding: 1.5rem 0 0 0;
   text-align: justify;
 }
@@ -14115,7 +14121,7 @@ article.speakers section.content .nospeakers-container .col > i.fa {
 
 article.speakers section.content .nospeakers-container p {
   margin: .5rem 0;
-  font-size: 1.1rem;
+  font-size: 1em;
 }
 
 article.speakers .embed-responsive {
@@ -14310,9 +14316,18 @@ article.contact form {
   margin: 0 auto;
 }
 
+article.contact .form-control {
+  border-width: 2px;
+}
+
 article.contact .form-control:focus,
 article.contact .form-control.error {
   border-color: #E62B1E;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+article.contact .form-control.error {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px #E62B1E;
           box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px #E62B1E;
 }
@@ -14330,8 +14345,8 @@ article.contact .btn-primary:not([disabled]):not(.disabled):focus {
   background-color: #222222;
   border-color: #222222;
   outline: #222222;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px transparent;
-          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 article.contact .btn-primary:not([disabled]):not(.disabled):hover {
@@ -14366,6 +14381,10 @@ article.contact .g-recaptcha.error > div {
 /* END CONTACT PAGE */
 
 /* PRIVACY POLICY PAGE */
+
+article.privacy {
+  font-size: .85rem;
+}
 
 /* END PRIVACY POLICY PAGE */
 
@@ -14468,6 +14487,12 @@ article.contact .g-recaptcha.error > div {
 
   article.schedule .nav-pills {
     margin-bottom: 3rem;
+  }
+
+  article.about,
+  article.speakers,
+  article.privacy {
+    font-size: .9rem;
   }
 }
 
@@ -14622,6 +14647,12 @@ article.contact .g-recaptcha.error > div {
 
   article.team h5 br {
     display: none;
+  }
+
+  article.about,
+  article.speakers,
+  article.privacy {
+    font-size: 1rem;
   }
 
   .blog-listing {
@@ -14786,6 +14817,12 @@ article.contact .g-recaptcha.error > div {
 
   article.schedule thead th:first-child {
     width: 10%;
+  }
+
+  article.about,
+  article.speakers,
+  article.privacy {
+    font-size: 1.1rem;
   }
 
   article.contact .success-container p.big {
