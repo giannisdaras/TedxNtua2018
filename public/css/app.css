@@ -13957,6 +13957,9 @@ article:not(.home) {
 	 * this only applies for pages different than home;
 	 * in home the desired behavior is the opposite
 	 */
+  background-image: url("/images/backgrounds/pixels.png");
+  background-size: 12.5vw auto;
+  background-repeat: repeat-y;
   padding-top: 5rem;
   /* generic grid-image style to be used in speakers, sponsor and team components */
 }
@@ -14035,12 +14038,6 @@ article:not(.home) .grid-image.hover-zoom:hover {
 
 /* ABOUT PAGE */
 
-article.about {
-  background-image: url("/images/backgrounds/pixels.png");
-  background-size: 12.5vw auto;
-  background-repeat: repeat-y;
-}
-
 article.about section.content {
   max-width: 1200px;
 }
@@ -14063,9 +14060,6 @@ article.about p:last-child {
 /* SPEAKER PAGE */
 
 article.speakers {
-  background-image: url("/images/backgrounds/pixels.png");
-  background-size: 12.5vw auto;
-  background-repeat: repeat-y;
   text-align: center;
   /* remove bootstrap's container-fluid margin from this page, since we have a custom layout */
 }
@@ -14158,15 +14152,11 @@ article.sponsors img.grid-image {
 /* TEAM PAGE */
 
 article.team {
-  background-image: url("/images/backgrounds/pixels.png");
-  background-size: 12.5vw auto;
-  background-repeat: repeat-y;
-  background-position: right;
   /* replace default bootstrap margins */
 }
 
 article.team section.content h2 {
-  border-bottom: 2px solid #333;
+  border-bottom: 2px dashed #333;
   margin-bottom: 1.5rem;
   /* tooltip normally inherits font weight from h2 */
 }
@@ -14224,13 +14214,6 @@ article.team .join-us a {
 /* END TEAM PAGE */
 
 /* SCHEDULE PAGE */
-
-article.schedule {
-  background-image: url("/images/backgrounds/pixels.png");
-  background-size: 12.5vw auto;
-  background-repeat: repeat-y;
-  background-position: right;
-}
 
 article.schedule table {
   font-size: .85rem;
@@ -14382,6 +14365,10 @@ article.contact .g-recaptcha.error > div {
 
 /* END CONTACT PAGE */
 
+/* PRIVACY POLICY PAGE */
+
+/* END PRIVACY POLICY PAGE */
+
 /*	MEDIA QUERIES
  *	Media queries should be ordered by screen size, starting from the breakpoint of the smallest size.
  *	Legend:
@@ -14399,11 +14386,6 @@ article.contact .g-recaptcha.error > div {
 }
 
 @media (min-width: 576px) {
-  [data-tooltip]:after {
-    width: 33vw !important;
-    margin-left: -16.5vw !important;
-  }
-
   nav.navbar {
     padding: .5rem 2rem;
   }
@@ -14490,6 +14472,11 @@ article.contact .g-recaptcha.error > div {
 }
 
 @media (min-width: 768px) {
+  [data-tooltip]:after {
+    width: 480px !important;
+    margin-left: -240px !important;
+  }
+
   section.heading {
     display: none;
   }

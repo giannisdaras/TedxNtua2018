@@ -956,6 +956,9 @@ article:not(.home) {
 	 * this only applies for pages different than home;
 	 * in home the desired behavior is the opposite
 	 */
+	background-image: url("/images/backgrounds/pixels.png");
+	background-size: 12.5vw auto;
+	background-repeat: repeat-y;
 	padding-top: 5rem;
 	&.scrolled {
 		padding-top: 3.5rem;
@@ -1017,10 +1020,6 @@ article:not(.home) {
 
 /* ABOUT PAGE */
 article.about {
-	background-image: url("/images/backgrounds/pixels.png");
-	background-size: 12.5vw auto;
-	background-repeat: repeat-y;
-
 	section.content {
 		max-width: 1200px;
 	}
@@ -1041,9 +1040,6 @@ article.about {
 /* SPEAKER PAGE */
 
 article.speakers {
-	background-image: url("/images/backgrounds/pixels.png");
-	background-size: 12.5vw auto;
-	background-repeat: repeat-y;
 	text-align: center;
 	/* remove bootstrap's container-fluid margin from this page, since we have a custom layout */
 	section.content .container-fluid {
@@ -1125,13 +1121,9 @@ article.sponsors {
 /* TEAM PAGE */
 
 article.team {
-	background-image: url("/images/backgrounds/pixels.png");
-	background-size: 12.5vw auto;
-	background-repeat: repeat-y;
-	background-position: right;
 
 	section.content h2 {
-		border-bottom: 2px solid #333;
+		border-bottom: 2px dashed #333;
 		margin-bottom: 1.5rem;
 		/* tooltip normally inherits font weight from h2 */
 		&[data-tooltip]::after {
@@ -1188,10 +1180,6 @@ article.team {
 /* SCHEDULE PAGE */
 
 article.schedule {
-	background-image: url("/images/backgrounds/pixels.png");
-	background-size: 12.5vw auto;
-	background-repeat: repeat-y;
-	background-position: right;
 
 	table {
 		font-size: .85rem;
@@ -1323,6 +1311,13 @@ article.contact {
 
 /* END CONTACT PAGE */
 
+/* PRIVACY POLICY PAGE */
+article.privacy {
+
+}
+
+/* END PRIVACY POLICY PAGE */
+
 /*	MEDIA QUERIES
  *	Media queries should be ordered by screen size, starting from the breakpoint of the smallest size.
  *	Legend:
@@ -1340,10 +1335,6 @@ article.contact {
 }
 
 @include media-breakpoint-up(sm) {
-	[data-tooltip]:after {
-		width: 33vw !important;
-		margin-left: -16.5vw !important;
-	}
 
 	nav.navbar {
 		padding: .5rem 2rem;
@@ -1428,6 +1419,10 @@ article.contact {
 }
 
 @include media-breakpoint-up(md) {
+	[data-tooltip]:after {
+		width: 480px !important;
+		margin-left: -240px !important;
+	}
 	section.heading {
 		display: none;
 	}

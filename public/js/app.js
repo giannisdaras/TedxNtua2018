@@ -773,7 +773,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(9);
-module.exports = __webpack_require__(48);
+module.exports = __webpack_require__(50);
 
 
 /***/ }),
@@ -829,7 +829,6 @@ const app = new Vue({
 */
 __webpack_require__(38);
 __webpack_require__(39);
-__webpack_require__(59);
 __webpack_require__(40);
 __webpack_require__(41);
 __webpack_require__(42);
@@ -838,6 +837,8 @@ __webpack_require__(44);
 __webpack_require__(45);
 __webpack_require__(46);
 __webpack_require__(47);
+__webpack_require__(48);
+__webpack_require__(49);
 
 /***/ }),
 /* 10 */
@@ -36610,6 +36611,60 @@ $(function () {
 /* 40 */
 /***/ (function(module, exports) {
 
+$(function () {
+
+	var el = $("article:not(.home)");
+	if (el.length) {
+		el = el.first();
+		var rand = Math.round(Math.random());
+		if (rand == 0) {
+			el.css("background-position", "right");
+		}
+	}
+});
+
+/***/ }),
+/* 41 */
+/***/ (function(module, exports) {
+
+$(function () {
+
+	var navOffsetY = 68;
+
+	var scrollToHash = function scrollToHash(hash) {
+		var target = $(hash);
+
+		if (target.length) {
+
+			var off = target.offset().top - parseInt(target.css("padding-top"));
+
+			if (off > navOffsetY) {
+				$("header").addClass("scrolled");
+			} else {
+				$("header").removeClass("scrolled");
+			}
+
+			var headerHeight = $("header").height() + 17;
+
+			$("html, body").animate({
+				scrollTop: off - headerHeight
+			}, 500);
+		}
+	};
+
+	scrollToHash(location.hash);
+
+	$(document).on("click", "a[href^='#']", function (e) {
+
+		e.preventDefault();
+		scrollToHash(this.hash);
+	});
+});
+
+/***/ }),
+/* 42 */
+/***/ (function(module, exports) {
+
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 /*!
@@ -37611,7 +37666,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 })(jQuery);
 
 /***/ }),
-/* 41 */
+/* 43 */
 /***/ (function(module, exports) {
 
 $(function () {
@@ -37688,6 +37743,15 @@ $(function () {
 		} else {
 
 			$("header.home").removeClass("home");
+			/* random background position */
+			var el = $("article:not(.home)");
+			if (el.length) {
+				el = el.first();
+				var rand = Math.round(Math.random());
+				if (rand == 0) {
+					el.css("background-position", "right");
+				}
+			}
 		}
 
 		if ($("article.contact").length > 0) {
@@ -37698,7 +37762,7 @@ $(function () {
 });
 
 /***/ }),
-/* 42 */
+/* 44 */
 /***/ (function(module, exports) {
 
 $(function () {
@@ -37724,7 +37788,7 @@ $(function () {
 });
 
 /***/ }),
-/* 43 */
+/* 45 */
 /***/ (function(module, exports) {
 
 $(function () {
@@ -37797,7 +37861,7 @@ $(function () {
 });
 
 /***/ }),
-/* 44 */
+/* 46 */
 /***/ (function(module, exports) {
 
 $(function () {
@@ -37857,7 +37921,7 @@ $(function () {
 });
 
 /***/ }),
-/* 45 */
+/* 47 */
 /***/ (function(module, exports) {
 
 $(function () {
@@ -37882,7 +37946,7 @@ $(function () {
 });
 
 /***/ }),
-/* 46 */
+/* 48 */
 /***/ (function(module, exports) {
 
 function createCookie(name, value, days) {
@@ -37932,7 +37996,7 @@ $(function () {
 });
 
 /***/ }),
-/* 47 */
+/* 49 */
 /***/ (function(module, exports) {
 
 $(function () {
@@ -37953,58 +38017,10 @@ $(function () {
 });
 
 /***/ }),
-/* 48 */
+/* 50 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 49 */,
-/* 50 */,
-/* 51 */,
-/* 52 */,
-/* 53 */,
-/* 54 */,
-/* 55 */,
-/* 56 */,
-/* 57 */,
-/* 58 */,
-/* 59 */
-/***/ (function(module, exports) {
-
-$(function () {
-
-	var navOffsetY = 68;
-
-	var scrollToHash = function scrollToHash(hash) {
-		var target = $(hash);
-
-		if (target.length) {
-
-			var off = target.offset().top - parseInt(target.css("padding-top"));
-
-			if (off > navOffsetY) {
-				$("header").addClass("scrolled");
-			} else {
-				$("header").removeClass("scrolled");
-			}
-
-			var headerHeight = $("header").height() + 17;
-
-			$("html, body").animate({
-				scrollTop: off - headerHeight
-			}, 500);
-		}
-	};
-
-	scrollToHash(location.hash);
-
-	$(document).on("click", "a[href^='#']", function (e) {
-
-		e.preventDefault();
-		scrollToHash(this.hash);
-	});
-});
 
 /***/ })
 /******/ ]);
