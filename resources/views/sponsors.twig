@@ -22,7 +22,7 @@
 				</div>
 
 				<div class="col col-12 col-lg-6">
-					<a href="https://www.nestle.gr" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_nestle.png') }}" srcset="{{ asset('images/sponsors/small/small_nestle.png') }} 576w, {{ asset('images/sponsors/large/large_nestle.png') }} 960w" alt="Nestle"></a>
+					<a href="https://www.nestle.{{ getLocale() == "el" ? "gr" : "com" }}" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_nestle.png') }}" srcset="{{ asset('images/sponsors/small/small_nestle.png') }} 576w, {{ asset('images/sponsors/large/large_nestle.png') }} 960w" alt="Nestle"></a>
 				</div>
 			</div>
 
@@ -32,13 +32,13 @@
 				</div>
 
 				<div class="col col-12 col-lg-6">
-					<a href="https://www.sap.com/greece/index.html" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_sap.png') }}" srcset="{{ asset('images/sponsors/small/small_sap.png') }} 576w, {{ asset('images/sponsors/large/large_sap.png') }} 960w" alt="SAP"></a>
+					<a href="https://www.sap.com/{{ getLocale() == "el" ? "greece/index.html" : "corporate/en.html" }}" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_sap.png') }}" srcset="{{ asset('images/sponsors/small/small_sap.png') }} 576w, {{ asset('images/sponsors/large/large_sap.png') }} 960w" alt="SAP"></a>
 				</div>
 			</div>
 
 			<div class="row vertical-align">
 				<div class="col col-12 col-lg-6">
-					<a href="http://bosch_home.gr" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_bosch.png') }}" srcset="{{ asset('images/sponsors/small/small_bosch.png') }} 576w, {{ asset('images/sponsors/large/large_bosch.png') }} 960w" alt="BOSCH"></a>
+					<a href="http://www.bosch-home.{{ getLocale() == "el" ? "gr" : "com" }}" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_bosch.png') }}" srcset="{{ asset('images/sponsors/small/small_bosch.png') }} 576w, {{ asset('images/sponsors/large/large_bosch.png') }} 960w" alt="BOSCH"></a>
 				</div>
 			</div>
 		</div>
@@ -50,7 +50,7 @@
 			<div class="row vertical-align">
 
 				<div class="col col-12 col-lg-6">
-					<a href="https://www.uber.com" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_uber.png') }}" srcset="{{ asset('images/sponsors/small/small_uber.png') }} 576w, {{ asset('images/sponsors/large/large_uber.png') }} 960w" alt="Uber"></a>
+					<a href="https://www.uber.com/{{ getLocale() }}-GR/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_uber.png') }}" srcset="{{ asset('images/sponsors/small/small_uber.png') }} 576w, {{ asset('images/sponsors/large/large_uber.png') }} 960w" alt="Uber"></a>
 				</div>
 
 			</div>
@@ -62,7 +62,7 @@
 		<div class="container-fluid">
 			<div class="row vertical-align">
 				<div class="col col-12 col-lg-3">
-					<a href="http://vodafonecu.gr" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_cu.png') }}" srcset="{{ asset('images/sponsors/small/small_cu.png') }} 576w, {{ asset('images/sponsors/large/large_cu.png') }} 960w" alt="Vodafone CU"></a>
+					<a href="https://www.vodafonecu.gr" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_cu.png') }}" srcset="{{ asset('images/sponsors/small/small_cu.png') }} 576w, {{ asset('images/sponsors/large/large_cu.png') }} 960w" alt="Vodafone CU"></a>
 				</div>
 
 				<div class="col col-12 col-lg-3">
@@ -70,11 +70,11 @@
 				</div>
 
 				<div class="col col-12 col-lg-3">
-					<a href="http://koutsodontis.gr" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_koutsodontis.png') }}" srcset="{{ asset('images/sponsors/small/small_koutsodontis.png') }} 576w, {{ asset('images/sponsors/large/large_koutsodontis.png') }} 960w" alt="Koutsodontis"></a>
+					<a href="https://www.koutsodontis.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_koutsodontis.png') }}" srcset="{{ asset('images/sponsors/small/small_koutsodontis.png') }} 576w, {{ asset('images/sponsors/large/large_koutsodontis.png') }} 960w" alt="Koutsodontis"></a>
 				</div>
 
 				<div class="col col-12 col-lg-3">
-					<a href="https://www.helpe.gr/en/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_helpe.png') }}" srcset="{{ asset('images/sponsors/small/small_helpe.png') }} 576w, {{ asset('images/sponsors/large/large_helpe.png') }} 960w" alt="Hellenic Petroleum"></a>
+					<a href="https://www.helpe.gr/{{ getLocale() }}/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_helpe.png') }}" srcset="{{ asset('images/sponsors/small/small_helpe.png') }} 576w, {{ asset('images/sponsors/large/large_helpe.png') }} 960w" alt="Hellenic Petroleum"></a>
 				</div>
 			</div>
 		</div>
@@ -84,19 +84,19 @@
 		<div class="container-fluid">
 			<div class="row vertical-align">
 				<div class="col col-6 col-lg-2">
-					<a href="https://www.sas.com/el_gr/home.html" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_sas.png') }}" srcset="{{ asset('images/sponsors/small/small_sas.png') }} 576w, {{ asset('images/sponsors/large/large_sas.png') }} 960w" alt="sas"></a>
+					<a href="https://www.sas.com/{{ getLocale() == "el" ? "el_gr" : "en_us" }}/home.html" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_sas.png') }}" srcset="{{ asset('images/sponsors/small/small_sas.png') }} 576w, {{ asset('images/sponsors/large/large_sas.png') }} 960w" alt="sas"></a>
 				</div>
 				<div class="col col-6 col-lg-2">
-					<a href="http://www.ktimakokotou.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_aKtimaKokotou.png') }}" srcset="{{ asset('images/sponsors/small/small_aKtimaKokotou.png') }} 576w, {{ asset('images/sponsors/large/large_aKtimaKokotou.png') }} 960w" alt="Ktima G. Kokotou"></a>
+					<a href="http://www.ktimakokotou.gr/?lang={{ getLocale() }}" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_aKtimaKokotou.png') }}" srcset="{{ asset('images/sponsors/small/small_aKtimaKokotou.png') }} 576w, {{ asset('images/sponsors/large/large_aKtimaKokotou.png') }} 960w" alt="Ktima G. Kokotou"></a>
 				</div>
 				<div class="col col-6 col-lg-2">
-					<a href="http://www.skag.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_skag.png') }}" srcset="{{ asset('images/sponsors/small/small_skag.png') }} 576w, {{ asset('images/sponsors/large/large_skag.png') }} 960w" alt="SKAG"></a>
+					<a href="https://www.skag.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_skag.png') }}" srcset="{{ asset('images/sponsors/small/small_skag.png') }} 576w, {{ asset('images/sponsors/large/large_skag.png') }} 960w" alt="SKAG"></a>
 				</div>
 				<div class="col col-6 col-lg-2">
 					<a href="http://www.molto.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_molto.png') }}" srcset="{{ asset('images/sponsors/small/small_molto.png') }} 576w, {{ asset('images/sponsors/large/large_molto.png') }} 960w" alt="Molto"></a>
 				</div>
 				<div class="col col-6 col-lg-2">
-					<a href="http://www.hothot.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_hot_hot.png') }}" srcset="{{ asset('images/sponsors/small/small_hot_hot.png') }} 576w, {{ asset('images/sponsors/large/large_hot_hot.png') }} 960w" alt="Hot Hot"></a>
+					<a href="https://www.hothot.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_hot_hot.png') }}" srcset="{{ asset('images/sponsors/small/small_hot_hot.png') }} 576w, {{ asset('images/sponsors/large/large_hot_hot.png') }} 960w" alt="Hot Hot"></a>
 				</div>
 			</div>
 		</div>
@@ -107,7 +107,7 @@
 			<div class="row vertical-align">
 
 				<div class="col col-6 col-lg-2">
-					<a href="http://naftemporiki.gr" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_nafteboriki.png') }}" srcset="{{ asset('images/media/small/small_nafteboriki.png') }} 576w, {{ asset('images/media/large/large_nafteboriki.png') }} 960w" alt="Naftemporiki"></a>
+					<a href="http://naftemporiki.gr{{ getLocale() == "el" ? "" : "/english" }}" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_nafteboriki.png') }}" srcset="{{ asset('images/media/small/small_nafteboriki.png') }} 576w, {{ asset('images/media/large/large_nafteboriki.png') }} 960w" alt="Naftemporiki"></a>
 				</div>
 
 				<div class="col col-6 col-lg-2">
@@ -120,17 +120,17 @@
 
 
 				<div class="col col-6 col-lg-2">
-					<a href="http://forfree.gr" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_forfree.png') }}" srcset="{{ asset('images/media/small/small_forfree.png') }} 576w, {{ asset('images/media/large/large_forfree.png') }} 960w" alt="forfree.gr"></a>
+					<a href="https://www.{{ getLocale() == "el" ? "forfreegr.com" : "en.forfree.gr" }}" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_forfree.png') }}" srcset="{{ asset('images/media/small/small_forfree.png') }} 576w, {{ asset('images/media/large/large_forfree.png') }} 960w" alt="forfree.gr"></a>
 				</div>
 
 
 				<div class="col col-6 col-lg-2">
-					<a href="http://kariera.gr" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_kariera.png') }}" srcset="{{ asset('images/media/small/small_kariera.png') }} 576w, {{ asset('images/media/large/large_kariera.png') }} 960w" alt="Kariera.gr"></a>
+					<a href="https://www.kariera.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_kariera.png') }}" srcset="{{ asset('images/media/small/small_kariera.png') }} 576w, {{ asset('images/media/large/large_kariera.png') }} 960w" alt="Kariera.gr"></a>
 				</div>
 
 
 				<div class="col col-6 col-lg-2">
-					<a href="http://stand-out.gr" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_standout.png') }}" srcset="{{ asset('images/media/small/small_standout.png') }} 576w, {{ asset('images/media/large/large_standout.png') }} 960w" alt="Standout"></a>
+					<a href="http://stand-out.gr" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_standout.png') }}" srcset="{{ asset('images/media/small/small_standout.png') }} 576w, {{ asset('images/media/large/large_standout.png') }} 960w" alt="Stand Out"></a>
 				</div>
 			</div>
 
@@ -144,7 +144,7 @@
 				</div>
 
 				<div class="col col-6 col-lg-2">
-					<a href="http://unikorn.gr" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_unikorn.png') }}" srcset="{{ asset('images/media/small/small_unikorn.png') }} 576w, {{ asset('images/media/large/large_unikorn.png') }} 960w" alt="Unikorn"></a>
+					<a href="https://unikorn.gr" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_unikorn.png') }}" srcset="{{ asset('images/media/small/small_unikorn.png') }} 576w, {{ asset('images/media/large/large_unikorn.png') }} 960w" alt="Unikorn"></a>
 				</div>
 			</div>
 
