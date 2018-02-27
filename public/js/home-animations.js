@@ -53,7 +53,7 @@ var homeAnimations = function() {
 			ctx = canvas.getContext("2d"),
 			keyword = "TEDxNTUA CHAOS",
 			imageData,
-			density = 7, //density of pixels
+			density = 9, //density of pixels
 			mouse = {},
 			hovered = false,
 			colors = ["250,250,250","230,43,30"], 	//pixel colors
@@ -194,7 +194,7 @@ var homeAnimations = function() {
 		if (flag==true){
 			// ctx.clearRect(0, 0, W, H);
 			ctx.fillStyle = "#FAFAFA";
-			ctx.font = "100px 'Arial', sans-serif";
+			ctx.font = "100px 'Alegreya Sans', sans-serif";
 			ctx.textAlign = "center";
 			ctx.fillText("TEDxNTUA Chaos", W/2, H/2);
 			// document.getElementById("canvas").style.display="none";
