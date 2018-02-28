@@ -36,173 +36,93 @@ var homeAnimations = function() {
 	}, 5000)
 
 
-	// following code tells the browser that we want to perform an animation
-	window.requestAnimFrame = (function(){
-	return  window.requestAnimationFrame       ||
-		window.webkitRequestAnimationFrame ||
-		window.mozRequestAnimationFrame    ||
-		window.oRequestAnimationFrame      ||
-		window.msRequestAnimationFrame     ||
-		function( callback ){
-			window.setTimeout(callback, 1000 / 60);
-		};
-	})();
+	var particleAlphabet = {
+    Particle: function(x, y) {
+        this.x = x;
+        this.y = y;
+        this.radius = 3.5;
+        this.draw = function(ctx) {
+            ctx.save();
+            ctx.translate(this.x, this.y);
+            ctx.fillStyle = 'white';
+            ctx.fillRect(0, 0, this.radius, this.radius);
+            ctx.restore();
+        };
+    },
+    init: function() {
+        particleAlphabet.canvas = document.querySelector('canvas');
+        particleAlphabet.ctx = particleAlphabet.canvas.getContext('2d');
+        particleAlphabet.W = window.innerWidth;
+        particleAlphabet.H = window.innerHeight;
+        particleAlphabet.particlePositions = [];
+        particleAlphabet.particles = [];
+        particleAlphabet.tmpCanvas = document.createElement('canvas');
+        particleAlphabet.tmpCtx = particleAlphabet.tmpCanvas.getContext('2d');
 
+        particleAlphabet.canvas.width = particleAlphabet.W;
+        particleAlphabet.canvas.height = particleAlphabet.H;
 
-	var canvas = document.getElementById("canvas"),
-			ctx = canvas.getContext("2d"),
-			keyword = "TEDxNTUA CHAOS",
-			imageData,
-			density = 9, //density of pixels
-			mouse = {},
-			hovered = false,
-			colors = ["250,250,250","230,43,30"], 	//pixel colors
-			minDist = 70, //minimum distance
-			bounceFactor = 0.8; // when it increases they are getting more jump height
+        setInterval(function(){
+            particleAlphabet.changeLetter();
+            particleAlphabet.getPixels(particleAlphabet.tmpCanvas, particleAlphabet.tmpCtx);
+        }, 1200);
 
-	var W = window.innerWidth,
-	H = window.innerHeight;
+        particleAlphabet.makeParticles(1000);
+        particleAlphabet.animate();
+    }, 
+    currentPos: 0,
+    changeLetter: function() {
+        var letters = 'TEDX NTUA,CHAOS',
+            letters = letters.split(',');
+        particleAlphabet.time = letters[particleAlphabet.currentPos];
+        particleAlphabet.currentPos++;
+        if (particleAlphabet.currentPos >= letters.length) {
+            particleAlphabet.currentPos = 0;
+        }
+    },
+    makeParticles: function(num) {
+        for (var i = 0; i <= num; i++) {
+            particleAlphabet.particles.push(new particleAlphabet.Particle(particleAlphabet.W / 2 + Math.random() * 400 - 200, particleAlphabet.H / 2 + Math.random() * 400 -200));
+        }
+    },
+    getPixels: function(canvas, ctx) {
+        var keyword = particleAlphabet.time,
+            gridX = 3,
+            gridY = 6;
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        ctx.font = 'italic bold 100px Alegreya Sans';
+        ctx.fillText(keyword, canvas.width / 2 - ctx.measureText(keyword).width / 2, canvas.height / 2 + 100);
+        var idata = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        var buffer32 = new Uint32Array(idata.data.buffer);
+        if (particleAlphabet.particlePositions.length > 0) particleAlphabet.particlePositions = [];
+        for (var y = 0; y < canvas.height; y += gridY) {
+            for (var x = 0; x < canvas.width; x += gridX) {
+                if (buffer32[y * canvas.width + x]) {
+                    particleAlphabet.particlePositions.push({x: x, y: y});
+                }
+            }
+        }
+    },
+    animateParticles: function() {
+        var p, pPos;
+        for (var i = 0, num = particleAlphabet.particles.length; i < num; i++) {
+            p = particleAlphabet.particles[i];
+            pPos = particleAlphabet.particlePositions[i];
+            if (particleAlphabet.particles.indexOf(p) === particleAlphabet.particlePositions.indexOf(pPos)) {
+            p.x += (pPos.x - p.x) * .3;
+            p.y += (pPos.y - p.y) * .3;
+            p.draw(particleAlphabet.ctx);
+        }
+        }
+    },
+    animate: function() {
+        requestAnimationFrame(particleAlphabet.animate);
+        particleAlphabet.ctx.fillStyle = 'rgba(32, 32, 32, 1)';
+        particleAlphabet.ctx.fillRect(0, 0, particleAlphabet.W, particleAlphabet.H);
+        particleAlphabet.animateParticles();
+    }
+};
 
-	canvas.width = W;
-	canvas.height = H;
-
-	document.addEventListener("mousemove", function(e) {
-		mouse.x = e.pageX;
-		mouse.y = e.pageY;
-	}, false);
-
-	// Particle Object
-	var Particle = function() {
-		this.size = Math.random() * 10.5;
-		this.x = -W;
-		this.y = -H;
-		this.free = false;
-
-		this.vy = -5 + parseInt(Math.random() * 10) / 2;
-		this.vx = -4 + parseInt(Math.random() * 8);
-
-		// Color
-		this.a = Math.random();
-		this.color = colors[parseInt(Math.random()*colors.length)];
-
-		this.setPosition = function(x, y) {
-			this.x = x;
-			this.y = y;
-		};
-
-		this.draw = function() {
-			ctx.fillStyle = "rgba("+this.color+","+this.a+")";
-			ctx.fillRect(this.x, this.y,  this.size,  this.size);
-		}
-	};
-
-	var particles = [];
-
-	// Draw the text
-	function drawText() {
-		ctx.clearRect(0, 0, W, H);
-		ctx.fillStyle = "#000000";
-		ctx.font = "100px 'Arial', sans-serif";
-		ctx.textAlign = "center";
-		ctx.fillText(keyword, W/2, H/2,W);
-	}
-
-	// Clear the canvas
-	function clear() {
-		ctx.clearRect(0, 0, W, H);
-	}
-
-	// Get pixel positions
-	function positionParticles() {
-		// Get the data
-		imageData = ctx.getImageData(0, 0, W, W);
-		data = imageData.data;
-
-		// Iterate each row and column
-		for (var i = 0; i < imageData.height; i += density) {
-			for (var j = 0; j < imageData.width; j += density) {
-
-				// Get the color of the pixel
-				var color = data[((j * ( imageData.width * 4)) + (i * 4)) - 1];
-
-				// If the color is black, draw pixels
-				if (color == 255) {
-					particles.push(new Particle());
-					particles[particles.length - 1].setPosition(i, j);
-				}
-			}
-		}
-	}
-
-	drawText();
-	positionParticles();
-
-
-	// Update
-	function update() {
-		clear();
-		var flag=true;
-
-		for(i = 0; i < particles.length; i++) {
-			var p = particles[i];
-			if (p.free!=true){
-				flag=false;
-			}
-
-			if (Math.abs(mouse.x-p.x)<=p.size && Math.abs(mouse.y-p.y)<=p.size){
-				hovered=true;
-			}
-
-			if(hovered == true) {
-				var dist = Math.sqrt((p.x - mouse.x)*(p.x - mouse.x) + (p.y - mouse.y)*(p.y - mouse.y));
-
-				if(dist <= minDist)
-					p.free = true;
-
-				if(p.free == true) {
-					p.y += p.vy;
-					p.vy += 0.15;
-					p.x += p.vx;
-
-					// Collision Detection
-					if(p.y + p.size > H) {
-						p.y = H - p.size;
-						p.vy *= -bounceFactor;
-
-						// Friction applied when on the floor
-						if(p.vx > 0)
-							p.vx -= 0.1;
-						else
-							p.vx += 0.1;
-					}
-
-					if(p.x + p.size > W) {
-						p.x = W - p.size;
-						p.vx *= -bounceFactor;
-					}
-
-					if(p.x < 0) {
-						p.x = 0;
-						p.vx *= -0.5;
-					}
-				}
-			}
-
-			ctx.globalCompositeOperation = "lighter";
-			p.draw();
-		}
-		if (flag==true){
-			// ctx.clearRect(0, 0, W, H);
-			ctx.fillStyle = "#FAFAFA";
-			ctx.font = "80px 'Alegreya Sans', sans-serif";
-			ctx.textAlign = "center";
-			ctx.fillText("TEDxNTUA Chaos", W/2, H/2,W);
-		}
-	}
-
-
-	(function animloop(){
-		requestAnimFrame(animloop);
-		update();
-	})();
+window.onload = particleAlphabet.init;
 }

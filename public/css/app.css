@@ -13614,9 +13614,8 @@ article.home #hero canvas#canvas {
   padding-right: 0;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 0;
-  width: 100%;
-  height: 5%;
+  height: 220px;
+  width: 50%;
   display: none;
 }
 
@@ -14854,6 +14853,14 @@ article.contact .g-recaptcha.error > div {
     padding: .5rem 0;
   }
 
+  article.home #hero h1 {
+    display: none;
+  }
+
+  article.home #hero canvas#canvas {
+    display: block;
+  }
+
   article.home #speakers .speaker-container a {
     font-size: 1.25rem;
   }
@@ -14868,16 +14875,6 @@ article.contact .g-recaptcha.error > div {
 
   .navbar-expand-lg .navbar-nav .nav-link {
     font-size: 1.15rem;
-  }
-}
-
-@media (min-width: 800px) {
-  article.home #hero h1 {
-    display: none;
-  }
-
-  article.home #hero canvas#canvas {
-    display: block;
   }
 }
 
