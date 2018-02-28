@@ -1088,9 +1088,10 @@ article.speakers {
 	section.content .nospeakers-container {
 		padding: 1rem 0;
 		margin-bottom: 2rem;
-		.col > i.fa {
+		.col > span.empty-sign {
 			display: block;
 			font-size: 5rem;
+			line-height: 1.15;
 		}
 		p {
 			margin: .5rem 0;
@@ -1251,9 +1252,10 @@ article.schedule {
 			margin: 0 auto;
 			text-align: center;
 		}
-		.cell-content > i.fa {
+		.cell-content > span.empty-sign {
 			display: block;
 			font-size: 5rem;
+			line-height: 1.1;
 		}
 		p {
 			margin: .5rem 0;

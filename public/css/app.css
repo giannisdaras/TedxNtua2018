@@ -14121,9 +14121,10 @@ article.speakers section.content .nospeakers-container {
   margin-bottom: 2rem;
 }
 
-article.speakers section.content .nospeakers-container .col > i.fa {
+article.speakers section.content .nospeakers-container .col > span.empty-sign {
   display: block;
   font-size: 5rem;
+  line-height: 1.15;
 }
 
 article.speakers section.content .nospeakers-container p {
@@ -14306,9 +14307,10 @@ article.schedule .empty-row .cell-content {
   text-align: center;
 }
 
-article.schedule .empty-row .cell-content > i.fa {
+article.schedule .empty-row .cell-content > span.empty-sign {
   display: block;
   font-size: 5rem;
+  line-height: 1.1;
 }
 
 article.schedule .empty-row p {
