@@ -700,9 +700,13 @@ article.home {
 			}
 		}
 		canvas#canvas {
-		    margin: 0 auto;
-		    width: 800px;
-		    margin-top: 16rem;
+			padding-left: 0;
+    		padding-right: 0;
+    		margin-left: auto;
+    		margin-right: auto;
+    		margin-bottom:0;
+		    width: 100%;
+		    height: 5%;
 		    display: none;
 		}
 
@@ -1742,12 +1746,6 @@ article.contact {
 		padding: .5rem 0;
 	}
 	article.home {
-		#hero h1 {
-			display: none;
-		}
-		#hero canvas#canvas {
-			display: block;
-		}
 		#speakers {
 			.speaker-container {
 				a {
@@ -1766,6 +1764,19 @@ article.contact {
 		font-size: 1.15rem;
 	}
 }
+
+@media (min-width: 800px){
+	article.home{
+		#hero h1 {
+			display: none;
+		}
+		#hero canvas#canvas {
+			display: block;
+		}
+	}
+	
+}
+
 
 .vertical-align {
 	display: flex;

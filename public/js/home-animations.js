@@ -102,9 +102,9 @@ var homeAnimations = function() {
 	function drawText() {
 		ctx.clearRect(0, 0, W, H);
 		ctx.fillStyle = "#000000";
-		ctx.font = "150px 'Arial', sans-serif";
+		ctx.font = "100px 'Arial', sans-serif";
 		ctx.textAlign = "center";
-		ctx.fillText(keyword, W/2, H/2);
+		ctx.fillText(keyword, W/2, H/2,W);
 	}
 
 	// Clear the canvas
@@ -194,9 +194,9 @@ var homeAnimations = function() {
 		if (flag==true){
 			// ctx.clearRect(0, 0, W, H);
 			ctx.fillStyle = "#FAFAFA";
-			ctx.font = "100px 'Alegreya Sans', sans-serif";
+			ctx.font = "80px 'Alegreya Sans', sans-serif";
 			ctx.textAlign = "center";
-			ctx.fillText("TEDxNTUA Chaos", W/2, H/2);
+			ctx.fillText("TEDxNTUA Chaos", W/2, H/2,W);
 		}
 	}
 
