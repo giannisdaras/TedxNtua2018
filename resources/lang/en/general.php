@@ -59,7 +59,7 @@ return [
 				</p>
 
 				<p class="text-justify">
-				We people witness Chaos of that original scientific idea in numerous manifestations in everyday life: smoke rising up smoothly into the air and suddenly vanishing, unexpected traffic in a Highway road, irregular leaking of a tap, inexpectable fluctuations of the Stock Market Index and many more instances explained mostly by this Theory of Chaos.
+				We witness Chaos in its scientific meaning in numerous situations in everyday life: smoke rising up smoothly into the air and suddenly vanishing, unexpected traffic in a Highway road, irregular leaking of a tap, inexplicable fluctuations of the Stock Market Index and many more instances explained mostly by this Theory of Chaos.
 				</p>
 
 				<p class="text-justify">

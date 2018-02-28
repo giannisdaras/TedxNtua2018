@@ -123,9 +123,11 @@ var Lorenz = function(params) {
 	}
 
 	function tick(timestamp) {
-		render()
-		let p = nextParticle(1) // dt = 1 since we use requestAnimationFrame
-		addParticle(p)
+		if(canvas.offsetParent !== null) { // if canvas not hidden
+			render()
+			let p = nextParticle(1) // dt = 1 since we use requestAnimationFrame
+			addParticle(p)
+		}
 		window.requestAnimationFrame(tick)
 	}
 
