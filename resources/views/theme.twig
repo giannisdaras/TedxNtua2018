@@ -59,7 +59,7 @@
     </div>
 
     <script src="{{ mix('js/app.js') }}"></script>
-    <script class="pjax" src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112098642-1"></script>
     <script>
         window.dataLayer = window.dataLayer || []
@@ -70,7 +70,7 @@
 
         gtag('config', 'UA-112098642-1')
     </script>
-{%- block scripts -%}
+{% block scripts -%}
 {%- endblock %}
 
 </body>

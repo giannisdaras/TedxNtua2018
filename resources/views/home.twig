@@ -5,10 +5,9 @@
 {% block description -%}
 {{ trans('general.home.description') }}
 {%- endblock %}
-{% block scripts -%}
-<script class="pjax" src="{{ asset('js/lorenz.js') }}"></script>
-<script class="pjax" src="{{ asset('js/home-animations.js') }}"></script>
-{%- endblock %}
+{% block scripts %}
+	<script class="pjax" src="{{ mix('js/home-animations.js') }}"></script>
+{% endblock %}
 {% block content %}
 <article class="home">
 
