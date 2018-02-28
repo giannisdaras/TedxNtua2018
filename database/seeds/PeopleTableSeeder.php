@@ -82,7 +82,7 @@ class PeopleTableSeeder extends Seeder {
 
             [
                 'name' => json_encode([
-                    'en' => 'Aggelaki Evgenina',
+                    'en' => 'Angelaki Evgenina',
                     'el' => 'Αγγελάκη Ευγενίνα'
                 ]),
                 'email' => 'angelaki.evgenia@gmail.com',
