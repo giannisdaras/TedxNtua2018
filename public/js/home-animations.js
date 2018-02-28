@@ -34,5 +34,4 @@ var homeAnimations = function() {
 		$("#logo-animation").fadeOut(2000)
 		$("#hero .section-content").addClass("slideIn")
 	}, 5000)
-
 }

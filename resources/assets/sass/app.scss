@@ -700,9 +700,12 @@ article.home {
 			}
 		}
 		canvas#canvas {
-		    margin: 0 auto;
-		    width: 800px;
-		    margin-top: 16rem;
+			padding-left: 0;
+    		padding-right: 0;
+    		margin-left: auto;
+    		margin-right: auto;
+    		height:220px;
+    		width: 50%;
 		    display: none;
 		}
 
@@ -1771,6 +1774,9 @@ article.privacy {
 		font-size: 1.15rem;
 	}
 }
+
+
+
 
 .vertical-align {
 	display: flex;
