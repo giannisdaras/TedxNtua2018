@@ -15,6 +15,7 @@ class CreateSchedulesTable extends Migration
     {
         Schema::create('schedules', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('sid')->unique();
             $table->boolean('visible')->default(false);
             $table->char('hour', 5);
             $table->text('img_src');

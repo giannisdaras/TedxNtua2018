@@ -13,7 +13,7 @@ class ScheduleSeeder extends Seeder
     public function run()
     {
         $schedules = [
-            App\Schedule::create([
+            App\Schedule::updateOrCreate(['sid' => 'scienceReactors'], [
                 'hour' => '13:12',
                 'visible' => false,
                 'img_src' => '/images/schedule/scienceReactors.jpeg',
@@ -35,13 +35,13 @@ class ScheduleSeeder extends Seeder
             /*  When creating a schedule with type TALK, you have to create the Speaker object along with it
                 see below for example
             */
-            App\Schedule::create([
+            App\Schedule::updateOrCreate(['sid' => 'styllas'], [
                 'hour' => '14:00',
                 'visible' => false,
                 'img_src' => '/images/speakers/styllas_alt.jpg',
                 'type' => 'talk',
                 'event_title' => [
-                    'en' => 'Michail Styllas',
+                    'en' => 'Michael Styllas',
                     'el' => 'Μιχάλης Στύλλας'
                 ],
                 'event_prev' => [
@@ -53,12 +53,11 @@ class ScheduleSeeder extends Seeder
                     'el'=> 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
                 ],
                 /* This is where the Speaker object is created with its proper attributes */
-                'speaker_id' => App\Speaker::create([
+                'speaker_id' => App\Speaker::updateOrCreate(['sid' => 'styllas'], [
                     'name' => [
-                        'en' => 'Michail Styllas',
+                        'en' => 'Michael Styllas',
                         'el' => 'Μιχάλης Στύλλας'
                     ],
-                    'sid' => 'styllas',
                     'visible' => false,
                     'img_src' => 'styllas_alt.jpg',
                     'img_src_alt' => 'styllas.jpg',
@@ -71,7 +70,7 @@ class ScheduleSeeder extends Seeder
                 ])->id
             ]),
 
-            App\Schedule::create([
+            App\Schedule::updateOrCreate(['sid' => 'romy-lorenz'], [
                 'hour' => '16:00',
                 'visible' => false,
                 'img_src' => '/images/speakers/romy-lorenz.jpg',
@@ -89,12 +88,11 @@ class ScheduleSeeder extends Seeder
                     'el'=> 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
                 ],
                 /* This is where the Speaker object is created with its proper attributes */
-                'speaker_id' => App\Speaker::create([
+                'speaker_id' => App\Speaker::updateOrCreate(['sid' => 'romy-lorenz'], [
                     'name' => [
                         'en' => 'Romy Lorenz',
                         'el' => 'Romy Lorenz'
                     ],
-                    'sid' => 'romy-lorenz',
                     'visible' => false,
                     'img_src' => 'romy-lorenz.jpg',
                     'img_src_alt' => 'romy-lorenz.jpg',
