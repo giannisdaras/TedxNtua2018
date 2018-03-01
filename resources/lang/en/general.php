@@ -118,7 +118,7 @@ return [
 	'sponsors' => [
 		'title' => 'Sponsors',
 		'description' => 'Our event would not have been possible without the support from organizations that share our values and visions. Visit their websites and learn more about them.',
-		'rank' => ['Grand Sponsors', 'Grand Carrier Sponsor|Grand Carrier Sponsors', 'Partners', 'Supporters', 'Media'],
+		'rank' => ['Grand Sponsors', 'Grand Carrier Sponsor|Grand Carrier Sponsors', 'Partners', 'Supporters', 'Media Partners'],
 	],
 
 	/* SPEAKERS */
