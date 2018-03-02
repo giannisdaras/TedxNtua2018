@@ -9,7 +9,7 @@ class Speaker extends Model
 {
 	// other fields: id, img_src, schedule_id;
     use HasTranslations;
-	public $translatable = ['name','bio'];
+	public $translatable = ['name','bio','occupation'];
 	public $timestamps = false;
 
 	// speakers are linked to talks (Schedule class) with the schedule_id field

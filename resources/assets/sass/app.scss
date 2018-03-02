@@ -577,6 +577,33 @@ a.call-to-action {
 }
 /* END SLIDER TAB SELECTOR */
 
+/* QUOTE */
+
+blockquote.quote {
+	&::before, &::after {
+		font: normal normal normal 14px/1 FontAwesome;
+		display: inline-block;
+		position: relative;
+		font-size: 75%;
+		line-height: 0;
+		vertical-align: baseline;
+		top: -.5em;
+		text-rendering: auto;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+	&::before {
+		content: "\F10D";
+		margin-right: .5em;
+	}
+	&::after {
+		content: "\F10E";
+		margin-left: .5em;
+	}
+}
+
+/* END QUOTE */
+
 /* HOME PAGE */
 
 article.home {
@@ -1069,16 +1096,26 @@ article.speakers {
 		h2 {
 			margin: 1rem 0 0 0;
 		}
+		h5 {
+			font-weight: normal;
+			font-style: italic;
+		}
 		img {
 			width: 75%;
 			max-width: 320px;
 		}
+	}
+	blockquote.quote {
+		font-size: 1.1em;
+		color: #333;
+		margin: 1rem 0 0 0;
 	}
 	.speaker-info {
 		/* top padding */
 		font-size: 1em;
 		padding: 1.5rem 0 0 0;
 		text-align: justify;
+		max-width: 800px;
 	}
 	.speakers-footer {
 		.row:not(:last-child) {

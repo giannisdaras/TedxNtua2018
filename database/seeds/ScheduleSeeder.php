@@ -58,6 +58,10 @@ class ScheduleSeeder extends Seeder
                         'en' => 'Michael Styllas',
                         'el' => 'Μιχάλης Στύλλας'
                     ],
+                    'occupation' => [
+                        'en' => 'Geology Researcher',
+                        'el' => 'Ερευνητής Γεωλογίας'
+                    ],
                     'visible' => false,
                     'img_src' => 'styllas_alt.jpg',
                     'img_src_alt' => 'styllas.jpg',
@@ -92,6 +96,10 @@ class ScheduleSeeder extends Seeder
                     'name' => [
                         'en' => 'Romy Lorenz',
                         'el' => 'Romy Lorenz'
+                    ],
+                    'occupation' => [
+                        'en' => 'Cognitive neuroscientist',
+                        'el' => 'Γνωσιακή νευροεπιστήμονας'
                     ],
                     'visible' => false,
                     'img_src' => 'romy-lorenz.jpg',

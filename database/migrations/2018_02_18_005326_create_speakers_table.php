@@ -21,6 +21,7 @@ class CreateSpeakersTable extends Migration
             $table->text('img_src_alt');
             $table->string('link');
             $table->json('name');
+            $table->json('occupation');
             $table->json('bio');
         });
     }

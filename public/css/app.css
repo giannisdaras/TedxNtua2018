@@ -13455,6 +13455,34 @@ a.call-to-action:hover {
 
 /* END SLIDER TAB SELECTOR */
 
+/* QUOTE */
+
+blockquote.quote::before,
+blockquote.quote::after {
+  font: normal normal normal 14px/1 FontAwesome;
+  display: inline-block;
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+  top: -.5em;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+blockquote.quote::before {
+  content: "\F10D";
+  margin-right: .5em;
+}
+
+blockquote.quote::after {
+  content: "\F10E";
+  margin-left: .5em;
+}
+
+/* END QUOTE */
+
 /* HOME PAGE */
 
 article.home {
@@ -14100,9 +14128,20 @@ article.speakers .speaker-header h2 {
   margin: 1rem 0 0 0;
 }
 
+article.speakers .speaker-header h5 {
+  font-weight: normal;
+  font-style: italic;
+}
+
 article.speakers .speaker-header img {
   width: 75%;
   max-width: 320px;
+}
+
+article.speakers blockquote.quote {
+  font-size: 1.1em;
+  color: #333;
+  margin: 1rem 0 0 0;
 }
 
 article.speakers .speaker-info {
@@ -14110,6 +14149,7 @@ article.speakers .speaker-info {
   font-size: 1em;
   padding: 1.5rem 0 0 0;
   text-align: justify;
+  max-width: 800px;
 }
 
 article.speakers .speakers-footer .row:not(:last-child) {

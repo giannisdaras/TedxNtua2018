@@ -126,7 +126,7 @@ return [
 		'title' => 'Speakers',
 		'description' => 'People that are scientists, professionals, artists. Individuals with passion for what they do and equipped with ideas worth spreading. These are our leading figures. Get to know them before the event and discover their work thus far.',
 		'back' => 'Back to Speakers',
-		'short_bio' => 'Short Bio',
+		'bio' => 'Bio',
 		'talk' => 'Talk',
 		'previous' => 'Previous TEDx NTUA Talks',
 		'nospeakers' => 'Don\'t get lost in the Chaos. The speakers will be announced soon.<br>Check out our <strong>social media</strong> to stay tuned!',
