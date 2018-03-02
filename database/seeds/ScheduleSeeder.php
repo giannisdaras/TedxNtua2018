@@ -66,7 +66,7 @@ class ScheduleSeeder extends Seeder
                         'en' => 'Flat roads and straight lines, hide the beauty of life',
                         'el' => 'Flat roads and straight lines, hide the beauty of life'
                     ],
-                    'visible' => false,
+                    'visible' => true,
                     'img_src' => 'styllas-1.jpg',
                     'img_src_alt' => 'styllas-2.jpg',
                     'link' => 'https://www.researchgate.net/profile/Michael_Styllas',

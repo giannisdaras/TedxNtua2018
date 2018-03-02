@@ -292,7 +292,7 @@ class PeopleTableSeeder extends Seeder {
                 [
                     'name' => [
                         'en' => 'Minadakis Vasilis',
-                        'el' => 'Μιναδάκης Βασίλης'
+                        'el' => 'Μηναδάκης Βασίλης'
                     ],
                     'img_src' => '/images/team/fr/bill.jpg',
                     'img_src_alt' => '/images/team/fr/bill_alt.jpg',
