@@ -22,7 +22,9 @@
 				<img src="/images/speakers/{{ speaker.img_src }}">
 				<h2>{{ speaker.name }} <a href="{{ speaker.link }}" target="_blank"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 				<h5>{{ speaker.occupation }}</h5>
-				<blockquote class="quote">Flat roads and straight lines, hide the beauty of life</blockquote>
+				{% if speaker.quote | length %}
+				<blockquote class="quote">{{ speaker.quote }}</blockquote>
+				{% endif %}
 			</div>
 
 			<div class="speaker-info container-fluid">

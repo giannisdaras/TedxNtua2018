@@ -22,6 +22,7 @@ class CreateSpeakersTable extends Migration
             $table->string('link');
             $table->json('name');
             $table->json('occupation');
+            $table->json('quote');
             $table->json('bio');
         });
     }

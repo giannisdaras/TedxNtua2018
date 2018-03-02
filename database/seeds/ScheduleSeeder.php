@@ -62,6 +62,10 @@ class ScheduleSeeder extends Seeder
                         'en' => 'Geology Researcher – Mountaineer',
                         'el' => 'Ερευνητής Γεωλογίας – Ορειβάτης'
                     ],
+                    'quote' => [
+                        'en' => 'Flat roads and straight lines, hide the beauty of life',
+                        'el' => 'Flat roads and straight lines, hide the beauty of life'
+                    ],
                     'visible' => false,
                     'img_src' => 'styllas-1.jpg',
                     'img_src_alt' => 'styllas-2.jpg',
@@ -111,6 +115,10 @@ O Μιχάλης Στύλλας αγάπησε τα βουνά από πολύ �
                     'occupation' => [
                         'en' => 'Cognitive neuroscientist',
                         'el' => 'Γνωσιακή νευροεπιστήμονας'
+                    ],
+                    'quote' => [
+                        'en' => '',
+                        'el' => ''
                     ],
                     'visible' => false,
                     'img_src' => 'romy-lorenz-1.jpg',
