@@ -18,6 +18,9 @@ class TwigLocaleHelper extends Twig_Extension {
             }, ['is_safe' => ['html']]),
             new Twig_SimpleFunction('getLocale', function () {
                 return \LaravelLocalization::setLocale();
+            }, ['is_safe' => ['html']]),
+            new Twig_SimpleFunction('getNonLocalizedURL', function($url = null) {
+            	return \LaravelLocalization::getNonLocalizedURL($url);
             }, ['is_safe' => ['html']])
         ];
 	}

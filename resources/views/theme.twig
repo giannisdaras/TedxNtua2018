@@ -13,7 +13,7 @@
     <meta name="description" class="pjax" content="{% block description %}{% endblock %}">
     <meta property="og:title" content="{{ block('title') }} | TEDxNTUA 2018" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="{{ url_full() }}" />
+    <meta property="og:url" content="{{ getNonLocalizedURL() }}" />
     <meta property="og:image" content="{{ asset('images/tedxntua-black-600.png') }}" />
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('/apple-touch-icon.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('/favicon-32x32.png') }}">
