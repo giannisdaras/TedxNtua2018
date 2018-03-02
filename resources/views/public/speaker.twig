@@ -1,0 +1,6 @@
+<title>{{ speaker.name }} | TEDxNTUA 2018</title>
+<meta name="description" class="pjax" content="{{ speaker.bio | length > 120 ? speaker.bio | slice(0, 120) ~ '...' : speaker.bio }}">
+<meta property="og:title" content="{{ speaker.name }} | TEDxNTUA 2018" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ getNonLocalizedURL() }}" />
+<meta property="og:image" content="/images/speakers/{{ speaker.img_src }}" />

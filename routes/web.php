@@ -23,5 +23,6 @@ Route::group([
 	Route::get('/team', ['as' => 'team', 'uses' => 'TeamController@index']);
 	// Route::get('/speakers/{speaker}', ['as' => 'speakers', 'uses' => 'SpeakersController@speakerindex']);
 	Route::get('/speakers', ['as' => 'speakers', 'uses' => 'SpeakersController@index']);
+	Route::get('/speakers/{sid}', ['as' => 'speakers', 'uses' => 'SpeakersController@speaker']);
 	Route::get('/privacy', ['as' => 'privacy', 'uses' => 'PrivacyController@index']);
 });

@@ -20,7 +20,6 @@ class ContactController extends Controller {
 
 	// post method to submit form
 	public function submit(Request $request) {
-		https://www.google.com/recaptcha/api/siteverify
 
 		$this->validate($request, [
 			'email' => 'required|email',
@@ -58,7 +57,7 @@ class ContactController extends Controller {
 			]);
 		}
 
-		return redirect()->url('/');
+		return redirect('/');
 	}
 
 }

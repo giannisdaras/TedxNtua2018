@@ -20,4 +20,21 @@ class SpeakersController extends Controller {
 		return view('speakers', compact('speakers'));
 	}
 
+	public function speaker(Request $request) {
+        $crawlers = [
+            'facebookexternalhit/1.1',
+            'facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)',
+            'Facebot',
+        ];
+
+        $userAgent = $request->header('User-Agent');
+
+        if (str_contains($userAgent, $crawlers)) {
+            $speaker = Speaker::where('sid', $request->sid)->first();
+            return view('public/speaker', compact('speaker'));
+        } else {
+        	return redirect('/speakers#' . $request->sid);
+        }
+	}
+
 }
