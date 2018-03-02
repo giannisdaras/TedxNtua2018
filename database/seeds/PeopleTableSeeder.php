@@ -226,7 +226,7 @@ class PeopleTableSeeder extends Seeder {
                 [
                     'name' => [
                         'en' => 'Tarassi Stelina',
-                        'el' => 'Ταρασσή Στελίνα'
+                        'el' => 'Ταράση Στελίνα'
                     ],
                     'img_src' => '/images/team/venue/stelina.jpg',
                     'img_src_alt' => '/images/team/venue/stelina_alt.jpg',
