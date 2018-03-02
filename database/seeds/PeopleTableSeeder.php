@@ -345,7 +345,7 @@ class PeopleTableSeeder extends Seeder {
                 [
                     'name' => [
                         'en' => 'Glantzounis Konstantinos',
-                        'el' => 'Γλαντζούνης Κωνσταντίνος'
+                        'el' => 'Γκλαντζούνης Κωνσταντίνος'
                     ],
                     'img_src' => '/images/team/speakers/kostas.jpg',
                     'img_src_alt' => '/images/team/speakers/kostas_alt.jpg',
