@@ -13626,11 +13626,10 @@ article.home #hero .tickets a {
   color: white;
   font-size: 1.15rem;
   padding: 1rem 2.5rem;
-  cursor: wait;
 }
 
 article.home #hero .tickets a:hover {
-  background-color: #555;
+  background-color: #f32012;
 }
 
 article.home #hero .tickets a:active {
@@ -13768,7 +13767,7 @@ article.home #speakers .speaker-container a {
 
 article.home #speakers .speaker-container .speaker-info {
   position: absolute;
-  bottom: 1.7em;
+  bottom: 1.25em;
   z-index: 2;
   color: white;
   padding: 0 10px;

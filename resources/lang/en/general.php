@@ -48,7 +48,7 @@ return [
 			'date' => 'March 24, 2018',
 			'venue' => 'Athens Planetarium',
 			'address' => '387 Andrea Syggrou Av.',
-			'tickets' => 'Tickets coming soon!',
+			'tickets' => 'Get tickets now!',
 		],
 		'sections' => [
 			'chaos' => [

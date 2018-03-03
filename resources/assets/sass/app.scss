@@ -717,10 +717,8 @@ article.home {
 			color: white;
 			font-size: 1.15rem;
 			padding: 1rem 2.5rem;
-			cursor: wait;
 			&:hover {
-				background-color: #555;
-				// background-color: saturate($brand-primary, 10%);
+				background-color: saturate($brand-primary, 10%);
 			}
 			&:active {
 				font-size: 1.1rem;
@@ -842,7 +840,7 @@ article.home {
 			}
 			.speaker-info {
 				position: absolute;
-				bottom: 1.7em;
+				bottom: 1.25em;
 				z-index: 2;
 				color: white;
 				padding: 0 10px;
