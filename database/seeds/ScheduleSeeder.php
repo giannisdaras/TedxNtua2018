@@ -117,16 +117,26 @@ O Μιχάλης Στύλλας αγάπησε τα βουνά από πολύ �
                         'el' => 'Γνωσιακή νευροεπιστήμονας'
                     ],
                     'quote' => [
-                        'en' => '',
-                        'el' => ''
+                        'en' => 'Gravity is the root of lightness; stillness, the ruler of movement. ~ Lao Tzu',
+                        'el' => 'Gravity is the root of lightness; stillness, the ruler of movement. ~ Lao Tzu'
                     ],
                     'visible' => false,
                     'img_src' => 'romy-lorenz-1.jpg',
                     'img_src_alt' => 'romy-lorenz-2.jpg',
                     'link' => 'http://www.romylorenz.com',
                     'bio' => [
-                        'en' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-                        'el'=> 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+                        'en' => '
+Romy Lorenz is a cognitive neuroscientist with a multidisciplinary background in psychology and biomedical engineering.
+Currently, I am a Postdoctoral Research Fellow in the Computational, Cognitive and Clinical Neuroimaging Lab ([C3NL](https://www.c3nl.com)) at Imperial College London. In September this year, I will take up my 4-year long Sir Henry Wellcome Postdoctoral Fellowship to work with [John Duncan](http://www.neuroscience.cam.ac.uk/directory/profile.php?johnduncan) at Cambridge University (UK) and [Russ Poldrack](https://poldracklab.stanford.edu/) at Stanford University (US).
+Broadly speaking, my research interest lies in developing brain-computer interfaces (BCIs) and artificial intelligence (AI) using different neuroimaging techniques and by applying machine learning. Rather than looking at BCIs through the lens of assistive technology though, I am passionate about using BCIs as a new experimental paradigm in cognitive neuroscience.
+I received my PhD from Imperial College London in June 2017, under the supervision of [Robert Leech](https://kclpure.kcl.ac.uk/portal/robert.leech.html). For my PhD, I have developed an "[AI neuroscientist](https://www.wired.co.uk/article/automatic-neuroscientist-ai-brain-experiments)" – a novel BCI for optimizing experimental design by combining real-time fMRI with Bayesian optimization.
+Alongside my research, I am working as a co-director for [AXNS](https://axnscollective.org/), a curatorial collective interested in the intersection between neuroscience and art.',
+                        'el'=> '
+Η Romy Lorenz είναι γνωσιακή νευροεπιστήμονας με σπουδές στην ψυχολογία και τη βιοϊατρική μηχανική. Είναι  μεταδιδακτορική ερευνήτρια στο Computational, Cognitive and Clinical Neuroimaging Lab ([C3NL](https://www.c3nl.com)) στο Imperial College στο Λονδίνο. Τον ερχόμενο Σεπτέμβρη, θα λάβει την τετραετή μεταδιδακτορική υποτροφία "Sir Henry Wellcome" και θα συνεργαστεί με τους [John Duncan](http://www.neuroscience.cam.ac.uk/directory/profile.php?johnduncan) (Cambridge, UK) και [Russ Poldrack](https://poldracklab.stanford.edu/) (Stanford, US). 
+
+Γενικά, το ερευνητικό ενδιαφέρον της επικεντρώνεται στην ανάπτυξη brain-machine interfaces (BCIs) και στην τεχνητή νοημοσύνη με τη χρήση τεχνικών νευροαπεικόνισης και μηχανικής μάθησης. Αντί να εξετάζει τα BCIs υπό το πρίσμα της υποστηρικτικής τεχνολογίας, είναι παθιασμένη με τη χρήση των BCIs ως ένα νέο πειραματικό μοντέλο στη γνωσιακή νευροεπιστήμη. 
+
+Έλαβε το διδακτορικό της από το Imperial College London τον Ιούνιο του 2017, υπό την επίβλεψη του [Robert Leech](https://kclpure.kcl.ac.uk/portal/robert.leech.html). Εκεί, ανέπτυξε το σύστημα "[AI neuroscientist](https://www.wired.co.uk/article/automatic-neuroscientist-ai-brain-experiments)" - ένα νέο BCI για τη βελτιστοποίηση του πειραματικού σχεδιασμού. Παράλληλα με την έρευνά της, είναι συνδιευθύντρια στον σύλλογο [AXNS](https://axnscollective.org/), που έχει στόχο τη συνάντηση τέχνης και επιστήμης.',
                     ]
                 /* Create the object and return its id */
                 ])->id
