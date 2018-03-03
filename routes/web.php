@@ -21,11 +21,8 @@ Route::group([
 	Route::get('/sponsors', ['as' => 'sponsors', 'uses' => 'SponsorsController@index']);
 	Route::get('/schedule', ['as' => 'schedule', 'uses' => 'ScheduleController@index']);
 	Route::get('/team', ['as' => 'team', 'uses' => 'TeamController@index']);
-	// Route::get('/speakers/{speaker}', ['as' => 'speakers', 'uses' => 'SpeakersController@speakerindex']);
 	Route::get('/speakers', ['as' => 'speakers', 'uses' => 'SpeakersController@index']);
 	Route::get('/speakers/{sid}', ['as' => 'speakers', 'uses' => 'SpeakersController@speaker']);
 	Route::get('/privacy', ['as' => 'privacy', 'uses' => 'PrivacyController@index']);
-	Route::get('/tickets', function() {
-		return redirect('https://www.eventbrite.com/e/tedxntua-2018-chaos-tickets-43592404054');
-	});
+	Route::get('/tickets', ['as' => 'tickets', 'uses' => 'TicketsController@index']);
 });

@@ -253,4 +253,10 @@ return [
 		'failed' => 'The reCAPTCHA check failed.'
 	],
 
+	'tickets' => [
+		'title' => 'Tickets',
+		/* maybe translate to English??? */
+		'desc' => 'Η ομάδα του TEDxNTUA επιστρέφει για μια ακόμη χρονιά πιο δυναμική από ποτέ, με όρεξη και νέες ιδέες! Το φετινό μας θέμα είναι το Chaos. Κάνε κράτηση εισιτηρίων τώρα!',
+	],
+
 ];
