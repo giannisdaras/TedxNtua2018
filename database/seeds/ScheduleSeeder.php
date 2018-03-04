@@ -113,14 +113,14 @@ O Μιχάλης Στύλλας αγάπησε τα βουνά από πολύ �
                         'el' => 'Romy Lorenz'
                     ],
                     'occupation' => [
-                        'en' => 'Cognitive neuroscientist',
-                        'el' => 'Γνωσιακή νευροεπιστήμονας'
+                        'en' => 'Cognitive Neuroscientist',
+                        'el' => 'Γνωσιακή Νευροεπιστήμονας'
                     ],
                     'quote' => [
                         'en' => 'Gravity is the root of lightness; stillness, the ruler of movement. ~ Lao Tzu',
                         'el' => 'Gravity is the root of lightness; stillness, the ruler of movement. ~ Lao Tzu'
                     ],
-                    'visible' => false,
+                    'visible' => true,
                     'img_src' => 'romy-lorenz-1.jpg',
                     'img_src_alt' => 'romy-lorenz-2.jpg',
                     'link' => 'http://www.romylorenz.com',
