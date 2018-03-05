@@ -165,8 +165,8 @@ return [
 		'venue_production' => 'Venue & Production Team',
 		'venue_production_description' => 'The Venue & Production Team is responsible for the venue in which the event will take place, as well as things like live-streaming, videos etc.',
 		'quote' => 'The chaotic components of this otherwise orderly project',
-		'volunteer' => 'Become a volunteer'
-
+		'volunteer' => 'Become a volunteer',
+		'thanks' => 'We would like to express our gratitude to professor Theodora Varvarigou and Mrs. Augusta Lambropoulou for their contribution in curating the event.',
 	],
 
 	/* BLOG */
