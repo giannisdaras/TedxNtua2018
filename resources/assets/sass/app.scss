@@ -845,7 +845,8 @@ article.home {
 				color: white;
 				padding: 0 10px;
 				width: 100%;
-				text-shadow: -1px -1px 0 #111, 1px -1px 0 #111, -1px 1px 0 #111, 1px 1px 0 #111;
+				text-shadow: 0px 1px 3px rgba(0, 0, 0, 1),
+							 0px 1px 5px rgba(0, 0, 0, 0.6);
 			}
 			h3 {
 				font-size: 1.15em;
@@ -859,12 +860,11 @@ article.home {
 		}
 		/* change following 10px values to your desired value of padding between the columns */
 		.row {
-			margin-left: -10px;
+			margin-leftx: -10px;
 			margin-right: -10px;
 		}
 		.col {
-			padding-left: 10px;
-			padding-right: 10px;
+			padding: 10px;
 		}
 	}
 	#schedule {
