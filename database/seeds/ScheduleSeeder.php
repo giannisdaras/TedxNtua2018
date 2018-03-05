@@ -153,7 +153,7 @@ Alongside her research, she is working as a co-director for [AXNS](https://axnsc
                         'en' => 'Everything is logic, dreaming is the rest',
                         'el' => 'Everything is logic, dreaming is the rest'
                     ],
-                    'visible' => false,
+                    'visible' => true,
                     'img_src' => 'themis-sapsis-1.jpg',
                     'img_src_alt' => 'themis-sapsis-2.jpg',
                     'link' => 'http://sandlab.mit.edu/index.php/people/11-web-articles/46-themistoklis-sapsis',
