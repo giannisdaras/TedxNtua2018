@@ -614,6 +614,11 @@ article.home {
 		text-align: center;
 	}
 
+	/* lighten links on hover, since home is dark-themed */
+	a:hover {
+		color: saturate($brand-primary, 20%);
+	}
+
 	#mainContainer{
 		margin-top:8rem;
 	}

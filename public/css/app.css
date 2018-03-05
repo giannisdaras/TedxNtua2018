@@ -13488,6 +13488,7 @@ blockquote.quote::after {
 article.home {
   background: #202020;
   color: #FAFAFA;
+  /* lighten links on hover, since home is dark-themed */
 }
 
 article.home h1,
@@ -13497,6 +13498,10 @@ article.home h4,
 article.home h5,
 article.home h6 {
   text-align: center;
+}
+
+article.home a:hover {
+  color: #ff1505;
 }
 
 article.home #mainContainer {

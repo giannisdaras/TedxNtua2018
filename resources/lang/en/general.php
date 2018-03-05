@@ -109,7 +109,7 @@ return [
 			],
 			'map' => [
 				'title' => '_map & venue',
-				'desc' => 'TEDxNTUA 2018 will take place at the Athens Planetarium. The Planetarium is located at 387 Syggrou Avenue, just under 7 minutes on foot from the nearest bus station.',
+				'desc' => 'TEDxNTUA 2018 will take place at the Athens Planetarium. The Planetarium is located at 387 Syggrou Avenue, just under 7 minutes on foot from the nearest bus station. Access via public transport: <ul><li>550, B2 (<a href="http://telematics.oasa.gr/en/#stationInfo_240009_%CE%A9%CE%9D%CE%91%CE%A3%CE%95%CE%99%CE%9F_37.9423944,23.6978659" target="_blank">ONASEIO</a> stop)</li><li>A2 (<a href="http://telematics.oasa.gr/en/#stationInfo_380002_%CE%99%CE%91%CE%A3%CE%A9%CE%9D%CE%9F%CE%A3_37.9399224,23.700599" target="_blank">IASONOS</a> stop)</li></ul>',
 			],
 		],
 	],
