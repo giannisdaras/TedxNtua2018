@@ -242,6 +242,106 @@ return [
 	'privacy' => [
 		'title' => 'Privacy Policy',
 		'description' => 'Learn how our website uses a few of your browsing data to improve your experience and provide you with useful functionalities.',
+		'content' => '
+By entering and continuing your browsing on the [tedxntua.com](https://tedxntua.com) webpage and the subdomains related to it, [2015.tedxntua.com](https://2015.tedxntua.com), [2017.tedxntua.com](https://2017.tedxntua.com) and [2018.tedxntua.com](https://2018.tedxntua.com), you explicitly and fully accept the terms of this Privacy Policy.
+
+#### 1. Definitions
+
+From now on, "the current website" is defined as the set of the webpages contained in the site of [tedxntua.com](https://tedxntua.com) and the subdomains related to it, [2015.tedxntua.com](https://2015.tedxntua.com), [2017.tedxntua.com](https://2017.tedxntua.com) and [2018.tedxntua.com](https://2018.tedxntua.com).</p> 
+
+#### 2. Links to other sites
+
+The current website contains links to other websites, for the content and the privacy terms of which it bears no responsibility.
+
+#### 3. Personal data
+
+##### 3.1. Governing law
+
+The management and the protection of the personal data of visitors or users of this website\'s services is subject to the related provisions of Greek Law (Law 2472/1997, Law 3471/2006), European Law (95/46/EC, 2002/58/EC and 2009/136/EC Directives), and the regulatory acts of the Hellenic Data Protection Authority.
+
+##### 3.2. Collection of data
+
+###### 3.2.1. Contact forms
+
+The current website contains contact forms, from which upon the user\'s consent, the personal data of the user\'s full name and e-mail address is collected. The mentioned data is collected for the purpose of improving the services of the website, such as the information of users regarding the subject and the content of the website, as well as the response to questions or requests from users that are submitted through the aforementioned form, and under no circumstance is transferred to third parties.
+
+###### 3.2.2. Google Analytics
+
+The current website uses the Google Analytics service for the purpose of collecting and analyzing data regarding the behavior of users on the website, ie. the web traffic, the navigation to individual pages, the browsing duration on them or the links that led the users to those pages. All the above data is non-personally identifiable, is collected according to the [privacy policy of the service](https://www.google.com/intl/el/policies/privacy/partners), and is not selled nor transferred to third parties.
+
+###### 3.2.3. Google reCAPTCHA
+
+The current website uses the Google reCAPTCHA service for the purpose of preventing malicious attacks from bots. The service is used at the contact form of the website, where the user has to confirm that he/she is not a bot in order to send an e-mail through the form. The confirmation is done by sending non-personally identifiable data to the service, which is collected according to its [privacy policy](https://www.google.com/intl/el/policies/privacy/partners), and is not selled nor transferred to third parties.
+
+###### 3.2.4. Facebook Social Plugins
+
+The current website uses the Facebook Social Plugins service for the purpose of embedding content from the Facebook social networking platform. The collected data concerns the interaction of the user with the service, is non-personally identifiable information, is collected according to the [privacy policy of the service](https://www.facebook.com/about/privacy/), and is not selled nor transferred to third parties.
+
+###### 3.2.5. Instagram APIs
+
+The current website uses the Instagram API service for the purpose of embedding content from the Instagram social networking platform. This service does not collect any data.
+
+###### 3.2.6. IP addresses, browser and operating system data
+
+The current website has the ability to collect the IP address, the browser data and the operating system data of the device users use when connecting to the website. This data is collected exclusively for technical purposes, ie. for detecting and fixing possible errors, and not for the identification of the users.
+
+#### 4. Use of cookies
+
+To make this site work properly, we sometimes place small data files called cookies on your device. Most big websites do this too.
+
+##### 4.1. What are cookies?
+
+A cookie is a small text file that a website saves on your computer or mobile device when you visit the site. It enables the website to remember your actions and preferences (such as login, language, font size and other display preferences) over a period of time, so you don\'t have to keep re-entering them whenever you come back to the site or browse from one page to another.
+
+##### 4.2. How do we use cookies?
+
+The current website uses cookies to store the user\'s preferences regarding the language of the website, as well as the possible transfer of information from a page of the website to the next ones for the purpose of improving the user experience.
+
+Also, it uses third-party cookies from the Google Analytics, Google reCAPTCHA and Facebook Social Plugins services, for the same purposes mentioned above and which are subject to the corresponding privacy policies of the services.
+
+##### 4.3. How to control cookies?
+
+You can control and/or delete cookies as you wish – for details, see [aboutcookies.org](https://aboutcookies.org). You can delete all cookies that are already on your computer and you can set most browsers to prevent them from being placed. If you do this, however, you may have to manually adjust some preferences every time you visit a site and some services and functionalities may not work.
+
+#### 5. Changes to the privacy policy
+
+The current website maintains its right to unilaterally and without any previous notice modify the content of the current privacy policy, in any way it deems necessary and always within the Greek and European law and the related international treaties. In the case of modification we pledge ourselves to inform the website visitors by showing messages of adequate size in the various pages of the website or/and in any other way deemed necessary.
+',
+	],
+
+	/* LICENSE */
+	'license' => [
+		'title' => 'License',
+		'description' => '',
+		'content' => '
+#### TEDx License
+
+This independently organized TEDx event is operated under [license](https://www.ted.com/participate/organize-a-local-tedx-event/apply-for-a-tedx-license/tedx-license-agreement) from TED.
+
+#### Content Licensing
+
+The content of the current website is licensed under Creative Commons v4.0 BY, **unless** when other terms are mentioned explicitly. You can find more about this license [here](https://creativecommons.org/licenses/by/4.0/).
+
+##### You are free to
+
+ 1. Share — copy and redistribute the material in any medium or format
+ 2. Adapt — remix, transform, and build upon the material for any purpose, even commercially.
+
+The licensor cannot revoke these freedoms as long as you follow the license terms.
+
+Under the following terms:
+
+ 1. **Attribution** — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+
+ 2. **No additional restrictions** — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+
+#### Other creators\' content
+
+ 1. Logos of sponsors — In the sponsors page we include the logo of each organization/company, which is the owner of it.
+ 2. Names and TED, TEDx logos — The event is operated under license from the [TED](https://www.ted.com) organization, which is the owner of the TED, TEDx names, the corresponding logos that appear on the website, as well as the TEDxNTUA name, which is licensed to the executive team for the license term.
+ 3. [Font Awesome](https://fontawesome.com/v4.7.0/) Icons — The current website uses the Font Awesome icons by Dave Gandy, which are provided under the [following license](https://fontawesome.com/v4.7.0/license).
+ 4. [Bootstrap](https://getbootstrap.com) — The current website uses the Bootstrap framework, which is provided under [MIT license](https://github.com/twbs/bootstrap/blob/master/LICENSE).
+',
 	],
 
 	'cookies' => [

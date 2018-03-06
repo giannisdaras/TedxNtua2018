@@ -14436,9 +14436,10 @@ article.contact .g-recaptcha.error > div {
 
 /* END CONTACT PAGE */
 
-/* PRIVACY POLICY PAGE */
+/* PRIVACY POLICY AND LICENSE PAGE */
 
-article.privacy {
+article.privacy,
+article.license {
   font-size: .85rem;
 }
 
@@ -14544,7 +14545,8 @@ article.privacy {
   article.about,
   article.schedule,
   article.speakers,
-  article.privacy {
+  article.privacy,
+  article.license {
     font-size: .9rem;
   }
 }
@@ -14707,7 +14709,8 @@ article.privacy {
   article.about,
   article.schedule,
   article.speakers,
-  article.privacy {
+  article.privacy,
+  article.license {
     font-size: 1rem;
   }
 
@@ -14891,7 +14894,8 @@ article.privacy {
 
   article.about,
   article.speakers,
-  article.privacy {
+  article.privacy,
+  article.license {
     font-size: 1.1rem;
   }
 

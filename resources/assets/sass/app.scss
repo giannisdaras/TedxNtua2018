@@ -1373,8 +1373,8 @@ article.contact {
 
 /* END CONTACT PAGE */
 
-/* PRIVACY POLICY PAGE */
-article.privacy {
+/* PRIVACY POLICY AND LICENSE PAGE */
+article.privacy, article.license {
 	font-size: .85rem;
 }
 
@@ -1475,7 +1475,7 @@ article.privacy {
 			margin-bottom: 3rem;
 		}
 	}
-	article.about, article.schedule, article.speakers, article.privacy {
+	article.about, article.schedule, article.speakers, article.privacy, article.license {
 		font-size: .9rem;
 	}
 }
@@ -1613,7 +1613,7 @@ article.privacy {
 			display: none;
 		}
 	}
-	article.about, article.schedule, article.speakers, article.privacy {
+	article.about, article.schedule, article.speakers, article.privacy, article.license {
 		font-size: 1rem;
 	}
 	.blog-listing {
@@ -1760,7 +1760,7 @@ article.privacy {
 			width: 10%;
 		}
 	}
-	article.about, article.speakers, article.privacy {
+	article.about, article.speakers, article.privacy, article.license {
 		font-size: 1.1rem;
 	}
 	article.contact {

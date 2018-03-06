@@ -202,7 +202,7 @@ His research interests focus on the understanding of chaotic and turbulent dynam
                         'en' => 'The key to future-proofing our cities does not lie in big data itself, but in the people who generate this data in the first place.',
                         'el' => 'The key to future-proofing our cities does not lie in big data itself, but in the people who generate this data in the first place.'
                     ],
-                    'visible' => false,
+                    'visible' => true,
                     'img_src' => 'caroline-bos-1.jpg',
                     'img_src_alt' => 'caroline-bos-2.jpg',
                     'link' => 'https://www.unstudio.com/team?group=position',
