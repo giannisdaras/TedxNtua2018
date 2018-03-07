@@ -1,6 +1,6 @@
+# !/bin/bash
 # Use: resize.sh _dirname_ _freshopt_
 # The script will look into the raw subdirectory of _dirname_ and convert the images there into large and small versions
-
 if [ "$2" == "--fresh" ]; then
 	rm -rf $1/large/large_*
 	rm -rf $1/small/small_*
