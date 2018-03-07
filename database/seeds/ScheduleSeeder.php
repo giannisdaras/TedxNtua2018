@@ -226,6 +226,63 @@ Caroline Bos has taught as a guest lecturer at Princeton University, the Berlage
                 ])->id
             ]),
 
+            App\Schedule::updateOrCreate(['sid' => 'ioanna-theodorou'], [
+                'hour' => '16:00',
+                'visible' => false,
+                'img_src' => '/images/speakers/ioanna-theodorou-1.jpg',
+                'type' => 'talk',
+                'event_title' => [
+                    'en' => 'Ioanna Theodorou',
+                    'el' => 'Ιωάννα Θεοδώρου'
+                ],
+                'event_prev' => [
+                    'en' => '',
+                    'el' => ''
+                ],
+                'subtitle' => [
+                    'en' => '',
+                    'el' => ''
+                ],
+                'speaker_id' => App\Speaker::updateOrCreate(['sid' => 'ioanna-theodorou'], [
+                    'name' => [
+                        'en' => 'Ioanna Theodorou',
+                        'el' => 'Ιωάννα Θεοδώρου'
+                    ],
+                    'occupation' => [
+                        'en' => 'Social Enterpreneur – Founder of Campfire Innovation',
+                        'el' => 'Κοινωνική επιχειρηματίας – Ιδρύτρια του Campfire Innovation'
+                    ],
+                    'quote' => [
+                        'en' => 'The best way is always through',
+                        'el' => 'The best way is always through'
+                    ],
+                    'visible' => false,
+                    'img_src' => 'ioanna-theodorou-1.jpg',
+                    'img_src_alt' => 'ioanna-theodorou-2.jpg',
+                    'link' => 'https://campfireinnovation.org/profile/ioanna/',
+                    'bio' => [
+                        'en' => '
+Ioanna uses the startup mentality to reimagine how social impact can be achieved. 
+
+In 2015, she became involved in the refugee crisis in Greece as a volunteer aid coordinator. She then launched Campfire Innovation, an organisation building an ecosystem to develop more innovative solutions for refugee aid, from the grassroots up.
+
+Ioanna became a WEF Global Shaper in 2016. She was also a founding member of Reload Greece in 2012-2015.
+She lived across Europe and the Middle East and holds degrees in History of Art (University College London) and a MA in International Cultural Policy & Management (University of Warwick).
+',
+                        'el' => '
+Η Ιωάννα είναι κοινωνική επιχειρηματίας που γεφυρώνει τη λογική των startups με την κοινωνική προσφορά.
+
+Το 2015, έχοντας ζήσει στην Συρία και διαμένοντας πλέον στην Ελλάδα, δραστηριoποιήθηκε εντατικά ως εθελόντρια και συντονίστρια στο προσφυγικό. Στην συνέχεια δημιούργησε το Campfire Innovation, μια οργάνωση που χαρτογραφεί και δικτυώνει της δράσεις της κοινωνίας των πολιτών στην ανθρωπιστική βοήθεια και υποστηρίζει την ανάπτυξη καινοτόμων λύσεων. 
+
+Η Ιωάννα έγινε Global Shaper το 2016. Είναι επίσης συνιδρύτρια του Reload Greece και με την επιστροφή της στην Ελλάδα, έχει εμπλακεί ενεργά στον χώρο της κοινωνικής επιχειρηματικότητας, κυρίως μέσα από τον ρόλο της στην δημιουργία του πρώτου προγράμματος υποστήριξης κοινωνικών επιχειρηματιών του Δήμου Αθηναίων το 2013.
+
+Πηγή έμπνευσης για τις δράσεις τις αποτελούν η διεθνής και καλλιτεχνική της εκπαίδευση. Έχει ζήσει στην Ευρώπη και τη Μέση Ανατολή, τελείωσε το Γαλλικό σχολείο στο Λονδίνο και κατέχει Bachelor στην Ιστορία Τέχνης (University College London 2011) και Μάστερ στη Διοίκηση Πολιτιστικών ΜΚΟ (University of Warwick 2012). 
+',
+                    ]
+                /* Create the object and return its id */
+                ])->id
+            ]),
+
             App\Schedule::updateOrCreate(['sid' => 'vassilios-makios'], [
                 'hour' => '16:00',
                 'visible' => false,
