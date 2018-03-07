@@ -50,13 +50,17 @@
 
 		</div>
 
-		<h2>{{ trans_choice('general.sponsors.rank.1', 1) }}</h2>
+		<h2>{{ trans_choice('general.sponsors.rank.1', 2) }}</h2>
 		
 		<div class="container-fluid">
 
 			<div class="row vertical-align">
 
-				<div class="col col-12 col-lg-6">
+				<div class="col col-12 col-lg-4">
+					<a href="https://{{ getLocale() }}.aegeanair.com/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_aegean-airlines.png') }}" srcset="{{ asset('images/sponsors/small/small_aegean-airlines.png') }} 576w, {{ asset('images/sponsors/large/large_aegean-airlines.png') }} 960w" alt="Aegean Airlines"></a>
+				</div>
+
+				<div class="col col-12 col-lg-4">
 					<a href="https://www.uber.com/{{ getLocale() }}-GR/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_uber.png') }}" srcset="{{ asset('images/sponsors/small/small_uber.png') }} 576w, {{ asset('images/sponsors/large/large_uber.png') }} 960w" alt="Uber"></a>
 				</div>
 
