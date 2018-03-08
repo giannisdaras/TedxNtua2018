@@ -256,7 +256,7 @@ Caroline Bos has taught as a guest lecturer at Princeton University, the Berlage
                         'en' => 'The best way is always through',
                         'el' => 'The best way is always through'
                     ],
-                    'visible' => false,
+                    'visible' => true,
                     'img_src' => 'ioanna-theodorou-1.jpg',
                     'img_src_alt' => 'ioanna-theodorou-2.jpg',
                     'link' => 'https://campfireinnovation.org/profile/ioanna/',
