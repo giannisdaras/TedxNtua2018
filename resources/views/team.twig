@@ -41,8 +41,24 @@
 
 		{% endfor %}
 
-		<div class="container-fluid angle-brackets">
-			<div class="row">
+		<div class="container-fluid thanks angle-brackets">
+			<div class="row justify-content-center">
+				<div class="col col-6 col-lg-3">
+					<a href="mailto:dora@telecom.ntua.gr" target="_blank">
+						<img class="img-fluid grid-image" src="{{ asset('images/team/varvarigou.jpg') }}" alt="{{ trans('general.team.varvarigou') }}"/>
+						<h5>{{ trans('general.team.varvarigou') | raw }}</h5>
+						<h6>{{ trans('general.team.varvarigou_role') }}</h6>
+					</a>
+				</div>
+				<div class="col col-6 col-lg-3">
+					<a href="mailto:augusta@mail.ntua.gr" target="_blank">
+						<img class="img-fluid grid-image" src="{{ asset('images/team/augusta.jpg') }}" alt="{{ trans('general.team.augusta') }}"/>
+						<h5>{{ trans('general.team.augusta') | raw }}</h5>
+						<h6>{{ trans('general.team.augusta_role') }}</h6>
+					</a>
+				</div>
+			</div>
+			<div class="row mt-4 mt-xl-5">
 				<div class="col col-12">
 					<p class="h4">{{ trans('general.team.thanks') }}</p>
 				</div>

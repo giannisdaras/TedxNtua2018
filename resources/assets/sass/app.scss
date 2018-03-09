@@ -1172,6 +1172,7 @@ article.sponsors {
 /* TEAM PAGE */
 
 article.team {
+	font-size: .85rem;
 
 	section.content h2 {
 		border-bottom: 2px dashed #333;
@@ -1205,10 +1206,29 @@ article.team {
 	a:hover .photo2 {
 		display: block;
 	}
+	a h5 {
+		margin-top: 0.5rem;
+		margin-bottom: 1rem;
+		font-size: 1.25em;
+	}
 
 	blockquote {
 		color: lighten($brand-secondary, 25%);
 		font-stretch: expanded;
+	}
+
+	.thanks {
+		p.h4 {
+			font-size: 1.35em;
+			margin-bottom: 0;
+		}
+		h5 {
+			margin-bottom: .25rem;
+		}
+		h6 {
+			color: #212529;
+			font-size: .9em;
+		}
 	}
 
 	.join-us-wrapper {
@@ -1475,7 +1495,7 @@ article.privacy, article.license {
 			margin-bottom: 3rem;
 		}
 	}
-	article.about, article.schedule, article.speakers, article.privacy, article.license {
+	article.about, article.schedule, article.speakers, article.team, article.privacy, article.license {
 		font-size: .9rem;
 	}
 }
@@ -1613,7 +1633,7 @@ article.privacy, article.license {
 			display: none;
 		}
 	}
-	article.about, article.schedule, article.speakers, article.privacy, article.license {
+	article.about, article.schedule, article.speakers, article.team, article.privacy, article.license {
 		font-size: 1rem;
 	}
 	.blog-listing {
@@ -1760,7 +1780,7 @@ article.privacy, article.license {
 			width: 10%;
 		}
 	}
-	article.about, article.speakers, article.privacy, article.license {
+	article.about, article.speakers, article.team, article.privacy, article.license {
 		font-size: 1.1rem;
 	}
 	article.contact {
@@ -1805,9 +1825,12 @@ article.privacy, article.license {
 		}
 	}
 	article.team {
-		h5 {
+		/*h5 {
 			font-size: 1.5rem;
 		}
+		h6 {
+			font-size: 1rem;
+		}*/
 	}
 }
 

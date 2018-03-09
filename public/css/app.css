@@ -14209,6 +14209,7 @@ article.sponsors img.grid-image {
 /* TEAM PAGE */
 
 article.team {
+  font-size: .85rem;
   /* replace default bootstrap margins */
 }
 
@@ -14248,9 +14249,29 @@ article.team a:hover .photo2 {
   display: block;
 }
 
+article.team a h5 {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.25em;
+}
+
 article.team blockquote {
   color: #626262;
   font-stretch: expanded;
+}
+
+article.team .thanks p.h4 {
+  font-size: 1.35em;
+  margin-bottom: 0;
+}
+
+article.team .thanks h5 {
+  margin-bottom: .25rem;
+}
+
+article.team .thanks h6 {
+  color: #212529;
+  font-size: .9em;
 }
 
 article.team .join-us-wrapper {
@@ -14545,6 +14566,7 @@ article.license {
   article.about,
   article.schedule,
   article.speakers,
+  article.team,
   article.privacy,
   article.license {
     font-size: .9rem;
@@ -14709,6 +14731,7 @@ article.license {
   article.about,
   article.schedule,
   article.speakers,
+  article.team,
   article.privacy,
   article.license {
     font-size: 1rem;
@@ -14894,6 +14917,7 @@ article.license {
 
   article.about,
   article.speakers,
+  article.team,
   article.privacy,
   article.license {
     font-size: 1.1rem;
@@ -14934,8 +14958,13 @@ article.license {
     top: -9.375vw;
   }
 
-  article.team h5 {
-    font-size: 1.5rem;
+  article.team {
+    /*h5 {
+			font-size: 1.5rem;
+		}
+		h6 {
+			font-size: 1rem;
+		}*/
   }
 }
 
