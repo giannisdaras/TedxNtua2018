@@ -427,7 +427,7 @@ Some of the clients include Les Infusions de Prada, Johnnie Walker, Nespresso, A
                         'en' => 'Live as if you were to die tomorrow. Learn as if you were to live forever. ~Mahatma Gandhi',
                         'el' => 'Live as if you were to die tomorrow. Learn as if you were to live forever. ~Mahatma Gandhi'
                     ],
-                    'visible' => false,
+                    'visible' => true,
                     'img_src' => 'dionysis-zindros-1.jpg',
                     'img_src_alt' => 'dionysis-zindros-2.jpg',
                     'link' => 'https://dionyziz.com/',
