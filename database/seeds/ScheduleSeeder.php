@@ -333,6 +333,56 @@ He is a senior member of the IEEE, member of the Canadian Association of Physici
                 ])->id
             ]),
 
+            App\Schedule::updateOrCreate(['sid' => 'aimilios-chalamandaris'], [
+                'hour' => '16:00',
+                'visible' => false,
+                'img_src' => '/images/speakers/aimilios-chalamandaris-1.jpg',
+                'type' => 'talk',
+                'event_title' => [
+                    'en' => 'Aimilios Chalamandaris',
+                    'el' => 'Αιμίλιος Χαλαμανδάρης'
+                ],
+                'event_prev' => [
+                    'en' => '',
+                    'el' => ''
+                ],
+                'subtitle' => [
+                    'en' => '',
+                    'el' => ''
+                ],
+                'speaker_id' => App\Speaker::updateOrCreate(['sid' => 'aimilios-chalamandaris'], [
+                    'name' => [
+                        'en' => 'Aimilios Chalamandaris',
+                        'el' => 'Αιμίλιος Χαλαμανδάρης'
+                    ],
+                    'occupation' => [
+                        'en' => 'Co-founder and CEO of Innoetics',
+                        'el' => 'Συνιδρυτής και CEO της Innoetics'
+                    ],
+                    'quote' => [
+                        'en' => 'Hard work and love for what you are doing, always leads to success.',
+                        'el' => 'Ο μόνος τρόπος να πετύχεις αυτό που θέλεις, εκτός από την επιμονή, είναι και η αγάπη σε αυτό που κάνεις.'
+                    ],
+                    'visible' => false,
+                    'img_src' => 'aimilios-chalamandaris-1.jpg',
+                    'img_src_alt' => 'aimilios-chalamandaris-2.jpg',
+                    'link' => 'https://www.innoetics.com/about/',
+                    'bio' => [
+                        'en' => '
+Dr. Aimilios Chalamandaris is a co-founder and CEO of Innoetics. He holds a BA and a PhD in Electrical and Computer Engineering from the NTUA, as well as a master’s degree in Telecommunications and Digital Signal Processing from the Imperial College of London. He has authored more than 30 original scientific papers, and is one of the founding members of the team, which developed one of the world’s leading synthetic speech technologies.
+
+From 2008 until today, as CEO of the company, he has led to the establishment of Innoetics as one of the most important companies of synthetic speech internationally, culminating in its acquisition by Samsung Electronics in 2017.
+',
+                        'el' => '
+Ο Δρ. Αιμίλιος Χαλαμανδάρης είναι συνιδρυτής και CEO της εταιρίας Innoetics. Έχει λάβει το διδακτορικό του τίτλο και το πτυχίο του Ηλεκτρολόγου Μηχανικού και Μηχανικού Η/Υ από το ΕΜΠ, καθώς και το μεταπτυχιακό τίτλο Τηλεπικοινωνιών και Ψηφιακής Επεξεργασίας Σήματος από το Imperial College του Λονδίνου. Έχει συγγράψει περισσότερες από 30 πρωτότυπες επιστημονικές εργασίες, ενώ αποτελεί ένα από τα ιδρυτικά μέλη της ομάδας που ανέπτυξε μια από τις κορυφαίες τεχνολογίες συνθετικής ομιλίας στον κόσμο.
+
+Από το 2008 μέχρι σήμερα ως επικεφαλής της εταιρίας οδήγησε στην καθιέρωση της Innoetics ως μιας από τις σημαντικότερες εταιρίες συνθετικής ομιλίας διεθνώς και την εξαγορά της από την Samsung Electronics το 2017.
+',
+                    ]
+                /* Create the object and return its id */
+                ])->id
+            ]),
+
             App\Schedule::updateOrCreate(['sid' => 'marcel-christ'], [
                 'hour' => '16:00',
                 'visible' => false,
