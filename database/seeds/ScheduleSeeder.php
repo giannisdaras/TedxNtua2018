@@ -363,7 +363,7 @@ He is a senior member of the IEEE, member of the Canadian Association of Physici
                         'en' => 'Hard work and love for what you are doing, always leads to success.',
                         'el' => 'Ο μόνος τρόπος να πετύχεις αυτό που θέλεις, εκτός από την επιμονή, είναι και η αγάπη σε αυτό που κάνεις.'
                     ],
-                    'visible' => false,
+                    'visible' => true,
                     'img_src' => 'aimilios-chalamandaris-1.jpg',
                     'img_src_alt' => 'aimilios-chalamandaris-2.jpg',
                     'link' => 'https://www.innoetics.com/about/',
