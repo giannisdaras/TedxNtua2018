@@ -494,6 +494,56 @@ His research interests include blockchain foundations, provable security of the 
                 /* Create the object and return its id */
                 ])->id
             ]),
+
+App\Schedule::updateOrCreate(['sid' => 'galani'], [
+                'hour' => '14:00',
+                'visible' => false,
+                'img_src' => '/images/speakers/galani-1.jpg',
+                'type' => 'talk',
+                'event_title' => [
+                    'en' => 'Dimitra Galani',
+                    'el' => 'Δήμητρα Γαλάνη'
+                ],
+                'event_prev' => [
+                    'en' => 'Everest, the end of chaos!',
+                    'el' => 'Το τέλος του χάους στο everest!'
+                ],
+                'subtitle' => [
+                    'en' => '',
+                    'el' => ''
+                ],
+                /* This is where the Speaker object is created with its proper attributes */
+                'speaker_id' => App\Speaker::updateOrCreate(['sid' => 'galani'], [
+                    'name' => [
+                        'en' => 'Dimitra Galani',
+                        'el' => 'Δήμητρα Γαλάνη'
+                    ],
+                    'occupation' => [
+                        'en' => 'Artist',
+                        'el' => 'Καλλιτέχνις'
+                    ],
+                    'quote' => [
+                        'en' => 'God does not play dice with the universe',
+                        'el' => 'Ο Θεός δεν παίζει ζάρια με το Σύμπαν'
+                    ],
+                    'visible' => false,
+                    'img_src' => 'galani-1.jpg',
+                    'img_src_alt' => 'galani-2.jpg',
+                    'link' => ' https://www.galani.gr',
+                    'bio' => [
+                        'en' => 'In her distinguished 40-year career Dimitra Galani has made a great contribution to Greek song, music and culture. She is an exceptional artist, a serious and dignified presence in our country’s music scene. Her enduring cross-generational appeal is based on her unique voice, inherent musicality, powerful stage presence and peerless ability to interpret material by top Greek composers and lyricists. In her long career she has performed songs with lyrics by the country’s prominent lyricists and poets. She also collaborated with great artists, composers and songwriters, such as Manos Hadjidakis, Mikis Theodorakis, Vassilis Tsitsanis, Manos Loizos, a.o.
+
+In her continuing thirst for information and keen interest for everything new, she tries to keep abreast of current musical trends in Greece and elsewhere. During her long career she has occasionally taken the role of the producer, introducing several young songwriters to the public. Additionally, she has written songs for other singers, as well as music for film, television and the theatre, and won multiple awards in music contests and annual festivals. She has also worked with top international artists like Cesaria Evora, Vinicio Capossela, Gustavo Santaolalla, Bajofondo a.o.
+
+With her heightened sense of social awareness and responsibility, she has become involved in matters of public interest, actively participating in humanitarian movements and supporting the artist’s right to own the copyright to their work.
+',
+                        'el' => 'Η Δήμητρα Γαλάνη αποτελεί μια ξεχωριστή παρουσία στην εξέλιξη του σύγχρονου μουσικού μας πολιτισμού τις τελευταίες δεκαετίες τόσο ερμηνευτικά όσο και δημιουργικά. Μια καλλιτέχνις που ξέρει πως να μαγεύει με την ιδιαιτερότητα και την ομορφιά της φωνής της αλλά και με τις ποικίλες εκφράσεις της δημιουργικότητάς της, συνθετικές και άλλες, που καλύπτουν μια ευρεία μουσική γκάμα, από το παραδοσιακό και το λαϊκό μας τραγούδι, μέσα από το κύριο σώμα του έντεχνου ποιητικού τραγουδιού ως τις σύγχρονες μουσικές τάσεις της εποχής μας – γεννώντας και προκαλώντας δημιουργικές συνεργασίες που την φέρνουν στην πρώτη γραμμή. Η Δήμητρα στην μακρόχρονη πορεία της έχει συνεργαστεί με τους κορυφαίους συνθέτες μας έχοντας δώσει την φωνή της στον λόγο των σημαντικότερων ποιητών και στιχουργών μας. Την συναντάμε σε καθοριστικές στιγμές της μουσικής μας ιστορίας όπου η ερμηνεία της ολοκληρώνει σημαντικά έργα που υπογράφονται από τον Χατζιδάκι, τον Τσιτσάνη, τον Θεοδωράκη, τον Λοΐζο κ.ά. ενώ συμπράττει και με όλους τους μουσικούς δημιουργούς της γενιάς της και κάνει ξεχωριστές διεθνείς συνεργασίες.
+
+Ανοιχτή σε όλες τις σύγχρονες μουσικές τάσεις, η Δήμητρα Γαλάνη «καθοδηγεί» ως παραγωγός νεώτερους τραγουδοποιούς ή συνεργάζεται στενά με νέους μουσικούς που προέρχονται από «σκηνές» όπως η electronica, το ευρύτερο rock, η jazz κ.λπ. Ένα πρόσφατο δείγμα της δουλειάς της σε αυτή την κατεύθυνση είναι το “Chronos Project”, που σε συνεργασία με διακεκριμένους jazz σολίστες / δημιουργούς, κινείται σε πολυστυλιστικούς / πολυμουσικούς και διαχρονικούς δρόμους.'
+                    ]
+                /* Create the object and return its id */
+                ])->id
+            ]),
         ];
 
     }
