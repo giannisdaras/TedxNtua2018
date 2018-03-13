@@ -504,8 +504,8 @@ App\Schedule::updateOrCreate(['sid' => 'galani'], [
                     'el' => 'Δήμητρα Γαλάνη'
                 ],
                 'event_prev' => [
-                    'en' => 'Everest, the end of chaos!',
-                    'el' => 'Το τέλος του χάους στο everest!'
+                    'en' => '',
+                    'el' => 'Συν-ομιλία έκπληξη!'
                 ],
                 'subtitle' => [
                     'en' => '',
@@ -522,10 +522,10 @@ App\Schedule::updateOrCreate(['sid' => 'galani'], [
                         'el' => 'Καλλιτέχνις'
                     ],
                     'quote' => [
-                        'en' => 'God does not play dice with the universe',
-                        'el' => 'Ο Θεός δεν παίζει ζάρια με το Σύμπαν'
+                        'en' => 'God does not play dice with the universe. ~Albert Einstein',
+                        'el' => 'Ο Θεός δεν παίζει ζάρια με το Σύμπαν. ~Albert Einstein'
                     ],
-                    'visible' => false,
+                    'visible' => true,
                     'img_src' => 'galani-1.jpg',
                     'img_src_alt' => 'galani-2.jpg',
                     'link' => ' https://www.galani.gr',
