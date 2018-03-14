@@ -113,9 +113,9 @@ Her research interest lies in developing brain-computer interfaces (BCIs) and ar
 She received her PhD from Imperial College London in June 2017, under the supervision of [Robert Leech](https://kclpure.kcl.ac.uk/portal/robert.leech.html). For her PhD, she has developed an "[AI neuroscientist](https://www.wired.co.uk/article/automatic-neuroscientist-ai-brain-experiments)" – a novel BCI for optimizing experimental design by combining real-time fMRI with Bayesian optimization.
 Alongside her research, she is working as a co-director for [AXNS](https://axnscollective.org/), a curatorial collective interested in the intersection between neuroscience and art.',
                         'el'=> '
-Η Romy Lorenz είναι γνωσιακή νευροεπιστήμονας με σπουδές στην ψυχολογία και τη βιοϊατρική μηχανική. Είναι μεταδιδακτορική ερευνήτρια στο Computational, Cognitive and Clinical Neuroimaging Lab ([C3NL](https://www.c3nl.com)) στο Imperial College στο Λονδίνο. Τον ερχόμενο Σεπτέμβρη, θα λάβει την τετραετή μεταδιδακτορική υποτροφία "Sir Henry Wellcome" και θα συνεργαστεί με τους [John Duncan](http://www.neuroscience.cam.ac.uk/directory/profile.php?johnduncan) (Cambridge, UK) και [Russ Poldrack](https://poldracklab.stanford.edu/) (Stanford, US). 
+Η Romy Lorenz είναι γνωσιακή νευροεπιστήμονας με σπουδές στην ψυχολογία και τη βιοϊατρική μηχανική. Είναι μεταδιδακτορική ερευνήτρια στο Computational, Cognitive and Clinical Neuroimaging Lab ([C3NL](https://www.c3nl.com)) στο Imperial College στο Λονδίνο. Τον ερχόμενο Σεπτέμβρη, θα λάβει την τετραετή μεταδιδακτορική υποτροφία "Sir Henry Wellcome" και θα συνεργαστεί με τους [John Duncan](http://www.neuroscience.cam.ac.uk/directory/profile.php?johnduncan) (Cambridge, UK) και [Russ Poldrack](https://poldracklab.stanford.edu/) (Stanford, US).
 
-Γενικά, το ερευνητικό ενδιαφέρον της επικεντρώνεται στην ανάπτυξη brain-machine interfaces (BCIs) και στην τεχνητή νοημοσύνη με τη χρήση τεχνικών νευροαπεικόνισης και μηχανικής μάθησης. Αντί να εξετάζει τα BCIs υπό το πρίσμα της υποστηρικτικής τεχνολογίας, είναι παθιασμένη με τη χρήση των BCIs ως ένα νέο πειραματικό μοντέλο στη γνωσιακή νευροεπιστήμη. 
+Γενικά, το ερευνητικό ενδιαφέρον της επικεντρώνεται στην ανάπτυξη brain-machine interfaces (BCIs) και στην τεχνητή νοημοσύνη με τη χρήση τεχνικών νευροαπεικόνισης και μηχανικής μάθησης. Αντί να εξετάζει τα BCIs υπό το πρίσμα της υποστηρικτικής τεχνολογίας, είναι παθιασμένη με τη χρήση των BCIs ως ένα νέο πειραματικό μοντέλο στη γνωσιακή νευροεπιστήμη.
 
 Έλαβε το διδακτορικό της από το Imperial College London τον Ιούνιο του 2017, υπό την επίβλεψη του [Robert Leech](https://kclpure.kcl.ac.uk/portal/robert.leech.html). Εκεί, ανέπτυξε το σύστημα "[AI neuroscientist](https://www.wired.co.uk/article/automatic-neuroscientist-ai-brain-experiments)" - ένα νέο BCI για τη βελτιστοποίηση του πειραματικού σχεδιασμού. Παράλληλα με την έρευνά της, είναι συνδιευθύντρια στον σύλλογο [AXNS](https://axnscollective.org/), που έχει στόχο τη συνάντηση τέχνης και επιστήμης.',
                     ]
@@ -216,9 +216,9 @@ Caroline Bos has taught as a guest lecturer at Princeton University, the Berlage
 ',
                         'el' => '
 Η Caroline Bos σπούδασε Ιστορία της Τέχνης στο Birkbeck College του Πανεπιστημίου του Λονδίνου και Αστικό & Περιφερειακό Σχεδιασμό στο τμήμα Γεωεπιστημών του Πανεπιστημίου της Ουτρέχτης. Το 1988 ίδρυσε μαζί με τον αρχιτέκτονα Ben van Berkel το Van Berkel & Bos Architectuurbureau, επεκτείνοντας το θεωρητικό και γραπτό της έργο στην πρακτική της αρχιτεκτονικής.
- 
+
 Το 1998, η Caroline Bos ίδρυσε το UNStudio (United Net). Το UNStudio παρουσιάζεται ως ένα δίκτυο ειδικών στην αρχιτεκτονική, την αστική ανάπτυξη και τις υποδομές. Τα υλοποιημένα έργα περιλαμβάνουν τη Γέφυρα Erasmus στο Ρότερνταμ, το Μουσείο Mercedes-Benz στη Στουτγάρδη και τον Κεντρικό Σταθμό του Arnhem στην Ολλανδία.
- 
+
 Η Caroline Bos έχει διδάξει ως προσκεκλημένη καθηγήτρια στο Πανεπιστήμιο του Princeton, στο Ινστιτούτο Berlage στο Ρότερνταμ, στην Ακαδημία Καλών Τεχνών της Βιέννης καθώς και στην Ακαδημία Αρχιτεκτονικής του Arnhem. Το 2012 βραβεύτηκε ως Επίτιμη Καθηγήτρια στο Τμήμα Αρχιτεκτόνων, Κτιρίων και Σχεδιασμού του Πανεπιστημίου της Μελβούρνης.
 ',
                     ]
@@ -262,7 +262,7 @@ Caroline Bos has taught as a guest lecturer at Princeton University, the Berlage
                     'link' => 'https://campfireinnovation.org/profile/ioanna/',
                     'bio' => [
                         'en' => '
-Ioanna uses the startup mentality to reimagine how social impact can be achieved. 
+Ioanna uses the startup mentality to reimagine how social impact can be achieved.
 
 In 2015, she became involved in the refugee crisis in Greece as a volunteer aid coordinator. She then launched Campfire Innovation, an organisation building an ecosystem to develop more innovative solutions for refugee aid, from the grassroots up.
 
@@ -272,11 +272,11 @@ She lived across Europe and the Middle East and holds degrees in History of Art 
                         'el' => '
 Η Ιωάννα είναι κοινωνική επιχειρηματίας που γεφυρώνει τη λογική των startups με την κοινωνική προσφορά.
 
-Το 2015, έχοντας ζήσει στην Συρία και διαμένοντας πλέον στην Ελλάδα, δραστηριoποιήθηκε εντατικά ως εθελόντρια και συντονίστρια στο προσφυγικό. Στην συνέχεια δημιούργησε το Campfire Innovation, μια οργάνωση που χαρτογραφεί και δικτυώνει της δράσεις της κοινωνίας των πολιτών στην ανθρωπιστική βοήθεια και υποστηρίζει την ανάπτυξη καινοτόμων λύσεων. 
+Το 2015, έχοντας ζήσει στην Συρία και διαμένοντας πλέον στην Ελλάδα, δραστηριoποιήθηκε εντατικά ως εθελόντρια και συντονίστρια στο προσφυγικό. Στην συνέχεια δημιούργησε το Campfire Innovation, μια οργάνωση που χαρτογραφεί και δικτυώνει της δράσεις της κοινωνίας των πολιτών στην ανθρωπιστική βοήθεια και υποστηρίζει την ανάπτυξη καινοτόμων λύσεων.
 
 Η Ιωάννα έγινε Global Shaper το 2016. Είναι επίσης συνιδρύτρια του Reload Greece και με την επιστροφή της στην Ελλάδα, έχει εμπλακεί ενεργά στον χώρο της κοινωνικής επιχειρηματικότητας, κυρίως μέσα από τον ρόλο της στην δημιουργία του πρώτου προγράμματος υποστήριξης κοινωνικών επιχειρηματιών του Δήμου Αθηναίων το 2013.
 
-Πηγή έμπνευσης για τις δράσεις τις αποτελούν η διεθνής και καλλιτεχνική της εκπαίδευση. Έχει ζήσει στην Ευρώπη και τη Μέση Ανατολή, τελείωσε το Γαλλικό σχολείο στο Λονδίνο και κατέχει Bachelor στην Ιστορία Τέχνης (University College London 2011) και Μάστερ στη Διοίκηση Πολιτιστικών ΜΚΟ (University of Warwick 2012). 
+Πηγή έμπνευσης για τις δράσεις τις αποτελούν η διεθνής και καλλιτεχνική της εκπαίδευση. Έχει ζήσει στην Ευρώπη και τη Μέση Ανατολή, τελείωσε το Γαλλικό σχολείο στο Λονδίνο και κατέχει Bachelor στην Ιστορία Τέχνης (University College London 2011) και Μάστερ στη Διοίκηση Πολιτιστικών ΜΚΟ (University of Warwick 2012).
 ',
                     ]
                 /* Create the object and return its id */
@@ -319,13 +319,13 @@ She lived across Europe and the Middle East and holds degrees in History of Art 
                     'link' => 'http://www.corallia.org/en/about-corallia/team.html',
                     'bio' => [
                         'en' => '
-Vassilios Makios received his Electrical Engineering degree from the Technical University in Munich, and the Ph.D from the Max Planck Institute for Plasmaphysics and the Technical University in Munich. He was Research Associate in the Max Planck Institute for Plasmaphysics in Munich, where he was associated with microwave interaction studies on plasmas. He served as a professor in the Department of Electronics, Carleton University in Ottawa, Canada. From 1977 he is an honorary research professor of Carleton University. From 1977 he was a professor of Engineering in the Electrical Engineering Department of the University of Patras. He has published over 150 papers and numerous patents. He has received the silver medal and the golden medal of the German Electrical Engineering Society (VDE) and has also received the IEEE 2000 Chester Sall Award for the 2nd place Transaction Award Paper. 
- 
+Vassilios Makios received his Electrical Engineering degree from the Technical University in Munich, and the Ph.D from the Max Planck Institute for Plasmaphysics and the Technical University in Munich. He was Research Associate in the Max Planck Institute for Plasmaphysics in Munich, where he was associated with microwave interaction studies on plasmas. He served as a professor in the Department of Electronics, Carleton University in Ottawa, Canada. From 1977 he is an honorary research professor of Carleton University. From 1977 he was a professor of Engineering in the Electrical Engineering Department of the University of Patras. He has published over 150 papers and numerous patents. He has received the silver medal and the golden medal of the German Electrical Engineering Society (VDE) and has also received the IEEE 2000 Chester Sall Award for the 2nd place Transaction Award Paper.
+
 He is a senior member of the IEEE, member of the Canadian Association of Physicists, the German Physical Society and the VDE, Professional Engineer of the Province of Ontario and the Greek Technical Chamber. He has served as President of the Research Center Athena. In 2006, he co-founded the Hellenic Technology Clusters Initiative-Corallia, and is up to date the Head of the Unit. He plays an instrumental role in the design and implementation of interventions introduced by Corallia with a vision “to sustain a Greek environment with the right framework conditions to allow sciences, innovation and entrepreneurship to flourish again” and ultimate goal “to establish the brand Innovation Designed in Greece”.
 ',
                         'el' => '
-Ο Βασίλειος Μακιός έλαβε Δίπλωμα Ηλεκτρολόγου Μηχανικού από το Πολυτεχνείο του Μονάχου και Διδακτορικό από το Max Planck Institut fur Plasmaphysik Garching. Έχει διατελέσει επιστημονικός συνεργάτης στο Max Planck Institut fur Plasmaphysik στο Μόναχο, και καθηγητής στο Τμήμα Ηλεκτρονικών του Carleton University στην Οτάβα του Καναδά, στο οποίο έγινε επίτιμος καθηγητής. Tο 1977 εξελέγη καθηγητής στο τμήμα Ηλεκτρολόγων Μηχανικών και Τεχνολογίας Υπολογιστών του Πανεπιστημίου Πατρών. Έχει κάνει πάνω από 150 δημοσιεύσεις και κατέχει πολυάριθμα διπλώματα ευρεσιτεχνίας. Είναι κάτοχος του ασημένιου και χρυσού μεταλλίου της Γερμανικής Εταιρείας Ηλεκτρολόγων Μηχανικών (VDE). Έλαβε από την ΙΕΕΕ το Chester Sall Award της ΙΕΕΕ Consumer Electronics Society για την δεύτερη καλύτερη δημοσίευση στα περιοδικά της για το έτος 2000. 
- 
+Ο Βασίλειος Μακιός έλαβε Δίπλωμα Ηλεκτρολόγου Μηχανικού από το Πολυτεχνείο του Μονάχου και Διδακτορικό από το Max Planck Institut fur Plasmaphysik Garching. Έχει διατελέσει επιστημονικός συνεργάτης στο Max Planck Institut fur Plasmaphysik στο Μόναχο, και καθηγητής στο Τμήμα Ηλεκτρονικών του Carleton University στην Οτάβα του Καναδά, στο οποίο έγινε επίτιμος καθηγητής. Tο 1977 εξελέγη καθηγητής στο τμήμα Ηλεκτρολόγων Μηχανικών και Τεχνολογίας Υπολογιστών του Πανεπιστημίου Πατρών. Έχει κάνει πάνω από 150 δημοσιεύσεις και κατέχει πολυάριθμα διπλώματα ευρεσιτεχνίας. Είναι κάτοχος του ασημένιου και χρυσού μεταλλίου της Γερμανικής Εταιρείας Ηλεκτρολόγων Μηχανικών (VDE). Έλαβε από την ΙΕΕΕ το Chester Sall Award της ΙΕΕΕ Consumer Electronics Society για την δεύτερη καλύτερη δημοσίευση στα περιοδικά της για το έτος 2000.
+
 Είναι μέλος της ΙΕΕΕ, μέλος του Canadian Association of Physicists, της German Physical Society, του VDE, και του ΤΕΕ. Έχει διετελέσει Γενικός Δ/ντής και Πρόεδρος του Διοικητικού Συμβουλίου του Ερευνητικού Κέντρου Αθηνά και διευθυντής του Ινστιτούτου Βιομηχανικών Συστημάτων. Έχει συμβάλει στην ανάπτυξη σημαντικού αριθμού επιχειρήσεων υψηλής τεχνολογίας στην Ελλάδα και από το 2005 είναι Γενικός Διευθυντής του Corallia.
 ',
                     ]
@@ -430,7 +430,7 @@ Some of the clients include Les Infusions de Prada, Johnnie Walker, Nespresso, A
                         'el' => '
 Ο Marcel Christ (1969) είναι σκηνοθέτης ταινιών μικρού μήκους και διακεκριμένος φωτογράφος νεκρής φύσης με έδρα το Amsterdam.
 
-Η προσέγγισή του στη φωτογράφιση νεκρής φύσης είναι πραγματικά μοναδική, κάνοντας την δουλειά του μια από τις πιο αναγνωρίσιμες στη βιομηχανία. Έχοντας σπουδάσει Χημικός Μηχανικός αλλά και φωτογραφία, ο Christ συνδυάζει αυτά τα δύο ενδιαφέροντά του για να πετύχει τα δυναμικά έργα του. Το ιδιαίτερο αυτό υπόβαθρο τον καθιστά έναν ασυνήθιστα δυναμικό και πειραματικό φωτογράφο και κινηματογραφιστή που αγαπά να εξερευνά τα όρια των ειδικών εφέ και των τεχνικών που χρησιμοποιεί. 
+Η προσέγγισή του στη φωτογράφιση νεκρής φύσης είναι πραγματικά μοναδική, κάνοντας την δουλειά του μια από τις πιο αναγνωρίσιμες στη βιομηχανία. Έχοντας σπουδάσει Χημικός Μηχανικός αλλά και φωτογραφία, ο Christ συνδυάζει αυτά τα δύο ενδιαφέροντά του για να πετύχει τα δυναμικά έργα του. Το ιδιαίτερο αυτό υπόβαθρο τον καθιστά έναν ασυνήθιστα δυναμικό και πειραματικό φωτογράφο και κινηματογραφιστή που αγαπά να εξερευνά τα όρια των ειδικών εφέ και των τεχνικών που χρησιμοποιεί.
 
 Οι εικόνες που δημιουργεί είναι το αποτέλεσμα του ενδιαφέροντός του στην απρόβλεπτη και εκπληκτική συμπεριφορά των υλικών με τα οποία δουλεύει σε ένα σχολαστικά ελεγχόμενο στούντιο. "Ελεγχόμενη σύμπτωση" είναι το όνομά που δίνει στα δημιουργήματά του. Μέσα από το έργο του βρίσκει τρόπους να δώσει ζωή σε άψυχα αντικείμενα και να απαθανατίσει μοναδικές στιγμές του χρόνου. Τίποτα δεν είναι ακίνητο στις εικόνες του. Όλα κινούνται, πηδούν και πετάνε.
 
@@ -494,6 +494,53 @@ His research interests include blockchain foundations, provable security of the 
                 ])->id
             ]),
 
+            App\Schedule::updateOrCreate(['sid' => 'lc-architects'], [
+                'hour' => '16:00',
+                'visible' => false,
+                'img_src' => '/images/speakers/lc1.jpg',
+                'type' => 'talk',
+                'event_title' => [
+                    'en' => 'LC Architects',
+                    'el' => 'LC Architects'
+                ],
+                'event_prev' => [
+                    'en' => '',
+                    'el' => ''
+                ],
+                'subtitle' => [
+                    'en' => '',
+                    'el' => ''
+                ],
+                'speaker_id' => App\Speaker::updateOrCreate(['sid' => 'lc-architects'], [
+                    'name' => [
+                        'en' => 'LC Architects',
+                        'el' => 'LC Architects'
+                    ],
+                    'occupation' => [
+                        'en' => 'Architects',
+                        'el' => 'Αρχιτέκτονες'
+                    ],
+                    'quote' => [
+                        'en' => 'Architecture is a journey to solve each time a new exciting enigma of space, beauty and experiences.',
+                        'el' => 'Architecture is a journey to solve each time a new exciting enigma of space, beauty and experiences.'
+                    ],
+                    'visible' => true,
+                    'img_src' => 'lc1.jpg',
+                    'img_src_alt' => 'lc2.jpg',
+                    'link' => 'http://www.lc-a.uk/',
+                    'bio' => [
+                        'en' => '
+                        Natassa Lianou and Ermis Chalvatzis are directors of Lianou Chalvatzis Architects (LC-A), based in London. Through their practice they promote their vision about “Smart Design Elegance” as they call their philosophy and design process. They design efficient architectural solutions to real-world problems, which respond and adapt to the current socio-economic environment of each place, time and constrains, connecting people and enabling social interaction. Efficiency, economy, sustainability, materiality and high-aesthetics are the key parameters in their design process. The practice’s work focuses οn commercial building projects, hotels, residential masterplans, and infrastructure schemes as well as high profile smaller scale designs, aiming to bring meaningful design to the everyday lives of a broader audience. Prior establishing their firm, they gained rich experience through their trajectory at Zaha Hadid Architects as Senior Architects. Currently, Natassa & Ermis design, lead and deliver some of the most prominent, cutting edge, sustainable buildings in Greek Real Estate market, maintaining always an international outlook, attracting global attention.
+            ',
+                        'el' => '
+                        Η Νατάσσα Λιανού και ο Ερμής Χαλβατζής διευθύνουν το αρχιτεκτονικό γραφείο Lianou Chalvatzis Architects(LC-A), με έδρα τους το Λονδίνο. Μέσα από το έργο τους προωθούν το όραμά τους για μια “ευφυή σχεδιαστική κομψότητα” (smart design elegance), όπως αποκαλούν τη φιλοσοφία και τη διαδικασία σχεδιασμού τους. Σχεδιάζουν αποτελεσματικές αρχιτεκτονικές λύσεις σε υπαρκτά προβλήματα, οι οποίες ανταποκρίνονται και προσαρμόζονται στο σημερινό κοινωνικοοικονομικό περιβάλλον κάθε τόπου, χρόνου και περιορισμού, συνδέοντας τους ανθρώπους και προωθώντας την κοινωνική αλληλεπίδραση. Η αποδοτικότητα, η οικονομία, η βιωσιμότητα, η υλικότητα και η υψηλή αισθητική αποτελούν τις βασικές παράμετρους στη διαδικασία σχεδιασμού τους. Το έργο τους επικεντρώνεται σε εμπορικά κτίρια, ξενοδοχεία, κατοικίες, σε έργα υποδομής, καθώς και σε σχέδια μικρότερης κλίμακας, που έχουν σκοπό να αναβαθμίσουν την καθημερινότητα του ευρύτερου συνόλου. Πριν από την ίδρυση της εταιρείας τους, εργάστηκαν ως κύριοι αρχιτέκτονες στο γραφείο Zaha Hadid Architects, όπου κέρδισαν πολύτιμη εμπειρία. Αυτή τη στιγμή, η Νατάσσα και ο Ερμής σχεδιάζουν, επιβλέπουν και ετοιμάζονται να παραδώσουν στην ελληνική αγορά ακινήτων μερικά από τα σημαντικότερα, πιο προηγμένα, αλλά και βιώσιμα κτίρια, διατηρώντας πάντα μια διεθνή προοπτική.
+            ',
+                    ]
+                /* Create the object and return its id */
+                ])->id
+            ]),
+
+
 App\Schedule::updateOrCreate(['sid' => 'galani'], [
                 'hour' => '14:00',
                 'visible' => false,
@@ -537,8 +584,7 @@ In her continuing thirst for information and keen interest for everything new, s
 With her heightened sense of social awareness and responsibility, she has become involved in matters of public interest, actively participating in humanitarian movements and supporting the artist’s right to own the copyright to their work.
 ',
                         'el' => 'Η Δήμητρα Γαλάνη αποτελεί μια ξεχωριστή παρουσία στην εξέλιξη του σύγχρονου μουσικού μας πολιτισμού τις τελευταίες δεκαετίες τόσο ερμηνευτικά όσο και δημιουργικά. Μια καλλιτέχνις που ξέρει πως να μαγεύει με την ιδιαιτερότητα και την ομορφιά της φωνής της αλλά και με τις ποικίλες εκφράσεις της δημιουργικότητάς της, συνθετικές και άλλες, που καλύπτουν μια ευρεία μουσική γκάμα, από το παραδοσιακό και το λαϊκό μας τραγούδι, μέσα από το κύριο σώμα του έντεχνου ποιητικού τραγουδιού ως τις σύγχρονες μουσικές τάσεις της εποχής μας – γεννώντας και προκαλώντας δημιουργικές συνεργασίες που την φέρνουν στην πρώτη γραμμή. Η Δήμητρα στην μακρόχρονη πορεία της έχει συνεργαστεί με τους κορυφαίους συνθέτες μας έχοντας δώσει την φωνή της στον λόγο των σημαντικότερων ποιητών και στιχουργών μας. Την συναντάμε σε καθοριστικές στιγμές της μουσικής μας ιστορίας όπου η ερμηνεία της ολοκληρώνει σημαντικά έργα που υπογράφονται από τον Χατζιδάκι, τον Τσιτσάνη, τον Θεοδωράκη, τον Λοΐζο κ.ά. ενώ συμπράττει και με όλους τους μουσικούς δημιουργούς της γενιάς της και κάνει ξεχωριστές διεθνείς συνεργασίες.
-
-Ανοιχτή σε όλες τις σύγχρονες μουσικές τάσεις, η Δήμητρα Γαλάνη «καθοδηγεί» ως παραγωγός νεώτερους τραγουδοποιούς ή συνεργάζεται στενά με νέους μουσικούς που προέρχονται από «σκηνές» όπως η electronica, το ευρύτερο rock, η jazz κ.λπ. Ένα πρόσφατο δείγμα της δουλειάς της σε αυτή την κατεύθυνση είναι το “Chronos Project”, που σε συνεργασία με διακεκριμένους jazz σολίστες / δημιουργούς, κινείται σε πολυστυλιστικούς / πολυμουσικούς και διαχρονικούς δρόμους.'
+                        Ανοιχτή σε όλες τις σύγχρονες μουσικές τάσεις, η Δήμητρα Γαλάνη «καθοδηγεί» ως παραγωγός νεώτερους τραγουδοποιούς ή συνεργάζεται στενά με νέους μουσικούς που προέρχονται από «σκηνές» όπως η electronica, το ευρύτερο rock, η jazz κ.λπ. Ένα πρόσφατο δείγμα της δουλειάς της σε αυτή την κατεύθυνση είναι το “Chronos Project”, που σε συνεργασία με διακεκριμένους jazz σολίστες / δημιουργούς, κινείται σε πολυστυλιστικούς / πολυμουσικούς και διαχρονικούς δρόμους.'
                     ]
                 /* Create the object and return its id */
                 ])->id
