@@ -497,7 +497,7 @@ His research interests include blockchain foundations, provable security of the 
             App\Schedule::updateOrCreate(['sid' => 'lc-architects'], [
                 'hour' => '16:00',
                 'visible' => false,
-                'img_src' => '/images/speakers/lc1.jpg',
+                'img_src' => '/images/speakers/lc2.jpg',
                 'type' => 'talk',
                 'event_title' => [
                     'en' => 'LC Architects',
