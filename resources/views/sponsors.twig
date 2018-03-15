@@ -56,7 +56,7 @@
 				</div>
 
 				<div class="col col-12 col-lg-4">
-					{% if getLocale == "en" %}
+					{% if getLocale() == "en" %}
 						<a href="http://nbg.gr" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_nbg_en.png') }}" srcset="{{ asset('images/sponsors/small/small_nbg_en.png') }} 576w, {{ asset('images/sponsors/large/large_nbg_en.png') }} 960w" alt="nbg_en"></a>
 					{% else %}
 						<a href="http://nbg.gr" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_nbg_el.png') }}" srcset="{{ asset('images/sponsors/small/small_nbg_el.png') }} 576w, {{ asset('images/sponsors/large/large_nbg_el.png') }} 960w" alt="nbg_el"></a>
