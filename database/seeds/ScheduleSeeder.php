@@ -494,6 +494,49 @@ His research interests include blockchain foundations, provable security of the 
                 ])->id
             ]),
 
+            App\Schedule::updateOrCreate(['sid' => 'vassilis-charalabidis'], [
+                'hour' => '16:00',
+                'visible' => false,
+                'img_src' => '/images/speakers/charalabidis-1.jpg',
+                'type' => 'talk',
+                'event_title' => [
+                    'en' => 'Vassilis Charalabidis',
+                    'el' => 'Βασίλειος Χαραλαμπίδης'
+                ],
+                'event_prev' => [
+                    'en' => '',
+                    'el' => ''
+                ],
+                'subtitle' => [
+                    'en' => '',
+                    'el' => ''
+                ],
+                'speaker_id' => App\Speaker::updateOrCreate(['sid' => 'dionysis-zindros'], [
+                    'name' => [
+                        'en' => 'Vassilis Charalabidis',
+                        'el' => 'Βασίλης Χαραλαμπίδης'
+                    ],
+                    'occupation' => [
+                        'en' => 'Founding member, Manager and Artistic Director of BIOS',
+                        'el' => 'Ιδρυτής, Διαχειριστής και Καλλιτεχνικός Διευθυντής του BIOS'
+                    ],
+                    'quote' => [
+                        'en' => 'Creativity is about allowing yourself to make mistakes ; art  is about knowing which one of them to keep',
+                        'el' => 'Δημιουργικότητα είναι να επιτρέπεις στον εαυτό σου να κάνει λάθη, και τέχνη ,να ξέρεις ποια από αυτά θα κρατήσεις'
+                    ],
+                    'visible' => true,
+                    'img_src' => 'charalabidis-1.jpg',
+                    'img_src_alt' => 'charalabidis-2.jpg',
+                    'link' => 'http://bios.gr',
+                    'bio' => [
+                        'en' => 'Vassilis Haralambidis is founding member, manager and artistic director of BIOS non-profit organization. Bios today operates via 3 separate venues, all located in the center of Athens. 1. Bios pireos84 (a cultural center for performing arts and cross media),  Romantso (the first Greek Creative and cultural Industries Hub) and Latraac (a social garden and sports venue). Since founding BIOS in 2001, he has been curating numerous events and performances concerning urban culture, new media and various expressions of contemporary artistic creativity. As a designer, he has received numerous Greek and European awards and distinctions. He has devoted himself to pioneering a creative based approach to new and social entrepreneurship, best practices and policy, with his main focus currently being social inclusion and regeneration through the creative and cultural industries sector.',
+                        'el' => 'Ο Βασίλης Χαραλαμπίδης είναι ιδρυτικό μέλος, μάνατζερ και καλλιτεχνικός διευθυντής του μη κερδοσκοπικού οργανισμού BIOS. Το Bios σήμερα λειτουργεί 3 ξεχωριστούς χώρους, που βρίσκονται στο κέντρο της Αθήνας. 1. Το Bios pireos84 (πολιτιστικό κέντρο για τις τέχνες και τα νέα μέσα), το Ρομάντσο (ο πρώτος κόμβος δημιουργικών και πολιτιστικών βιομηχανιών) και το Latraac (κοινωνικός τόπος και το πρώτο skate bowl της Αθήνας). Από την ίδρυση του BIOS το 2001, διοργανώνει πολυάριθμες εκδηλώσεις και παραστάσεις με θέμα την αστική κουλτούρα, τα νέα μέσα και τις διάφορες εκφράσεις της σύγχρονης καλλιτεχνικής δημιουργίας. Ως γραφίστας έχει λάβει πολυάριθμα ελληνικά και ευρωπαϊκά βραβεία και διακρίσεις. Έχει αφοσιωθεί στη δημιουργία μιας πρωτοποριακής προσέγγισης για τη νέα κοινωνική επιχειρηματικότητα, τις βέλτιστες πρακτικές και την πολιτική, με επίκεντρο την κοινωνική ένταξη και αναγέννηση στον τομέα των δημιουργικών και πολιτιστικών βιομηχανιών.'
+                    ]
+                /* Create the object and return its id */
+                ])->id
+            ]),
+
+
             App\Schedule::updateOrCreate(['sid' => 'lc-architects'], [
                 'hour' => '16:00',
                 'visible' => false,
@@ -525,15 +568,13 @@ His research interests include blockchain foundations, provable security of the 
                         'el' => 'Architecture is a journey to solve each time a new exciting enigma of space, beauty and experiences.'
                     ],
                     'visible' => true,
-                    'img_src' => 'lc1.jpg',
-                    'img_src_alt' => 'lc2.jpg',
+                    'img_src' => 'lc2.jpg',
+                    'img_src_alt' => 'lc1.jpg',
                     'link' => 'http://www.lc-a.uk/',
                     'bio' => [
-                        'en' => '
-                        Natassa Lianou and Ermis Chalvatzis are directors of Lianou Chalvatzis Architects (LC-A), based in London. Through their practice they promote their vision about “Smart Design Elegance” as they call their philosophy and design process. They design efficient architectural solutions to real-world problems, which respond and adapt to the current socio-economic environment of each place, time and constrains, connecting people and enabling social interaction. Efficiency, economy, sustainability, materiality and high-aesthetics are the key parameters in their design process. The practice’s work focuses οn commercial building projects, hotels, residential masterplans, and infrastructure schemes as well as high profile smaller scale designs, aiming to bring meaningful design to the everyday lives of a broader audience. Prior establishing their firm, they gained rich experience through their trajectory at Zaha Hadid Architects as Senior Architects. Currently, Natassa & Ermis design, lead and deliver some of the most prominent, cutting edge, sustainable buildings in Greek Real Estate market, maintaining always an international outlook, attracting global attention.
+                        'en' => 'Natassa Lianou and Ermis Chalvatzis are directors of Lianou Chalvatzis Architects (LC-A), based in London. Through their practice they promote their vision about “Smart Design Elegance” as they call their philosophy and design process. They design efficient architectural solutions to real-world problems, which respond and adapt to the current socio-economic environment of each place, time and constrains, connecting people and enabling social interaction. Efficiency, economy, sustainability, materiality and high-aesthetics are the key parameters in their design process. The practice’s work focuses οn commercial building projects, hotels, residential masterplans, and infrastructure schemes as well as high profile smaller scale designs, aiming to bring meaningful design to the everyday lives of a broader audience. Prior establishing their firm, they gained rich experience through their trajectory at Zaha Hadid Architects as Senior Architects. Currently, Natassa & Ermis design, lead and deliver some of the most prominent, cutting edge, sustainable buildings in Greek Real Estate market, maintaining always an international outlook, attracting global attention.
             ',
-                        'el' => '
-                        Η Νατάσσα Λιανού και ο Ερμής Χαλβατζής διευθύνουν το αρχιτεκτονικό γραφείο Lianou Chalvatzis Architects(LC-A), με έδρα τους το Λονδίνο. Μέσα από το έργο τους προωθούν το όραμά τους για μια “ευφυή σχεδιαστική κομψότητα” (smart design elegance), όπως αποκαλούν τη φιλοσοφία και τη διαδικασία σχεδιασμού τους. Σχεδιάζουν αποτελεσματικές αρχιτεκτονικές λύσεις σε υπαρκτά προβλήματα, οι οποίες ανταποκρίνονται και προσαρμόζονται στο σημερινό κοινωνικοοικονομικό περιβάλλον κάθε τόπου, χρόνου και περιορισμού, συνδέοντας τους ανθρώπους και προωθώντας την κοινωνική αλληλεπίδραση. Η αποδοτικότητα, η οικονομία, η βιωσιμότητα, η υλικότητα και η υψηλή αισθητική αποτελούν τις βασικές παράμετρους στη διαδικασία σχεδιασμού τους. Το έργο τους επικεντρώνεται σε εμπορικά κτίρια, ξενοδοχεία, κατοικίες, σε έργα υποδομής, καθώς και σε σχέδια μικρότερης κλίμακας, που έχουν σκοπό να αναβαθμίσουν την καθημερινότητα του ευρύτερου συνόλου. Πριν από την ίδρυση της εταιρείας τους, εργάστηκαν ως κύριοι αρχιτέκτονες στο γραφείο Zaha Hadid Architects, όπου κέρδισαν πολύτιμη εμπειρία. Αυτή τη στιγμή, η Νατάσσα και ο Ερμής σχεδιάζουν, επιβλέπουν και ετοιμάζονται να παραδώσουν στην ελληνική αγορά ακινήτων μερικά από τα σημαντικότερα, πιο προηγμένα, αλλά και βιώσιμα κτίρια, διατηρώντας πάντα μια διεθνή προοπτική.
+                        'el' => 'Η Νατάσσα Λιανού και ο Ερμής Χαλβατζής διευθύνουν το αρχιτεκτονικό γραφείο Lianou Chalvatzis Architects(LC-A), με έδρα τους το Λονδίνο. Μέσα από το έργο τους προωθούν το όραμά τους για μια “ευφυή σχεδιαστική κομψότητα” (smart design elegance), όπως αποκαλούν τη φιλοσοφία και τη διαδικασία σχεδιασμού τους. Σχεδιάζουν αποτελεσματικές αρχιτεκτονικές λύσεις σε υπαρκτά προβλήματα, οι οποίες ανταποκρίνονται και προσαρμόζονται στο σημερινό κοινωνικοοικονομικό περιβάλλον κάθε τόπου, χρόνου και περιορισμού, συνδέοντας τους ανθρώπους και προωθώντας την κοινωνική αλληλεπίδραση. Η αποδοτικότητα, η οικονομία, η βιωσιμότητα, η υλικότητα και η υψηλή αισθητική αποτελούν τις βασικές παράμετρους στη διαδικασία σχεδιασμού τους. Το έργο τους επικεντρώνεται σε εμπορικά κτίρια, ξενοδοχεία, κατοικίες, σε έργα υποδομής, καθώς και σε σχέδια μικρότερης κλίμακας, που έχουν σκοπό να αναβαθμίσουν την καθημερινότητα του ευρύτερου συνόλου. Πριν από την ίδρυση της εταιρείας τους, εργάστηκαν ως κύριοι αρχιτέκτονες στο γραφείο Zaha Hadid Architects, όπου κέρδισαν πολύτιμη εμπειρία. Αυτή τη στιγμή, η Νατάσσα και ο Ερμής σχεδιάζουν, επιβλέπουν και ετοιμάζονται να παραδώσουν στην ελληνική αγορά ακινήτων μερικά από τα σημαντικότερα, πιο προηγμένα, αλλά και βιώσιμα κτίρια, διατηρώντας πάντα μια διεθνή προοπτική.
             ',
                     ]
                 /* Create the object and return its id */
