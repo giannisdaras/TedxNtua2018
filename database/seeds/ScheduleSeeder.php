@@ -511,7 +511,7 @@ His research interests include blockchain foundations, provable security of the 
                     'en' => '',
                     'el' => ''
                 ],
-                'speaker_id' => App\Speaker::updateOrCreate(['sid' => 'dionysis-zindros'], [
+                'speaker_id' => App\Speaker::updateOrCreate(['sid' => 'vassilis-charalabidis'], [
                     'name' => [
                         'en' => 'Vassilis Charalabidis',
                         'el' => 'Βασίλης Χαραλαμπίδης'

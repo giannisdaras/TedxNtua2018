@@ -30,6 +30,13 @@ return [
 		'gettickets' => 'Get Tickets',
 	],
 
+	'ira'=>'Ira Katsouda',
+	'ira-bio'=>'Ira Katsouda is a stand up comedy special, with constant performances in Athens, Thessaloniki and more than 30 cities all over Greece.
+
+In 2017 her  solo stand-up performance "Without Gluten" received great reviews and was sold out in Athens and Thessaloniki. In 2014-15 she collaborated with Andreas Paspatis.Together, they presented the first stand up comedy battle in Greece ,as part of the "Everyone\'s Own" show. Ιn 2016 they organized and presented their first live stand-up comedy talk show "The Comedians" ,in Michael Kakogiannis’ Foundation.
+She has participated in Stand Up for U 2016 in the project "Unicef\'s godfather", which was broadcast by ALPHA. Additionally, she has presented her work in TEDx competitions ,while she was one of the two presenters of the Opening Ceremony of the 20th Thessaloniki Documentary Festival.Τhese days she organizes Open Mic evenings.
+
+She has worked as an actor and a copywriter for advertisements. She has studied Economics in the Aristotle University of Thessaloniki, classical music, dance and acting.',
 	/* FOOTER */
 	'footer' => [
 		'facebook_title' => 'Facebook stream',
