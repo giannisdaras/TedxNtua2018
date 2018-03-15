@@ -59,7 +59,7 @@
 		</div>
 
 		<h2>{{ trans_choice('general.sponsors.rank.1', 2) }}</h2>
-		
+
 		<div class="container-fluid">
 
 			<div class="row vertical-align">
@@ -146,6 +146,11 @@
 				<div class="col col-6 col-lg-2">
 					<a href="https://nissos.beer/{{ getLocale() }}/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_nissos.png') }}" srcset="{{ asset('images/sponsors/small/small_nissos.png') }} 576w, {{ asset('images/sponsors/large/large_nissos.png') }} 960w" alt="Νήσος"></a>
 				</div>
+
+				<div class="col col-6 col-lg-2">
+					<a href="https://www.hothot.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_hot_hot.png') }}" srcset="{{ asset('images/sponsors/small/small_hot_hot.png') }} 576w, {{ asset('images/sponsors/large/large_hot_hot.png') }} 960w" alt="hothot"></a>
+				</div>
+
 			</div>
 		</div>
 
@@ -199,10 +204,6 @@
 				</div>
 
 				<div class="col col-6 col-lg-2">
-					<a href="http://www.jobfairathens.gr/{{ getLocale() == "el" ? "" : "change_locale?id=en" }}" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_jfa.png') }}" srcset="{{ asset('images/media/small/small_jfa.png') }} 576w, {{ asset('images/media/large/large_jfa.png') }} 960w" alt="Job Fair Athens"></a>
-				</div>
-
-				<div class="col col-6 col-lg-2">
 					<a href="https://www.collegelink.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_collegelink.png') }}" srcset="{{ asset('images/media/small/small_collegelink.png') }} 576w, {{ asset('images/media/large/large_collegelink.png') }} 960w" alt="Collegelink"></a>
 				</div>
 
@@ -214,12 +215,30 @@
 					<a href="http://stand-out.gr" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_standout.png') }}" srcset="{{ asset('images/media/small/small_standout.png') }} 576w, {{ asset('images/media/large/large_standout.png') }} 960w" alt="Stand Out"></a>
 				</div>
 
-				<div class="col col-6 col-lg-2">
-					<a href="http://uniqueminds.gr" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_um.png') }}" srcset="{{ asset('images/media/small/small_um.png') }} 576w, {{ asset('images/media/large/large_um.png') }} 960w" alt="Unique Minds"></a>
-				</div>
 
 				<div class="col col-6 col-lg-2">
 					<a href="https://unikorn.gr" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_unikorn.png') }}" srcset="{{ asset('images/media/small/small_unikorn.png') }} 576w, {{ asset('images/media/large/large_unikorn.png') }} 960w" alt="Unikorn"></a>
+				</div>
+
+
+			</div>
+
+		</div>
+
+
+
+		<h2>{{ trans('general.sponsors.rank.5') }}</h2>
+
+		<div class="container-fluid">
+			<div class="row vertical-align">
+
+
+				<div class="col col-6 col-lg-2">
+					<a href="http://www.jobfairathens.gr/{{ getLocale() == "el" ? "" : "change_locale?id=en" }}" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_jfa.png') }}" srcset="{{ asset('images/media/small/small_jfa.png') }} 576w, {{ asset('images/media/large/large_jfa.png') }} 960w" alt="Job Fair Athens"></a>
+				</div>
+
+				<div class="col col-6 col-lg-2">
+					<a href="http://uniqueminds.gr" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_um.png') }}" srcset="{{ asset('images/media/small/small_um.png') }} 576w, {{ asset('images/media/large/large_um.png') }} 960w" alt="Unique Minds"></a>
 				</div>
 
 				<div class="col col-6 col-lg-2">
@@ -233,7 +252,6 @@
 			</div>
 
 		</div>
-
 	</section>
 </article>
 {% endblock %}

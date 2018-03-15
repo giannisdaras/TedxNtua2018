@@ -125,7 +125,7 @@ She has worked as an actor and a copywriter for advertisements. She has studied 
 	'sponsors' => [
 		'title' => 'Sponsors',
 		'description' => 'Our event would not have been possible without the support from organizations that share our values and visions. Visit their websites and learn more about them.',
-		'rank' => ['Grand Sponsors', 'Grand Carrier Sponsor|Grand Carrier Sponsors', 'Partners', 'Supporters', 'Media Partners'],
+		'rank' => ['Grand Sponsors', 'Grand Carrier Sponsor|Grand Carrier Sponsors', 'Partners', 'Supporters', 'Media Partners', 'Community Partners'],
 	],
 
 	/* SPEAKERS */
@@ -258,7 +258,7 @@ By entering and continuing your browsing on the [tedxntua.com](https://tedxntua.
 
 #### 1. Definitions
 
-From now on, "the current website" is defined as the set of the webpages contained in the site of [tedxntua.com](https://tedxntua.com) and the subdomains related to it, [2015.tedxntua.com](https://2015.tedxntua.com), [2017.tedxntua.com](https://2017.tedxntua.com) and [2018.tedxntua.com](https://2018.tedxntua.com).</p> 
+From now on, "the current website" is defined as the set of the webpages contained in the site of [tedxntua.com](https://tedxntua.com) and the subdomains related to it, [2015.tedxntua.com](https://2015.tedxntua.com), [2017.tedxntua.com](https://2017.tedxntua.com) and [2018.tedxntua.com](https://2018.tedxntua.com).</p>
 
 #### 2. Links to other sites
 
