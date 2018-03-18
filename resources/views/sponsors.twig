@@ -57,9 +57,9 @@
 
 				<div class="col col-12 col-lg-4">
 					{% if getLocale() == "en" %}
-						<a href="http://nbg.gr" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_nbg_en.png') }}" srcset="{{ asset('images/sponsors/small/small_nbg_en.png') }} 576w, {{ asset('images/sponsors/large/large_nbg_en.png') }} 960w" alt="nbg_en"></a>
+					<a href="http://nbg.gr" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_nbg_en.png') }}" srcset="{{ asset('images/sponsors/small/small_nbg_en.png') }} 576w, {{ asset('images/sponsors/large/large_nbg_en.png') }} 960w" alt="nbg_en"></a>
 					{% else %}
-						<a href="http://nbg.gr" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_nbg_el.png') }}" srcset="{{ asset('images/sponsors/small/small_nbg_el.png') }} 576w, {{ asset('images/sponsors/large/large_nbg_el.png') }} 960w" alt="nbg_el"></a>
+					<a href="http://nbg.gr" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_nbg_el.png') }}" srcset="{{ asset('images/sponsors/small/small_nbg_el.png') }} 576w, {{ asset('images/sponsors/large/large_nbg_el.png') }} 960w" alt="nbg_el"></a>
 					{% endif %}
 				</div>
 
@@ -136,9 +136,7 @@
 					<a href="https://www.johnniewalker.com/{{ getLocale() == "el" ? "el-gr" : "en-us" }}/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_johnnie-walker.png') }}" srcset="{{ asset('images/sponsors/small/small_johnnie-walker.png') }} 576w, {{ asset('images/sponsors/large/large_johnnie-walker.png') }} 960w" alt="Johnnie Walker"></a>
 				</div>
 
-				<div class="col col-6 col-lg-2">
-					<a href="http://www.tuvunu.com/{{ getLocale() }}" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_tuvunu.png') }}" srcset="{{ asset('images/sponsors/small/small_tuvunu.png') }} 576w, {{ asset('images/sponsors/large/large_tuvunu.png') }} 960w" alt="Tuvunu"></a>
-				</div>
+				
 			</div>
 
 			<div class="row vertical-align">
@@ -162,10 +160,7 @@
 					<a href="https://www.hothot.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_hot_hot.png') }}" srcset="{{ asset('images/sponsors/small/small_hot_hot.png') }} 576w, {{ asset('images/sponsors/large/large_hot_hot.png') }} 960w" alt="hothot"></a>
 				</div>
 
-				<div class="col col-6 col-lg-2">
-					<a href="https://www.green-cola.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_green_cola.png') }}" srcset="{{ asset('images/sponsors/small/small_green_cola.png') }} 576w, {{ asset('images/sponsors/large/large_green_cola.png') }} 960w" alt="green_cola"></a>
-				</div>
-
+				
 			</div>
 			<div class="row vertical-align">
 
@@ -189,9 +184,6 @@
 					<a href="https://www.korres.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_korres.png') }}" srcset="{{ asset('images/sponsors/small/small_korres.png') }} 576w, {{ asset('images/sponsors/large/large_korres.png') }} 960w" alt="lacta"></a>
 				</div>
 
-				<div class="col col-6 col-lg-2">
-					<a href="https://www.froutongeuseis.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_ygeias.png') }}" srcset="{{ asset('images/sponsors/small/small_ygeias.png') }} 576w, {{ asset('images/sponsors/large/large_ygeias.png') }} 960w" alt="ygeias"></a>
-				</div>
 
 
 
@@ -219,6 +211,22 @@
 					<a href="https://www.papadopoulou.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_papadopoulou.png') }}" srcset="{{ asset('images/sponsors/small/small_papadopoulou.png') }} 576w, {{ asset('images/sponsors/large/large_papadopoulou.png') }} 960w" alt="papadopoulou"></a>
 				</div>
 
+
+
+			</div>
+
+			<div class="row vertical-align">
+				<div class="col col-6 col-lg-2">
+					<a href="http://www.tuvunu.com/{{ getLocale() }}" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_tuvunu.png') }}" srcset="{{ asset('images/sponsors/small/small_tuvunu.png') }} 576w, {{ asset('images/sponsors/large/large_tuvunu.png') }} 960w" alt="Tuvunu"></a>
+				</div>
+
+				<div class="col col-6 col-lg-2">
+					<a href="https://www.froutongeuseis.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_ygeias.png') }}" srcset="{{ asset('images/sponsors/small/small_ygeias.png') }} 576w, {{ asset('images/sponsors/large/large_ygeias.png') }} 960w" alt="ygeias"></a>
+				</div>
+
+				<div class="col col-6 col-lg-2">
+					<a href="https://www.green-cola.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_green_cola.png') }}" srcset="{{ asset('images/sponsors/small/small_green_cola.png') }} 576w, {{ asset('images/sponsors/large/large_green_cola.png') }} 960w" alt="green_cola"></a>
+				</div>
 
 			</div>
 
@@ -249,13 +257,15 @@
 					<a href="https://frapress.gr" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_frapress.png') }}" srcset="{{ asset('images/media/small/small_frapress.png') }} 576w, {{ asset('images/media/large/large_frapress.png') }} 960w" alt="Frapress.gr"></a>
 				</div>
 
-				<div class="col col-6 col-lg-2">
-					<a href="https://ek-mag.com/{{ getLocale() }}/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_ek.png') }}" srcset="{{ asset('images/media/small/small_ek.png') }} 576w, {{ asset('images/media/large/large_ek.png') }} 960w" alt="ek magazine"></a>
-				</div>
 
 			</div>
 
 			<div class="row vertical-align">
+				<div class="col col-6 col-lg-2">
+					<a href="https://ek-mag.com/{{ getLocale() }}/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_ek.png') }}" srcset="{{ asset('images/media/small/small_ek.png') }} 576w, {{ asset('images/media/large/large_ek.png') }} 960w" alt="ek magazine"></a>
+				</div>
+
+
 
 				<div class="col col-6 col-lg-2">
 					<a href="https://www.epixeiro.gr" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_epixeiro.png') }}" srcset="{{ asset('images/media/small/small_epixeiro.png') }} 576w, {{ asset('images/media/large/large_epixeiro.png') }} 960w" alt="επιχειρώ"></a>
@@ -273,13 +283,13 @@
 					<a href="http://www.paideia-ergasia.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_paideia-ergasia.png') }}" srcset="{{ asset('images/media/small/small_paideia-ergasia.png') }} 576w, {{ asset('images/media/large/large_paideia-ergasia.png') }} 960w" alt="Παιδεία – Εργασία"></a>
 				</div>
 
-				<div class="col col-6 col-lg-2">
-					<a href="https://www.collegelink.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_collegelink.png') }}" srcset="{{ asset('images/media/small/small_collegelink.png') }} 576w, {{ asset('images/media/large/large_collegelink.png') }} 960w" alt="Collegelink"></a>
-				</div>
-
+				
 			</div>
 
 			<div class="row vertical-align">
+				<div class="col col-6 col-lg-2">
+					<a href="https://www.collegelink.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_collegelink.png') }}" srcset="{{ asset('images/media/small/small_collegelink.png') }} 576w, {{ asset('images/media/large/large_collegelink.png') }} 960w" alt="Collegelink"></a>
+				</div>
 
 				<div class="col col-6 col-lg-2">
 					<a href="http://stand-out.gr" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_standout.png') }}" srcset="{{ asset('images/media/small/small_standout.png') }} 576w, {{ asset('images/media/large/large_standout.png') }} 960w" alt="Stand Out"></a>
@@ -289,6 +299,8 @@
 				<div class="col col-6 col-lg-2">
 					<a href="https://unikorn.gr" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_unikorn.png') }}" srcset="{{ asset('images/media/small/small_unikorn.png') }} 576w, {{ asset('images/media/large/large_unikorn.png') }} 960w" alt="Unikorn"></a>
 				</div>
+
+
 
 
 			</div>
