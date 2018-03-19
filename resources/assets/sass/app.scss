@@ -22,6 +22,10 @@ html {
 	font-size: 106.25%;
 }
 
+body {
+	color: $body-color;
+}
+
 a {
 	color: $brand-primary;
 	&:hover {
@@ -1100,18 +1104,20 @@ article.speakers {
 			margin-bottom: 0;
 		}
 	}
-	.speaker-header {
+	div.speaker-header {
 		text-align: center;
 		border-bottom: 1px solid #AAA;
 		/* bottom-padding */
 		padding: 0 0 1.5rem 0;
 		/* middle spacing */
 		h2 {
-			margin: 1rem 0 0 0;
+			margin: 1rem 0 .1rem 0;
+			font-size: 1.5rem;
 		}
 		h5 {
 			font-weight: normal;
 			font-style: italic;
+			font-size: 1.15em;
 		}
 		img {
 			width: 75%;
@@ -1123,12 +1129,23 @@ article.speakers {
 		color: #333;
 		margin: 1rem 0 0 0;
 	}
-	.speaker-info {
+	div.speaker-info {
 		/* top padding */
 		font-size: 1em;
 		padding: 1.5rem 0 0 0;
 		text-align: justify;
 		max-width: 800px;
+		h3 {
+			font-size: 1.35rem;
+		}
+		h3 a {
+			display: inline;
+			color: $body-color;
+			font-weight: normal;
+			&:hover {
+				color: darken($body-color, 10%);
+			}
+		}
 	}
 	.speakers-footer {
 		.row:not(:last-child) {
@@ -1236,7 +1253,7 @@ article.team {
 			margin-bottom: .25rem;
 		}
 		h6 {
-			color: #212529;
+			color: $body-color;
 			font-size: .9em;
 		}
 	}
@@ -1269,10 +1286,10 @@ article.schedule {
 
 	h5 {
 		font-size: 1.25em;
+		font-weight: bold;
 	}
 	h6 {
 		font-size: 1em;
-		font-weight: bold;
 	}
 	tbody tr:not(.collapse-row) {
 		cursor: pointer;
@@ -1297,7 +1314,7 @@ article.schedule {
 	td img {
 		width: 40%;
 		height: auto;
-		max-width: 160px;
+		max-width: 120px;
 	}
 	td .cell-content:not(.collapsing) {
 		height: 100%;
@@ -1312,6 +1329,7 @@ article.schedule {
 	td .more {
 		padding-top: 0.75rem;
 		padding-bottom: 0.75rem;
+		line-height: 1.25;
 		p:last-child {
 			margin-bottom: 0;
 		}

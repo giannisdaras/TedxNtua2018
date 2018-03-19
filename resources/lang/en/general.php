@@ -151,6 +151,7 @@ She has worked as an actor and copywriter for advertisements. She has studied Ec
 		'description' => 'The very essence of a TEDx event is its medley of talks, performances and workshops. Discover the topics that will be explored and join us in a journey of Chaos.',
 		'time' => 'Time',
 		'talks' => 'Talks',
+		'main' => 'Main stage',
 		'performances' => 'Performances',
 		'workshops' => 'Workshops',
 		'notalks' => 'Don\'t get lost in the Chaos. The talks will be announced soon.<br>Check out our <strong>social media</strong> to stay tuned!',
@@ -342,7 +343,7 @@ The content of the current website is licensed under Creative Commons v4.0 BY, *
 ##### You are free to
 
  1. Share — copy and redistribute the material in any medium or format
- 2. Adapt — remix, transform, and build upon the material for any purpose, even commercially.
+ 1. Adapt — remix, transform, and build upon the material for any purpose, even commercially.
 
 The licensor cannot revoke these freedoms as long as you follow the license terms.
 
@@ -350,14 +351,14 @@ Under the following terms:
 
  1. **Attribution** — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
 
- 2. **No additional restrictions** — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+ 1. **No additional restrictions** — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
 
 #### Other creators\' content
 
  1. Logos of sponsors — In the sponsors page we include the logo of each organization/company, which is the owner of it.
- 2. Names and TED, TEDx logos — The event is operated under license from the [TED](https://www.ted.com) organization, which is the owner of the TED, TEDx names, the corresponding logos that appear on the website, as well as the TEDxNTUA name, which is licensed to the executive team for the license term.
- 3. [Font Awesome](https://fontawesome.com/v4.7.0/) Icons — The current website uses the Font Awesome icons by Dave Gandy, which are provided under the [following license](https://fontawesome.com/v4.7.0/license).
- 4. [Bootstrap](https://getbootstrap.com) — The current website uses the Bootstrap framework, which is provided under [MIT license](https://github.com/twbs/bootstrap/blob/master/LICENSE).
+ 1. Names and TED, TEDx logos — The event is operated under license from the [TED](https://www.ted.com) organization, which is the owner of the TED, TEDx names, the corresponding logos that appear on the website, as well as the TEDxNTUA name, which is licensed to the executive team for the license term.
+ 1. [Font Awesome](https://fontawesome.com/v4.7.0/) Icons — The current website uses the Font Awesome icons by Dave Gandy, which are provided under the [following license](https://fontawesome.com/v4.7.0/license).
+ 1. [Bootstrap](https://getbootstrap.com) — The current website uses the Bootstrap framework, which is provided under [MIT license](https://github.com/twbs/bootstrap/blob/master/LICENSE).
 ',
 	],
 

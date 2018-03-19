@@ -16,7 +16,7 @@
 	{%- if speakers | length %}
 	{% for key, speaker in speakers %}
 
-		<div id="{{ speaker.sid }}" class="speaker-container container-fluid angle-brackets wow bounceInLeft">
+		<div id="{{ speaker.sid }}" class="speaker-container container-fluid angle-brackets">
 
 			<div class="speaker-header container-fluid">
 				<img src="/images/speakers/{{ speaker.img_src }}">
@@ -28,6 +28,11 @@
 			</div>
 
 			<div class="speaker-info container-fluid">
+				<div class="row mb-3">
+					<div class="col col-12">
+						<h3 class="text-center primary">{{ trans('general.speakers.talk') }} &bull; <a href="/schedule">{{ speaker.talk.event_prev }}</a></h3>
+					</div>
+				</div>
 				<div class="row">
 					<div class="col col-12">
 						<h3 class="text-center primary">{{ trans('general.speakers.bio') }}</h3>
@@ -38,7 +43,7 @@
 		</div>
 	{% endfor %}
 
-	<div id="ira" class="speaker-container container-fluid angle-brackets wow bounceInLeft">
+	<div id="ira" class="speaker-container container-fluid angle-brackets">
 		<h2 class="primary pb-3">{{ trans('general.ira.hostedby') }}</h2>
 
 		<div class="speaker-header container-fluid">

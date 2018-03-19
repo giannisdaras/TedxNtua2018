@@ -66,6 +66,7 @@ class ScheduleController extends Controller {
 		}
 
 		$talks = $events -> where('type', 'talk')
+						 -> orWhere('type', 'general')
 						 -> orderBy('hour', 'asc')
 						 -> get() -> toArray();
 

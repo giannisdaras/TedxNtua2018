@@ -12783,6 +12783,10 @@ html {
   font-size: 106.25%;
 }
 
+body {
+  color: #212529;
+}
+
 a {
   color: #E62B1E;
 }
@@ -14133,7 +14137,7 @@ article.speakers section.content .speaker-container:last {
   margin-bottom: 0;
 }
 
-article.speakers .speaker-header {
+article.speakers div.speaker-header {
   text-align: center;
   border-bottom: 1px solid #AAA;
   /* bottom-padding */
@@ -14141,16 +14145,18 @@ article.speakers .speaker-header {
   /* middle spacing */
 }
 
-article.speakers .speaker-header h2 {
-  margin: 1rem 0 0 0;
+article.speakers div.speaker-header h2 {
+  margin: 1rem 0 .1rem 0;
+  font-size: 1.5rem;
 }
 
-article.speakers .speaker-header h5 {
+article.speakers div.speaker-header h5 {
   font-weight: normal;
   font-style: italic;
+  font-size: 1.15em;
 }
 
-article.speakers .speaker-header img {
+article.speakers div.speaker-header img {
   width: 75%;
   max-width: 320px;
 }
@@ -14161,12 +14167,26 @@ article.speakers blockquote.quote {
   margin: 1rem 0 0 0;
 }
 
-article.speakers .speaker-info {
+article.speakers div.speaker-info {
   /* top padding */
   font-size: 1em;
   padding: 1.5rem 0 0 0;
   text-align: justify;
   max-width: 800px;
+}
+
+article.speakers div.speaker-info h3 {
+  font-size: 1.35rem;
+}
+
+article.speakers div.speaker-info h3 a {
+  display: inline;
+  color: #212529;
+  font-weight: normal;
+}
+
+article.speakers div.speaker-info h3 a:hover {
+  color: #0a0c0d;
 }
 
 article.speakers .speakers-footer .row:not(:last-child) {
@@ -14317,11 +14337,11 @@ article.schedule .nav-slider {
 
 article.schedule h5 {
   font-size: 1.25em;
+  font-weight: bold;
 }
 
 article.schedule h6 {
   font-size: 1em;
-  font-weight: bold;
 }
 
 article.schedule tbody tr:not(.collapse-row) {
@@ -14354,7 +14374,7 @@ article.schedule td {
 article.schedule td img {
   width: 40%;
   height: auto;
-  max-width: 160px;
+  max-width: 120px;
 }
 
 article.schedule td .cell-content:not(.collapsing) {
@@ -14373,6 +14393,7 @@ article.schedule tr.collapse-row td {
 article.schedule td .more {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+  line-height: 1.25;
 }
 
 article.schedule td .more p:last-child {

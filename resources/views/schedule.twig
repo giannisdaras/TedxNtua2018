@@ -18,7 +18,7 @@
 
 					<ul class="nav nav-slider" id="slider-tab" role="tablist">
 						<li class="nav-item">
-							<a class="nav-link active" id="slide-talks-tab" data-toggle="tab" href="#talks-tab" role="tab" aria-controls="talks-tab" aria-selected="true">{{ trans('general.schedule.talks') | upper_no_accents }}</a>
+							<a class="nav-link active" id="slide-talks-tab" data-toggle="tab" href="#talks-tab" role="tab" aria-controls="talks-tab" aria-selected="true">{{ trans('general.schedule.main') | upper_no_accents }}</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" id="slide-performances-tab" data-toggle="tab" href="#performances-tab" role="tab" aria-controls="performances-tab" aria-selected="false">{{ trans('general.schedule.performances') | upper_no_accents }}</a>
@@ -37,7 +37,7 @@
 								<thead>
 									<tr>
 										<th scope="col">{{ trans('general.schedule.time') }}</th>
-										<th scope="col">{{ trans('general.schedule.talks') }}</th>
+										<th scope="col">{{ trans('general.schedule.main') }}</th>
 									</tr>
 								</thead>
 
@@ -46,7 +46,7 @@
 								{%- for row in rows %}
 								{%- if not row.events[0].empty %}
 
-									<tr data-toggle="collapse" data-target=".talks-row-{{ "%02d" | format(loop.index) }}">
+									<tr{{ row.events[0].subtitle | length > 0 ? ' data-toggle="collapse"' : '' }} data-target=".talks-row-{{ "%02d" | format(loop.index) }}">
 										<td class="time">
 											<div class="cell-content">
 												<time datetime="{{ day }} {{ row.time }}">{{ row.time }}</time>
@@ -127,7 +127,7 @@
 								{%- for row in rows %}
 								{%- if not row.events[1].empty %}
 
-									<tr data-toggle="collapse" data-target=".performances-row-{{ "%02d" | format(loop.index) }}">
+									<tr{{ row.events[1].subtitle | length > 0 ? ' data-toggle="collapse"' : '' }} data-target=".performances-row-{{ "%02d" | format(loop.index) }}">
 										<td class="time">
 											<div class="cell-content">
 												<time datetime="{{ day }} {{ row.time }}">{{ row.time }}</time>
@@ -209,7 +209,7 @@
 								{%- for row in rows %}
 								{%- if not row.events[2].empty %}
 
-									<tr data-toggle="collapse" data-target=".workshops-row-{{ "%02d" | format(loop.index) }}">
+									<tr{{ row.events[2].subtitle | length > 0 ? ' data-toggle="collapse"' : '' }} data-target=".workshops-row-{{ "%02d" | format(loop.index) }}">
 										<td class="time">
 											<div class="cell-content">
 												<time datetime="{{ day }} {{ row.time }}">{{ row.time }}</time>
@@ -285,7 +285,7 @@
 					<thead>
 						<tr>
 							<th scope="col">{{ trans('general.schedule.time') }}</th>
-							<th scope="col">{{ trans('general.schedule.talks') }}</th>
+							<th scope="col">{{ trans('general.schedule.main') }}</th>
 							<th scope="col">{{ trans('general.schedule.performances') }}</th>
 							<th scope="col">{{ trans('general.schedule.workshops') }}</th>
 						</tr>
@@ -296,7 +296,7 @@
 					{%- for row in rows %}
 
 
-						<tr data-toggle="collapse" data-target=".row-{{ "%02d" | format(loop.index) }}">
+						<tr{{ row.events[0].subtitle | length + row.events[1].subtitle | length + row.events[2].subtitle | length > 0 ? ' data-toggle="collapse"' : '' }} data-target=".row-{{ "%02d" | format(loop.index) }}">
 							<td class="time">
 								<div class="cell-content">
 									<time datetime="{{ day }} {{ row.time }}">{{ row.time }}</time>
