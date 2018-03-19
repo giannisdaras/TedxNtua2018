@@ -13540,9 +13540,13 @@ article.home section:not(#hero) {
 
 article.home section h2 {
   color: #E62B1E;
-  font-weight: bold;
   font-size: 2rem;
+  font-weight: bold;
   margin-bottom: .5em;
+}
+
+article.home section h3 {
+  font-size: 1.5rem;
 }
 
 article.home section .container-fluid {
@@ -13780,20 +13784,30 @@ article.home #speakers .speaker-container .speaker-info {
   text-shadow: 0px 1px 3px black, 0px 1px 5px rgba(0, 0, 0, 0.6);
 }
 
-article.home #speakers .speaker-container h3 {
+article.home #speakers .speaker-container .speaker-info h3 {
   font-size: 1.15em;
-  margin-bottom: 0;
+  line-height: 1;
+  margin-bottom: .2rem;
 }
 
-article.home #speakers .speaker-container p {
+article.home #speakers .speaker-container .speaker-info p {
   font-size: .75em;
   line-height: 1.25;
   margin-bottom: 0;
 }
 
+article.home #speakers h3.hostess {
+  color: #E62B1E;
+  margin-top: 1.5rem;
+  font-weight: bold;
+}
+
 article.home #speakers .row {
-  margin-leftx: -10px;
+  margin-left: -10px;
   margin-right: -10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 article.home #speakers .col {
@@ -14609,6 +14623,10 @@ article.license {
     font-size: 2.5rem;
   }
 
+  article.home section h3 {
+    font-size: 2rem;
+  }
+
   article.home section .section-intro {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -14852,6 +14870,10 @@ article.license {
     font-size: 3.5rem;
   }
 
+  article.home section h3 {
+    font-size: 2.5rem;
+  }
+
   article.home #hero h1 {
     font-size: 4rem;
   }
@@ -15005,17 +15027,5 @@ article.license {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-#hostess {
-  font-size: 2.5rem;
-  margin-top: 2rem;
-  color: #E62B1E;
-}
-
-#hostessSpeakers {
-  font-size: 2.5rem;
-  padding-bottom: 2rem;
-  color: #E62B1E;
 }
 

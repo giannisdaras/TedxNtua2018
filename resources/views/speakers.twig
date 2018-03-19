@@ -37,23 +37,25 @@
 			</div>
 		</div>
 	{% endfor %}
+
 	<div id="ira" class="speaker-container container-fluid angle-brackets wow bounceInLeft">
-		<h2 id="hostessSpeakers"> Hosted by </h2>
+		<h2 class="primary pb-3">{{ trans('general.ira.hostedby') }}</h2>
 
-			<div class="speaker-header container-fluid">
-				<img src="/images/speakers/katsouda-1.jpg">
-				<h2>{{ trans('general.ira') }} <a href="https://web.facebook.com/katsoudaira/?_rdc=1&_rdr" target="_blank"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-			</div>
+		<div class="speaker-header container-fluid">
+			<img src="/images/speakers/katsouda-1.jpg">
+			<h2>{{ trans('general.ira.name') }} <a href="https://www.facebook.com/katsoudaira/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+			<h5>{{ trans('general.ira.occupation') }}</h5>
+		</div>
 
-			<div class="speaker-info container-fluid">
-				<div class="row">
-					<div class="col col-12">
-						<h3 class="text-center primary">{{ trans('general.speakers.bio') }}</h3>
-						{{ trans('general.ira-bio') | markdown }}
-					</div>
+		<div class="speaker-info container-fluid">
+			<div class="row">
+				<div class="col col-12">
+					<h3 class="text-center primary">{{ trans('general.speakers.bio') }}</h3>
+					{{ trans('general.ira.bio') | markdown }}
 				</div>
 			</div>
 		</div>
+	</div>
 	{%- else %}
 
 		<div class="container-fluid nospeakers-container">
