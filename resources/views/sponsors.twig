@@ -44,7 +44,7 @@
 				</div>
 
 				<div class="col col-12 col-lg-4">
-					<a href="http://www.minoselevators.com/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_minos-elevators.png') }}" srcset="{{ asset('images/sponsors/small/small_minos-elevators.png') }} 576w, {{ asset('images/sponsors/large/large_minos-elevators.png') }} 960w" alt="Minos Elevators"></a>
+					<a href="https://www.nbg.gr/{{ getLocale() }}" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_nbg_' ~ getLocale() ~ '.png') }}" srcset="{{ asset('images/sponsors/small/small_nbg_' ~ getLocale() ~ '.png') }} 576w, {{ asset('images/sponsors/large/large_nbg_' ~ getLocale() ~ '.png') }} 960w" alt="National Bank of Greece"></a>
 				</div>
 
 			</div>
@@ -52,18 +52,12 @@
 			<div class="row vertical-align">
 
 				<div class="col col-12 col-lg-4">
-					<a href="http://www.bosch-home.{{ getLocale() == "el" ? "gr" : "com" }}" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_bosch.png') }}" srcset="{{ asset('images/sponsors/small/small_bosch.png') }} 576w, {{ asset('images/sponsors/large/large_bosch.png') }} 960w" alt="BOSCH"></a>
+					<a href="http://www.minoselevators.com/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_minos-elevators.png') }}" srcset="{{ asset('images/sponsors/small/small_minos-elevators.png') }} 576w, {{ asset('images/sponsors/large/large_minos-elevators.png') }} 960w" alt="Minos Elevators"></a>
 				</div>
 
 				<div class="col col-12 col-lg-4">
-					{% if getLocale() == "en" %}
-					<a href="http://nbg.gr" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_nbg_en.png') }}" srcset="{{ asset('images/sponsors/small/small_nbg_en.png') }} 576w, {{ asset('images/sponsors/large/large_nbg_en.png') }} 960w" alt="nbg_en"></a>
-					{% else %}
-					<a href="http://nbg.gr" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_nbg_el.png') }}" srcset="{{ asset('images/sponsors/small/small_nbg_el.png') }} 576w, {{ asset('images/sponsors/large/large_nbg_el.png') }} 960w" alt="nbg_el"></a>
-					{% endif %}
+					<a href="http://www.bosch-home.{{ getLocale() == "el" ? "gr" : "com" }}" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_bosch.png') }}" srcset="{{ asset('images/sponsors/small/small_bosch.png') }} 576w, {{ asset('images/sponsors/large/large_bosch.png') }} 960w" alt="BOSCH"></a>
 				</div>
-
-
 
 			</div>
 
@@ -108,6 +102,7 @@
 				<div class="col col-12 col-lg-3">
 					<a href="http://www.athenslegalfirm.gr{{ getLocale() == "el" ? "" : "/en" }}" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_athens-legal-firm.png') }}" srcset="{{ asset('images/sponsors/small/small_athens-legal-firm.png') }} 576w, {{ asset('images/sponsors/large/large_athens-legal-firm.png') }} 960w" alt="Athens Legal Firm"></a>
 				</div>
+
 			</div>
 
 		</div>
@@ -115,7 +110,9 @@
 		<h2>{{ trans('general.sponsors.rank.3') }}</h2>
 
 		<div class="container-fluid">
+
 			<div class="row vertical-align">
+
 				<div class="col col-6 col-lg-2">
 					<a href="https://www.sas.com/{{ getLocale() == "el" ? "el_gr" : "en_us" }}/home.html" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_sas.png') }}" srcset="{{ asset('images/sponsors/small/small_sas.png') }} 576w, {{ asset('images/sponsors/large/large_sas.png') }} 960w" alt="sas"></a>
 				</div>
@@ -136,12 +133,24 @@
 					<a href="https://www.johnniewalker.com/{{ getLocale() == "el" ? "el-gr" : "en-us" }}/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_johnnie-walker.png') }}" srcset="{{ asset('images/sponsors/small/small_johnnie-walker.png') }} 576w, {{ asset('images/sponsors/large/large_johnnie-walker.png') }} 960w" alt="Johnnie Walker"></a>
 				</div>
 
-				
+				<div class="col col-6 col-lg-2">
+					<a href="https://www.hothot.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_hot_hot.png') }}" srcset="{{ asset('images/sponsors/small/small_hot_hot.png') }} 576w, {{ asset('images/sponsors/large/large_hot_hot.png') }} 960w" alt="hothot"></a>
+				</div>
+
 			</div>
 
 			<div class="row vertical-align">
+
+				<div class="col col-6 col-lg-2">
+					<a href="http://www.tuvunu.com/{{ getLocale() }}" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_tuvunu.png') }}" srcset="{{ asset('images/sponsors/small/small_tuvunu.png') }} 576w, {{ asset('images/sponsors/large/large_tuvunu.png') }} 960w" alt="Tuvunu"></a>
+				</div>
+
 				<div class="col col-6 col-lg-2">
 					<a href="http://www.klidarithmos.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_klidarithmos.png') }}" srcset="{{ asset('images/sponsors/small/small_klidarithmos.png') }} 576w, {{ asset('images/sponsors/large/large_klidarithmos.png') }} 960w" alt="Κλειδάριθμος"></a>
+				</div>
+
+				<div class="col col-6 col-lg-2">
+					<a href="https://www.green-cola.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_green_cola.png') }}" srcset="{{ asset('images/sponsors/small/small_green_cola.png') }} 576w, {{ asset('images/sponsors/large/large_green_cola.png') }} 960w" alt="Green Cola"></a>
 				</div>
 
 				<div class="col col-6 col-lg-2">
@@ -155,13 +164,9 @@
 				<div class="col col-6 col-lg-2">
 					<a href="https://nissos.beer/{{ getLocale() }}/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_nissos.png') }}" srcset="{{ asset('images/sponsors/small/small_nissos.png') }} 576w, {{ asset('images/sponsors/large/large_nissos.png') }} 960w" alt="Νήσος"></a>
 				</div>
-
-				<div class="col col-6 col-lg-2">
-					<a href="https://www.hothot.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_hot_hot.png') }}" srcset="{{ asset('images/sponsors/small/small_hot_hot.png') }} 576w, {{ asset('images/sponsors/large/large_hot_hot.png') }} 960w" alt="hothot"></a>
-				</div>
-
 				
 			</div>
+
 			<div class="row vertical-align">
 
 				<div class="col col-6 col-lg-2">
@@ -173,59 +178,39 @@
 				</div>
 
 				<div class="col col-6 col-lg-2">
-					<a href="https://www.lacta.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_lacta.png') }}" srcset="{{ asset('images/sponsors/small/small_lacta.png') }} 576w, {{ asset('images/sponsors/large/large_lacta.png') }} 960w" alt="lacta"></a>
+					<a href="https://www.korres.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_korres.png') }}" srcset="{{ asset('images/sponsors/small/small_korres.png') }} 576w, {{ asset('images/sponsors/large/large_korres.png') }} 960w" alt="Korres"></a>
 				</div>
 
 				<div class="col col-6 col-lg-2">
-					<a href="https://www.plaisio.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_plaisio.png') }}" srcset="{{ asset('images/sponsors/small/small_plaisio.png') }} 576w, {{ asset('images/sponsors/large/large_plaisio.png') }} 960w" alt="plaisio"></a>
+					<a href="https://www.conferience.com/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_conferience.png') }}" srcset="{{ asset('images/sponsors/small/small_conferience.png') }} 576w, {{ asset('images/sponsors/large/large_conferience.png') }} 960w" alt="Conferience"></a>
 				</div>
 
 				<div class="col col-6 col-lg-2">
-					<a href="https://www.korres.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_korres.png') }}" srcset="{{ asset('images/sponsors/small/small_korres.png') }} 576w, {{ asset('images/sponsors/large/large_korres.png') }} 960w" alt="lacta"></a>
+					<a href="https://www.papadopoulou.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_papadopoulou.png') }}" srcset="{{ asset('images/sponsors/small/small_papadopoulou.png') }} 576w, {{ asset('images/sponsors/large/large_papadopoulou.png') }} 960w" alt="Μπισκότα Παπαδοπούλου"></a>
 				</div>
 
-
-
+				<div class="col col-6 col-lg-2">
+					<a href="https://www.plaisio.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_plaisio.png') }}" srcset="{{ asset('images/sponsors/small/small_plaisio.png') }} 576w, {{ asset('images/sponsors/large/large_plaisio.png') }} 960w" alt="Πλαίσιο"></a>
+				</div>
 
 			</div>
 
 			<div class="row vertical-align">
+
 				<div class="col col-6 col-lg-2">
-					<a href="https://www.trident.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_trident.png') }}" srcset="{{ asset('images/sponsors/small/small_trident.png') }} 576w, {{ asset('images/sponsors/large/large_trident.png') }} 960w" alt="trident"></a>
+					<a href="https://www.lacta.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_lacta.png') }}" srcset="{{ asset('images/sponsors/small/small_lacta.png') }} 576w, {{ asset('images/sponsors/large/large_lacta.png') }} 960w" alt="Lacta"></a>
 				</div>
 
 				<div class="col col-6 col-lg-2">
-					<a href="https://www.mondelez.com/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_mondelez.png') }}" srcset="{{ asset('images/sponsors/small/small_mondelez.png') }} 576w, {{ asset('images/sponsors/large/large_mondelez.png') }} 960w" alt="mondelez"></a>
-				</div>
-
-
-				<div class="col col-6 col-lg-2">
-					<a href="https://www.oreo.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_oreo.png') }}" srcset="{{ asset('images/sponsors/small/small_oreo.png') }} 576w, {{ asset('images/sponsors/large/large_oreo.png') }} 960w" alt="trident"></a>
+					<a href="http://www.tridentgum.com/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_trident.png') }}" srcset="{{ asset('images/sponsors/small/small_trident.png') }} 576w, {{ asset('images/sponsors/large/large_trident.png') }} 960w" alt="Trident"></a>
 				</div>
 
 				<div class="col col-6 col-lg-2">
-					<a href="https://www.conferience.com/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_conferience.png') }}" srcset="{{ asset('images/sponsors/small/small_conferience.png') }} 576w, {{ asset('images/sponsors/large/large_conferience.png') }} 960w" alt="conferience"></a>
+					<a href="http://www.oreo.com/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_oreo.png') }}" srcset="{{ asset('images/sponsors/small/small_oreo.png') }} 576w, {{ asset('images/sponsors/large/large_oreo.png') }} 960w" alt="Oreo"></a>
 				</div>
 
 				<div class="col col-6 col-lg-2">
-					<a href="https://www.papadopoulou.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_papadopoulou.png') }}" srcset="{{ asset('images/sponsors/small/small_papadopoulou.png') }} 576w, {{ asset('images/sponsors/large/large_papadopoulou.png') }} 960w" alt="papadopoulou"></a>
-				</div>
-
-
-
-			</div>
-
-			<div class="row vertical-align">
-				<div class="col col-6 col-lg-2">
-					<a href="http://www.tuvunu.com/{{ getLocale() }}" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_tuvunu.png') }}" srcset="{{ asset('images/sponsors/small/small_tuvunu.png') }} 576w, {{ asset('images/sponsors/large/large_tuvunu.png') }} 960w" alt="Tuvunu"></a>
-				</div>
-
-				<div class="col col-6 col-lg-2">
-					<a href="https://www.froutongeuseis.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_ygeias.png') }}" srcset="{{ asset('images/sponsors/small/small_ygeias.png') }} 576w, {{ asset('images/sponsors/large/large_ygeias.png') }} 960w" alt="ygeias"></a>
-				</div>
-
-				<div class="col col-6 col-lg-2">
-					<a href="https://www.green-cola.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_green_cola.png') }}" srcset="{{ asset('images/sponsors/small/small_green_cola.png') }} 576w, {{ asset('images/sponsors/large/large_green_cola.png') }} 960w" alt="green_cola"></a>
+					<a href="http://apopantaygeias.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/sponsors/small/small_pavlidis.png') }}" srcset="{{ asset('images/sponsors/small/small_pavlidis.png') }} 576w, {{ asset('images/sponsors/large/large_pavlidis.png') }} 960w" alt="Σοκολάτα Παυλίδης"></a>
 				</div>
 
 			</div>
@@ -257,15 +242,13 @@
 					<a href="https://frapress.gr" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_frapress.png') }}" srcset="{{ asset('images/media/small/small_frapress.png') }} 576w, {{ asset('images/media/large/large_frapress.png') }} 960w" alt="Frapress.gr"></a>
 				</div>
 
-
-			</div>
-
-			<div class="row vertical-align">
 				<div class="col col-6 col-lg-2">
 					<a href="https://ek-mag.com/{{ getLocale() }}/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_ek.png') }}" srcset="{{ asset('images/media/small/small_ek.png') }} 576w, {{ asset('images/media/large/large_ek.png') }} 960w" alt="ek magazine"></a>
 				</div>
 
+			</div>
 
+			<div class="row vertical-align">
 
 				<div class="col col-6 col-lg-2">
 					<a href="https://www.epixeiro.gr" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_epixeiro.png') }}" srcset="{{ asset('images/media/small/small_epixeiro.png') }} 576w, {{ asset('images/media/large/large_epixeiro.png') }} 960w" alt="επιχειρώ"></a>
@@ -283,10 +266,6 @@
 					<a href="http://www.paideia-ergasia.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_paideia-ergasia.png') }}" srcset="{{ asset('images/media/small/small_paideia-ergasia.png') }} 576w, {{ asset('images/media/large/large_paideia-ergasia.png') }} 960w" alt="Παιδεία – Εργασία"></a>
 				</div>
 
-				
-			</div>
-
-			<div class="row vertical-align">
 				<div class="col col-6 col-lg-2">
 					<a href="https://www.collegelink.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_collegelink.png') }}" srcset="{{ asset('images/media/small/small_collegelink.png') }} 576w, {{ asset('images/media/large/large_collegelink.png') }} 960w" alt="Collegelink"></a>
 				</div>
@@ -295,25 +274,23 @@
 					<a href="http://stand-out.gr" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_standout.png') }}" srcset="{{ asset('images/media/small/small_standout.png') }} 576w, {{ asset('images/media/large/large_standout.png') }} 960w" alt="Stand Out"></a>
 				</div>
 
+			</div>
+
+			<div class="row vertical-align">
 
 				<div class="col col-6 col-lg-2">
 					<a href="https://unikorn.gr" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_unikorn.png') }}" srcset="{{ asset('images/media/small/small_unikorn.png') }} 576w, {{ asset('images/media/large/large_unikorn.png') }} 960w" alt="Unikorn"></a>
 				</div>
 
-
-
-
 			</div>
 
 		</div>
 
-
-
 		<h2>{{ trans('general.sponsors.rank.5') }}</h2>
 
 		<div class="container-fluid">
-			<div class="row vertical-align">
 
+			<div class="row vertical-align">
 
 				<div class="col col-6 col-lg-2">
 					<a href="http://www.jobfairathens.gr/{{ getLocale() == "el" ? "" : "change_locale?id=en" }}" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_jfa.png') }}" srcset="{{ asset('images/media/small/small_jfa.png') }} 576w, {{ asset('images/media/large/large_jfa.png') }} 960w" alt="Job Fair Athens"></a>
@@ -328,11 +305,11 @@
 				</div>
 
 				<div class="col col-6 col-lg-2">
-					<a href="http://ntua.esngreece.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_esn.png') }}" srcset="{{ asset('images/media/small/small_esn.png') }} 576w, {{ asset('images/media/large/large_esn.png') }} 960w" alt="ESN"></a>
+					<a href="http://ntua.esngreece.gr/" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_esn.png') }}" srcset="{{ asset('images/media/small/small_esn.png') }} 576w, {{ asset('images/media/large/large_esn.png') }} 960w" alt="ESN NTUA Athens"></a>
 				</div>
 
 				<div class="col col-6 col-lg-2">
-					<a href="http://eestec.net" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_eestec.png') }}" srcset="{{ asset('images/media/small/small_eestec.png') }} 576w, {{ asset('images/media/large/large_eestec.png') }} 960w" alt="eestec"></a>
+					<a href="https://eestec.net" target="_blank"><img class="img-fluid grid-image hover-zoom" src="{{ asset('images/media/small/small_eestec.png') }}" srcset="{{ asset('images/media/small/small_eestec.png') }} 576w, {{ asset('images/media/large/large_eestec.png') }} 960w" alt="EESTEC LC Athens"></a>
 				</div>
 
 			</div>

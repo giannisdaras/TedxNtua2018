@@ -383,64 +383,6 @@ From 2008 until today, as CEO of the company, he has led to the establishment of
                 ])->id
             ]),
 
-            App\Schedule::updateOrCreate(['sid' => 'marcel-christ'], [
-                'hour' => '16:00',
-                'visible' => false,
-                'img_src' => '/images/speakers/marcel-christ-1.jpg',
-                'type' => 'talk',
-                'event_title' => [
-                    'en' => 'Marcel Christ',
-                    'el' => 'Marcel Christ'
-                ],
-                'event_prev' => [
-                    'en' => '',
-                    'el' => ''
-                ],
-                'subtitle' => [
-                    'en' => '',
-                    'el' => ''
-                ],
-                'speaker_id' => App\Speaker::updateOrCreate(['sid' => 'marcel-christ'], [
-                    'name' => [
-                        'en' => 'Marcel Christ',
-                        'el' => 'Marcel Christ'
-                    ],
-                    'occupation' => [
-                        'en' => 'Photographer – Filmmaker',
-                        'el' => 'Φωτογράφος – Κινηματογραφιστής'
-                    ],
-                    'quote' => [
-                        'en' => '',
-                        'el' => ''
-                    ],
-                    'visible' => false,
-                    'img_src' => 'marcel-christ-1.jpg',
-                    'img_src_alt' => 'marcel-christ-2.jpg',
-                    'link' => 'http://www.marcelchrist.com/',
-                    'bio' => [
-                        'en' => '
-Marcel Christ (1969) is a short film director and still life photographer, based in Amsterdam.
-
-Marcel Christ\'s approach to still-life photography is truly unique, making his work some of the most recognizable in the industry. Having studied both chemical engineering and photography, Christ blends these two interests to achieve his powerfully dynamic work. And it\'s this very background that makes him an unusually dynamic and experimental photographer and filmmaker who likes to explore the boundaries of the special effects and techniques he\'s using.
-
-His imagery is the outcome of his interest in the unpredictability and surprise of the ingredients he works with but within a meticulously controlled studio environment. He calls it "Controlling coincidence". Through this, he finds ways to give life to otherwise inanimate objects and immortalizes singular moments in time. There is nothing "still" in his work. Everything moves, jumps and flies.
-
-Some of the clients include Les Infusions de Prada, Johnnie Walker, Nespresso, Absolute Vodka, Heineken, Hennessy and Coca-Cola.
-',
-                        'el' => '
-Ο Marcel Christ (1969) είναι σκηνοθέτης ταινιών μικρού μήκους και διακεκριμένος φωτογράφος νεκρής φύσης με έδρα το Amsterdam.
-
-Η προσέγγισή του στη φωτογράφιση νεκρής φύσης είναι πραγματικά μοναδική, κάνοντας την δουλειά του μια από τις πιο αναγνωρίσιμες στη βιομηχανία. Έχοντας σπουδάσει Χημικός Μηχανικός αλλά και φωτογραφία, ο Christ συνδυάζει αυτά τα δύο ενδιαφέροντά του για να πετύχει τα δυναμικά έργα του. Το ιδιαίτερο αυτό υπόβαθρο τον καθιστά έναν ασυνήθιστα δυναμικό και πειραματικό φωτογράφο και κινηματογραφιστή που αγαπά να εξερευνά τα όρια των ειδικών εφέ και των τεχνικών που χρησιμοποιεί.
-
-Οι εικόνες που δημιουργεί είναι το αποτέλεσμα του ενδιαφέροντός του στην απρόβλεπτη και εκπληκτική συμπεριφορά των υλικών με τα οποία δουλεύει σε ένα σχολαστικά ελεγχόμενο στούντιο. "Ελεγχόμενη σύμπτωση" είναι το όνομά που δίνει στα δημιουργήματά του. Μέσα από το έργο του βρίσκει τρόπους να δώσει ζωή σε άψυχα αντικείμενα και να απαθανατίσει μοναδικές στιγμές του χρόνου. Τίποτα δεν είναι ακίνητο στις εικόνες του. Όλα κινούνται, πηδούν και πετάνε.
-
-Εικόνες του έχουν συνδεθεί με μεγάλα brands όπως Les Infusions de Prada, Johnnie Walker, Nespresso, Absolute Vodka, Heineken, Hennessy και Coca-Cola.
-',
-                    ]
-                /* Create the object and return its id */
-                ])->id
-            ]),
-
             App\Schedule::updateOrCreate(['sid' => 'dionysis-zindros'], [
                 'hour' => '16:00',
                 'visible' => false,
