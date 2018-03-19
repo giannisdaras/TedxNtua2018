@@ -45,7 +45,7 @@ return [
 		'name' => 'Ira Katsouda',
 		'bio'=>'Ira Katsouda is a stand up comedy special with performances all over Greece.
 
-In 2017, her  solo stand-up performance "Gluten Free" received great reviews and was sold out in Athens and Thessaloniki. In 2014-15, she collaborated with Andreas Paspatis. Together, they presented the first stand up comedy battle in Greece. Ιn 2016, they organized and presented their first live stand-up comedy talk show "The Comedians". She has participated in Stand Up for U 2016, which was broadcast by ALPHA. Additionally, she has presented her work in TEDx events, while she was one of the two hosts of the opening ceremony of the 20th Thessaloniki International Film Festival. She also organizes Open Mic nights.
+In 2017, her  solo stand-up performance "Gluten Free" received great reviews and was sold out in Athens and Thessaloniki. In 2014-15, she collaborated with Andreas Paspatis. Together, they presented the first stand up comedy battle in Greece. Ιn 2016, they organized and presented their first live stand-up comedy talk show "The Comedians". She has participated in Stand Up for U 2016, which was broadcast by ALPHA. Additionally, she has presented her work in TEDx events, while she was one of the two hosts of the opening ceremony of the 20<sup>th</sup> Thessaloniki International Film Festival. She also organizes Open Mic nights.
 
 She has worked as an actor and copywriter for advertisements. She has studied Economics in the Aristotle University of Thessaloniki, classical music, dance and acting.
 ',
