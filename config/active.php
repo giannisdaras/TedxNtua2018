@@ -12,6 +12,6 @@ return [
     |
     */
 
-    'class' => 'active',
+    'class' => ' active',
 
 ];
