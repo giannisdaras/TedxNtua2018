@@ -355,7 +355,7 @@ Under the following terms:
 
 #### Other creators\' content
 
- 1. Logos of sponsors — In the sponsors page we include the logo of each organization/company, which is the owner of it.
+ 1. Logos of sponsors — Each organization/company included in the sponsors page is the owner of the logo shown in the page and the trademark it represents.
  1. Names and TED, TEDx logos — The event is operated under license from the [TED](https://www.ted.com) organization, which is the owner of the TED, TEDx names, the corresponding logos that appear on the website, as well as the TEDxNTUA name, which is licensed to the executive team for the license term.
  1. [Font Awesome](https://fontawesome.com/v4.7.0/) Icons — The current website uses the Font Awesome icons by Dave Gandy, which are provided under the [following license](https://fontawesome.com/v4.7.0/license).
  1. [Bootstrap](https://getbootstrap.com) — The current website uses the Bootstrap framework, which is provided under [MIT license](https://github.com/twbs/bootstrap/blob/master/LICENSE).

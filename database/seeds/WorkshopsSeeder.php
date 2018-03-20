@@ -36,7 +36,6 @@ At TEDxNTUA, they will introduce us to the magical world of programming and ardu
                 ],
             ]),
 
-/*
             App\Schedule::updateOrCreate(['sid' => 'humane'], [
                 'hour' => '14:30',
                 'visible' => false,
@@ -59,7 +58,6 @@ Breath Box: ένας καινοτόμος θάλαμος αναπνοής που
 '
                 ],
             ]),
-*/
 
             App\Schedule::updateOrCreate(['sid' => 'labyrinth'], [
                 'hour' => '10:30',
@@ -94,8 +92,8 @@ Breath Box: ένας καινοτόμος θάλαμος αναπνοής που
                     'el' => 'Libre Space Foundation'
                 ],
                 'event_prev' => [
-                    'en' => 'Chasing satellites (11:30-)',
-                    'el' => 'Κυνηγώντας δορυφόρους (11:30-)'
+                    'en' => 'Chasing satellites (11:30-20:00)',
+                    'el' => 'Κυνηγώντας δορυφόρους (11:30-20:00)'
                 ],
                 'subtitle' => [
                     'en' => '
@@ -107,7 +105,6 @@ Libre Space Foundation is a nonprofit organization aiming to develop free and op
                 ],
             ]),
 
-/*
             App\Schedule::updateOrCreate(['sid' => 'igem'], [
                 'hour' => '14:15',
                 'visible' => false,
@@ -130,7 +127,7 @@ For the first time in 2017, students of Aristotle University of Thessaloniki and
 '
                 ],
             ]),
-*/
+
         ];
 
     }

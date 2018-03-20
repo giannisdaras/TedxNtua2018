@@ -115,8 +115,8 @@ His research interests focus on the understanding of chaotic and turbulent dynam
                     'el' => 'Caroline Bos'
                 ],
                 'occupation' => [
-                    'en' => 'Architect – Co-founder of UNStudio',
-                    'el' => 'Αρχιτέκτονας – Συνιδρύτρια του UNStudio'
+                    'en' => 'Principal Urban Planner – Co-founder of UNStudio',
+                    'el' => 'Principal Urban Planner – Συνιδρύτρια του UNStudio'
                 ],
                 'quote' => [
                     'en' => 'The key to future-proofing our cities does not lie in big data itself, but in the people who generate this data in the first place.',

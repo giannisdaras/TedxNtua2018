@@ -1148,9 +1148,7 @@ article.speakers {
 		}
 	}
 	.speakers-footer {
-		.row:not(:last-child) {
-			margin-bottom: 2rem;
-		}
+		margin-top: 3rem;
 	}
 	section.content .nospeakers-container {
 		padding: 1rem 0;
@@ -1283,13 +1281,16 @@ article.schedule {
 	.nav-slider {
 		font-size: 1.25em;
 	}
-
 	h5 {
 		font-size: 1.25em;
 		font-weight: bold;
 	}
 	h6 {
 		font-size: 1em;
+	}
+	table, .table {
+		border-collapse: separate;
+		border-spacing: 0;
 	}
 	tbody tr:not(.collapse-row) {
 		cursor: pointer;
@@ -1301,6 +1302,7 @@ article.schedule {
 	}
 	thead th {
 		width: 100%;
+		border-bottom: 0;
 	}
 	thead th:first-child {
 		width: auto;
@@ -1308,13 +1310,26 @@ article.schedule {
 	.table th, .table td {
 		padding: .5rem;
 	}
+	tr:first-child td {
+		border-top: 0;
+	}
 	td {
 		height: 100%;
+	}
+	td.time {
+		font-size: 1.25em;
+		font-weight: 500;
 	}
 	td img {
 		width: 40%;
 		height: auto;
 		max-width: 120px;
+	}
+	table.full-schedule tr td:not(:last-child) {
+		border-right: 2px solid #E9ECEF;
+	}
+	table.full-schedule tbody tr:hover:not(.collapse-row) td {
+		border-color: #DDD;
 	}
 	td .cell-content:not(.collapsing) {
 		height: 100%;

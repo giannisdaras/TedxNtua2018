@@ -26,7 +26,7 @@ class PerformancesSeeder extends Seeder {
                     'en' => '
 This group was created in 2002 through the Percussion Seminars organized by the Theatrical Department of NTUA in collaboration with Vasilis Vasilatos.
 
-In their performances, the group presents prototype compositions with a variety of different instruments, which lead them to a dynamic and highly personal style. This unique character of the team has made them a recognizable and popular group. They’ve also participated at several events of NTUA and festivals allover Greece.
+In their performances, the group presents original compositions with a variety of different instruments, which lead them to a dynamic and highly personal style. This unique character of the team has made them a recognizable and popular group. They’ve also participated at several events of NTUA and festivals allover Greece.
 ',
                     'el' => '
 Η ομάδα αυτή δημιουργήθηκε το 2002 μέσα από τα Σεμινάρια Κρουστών που διοργάνωσε το Θεατρικό Τμήμα του Ε.Μ.Π. σε συνεργασία με τον Βασίλη Βασιλάτο.
@@ -36,7 +36,6 @@ In their performances, the group presents prototype compositions with a variety 
                 ],
             ]),
 
-/*
             App\Schedule::updateOrCreate(['sid' => 'toubanaki'], [
                 'hour' => '18:00',
                 'visible' => false,
@@ -71,7 +70,6 @@ Her need, joy and goal are the creative interaction, experimentation and free co
 '
                 ],
             ]),
-*/
 
             App\Schedule::updateOrCreate(['sid' => 'science-reactors'], [
                 'hour' => '17:40',

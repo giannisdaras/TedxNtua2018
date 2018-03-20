@@ -14189,8 +14189,8 @@ article.speakers div.speaker-info h3 a:hover {
   color: #0a0c0d;
 }
 
-article.speakers .speakers-footer .row:not(:last-child) {
-  margin-bottom: 2rem;
+article.speakers .speakers-footer {
+  margin-top: 3rem;
 }
 
 article.speakers section.content .nospeakers-container {
@@ -14344,6 +14344,12 @@ article.schedule h6 {
   font-size: 1em;
 }
 
+article.schedule table,
+article.schedule .table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
 article.schedule tbody tr:not(.collapse-row) {
   cursor: pointer;
 }
@@ -14356,6 +14362,7 @@ article.schedule thead {
 
 article.schedule thead th {
   width: 100%;
+  border-bottom: 0;
 }
 
 article.schedule thead th:first-child {
@@ -14367,14 +14374,31 @@ article.schedule .table td {
   padding: .5rem;
 }
 
+article.schedule tr:first-child td {
+  border-top: 0;
+}
+
 article.schedule td {
   height: 100%;
+}
+
+article.schedule td.time {
+  font-size: 1.25em;
+  font-weight: 500;
 }
 
 article.schedule td img {
   width: 40%;
   height: auto;
   max-width: 120px;
+}
+
+article.schedule table.full-schedule tr td:not(:last-child) {
+  border-right: 2px solid #E9ECEF;
+}
+
+article.schedule table.full-schedule tbody tr:hover:not(.collapse-row) td {
+  border-color: #DDD;
 }
 
 article.schedule td .cell-content:not(.collapsing) {
