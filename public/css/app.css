@@ -14393,6 +14393,11 @@ article.schedule td img {
   max-width: 120px;
 }
 
+article.schedule td ul,
+article.schedule td ol {
+  padding-left: 1em;
+}
+
 article.schedule table.full-schedule tr td:not(:last-child) {
   border-right: 2px solid #E9ECEF;
 }

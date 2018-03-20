@@ -74,7 +74,7 @@ Breath Box: ένας καινοτόμος θάλαμος αναπνοής που
                 ],
                 'subtitle' => [
                     'en' => '
- Labyrinth of Senses is an experiential laboratory of familiarization with disabilities. Its aim is to provide the participants a different perception for the world around them. The laboratory is composed by different stations, where the participants are called to face a different challenge without using one of their senses. In its 3 years of action, Labyrinth of Senses has realized 24 actions and has reached over 3.000 people.
+ Labyrinth of Senses is an experiential laboratory of familiarization with disabilities. Its aim is to provide the participants with a different perception for the world around them. The laboratory is composed by different stations, where the participants are called to face a different challenge without using one of their senses. In its 3 years of action, Labyrinth of Senses has realized 24 actions and has reached over 3.000 people.
 ',
                     'el' => '
 Το Labyrinth of Senses είναι ένα βιωματικό εργαστήριο εξοικείωσης με την αναπηρία που έχει ως στόχο να παρέχει στους συμμετέχοντες μια διαφορετική αντίληψη για τον κόσμο γύρω τους. Το εργαστήριο αποτελείται από διαφορετικούς σταθμούς, σε καθέναν από τους οποίους οι συμμετέχοντες καλούνται να αντιμετωπίσουν μια διαφορετική πρόκληση χωρίς να χρησιμοποιούν κάποια από τις αισθήσεις τους. Στα 3 χρόνια δράσης του το Labyrinth of Senses έχει πραγματοποιήσει 24 δράσεις και έχει επηρεάσει πάνω από 3000 άτομα.
@@ -97,7 +97,7 @@ Breath Box: ένας καινοτόμος θάλαμος αναπνοής που
                 ],
                 'subtitle' => [
                     'en' => '
-Libre Space Foundation is a nonprofit organization aiming to develop free and open space technologies. An interactive satellite communication workshop for getting to know more about artificial satellites, their tracks, their basic functions and observation techniques will take place at the Side Events of #TEDxNTUA2018. Participants will construct receiving antennas and record signals from artificial satellites. In addition, there will be a presentation to global satellite communication network, the SatNOGS, as well as the Libre Space Foundation\'s open and free space technologies.
+Libre Space Foundation is a nonprofit organization aiming to develop free and open space technologies. An interactive satellite communication workshop for getting to know more about artificial satellites, their tracks, their basic functions and observation techniques will take place at the Side Events of TEDxNTUA 2018. Participants will construct receiving antennas and record signals from artificial satellites. In addition, there will be a presentation to global satellite communication network, the SatNOGS, as well as the Libre Space Foundation\'s open and free space technologies.
 ',
                     'el' => '
 Ένα διαδραστικό εργαστήριο δορυφορικών επικοινωνιών για γνωριμία με τους τεχνητούς δορυφόρους, τις τροχιές τους, τις βασικές λειτουργίες τους και τις τεχνικές παρατήρησης. Οι συμμετέχοντες θα κατασκευάσουν κεραίες λήψης και θα καταγράψουν σήματα από τεχνητούς δορυφόρους. Επίσης, θα γίνει παρουσίαση του παγκόσμιου δικτύου δορυφορικών επικοινωνιών SatNOGS, καθώς και του ευρύτερου έργου της Libre Space Foundation σε ανοιχτές και ελεύθερες διαστημικές τεχνολογίες. Το Libre Space Foundation είναι ένας μη κερδοσκοπικός οργανισμός, με στόχο την ανάπτυξη ελεύθερων και ανοιχτών τεχνολογιών για το διάστημα.
@@ -125,6 +125,50 @@ For the first time in 2017, students of Aristotle University of Thessaloniki and
                     'el' => '
 Για πρώτη φορά το 2017, δημιουργήθηκε με πρωτοβουλία φοιτητών του ΑΠΘ και του ΔΠΘ, φοιτητική διεπιστημονική ομάδα συνθετικής βιολογίας που πήρε μέρος στο διαγωνισμό iGEM (international genetically engineered machine). Το πρότζεκτ τους αφορούσε τη μάχη απέναντι στον καρκίνο του παχέος εντέρου κυρίως μέσω της δημιουργίας του PANDORRA, μιας πλατφόρμας για κατασκευή λογικών γενετικών κυκλωμάτων για information processing.
 '
+                ],
+            ]),
+
+            App\Schedule::updateOrCreate(['sid' => 'koutsodontis'], [
+                'hour' => '12:00',
+                'visible' => false,
+                'img_src' => '/images/sponsors/small/small_koutsodontis.png',
+                'type' => 'workshop',
+                'event_title' => [
+                    'en' => 'Manolis Koutsodontis',
+                    'el' => 'Μανώλης Κουτσοδόντης'
+                ],
+                'event_prev' => [
+                    'en' => '
+1. Σκέψου μεταπτυχιακά (12:00-12:45)
+2. GMAT & GRE workshop (12:45-13:30)
+',
+                    'el' => '
+1. Σκέψου μεταπτυχιακά (12:00-12:45)
+2. GMAT & GRE workshop (12:45-13:30)
+'
+                ],
+                'subtitle' => [
+                    'en' => '',
+                    'el' => ''
+                ],
+            ]),
+
+            App\Schedule::updateOrCreate(['sid' => 'sap'], [
+                'hour' => '17:00',
+                'visible' => false,
+                'img_src' => '/images/sponsors/small/small_sap.png',
+                'type' => 'workshop',
+                'event_title' => [
+                    'en' => 'Agamemnon Baltagiannis',
+                    'el' => 'Αγαμέμνων Μπαλταγιάννης'
+                ],
+                'event_prev' => [
+                    'en' => 'Let Chaos add value to your life (17:00-17:40)',
+                    'el' => 'Let Chaos add value to your life (17:00-17:40)'
+                ],
+                'subtitle' => [
+                    'en' => '',
+                    'el' => ''
                 ],
             ]),
 

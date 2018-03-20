@@ -1325,6 +1325,9 @@ article.schedule {
 		height: auto;
 		max-width: 120px;
 	}
+	td ul, td ol {
+		padding-left: 1em;
+	}
 	table.full-schedule tr td:not(:last-child) {
 		border-right: 2px solid #E9ECEF;
 	}

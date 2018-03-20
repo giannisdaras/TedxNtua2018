@@ -10,7 +10,7 @@ class TalksSeeder extends Seeder {
 
         $talks = [
             App\Schedule::updateOrCreate(['sid' => 'styllas'], [
-                'hour' => '12:05',
+                'hour' => '12:00',
                 'visible' => false,
                 'img_src' => '/images/speakers/styllas-1.jpg',
                 'type' => 'talk',
@@ -66,7 +66,7 @@ Romy Lorenz is a Postdoctoral Researcher at Imperial College with studies on psy
             ]),
 
             App\Schedule::updateOrCreate(['sid' => 'themis-sapsis'], [
-                'hour' => '13:05',
+                'hour' => '13:00',
                 'visible' => false,
                 'img_src' => '/images/speakers/themis-sapsis-1.jpg',
                 'type' => 'talk',
@@ -122,7 +122,7 @@ On the stage of TEDxNTUA she will talk about smart cities and how architecture t
             ]),
 
             App\Schedule::updateOrCreate(['sid' => 'ioanna-theodorou'], [
-                'hour' => '12:45',
+                'hour' => '12:40',
                 'visible' => false,
                 'img_src' => '/images/speakers/ioanna-theodorou-1.jpg',
                 'type' => 'talk',
@@ -263,7 +263,7 @@ On the stage of TEDxNTUA he will talk about the chaos of Athens.
 
 
             App\Schedule::updateOrCreate(['sid' => 'lc-architects'], [
-                'hour' => '12:25',
+                'hour' => '12:20',
                 'visible' => false,
                 'img_src' => '/images/speakers/lc-1.jpg',
                 'type' => 'talk',
