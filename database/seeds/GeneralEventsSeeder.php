@@ -28,8 +28,27 @@ class GeneralEventsSeeder extends Seeder {
                 ],
             ]),
 
-            App\Schedule::updateOrCreate(['sid' => 'welcome'], [
+            App\Schedule::updateOrCreate(['sid' => 'session-1'], [
                 'hour' => '11:30',
+                'visible' => true,
+                'img_src' => '/images/schedule/thumb-emergence.png',
+                'type' => 'general',
+                'event_title' => [
+                    'en' => 'Session 1',
+                    'el' => 'Session 1'
+                ],
+                'event_prev' => [
+                    'en' => 'Emergence (11:30-13:00)',
+                    'el' => 'Emergence (11:30-13:00)'
+                ],
+                'subtitle' => [
+                    'en' => '',
+                    'el' => ''
+                ],
+            ]),
+
+            App\Schedule::updateOrCreate(['sid' => 'welcome'], [
+                'hour' => '11:45',
                 'visible' => true,
                 'img_src' => '/images/schedule/welcome.png',
                 'type' => 'general',
@@ -66,6 +85,25 @@ class GeneralEventsSeeder extends Seeder {
                 ],
             ]),
 
+            App\Schedule::updateOrCreate(['sid' => 'session-2'], [
+                'hour' => '15:00',
+                'visible' => true,
+                'img_src' => '/images/schedule/thumb-divergence.png',
+                'type' => 'general',
+                'event_title' => [
+                    'en' => 'Session 2',
+                    'el' => 'Session 2'
+                ],
+                'event_prev' => [
+                    'en' => 'Divergence (15:00-17:00)',
+                    'el' => 'Divergence (15:00-17:00)'
+                ],
+                'subtitle' => [
+                    'en' => '',
+                    'el' => ''
+                ],
+            ]),
+
             App\Schedule::updateOrCreate(['sid' => 'break-2'], [
                 'hour' => '17:00',
                 'visible' => true,
@@ -82,6 +120,25 @@ class GeneralEventsSeeder extends Seeder {
                 'subtitle' => [
                     'en' => 'The speakers of the 2<sup>nd</sup> session will answer to your **questions** in the Simulcast room. Coffee and beverages will be served.',
                     'el' => 'Οι ομιλητές του 2<sup>ου</sup> session θα απαντήσουν στις **ερωτήσεις** σας στην Αίθουσα Simulcast. Θα σερβιριστεί καφές και ποτά (αναψυκτικά, ροφήματα κλπ).'
+                ],
+            ]),
+
+            App\Schedule::updateOrCreate(['sid' => 'session-3'], [
+                'hour' => '18:00',
+                'visible' => true,
+                'img_src' => '/images/schedule/thumb-convergence.png',
+                'type' => 'general',
+                'event_title' => [
+                    'en' => 'Session 3',
+                    'el' => 'Session 3'
+                ],
+                'event_prev' => [
+                    'en' => 'Convergence (18:00-20:00)',
+                    'el' => 'Convergence (18:00-20:00)'
+                ],
+                'subtitle' => [
+                    'en' => '',
+                    'el' => ''
                 ],
             ]),
             
