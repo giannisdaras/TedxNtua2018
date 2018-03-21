@@ -60,21 +60,21 @@ class ScheduleController extends Controller {
 	public function index(Request $request) {
 
 		if(env('SHOW_HIDDEN_ENTRIES', false) == true) {
-			$events = new Schedule;
+			$where = [];
 		} else {
-			$events = Schedule::where('visible', true);
+			$where = [['visible', true]];
 		}
 
-		$talks = $events -> where('type', 'talk')
+		$talks = Schedule:: where(array_merge($where, [['type', 'talk']]))
 						 -> orWhere('type', 'general')
 						 -> orderBy('hour', 'asc')
 						 -> get() -> toArray();
 
-		$performances = $events -> where('type', 'performance')
+		$performances = Schedule:: where(array_merge($where, [['type', 'performance']]))
 								-> orderBy('hour', 'asc')
 								-> get() -> toArray();
 
-		$workshops = $events -> where('type', 'workshop')
+		$workshops = Schedule:: where(array_merge($where, [['type', 'workshop']]))
 							 -> orderBy('hour', 'asc')
 							 -> get() -> toArray();
 
