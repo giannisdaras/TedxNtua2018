@@ -275,7 +275,7 @@ The current website contains links to other websites, for the content and the pr
 
 ##### 3.1. Governing law
 
-The management and the protection of the personal data of visitors or users of this website\'s services is subject to the related provisions of Greek Law (Law 2472/1997, Law 3471/2006), European Law (95/46/EC, 2002/58/EC and 2009/136/EC Directives), and the regulatory acts of the Hellenic Data Protection Authority.
+The management and the protection of the personal data of visitors or users of this website\'s services are subject to the related provisions of Greek Law (Law 2472/1997, Law 3471/2006), European Law (95/46/EC, 2002/58/EC and 2009/136/EC Directives), and the regulatory acts of the Hellenic Data Protection Authority.
 
 ##### 3.2. Collection of data
 
@@ -285,15 +285,15 @@ The current website contains contact forms, from which upon the user\'s consent,
 
 ###### 3.2.2. Google Analytics
 
-The current website uses the Google Analytics service for the purpose of collecting and analyzing data regarding the behavior of users on the website, ie. the web traffic, the navigation to individual pages, the browsing duration on them or the links that led the users to those pages. All the above data is non-personally identifiable, is collected according to the [privacy policy of the service](https://www.google.com/intl/el/policies/privacy/partners), and is not selled nor transferred to third parties.
+The current website uses the Google Analytics service for the purpose of collecting and analyzing data regarding the behavior of users on the website, ie. the web traffic, the navigation to individual pages, the browsing duration on them or the links that led the users to those pages. All the above data is non-personally identifiable, is collected according to the [privacy policy of the service](https://www.google.com/intl/el/policies/privacy/partners), and is not sold nor transferred to third parties.
 
 ###### 3.2.3. Google reCAPTCHA
 
-The current website uses the Google reCAPTCHA service for the purpose of preventing malicious attacks from bots. The service is used at the contact form of the website, where the user has to confirm that he/she is not a bot in order to send an e-mail through the form. The confirmation is done by sending non-personally identifiable data to the service, which is collected according to its [privacy policy](https://www.google.com/intl/el/policies/privacy/partners), and is not selled nor transferred to third parties.
+The current website uses the Google reCAPTCHA service for the purpose of preventing malicious attacks from bots. The service is used at the contact form of the website, where the user has to confirm that he/she is not a bot in order to send an e-mail through the form. The confirmation is done by sending non-personally identifiable data to the service, which is collected according to its [privacy policy](https://www.google.com/intl/el/policies/privacy/partners), and is not sold nor transferred to third parties.
 
 ###### 3.2.4. Facebook Social Plugins
 
-The current website uses the Facebook Social Plugins service for the purpose of embedding content from the Facebook social networking platform. The collected data concerns the interaction of the user with the service, is non-personally identifiable information, is collected according to the [privacy policy of the service](https://www.facebook.com/about/privacy/), and is not selled nor transferred to third parties.
+The current website uses the Facebook Social Plugins service for the purpose of embedding content from the Facebook social networking platform. The collected data concerns the interaction of the user with the service, is non-personally identifiable information, is collected according to the [privacy policy of the service](https://www.facebook.com/about/privacy/), and is not sold nor transferred to third parties.
 
 ###### 3.2.5. Instagram APIs
 
