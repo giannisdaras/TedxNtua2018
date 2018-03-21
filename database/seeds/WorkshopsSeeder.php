@@ -11,7 +11,7 @@ class WorkshopsSeeder extends Seeder {
         $workshops = [
             App\Schedule::updateOrCreate(['sid' => 'spin'], [
                 'hour' => '12:20',
-                'visible' => false,
+                'visible' => true,
                 'img_src' => '/images/schedule/spin.jpg',
                 'type' => 'workshop',
                 'event_title' => [
@@ -42,7 +42,7 @@ At TEDxNTUA, they will introduce us to the magical world of programming and **Ar
 
             App\Schedule::updateOrCreate(['sid' => 'humane'], [
                 'hour' => '14:30',
-                'visible' => false,
+                'visible' => true,
                 'img_src' => '/images/schedule/humane.jpg',
                 'type' => 'workshop',
                 'event_title' => [
@@ -65,7 +65,7 @@ An innovating breathing chamber that transforms the therapy routine to a pleasan
 
             App\Schedule::updateOrCreate(['sid' => 'labyrinth'], [
                 'hour' => '10:30',
-                'visible' => false,
+                'visible' => true,
                 'img_src' => '/images/schedule/labyrinth.jpg',
                 'type' => 'workshop',
                 'event_title' => [
@@ -88,7 +88,7 @@ An innovating breathing chamber that transforms the therapy routine to a pleasan
 
             App\Schedule::updateOrCreate(['sid' => 'librespace'], [
                 'hour' => '11:30',
-                'visible' => false,
+                'visible' => true,
                 'img_src' => '/images/schedule/librespace.jpg',
                 'type' => 'workshop',
                 'event_title' => [
@@ -115,7 +115,7 @@ Libre Space Foundation is a nonprofit organization aiming to develop free and op
 
             App\Schedule::updateOrCreate(['sid' => 'igem'], [
                 'hour' => '14:15',
-                'visible' => false,
+                'visible' => true,
                 'img_src' => '/images/schedule/igem.jpg',
                 'type' => 'workshop',
                 'event_title' => [
@@ -138,7 +138,7 @@ For the first time in 2017, students of Aristotle University of Thessaloniki and
 
             App\Schedule::updateOrCreate(['sid' => 'koutsodontis'], [
                 'hour' => '12:00',
-                'visible' => false,
+                'visible' => true,
                 'img_src' => '/images/sponsors/small/small_koutsodontis.png',
                 'type' => 'workshop',
                 'event_title' => [
@@ -163,7 +163,7 @@ For the first time in 2017, students of Aristotle University of Thessaloniki and
 
             App\Schedule::updateOrCreate(['sid' => 'sap'], [
                 'hour' => '17:00',
-                'visible' => false,
+                'visible' => true,
                 'img_src' => '/images/sponsors/small/small_sap.png',
                 'type' => 'workshop',
                 'event_title' => [

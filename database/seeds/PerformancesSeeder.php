@@ -11,7 +11,7 @@ class PerformancesSeeder extends Seeder {
         $performances = [
             App\Schedule::updateOrCreate(['sid' => 'percussions'], [
                 'hour' => '15:00',
-                'visible' => false,
+                'visible' => true,
                 'img_src' => '/images/schedule/percussions.png',
                 'type' => 'performance',
                 'event_title' => [
@@ -73,7 +73,7 @@ Her need, joy and goal are the creative interaction, experimentation and free co
 
             App\Schedule::updateOrCreate(['sid' => 'science-reactors'], [
                 'hour' => '17:40',
-                'visible' => false,
+                'visible' => true,
                 'img_src' => '/images/schedule/science-reactors.png',
                 'type' => 'performance',
                 'event_title' => [

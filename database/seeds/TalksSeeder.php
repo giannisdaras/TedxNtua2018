@@ -11,7 +11,7 @@ class TalksSeeder extends Seeder {
         $talks = [
             App\Schedule::updateOrCreate(['sid' => 'styllas'], [
                 'hour' => '12:00',
-                'visible' => false,
+                'visible' => true,
                 'img_src' => '/images/speakers/styllas-1.jpg',
                 'type' => 'talk',
                 'event_title' => [
@@ -39,7 +39,7 @@ On the stage of TEDxNTUA he will talk about how a geologist, as well as a worldw
 
             App\Schedule::updateOrCreate(['sid' => 'romy-lorenz'], [
                 'hour' => '16:10',
-                'visible' => false,
+                'visible' => true,
                 'img_src' => '/images/speakers/romy-lorenz-1.jpg',
                 'type' => 'talk',
                 'event_title' => [
@@ -67,7 +67,7 @@ Romy Lorenz is a Postdoctoral Researcher at Imperial College with studies on psy
 
             App\Schedule::updateOrCreate(['sid' => 'themis-sapsis'], [
                 'hour' => '13:00',
-                'visible' => false,
+                'visible' => true,
                 'img_src' => '/images/speakers/themis-sapsis-1.jpg',
                 'type' => 'talk',
                 'event_title' => [
@@ -95,7 +95,7 @@ On the stage of TEDxNTUA he will talk about the scientific **definition** of cha
 
             App\Schedule::updateOrCreate(['sid' => 'caroline-bos'], [
                 'hour' => '18:30',
-                'visible' => false,
+                'visible' => true,
                 'img_src' => '/images/speakers/caroline-bos-1.jpg',
                 'type' => 'talk',
                 'event_title' => [
@@ -123,7 +123,7 @@ On the stage of TEDxNTUA she will talk about **smart cities** and how architectu
 
             App\Schedule::updateOrCreate(['sid' => 'ioanna-theodorou'], [
                 'hour' => '12:40',
-                'visible' => false,
+                'visible' => true,
                 'img_src' => '/images/speakers/ioanna-theodorou-1.jpg',
                 'type' => 'talk',
                 'event_title' => [
@@ -151,7 +151,7 @@ On the stage of TEDxNTUA2018 she will talk about the chaos of the **refugee cris
 
             App\Schedule::updateOrCreate(['sid' => 'vassilios-makios'], [
                 'hour' => '19:10',
-                'visible' => false,
+                'visible' => true,
                 'img_src' => '/images/speakers/vassilios-makios-1.jpg',
                 'type' => 'talk',
                 'event_title' => [
@@ -179,7 +179,7 @@ On the stage of TEDxNTUA he will introduce us to the term of **open innovation**
 
             App\Schedule::updateOrCreate(['sid' => 'aimilios-chalamandaris'], [
                 'hour' => '15:30',
-                'visible' => false,
+                'visible' => true,
                 'img_src' => '/images/speakers/aimilios-chalamandaris-1.jpg',
                 'type' => 'talk',
                 'event_title' => [
@@ -207,7 +207,7 @@ On the stage of TEDxNTUA he will talk about how someone, based in Greece, can **
 
             App\Schedule::updateOrCreate(['sid' => 'dionysis-zindros'], [
                 'hour' => '15:50',
-                'visible' => false,
+                'visible' => true,
                 'img_src' => '/images/speakers/dionysis-zindros-1.jpg',
                 'type' => 'talk',
                 'event_title' => [
@@ -235,7 +235,7 @@ On the stage of TEDxNTUA, he will talk about how a **decentralized society** can
 
             App\Schedule::updateOrCreate(['sid' => 'vassilis-charalabidis'], [
                 'hour' => '18:50',
-                'visible' => false,
+                'visible' => true,
                 'img_src' => '/images/speakers/charalabidis-1.jpg',
                 'type' => 'talk',
                 'event_title' => [
@@ -264,7 +264,7 @@ On the stage of TEDxNTUA he will talk about **the chaos of Athens**.
 
             App\Schedule::updateOrCreate(['sid' => 'lc-architects'], [
                 'hour' => '12:20',
-                'visible' => false,
+                'visible' => true,
                 'img_src' => '/images/speakers/lc-1.jpg',
                 'type' => 'talk',
                 'event_title' => [
@@ -292,7 +292,7 @@ On the stage of TEDxNTUA they will talk about how the **parametric design** is i
 
             App\Schedule::updateOrCreate(['sid' => 'galani'], [
                 'hour' => '16:30',
-                'visible' => false,
+                'visible' => true,
                 'img_src' => '/images/speakers/galani-1.jpg',
                 'type' => 'talk',
                 'event_title' => [

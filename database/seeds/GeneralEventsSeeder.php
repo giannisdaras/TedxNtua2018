@@ -11,7 +11,7 @@ class GeneralEventsSeeder extends Seeder {
         $general = [
             App\Schedule::updateOrCreate(['sid' => 'registration'], [
                 'hour' => '10:30',
-                'visible' => false,
+                'visible' => true,
                 'img_src' => '/images/schedule/registration.png',
                 'type' => 'general',
                 'event_title' => [
@@ -30,7 +30,7 @@ class GeneralEventsSeeder extends Seeder {
 
             App\Schedule::updateOrCreate(['sid' => 'welcome'], [
                 'hour' => '11:30',
-                'visible' => false,
+                'visible' => true,
                 'img_src' => '/images/schedule/welcome.png',
                 'type' => 'general',
                 'event_title' => [
@@ -49,7 +49,7 @@ class GeneralEventsSeeder extends Seeder {
 
             App\Schedule::updateOrCreate(['sid' => 'break-1'], [
                 'hour' => '13:30',
-                'visible' => false,
+                'visible' => true,
                 'img_src' => '/images/schedule/break-1.png',
                 'type' => 'general',
                 'event_title' => [
@@ -68,7 +68,7 @@ class GeneralEventsSeeder extends Seeder {
 
             App\Schedule::updateOrCreate(['sid' => 'break-2'], [
                 'hour' => '17:00',
-                'visible' => false,
+                'visible' => true,
                 'img_src' => '/images/schedule/break-2.png',
                 'type' => 'general',
                 'event_title' => [
@@ -87,7 +87,7 @@ class GeneralEventsSeeder extends Seeder {
             
             App\Schedule::updateOrCreate(['sid' => 'after-party'], [
                 'hour' => '21:00',
-                'visible' => false,
+                'visible' => true,
                 'img_src' => '/images/schedule/after-party.png',
                 'type' => 'general',
                 'event_title' => [
