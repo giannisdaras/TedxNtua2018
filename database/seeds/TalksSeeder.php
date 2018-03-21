@@ -24,12 +24,12 @@ class TalksSeeder extends Seeder {
                 ],
                 'subtitle' => [
                     'en' => '
-Michael Styllas has a PhD in Geology and a Master degree in Oceanography-Marine Geology. He spends most of his time in the alpine refuge “Christos Kakkalos” on Mount Olympus. He has climbed extensively on the mountains of Greece, as well as on the highest peaks of the world. He was a member of the first successful Greek expedition that stood on the summit of Mount Everest.
+Michael Styllas has a PhD in Geology and a Master degree in **Oceanography-Marine Geology**. He spends most of his time in the alpine refuge “Christos Kakkalos” on Mount Olympus. He has climbed extensively on the mountains of Greece, as well as on the highest peaks of the world. He was a member of the first successful Greek expedition that stood on the summit of **Mount Everest**.
 
 On the stage of TEDxNTUA he will talk about how a geologist, as well as a worldwide known climber, understands chaos.
 ',
                     'el' => '
-Ο Μιχάλης Στύλλας είναι διδάκτωρ Γεωλογίας με μεταπτυχιακό στην Ωκεανογραφία. Τους περισσότερους μήνες του χρόνου ζει στον Όλυμπο, ως υπεύθυνος του καταφυγίου «Χρήστος Κάκκαλος» πραγματοποιώντας συχνά ταξίδια σε ψηλά βουνά σε όλο τον κόσμο. Το 2004 ήταν μέλος της πρώτης επιτυχημένης ελληνικής αποστολής που ανέβηκε στην ψηλότερη κορυφή του κόσμου, στο Έβερεστ.
+Ο Μιχάλης Στύλλας είναι διδάκτωρ Γεωλογίας με μεταπτυχιακό στην **Ωκεανογραφία**. Τους περισσότερους μήνες του χρόνου ζει στον Όλυμπο, ως υπεύθυνος του καταφυγίου «Χρήστος Κάκκαλος» πραγματοποιώντας συχνά ταξίδια σε ψηλά βουνά σε όλο τον κόσμο. Το 2004 ήταν μέλος της πρώτης επιτυχημένης ελληνικής αποστολής που ανέβηκε στην ψηλότερη κορυφή του κόσμου, στο **Έβερεστ**.
 
 Στη σκηνή του TEDxNTUA θα μας μιλήσει για το πώς αντιλαμβάνεται το chaos ένας ερευνητής γεωλόγος, αλλά και ένας διεθνώς καταξιωμένος ορειβάτης.
 '
@@ -52,14 +52,14 @@ On the stage of TEDxNTUA he will talk about how a geologist, as well as a worldw
                 ],
                 'subtitle' => [
                     'en' => '
-Romy Lorenz is a Postdoctoral Researcher at Imperial College with studies on psychology and biomedical engineering. She is a cognitive neuroscientist focusing on developing brain-computer interfaces. Alongside her research, she is working as a co-director for AXNS, a curatorial collective interested in the intersection between neuroscience and art.
+Romy Lorenz is a Postdoctoral Researcher at Imperial College with studies on psychology and biomedical engineering. She is a **cognitive neuroscientist** focusing on developing brain-computer interfaces. Alongside her research, she is working as a co-director for AXNS, a curatorial collective interested in the intersection between neuroscience and art.
  
- On the stage of TEDxNTUA she will talk about how her research led her to the development of the “AI neuroscientist” that exceeds the chaos of human factor and can lead to safe scientific results.
+ On the stage of TEDxNTUA she will talk about how her research led her to the development of the “**AI neuroscientist**” that exceeds the chaos of human factor and can lead to safe scientific results.
 ',
                     'el' => '
-Η Romy Lorenz είναι μεταδιδακτορική ερευνήτρια στο Ιmperial College, με αντικείμενο μελέτης τη γνωσιακή νευροεπιστήμη. Με σπουδές πάνω στην ψυχολογία και τη βιοϊατρική μηχανική, ασχολείται με τη διασύνδεση εγκεφάλου-υπολογιστή. Παράλληλα, είναι συνδιευθύντρια στο σύλλογο AXNS, που έχει ως στόχο τo συνδυασμό τέχνης και επιστήμης.
+Η Romy Lorenz είναι μεταδιδακτορική ερευνήτρια στο Ιmperial College, με αντικείμενο μελέτης τη **γνωσιακή νευροεπιστήμη**. Με σπουδές πάνω στην ψυχολογία και τη βιοϊατρική μηχανική, ασχολείται με τη διασύνδεση εγκεφάλου-υπολογιστή. Παράλληλα, είναι συνδιευθύντρια στο σύλλογο AXNS, που έχει ως στόχο τo συνδυασμό τέχνης και επιστήμης.
  
-Στη σκηνή του TEDxNTUA θα μας μιλήσει για το πώς η έρευνά της την οδήγησε στην ανάπτυξη του “έξυπνου νευροεπιστήμονα” που  υπερβαίνει το chaos του ανθρώπινου παράγοντα και οδηγείται σε ασφαλή επιστημονικά αποτελέσματα.
+Στη σκηνή του TEDxNTUA θα μας μιλήσει για το πώς η έρευνά της την οδήγησε στην ανάπτυξη του “**έξυπνου νευροεπιστήμονα**” που  υπερβαίνει το chaos του ανθρώπινου παράγοντα και οδηγείται σε ασφαλή επιστημονικά αποτελέσματα.
 '
                 ],
                 'speaker_id' => App\Speaker::where('sid', 'romy-lorenz')->first()->id
@@ -80,14 +80,14 @@ Romy Lorenz is a Postdoctoral Researcher at Imperial College with studies on psy
                 ],
                 'subtitle' => [
                     'en' => '
-Themis Sapsis is an Associate Professor at the Department of Mechanical Engineering of MIT. He has created an innovative algorithm that helps to predict extreme event phenomena through chaotic equations. 
+Themis Sapsis is an Associate Professor at the Department of Mechanical Engineering of MIT. He has created an **innovative algorithm** that helps to predict extreme event phenomena through **chaotic equations**. 
 
-On the stage of TEDxNTUA he will talk about the scientific definition of chaos and how chaos predominates in nature.
+On the stage of TEDxNTUA he will talk about the scientific **definition** of chaos and how chaos predominates in nature.
 ',
                     'el' => '
-Ο Θέμης Σαψής είναι Αναπληρωτής Καθηγητής στο τμήμα Μηχανολόγων Μηχανικών του MIT. Έχει κατασκευάσει έναν καινοτόμο αλγόριθμο που βοηθά στην πρόβλεψη ακραίων καιρικών φαινομένων μέσω χαοτικών εξισώσεων.
+Ο Θέμης Σαψής είναι Αναπληρωτής Καθηγητής στο τμήμα Μηχανολόγων Μηχανικών του MIT. Έχει κατασκευάσει έναν **καινοτόμο αλγόριθμο** που βοηθά στην πρόβλεψη ακραίων καιρικών φαινομένων μέσω **χαοτικών εξισώσεων**.
 
-Στη σκηνή του TEDxNTUA θα μας μιλήσει για τον επιστημονικό ορισμό του χάους, αλλά και πώς αυτό κυριαρχεί στη φύση.
+Στη σκηνή του TEDxNTUA θα μας μιλήσει για τον επιστημονικό **ορισμό** του χάους, αλλά και πώς αυτό κυριαρχεί στη φύση.
 '
                 ],
                 'speaker_id' => App\Speaker::where('sid', 'themis-sapsis')->first()->id
@@ -108,14 +108,14 @@ On the stage of TEDxNTUA he will talk about the scientific definition of chaos a
                 ],
                 'subtitle' => [
                     'en' => '
-Caroline Bos is a co-founder of the UNStudio (United Net) architecture office and has studied History of Art in London and Urban and Regional Planning in Utrecht.
+Caroline Bos is a co-founder of the UNStudio (United Net) architecture office and has studied History of Art in London and **Urban and Regional Planning** in Utrecht.
 
-On the stage of TEDxNTUA she will talk about smart cities and how architecture tries to tame the Chaos of the produced data, putting people as a priority.
+On the stage of TEDxNTUA she will talk about **smart cities** and how architecture tries to tame the Chaos of the produced data, putting people as a priority.
 ',
                     'el' => '
-Η Caroline Bos είναι συνιδρύτρια του αρχιτεκτονικού γραφείου UNStudio και έχει σπουδές στην Ιστορία της Τέχνης στο Λονδίνου και στον Αστικό & Περιφερειακό Σχεδιασμό στην Ουτρέχτη.
+Η Caroline Bos είναι συνιδρύτρια του αρχιτεκτονικού γραφείου UNStudio και έχει σπουδές στην Ιστορία της Τέχνης στο Λονδίνου και στον **Αστικό & Περιφερειακό Σχεδιασμό** στην Ουτρέχτη.
 
-Στη σκηνή του TEDxNTUA θα μας μιλήσει για τις smart cities και το πώς η αρχιτεκτονική προσπαθεί να δαμάσει το chaos της παραγόμενης πληροφορίας, θέτοντας ως προτεραιότητα τον άνθρωπο.
+Στη σκηνή του TEDxNTUA θα μας μιλήσει για τις **smart cities** και το πώς η αρχιτεκτονική προσπαθεί να δαμάσει το chaos της παραγόμενης πληροφορίας, θέτοντας ως προτεραιότητα τον άνθρωπο.
 '
                 ],
                 'speaker_id' => App\Speaker::where('sid', 'caroline-bos')->first()->id
@@ -136,14 +136,14 @@ On the stage of TEDxNTUA she will talk about smart cities and how architecture t
                 ],
                 'subtitle' => [
                     'en' => '
-Ioanna uses the startup mentality to reimagine how social impact can be achieved. She launched Campfire Innovation, she has lived across Europe and the Middle East and holds degrees in History of Art and a MA in International Cultural Policy & Management.
+Ioanna uses the startup mentality to reimagine how social impact can be achieved. She launched **Campfire Innovation**, she has lived across Europe and the Middle East and holds degrees in History of Art and a MA in International Cultural Policy & Management.
 
-On the stage of TEDxNTUA2018 she will talk about the chaos of the refugee crisis and how its solution requires the development of innovative methods combined with the use of technology.
+On the stage of TEDxNTUA2018 she will talk about the chaos of the **refugee crisis** and how its solution requires the development of innovative methods combined with the use of **technology**.
 ',
                     'el' => '
-Η Ιωάννα Θεοδώρου είναι κοινωνική επιχειρηματίας που γεφυρώνει τη λογική των startups με την κοινωνική προσφορά. Έχει δημιουργήσει το Campfire Innovation, ενώ έχει ζήσει στην Ευρώπη και τη Μέση Ανατολή και κατέχει Bachelor στην Ιστορία Τέχνης και Μάστερ στη Διοίκηση Πολιτιστικών ΜΚΟ.
+Η Ιωάννα Θεοδώρου είναι κοινωνική επιχειρηματίας που γεφυρώνει τη λογική των startups με την κοινωνική προσφορά. Έχει δημιουργήσει το **Campfire Innovation**, ενώ έχει ζήσει στην Ευρώπη και τη Μέση Ανατολή και κατέχει Bachelor στην Ιστορία Τέχνης και Μάστερ στη Διοίκηση Πολιτιστικών ΜΚΟ.
 
-Στη σκηνή του TEDxNTUA θα μας μιλήσει για το chaos του προσφυγικού ζητήματος, αλλά και το πώς η αντιμετώπισή του επιβάλλει την ανάπτυξη καινοτόμων μεθόδων σε συνδυασμό με τη χρήση της τεχνολογίας.
+Στη σκηνή του TEDxNTUA θα μας μιλήσει για το chaos του **προσφυγικού ζητήματος**, αλλά και το πώς η αντιμετώπισή του επιβάλλει την ανάπτυξη καινοτόμων μεθόδων σε συνδυασμό με τη χρήση της **τεχνολογίας**.
 '
                 ],
                 'speaker_id' => App\Speaker::where('sid', 'ioanna-theodorou')->first()->id
@@ -164,14 +164,14 @@ On the stage of TEDxNTUA2018 she will talk about the chaos of the refugee crisis
                 ],
                 'subtitle' => [
                     'en' => '
-Vassilios Makios is General Director at Corallia and Professor Emeritus in the Electrical Engineering Department of  the University of Patras. His vision is “to sustain a Greek environment with the right framework conditions to allow sciences, innovation and entrepreneurship to flourish again”. 
+Vassilios Makios is General Director at Corallia and Professor Emeritus in the Electrical Engineering Department of the University of Patras. His vision is “to sustain a Greek environment with the right framework conditions to allow sciences, innovation and entrepreneurship to flourish again”. 
  
-On the stage of TEDxNTUA he will introduce us to the term of open innovation. Only communities with open structures will allow small actions to produce great results, revealing the butterfly effect and the creative chaos.
+On the stage of TEDxNTUA he will introduce us to the term of **open innovation**. Only communities with open structures will allow small actions to produce great results, revealing the **butterfly effect** and the creative chaos.
 ',
                     'el' => '
 Ο Βασίλειος Μακιός είναι γενικός Διευθυντής του Corallia και ομότιμος καθηγητής του τμήματος Ηλεκτρολόγων Μηχανικών και Τεχνολογίας Υπολογιστών του Πανεπιστημίου Πατρών. Όραμά του είναι να δημιουργήσει στην Ελλάδα ένα περιβάλλον το οποίο θα επιτρέπει στις επιστήμες, την καινοτομία και την επιχειρηματικότητα να ανθίσουν. 
 
-Στη σκηνή του TEDxNTUA θα μας εισάγει στην έννοια του open innovation. Μόνο οι κοινότητες με ανοιχτές δομές επιτρέπουν σε μικρές δράσεις να επιφέρουν μεγάλα αποτελέσματα, αποκαλύπτοντας έτσι το φαινόμενο της πεταλούδας και το δημιουργικό chaos.
+Στη σκηνή του TEDxNTUA θα μας εισάγει στην έννοια του **open innovation**. Μόνο οι κοινότητες με ανοιχτές δομές επιτρέπουν σε μικρές δράσεις να επιφέρουν μεγάλα αποτελέσματα, αποκαλύπτοντας έτσι το **φαινόμενο της πεταλούδας** και το δημιουργικό chaos.
 '
                 ],
                 'speaker_id' => App\Speaker::where('sid', 'vassilios-makios')->first()->id
@@ -192,14 +192,14 @@ On the stage of TEDxNTUA he will introduce us to the term of open innovation. On
                 ],
                 'subtitle' => [
                     'en' => '
-Aimilios Chalamandaris is a co-founder and CEO of Innoetics. He has authored more than 30 original scientific papers, and is one of the founding members of the team, which developed one of the world\'s leading synthetic speech technologies.
+Aimilios Chalamandaris is a co-founder and CEO of Innoetics. He has authored more than 30 original scientific papers, and is one of the founding members of the team, which developed one of the world\'s **leading synthetic speech technologies**.
 
-On the stage of TEDxNTUA he will talk about how someone, based in Greece, can overcome the so-called chaos of the Greek system and stand out internationally.
+On the stage of TEDxNTUA he will talk about how someone, based in Greece, can **overcome** the so-called chaos of the Greek system and stand out internationally.
 ',
                     'el' => '
-Ο Αιμίλιος Χαλαμανδάρης είναι συνιδρυτής και CEO της εταιρίας Innoetics. Έχει συγγράψει περισσότερες από 30 πρωτότυπες επιστημονικές εργασίες, ενώ αποτελεί ένα από τα ιδρυτικά μέλη της ομάδας που ανέπτυξε μια από τις κορυφαίες τεχνολογίες συνθετικής ομιλίας στον κόσμο.
+Ο Αιμίλιος Χαλαμανδάρης είναι συνιδρυτής και CEO της εταιρίας Innoetics. Έχει συγγράψει περισσότερες από 30 πρωτότυπες επιστημονικές εργασίες, ενώ αποτελεί ένα από τα ιδρυτικά μέλη της ομάδας που ανέπτυξε μια από τις **κορυφαίες τεχνολογίες συνθετικής ομιλίας** στον κόσμο.
 
-Στη σκηνή του TEDxNTUA θα μας μιλήσει για το πώς μπορεί κανείς να ξεπεράσει το αποκαλούμενο chaos του ελληνικού συστήματος και να ξεχωρίσει διεθνώς, έχοντας ως βάση την Ελλάδα.
+Στη σκηνή του TEDxNTUA θα μας μιλήσει για το πώς μπορεί κανείς να **ξεπεράσει** το αποκαλούμενο chaos του ελληνικού συστήματος και να ξεχωρίσει διεθνώς, έχοντας ως βάση την Ελλάδα.
 '
                 ],
                 'speaker_id' => App\Speaker::where('sid', 'aimilios-chalamandaris')->first()->id
@@ -220,14 +220,14 @@ On the stage of TEDxNTUA he will talk about how someone, based in Greece, can ov
                 ],
                 'subtitle' => [
                     'en' => '
-Dionysis Zindros is a PhD student in cryptography and blockchains at the University of Athens. He is a security and software engineer by training and in the past has been a member of Google and Twitter.
+Dionysis Zindros is a PhD student in **cryptography** and **blockchains** at the University of Athens. He is a security and software engineer by training and in the past has been a member of Google and Twitter.
 
-On the stage of TEDxNTUA, he will talk about how a decentralized society can be built. Is that possible or will it lead to the total chaos?
+On the stage of TEDxNTUA, he will talk about how a **decentralized society** can be built. Is that possible or will it lead to the total chaos?
 ',
                     'el' => '
-Ο Διονύσης Ζήνδρος είναι υποψήφιος διδάκτορας στο Πανεπιστήμιο Αθηνών στην κρυπτογραφία και τις τεχνολογίες blockchain. Ως μηχανικός λογισμικού και ειδικός στην ασφάλεια έχει εργαστεί, μεταξύ άλλων, στη Google και στο Twitter.
+Ο Διονύσης Ζήνδρος είναι υποψήφιος διδάκτορας στο Πανεπιστήμιο Αθηνών στην **κρυπτογραφία** και τις **τεχνολογίες blockchain**. Ως μηχανικός λογισμικού και ειδικός στην ασφάλεια έχει εργαστεί, μεταξύ άλλων, στη Google και στο Twitter.
 
-Στη σκηνή του TEDxNTUA θα μας μιλήσει για το πώς μπορεί να δομηθεί μια “αποκεντρωμένη” κοινωνία. Είναι αυτό εφικτό ή θα οδηγήσει στο απόλυτο chaos;
+Στη σκηνή του TEDxNTUA θα μας μιλήσει για το πώς μπορεί να δομηθεί μια **“αποκεντρωμένη” κοινωνία**. Είναι αυτό εφικτό ή θα οδηγήσει στο απόλυτο chaos;
 '
                 ],
                 'speaker_id' => App\Speaker::where('sid', 'dionysis-zindros')->first()->id
@@ -248,14 +248,14 @@ On the stage of TEDxNTUA, he will talk about how a decentralized society can be 
                 ],
                 'subtitle' => [
                     'en' => '
-Vassilis Haralambidis is a founding member, manager and artistic director of the BIOS non-profit organization (Bios pireos84, Romantso and Latraac). He has devoted himself to pioneering a creative based approach to new and social entrepreneurship, with his main focus currently being social inclusion and regeneration through the creative and cultural industries sector.
+Vassilis Haralambidis is a founding member, manager and artistic director of the BIOS non-profit organization (Bios pireos84, Romantso and Latraac). He has devoted himself to pioneering a creative based approach to new and social entrepreneurship, with his main focus currently being social inclusion and **regeneration** through the creative and cultural industries sector.
 
-On the stage of TEDxNTUA he will talk about the chaos of Athens.
+On the stage of TEDxNTUA he will talk about **the chaos of Athens**.
 ',
                     'el' => '
-Ο Βασίλης Χαραλαμπίδης είναι ιδρυτικό μέλος, μάνατζερ και καλλιτεχνικός διευθυντής του μη κερδοσκοπικού οργανισμού BIOS. Έχει αφοσιωθεί στη δημιουργία μιας πρωτοποριακής προσέγγισης για τη νέα κοινωνική επιχειρηματικότητα με επίκεντρο την κοινωνική ένταξη και αναγέννηση στον τομέα των δημιουργικών και πολιτιστικών βιομηχανιών.
+Ο Βασίλης Χαραλαμπίδης είναι ιδρυτικό μέλος, μάνατζερ και καλλιτεχνικός διευθυντής του μη κερδοσκοπικού οργανισμού BIOS. Έχει αφοσιωθεί στη δημιουργία μιας πρωτοποριακής προσέγγισης για τη νέα κοινωνική επιχειρηματικότητα με επίκεντρο την κοινωνική ένταξη και **αναγέννηση** στον τομέα των δημιουργικών και πολιτιστικών βιομηχανιών.
 
-Στη σκηνή του TEDxNTUA θα μας δώσει τη δική του, ιδιαίτερη εκδοχή για το chaos της Αθήνας. 
+Στη σκηνή του TEDxNTUA θα μας δώσει τη δική του, ιδιαίτερη εκδοχή για **το chaos της Αθήνας**.
 '
                 ],
                 'speaker_id' => App\Speaker::where('sid', 'vassilis-charalabidis')->first()->id
@@ -277,14 +277,14 @@ On the stage of TEDxNTUA he will talk about the chaos of Athens.
                 ],
                 'subtitle' => [
                     'en' => '
-Natassa Lianou and Ermis Chalvatzis are directors of Lianou Chalvatzis Architects (LC-A). The practice\'s work focuses οn commercial building projects aiming to bring meaningful design to the everyday lives of a broader audience.
+Natassa Lianou and Ermis Chalvatzis are directors of Lianou Chalvatzis Architects (LC-A). The practice\'s work focuses οn commercial building projects aiming to bring **meaningful** design to the everyday lives of a broader audience.
 
-On the stage of TEDxNTUA they will talk about how the parametric design is inseparably linked to chaos.
+On the stage of TEDxNTUA they will talk about how the **parametric design** is inseparably linked to chaos.
 ',
                     'el' => '
-Η Νατάσσα Λιανού και ο Ερμής Χαλβατζής διευθύνουν το αρχιτεκτονικό γραφείο Lianou Chalvatzis Architects (LC-A). Σχεδιάζουν αποτελεσματικές αρχιτεκτονικές λύσεις σε υπαρκτά προβλήματα με στόχο να συνδέσουν τους ανθρώπους και να προωθήσουν την κοινωνική αλληλεπίδραση.
+Η Νατάσσα Λιανού και ο Ερμής Χαλβατζής διευθύνουν το αρχιτεκτονικό γραφείο Lianou Chalvatzis Architects (LC-A). Σχεδιάζουν **αποτελεσματικές** αρχιτεκτονικές λύσεις σε υπαρκτά προβλήματα με στόχο να συνδέσουν τους ανθρώπους και να προωθήσουν την κοινωνική αλληλεπίδραση.
 
-Στη σκηνή του TEDxNTUA θα μας μιλήσουν για το πώς ο παραμετρικός σχεδιασμός είναι άρρηκτα συνδεδεμένος με το chaos.
+Στη σκηνή του TEDxNTUA θα μας μιλήσουν για το πώς ο **παραμετρικός σχεδιασμός** είναι άρρηκτα συνδεδεμένος με το chaos.
 '
                 ],
                 'speaker_id' => App\Speaker::where('sid', 'lc-architects')->first()->id
@@ -305,12 +305,12 @@ On the stage of TEDxNTUA they will talk about how the parametric design is insep
                 ],
                 'subtitle' => [
                     'en' => '
-The stage of TEDxNTUA welcomes Dimitra Galani. A conversation with her will reveal how an artist perceives the chaos of the artistic creation through the chaos of universe and human existence.
+The stage of TEDxNTUA welcomes Dimitra Galani. A **conversation** with her will reveal how an artist perceives the chaos of the artistic creation through the chaos of universe and **human existence**.
 
 Dimitra Galani is an exceptional artist, a serious and dignified presence in our country’s music scene. Her enduring cross-generational appeal is based on her unique voice, inherent musicality and powerful stage presence.
 ',
                     'el' => '
-Η σκηνή του TEDxNTUA υποδέχεται τη Δήμητρα Γαλάνη. Μία συν-ομιλία μαζί της θα μας φανερώσει πώς μία καλλιτέχνις αντιλαμβάνεται το chaos της καλλιτεχνικής δημιουργίας μέσα από το χάος του σύμπαντος και της ανθρώπινης ύπαρξης.
+Η σκηνή του TEDxNTUA υποδέχεται τη Δήμητρα Γαλάνη. Μία **συν-ομιλία** μαζί της θα μας φανερώσει πώς μία καλλιτέχνις αντιλαμβάνεται το chaos της καλλιτεχνικής δημιουργίας μέσα από το χάος του σύμπαντος και της **ανθρώπινης ύπαρξης**.
 
 Η Δήμητρα Γαλάνη αποτελεί μια ξεχωριστή παρουσία στην εξέλιξη του σύγχρονου μουσικού μας πολιτισμού τις τελευταίες δεκαετίες τόσο ερμηνευτικά όσο και δημιουργικά. Είναι μία καλλιτέχνις που ξέρει πως να μαγεύει με την ιδιαιτερότητα και την ομορφιά της φωνής της αλλά και με τις ποικίλες εκφράσεις της δημιουργικότητάς της.
 '

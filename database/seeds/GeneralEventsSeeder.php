@@ -23,8 +23,8 @@ class GeneralEventsSeeder extends Seeder {
                     'el' => 'Οι πόρτες ανοίγουν και σερβίρεται πρωινό (10:30-11:30)'
                 ],
                 'subtitle' => [
-                    'en' => 'Don\'t forget to bring your ticket: a piece of clothing or a blanket that will be given to people in need.',
-                    'el' => 'Μην ξεχάσετε το εισιτήριό σας: ένα ρούχο ή μία κουβέρτα που θα δοθεί σε ανθρώπους που το έχουν ανάγκη.'
+                    'en' => 'Don\'t forget to bring your ticket: a **piece of clothing** or a **blanket** that will be given to people in need.',
+                    'el' => 'Μην ξεχάσετε το εισιτήριό σας: ένα **ρούχο** ή μία **κουβέρτα** που θα δοθεί σε ανθρώπους που το έχουν ανάγκη.'
                 ],
             ]),
 
@@ -42,8 +42,8 @@ class GeneralEventsSeeder extends Seeder {
                     'el' => 'Προσφωνήσεις από τον Πρύτανη του ΕΜΠ Ι. Γκόλια, τη Θ. Βαρβαρίγου και τον curator μας για το TEDxNTUA 2018 (11:45-12:00)'
                 ],
                 'subtitle' => [
-                    'en' => 'The NTUA Rector, Ioannis Golias, the TEDxNTUA academic coordinator, Theodora Varvarigou, and the TEDxNTUA 2018 curator, Vasilis Katsadonis, welcome the participants of the event.',
-                    'el' => 'Ο Πρύτανης του ΕΜΠ Ιωάννης Γκόλιας, η Ακαδημαϊκή Υπεύθυνη του TEDxNTUA Θεοδώρα Βαρβαρίγου και ο curator του TEDxNTUA 2018 Βασίλης Κατσαντώνης καλωσορίζουν το κοινό της εκδήλωσης.'
+                    'en' => 'The NTUA Rector, Ioannis Golias, the TEDxNTUA academic coordinator, Theodora Varvarigou, and the TEDxNTUA 2018 curator, Vasilis Katsadonis, **welcome** the participants of the event.',
+                    'el' => 'Ο Πρύτανης του ΕΜΠ Ιωάννης Γκόλιας, η Ακαδημαϊκή Υπεύθυνη του TEDxNTUA Θεοδώρα Βαρβαρίγου και ο curator του TEDxNTUA 2018 Βασίλης Κατσαντώνης **καλωσορίζουν** το κοινό της εκδήλωσης.'
                 ],
             ]),
 
@@ -61,8 +61,8 @@ class GeneralEventsSeeder extends Seeder {
                     'el' => 'Γεύμα, Q&A με τους ομιλητές, workshops και χαλάρωση'
                 ],
                 'subtitle' => [
-                    'en' => 'The speakers of the 1<sup>st</sup> session will answer to your questions in the Simulcast room and lunch will be served.',
-                    'el' => 'Οι ομιλητές του 1<sup>ου</sup> session θα απαντήσουν στις ερωτήσεις σας στην Αίθουσα Simulcast και θα σερβιριστεί γεύμα.'
+                    'en' => 'The speakers of the 1<sup>st</sup> session will answer to your **questions** in the Simulcast room and lunch will be served.',
+                    'el' => 'Οι ομιλητές του 1<sup>ου</sup> session θα απαντήσουν στις **ερωτήσεις** σας στην Αίθουσα Simulcast και θα σερβιριστεί γεύμα.'
                 ],
             ]),
 
@@ -80,8 +80,8 @@ class GeneralEventsSeeder extends Seeder {
                     'el' => 'Καφές και ποτά, Q&A με τους ομιλητές, workshops και χαλάρωση'
                 ],
                 'subtitle' => [
-                    'en' => 'The speakers of the 2<sup>nd</sup> session will answer to your questions in the Simulcast room. Coffee and beverages will be served.',
-                    'el' => 'Οι ομιλητές του 2<sup>ου</sup> session θα απαντήσουν στις ερωτήσεις σας στην Αίθουσα Simulcast. Θα σερβιριστεί καφές και ποτά (αναψυκτικά, ροφήματα κλπ).'
+                    'en' => 'The speakers of the 2<sup>nd</sup> session will answer to your **questions** in the Simulcast room. Coffee and beverages will be served.',
+                    'el' => 'Οι ομιλητές του 2<sup>ου</sup> session θα απαντήσουν στις **ερωτήσεις** σας στην Αίθουσα Simulcast. Θα σερβιριστεί καφές και ποτά (αναψυκτικά, ροφήματα κλπ).'
                 ],
             ]),
             
