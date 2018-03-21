@@ -76,8 +76,8 @@ class GeneralEventsSeeder extends Seeder {
                     'el' => '1<sup>ο</sup> Διάλειμμα'
                 ],
                 'event_prev' => [
-                    'en' => 'Lunch, Q&A with the speakers, workshops and relaxation',
-                    'el' => 'Γεύμα, Q&A με τους ομιλητές, workshops και χαλάρωση'
+                    'en' => 'Lunch, Q&A with the speakers, workshops and equilibrium',
+                    'el' => 'Γεύμα, Q&A με τους ομιλητές, workshops και ηρεμία'
                 ],
                 'subtitle' => [
                     'en' => 'The speakers of the 1<sup>st</sup> session will answer to your **questions** in the Simulcast room and lunch will be served.',
@@ -114,8 +114,8 @@ class GeneralEventsSeeder extends Seeder {
                     'el' => '2<sup>ο</sup> Διάλειμμα'
                 ],
                 'event_prev' => [
-                    'en' => 'Coffee and beverages, Q&A with the speakers, workshops and relaxation',
-                    'el' => 'Καφές και ποτά, Q&A με τους ομιλητές, workshops και χαλάρωση'
+                    'en' => 'Coffee and beverages, Q&A with the speakers, workshops and equilibrium',
+                    'el' => 'Καφές και ποτά, Q&A με τους ομιλητές, workshops και ηρεμία'
                 ],
                 'subtitle' => [
                     'en' => 'The speakers of the 2<sup>nd</sup> session will answer to your **questions** in the Simulcast room. Coffee and beverages will be served.',
