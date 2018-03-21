@@ -42,8 +42,8 @@ class GeneralEventsSeeder extends Seeder {
                     'el' => 'Emergence (11:30-13:00)'
                 ],
                 'subtitle' => [
-                    'en' => '',
-                    'el' => ''
+                    'en' => 'The big bang. A moment of randomness leading to the beginning of everything. A new world emerges.',
+                    'el' => 'Η μεγάλη έκρηξη. Μια στιγμή τυχαιότητας που οδηγεί στην αρχή των πάντων. Ένας νέος κόσμος αναδύεται.'
                 ],
             ]),
 
@@ -99,8 +99,8 @@ class GeneralEventsSeeder extends Seeder {
                     'el' => 'Divergence (15:00-17:00)'
                 ],
                 'subtitle' => [
-                    'en' => '',
-                    'el' => ''
+                    'en' => 'Evolution at its very best. Change after change, through divergence and contrast, here comes the cosmos as we know it.',
+                    'el' => 'Η εξέλιξη στο αποκορύφωμά της. Αλλαγή με την αλλαγή, μέσα από τις αποκλίσεις και τις αντιθέσεις, προκύπτει ο κόσμος όπως τον ξέρουμε.'
                 ],
             ]),
 
@@ -137,8 +137,8 @@ class GeneralEventsSeeder extends Seeder {
                     'el' => 'Convergence (18:00-20:00)'
                 ],
                 'subtitle' => [
-                    'en' => '',
-                    'el' => ''
+                    'en' => 'The end of an era or the beginning of a new one. The bittersweet taste, as the universe slowly converges to the very first state where it started from.',
+                    'el' => 'Το τέλος μιας εποχής ή το ξεκίνημα μίας καινούριας. Η γλυκόπικρη γεύση, καθώς το σύμπαν συγκλίνει αργά στην πρώτη κατάσταση από την οποία ξεκίνησε.'
                 ],
             ]),
             
