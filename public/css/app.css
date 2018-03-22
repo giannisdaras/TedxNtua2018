@@ -12891,6 +12891,20 @@ a:hover {
   top: calc(100% - 8px);
 }
 
+/* VERTICAL ALIGN HELPER */
+
+.vertical-align {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 /* NAVIGATION MENU */
 
 header.dark {
@@ -13508,11 +13522,12 @@ article.home a:hover {
   color: #ff1505;
 }
 
-article.home #mainContainer {
-  margin-top: 8rem;
+article.home .home-sections {
+  margin-top: 2rem;
 }
 
-article.home #leftStripe {
+article.home #leftStripe,
+article.home #rightStripe {
   width: 80%;
   height: 100%;
   position: absolute;
@@ -13523,12 +13538,6 @@ article.home #leftStripe {
 
 article.home #rightStripe {
   margin-left: 2rem;
-  width: 80%;
-  height: 100%;
-  position: absolute;
-  background-image: url("/images/stripeFull-mini.png");
-  background-size: 100% auto;
-  background-repeat: repeat-y;
   -webkit-transform: scaleX(-1);
           transform: scaleX(-1);
 }
@@ -13587,7 +13596,7 @@ article.home #hero {
   color: white;
   border-bottom: 0;
   background: #202020;
-  min-height: 480px;
+  height: 480px;
   position: relative;
 }
 
@@ -13714,6 +13723,60 @@ article.home #hero svg#logo-animation #four {
 
 article.home #hero svg#logo-animation .secondary {
   stroke: #E66557;
+}
+
+article.home #hero.live {
+  position: static;
+  height: auto;
+}
+
+article.home #hero.live .section-content {
+  position: static;
+  /* 	outer height of nav = 4rem (height) + 1.2rem (padding) = 5.2rem */
+  padding-top: 5.2rem;
+}
+
+article.home #hero.live .live-container {
+  overflow: visible;
+}
+
+article.home #hero.live .live-container .close {
+  display: none;
+  position: absolute;
+  top: -2rem;
+  left: -2rem;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 9999;
+  opacity: .75;
+}
+
+article.home #hero.live .live-container .close:hover {
+  opacity: 1;
+}
+
+article.home #hero.live.popup .live-container {
+  position: fixed;
+  bottom: 3vw;
+  right: 3vw;
+  width: 39vw;
+  max-width: 576px;
+  -webkit-box-shadow: 0 0 30px 8px #FFF;
+          box-shadow: 0 0 30px 8px #FFF;
+  z-index: 9998;
+}
+
+article.home #hero.live.popup .live-container iframe#live {
+  opacity: .9;
+}
+
+article.home #hero.live.popup .live-container iframe#live:hover {
+  opacity: 1;
+}
+
+article.home #hero.live.popup .live-container .close {
+  display: inline-block;
 }
 
 article.home #chaos h2 img {
@@ -14604,6 +14667,11 @@ article.license {
     margin: 0 6rem;
   }
 
+  article.home #hero.live .section-content {
+    /* 	outer height of nav = 4.2rem (height) + 1.2rem (padding) = 5.4rem */
+    padding-top: 5.4rem;
+  }
+
   article.home #speakers .speaker-container a {
     font-size: 1.2rem;
   }
@@ -14688,11 +14756,11 @@ article.license {
     margin-bottom: 0;
   }
 
-  article.home #hero {
+  article.home #hero:not(.live) {
     height: 720px;
   }
 
-  article.home #hero .section-content {
+  article.home #hero:not(.live) .section-content {
     opacity: 0;
     bottom: -2rem;
     -webkit-transition: opacity 3s, bottom 3s;
@@ -14701,19 +14769,19 @@ article.license {
             transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   }
 
-  article.home #hero .section-content.slideIn {
+  article.home #hero:not(.live) .section-content.slideIn {
     opacity: 1;
     bottom: 0;
   }
 
-  article.home #hero h1 {
+  article.home #hero:not(.live) h1 {
     margin-top: 25rem;
     font-size: 3.5rem;
     font-weight: bold;
   }
 
-  article.home #hero canvas#lorenz,
-  article.home #hero svg#logo-animation {
+  article.home #hero:not(.live) canvas#lorenz,
+  article.home #hero:not(.live) svg#logo-animation {
     display: block;
   }
 
@@ -15050,6 +15118,11 @@ article.license {
     padding: .5rem 0;
   }
 
+  article.home #hero.live .section-content {
+    /* 	outer height of nav = 4.8rem (height) + 1.2rem (padding) = 6rem */
+    padding-top: 6rem;
+  }
+
   article.home #speakers .speaker-container a {
     font-size: 1.25rem;
   }
@@ -15067,15 +15140,9 @@ article.license {
   }
 }
 
-.vertical-align {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+@media screen and (orientation: portrait) {
+  article.home #hero.live.popup .live-container {
+    width: 84vw;
+  }
 }
 

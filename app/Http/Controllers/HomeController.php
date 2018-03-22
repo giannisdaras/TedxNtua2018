@@ -23,13 +23,15 @@ class HomeController extends Controller {
 		}
 
 		$speakers = $query->get()->sortByAppearance();
+		$now = date("Y-m-d H:m");
+		$isToday = $request->testLive == "yes" || ($now >= "2018-03-24 10:30" && $now <= "2018-03-24 21:00");
 
 		$isPjax = $request->header('X-PJAX');
 		if ($isPjax) {
-			return response()->view('home', compact('isPjax', 'speakers'), 200)
+			return response()->view('home', compact('isPjax', 'isToday', 'speakers'), 200)
 				->header('X-PJAX-URL', LaravelLocalization::getLocalizedURL());
 		}
-		return view('home', compact('speakers'));
+		return view('home', compact('speakers', 'isToday'));
 	}
 
 }
