@@ -41,12 +41,15 @@ window.homeAnimations = function() {
 		}, 5000)
 	}
 
+	let testLiveVal = typeof(window.URL) === "function" ? new URL(location.href).searchParams.get("testLive") : undefined
+
 	let update = function() {
 		if($("#live").length > 0) {
 			$.ajax({
 				type: "GET",
 				url: "/currentEvent",
 				dataType: "html",
+				data: {testLive: testLiveVal},
 				success: function(data) {
 					if(data != $("#hero .liveInfo").html()) {
 						$("#hero .liveInfo").fadeOut(200, function() {
