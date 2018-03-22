@@ -356,7 +356,7 @@ Prior to establishing their firm, they gained rich experience through their traj
                 'visible' => true,
                 'img_src' => 'galani-1.jpg',
                 'img_src_alt' => 'galani-2.jpg',
-                'link' => ' http://www.galani.gr',
+                'link' => 'http://www.galani.gr',
                 'bio' => [
                     'en' => '
 In her distinguished 40-year career Dimitra Galani has made a great contribution to Greek music and culture. She is an exceptional artist, a serious and dignified presence in our country’s music scene. Her enduring cross-generational appeal is based on her unique voice, inherent musicality, powerful stage presence and peerless ability to interpret material by top Greek composers and lyricists, such as Manos Hadjidakis, Mikis Theodorakis, Vassilis Tsitsanis, Manos Loizos, a.o.

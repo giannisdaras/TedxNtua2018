@@ -143,21 +143,27 @@ class GeneralEventsSeeder extends Seeder {
             ]),
             
             App\Schedule::updateOrCreate(['sid' => 'after-party'], [
-                'hour' => '21:00',
+                'hour' => '21:30',
                 'visible' => true,
-                'img_src' => '/images/schedule/after-party.png',
+                'img_src' => '/images/schedule/romantso.jpg',
                 'type' => 'general',
                 'event_title' => [
-                    'en' => 'After Party',
-                    'el' => 'After Party'
+                    'en' => '<a href="https://www.facebook.com/events/402112306897135/">After Party</a>',
+                    'el' => '<a href="https://www.facebook.com/events/402112306897135/">After Party</a>'
                 ],
                 'event_prev' => [
-                    'en' => 'It\'s a secret',
-                    'el' => 'Είναι μυστικό'
+                    'en' => 'Chaos is a Ladder | Romantso',
+                    'el' => 'Chaos is a Ladder | Romantso'
                 ],
                 'subtitle' => [
-                    'en' => '',
-                    'el' => ''
+                    'en' => '
+After the chaos, we are waiting for you right after our event, at [Romantso](https://www.facebook.com/biosromantso/) (3-5 Anaxagora, Omonoia) at 21.30 to get to know each other better and have fun.
+
+Join our event on Facebook by clicking [here](https://www.facebook.com/events/402112306897135/)!',
+                    'el' => '
+Μετά από τόσο chaos, σε περιμένουμε στο τέλος του event μας, στο [Romantso](https://www.facebook.com/biosromantso/) (Αναξαγόρα 3-5, Ομόνοια) στις 21.30 να έρθεις να γνωριστούμε και να περάσουμε καλά.
+
+Μπες στο event μας στο Facebook κάνοντας κλικ [εδώ](https://www.facebook.com/events/402112306897135/)!'
                 ],
             ]),
         ];
