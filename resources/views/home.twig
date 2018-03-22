@@ -11,7 +11,9 @@
 {% block content %}
 <article class="home">
 
+	{% if not isToday %}
 	<section id="hero">
+
 		<div class="section-content">
 			<h1>TEDxNTUA Chaos</h1>
 			<p class="info text-center">
@@ -44,11 +46,27 @@
 
 		</svg>
 		<canvas id="lorenz" width="800" height="800"></canvas>
-
 	</section>
 
+	{%- else %}
+	<section id="hero" class="live">
 
-	<div id="mainContainer" class="home-sections container-fluid">
+		<div class="section-content">
+			<h2 class="mt-3">{{ trans('general.home.live.wearelive') }}</h2>
+			<div class="liveInfo"></div>
+			<div class="live-container embed-responsive embed-responsive-16by9">
+				<iframe class="embed-responsive-item" id="live" src="https://www.youtube.com/embed/P11y8N22Rq0?ecver=1&autoplay=1" allow="encrypted-media" allowfullscreen></iframe>
+				<button type="button" class="close" aria-label="Close">
+					<i class="fa fa-times-circle" aria-hidden="true"></i>
+				</button>
+			</div>
+		</div>
+
+	</section>
+	{%- endif %}
+
+
+	<div class="home-sections container-fluid">
 
 		<div class="row no-gutters">
 			<!-- left full-height column (hidden on < md screens) -->
@@ -147,11 +165,10 @@
 			<!-- right full-height column (hidden on < md screens) -->
 			<div class="col d-none d-md-block col-md-2">
 				<div id="rightStripe"> </div>
-
 			</div>
 		</div>
+	</div>
 
-	</article>
+</article>
 
-
-	{% endblock %}
+{% endblock %}

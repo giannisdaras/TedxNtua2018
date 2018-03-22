@@ -142,6 +142,25 @@ class GeneralEventsSeeder extends Seeder {
                 ],
             ]),
             
+            App\Schedule::updateOrCreate(['sid' => 'early-drinks'], [
+                'hour' => '20:00',
+                'visible' => true,
+                'img_src' => '/images/schedule/drinks.jpg',
+                'type' => 'general',
+                'event_title' => [
+                    'en' => 'Early drinks',
+                    'el' => 'Early drinks'
+                ],
+                'event_prev' => [
+                    'en' => '',
+                    'el' => ''
+                ],
+                'subtitle' => [
+                    'en' => '',
+                    'el' => ''
+                ],
+            ]),
+            
             App\Schedule::updateOrCreate(['sid' => 'after-party'], [
                 'hour' => '21:30',
                 'visible' => true,

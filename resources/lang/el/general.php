@@ -113,6 +113,11 @@ To 2017, η solo της stand up comedy παράσταση «Χωρίς Γλου
 				'desc' => 'Το TEDxNTUA 2018 θα διεξαχθεί στο Ευγενίδειο Πλανητάριο. Το Πλανητάριο βρίσκεται στη λεωφόρο Ανδρέα Συγγρού 387, μόλις λιγότερο από 7 λεπτά από τον πλησιέστερο σταθμό λεωφορείων. Πρόσβαση μέσω ΜΜΜ: <ul><li>550, Β2 (στάση <a href="http://telematics.oasa.gr/#stationInfo_240009_%CE%A9%CE%9D%CE%91%CE%A3%CE%95%CE%99%CE%9F_37.9423944,23.6978659" target="_blank">ΩΝΑΣΕΙΟ</a>)</li><li>Α2 (στάση <a href="http://telematics.oasa.gr/#stationInfo_380002_%CE%99%CE%91%CE%A3%CE%A9%CE%9D%CE%9F%CE%A3_37.9399224,23.700599" target="_blank">ΙΑΣΩΝΟΣ</a>)</li></ul>',
 			],
 		],
+		'live' => [
+			'wearelive' => 'We are live!',
+			'curr' => 'ΤΩΡΑ',
+			'next' => 'ΕΠΟΜΕΝΟ',
+		],
 	],
 
 	/* SPONSORS */
