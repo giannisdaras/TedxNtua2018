@@ -85,19 +85,19 @@ Her website: [aggelikitoubanaki.com](http://aggelikitoubanaki.com)
                     'el' => 'Science Reactors'
                 ],
                 'event_prev' => [
-                    'en' => 'Stand-up comedy based on scientific subjects (Simulcast room 17:40-18:00)',
-                    'el' => 'Stand-up κωμωδία βασισμένη σε επιστημονικά ζητήματα (Αίθουσα Simulcast 17:40-18:00)'
+                    'en' => 'Stand-up science (Simulcast room 17:40-18:00)',
+                    'el' => 'Stand-up επιστήμη (Αίθουσα Simulcast 17:40-18:00)'
                 ],
                 'subtitle' => [
                     'en' => '
 A team of young scientists with talent in science communication was created over five years ago. Their aim is to **communicate science** in a fun way so as to attract the interest and love of young people. Scientists step out of the laboratories and on to the stage, turning difficult scientific issues into **comprehensible and humorous stories**.
 
-So let\'s decode the Chaos of science.
+Participants: Dimitris Tsimpidas (Astrophysicist), John Kontogiannis (Astrophysicist), Nikos Papadimitriou (Chemist – Engineer), Stefanos Giagtzoglou (Biologist).
 ',
                     'el' => '
 Μία ομάδα από νεαρούς επιστήμονες με ταλέντο στην **επικοινωνία της επιστήμης**, δημιουργήθηκε πριν πέντε χρόνια. Στόχος τους είναι να βγει η γνώση από τα στεγανά της πλαίσια και με τρόπο διασκεδαστικό να προσελκύσει το ενδιαφέρον και την αγάπη των νέων (και όχι μόνο) για την επιστήμη. Οι επιστήμονες βγαίνουν από το εργαστήριο και ανεβαίνουν στη σκηνή μετατρέποντας δύσκολα επιστημονικά θέματα σε **κατανοητές ιστορίες** και κυρίως, σε ιστορίες γεμάτες χιούμορ!
 
-Ας αποκωδικοποιήσουμε λοιπόν το chaos της επιστήμης.
+Συμμετέχουν οι: Τζίμης Τσιμπίδας (Αστροφυσικός), Γιάννης Κοντογιάννης (Αστροφυσικός), Νίκος Παπαδημητρίου (Χημικός – Μηχανικός), Στέφανος Γιαγτζόγλου (Βιολόγος).
 ',
                 ],
             ]),
