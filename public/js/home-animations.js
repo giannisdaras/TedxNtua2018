@@ -118,6 +118,28 @@ window.homeAnimations = function () {
 			$("#hero .section-content").addClass("slideIn");
 		}, 5000);
 	}
+
+	var update = function update() {
+		if ($("#live").length > 0) {
+			$.ajax({
+				type: "GET",
+				url: "/currentEvent",
+				dataType: "html",
+				success: function success(data) {
+					if (data != $("#hero .liveInfo").html()) {
+						$("#hero .liveInfo").fadeOut(200, function () {
+							$(this).html(data).fadeIn();
+						});
+					}
+				},
+				error: function error(xhr, textStatus, _error) {
+					$("#hero .liveInfo").html("");
+				}
+			});
+			liveWI = window.setTimeout(update, 10000);
+		}
+	};
+	var liveWI = window.setTimeout(update, 400);
 };
 
 /***/ }),

@@ -796,13 +796,49 @@ article.home {
 		&.live {
 			position: static;
 			height: auto;
+			font-size: .85rem;
 			.section-content {
 				position: static;
 				/* 	outer height of nav = 4rem (height) + 1.2rem (padding) = 5.2rem */
 				padding-top: 5.2rem;
 			}
+			h2 {
+				font-size: 3em;
+				margin-bottom: .2em;
+			}
+			.liveInfo {
+				width: 100%;
+				max-width: 540px;
+				margin: 0 auto;
+				text-align: center;
+				h4 {
+					color: $brand-primary;
+					font-size: 1.2em;
+					margin-bottom: .25em;
+				}
+				h5 {
+					font-size: 1em;
+				}
+				h6 {
+					margin-top: .15rem;
+					font-weight: normal;
+					font-size: .8em;
+				}
+				h5, h6, p {
+					margin-bottom: 0;
+				}
+				.container-fluid {
+					margin-bottom: 1.2em;
+				}
+				.col:not(:last-child) {
+					border-right: 1px solid #999;
+				}
+			}
 			.live-container {
 				overflow: visible;
+				width: 80vw;
+				max-width: 100%;
+				margin: 0 auto;
 				.close {
 					display: none;
 					position: absolute;
@@ -825,7 +861,6 @@ article.home {
 					right: 3vw;
 					width: 39vw;
 					max-width: 576px;
-					box-shadow: 0 0 30px 8px #FFF;
 					z-index: 9998;
 					iframe#live {
 						opacity: .9;
@@ -1593,7 +1628,7 @@ article.privacy, article.license {
 			margin-bottom: 3rem;
 		}
 	}
-	article.about, article.schedule, article.speakers, article.team, article.privacy, article.license {
+	article.home #hero.live, article.about, article.schedule, article.speakers, article.team, article.privacy, article.license {
 		font-size: .9rem;
 	}
 }
@@ -1734,7 +1769,7 @@ article.privacy, article.license {
 			display: none;
 		}
 	}
-	article.about, article.schedule, article.speakers, article.team, article.privacy, article.license {
+	article.home #hero.live, article.about, article.schedule, article.speakers, article.team, article.privacy, article.license {
 		font-size: 1rem;
 	}
 	.blog-listing {
@@ -1884,7 +1919,7 @@ article.privacy, article.license {
 			width: 10%;
 		}
 	}
-	article.about, article.speakers, article.team, article.privacy, article.license {
+	article.home #hero.live, article.about, article.speakers, article.team, article.privacy, article.license {
 		font-size: 1.1rem;
 	}
 	article.contact {

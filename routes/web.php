@@ -26,4 +26,5 @@ Route::group([
 	Route::get('/license', ['as' => 'license', 'uses' => 'LicenseController@index']);
 	Route::get('/privacy', ['as' => 'privacy', 'uses' => 'PrivacyController@index']);
 	Route::get('/tickets', ['as' => 'tickets', 'uses' => 'TicketsController@index']);
+	Route::get('/currentEvent', ['as' => 'currentEvent', 'uses' => 'CurrentEventController@index']);
 });

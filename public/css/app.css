@@ -13728,6 +13728,7 @@ article.home #hero svg#logo-animation .secondary {
 article.home #hero.live {
   position: static;
   height: auto;
+  font-size: .85rem;
 }
 
 article.home #hero.live .section-content {
@@ -13736,8 +13737,53 @@ article.home #hero.live .section-content {
   padding-top: 5.2rem;
 }
 
+article.home #hero.live h2 {
+  font-size: 3em;
+  margin-bottom: .2em;
+}
+
+article.home #hero.live .liveInfo {
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+article.home #hero.live .liveInfo h4 {
+  color: #E62B1E;
+  font-size: 1.2em;
+  margin-bottom: .25em;
+}
+
+article.home #hero.live .liveInfo h5 {
+  font-size: 1em;
+}
+
+article.home #hero.live .liveInfo h6 {
+  margin-top: .15rem;
+  font-weight: normal;
+  font-size: .8em;
+}
+
+article.home #hero.live .liveInfo h5,
+article.home #hero.live .liveInfo h6,
+article.home #hero.live .liveInfo p {
+  margin-bottom: 0;
+}
+
+article.home #hero.live .liveInfo .container-fluid {
+  margin-bottom: 1.2em;
+}
+
+article.home #hero.live .liveInfo .col:not(:last-child) {
+  border-right: 1px solid #999;
+}
+
 article.home #hero.live .live-container {
   overflow: visible;
+  width: 80vw;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 article.home #hero.live .live-container .close {
@@ -13762,8 +13808,6 @@ article.home #hero.live.popup .live-container {
   right: 3vw;
   width: 39vw;
   max-width: 576px;
-  -webkit-box-shadow: 0 0 30px 8px #FFF;
-          box-shadow: 0 0 30px 8px #FFF;
   z-index: 9998;
 }
 
@@ -14695,6 +14739,7 @@ article.license {
     margin-bottom: 3rem;
   }
 
+  article.home #hero.live,
   article.about,
   article.schedule,
   article.speakers,
@@ -14864,6 +14909,7 @@ article.license {
     display: none;
   }
 
+  article.home #hero.live,
   article.about,
   article.schedule,
   article.speakers,
@@ -15055,6 +15101,7 @@ article.license {
     width: 10%;
   }
 
+  article.home #hero.live,
   article.about,
   article.speakers,
   article.team,
