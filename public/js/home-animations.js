@@ -119,12 +119,15 @@ window.homeAnimations = function () {
 		}, 5000);
 	}
 
+	var testLiveVal = typeof window.URL === "function" ? new URL(location.href).searchParams.get("testLive") : undefined;
+
 	var update = function update() {
 		if ($("#live").length > 0) {
 			$.ajax({
 				type: "GET",
 				url: "/currentEvent",
 				dataType: "html",
+				data: { testLive: testLiveVal },
 				success: function success(data) {
 					if (data != $("#hero .liveInfo").html()) {
 						$("#hero .liveInfo").fadeOut(200, function () {

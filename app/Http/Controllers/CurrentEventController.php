@@ -42,7 +42,7 @@ class CurrentEventController extends Controller {
 			$where = [['visible', true]];
 		}
 
-		if(date('Y-m-d') == '2018-03-24') {
+		if($request->testLive == "yes" || date('Y-m-d') == '2018-03-24') {
 			$events = Schedule :: where(array_merge($where, [['type', '!=', 'workshop']]))
 							   -> orderBy('hour', 'asc')
 							   -> get();
