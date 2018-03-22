@@ -38,7 +38,7 @@ In their performances, the group presents **original compositions** with a varie
 
             App\Schedule::updateOrCreate(['sid' => 'toubanaki'], [
                 'hour' => '18:00',
-                'visible' => false,
+                'visible' => true,
                 'img_src' => '/images/schedule/toubanaki.jpg',
                 'type' => 'performance',
                 'event_title' => [
@@ -46,27 +46,31 @@ In their performances, the group presents **original compositions** with a varie
                     'el' => 'Αγγελική Τουμπανάκη'
                 ],
                 'event_prev' => [
-                    'en' => 'Performer, molecular biologist, sound experimentalist, vocal educator and much more (Main stage 18:00-18:15)',
-                    'el' => 'Performer, μοριακή βιολόγος, ηχητική πειραματίστρια, φωνητική εκπαιδεύτρια και πολλά άλλα (Κύρια σκηνή 18:00-18:15)'
+                    'en' => 'Performer, molecular biologist, sound experimentalist, vocal educator et al. (Main stage 18:00-18:20)',
+                    'el' => 'Performer, μοριακή βιολόγος, ηχητική πειραματίστρια, φωνητική εκπαιδεύτρια κ.ά. (Κύρια σκηνή 18:00-18:20)'
                 ],
                 'subtitle' => [
-                    'en' => '
-Her creation field is a broad and multi-layered universe within which she expresses herself using different forms and contexts, such as improvisation, dance and theater.
+                    'en' => ' 
+The stage of TEDxNTUA welcomes Aggeliki Toubanaki, a unique performer.
 
-Having completed a long standing cycle of scientific research, Aggeliki has a PhD at the Medical School of the University of Athens in Molecular Biology and in Music Studies. She is now dedicated exclusively to singing and music. Aggeliki strongly believes that voice is an extraordinary musical instrument. She conceptually and experientially detects the possibilities of human voice through personal improvisations paths and crosswords of different musical motifs. Since 2005 she has been professionally involved in music, as a creator, producer and lead vocalist of different music projects (Folk, World Jazz and Nu Jazz), which she presents regularly in Greece and abroad. Her basis is jazz music, whilst her interest has so far been the collection and study of traditional rhythms, scales and extended vocal sounds with international and geographical coordinates adjacent to Greece.
+Her creation field is a broad and multi-layered universe within which, she expresses herself using different forms and contexts, such as improvisation, dance and theater.
 
-Aggeliki has been teaching "Vocal Technique" and "Jazz Improvisation" at Philippos Nakas Conservatory, "Voice Coaching" for performers and actors and organizes and leads "Vocal circles", as she has been taught by Bobby McFerrin and his Team (New York 2015).
+Since 2005 she has been professionally involved in music, as a creator, producer and lead vocalist of different music projects (Folk, **World Jazz** and **Nu Jazz**), which she presents regularly in Greece and abroad.
 
-Her need, joy and goal are the creative interaction, experimentation and free communication of people without Musical boundaries.
+She has a PhD at the Medical School of the University of Athens in **Molecular Biology**.
+
+Her website: [aggelikitoubanaki.com](http://aggelikitoubanaki.com)
 ',
                     'el' => '
-Η προσέγγισή της είναι σε ανοιχτή συνομιλία με τις παραστατικές/οπτικοακουστικές τέχνες και την εικαστική δημιουργία και η δουλειά της βασίζεται στην έρευνα και την ελευθερία της δημιουργικής έκφρασης έξω από νόρμες και κοινές πρακτικές.
+Η σκηνή του TEDxNTUA 2018 υποδέχεται μια ξεχωριστή performer, την Αγγελική Τουμπανάκη.
 
-Έχοντας ολοκληρώσει έναν πολυετή κύκλο επιστημονικής έρευνας, η Αγγελική είναι αριστούχος διδάκτορας της Ιατρικής Σχολής του Πανεπιστημίου Αθηνών στη Μοριακή Βιολογία και των Μουσικών Σπουδών. Επέλεξε ανάμεσα στα δύο το πεδίο της τέχνης και έχει αφιερωθεί πλέον αποκλειστικά στο τραγούδι και τη μουσική. Από το 2005 δημιουργεί μουσικά projects με World Jazz, Nu Jazz μουσική θεματολογία («Toubanaki & the Buzz Bastardz», «Drums Voice Jazztronica duet», «Jazz Plus», «Oulaloum», «Συνδέσεις»), τα οποία παρουσιάζει στην Ελλάδα και στο εξωτερικό.
+Η Αγγελική χρησιμοποιεί τη φωνή της σαν μουσικό όργανο ανιχνεύοντας εννοιολογικά και βιωματικά τις δυνατότητες της ανθρώπινης φωνής μέσα από προσωπικές αυτοσχεδιαστικές διαδρομές και διασταυρώσεις μουσικών ιδιωμάτων.
 
-Η Αγγελική διδάσκει «Τεχνική της φωνής» και «Αυτοσχεδιασμό» στο Ωδείο Φ. Νάκας, φωνητική προετοιμασία για performers και ηθοποιούς με βάση την μέθοδο «MUSA» (Musical System of Acting) του σκηνοθέτη/acting coach Σωτήρη Καραμεσίνη και διοργανώνει «Φωνητικούς Κύκλους» (Circle Singing), όπως διδάχτηκε από τον Bobby McFerrin, τη Rhiannon και τον Bob Stollof στην Νέα Υόρκη.
+Από το 2005, δημιουργεί μουσικά projects με **World Jazz**, **Nu Jazz** μουσική θεματολογία, τα οποία παρουσιάζει στην Ελλάδα και στο εξωτερικό. Είναι καθηγήτρια φωνητικής, έχοντας μαθητεύσει κοντά στον Bobby McFerrin, τη Rhiannon και τον Bob Stollof στην Νέα Υόρκη.
 
-Η ανάγκη της, η χαρά της και ο στόχος της είναι η διάδραση, ο πειραματισμός και η ελεύθερη επικοινωνία χωρίς μουσικά σύνορα.
+Είναι αριστούχος διδάκτορας της Ιατρικής Σχολής του Πανεπιστημίου Αθηνών στη **Μοριακή Βιολογία**.
+
+Η ιστοσελίδα της: [aggelikitoubanaki.com](http://aggelikitoubanaki.com)
 '
                 ],
             ]),
