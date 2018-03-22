@@ -36606,11 +36606,11 @@ $(function () {
 
 			if (!$("#hero.live").hasClass("popup") && !$("#hero.live").hasClass("no-popup") && sT > liveOffsetY + liveH / 2) {
 
-				$("#hero.live h2").css("padding-bottom", liveH);
+				$("#hero.live .liveInfo").css("padding-bottom", liveH);
 				$("#hero.live").addClass("popup");
 			} else if ($("#hero.live").hasClass("popup") && sT <= liveOffsetY + liveH / 2) {
 
-				$("#hero.live h2").css("padding-bottom", 0);
+				$("#hero.live .liveInfo").css("padding-bottom", 0);
 				$("#hero.live").removeClass("popup");
 			}
 		}
@@ -36620,7 +36620,7 @@ $(function () {
 
 		if ($("#hero.live").hasClass("popup")) {
 
-			$("#hero.live h2").css("padding-bottom", 0);
+			$("#hero.live .liveInfo").css("padding-bottom", 0);
 			$("#hero.live").removeClass("popup").addClass("no-popup");
 		}
 	});
