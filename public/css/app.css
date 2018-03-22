@@ -13771,6 +13771,10 @@ article.home #hero.live .liveInfo p {
   margin-bottom: 0;
 }
 
+article.home #hero.live .liveInfo a {
+  color: inherit;
+}
+
 article.home #hero.live .liveInfo .container-fluid {
   margin-bottom: 1.2em;
 }

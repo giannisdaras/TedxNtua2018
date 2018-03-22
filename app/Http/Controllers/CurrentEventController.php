@@ -13,6 +13,7 @@ class CurrentEventController extends Controller {
 		$coll = $events -> where('hour', '<=', $this->now);
 		$last = $coll -> pop();
 		$prevToLast = $coll -> last();
+		# if there are many events happening at the exact same time, choose the one that is not a general event
 		while(!is_null($last) && $coll -> isNotEmpty() && $last -> hour == $prevToLast -> hour) {
 			if($last -> type != "general" && $prevToLast -> type == "general") {
 				$coll -> pop();
@@ -30,7 +31,7 @@ class CurrentEventController extends Controller {
 	}
 
 	public function __construct() {
-		$this->now = '15:35';#date('H:i');
+		$this->now = date('H:i');
 	}
 
 	public function index(Request $request) {
