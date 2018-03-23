@@ -116,7 +116,7 @@ His research interests focus on the understanding of chaotic and turbulent dynam
                 ],
                 'occupation' => [
                     'en' => 'Principal Urban Planner – Co-founder of UNStudio',
-                    'el' => 'Principal Urban Planner – Συνιδρύτρια του UNStudio'
+                    'el' => 'Αστική Σχεδιάστρια – Συνιδρύτρια του UNStudio'
                 ],
                 'quote' => [
                     'en' => 'The key to future-proofing our cities does not lie in big data itself, but in the people who generate this data in the first place.',
@@ -311,8 +311,8 @@ As a designer, he has received numerous Greek and European awards and distinctio
 
             App\Speaker::updateOrCreate(['sid' => 'lc-architects'], [
                 'name' => [
-                    'en' => 'LC Architects',
-                    'el' => 'LC Architects'
+                    'en' => 'Lianou Chalvatzis Architects',
+                    'el' => 'Lianou Chalvatzis Architects'
                 ],
                 'occupation' => [
                     'en' => 'Architects',

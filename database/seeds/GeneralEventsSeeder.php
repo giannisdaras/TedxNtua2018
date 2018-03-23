@@ -42,27 +42,8 @@ class GeneralEventsSeeder extends Seeder {
                     'el' => 'Emergence (11:30-13:00)'
                 ],
                 'subtitle' => [
-                    'en' => 'The big bang. A moment of randomness leading to the beginning of everything. A new world emerges.',
-                    'el' => 'Η μεγάλη έκρηξη. Μια στιγμή τυχαιότητας που οδηγεί στην αρχή των πάντων. Ένας νέος κόσμος αναδύεται.'
-                ],
-            ]),
-
-            App\Schedule::updateOrCreate(['sid' => 'welcome'], [
-                'hour' => '11:45',
-                'visible' => true,
-                'img_src' => '/images/schedule/welcome.png',
-                'type' => 'general',
-                'event_title' => [
-                    'en' => 'Welcome speeches',
-                    'el' => 'Καλωσόρισμα'
-                ],
-                'event_prev' => [
-                    'en' => 'Addresses by the NTUA Rector I. Golias, by Th. Varvarigou and our TEDxNTUA 2018 curator (11:45-12:00)',
-                    'el' => 'Προσφωνήσεις από τον Πρύτανη του ΕΜΠ Ι. Γκόλια, τη Θ. Βαρβαρίγου και τον curator μας για το TEDxNTUA 2018 (11:45-12:00)'
-                ],
-                'subtitle' => [
-                    'en' => 'The NTUA Rector, Ioannis Golias, the TEDxNTUA academic coordinator, Theodora Varvarigou, and the TEDxNTUA 2018 curator, Vasilis Katsadonis, **welcome** the participants of the event.',
-                    'el' => 'Ο Πρύτανης του ΕΜΠ Ιωάννης Γκόλιας, η Ακαδημαϊκή Υπεύθυνη του TEDxNTUA Θεοδώρα Βαρβαρίγου και ο curator του TEDxNTUA 2018 Βασίλης Κατσαντώνης **καλωσορίζουν** το κοινό της εκδήλωσης.'
+                    'en' => 'The **big bang**. A moment of randomness leading to the beginning of everything. A new world emerges.',
+                    'el' => 'Η **μεγάλη έκρηξη**. Μια στιγμή τυχαιότητας που οδηγεί στην αρχή των πάντων. Ένας νέος κόσμος αναδύεται.'
                 ],
             ]),
 
@@ -99,8 +80,8 @@ class GeneralEventsSeeder extends Seeder {
                     'el' => 'Divergence (15:00-17:00)'
                 ],
                 'subtitle' => [
-                    'en' => 'Evolution at its very best. Change after change, through divergence and contrast, here comes the cosmos as we know it.',
-                    'el' => 'Η εξέλιξη στο αποκορύφωμά της. Αλλαγή με την αλλαγή, μέσα από τις αποκλίσεις και τις αντιθέσεις, προκύπτει ο κόσμος όπως τον ξέρουμε.'
+                    'en' => 'Evolution at its very best. Change after change, through **divergence** and **contrast**, here comes the cosmos as we know it.',
+                    'el' => 'Η εξέλιξη στο αποκορύφωμά της. Αλλαγή με την αλλαγή, μέσα από τις **αποκλίσεις** και τις **αντιθέσεις**, προκύπτει ο κόσμος όπως τον ξέρουμε.'
                 ],
             ]),
 
@@ -137,8 +118,8 @@ class GeneralEventsSeeder extends Seeder {
                     'el' => 'Convergence (18:00-20:00)'
                 ],
                 'subtitle' => [
-                    'en' => 'The end of an era or the beginning of a new one. The bittersweet taste, as the universe slowly converges to the very first state where it started from.',
-                    'el' => 'Το τέλος μιας εποχής ή το ξεκίνημα μίας καινούριας. Η γλυκόπικρη γεύση, καθώς το σύμπαν συγκλίνει αργά στην πρώτη κατάσταση από την οποία ξεκίνησε.'
+                    'en' => 'The end of an era or the beginning of a new one. The **bittersweet** taste, as the universe slowly converges to the **very first state** where it started from.',
+                    'el' => 'Το τέλος μιας εποχής ή το ξεκίνημα μίας καινούριας. Η **γλυκόπικρη** γεύση, καθώς το σύμπαν συγκλίνει αργά στην **πρώτη κατάσταση** από την οποία ξεκίνησε.'
                 ],
             ]),
             
