@@ -24,7 +24,7 @@ class HomeController extends Controller {
 
 		$speakers = $query->get()->sortByAppearance();
 		$now = date("Y-m-d H:i");
-		$isToday = $request->testLive == "yes" || ($now >= "2018-03-24 10:30" && $now <= "2018-03-24 23:59");
+		$isToday = $request->testLive == "yes" || ($now >= "2018-03-24 11:15" && $now <= "2018-03-24 23:59");
 
 		$isPjax = $request->header('X-PJAX');
 		if ($isPjax) {
