@@ -27,7 +27,7 @@ return [
 		'blog' => 'Blog',
 		'about' => 'About',
 		'contact' => 'Contact',
-		'gettickets' => 'Get Tickets',
+		'viewtalks' => 'Watch The Talks',
 	],
 
 	/* FOOTER */

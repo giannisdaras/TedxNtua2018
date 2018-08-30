@@ -27,7 +27,7 @@ return [
 		'blog' => 'Blog',
 		'about' => 'Σχετικά με μας',
 		'contact' => 'Επικοινωνία',
-		'gettickets' => 'Κάντε κράτηση',
+		'viewtalks' => 'Δείτε τις ομιλίες',
 	],
 
 	/* FOOTER */
